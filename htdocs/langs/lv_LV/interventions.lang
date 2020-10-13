@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Iejaukšanās
 Interventions=Iejaukšanās
 InterventionCard=Iejaukšanās kartiņa
@@ -30,13 +30,13 @@ InterventionClassifyDone=Klasificēt "Pabeigts"
 StatusInterInvoiced=Jāmaksā
 SendInterventionRef=Submission of intervention %s
 SendInterventionByMail=Sūtīt interviju pa e-pastu
-InterventionCreatedInDolibarr=Izveidota intervence %s
-InterventionValidatedInDolibarr=Intervence %s validēta
-InterventionModifiedInDolibarr=Intervention %s modified
-InterventionClassifiedBilledInDolibarr=Intervention %s set as billed
-InterventionClassifiedUnbilledInDolibarr=Intervention %s set as unbilled
+InterventionCreatedInDigitalProspects=Izveidota intervence %s
+InterventionValidatedInDigitalProspects=Intervence %s validēta
+InterventionModifiedInDigitalProspects=Intervention %s modified
+InterventionClassifiedBilledInDigitalProspects=Intervention %s set as billed
+InterventionClassifiedUnbilledInDigitalProspects=Intervention %s set as unbilled
 InterventionSentByEMail=Intervence %s nosūtīta pa e-pastu
-InterventionDeletedInDolibarr=Intervention %s deleted
+InterventionDeletedInDigitalProspects=Intervention %s deleted
 InterventionsArea=Interventions area
 DraftFichinter=Draft interventions
 LastModifiedInterventions=Jaunākās %s labotās iejaukšanās

@@ -17,12 +17,12 @@
 # Generic
 #
 
-# Module label 'ModuleZapierForDolibarrName'
-ModuleZapierForDolibarrName = Zapier priekš Dolibarr
-# Module description 'ModuleZapierForDolibarrDesc'
-ModuleZapierForDolibarrDesc = Par zapier Dolibarr moduli
+# Module label 'ModuleZapierForDigitalProspectsName'
+ModuleZapierForDigitalProspectsName = Zapier priekš DigitalProspects
+# Module description 'ModuleZapierForDigitalProspectsDesc'
+ModuleZapierForDigitalProspectsDesc = Par zapier DigitalProspects moduli
 
 #
 # Admin page
 #
-ZapierForDolibarrSetup = Zapier iestatīšana Dolibarr
+ZapierForDigitalProspectsSetup = Zapier iestatīšana DigitalProspects

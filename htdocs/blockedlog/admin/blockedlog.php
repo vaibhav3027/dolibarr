@@ -47,7 +47,7 @@ if (preg_match('/set_(.*)/', $action, $reg))
 	$values = GETPOST($code);
 	if (is_array($values)) $values = implode(',', $values);
 
-	if (dolibarr_set_const($db, $code, $values, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $code, $values, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -61,7 +61,7 @@ if (preg_match('/set_(.*)/', $action, $reg))
 if (preg_match('/del_(.*)/', $action, $reg))
 {
 	$code = $reg[1];
-	if (dolibarr_del_const($db, $code, 0) > 0)
+	if (DigitalProspects_del_const($db, $code, 0) > 0)
 	{
 		Header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;

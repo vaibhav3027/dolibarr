@@ -169,7 +169,7 @@ class CdavLib
 		$caldata = "BEGIN:VCALENDAR\n";
 		$caldata .= "VERSION:2.0\n";
 		$caldata .= "METHOD:PUBLISH\n";
-		$caldata .= "PRODID:-//Dolibarr CDav//FR\n";
+		$caldata .= "PRODID:-//DigitalProspects CDav//FR\n";
 		$caldata .= "BEGIN:".$type."\n";
 		$caldata .= "CREATED:".gmdate('Ymd\THis', strtotime($obj->datec))."Z\n";
 		$caldata .= "LAST-MODIFIED:".gmdate('Ymd\THis', strtotime($obj->lastupd))."Z\n";
@@ -228,15 +228,15 @@ class CdavLib
 		$caldata .= "DESCRIPTION:";
 		$caldata .= strtr($obj->note, array("\n"=>"\\n", "\r"=>""));
 		if (!empty($obj->soc_nom))
-			$caldata .= "\\n*DOLIBARR-SOC: ".$obj->soc_nom;
+			$caldata .= "\\n*DigitalProspects-SOC: ".$obj->soc_nom;
 		if (!empty($obj->soc_phone))
-			$caldata .= "\\n*DOLIBARR-SOC-TEL: ".$obj->soc_phone;
+			$caldata .= "\\n*DigitalProspects-SOC-TEL: ".$obj->soc_phone;
 		if (!empty($obj->firstname) || !empty($obj->lastname))
-			$caldata .= "\\n*DOLIBARR-CTC: ".trim($obj->firstname.' '.$obj->lastname);
+			$caldata .= "\\n*DigitalProspects-CTC: ".trim($obj->firstname.' '.$obj->lastname);
 		if (!empty($obj->phone) || !empty($obj->phone_perso) || !empty($obj->phone_mobile))
-			$caldata .= "\\n*DOLIBARR-CTC-TEL: ".trim($obj->phone.' '.$obj->phone_perso.' '.$obj->phone_mobile);
+			$caldata .= "\\n*DigitalProspects-CTC-TEL: ".trim($obj->phone.' '.$obj->phone_perso.' '.$obj->phone_mobile);
 		if (strpos($obj->other_users, ',')) // several
-			$caldata .= "\\n*DOLIBARR-USR: ".$obj->other_users;
+			$caldata .= "\\n*DigitalProspects-USR: ".$obj->other_users;
 		$caldata .= "\n";
 
 		$caldata .= "END:".$type."\n";

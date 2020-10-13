@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - exports
+# DigitalProspects language file - Source file is en_US - exports
 ExportsArea=Eksporter
 ImportArea=Importere
 NewExport=Ny eksport
@@ -58,7 +58,7 @@ ChooseFormatOfFileToImport=Vælg det filformat, der skal bruges som importfilfor
 ChooseFileToImport=Upload fil og klik derefter på ikonet %s for at vælge fil som kilde importfil ...
 SourceFileFormat=Kilde filformat
 FieldsInSourceFile=Områder i kildefilen
-FieldsInTargetDatabase=Målfelter i Dolibarr database (fed = obligatorisk)
+FieldsInTargetDatabase=Målfelter i DigitalProspects database (fed = obligatorisk)
 Field=Omraade
 NoFields=Ingen felter
 MoveField=Flyt feltet kolonne nummer %s

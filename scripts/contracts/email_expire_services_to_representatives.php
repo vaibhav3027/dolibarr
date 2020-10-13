@@ -22,7 +22,7 @@
 /**
  * \file scripts/contracts/email_expire_services_to_representatives.php
  * \ingroup contracts
- * \brief Script to send a mail to dolibarr users linked to companies with services to expire
+ * \brief Script to send a mail to DigitalProspects users linked to companies with services to expire
  */
 $sapi_type = php_sapi_name();
 $script_file = basename(__FILE__);
@@ -154,7 +154,7 @@ if ($resql) {
 			}
 		}
 	} else {
-		print "No services to expire (for companies linked to a particular commercial dolibarr user) found\n";
+		print "No services to expire (for companies linked to a particular commercial DigitalProspects user) found\n";
 	}
 
 	exit(0);

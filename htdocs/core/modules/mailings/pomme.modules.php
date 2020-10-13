@@ -30,9 +30,9 @@ include_once DOL_DOCUMENT_ROOT.'/core/modules/mailings/modules_mailings.php';
  */
 class mailing_pomme extends MailingTargets
 {
-	public $name = 'DolibarrUsers'; // Identifiant du module mailing
+	public $name = 'DigitalProspectsUsers'; // Identifiant du module mailing
 	// This label is used if no translation is found for key XXX neither MailingModuleDescXXX where XXX=name is found
-	public $desc = 'Dolibarr users with emails'; // Libelle utilise si aucune traduction pour MailingModuleDescXXX ou XXX=name trouv�e
+	public $desc = 'DigitalProspects users with emails'; // Libelle utilise si aucune traduction pour MailingModuleDescXXX ou XXX=name trouv�e
 	public $require_module = array(); // Module mailing actif si modules require_module actifs
 	public $require_admin = 1; // Module mailing actif pour user admin ou non
 
@@ -73,7 +73,7 @@ class mailing_pomme extends MailingTargets
 		$langs->load("users");
 
 		$statssql = array();
-		$sql = "SELECT '".$langs->trans("DolibarrUsers")."' as label,";
+		$sql = "SELECT '".$langs->trans("DigitalProspectsUsers")."' as label,";
 		$sql .= " count(distinct(u.email)) as nb";
 		$sql .= " FROM ".MAIN_DB_PREFIX."user as u";
 		$sql .= " WHERE u.email != ''"; // u.email IS NOT NULL est implicite dans ce test

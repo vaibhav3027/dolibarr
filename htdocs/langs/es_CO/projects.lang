@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Árbitro. proyecto
 ProjectRef=Proyecto ref.
 ProjectId=Projecto ID
@@ -99,9 +99,9 @@ CloneMoveDate=Actualizar fechas de proyecto / tareas a partir de ahora?
 ConfirmCloneProject=¿Seguro que vas a clonar este proyecto?
 ProjectReportDate=Cambiar fechas de tareas de acuerdo a la nueva fecha de inicio del proyecto.
 ErrorShiftTaskDate=Imposible cambiar la fecha de la tarea de acuerdo con la nueva fecha de inicio del proyecto
-TaskCreatedInDolibarr=Tarea %s creada
-TaskModifiedInDolibarr=Tarea %s modificada
-TaskDeletedInDolibarr=Tarea %s eliminada
+TaskCreatedInDigitalProspects=Tarea %s creada
+TaskModifiedInDigitalProspects=Tarea %s modificada
+TaskDeletedInDigitalProspects=Tarea %s eliminada
 OpportunityStatus=Estado de plomo
 OpportunityProbability=Probabilidad de plomo
 OpportunityAmount=Cantidad de plomo

@@ -45,15 +45,15 @@ include DOL_DOCUMENT_ROOT.'/core/actions_setmoduleoptions.inc.php';
 if ($action == 'setbarcodeproducton')
 {
     $barcodenumberingmodule = GETPOST('value', 'alpha');
-	$res = dolibarr_set_const($db, "BARCODE_PRODUCT_ADDON_NUM", $barcodenumberingmodule, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "BARCODE_PRODUCT_ADDON_NUM", $barcodenumberingmodule, 'chaine', 0, '', $conf->entity);
 	if ($barcodenumberingmodule == 'mod_barcode_product_standard' && empty($conf->global->BARCODE_STANDARD_PRODUCT_MASK))
 	{
-	    $res = dolibarr_set_const($db, "BARCODE_STANDARD_PRODUCT_MASK", '020{000000000}', 'chaine', 0, '', $conf->entity);
+	    $res = DigitalProspects_set_const($db, "BARCODE_STANDARD_PRODUCT_MASK", '020{000000000}', 'chaine', 0, '', $conf->entity);
 	}
 }
 elseif ($action == 'setbarcodeproductoff')
 {
-	$res = dolibarr_del_const($db, "BARCODE_PRODUCT_ADDON_NUM", $conf->entity);
+	$res = DigitalProspects_del_const($db, "BARCODE_PRODUCT_ADDON_NUM", $conf->entity);
 }
 
 if ($action == 'setcoder')
@@ -71,11 +71,11 @@ if ($action == 'setcoder')
 elseif ($action == 'update')
 {
 	$location = GETPOST('GENBARCODE_LOCATION', 'alpha');
-	$res = dolibarr_set_const($db, "GENBARCODE_LOCATION", $location, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "GENBARCODE_LOCATION", $location, 'chaine', 0, '', $conf->entity);
 	$coder_id = GETPOST('PRODUIT_DEFAULT_BARCODE_TYPE', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_DEFAULT_BARCODE_TYPE", $coder_id, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_DEFAULT_BARCODE_TYPE", $coder_id, 'chaine', 0, '', $conf->entity);
 	$coder_id = GETPOST('GENBARCODE_BARCODETYPE_THIRDPARTY', 'alpha');
-	$res = dolibarr_set_const($db, "GENBARCODE_BARCODETYPE_THIRDPARTY", $coder_id, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "GENBARCODE_BARCODETYPE_THIRDPARTY", $coder_id, 'chaine', 0, '', $conf->entity);
 
 	if ($res > 0)
     {

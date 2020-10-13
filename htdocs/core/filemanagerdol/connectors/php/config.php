@@ -32,7 +32,7 @@ define('NOTOKENRENEWAL', 1); // Disables token renewal
 // is a security hole if anybody can access without
 // being an authenticated user.
 require_once '../../../../main.inc.php';
-$uri = preg_replace('/^http(s?):\/\//i', '', $dolibarr_main_url_root);
+$uri = preg_replace('/^http(s?):\/\//i', '', $DigitalProspects_main_url_root);
 $pos = strstr($uri, '/'); // $pos contient alors url sans nom domaine
 if ($pos == '/') $pos = ''; // si $pos vaut /, on le met a ''
 define('DOL_URL_ROOT', $pos);
@@ -55,7 +55,7 @@ $Config['UserFilesAbsolutePathRelative'] = (empty($website) ? ((!empty($entity) 
 // user files directory. Useful if you are using a virtual directory, symbolic
 // link or alias. Examples: 'C:\\MySite\\userfiles\\' or '/root/mysite/userfiles/'.
 // Attention: The above 'UserFilesPath' must point to the same directory.
-$Config['UserFilesAbsolutePath'] = $dolibarr_main_data_root.$Config['UserFilesAbsolutePathRelative'];
+$Config['UserFilesAbsolutePath'] = $DigitalProspects_main_data_root.$Config['UserFilesAbsolutePathRelative'];
 
 // Due to security issues with Apache modules, it is recommended to leave the
 // following setting enabled.

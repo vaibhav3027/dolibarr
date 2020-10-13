@@ -66,7 +66,7 @@ if ($action == 'confirm_purge' && $confirm == 'yes' && $user->admin)
 // Lock new sessions
 if ($action == 'confirm_lock' && $confirm == 'yes' && $user->admin)
 {
-	if (dolibarr_set_const($db, 'MAIN_ONLY_LOGIN_ALLOWED', $user->login, 'text', 1, 'Logon is restricted to a particular user', 0) < 0)
+	if (DigitalProspects_set_const($db, 'MAIN_ONLY_LOGIN_ALLOWED', $user->login, 'text', 1, 'Logon is restricted to a particular user', 0) < 0)
 	{
 		dol_print_error($db);
 	}
@@ -75,7 +75,7 @@ if ($action == 'confirm_lock' && $confirm == 'yes' && $user->admin)
 // Unlock new sessions
 if ($action == 'confirm_unlock' && $user->admin)
 {
-	if (dolibarr_del_const($db, 'MAIN_ONLY_LOGIN_ALLOWED', -1) < 0)
+	if (DigitalProspects_del_const($db, 'MAIN_ONLY_LOGIN_ALLOWED', -1) < 0)
 	{
 		dol_print_error($db);
 	}

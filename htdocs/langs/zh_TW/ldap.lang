@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ldap
+# DigitalProspects language file - Source file is en_US - ldap
 YouMustChangePassNextLogon=<b>%</b>用戶密碼<b>%之S</b>必須改變對域。
 UserMustChangePassNextLogon=用戶必須更改密碼的域%s
 LDAPInformationsForThisContact=在此LDAP數據庫信息聯系
@@ -22,6 +22,6 @@ GroupSynchronized=集團同步
 MemberSynchronized=會員已同步
 MemberTypeSynchronized=會員類型已同步
 ContactSynchronized=聯系同步
-ForceSynchronize=力同步Dolibarr - &gt;的LDAP
+ForceSynchronize=力同步DigitalProspects - &gt;的LDAP
 ErrorFailedToReadLDAP=無法讀取LDAP資料據庫。檢查的LDAP模組設定和資料庫可存取性。
 PasswordOfUserInLDAP=Password of user in LDAP

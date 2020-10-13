@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 FONTFORPDF=helvetica
 FONTSIZEFORPDF=10
@@ -44,8 +44,8 @@ ErrorNoRequestInError=Ninguna solicitud por error
 ErrorServiceUnavailableTryLater=Servicio no disponible en este momento. Inténtalo de nuevo más tarde.
 ErrorDuplicateField=Valor duplicado en un campo único
 ErrorSomeErrorWereFoundRollbackIsDone=Se encontraron algunos errores. Los cambios se han revertido.
-ErrorConfigParameterNotDefined=El parámetro <b> %s </b> no está definido en el archivo de configuración de Dolibarr <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=No se pudo encontrar el usuario <b>%s</b> en la base de datos Dolibarr.
+ErrorConfigParameterNotDefined=El parámetro <b> %s </b> no está definido en el archivo de configuración de DigitalProspects <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=No se pudo encontrar el usuario <b>%s</b> en la base de datos DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Error, no hay tipos de IVA definidos para el país '%s'.
 ErrorNoSocialContributionForSellerCountry=Error, no hay ningun tipo de impuesto fiscal definido para el país '%s'.
 ErrorFailedToSaveFile=Error, Error al guardar el archivo.
@@ -65,7 +65,7 @@ FileWasNotUploaded=Se ha seleccionado un archivo para adjuntarlo, pero todavía 
 NbOfEntries=Numero de entradas
 GoToWikiHelpPage=Lea la ayuda en línea (acceso a Internet es necesario)
 GoToHelpPage=Leer la ayuda
-DolibarrInHttpAuthenticationSoPasswordUseless=El modo de autenticación Dolibarr está configurado en <b>%s</b> en el archivo de configuración <b>conf.php</b>. <br> Esto significa que la base de datos de contraseñas es externa a Dolibarr, por lo que cambiar este campo puede no tener efecto.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=El modo de autenticación DigitalProspects está configurado en <b>%s</b> en el archivo de configuración <b>conf.php</b>. <br> Esto significa que la base de datos de contraseñas es externa a DigitalProspects, por lo que cambiar este campo puede no tener efecto.
 Undefined=Indefinido
 PasswordForgotten=¿Contraseña olvidada?
 NoAccount=Sin cuenta?
@@ -79,12 +79,12 @@ DatabaseTypeManager=Administrador de tipo de base de datos
 RequestLastAccessInError=Error de solicitud de acceso a la base de datos
 ReturnCodeLastAccessInError=Código de error de solicitud de acceso a la base de datos
 InformationLastAccessInError=Información del error de solicitud de acceso a la base de datos
-YouCanSetOptionDolibarrMainProdToZero=Puede leer el archivo de registro o establecer la opción $dolibarr_main_prod en '0' en su archivo de configuración para obtener más información.
-InformationToHelpDiagnose=Esta información puede ser útil para fines de diagnóstico (puede establecer la opción $dolibarr_main_prod en '1' para eliminar dichos avisos)
+YouCanSetOptionDigitalProspectsMainProdToZero=Puede leer el archivo de registro o establecer la opción $DigitalProspects_main_prod en '0' en su archivo de configuración para obtener más información.
+InformationToHelpDiagnose=Esta información puede ser útil para fines de diagnóstico (puede establecer la opción $DigitalProspects_main_prod en '1' para eliminar dichos avisos)
 TechnicalID=Identificación técnico
 LineID=Identificación de línea
 NotePublic=Nota (público)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr fue configurado para limitar la precisión de los precios unitarios a <b>%s</b> decimales.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects fue configurado para limitar la precisión de los precios unitarios a <b>%s</b> decimales.
 DoTest=Prueba
 ToFilter=Filtro
 WarningYouHaveAtLeastOneTaskLate=Advertencia, tiene al menos un elemento que ha excedido el tiempo de tolerancia.
@@ -268,7 +268,7 @@ RemoveFilter=Retirar filtro
 ChartGenerated=Gráfico generado
 ChartNotGenerated=Gráfico no genera
 GeneratedOn=Construir el %s
-DolibarrWorkBoard=Artículos abiertos
+DigitalProspectsWorkBoard=Artículos abiertos
 NoOpenedElementToProcess=No hay elementos abiertos para procesar
 NotYetAvailable=No disponible aún
 Categories=Etiquetas/categorías
@@ -393,7 +393,7 @@ YouCanSetDefaultValueInModuleSetup=Puede configurar el valor predeterminado util
 Documents=Archivos enlazados
 UploadDisabled=Carga inhabilitada
 MenuAgendaGoogle=Agenda de google
-ThisLimitIsDefinedInSetup=límite de Dolibarr (Menú Inicio-setup-seguridad): %s Kb, límite de PHP: %s Kb
+ThisLimitIsDefinedInSetup=límite de DigitalProspects (Menú Inicio-setup-seguridad): %s Kb, límite de PHP: %s Kb
 CurrentMenuManager=Gestor de menú actual
 Layout=Diseño
 DisabledModules=Módulos deshabilitados
@@ -412,7 +412,7 @@ DocumentModelStandardPDF=Plantilla PDF estándar
 PrintContentArea=Mostrar la página para imprimir el área de contenido principal
 MenuManager=Administrador de menús
 WarningYouAreInMaintenanceMode=Advertencia, está en modo de mantenimiento: solo inicie sesión <b> %s </b> tiene permiso para usar la aplicación en este modo.
-CoreErrorMessage=Disculpe, ocurrió un error. Póngase en contacto con el administrador del sistema para comprobar los registros o desactivar $dolibarr_main_prod=1 para obtener más información.
+CoreErrorMessage=Disculpe, ocurrió un error. Póngase en contacto con el administrador del sistema para comprobar los registros o desactivar $DigitalProspects_main_prod=1 para obtener más información.
 FieldsWithAreMandatory=Los campos con <b>%s</b> son obligatorios
 FieldsWithIsForPublic=Los campos con <b>%s</b> se muestran en la lista pública de miembros. Si no quieres esto, desmarca la casilla "público".
 AccordingToGeoIPDatabase=(De acuerdo a la conversión de GeoIP)
@@ -487,7 +487,7 @@ AllExportedMovementsWereRecordedAsExported=Todos los movimientos exportados se r
 NotAllExportedMovementsCouldBeRecordedAsExported=No todos los movimientos exportados pueden registrarse como exportados
 Miscellaneous=Varios
 GroupBy=Agrupar por...
-SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar solo parcialmente traducidos o pueden contener errores. Ayude a corregir su idioma registrándose en <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> para agregar sus mejoras.
+SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar solo parcialmente traducidos o pueden contener errores. Ayude a corregir su idioma registrándose en <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> para agregar sus mejoras.
 DirectDownloadLink=Enlace de descarga directa (público/externo)
 DownloadDocument=Descargar documento
 ActualizeCurrency=Actualizar tipo de cambio

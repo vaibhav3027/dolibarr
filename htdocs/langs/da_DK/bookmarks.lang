@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Tilføj denne side til bogmærker
 Bookmark=Bogmærke
 Bookmarks=Bogmærker
@@ -15,7 +15,7 @@ UrlOrLink=URL
 BehaviourOnClick=Adfærd ved klik på URL
 CreateBookmark=Opret bogmærke
 SetHereATitleForLink=Sæt et navn for dette bogmærke
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Brug et eksternt / absolut link (https://URL) eller et internt / relativt link (/DOLIBARR_ROOT/htdocs/...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Brug et eksternt / absolut link (https://URL) eller et internt / relativt link (/DigitalProspects_ROOT/htdocs/...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Vælg om den tilknyttede side skal åbnes i den aktuelle fane eller en ny fane
 BookmarksManagement=Bogmærker forvaltning
 BookmarksMenuShortCut=Ctrl + shift + m

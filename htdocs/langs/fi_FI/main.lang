@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=N: o pyynnöstä virhe
 ErrorServiceUnavailableTryLater=Palvelu ei käytettävissä tällä hetkellä. Yritä myöhemmin uudestaan.
 ErrorDuplicateField=Päällekkäinen arvo ainutlaatuisella alalla
 ErrorSomeErrorWereFoundRollbackIsDone=Virhe havaittu. Muutetut tiedot palautettu alkuperäisiksi
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Ei onnistunut löytämään <b>käyttäjän %s</b> Dolibarr tietokantaan.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Ei onnistunut löytämään <b>käyttäjän %s</b> DigitalProspects tietokantaan.
 ErrorNoVATRateDefinedForSellerCountry=Virhe ei alv määritellään maa ' %s'.
 ErrorNoSocialContributionForSellerCountry=Virhe, ei sosiaalisia tai fiskaalisia verotyyppejä, jotka on määritelty maata "%s" varten.
 ErrorFailedToSaveFile=Virhe, ei tallenna tiedosto.
@@ -90,7 +90,7 @@ RecordDeleted=Tallennus poistettu
 RecordGenerated=Record generated
 LevelOfFeature=Taso ominaisuuksia
 NotDefined=Ei määritelty
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarrin todennusmoodi on <b> %s </b> konfigurointitiedostossa <b> conf.php </b>. <br> Tämä tarkoittaa, että salasanatietokanta on Dolibarrin ulkopuolinen, joten tämän kentän muuttaminen ei välttämättä vaikuta.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspectsin todennusmoodi on <b> %s </b> konfigurointitiedostossa <b> conf.php </b>. <br> Tämä tarkoittaa, että salasanatietokanta on DigitalProspectsin ulkopuolinen, joten tämän kentän muuttaminen ei välttämättä vaikuta.
 Administrator=Administrator
 Undefined=Määrittelemätön
 PasswordForgotten=Unohditko salasanasi?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Database Type Manager
 RequestLastAccessInError=Virhe viimeisimmästä tietokannan pääsypyynnöstä
 ReturnCodeLastAccessInError=Viimeisin tietokannan käyttöoikeuspyyntövirheen palautekoodi
 InformationLastAccessInError=Tiedot viimeisimmän tietokannan käyttöoikeuspyynnön virheestä
-DolibarrHasDetectedError=Dolibarr on havaittu tekninen virhe
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=Nämä tiedot voivat olla hyödyllisiä vianmääritystarkoituksiin (voit asettaa vaihtoehdon $ dolibarr_main_prod arvoon '1' poistamaan tällaiset ilmoitukset)
+DigitalProspectsHasDetectedError=DigitalProspects on havaittu tekninen virhe
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=Nämä tiedot voivat olla hyödyllisiä vianmääritystarkoituksiin (voit asettaa vaihtoehdon $ DigitalProspects_main_prod arvoon '1' poistamaan tällaiset ilmoitukset)
 MoreInformation=Lisätietoa
 TechnicalInformation=Tekniset tiedot
 TechnicalID=Tekninen tunniste
 LineID=Line ID
 NotePublic=Huomautus (julkinen)
 NotePrivate=Huomautus (yksityinen)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr oli asetettu raja tarkkuus <b>yksikköhinnat %s</b> desimaalit.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects oli asetettu raja tarkkuus <b>yksikköhinnat %s</b> desimaalit.
 DoTest=Testi
 ToFilter=Suodata
 NoFilter=Ei suodatinta
@@ -475,8 +475,8 @@ Generate=Luo
 Duration=Kesto
 TotalDuration=Kokonaiskesto
 Summary=Yhteenveto
-DolibarrStateBoard=Tietokannan tilastot
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Tietokannan tilastot
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Saatavissa
 NotYetAvailable=Ei vielä saatavilla
@@ -703,7 +703,7 @@ MenuECM=Asiakirjat
 MenuAWStats=AWStats
 MenuMembers=Jäsenet
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Dolibarr raja (Valikko koti-setup-turvallisuus): %s Kb, PHP raja: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects raja (Valikko koti-setup-turvallisuus): %s Kb, PHP raja: %s Kb
 NoFileFound=Ei asiakirjoja tallennettuna tähän hakemistoon
 CurrentUserLanguage=Nykyinen kieli
 CurrentTheme=Nykyinen teema
@@ -736,7 +736,7 @@ PrintContentArea=Näytä sivu tulostaa päävalikkoon alue
 MenuManager=Valikkomanageri
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Järjestelmävirhe
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Luottokortti
 ValidatePayment=Vahvista maksu
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Kalenteri
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Suora latauslinkki (julkinen/ulkoinen)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Lataa

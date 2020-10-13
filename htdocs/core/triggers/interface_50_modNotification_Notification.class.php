@@ -22,13 +22,13 @@
  *  \ingroup    notification
  *  \brief      File of class of triggers for notification module
  */
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for notification module
  */
-class InterfaceNotification extends DolibarrTriggers
+class InterfaceNotification extends DigitalProspectsTriggers
 {
 	public $family = 'notification';
 	public $description = "Triggers of this module send email notifications according to Notification module setup.";
@@ -37,7 +37,7 @@ class InterfaceNotification extends DolibarrTriggers
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
 	 * @var string Image of the trigger
@@ -64,7 +64,7 @@ class InterfaceNotification extends DolibarrTriggers
 	);
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * @param string		$action		Event action code

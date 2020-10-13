@@ -1317,9 +1317,9 @@ class SMTPs
         if ($trackid)
         {
             // References is kept in response and Message-ID is returned into In-Reply-To:
-            $_header .= 'Message-ID: <'.time().'.SMTPs-dolibarr-'.$trackid.'@'.$host.">\r\n";
-            $_header .= 'References: <'.time().'.SMTPs-dolibarr-'.$trackid.'@'.$host.">\r\n";
-            $_header .= 'X-Dolibarr-TRACKID: '.$trackid.'@'.$host."\r\n";
+            $_header .= 'Message-ID: <'.time().'.SMTPs-DigitalProspects-'.$trackid.'@'.$host.">\r\n";
+            $_header .= 'References: <'.time().'.SMTPs-DigitalProspects-'.$trackid.'@'.$host.">\r\n";
+            $_header .= 'X-DigitalProspects-TRACKID: '.$trackid.'@'.$host."\r\n";
         }
         else
         {
@@ -1348,8 +1348,8 @@ class SMTPs
         if ($this->getReplyTo())
             $_header .= "Reply-To: ".$this->getReplyTo('addr')."\r\n";
 
-        $_header .= 'X-Mailer: Dolibarr version '.DOL_VERSION.' (using SMTPs Mailer)'."\r\n";
-        $_header .= 'X-Dolibarr-Option: '.($conf->global->MAIN_MAIL_USE_MULTI_PART ? 'MAIN_MAIL_USE_MULTI_PART' : 'No MAIN_MAIL_USE_MULTI_PART')."\r\n";
+        $_header .= 'X-Mailer: DigitalProspects version '.DOL_VERSION.' (using SMTPs Mailer)'."\r\n";
+        $_header .= 'X-DigitalProspects-Option: '.($conf->global->MAIN_MAIL_USE_MULTI_PART ? 'MAIN_MAIL_USE_MULTI_PART' : 'No MAIN_MAIL_USE_MULTI_PART')."\r\n";
         $_header .= 'Mime-Version: 1.0'."\r\n";
 
 
@@ -1739,8 +1739,8 @@ class SMTPs
     private function _setBoundary()
     {
         $this->_smtpsBoundary = "multipart_x.".time().".x_boundary";
-        $this->_smtpsRelatedBoundary = 'mul_'.dol_hash(uniqid("dolibarr2"), 3);
-        $this->_smtpsAlternativeBoundary = 'mul_'.dol_hash(uniqid("dolibarr3"), 3);
+        $this->_smtpsRelatedBoundary = 'mul_'.dol_hash(uniqid("DigitalProspects2"), 3);
+        $this->_smtpsAlternativeBoundary = 'mul_'.dol_hash(uniqid("DigitalProspects3"), 3);
     }
 
     /**

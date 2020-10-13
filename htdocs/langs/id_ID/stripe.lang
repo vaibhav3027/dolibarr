@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Pengaturan modul stripe
-StripeDesc=Menawarkan pelanggan halaman pembayaran online Stripe untuk pembayaran dengan kartu kredit / cebit melalui <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Ini dapat digunakan untuk memungkinkan pelanggan Anda melakukan pembayaran ad-hoc atau untuk pembayaran yang terkait dengan objek Dolibarr tertentu (faktur, pesanan, ...)
+StripeDesc=Menawarkan pelanggan halaman pembayaran online Stripe untuk pembayaran dengan kartu kredit / cebit melalui <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Ini dapat digunakan untuk memungkinkan pelanggan Anda melakukan pembayaran ad-hoc atau untuk pembayaran yang terkait dengan objek DigitalProspects tertentu (faktur, pesanan, ...)
 StripeOrCBDoPayment=Bayar dengan kartu kredit atau Stripe
-FollowingUrlAreAvailableToMakePayments=URL berikut tersedia untuk menawarkan halaman kepada pelanggan untuk melakukan pembayaran pada objek Dolibarr
+FollowingUrlAreAvailableToMakePayments=URL berikut tersedia untuk menawarkan halaman kepada pelanggan untuk melakukan pembayaran pada objek DigitalProspects
 PaymentForm=Formulir pembayaran
 WelcomeOnPaymentPage=Selamat datang di layanan pembayaran online kami
 ThisScreenAllowsYouToPay=Layar ini memungkinkan Anda melakukan pembayaran online ke %s.

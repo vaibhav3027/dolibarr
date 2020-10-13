@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ecm
+# DigitalProspects language file - Source file is en_US - ecm
 ECMNbOfDocs=No. of documents in directory
 ECMSection=Adresář
 ECMSectionManual=Manuální adresář
@@ -15,7 +15,7 @@ ECMNbOfSubDir=Počet podadresářů
 ECMNbOfFilesInSubDir=Počet souborů v podadresářích
 ECMCreationUser=Tvůrce
 ECMArea=DMS/ECM area
-ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in Dolibarr.
+ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in DigitalProspects.
 ECMAreaDesc2=* Automatické adresáře jsou vyplněny automaticky při přidávání dokumentů z karty prvku. <br> * Manuální adresáře lze použít k uložení dokladů, které nejsou spojené s konkrétním prvkem.
 ECMSectionWasRemoved=Rejstřík <b>%s</b> byl vymazán.
 ECMSectionWasCreated=Directory <b>%s</b> has been created.

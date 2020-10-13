@@ -50,19 +50,19 @@ if ($reshook < 0) setEventMessages($hookmanager->error, $hookmanager->errors, 'e
 if (($action == 'update' && !GETPOST("cancel", 'alpha'))
 || ($action == 'updateedit'))
 {
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_NAME", GETPOST("nom", 'nohtml'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_ADDRESS", GETPOST("address", 'nohtml'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_TOWN", GETPOST("town", 'nohtml'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_ZIP", GETPOST("zipcode", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_STATE", GETPOST("state_id", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_REGION", GETPOST("region_code", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_COUNTRY", GETPOST('country_id', 'int'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_PHONE", GETPOST("tel", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_FAX", GETPOST("fax", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_MAIL", GETPOST("mail", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_WEB", GETPOST("web", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_CODE", GETPOST("code", 'nohtml'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_ACCOUNTANT_NOTE", GETPOST("note", 'none'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_NAME", GETPOST("nom", 'nohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_ADDRESS", GETPOST("address", 'nohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_TOWN", GETPOST("town", 'nohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_ZIP", GETPOST("zipcode", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_STATE", GETPOST("state_id", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_REGION", GETPOST("region_code", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_COUNTRY", GETPOST('country_id', 'int'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_PHONE", GETPOST("tel", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_FAX", GETPOST("fax", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_MAIL", GETPOST("mail", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_WEB", GETPOST("web", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_CODE", GETPOST("code", 'nohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_ACCOUNTANT_NOTE", GETPOST("note", 'none'), 'chaine', 0, '', $conf->entity);
 
 	if ($action != 'updateedit' && !$error)
 	{

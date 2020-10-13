@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=오류 요청이 없음
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=고유한 필드에 중복된 값
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Dolibarr 데이타베이스에서 <b>%s</b>유저를 찾을 수 없습니다.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=DigitalProspects 데이타베이스에서 <b>%s</b>유저를 찾을 수 없습니다.
 ErrorNoVATRateDefinedForSellerCountry=오류, '%s' 국가의 부가세율이 정의되지 않았습니다.
 ErrorNoSocialContributionForSellerCountry=오류, 국가 '%s'에 대해 정의 된 사회 / 재정 세금 유형이 없습니다.
 ErrorFailedToSaveFile=오류, 파일을 저장할 수 없습니다.
@@ -90,7 +90,7 @@ RecordDeleted=삭제 레코드
 RecordGenerated=Record generated
 LevelOfFeature=기능 수준
 NotDefined=지정하지 않음
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr 인증 모드는 <b>conf.php</b>구성파일에 <b>%s</b> 로 설정됩니다 .<br>즉, 비밀번호 데이터베이스가 Dolibarr 외부에 있으므로이 필드를 변경해도 아무런 효과가 없을 수 있습니다 .
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects 인증 모드는 <b>conf.php</b>구성파일에 <b>%s</b> 로 설정됩니다 .<br>즉, 비밀번호 데이터베이스가 DigitalProspects 외부에 있으므로이 필드를 변경해도 아무런 효과가 없을 수 있습니다 .
 Administrator=관리자
 Undefined=정의되지 않음
 PasswordForgotten=암호를 잊어 버리셨습니까?
@@ -108,16 +108,16 @@ DatabaseTypeManager=데이터베이스 유형 관리자
 RequestLastAccessInError=최근 데이터베이스 액세스 요청 오류
 ReturnCodeLastAccessInError=최근 데이터베이스 액세스 요청 오류에 대한 리턴 코드
 InformationLastAccessInError=최근 데이터베이스 액세스 요청 오류에 대한 정보
-DolibarrHasDetectedError=Dolibarr가 기술적인 오류를 발견했습니다.
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects가 기술적인 오류를 발견했습니다.
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=추가 정보
 TechnicalInformation=기술적 인 정보
 TechnicalID=기술 ID
 LineID=Line ID
 NotePublic=참고 (공개)
 NotePrivate=참고 (비공개)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr는 가격정밀도를 십진수<b>%s</b> 로 제한했습니다.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects는 가격정밀도를 십진수<b>%s</b> 로 제한했습니다.
 DoTest=테스트
 ToFilter=필터
 NoFilter=필터 없음
@@ -475,8 +475,8 @@ Generate=작성
 Duration=기간
 TotalDuration=총기간
 Summary=요약
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=가능
 NotYetAvailable=아직 가능 못함
@@ -703,7 +703,7 @@ MenuECM=문서
 MenuAWStats=AWStats
 MenuMembers=회원
 MenuAgendaGoogle=구글 의제
-ThisLimitIsDefinedInSetup=Dolibarr한계 (메뉴 홈-설정-보안): %s Kb, PHP 한계: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects한계 (메뉴 홈-설정-보안): %s Kb, PHP 한계: %s Kb
 NoFileFound=이 디렉토리에 저장된 문서가 없습니다.
 CurrentUserLanguage=현재 언어
 CurrentTheme=현재 테마
@@ -736,7 +736,7 @@ PrintContentArea=주요 컨텐츠 영역 인쇄 페이지 표시
 MenuManager=메뉴 관리자
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=시스템 오류
-CoreErrorMessage=죄송합니다. 오류가 발생했습니다. 자세한 정보를 얻으려면 시스템 관리자에게 로그를 확인하거나 $ dolibarr_main_prod = 1을 비활성화하십시오.
+CoreErrorMessage=죄송합니다. 오류가 발생했습니다. 자세한 정보를 얻으려면 시스템 관리자에게 로그를 확인하거나 $ DigitalProspects_main_prod = 1을 비활성화하십시오.
 CreditCard=신용 카드
 ValidatePayment=Validate payment
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=달력
 GroupBy=그룹화 ...
 ViewFlatList=평면 목록보기
 RemoveString='%s'문자열을 제거하십시오.
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=다운로드

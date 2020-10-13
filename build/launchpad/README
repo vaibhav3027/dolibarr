@@ -38,33 +38,33 @@ If you want to build/test package locally:
     sudo pbuilder create [--distribution sid|squeeze]
 
 
-# Push/declare Dolibarr sources to Launchpad
+# Push/declare DigitalProspects sources to Launchpad
 #----------------------------------
-- From Launchpad project (https://launchpad.net/dolibarr), register a series: 
+- From Launchpad project (https://launchpad.net/DigitalProspects), register a series: 
     Call it 'trunk' or 'stable'
     Use branch (dev):
-    https://launchpad.net/~eldy/dolibarr/develop
-    https://launchpad.net/~eldy/dolibarr/stable
+    https://launchpad.net/~eldy/DigitalProspects/develop
+    https://launchpad.net/~eldy/DigitalProspects/stable
     or 
     Use URL pattern (stable):
-    For stable: http://www.dolibarr.org/files/lastbuild/package_debian-ubuntu/dolibarr_x.z.*.tar.gz
+    For stable: http://www.DigitalProspects.org/files/lastbuild/package_debian-ubuntu/DigitalProspects_x.z.*.tar.gz
     
 - For Dev, you can also add link serie to GIT HEAD.
 - For stable, you can init from command line
-	cd bzr/dolibarr-stable
+	cd bzr/DigitalProspects-stable
     bzr init
     bzr add
     bzr commit -m "Init"
-    bzr push lp:~yourlogin/dolibarr/stable
+    bzr push lp:~yourlogin/DigitalProspects/stable
 
-- List of series are visible here: https://launchpad.net/dolibarr/+series
+- List of series are visible here: https://launchpad.net/DigitalProspects/+series
 
-# To update Dolibarr into launchpad (when remote repository for sources already exists)
+# To update DigitalProspects into launchpad (when remote repository for sources already exists)
 #----------------------------------
 	# create local repository
 	cd bzr
-	bzr branch lp:~yourlogin/dolibarr/[develop|stable] dolibarr-[dev|stable]
-    cd dolibarr-[dev|stable]
+	bzr branch lp:~yourlogin/DigitalProspects/[develop|stable] DigitalProspects-[dev|stable]
+    cd DigitalProspects-[dev|stable]
     # Update
     bzr update
 	-- Update files here: Remove all (except .bzr dir) and overwrite --
@@ -81,7 +81,7 @@ If you want to build/test package locally:
     cd bzr
     mkdir debian
     cd debian
-    cp -pr dolibarr_root/debian bzr/debian
+    cp -pr DigitalProspects_root/debian bzr/debian
     bzr init
     bzr add
     bzr commit -m "Init control files"
@@ -109,27 +109,27 @@ If you want to build/test package locally:
 
 # Define a recipe into launchpad (a rule to build packages into a PPA)
 #----------------------------------
-- Create a file dolibarr-[beta|stable].recipe with content
+- Create a file DigitalProspects-[beta|stable].recipe with content
     cd bzr
-    vi dolibarr-[beta|stable].recipe
+    vi DigitalProspects-[beta|stable].recipe
     	For beta/dev:
 	    # bzr-builder format 0.3 deb-version {debupstream}-0~{revno}
-		lp:dolibarr
+		lp:DigitalProspects
 		merge packaging lp:~yourlogin/+junk/debian-dev
     	For stable:
 	    # bzr-builder format 0.3 deb-version {debupstream}-2~{revno}
-		lp:dolibarr/stable
+		lp:DigitalProspects/stable
 		merge packaging lp:~yourlogin/+junk/debian-stable
 - Run command
     cd bzr
-    bzr dailydeb dolibarr-[beta|stable].recipe working-dir
-  This will create a directory "working-dir" with dolibarr sources and will add sources from ~yourlogin/+junk/debian-[dev|stable]
+    bzr dailydeb DigitalProspects-[beta|stable].recipe working-dir
+  This will create a directory "working-dir" with DigitalProspects sources and will add sources from ~yourlogin/+junk/debian-[dev|stable]
 - Test package sources
     sudo pbuilder build <working-dir>/<project>_<version>.dsc
 
 List of recipes created
-https://code.launchpad.net/~eldy/+recipe/dolibarr-dev
-https://code.launchpad.net/~eldy/+recipe/dolibarr-stable
+https://code.launchpad.net/~eldy/+recipe/DigitalProspects-dev
+https://code.launchpad.net/~eldy/+recipe/DigitalProspects-stable
 
     
 # To get/download package from PPA:
@@ -139,18 +139,18 @@ https://code.launchpad.net/~eldy/+recipe/dolibarr-stable
 > gpg --keyserver keyserver.ubuntu.com --recv-key A38BF8FD
 > sudo apt-key add ~/.gnupg/pubring.gpg
 
-- Add Dolibarr Launchpad repository to your system setup by adding the two lines to /etc/apt/sources.list
+- Add DigitalProspects Launchpad repository to your system setup by adding the two lines to /etc/apt/sources.list
 For the development snapshot version: 
-deb http://ppa.launchpad.net/yourlogin/dolibarr-dev/ubuntu precise main 
-deb-src http://ppa.launchpad.net/yourlogin/dolibarr-dev/ubuntu precise main 
+deb http://ppa.launchpad.net/yourlogin/DigitalProspects-dev/ubuntu precise main 
+deb-src http://ppa.launchpad.net/yourlogin/DigitalProspects-dev/ubuntu precise main 
 For the stable version:
-deb http://ppa.launchpad.net/yourlogin/dolibarr-stable/ubuntu precise main 
-deb-src http://ppa.launchpad.net/yourlogin/dolibarr-stable/ubuntu precise main 
+deb http://ppa.launchpad.net/yourlogin/DigitalProspects-stable/ubuntu precise main 
+deb-src http://ppa.launchpad.net/yourlogin/DigitalProspects-stable/ubuntu precise main 
 
 - Update your package cache:
 > apt-get update
 
-- Install Dolibarr: 
-> apt-get install dolibarr
+- Install DigitalProspects: 
+> apt-get install DigitalProspects
 
    

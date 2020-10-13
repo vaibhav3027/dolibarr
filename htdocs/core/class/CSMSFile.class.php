@@ -219,11 +219,11 @@ class CSMSFile
     public function dump_sms()
     {
         // phpcs:enable
-        global $conf, $dolibarr_main_data_root;
+        global $conf, $DigitalProspects_main_data_root;
 
-		if (@is_writeable($dolibarr_main_data_root))	// Avoid fatal error on fopen with open_basedir
+		if (@is_writeable($DigitalProspects_main_data_root))	// Avoid fatal error on fopen with open_basedir
 		{
-			$outputfile = $dolibarr_main_data_root."/dolibarr_sms.log";
+			$outputfile = $DigitalProspects_main_data_root."/DigitalProspects_sms.log";
 			$fp = fopen($outputfile, "w");
 
 			fputs($fp, "From: ".$this->addr_from."\n");
@@ -251,11 +251,11 @@ class CSMSFile
     public function dump_sms_result($result)
     {
         // phpcs:enable
-        global $conf, $dolibarr_main_data_root;
+        global $conf, $DigitalProspects_main_data_root;
 
-        if (@is_writeable($dolibarr_main_data_root))    // Avoid fatal error on fopen with open_basedir
+        if (@is_writeable($DigitalProspects_main_data_root))    // Avoid fatal error on fopen with open_basedir
         {
-        	$outputfile = $dolibarr_main_data_root."/dolibarr_sms.log";
+        	$outputfile = $DigitalProspects_main_data_root."/DigitalProspects_sms.log";
             $fp = fopen($outputfile, "a+");
 
             fputs($fp, "\nResult id=".$result);

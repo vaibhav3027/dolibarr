@@ -17,24 +17,24 @@
 # Générique
 #
 
-# Module label 'ModuleZapierForDolibarrName'
-ModuleZapierForDolibarrName = ZapierForDolibarr
-# Module description 'ModuleZapierForDolibarrDesc'
-ModuleZapierForDolibarrDesc = Description de ZapierForDolibarr
+# Module label 'ModuleZapierForDigitalProspectsName'
+ModuleZapierForDigitalProspectsName = ZapierForDigitalProspects
+# Module description 'ModuleZapierForDigitalProspectsDesc'
+ModuleZapierForDigitalProspectsDesc = Description de ZapierForDigitalProspects
 
 #
 # Page d'administration
 #
-ZapierForDolibarrSetup = Configuration du module ZapierForDolibarr
+ZapierForDigitalProspectsSetup = Configuration du module ZapierForDigitalProspects
 Settings = Réglages
-ZapierForDolibarrSetupPage = Page de configuration du module ZapierForDolibarr
+ZapierForDigitalProspectsSetupPage = Page de configuration du module ZapierForDigitalProspects
 
 #
 # Page À propos
 #
 About = À propos
-ZapierForDolibarrAbout = À propos de ZapierForDolibarr
-ZapierForDolibarrAboutPage = Page à propos de ZapierForDolibarr
+ZapierForDigitalProspectsAbout = À propos de ZapierForDigitalProspects
+ZapierForDigitalProspectsAboutPage = Page à propos de ZapierForDigitalProspects
 
 #
 # Page d'exemple

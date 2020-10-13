@@ -24,7 +24,7 @@
  *		\ingroup    cron
  */
 
-// Dolibarr environment
+// DigitalProspects environment
 require '../../main.inc.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/admin.lib.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/cron.lib.php';
@@ -44,7 +44,7 @@ if (!empty($actionsave))
 
 	$db->begin();
 
-	$i += dolibarr_set_const($db, 'CRON_KEY', trim(GETPOST("CRON_KEY")), 'chaine', 0, '', 0);
+	$i += DigitalProspects_set_const($db, 'CRON_KEY', trim(GETPOST("CRON_KEY")), 'chaine', 0, '', 0);
 
 	if ($i >= 1)
 	{

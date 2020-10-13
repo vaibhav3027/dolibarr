@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=O nome da empresa %s já existe. Escolha outro.
 ErrorSetACountryFirst=Defina primeiro o país
 SelectThirdParty=Selecione um terceiro
@@ -12,7 +12,7 @@ MenuNewSupplier=Novo Fornecedor
 MenuNewPrivateIndividual=Novo Particular
 NewCompany=Nova empresa (potencial cliente, cliente, fornecedor)
 NewThirdParty=Novo Terceiro (potencial cliente, cliente, fornecedor)
-CreateDolibarrThirdPartySupplier=Criar um terceiro (fornecedor)
+CreateDigitalProspectsThirdPartySupplier=Criar um terceiro (fornecedor)
 CreateThirdPartyOnly=Criar terceiro
 CreateThirdPartyAndContact=Criar um terceiro e um dos seus contactos
 ProspectionArea=Área de prospeção
@@ -347,7 +347,7 @@ CapitalOf=Capital Social de %s
 EditCompany=Modificar Empresa
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Verificar
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=Você também pode verificar manualmente no site da Comissão Europeia <a href="%s" target="_blank"> %s </a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Clientes Potenciais por Estado
 NoParentCompany=Nenhuma
 ExportCardToFormat=Exportar ficha para o formato
 ContactNotLinkedToCompany=Contacto não vinculado a um Terceiro
-DolibarrLogin=Dolibarr - Iniciar Sessão
-NoDolibarrAccess=Sem Acesso
+DigitalProspectsLogin=DigitalProspects - Iniciar Sessão
+NoDigitalProspectsAccess=Sem Acesso
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contatos e suas propriedades
 ImportDataset_company_1=Third-parties and their properties

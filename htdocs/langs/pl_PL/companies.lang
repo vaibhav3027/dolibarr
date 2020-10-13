@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Nazwa firmy %s już istnieje. Wybierz inną.
 ErrorSetACountryFirst=Najpierw wybierz kraj
 SelectThirdParty=Wybierz kontrahenta
@@ -12,7 +12,7 @@ MenuNewSupplier=Nowy sprzedawca
 MenuNewPrivateIndividual=Nowa osoba prywatna
 NewCompany=Nowa firma (potencjalny klient, klient, sprzedawca)
 NewThirdParty=Nowy kontrahent (potencjalny klient, klient, sprzedawca)
-CreateDolibarrThirdPartySupplier=Stwórz kontrahenta (dostawcę)
+CreateDigitalProspectsThirdPartySupplier=Stwórz kontrahenta (dostawcę)
 CreateThirdPartyOnly=Utwórz kontrahenta
 CreateThirdPartyAndContact=Utwórz kontrahenta i potomny kontakt
 ProspectionArea=Obszar potencjalnych klientów
@@ -347,7 +347,7 @@ CapitalOf=Kapitał %s
 EditCompany=Edycja firmy
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Sprawdź
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do?locale=pl
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=You can also check manually on the European Commission website <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Potencjalni klienci według statusu
 NoParentCompany=Żaden
 ExportCardToFormat=Eksport karty do formatu
 ContactNotLinkedToCompany=Kontakt nie połączony z żadnym kontrahentem
-DolibarrLogin=Dolibarr login
-NoDolibarrAccess=Brak dostępu do Dolibarr
+DigitalProspectsLogin=DigitalProspects login
+NoDigitalProspectsAccess=Brak dostępu do DigitalProspects
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

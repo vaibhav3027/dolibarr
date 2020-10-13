@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - blockedlog
+# DigitalProspects language file - Source file is en_US - blockedlog
 FingerprintsDesc=Esta es la herramienta para navegar o extraer los registros inalterables. Los registros inalterables se generan y archivan localmente en una tabla dedicada, en tiempo real cuando registra un evento de negocios. Puede usar esta herramienta para exportar este archivo y guardarlo en un soporte externo (algunos países, como Francia, le piden que lo haga todos los años). Tenga en cuenta que no hay ninguna función para limpiar este registro y que todos los cambios que se intentaron realizar directamente en este registro (por ejemplo, un pirata informático) se informarán con una huella digital no válida. Si realmente necesita purgar esta tabla porque usó su aplicación para una demostración / propósito de prueba y desea limpiar sus datos para comenzar su producción, puede solicitar a su revendedor o integrador que reinicie su base de datos (se eliminarán todos sus datos).
 AddedByAuthority=Almacenado en sitio remoto
 NotAddedByAuthorityYet=Aún no almacenado en sitio remoto

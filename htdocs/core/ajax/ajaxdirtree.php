@@ -76,8 +76,8 @@ if ($modulepart == 'ecm')
 }
 elseif ($modulepart == 'medias')
 {
-	$fullpathselecteddir = $dolibarr_main_data_root.'/medias/'.($selecteddir != '/' ? $selecteddir : '');
-	$fullpathpreopened = $dolibarr_main_data_root.'/medias/'.($preopened != '/' ? $preopened : '');
+	$fullpathselecteddir = $DigitalProspects_main_data_root.'/medias/'.($selecteddir != '/' ? $selecteddir : '');
+	$fullpathpreopened = $DigitalProspects_main_data_root.'/medias/'.($preopened != '/' ? $preopened : '');
 }
 
 
@@ -339,7 +339,7 @@ if ((!isset($mode) || $mode != 'noajax') && is_object($db)) $db->close();
 function treeOutputForAbsoluteDir($sqltree, $selecteddir, $fullpathselecteddir, $modulepart, $websitekey, $pageid, $preopened, $fullpathpreopened, $depth = 0)
 {
 	global $conf, $db, $langs, $form;
-	global $dolibarr_main_data_root;
+	global $DigitalProspects_main_data_root;
 
 	$ecmdirstatic = new EcmDirectory($db);
 	$userstatic = new User($db);
@@ -474,7 +474,7 @@ function treeOutputForAbsoluteDir($sqltree, $selecteddir, $fullpathselecteddir, 
 							}
 							elseif ($modulepart == 'medias')
 							{
-								$newfullpathselecteddir = $dolibarr_main_data_root.'/medias/'.($val['fullrelativename'] != '/' ? $val['fullrelativename'] : '');
+								$newfullpathselecteddir = $DigitalProspects_main_data_root.'/medias/'.($val['fullrelativename'] != '/' ? $val['fullrelativename'] : '');
 							}
 
 							if ($newfullpathselecteddir) treeOutputForAbsoluteDir($sqltree, $newselecteddir, $newfullpathselecteddir, $modulepart, $websitekey, $pageid, $preopened, $fullpathpreopened, $depth + 1);

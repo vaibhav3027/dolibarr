@@ -57,10 +57,10 @@ if ($action == 'updateform')
 	$antivircommand = dol_string_nospecial($antivircommand, '', array("|", ";", "<", ">", "&")); // Sanitize command
 	$antivirparam = dol_string_nospecial($antivirparam, '', array("|", ";", "<", ">", "&")); // Sanitize params
 
-	$res3 = dolibarr_set_const($db, 'MAIN_UPLOAD_DOC', GETPOST('MAIN_UPLOAD_DOC', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res4 = dolibarr_set_const($db, "MAIN_UMASK", GETPOST('MAIN_UMASK', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res5 = dolibarr_set_const($db, "MAIN_ANTIVIRUS_COMMAND", trim($antivircommand), 'chaine', 0, '', $conf->entity);
-	$res6 = dolibarr_set_const($db, "MAIN_ANTIVIRUS_PARAM", trim($antivirparam), 'chaine', 0, '', $conf->entity);
+	$res3 = DigitalProspects_set_const($db, 'MAIN_UPLOAD_DOC', GETPOST('MAIN_UPLOAD_DOC', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res4 = DigitalProspects_set_const($db, "MAIN_UMASK", GETPOST('MAIN_UMASK', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res5 = DigitalProspects_set_const($db, "MAIN_ANTIVIRUS_COMMAND", trim($antivircommand), 'chaine', 0, '', $conf->entity);
+	$res6 = DigitalProspects_set_const($db, "MAIN_ANTIVIRUS_PARAM", trim($antivirparam), 'chaine', 0, '', $conf->entity);
 	if ($res3 && $res4 && $res5 && $res6) setEventMessages($langs->trans("RecordModifiedSuccessfully"), null, 'mesgs');
 }
 

@@ -19,7 +19,7 @@
 
 /**
  *		\file 		htdocs/admin/tools/update.php
- *		\brief      Page to make a Dolibarr online upgrade
+ *		\brief      Page to make a DigitalProspects online upgrade
  */
 
 require '../../main.inc.php';
@@ -39,10 +39,10 @@ if (GETPOST('msg', 'alpha')) {
 }
 
 
-$urldolibarr = 'https://www.dolibarr.org/downloads/';
-$dolibarrroot = preg_replace('/([\\/]+)$/i', '', DOL_DOCUMENT_ROOT);
-$dolibarrroot = preg_replace('/([^\\/]+)$/i', '', $dolibarrroot);
-$dolibarrdataroot = preg_replace('/([\\/]+)$/i', '', DOL_DATA_ROOT);
+$urlDigitalProspects = 'https://www.DigitalProspects.org/downloads/';
+$DigitalProspectsroot = preg_replace('/([\\/]+)$/i', '', DOL_DOCUMENT_ROOT);
+$DigitalProspectsroot = preg_replace('/([^\\/]+)$/i', '', $DigitalProspectsroot);
+$DigitalProspectsdataroot = preg_replace('/([\\/]+)$/i', '', DOL_DATA_ROOT);
 
 $sfurl = '';
 $version = '0.0';
@@ -54,7 +54,7 @@ $version = '0.0';
 
 if ($action == 'getlastversion')
 {
-	$result = getURLContent('http://sourceforge.net/projects/dolibarr/rss');
+	$result = getURLContent('http://sourceforge.net/projects/DigitalProspects/rss');
 	//var_dump($result['content']);
 	$sfurl = simplexml_load_string($result['content']);
 }
@@ -118,17 +118,17 @@ print $langs->trans("Upgrade").'<br>';
 print '<hr>';
 print $langs->trans("ThisIsProcessToFollow").'<br>';
 print '<b>'.$langs->trans("StepNb", 1).'</b>: ';
-$fullurl = '<a href="'.$urldolibarr.'" target="_blank">'.$urldolibarr.'</a>';
+$fullurl = '<a href="'.$urlDigitalProspects.'" target="_blank">'.$urlDigitalProspects.'</a>';
 print $langs->trans("DownloadPackageFromWebSite", $fullurl).'<br>';
 print '<b>'.$langs->trans("StepNb", 2).'</b>: ';
-print $langs->trans("UnpackPackageInDolibarrRoot", $dolibarrroot).'<br>';
+print $langs->trans("UnpackPackageInDigitalProspectsRoot", $DigitalProspectsroot).'<br>';
 print '<b>'.$langs->trans("StepNb", 3).'</b>: ';
-print $langs->trans("RemoveLock", $dolibarrdataroot.'/install.lock').'<br>';
+print $langs->trans("RemoveLock", $DigitalProspectsdataroot.'/install.lock').'<br>';
 print '<b>'.$langs->trans("StepNb", 4).'</b>: ';
 $fullurl = '<a href="'.DOL_URL_ROOT.'/install/" target="_blank">'.DOL_URL_ROOT.'/install/</a>';
 print $langs->trans("CallUpdatePage", $fullurl).'<br>';
 print '<b>'.$langs->trans("StepNb", 5).'</b>: ';
-print $langs->trans("RestoreLock", $dolibarrdataroot.'/install.lock').'<br>';
+print $langs->trans("RestoreLock", $DigitalProspectsdataroot.'/install.lock').'<br>';
 
 print '<br>';
 print '<br>';

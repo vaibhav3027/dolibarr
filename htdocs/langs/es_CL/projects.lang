@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 ProjectId=Proyecto Id
 ProjectLabel=Etiqueta del proyecto
 ProjectsArea=Área de proyectos
@@ -101,9 +101,9 @@ CloneMoveDate=Actualizar las fechas del proyecto / tareas a partir de ahora?
 ConfirmCloneProject=¿Seguro que clonarás este proyecto?
 ProjectReportDate=Cambiar las fechas de las tareas según la nueva fecha de inicio del proyecto
 ErrorShiftTaskDate=Imposible cambiar la fecha de la tarea según la fecha de inicio del nuevo proyecto
-TaskCreatedInDolibarr=Tarea %s creada
-TaskModifiedInDolibarr=Tarea %s modificada
-TaskDeletedInDolibarr=Tarea %s eliminada
+TaskCreatedInDigitalProspects=Tarea %s creada
+TaskModifiedInDigitalProspects=Tarea %s modificada
+TaskDeletedInDigitalProspects=Tarea %s eliminada
 OpportunityStatus=Estado de plomo
 OpportunityStatusShort=Estado de plomo
 OpportunityProbability=Probabilidad de plomo

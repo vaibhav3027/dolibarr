@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Nama Perusahaan %s telah terdaftar. Silahkan masukan nama lain.
 ErrorSetACountryFirst=Set Negara dulu
 SelectThirdParty=Pilih Pihak Ketiga
@@ -12,7 +12,7 @@ MenuNewSupplier=Vendor Baru
 MenuNewPrivateIndividual=Individu pribadi baru
 NewCompany=Perusahaan baru (prospek, pelanggan, vendor)
 NewThirdParty=Pihak Ketiga Baru (prospek, pelanggan, vendor)
-CreateDolibarrThirdPartySupplier=Buat pihak ketiga (vendor)
+CreateDigitalProspectsThirdPartySupplier=Buat pihak ketiga (vendor)
 CreateThirdPartyOnly=Buat pihak ketiga
 CreateThirdPartyAndContact=Buat pihak ketiga + kontak anak
 ProspectionArea=Area prospek
@@ -347,7 +347,7 @@ CapitalOf=Modal %s
 EditCompany=Edit perusahaan
 ThisUserIsNot=Pengguna ini bukan prospek, pelanggan, atau vendor
 VATIntraCheck=Periksa
-VATIntraCheckDesc=ID PPN harus menyertakan awalan negara. Tautan<b>%s</b>menggunakan layanan pemeriksa PPN Eropa (VIES) yang memerlukan akses internet dari server Dolibarr.
+VATIntraCheckDesc=ID PPN harus menyertakan awalan negara. Tautan<b>%s</b>menggunakan layanan pemeriksa PPN Eropa (VIES) yang memerlukan akses internet dari server DigitalProspects.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Periksa ID PPN intra-Komunitas di situs web Komisi Eropa
 VATIntraManualCheck=Anda juga dapat memeriksa secara manual di situs web Komisi Eropa <a href="%s" target="_blank"> %s </a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Prospek berdasarkan status
 NoParentCompany=Tidak ada
 ExportCardToFormat=Ekspor kartu ke format
 ContactNotLinkedToCompany=Kontak tidak tertaut ke pihak ketiga mana pun
-DolibarrLogin=Login Dolibarr
-NoDolibarrAccess=Tidak ada akses Dolibarr
+DigitalProspectsLogin=Login DigitalProspects
+NoDigitalProspectsAccess=Tidak ada akses DigitalProspects
 ExportDataset_company_1=Pihak ketiga (perusahaan/yayasan/orang fisik) dan propertinya
 ExportDataset_company_2=Kontak dan propertinya
 ImportDataset_company_1=Pihak ketiga dan propertinya

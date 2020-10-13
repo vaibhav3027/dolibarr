@@ -92,8 +92,8 @@ if (GETPOST('button_removefilter_x', 'alpha') || GETPOST('button_removefilter.x'
 
 if ($action == 'setMAIN_ENABLE_DEFAULT_VALUES')
 {
-    if (GETPOST('value')) dolibarr_set_const($db, 'MAIN_ENABLE_DEFAULT_VALUES', 1, 'chaine', 0, '', $conf->entity);
-    else dolibarr_set_const($db, 'MAIN_ENABLE_DEFAULT_VALUES', 0, 'chaine', 0, '', $conf->entity);
+    if (GETPOST('value')) DigitalProspects_set_const($db, 'MAIN_ENABLE_DEFAULT_VALUES', 1, 'chaine', 0, '', $conf->entity);
+    else DigitalProspects_set_const($db, 'MAIN_ENABLE_DEFAULT_VALUES', 0, 'chaine', 0, '', $conf->entity);
 }
 
 if (($action == 'add' || (GETPOST('add') && $action != 'update')) || GETPOST('actionmodify'))

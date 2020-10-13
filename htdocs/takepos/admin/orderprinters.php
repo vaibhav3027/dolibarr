@@ -53,7 +53,7 @@ if ($action == "SavePrinter1") {
 	if (is_array($printer1)) foreach ($printer1 as $cat) {
 		$printedcategories = $printedcategories.$cat.";";
 	}
-	dolibarr_set_const($db, "TAKEPOS_PRINTED_CATEGORIES_1", $printedcategories, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "TAKEPOS_PRINTED_CATEGORIES_1", $printedcategories, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == "SavePrinter2") {
@@ -61,7 +61,7 @@ if ($action == "SavePrinter2") {
 	if (is_array($printer2)) foreach ($printer2 as $cat) {
 		$printedcategories = $printedcategories.$cat.";";
 	}
-	dolibarr_set_const($db, "TAKEPOS_PRINTED_CATEGORIES_2", $printedcategories, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "TAKEPOS_PRINTED_CATEGORIES_2", $printedcategories, 'chaine', 0, '', $conf->entity);
 }
 
 

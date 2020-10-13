@@ -86,7 +86,7 @@ class Auth
 	public function verif($aLogin, $aPasswd)
 	{
 		global $conf, $langs;
-		global $dolibarr_main_authentication, $dolibarr_auto_user;
+		global $DigitalProspects_main_authentication, $DigitalProspects_auto_user;
 
 		$ret = -1;
 
@@ -95,17 +95,17 @@ class Auth
 		$test = true;
 
         // Authentication mode
-        if (empty($dolibarr_main_authentication)) $dolibarr_main_authentication = 'http,dolibarr';
+        if (empty($DigitalProspects_main_authentication)) $DigitalProspects_main_authentication = 'http,DigitalProspects';
         // Authentication mode: forceuser
-        if ($dolibarr_main_authentication == 'forceuser' && empty($dolibarr_auto_user)) $dolibarr_auto_user = 'auto';
+        if ($DigitalProspects_main_authentication == 'forceuser' && empty($DigitalProspects_auto_user)) $DigitalProspects_auto_user = 'auto';
         // Set authmode
-        $authmode = explode(',', $dolibarr_main_authentication);
+        $authmode = explode(',', $DigitalProspects_main_authentication);
 
         // No authentication mode
         if (!count($authmode))
         {
             $langs->load('main');
-            dol_print_error('', $langs->trans("ErrorConfigParameterNotDefined", 'dolibarr_main_authentication'));
+            dol_print_error('', $langs->trans("ErrorConfigParameterNotDefined", 'DigitalProspects_main_authentication'));
             exit;
         }
 

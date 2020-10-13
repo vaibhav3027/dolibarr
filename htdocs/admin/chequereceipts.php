@@ -53,7 +53,7 @@ if ($action == 'updateMask')
 {
 	$maskconstchequereceipts = GETPOST('maskconstchequereceipts', 'alpha');
 	$maskchequereceipts = GETPOST('maskchequereceipts', 'alpha');
-	if ($maskconstchequereceipts) $res = dolibarr_set_const($db, $maskconstchequereceipts, $maskchequereceipts, 'chaine', 0, '', $conf->entity);
+	if ($maskconstchequereceipts) $res = DigitalProspects_set_const($db, $maskconstchequereceipts, $maskchequereceipts, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -69,14 +69,14 @@ if ($action == 'updateMask')
 
 if ($action == 'setmod')
 {
-	dolibarr_set_const($db, "CHEQUERECEIPTS_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "CHEQUERECEIPTS_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == 'set_BANK_CHEQUERECEIPT_FREE_TEXT')
 {
 	$freetext = GETPOST('BANK_CHEQUERECEIPT_FREE_TEXT', 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "BANK_CHEQUERECEIPT_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "BANK_CHEQUERECEIPT_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -263,7 +263,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
 	include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-	$doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+	$doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
 	print $doleditor->Create();
 }
 print '</td><td class="right">';

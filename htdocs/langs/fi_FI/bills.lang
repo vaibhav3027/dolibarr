@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Lasku
 Bills=Laskut
 BillsCustomers=Asiakkaiden laskut
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Set start date
 AutoFillDateTo=Set end date for service line with next invoice date
 AutoFillDateToShort=Set end date
 MaxNumberOfGenerationReached=Max number of gen. reached
-BILL_DELETEInDolibarr=Lasku poistettu
-BILL_SUPPLIER_DELETEInDolibarr=Supplier invoice deleted
+BILL_DELETEInDigitalProspects=Lasku poistettu
+BILL_SUPPLIER_DELETEInDigitalProspects=Supplier invoice deleted
 UnitPriceXQtyLessDiscount=Unit price x Qty - Discount
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

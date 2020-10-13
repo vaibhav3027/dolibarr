@@ -23,13 +23,13 @@ class mod_syslog_file extends LogHandler implements LogHandlerInterface
 	}
 
 	/**
-	 * Version of the module ('x.y.z' or 'dolibarr' or 'experimental' or 'development')
+	 * Version of the module ('x.y.z' or 'DigitalProspects' or 'experimental' or 'development')
 	 *
 	 * @return string
 	 */
 	public function getVersion()
 	{
-		return 'dolibarr';
+		return 'DigitalProspects';
 	}
 
 	/**
@@ -68,7 +68,7 @@ class mod_syslog_file extends LogHandler implements LogHandlerInterface
 			array(
 				'name' => $langs->trans('SyslogFilename'),
 				'constant' => 'SYSLOG_FILE',
-				'default' => 'DOL_DATA_ROOT/dolibarr.log',
+				'default' => 'DOL_DATA_ROOT/DigitalProspects.log',
 				'attr' => 'size="60"'
 			)
 		);
@@ -106,7 +106,7 @@ class mod_syslog_file extends LogHandler implements LogHandlerInterface
 	{
 	    global $conf;
 
-	    if (empty($conf->global->SYSLOG_FILE)) $tmp = DOL_DATA_ROOT.'/dolibarr.log';
+	    if (empty($conf->global->SYSLOG_FILE)) $tmp = DOL_DATA_ROOT.'/DigitalProspects.log';
 	    else $tmp = str_replace('DOL_DATA_ROOT', DOL_DATA_ROOT, $conf->global->SYSLOG_FILE);
 
 	    if (!empty($conf->global->SYSLOG_FILE_ONEPERSESSION))
@@ -133,7 +133,7 @@ class mod_syslog_file extends LogHandler implements LogHandlerInterface
 	 */
 	public function export($content, $suffixinfilename = '')
 	{
-		global $conf, $dolibarr_main_prod;
+		global $conf, $DigitalProspects_main_prod;
 
 		if (!empty($conf->global->MAIN_SYSLOG_DISABLE_FILE)) return; // Global option to disable output of this handler
 
@@ -147,9 +147,9 @@ class mod_syslog_file extends LogHandler implements LogHandlerInterface
 		{
 			if (!defined('SYSLOG_FILE_NO_ERROR') || !constant('SYSLOG_FILE_NO_ERROR'))
 			{
-				// Do not break dolibarr usage if log fails
+				// Do not break DigitalProspects usage if log fails
 				//throw new Exception('Failed to open log file '.basename($logfile));
-				print 'Failed to open log file '.($dolibarr_main_prod ?basename($logfile) : $logfile);
+				print 'Failed to open log file '.($DigitalProspects_main_prod ?basename($logfile) : $logfile);
 			}
 		}
 		else

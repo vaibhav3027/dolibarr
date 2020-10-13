@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Varnostna koda
 NumberingShort=N°
 Tools=Orodja
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=Urejanje članov ustanove
@@ -177,10 +177,10 @@ SizeUnitpoint=točka
 BugTracker=Sledenje hrošču
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=Nazaj na stran za prijavo
-AuthenticationDoesNotAllowSendNewPassword=Preverjanje pristnosti je <b>%s</b>.<br>V tem načinu Dolibarr ne more vedeti, niti spremeniti vašega gesla.<br>Če želite spremeniti geslo, se obrnite na vašega sistemskega administratorja.
+AuthenticationDoesNotAllowSendNewPassword=Preverjanje pristnosti je <b>%s</b>.<br>V tem načinu DigitalProspects ne more vedeti, niti spremeniti vašega gesla.<br>Če želite spremeniti geslo, se obrnite na vašega sistemskega administratorja.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>Prof Id %s</b> je informacija, odvisna od države partnerja.<br>Na primer za državo <b>%s</b>, je koda <b>%s</b>.
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=Nabor podatkov za uvoz
-DolibarrNotification=Avtomatsko obvestilo
+DigitalProspectsNotification=Avtomatsko obvestilo
 ResizeDesc=Vnesite novo širino <b>ALI</b> novo višino. Razmerje se bo med spreminjanjem velikosti ohranilo...
 NewLength=Nova širina
 NewHeight=Nova višina

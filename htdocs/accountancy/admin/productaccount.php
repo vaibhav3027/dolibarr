@@ -123,7 +123,7 @@ if ($action == 'update') {
 		);
 
 		if (in_array($accounting_product_mode, $accounting_product_modes)) {
-			if (!dolibarr_set_const($db, 'ACCOUNTING_PRODUCT_MODE', $accounting_product_mode, 'chaine', 0, '', $conf->entity)) {
+			if (!DigitalProspects_set_const($db, 'ACCOUNTING_PRODUCT_MODE', $accounting_product_mode, 'chaine', 0, '', $conf->entity)) {
 				$error++;
 			}
 		} else {

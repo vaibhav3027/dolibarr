@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -60,7 +60,7 @@ ErrorServiceUnavailableTryLater=Dienst derzeit nicht verfügbar. Später erneut 
 ErrorDuplicateField=Dieser Wert ist schon vorhanden (Das Feld erfordert einen einzigartigen Wert)
 ErrorSomeErrorWereFoundRollbackIsDone=Einige Fehler wurden gefunden. Änderungen wurden rückgängig gemacht.
 ErrorConfigParameterNotDefined=Parameter <b>%s</b> ist innerhalb der Konfigurationsdatei <b>conf.php.</b> nicht definiert.
-ErrorCantLoadUserFromDolibarrDatabase=Benutzer <b>%s</b> in der Dolibarr-Datenbank nicht gefunden
+ErrorCantLoadUserFromDigitalProspectsDatabase=Benutzer <b>%s</b> in der DigitalProspects-Datenbank nicht gefunden
 ErrorNoVATRateDefinedForSellerCountry=Fehler, keine MwSt.-Sätze für Land  '%s' definiert.
 ErrorNoSocialContributionForSellerCountry=Fehler, Sozialabgaben/Steuerwerte für Staat '%s' nicht definiert.
 ErrorFailedToSaveFile=Fehler, konnte Datei nicht speichern.
@@ -90,7 +90,7 @@ RecordDeleted=Eintrag gelöscht
 RecordGenerated=Eintrag erzeugt
 LevelOfFeature=Funktionslevel
 NotDefined=Nicht definiert
-DolibarrInHttpAuthenticationSoPasswordUseless=Der Dolibarr Authentifizierungsmodus wurde mit dem Wert <b>%s</b> in der Konfigurationsdatei <b>conf.php.</b> definiert\n<br> Das bedeutet, dass die Dolibarr Passwörter extern gespeichert werden, und somit Änderungen dieser Felder unwirksam sein können.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Der DigitalProspects Authentifizierungsmodus wurde mit dem Wert <b>%s</b> in der Konfigurationsdatei <b>conf.php.</b> definiert\n<br> Das bedeutet, dass die DigitalProspects Passwörter extern gespeichert werden, und somit Änderungen dieser Felder unwirksam sein können.
 Administrator=Administrator
 Undefined=Nicht definiert
 PasswordForgotten=Passwort vergessen?
@@ -108,9 +108,9 @@ DatabaseTypeManager=Datenbank Type Manager
 RequestLastAccessInError=Letzter Fehlerhafter Datenbankzugriff
 ReturnCodeLastAccessInError=Rückgabewert des letzten fehlerhaften Datenbankzugriff
 InformationLastAccessInError=Information zum letzten fehlerhaften Datenbankzugriff
-DolibarrHasDetectedError=Das System hat einen technischen Fehler festgestellt
-YouCanSetOptionDolibarrMainProdToZero=Sie können die Protokolldatei lesen oder die Option $dolibarr_main_prod in Ihrer Konfigurationsdatei auf '0' setzen, um weitere Informationen zu erhalten.
-InformationToHelpDiagnose=Diese Informationen können bei der Fehlersuche hilfreich sein (Hinweise können entfernt werden indem $dolibarr_main_prod auf '1' gesetzt wird)
+DigitalProspectsHasDetectedError=Das System hat einen technischen Fehler festgestellt
+YouCanSetOptionDigitalProspectsMainProdToZero=Sie können die Protokolldatei lesen oder die Option $DigitalProspects_main_prod in Ihrer Konfigurationsdatei auf '0' setzen, um weitere Informationen zu erhalten.
+InformationToHelpDiagnose=Diese Informationen können bei der Fehlersuche hilfreich sein (Hinweise können entfernt werden indem $DigitalProspects_main_prod auf '1' gesetzt wird)
 MoreInformation=Weitere Informationen
 TechnicalInformation=Technische Information
 TechnicalID=Technische ID
@@ -475,8 +475,8 @@ Generate=Erzeugen
 Duration=Dauer
 TotalDuration=Gesamtdauer
 Summary=Zusammenfassung
-DolibarrStateBoard=Datenbank-Statistik
-DolibarrWorkBoard=Offene Einträge
+DigitalProspectsStateBoard=Datenbank-Statistik
+DigitalProspectsWorkBoard=Offene Einträge
 NoOpenedElementToProcess=Kein Element zum Verarbeiten geöffnet
 Available=Verfügbar
 NotYetAvailable=Noch nicht verfügbar
@@ -703,7 +703,7 @@ MenuECM=Dokumente
 MenuAWStats=Statistiken
 MenuMembers=Mitglieder
 MenuAgendaGoogle=Google-Agenda
-ThisLimitIsDefinedInSetup=Gesetzte Dolibarr-Limits (Menü Start-Einstellungen-Sicherheit): %s Kb, PHP Limit: %s Kb
+ThisLimitIsDefinedInSetup=Gesetzte DigitalProspects-Limits (Menü Start-Einstellungen-Sicherheit): %s Kb, PHP Limit: %s Kb
 NoFileFound=Keine Dokumente in diesem Verzeichnis
 CurrentUserLanguage=Aktuelle Benutzersprache
 CurrentTheme=Aktuelles Design
@@ -736,7 +736,7 @@ PrintContentArea=Zeige Druckansicht für Seiteninhalt
 MenuManager=Menüverwaltung
 WarningYouAreInMaintenanceMode=Achtung, Sie befinden sich im Wartungsmodus: Nur der Benutzer <b> %s </b> darf die Anwendung in diesem Modus verwenden.
 CoreErrorTitle=Systemfehler
-CoreErrorMessage=Leider ist ein Fehler aufgetreten. Wenden Sie sich an Ihren Systemadministrator, um die Logs zu überprüfen oder deaktivieren Sie die Option $dolibarr_main_prod=1 für weitere Informationen.
+CoreErrorMessage=Leider ist ein Fehler aufgetreten. Wenden Sie sich an Ihren Systemadministrator, um die Logs zu überprüfen oder deaktivieren Sie die Option $DigitalProspects_main_prod=1 für weitere Informationen.
 CreditCard=Kreditkarte
 ValidatePayment=Zahlung freigeben
 CreditOrDebitCard=Kreditkarte
@@ -875,7 +875,7 @@ Calendar=Terminkalender
 GroupBy=Gruppiere nach ...
 ViewFlatList=Listenansicht zeigen
 RemoveString=Entfernen Sie die Zeichenfolge '%s'
-SomeTranslationAreUncomplete=Einige Sprachen sind nur teilweise übersetzt oder enthalten Fehler. Wenn Sie dies feststellen, können Sie die Übersetzungen unter <a href="https://www.transifex.com/dolibarr-association/dolibarr/translate/#de_DE/" target="_blank">https://www.transifex.com/dolibarr-association/dolibarr/translate/#de_DE/</a> verbessern bzw. ergänzen.
+SomeTranslationAreUncomplete=Einige Sprachen sind nur teilweise übersetzt oder enthalten Fehler. Wenn Sie dies feststellen, können Sie die Übersetzungen unter <a href="https://www.transifex.com/DigitalProspects-association/DigitalProspects/translate/#de_DE/" target="_blank">https://www.transifex.com/DigitalProspects-association/DigitalProspects/translate/#de_DE/</a> verbessern bzw. ergänzen.
 DirectDownloadLink=Direkter Download Link
 DirectDownloadInternalLink=Direkter Download-Link (muss angemeldet sein und benötigt Berechtigungen)
 Download=Download

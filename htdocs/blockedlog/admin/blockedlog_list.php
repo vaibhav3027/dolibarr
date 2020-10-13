@@ -166,7 +166,7 @@ if ($action === 'downloadblockchain') {
 		{
 			header('Content-Type: application/octet-stream');
 			header("Content-Transfer-Encoding: Binary");
-			header("Content-disposition: attachment; filename=\"unalterable-log-archive-".$dolibarr_main_db_name."-".(GETPOST('yeartoexport', 'int') > 0 ? GETPOST('yeartoexport', 'int').(GETPOST('monthtoexport', 'int') > 0 ?sprintf("%02d", GETPOST('monthtoexport', 'int')) : '').'-' : '').$previoushash.".csv\"");
+			header("Content-disposition: attachment; filename=\"unalterable-log-archive-".$DigitalProspects_main_db_name."-".(GETPOST('yeartoexport', 'int') > 0 ? GETPOST('yeartoexport', 'int').(GETPOST('monthtoexport', 'int') > 0 ?sprintf("%02d", GETPOST('monthtoexport', 'int')) : '').'-' : '').$previoushash.".csv\"");
 
 			print $langs->transnoentities('Id')
 				.';'.$langs->transnoentities('Date')

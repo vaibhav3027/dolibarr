@@ -49,7 +49,7 @@ if (GETPOST('action', 'alpha') == 'set')
 	$suplement_category = GETPOST('TAKEPOS_SUPPLEMENTS_CATEGORY', 'alpha');
 	if ($suplement_category < 0) $suplement_category= 0;
 
-	$res = dolibarr_set_const($db, "TAKEPOS_SUPPLEMENTS_CATEGORY", $suplement_category, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_SUPPLEMENTS_CATEGORY", $suplement_category, 'chaine', 0, '', $conf->entity);
 	if ($res <= 0) {
 	    $error++;
 	}
@@ -172,7 +172,7 @@ print '</table>';
 
 if ($conf->global->TAKEPOS_QR_MENU)
 {
-	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 	$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 	print '<br>';
 	print '<table class="noborder centpercent">';
@@ -196,8 +196,8 @@ if ($conf->global->TAKEPOS_AUTO_ORDER)
 	print '<td>'.$langs->trans("Table").'</td><td>'.$langs->trans("URL").'</td><td class="right">'.$langs->trans("QR").'</td>';
 	print "</tr>\n";
 
-	//global $dolibarr_main_url_root;
-	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+	//global $DigitalProspects_main_url_root;
+	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 	$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 	$sql = "SELECT rowid, entity, label, leftpos, toppos, floor FROM ".MAIN_DB_PREFIX."takepos_floor_tables";
 	$resql = $db->query($sql);

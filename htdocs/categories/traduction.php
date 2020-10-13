@@ -273,7 +273,7 @@ if ($action == 'edit')
 			// Desc
             $desc = (GETPOST('desc-'.$key) ? GETPOST('desc-'.$key) : $object->multilangs[$key]['description']);
 			print '<tr><td class="tdtop">'.$langs->trans('Description').'</td><td>';
-			$doleditor = new DolEditor("desc-$key", $desc, '', 160, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
+			$doleditor = new DolEditor("desc-$key", $desc, '', 160, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
 			$doleditor->Create();
 			print '</td></tr>';
 
@@ -339,7 +339,7 @@ if ($action == 'add' && ($user->rights->produit->creer || $user->rights->service
 	print '<tr><td class="fieldrequired">'.$langs->trans('Label').'</td>';
 	print '<td><input name="libelle" class="minwidth200 maxwidth300" value="'.GETPOST('libelle', 'alpha').'"></td></tr>';
 	print '<tr><td>'.$langs->trans('Description').'</td><td>';
-	$doleditor = new DolEditor('desc', GETPOST('desc', 'none'), '', 160, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
+	$doleditor = new DolEditor('desc', GETPOST('desc', 'none'), '', 160, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
 	$doleditor->Create();
 	print '</td></tr>';
 

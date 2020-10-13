@@ -36,10 +36,10 @@ class mod_codecompta_panicum extends ModeleAccountancyCode
 	public $name = 'Panicum';
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $position = 10;
 

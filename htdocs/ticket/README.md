@@ -7,4 +7,4 @@ Offer your customers an easy to use interface to report and follow status of the
 your backoffice.
  
 
-(c) The development of this module has been initiated by the company <a href="https://librethic.io">Libr&thic</a> and is now part of Dolibarr ERP CRM core.
+(c) The development of this module has been initiated by the company <a href="https://librethic.io">Libr&thic</a> and is now part of DigitalProspects ERP CRM core.

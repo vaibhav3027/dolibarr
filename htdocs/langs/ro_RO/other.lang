@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Cod de securitate
 NumberingShort=N°
 Tools=Instrumente
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Salut)__\n\n\n__(Cu sinceritate)__\n\n__USER_
 PredefinedMailContentContact=__(Salut)__\n\n\n__(Cu sinceritate)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Salut)__\n\n\n__(Cu sinceritate)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=Puteți face clic pe linkul de mai jos pentru a efectua plata dacă nu este deja făcută.\n\n%s\n\n
-DemoDesc=Dolibarr este un sistem ERP/CRM compact care suportă mai multe module de afaceri. O prezentare Demo pentru toate modulele nu are sens deoarece acest scenariu nu se produce niciodată (câteva sute disponibile). Deci, sunt disponibile mai multe profiluri demo.
+DemoDesc=DigitalProspects este un sistem ERP/CRM compact care suportă mai multe module de afaceri. O prezentare Demo pentru toate modulele nu are sens deoarece acest scenariu nu se produce niciodată (câteva sute disponibile). Deci, sunt disponibile mai multe profiluri demo.
 ChooseYourDemoProfil=Alegeți profilul demo care se potrivește cel mai bine nevoilor dvs. ...
 ChooseYourDemoProfilMore=... sau construiți propriul profil <br> (selectarea manuală a modulelor)
 DemoFundation=Gestionare membrii unui Fundaţia
@@ -177,10 +177,10 @@ SizeUnitpoint=punct
 BugTracker=Bug tracker
 SendNewPasswordDesc=Acest formular vă permite să solicitați o nouă parolă. Acesta va fi trimis la adresa ta de email. <br> Schimbarea va intra în vigoare odată ce faceți clic pe link-ul de confirmare din email. <br> Verificați Inbox-ul
 BackToLoginPage=Înapoi la pagina de login
-AuthenticationDoesNotAllowSendNewPassword=Mod de autentificare <b>este %s.</b> <br> În acest mod, Dolibarr nu poate şi nici nu ştiu să-ţi schimbi parola. <br> Contactaţi administratorul de sistem, dacă doriţi să vă schimbaţi parola.
+AuthenticationDoesNotAllowSendNewPassword=Mod de autentificare <b>este %s.</b> <br> În acest mod, DigitalProspects nu poate şi nici nu ştiu să-ţi schimbi parola. <br> Contactaţi administratorul de sistem, dacă doriţi să vă schimbaţi parola.
 EnableGDLibraryDesc=Instalați sau activați biblioteca GD din instalarea dvs. PHP pentru a utiliza această opțiune.
 ProfIdShortDesc=<b>Prof Id-ul %s</b> este una de informaţii în funcţie de ţară terţă parte. <br> De exemplu, pentru <b>ţara %s,</b> este <b>codul %s.</b>
-DolibarrDemo=Demo Dolibarr ERP / CRM
+DigitalProspectsDemo=Demo DigitalProspects ERP / CRM
 StatsByNumberOfUnits=Statistici pentru suma cantităţilor produselor / serviciilor
 StatsByNumberOfEntities=Statistici în numărul entităților care fac trimitere (numărul de factură sau comanda ...)
 NumberOfProposals=Numărul de propuneri
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Raportul de cheltuieli %s a fost aprobat.
 EMailTextHolidayValidated=Cererea de concediu %s a fost validată.
 EMailTextHolidayApproved=Cererea de concediu %s a fost aprobată.
 ImportedWithSet=Import de date
-DolibarrNotification=Notificare Automată
+DigitalProspectsNotification=Notificare Automată
 ResizeDesc=Introduceţi lăţimea noi <b>sau</b> înălţimea noi. Raportul va fi păstrat în timpul redimensionare ...
 NewLength=Lăţime nouă
 NewHeight=Înălţime nouă

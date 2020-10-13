@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Klienti pasūtījumu sadaļa
 SuppliersOrdersArea=Pirkumu pasūtījumu apgabals
 OrderCard=Pasūtījumu kartiņa
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Vai jūs tiešām vēlaties klonēt šo pasūtījumu <b>%s</b>
 DispatchSupplierOrder=Pirkuma pasūtījuma saņemšana %s
 FirstApprovalAlreadyDone=Pirmais apstiprinājums jau ir izdarīts
 SecondApprovalAlreadyDone=Otrais apstiprinājums jau veikts
-SupplierOrderReceivedInDolibarr=Pirkuma pasūtījumu %s saņēma %s
-SupplierOrderSubmitedInDolibarr=Pirkuma pasūtījums %s iesniegts
+SupplierOrderReceivedInDigitalProspects=Pirkuma pasūtījumu %s saņēma %s
+SupplierOrderSubmitedInDigitalProspects=Pirkuma pasūtījums %s iesniegts
 SupplierOrderClassifiedBilled=Pirkuma pasūtījums %s, kas ir iekasēts
 OtherOrders=Citi pasūtījumi
 ##### Types de contacts #####

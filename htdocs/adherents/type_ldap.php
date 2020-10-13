@@ -55,7 +55,7 @@ if ($reshook < 0) setEventMessages($hookmanager->error, $hookmanager->errors, 'e
 
 if (empty($reshook))
 {
-	if ($action == 'dolibarr2ldap')
+	if ($action == 'DigitalProspects2ldap')
 	{
 		$ldap = new Ldap();
 		$result = $ldap->connect_bind();
@@ -128,7 +128,7 @@ print '<div class="tabsAction">';
 
 if ($conf->global->LDAP_MEMBER_TYPE_ACTIVE == 1)
 {
-    print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&action=dolibarr2ldap">'.$langs->trans("ForceSynchronize").'</a>';
+    print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&action=DigitalProspects2ldap">'.$langs->trans("ForceSynchronize").'</a>';
 }
 
 print "</div>\n";

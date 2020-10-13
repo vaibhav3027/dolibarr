@@ -151,7 +151,7 @@ class FunctionsLibTest extends PHPUnit\Framework\TestCase
         print __METHOD__." result=".$result."\n";
         $this->assertEquals(0, $result);
 
-        $input="dolibarr.fr";
+        $input="DigitalProspects.fr";
         $result=isValidMXRecord($input);
         print __METHOD__." result=".$result."\n";
         $this->assertEquals(0, $result);

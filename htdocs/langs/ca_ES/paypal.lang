@@ -1,6 +1,6 @@
-# Dolibarr language file - Source file is en_US - paypal
+# DigitalProspects language file - Source file is en_US - paypal
 PaypalSetup=Configuració mòdul PayPal
-PaypalDesc=Aquest mòdul permet el pagament per part dels clients a través de <a href="http://www.paypal.com" target="_blank"> PayPal </a>. Això es pot utilitzar per a un pagament ad hoc o per un pagament relacionat amb un objecte Dolibarr (factura, comanda ...)
+PaypalDesc=Aquest mòdul permet el pagament per part dels clients a través de <a href="http://www.paypal.com" target="_blank"> PayPal </a>. Això es pot utilitzar per a un pagament ad hoc o per un pagament relacionat amb un objecte DigitalProspects (factura, comanda ...)
 PaypalOrCBDoPayment=Paga amb PayPal (targeta de crèdit o PayPal)
 PaypalDoPayment=Paga amb PayPal
 PAYPAL_API_SANDBOX=Mode de proves(sandbox)

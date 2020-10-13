@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=พื้นที่สมาชิก
 MemberCard=บัตรสมาชิก
 SubscriptionCard=สมัครสมาชิกบัตร
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=ตรวจสอบรายชื่อของ
 ErrorThisMemberIsNotPublic=สมาชิกคนนี้ไม่ได้เป็นของประชาชน
 ErrorMemberIsAlreadyLinkedToThisThirdParty=สมาชิกอีกคนหนึ่ง <b>(ชื่อ:% s, เข้าสู่ระบบ:% s) จะเชื่อมโยงกับบุคคลที่สาม%</b> s ลบลิงค์นี้ก่อนเพราะบุคคลที่สามไม่สามารถเชื่อมโยงไปยังสมาชิกเท่านั้น (และในทางกลับกัน)
 ErrorUserPermissionAllowsToLinksToItselfOnly=ด้วยเหตุผลด้านความปลอดภัยคุณต้องได้รับสิทธิ์ในการแก้ไขผู้ใช้ทุกคนที่จะสามารถที่จะเชื่อมโยงสมาชิกให้กับผู้ใช้ที่ไม่ได้เป็นของคุณ
-SetLinkToUser=เชื่อมโยงไปยังผู้ใช้ Dolibarr
-SetLinkToThirdParty=เชื่อมโยงไปยัง Dolibarr ของบุคคลที่สาม
+SetLinkToUser=เชื่อมโยงไปยังผู้ใช้ DigitalProspects
+SetLinkToThirdParty=เชื่อมโยงไปยัง DigitalProspects ของบุคคลที่สาม
 MembersCards=สมาชิกบัตรธุรกิจ
 MembersList=รายชื่อสมาชิก
 MembersListToValid=รายชื่อสมาชิกร่าง (ที่จะถูกตรวจสอบ)
@@ -89,10 +89,10 @@ ConfirmDeleteSubscription=Are you sure you want to delete this subscription?
 Filehtpasswd=ไฟล์ htpasswd
 ValidateMember=ตรวจสอบสมาชิก
 ConfirmValidateMember=Are you sure you want to validate this member?
-FollowingLinksArePublic=The following links are open pages not protected by any Dolibarr permission. They are not formatted pages, provided as example to show how to list members database.
+FollowingLinksArePublic=The following links are open pages not protected by any DigitalProspects permission. They are not formatted pages, provided as example to show how to list members database.
 PublicMemberList=รายชื่อสมาชิกสาธารณะ
 BlankSubscriptionForm=Public self-subscription form
-BlankSubscriptionFormDesc=Dolibarr can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
+BlankSubscriptionFormDesc=DigitalProspects can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
 EnablePublicSubscriptionForm=Enable the public website with self-subscription form
 ForceMemberType=Force the member type
 ExportDataset_member_1=และการสมัครสมาชิก

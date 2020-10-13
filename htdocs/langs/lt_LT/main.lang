@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nėra užklausos dėl klaidos
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=Dubliuojanti reikšmė unikaliame lauke
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Nepavyko rasti vartotojo <b>%s</b> Dolibarr duomenų bazėje.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Nepavyko rasti vartotojo <b>%s</b> DigitalProspects duomenų bazėje.
 ErrorNoVATRateDefinedForSellerCountry=Klaida, nėra apibrėžtų PVM tarifų šaliai '%s'.
 ErrorNoSocialContributionForSellerCountry=Klaida, socialiniai / fiskaliniai mokesčiai neapibrėžti šaliai '%s'.
 ErrorFailedToSaveFile=Klaida, nepavyko išsaugoti failo.
@@ -90,7 +90,7 @@ RecordDeleted=Įrašas ištrintas
 RecordGenerated=Record generated
 LevelOfFeature=Funkcijų lygis
 NotDefined=Neapibrėžtas
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Administratorius
 Undefined=Neapibrėžtas
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Duomenų bazės tipas valdytojas
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr aptiko techninę klaidą
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects aptiko techninę klaidą
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=Daugiau informacijos
 TechnicalInformation=Techninė informacija
 TechnicalID=Technical ID
 LineID=Line ID
 NotePublic=Pastaba (viešoji)
 NotePrivate=Pastaba (privati)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr buvo nustatytas vieneto kainos tikslumas iki <b>%s</b> skaičių po kablelio.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects buvo nustatytas vieneto kainos tikslumas iki <b>%s</b> skaičių po kablelio.
 DoTest=Bandymas
 ToFilter=Filtras
 NoFilter=No filter
@@ -475,8 +475,8 @@ Generate=Generuoti
 Duration=Trukmė
 TotalDuration=Bendra trukmė
 Summary=Suvestinė
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Prieinamas
 NotYetAvailable=Dar nėra prieinamas
@@ -703,7 +703,7 @@ MenuECM=Dokumentai
 MenuAWStats=AWStats
 MenuMembers=Nariai
 MenuAgendaGoogle=Google operacijos
-ThisLimitIsDefinedInSetup=Dolibarr apribojimas (Meniu Pagrindinis-Nustatymai-Saugumas): %s kb, PHP apribojimas: %s kb
+ThisLimitIsDefinedInSetup=DigitalProspects apribojimas (Meniu Pagrindinis-Nustatymai-Saugumas): %s kb, PHP apribojimas: %s kb
 NoFileFound=Šiame kataloge nėra išsaugotų dokumentų
 CurrentUserLanguage=Dabartinė vartojama kalba
 CurrentTheme=Dabartinė tema
@@ -736,7 +736,7 @@ PrintContentArea=Rodyti puslapio pagrindinio turinio sritį spausdinimui
 MenuManager=Meniu vadovas
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Sistemos klaida
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Kreditinė kortelė
 ValidatePayment=Mokėjimą pripažinti galiojančiu
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Kalendorius
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

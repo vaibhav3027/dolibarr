@@ -20,8 +20,8 @@
  *  \brief      File that is entry point to call an Asterisk server
  *	\remarks	To be used, an Asterisk user must be created by adding this
  * 				in /etc/asterisk/manager.conf
- * 				[dolibarr]
- * 				secret = dolibarr
+ * 				[DigitalProspects]
+ * 				secret = DigitalProspects
  * 				deny=0.0.0.0/0.0.0.0
  * 				permit=127.0.0.1/255.255.255.0
  * 				read = system,call,log,verbose,command,agent,user
@@ -46,7 +46,7 @@ function llxHeader()
 {
     print '<html>'."\n";
     print '<head>'."\n";
-    print '<title>Asterisk redirection from Dolibarr...</title>'."\n";
+    print '<title>Asterisk redirection from DigitalProspects...</title>'."\n";
     print '</head>'."\n";
 }
 
@@ -152,7 +152,7 @@ if (!empty($number))
     {
         $errno = 0;
         $errstr = 0;
-        $strCallerId = "Dolibarr call $found <".strtolower($number).">";
+        $strCallerId = "DigitalProspects call $found <".strtolower($number).">";
         $oSocket = @fsockopen($strHost, $port, $errno, $errstr, 10);
         if (!$oSocket)
         {

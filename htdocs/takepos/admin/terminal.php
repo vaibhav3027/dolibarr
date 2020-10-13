@@ -69,30 +69,30 @@ if (GETPOST('action', 'alpha') == 'set')
 	$db->begin();
 	if (GETPOST('socid', 'int') < 0) $_POST["socid"] = '';
 
-	$res = dolibarr_set_const($db, "CASHDESK_ID_THIRDPARTY".$terminaltouse, (GETPOST('socid', 'int') > 0 ? GETPOST('socid', 'int') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_THIRDPARTY".$terminaltouse, (GETPOST('socid', 'int') > 0 ? GETPOST('socid', 'int') : ''), 'chaine', 0, '', $conf->entity);
 
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CASH".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CASH'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CASH'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CHEQUE".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CB".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CB'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CB'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CASH".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CASH'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CASH'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CHEQUE".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CB".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_CB'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CB'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
 	if (!empty($conf->global->TAKEPOS_ENABLE_SUMUP)) {
-		$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_SUMUP".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_SUMUP'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_SUMUP'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_SUMUP".$terminaltouse, (GETPOST('CASHDESK_ID_BANKACCOUNT_SUMUP'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_SUMUP'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
 	}
 	foreach ($paiements as $modep) {
         if (in_array($modep->code, array('LIQ', 'CB', 'CHQ'))) continue;
         $name = "CASHDESK_ID_BANKACCOUNT_".$modep->code.$terminaltouse;
-		$res = dolibarr_set_const($db, $name, (GETPOST($name, 'alpha') > 0 ? GETPOST($name, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, $name, (GETPOST($name, 'alpha') > 0 ? GETPOST($name, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
     }
-    $res = dolibarr_set_const($db, "CASHDESK_ID_WAREHOUSE".$terminaltouse, (GETPOST('CASHDESK_ID_WAREHOUSE'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_WAREHOUSE'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "CASHDESK_NO_DECREASE_STOCK".$terminaltouse, GETPOST('CASHDESK_NO_DECREASE_STOCK'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_PRINTER_TO_USE".$terminaltouse, GETPOST('TAKEPOS_PRINTER_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_ORDER_PRINTER1_TO_USE".$terminaltouse, GETPOST('TAKEPOS_ORDER_PRINTER1_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_ORDER_PRINTER2_TO_USE".$terminaltouse, GETPOST('TAKEPOS_ORDER_PRINTER2_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_TEMPLATE_TO_USE_FOR_INVOICES".$terminaltouse, GETPOST('TAKEPOS_TEMPLATE_TO_USE_FOR_INVOICES'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_TEMPLATE_TO_USE_FOR_ORDERS".$terminaltouse, GETPOST('TAKEPOS_TEMPLATE_TO_USE_FOR_ORDERS'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "CASHDESK_ID_WAREHOUSE".$terminaltouse, (GETPOST('CASHDESK_ID_WAREHOUSE'.$terminaltouse, 'alpha') > 0 ? GETPOST('CASHDESK_ID_WAREHOUSE'.$terminaltouse, 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "CASHDESK_NO_DECREASE_STOCK".$terminaltouse, GETPOST('CASHDESK_NO_DECREASE_STOCK'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_PRINTER_TO_USE".$terminaltouse, GETPOST('TAKEPOS_PRINTER_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_ORDER_PRINTER1_TO_USE".$terminaltouse, GETPOST('TAKEPOS_ORDER_PRINTER1_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_ORDER_PRINTER2_TO_USE".$terminaltouse, GETPOST('TAKEPOS_ORDER_PRINTER2_TO_USE'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_TEMPLATE_TO_USE_FOR_INVOICES".$terminaltouse, GETPOST('TAKEPOS_TEMPLATE_TO_USE_FOR_INVOICES'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_TEMPLATE_TO_USE_FOR_ORDERS".$terminaltouse, GETPOST('TAKEPOS_TEMPLATE_TO_USE_FOR_ORDERS'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
 
-	$res = dolibarr_set_const($db, 'CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, (GETPOST('CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, 'int') > 0 ? GETPOST('CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, 'int') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, (GETPOST('CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, 'int') > 0 ? GETPOST('CASHDESK_READER_KEYCODE_FOR_ENTER'.$terminaltouse, 'int') : ''), 'chaine', 0, '', $conf->entity);
 
-	$res = dolibarr_set_const($db, "TAKEPOS_ADDON".$terminaltouse, GETPOST('TAKEPOS_ADDON'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_ADDON".$terminaltouse, GETPOST('TAKEPOS_ADDON'.$terminaltouse, 'alpha'), 'chaine', 0, '', $conf->entity);
 
 	dol_syslog("admin/cashdesk: level ".GETPOST('level', 'alpha'));
 
@@ -191,7 +191,7 @@ if (!empty($conf->stock->enabled))
 	else
 	{
 	    if (!$conf->global->{'CASHDESK_NO_DECREASE_STOCK'.$terminal}) {
-	        $res = dolibarr_set_const($db, "CASHDESK_NO_DECREASE_STOCK".$terminal, 1, 'chaine', 0, '', $conf->entity);
+	        $res = DigitalProspects_set_const($db, "CASHDESK_NO_DECREASE_STOCK".$terminal, 1, 'chaine', 0, '', $conf->entity);
 	    }
 	    print $langs->trans("Yes").'<br>';
 	    print '<span class="opacitymedium">'.$langs->trans('StockDecreaseForPointOfSaleDisabledbyBatch').'</span>';

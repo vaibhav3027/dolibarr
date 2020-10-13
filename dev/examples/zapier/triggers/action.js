@@ -100,7 +100,7 @@ module.exports = {
     noun: 'Action',
     display: {
         label: 'New Agenda',
-        description: 'Trigger when a new agenda with action is done in Dolibarr.'
+        description: 'Trigger when a new agenda with action is done in DigitalProspects.'
     },
 
     // `operation` is where the business logic goes.

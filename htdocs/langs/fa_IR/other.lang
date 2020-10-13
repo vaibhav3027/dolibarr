@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=کد حفاظتی
 NumberingShort=N°
 Tools=ابزار
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=مدیریت اعضای پایه
@@ -177,10 +177,10 @@ SizeUnitpoint=نقطه
 BugTracker=اشکالات
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=بازگشت به صفحه ورود
-AuthenticationDoesNotAllowSendNewPassword=نحوه <b>تایید٪ s است.</b> <br> در این حالت، Dolibarr نمی توانند بفهمند و نه رمز عبور خود را تغییر دهید. <br> تماس با مدیر سیستم شما اگر می خواهید رمز عبور خود را تغییر دهید.
+AuthenticationDoesNotAllowSendNewPassword=نحوه <b>تایید٪ s است.</b> <br> در این حالت، DigitalProspects نمی توانند بفهمند و نه رمز عبور خود را تغییر دهید. <br> تماس با مدیر سیستم شما اگر می خواهید رمز عبور خود را تغییر دهید.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>پروفسور کد از٪ s</b> اطلاعات بسته به کشور های شخص ثالث است. <br> به عنوان مثال، برای <b>کشور٪، این کد٪ بازدید کنندگان</b> است.
-DolibarrDemo=Dolibarr ERP / CRM نسخه ی نمایشی
+DigitalProspectsDemo=DigitalProspects ERP / CRM نسخه ی نمایشی
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=واردات مجموعه داده
-DolibarrNotification=اطلاع رسانی به صورت خودکار
+DigitalProspectsNotification=اطلاع رسانی به صورت خودکار
 ResizeDesc=عرض جدید <b>OR</b> ارتفاع جدید را وارد کنید. نسبت در طول تغییر اندازه نگه داشته ...
 NewLength=عرض جدید
 NewHeight=ارتفاع جدید

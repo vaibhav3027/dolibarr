@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Секция с поръчки за продажба
 SuppliersOrdersArea=Секция с поръчки за покупка
 OrderCard=Карта
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Сигурни ли сте, че искате да клони�
 DispatchSupplierOrder=Получаване на поръчка за покупка %s
 FirstApprovalAlreadyDone=Първото одобрение вече е направено
 SecondApprovalAlreadyDone=Второто одобрение вече е направено
-SupplierOrderReceivedInDolibarr=Поръчка за покупка %s е получена %s
-SupplierOrderSubmitedInDolibarr=Поръчка за покупка %s е изпратена
+SupplierOrderReceivedInDigitalProspects=Поръчка за покупка %s е получена %s
+SupplierOrderSubmitedInDigitalProspects=Поръчка за покупка %s е изпратена
 SupplierOrderClassifiedBilled=Поръчка за покупка %s е фактурирана
 OtherOrders=Други поръчки
 ##### Types de contacts #####

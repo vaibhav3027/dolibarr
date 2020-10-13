@@ -20,17 +20,17 @@
 /**
  *	    \file       htdocs/core/doxygen.php
  *      \ingroup    core
- *		\mainpage	Dolibarr project
+ *		\mainpage	DigitalProspects project
  *
- *	    This is source documentation for Dolibarr ERP/CRM.<br>
- *      This documentation can be built or updated running the script <b>dolibarr-doxygen-build.pl</b> or from Eclipse with Doxygen plugin.<br>
+ *	    This is source documentation for DigitalProspects ERP/CRM.<br>
+ *      This documentation can be built or updated running the script <b>DigitalProspects-doxygen-build.pl</b> or from Eclipse with Doxygen plugin.<br>
  *      <br>
- *      Dolibarr official web site: <a href="https://www.dolibarr.org">www.dolibarr.org</a><br>
+ *      DigitalProspects official web site: <a href="https://www.DigitalProspects.org">www.DigitalProspects.org</a><br>
  *      <br>
- *      Dolibarr french portal: <a href="https://www.dolibarr.fr">www.dolibarr.fr</a><br>
- *      Dolibarr spanish portal: <a href="https://www.dolibarr.es">www.dolibarr.es</a><br>
- *      Dolibarr italian portal: <a href="https://www.dolibarr.it">www.dolibarr.it</a><br>
- *      Dolibarr greek portal: <a href="https://www.dolibarr.gr">www.dolibarr.gr</a><br>
- *      Dolibarr german portal: <a href="https://www.dolibarr.de">www.dolibarr.de</a><br>
+ *      DigitalProspects french portal: <a href="https://www.DigitalProspects.fr">www.DigitalProspects.fr</a><br>
+ *      DigitalProspects spanish portal: <a href="https://www.DigitalProspects.es">www.DigitalProspects.es</a><br>
+ *      DigitalProspects italian portal: <a href="https://www.DigitalProspects.it">www.DigitalProspects.it</a><br>
+ *      DigitalProspects greek portal: <a href="https://www.DigitalProspects.gr">www.DigitalProspects.gr</a><br>
+ *      DigitalProspects german portal: <a href="https://www.DigitalProspects.de">www.DigitalProspects.de</a><br>
  *      <br>
  */

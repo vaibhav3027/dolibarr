@@ -1,9 +1,9 @@
 {
-  "name": "Dolibarr",
+  "name": "DigitalProspects",
   "version": "1.0.0",
-  "description": "An app for connecting Dolibarr to the Zapier platform.",
-  "repository": "Dolibarr/dolibarr",
-  "homepage": "https://www.dolibarr.fr/",
+  "description": "An app for connecting DigitalProspects to the Zapier platform.",
+  "repository": "DigitalProspects/DigitalProspects",
+  "homepage": "https://www.DigitalProspects.fr/",
   "author": "Frédéric France <frederic.france@netlogic.fr>",
   "license": "BSD-3-Clause",
   "main": "index.js",

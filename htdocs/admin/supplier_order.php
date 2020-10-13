@@ -61,7 +61,7 @@ if ($action == 'updateMask')
     $maskconstorder = GETPOST('maskconstorder', 'alpha');
     $maskvalue = GETPOST('maskorder', 'alpha');
 
-    if ($maskconstorder)  $res = dolibarr_set_const($db, $maskconstorder, $maskvalue, 'chaine', 0, '', $conf->entity);
+    if ($maskconstorder)  $res = DigitalProspects_set_const($db, $maskconstorder, $maskvalue, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -132,14 +132,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->COMMANDE_SUPPLIER_ADDON_PDF == "$value") dolibarr_del_const($db, 'COMMANDE_SUPPLIER_ADDON_PDF', $conf->entity);
+        if ($conf->global->COMMANDE_SUPPLIER_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'COMMANDE_SUPPLIER_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "COMMANDE_SUPPLIER_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "COMMANDE_SUPPLIER_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -159,7 +159,7 @@ elseif ($action == 'setmod')
     // TODO Verifier si module numerotation choisi peut etre active
     // par appel methode canBeActivated
 
-    dolibarr_set_const($db, "COMMANDE_SUPPLIER_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "COMMANDE_SUPPLIER_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'addcat')
@@ -174,8 +174,8 @@ elseif ($action == 'set_SUPPLIER_ORDER_OTHER')
 	$doubleapproval = GETPOST('SUPPLIER_ORDER_3_STEPS_TO_BE_APPROVED', 'alpha');
 	$doubleapproval = price2num($doubleapproval);
 
-    $res1 = dolibarr_set_const($db, "SUPPLIER_ORDER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
-    $res2 = dolibarr_set_const($db, "SUPPLIER_ORDER_3_STEPS_TO_BE_APPROVED", $doubleapproval, 'chaine', 0, '', $conf->entity);
+    $res1 = DigitalProspects_set_const($db, "SUPPLIER_ORDER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+    $res2 = DigitalProspects_set_const($db, "SUPPLIER_ORDER_3_STEPS_TO_BE_APPROVED", $doubleapproval, 'chaine', 0, '', $conf->entity);
 
     // TODO We add/delete permission here until permission can have a condition on a global var
     include_once DOL_DOCUMENT_ROOT.'/core/modules/modFournisseur.class.php';
@@ -210,7 +210,7 @@ elseif ($action == 'set_SUPPLIER_ORDER_OTHER')
 // Activate ask for payment bank
 elseif ($action == 'set_BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_ORDER')
 {
-    $res = dolibarr_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_ORDER", $value, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_ORDER", $value, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -557,7 +557,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

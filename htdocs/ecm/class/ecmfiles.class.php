@@ -346,7 +346,7 @@ class EcmFiles extends CommonObject
 		$sql .= " t.src_object_id";
 		$sql .= ' FROM '.MAIN_DB_PREFIX.$this->table_element.' as t';
 		$sql .= ' WHERE 1 = 1';
-		/* Fetching this table depends on filepath+filename, it must not depends on entity because filesystem on disk does not know what is Dolibarr entities
+		/* Fetching this table depends on filepath+filename, it must not depends on entity because filesystem on disk does not know what is DigitalProspects entities
 		if (! empty($conf->multicompany->enabled)) {
 		    $sql .= " AND entity IN (" . getEntity('ecmfiles') . ")";
 		}*/
@@ -768,7 +768,7 @@ class EcmFiles extends CommonObject
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $maxlen = 24, $morecss = '')
 	{
 		global $db, $conf, $langs;
-		global $dolibarr_main_authentication, $dolibarr_main_demo;
+		global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
 		global $menumanager;
 
 		if (!empty($conf->dol_no_mouse_hover)) $notooltip = 1; // Force disable tooltips

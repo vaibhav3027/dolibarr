@@ -248,7 +248,7 @@ class Stripe extends CommonObject
 						}
 					}
 
-					// Create customer in Dolibarr
+					// Create customer in DigitalProspects
 					$sql = "INSERT INTO ".MAIN_DB_PREFIX."societe_account (fk_soc, login, key_account, site, site_account, status, entity, date_creation, fk_user_creat)";
 					$sql .= " VALUES (".$object->id.", '', '".$this->db->escape($customer->id)."', 'stripe', '".$this->db->escape($stripearrayofkeysbyenv[$status]['publishable_key'])."', ".$status.", ".$conf->entity.", '".$this->db->idate(dol_now())."', ".$user->id.")";
 					$resql = $this->db->query($sql);

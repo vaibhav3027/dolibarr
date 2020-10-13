@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=El nombre de la empresa %s ya existe. Elija otro.
 ErrorSetACountryFirst=Establecer primero el país
 SelectThirdParty=Seleccione un tercero
@@ -11,7 +11,7 @@ MenuNewSupplier=Nuevo vendedor
 MenuNewPrivateIndividual=Nueva privada individual
 NewCompany=Nueva compañía (prospecto, cliente, vendedor)
 NewThirdParty=Nuevo tercero (prospecto, cliente, vendedor)
-CreateDolibarrThirdPartySupplier=Crear un tercero (vendedor)
+CreateDigitalProspectsThirdPartySupplier=Crear un tercero (vendedor)
 CreateThirdPartyOnly=Crear un tercero
 CreateThirdPartyAndContact=Crear un tercero + un contacto infantil
 ProspectionArea=Área de Prospección
@@ -152,7 +152,7 @@ NoContactForAnyInvoice=Este contacto no es un contacto para ninguna factura
 NewContactAddress=Nuevo Contacto / Dirección
 EditCompany=Editar empresa
 VATIntraCheck=Cheque
-VATIntraCheckDesc=La identificación del IVA debe incluir el prefijo del país. El enlace <b>%s</b> utiliza el servicio europeo de verificación de IVA (VIES), que requiere acceso a Internet desde el servidor Dolibarr.
+VATIntraCheckDesc=La identificación del IVA debe incluir el prefijo del país. El enlace <b>%s</b> utiliza el servicio europeo de verificación de IVA (VIES), que requiere acceso a Internet desde el servidor DigitalProspects.
 VATIntraCheckableOnEUSite=Compruebe la identificación del IVA intracomunitaria en el sitio web de la Comisión Europea
 VATIntraManualCheck=También puede consultar manualmente en el sitio web de la Comisión Europea <a href="%s" target="_blank">%s</a>
 ErrorVATCheckMS_UNAVAILABLE=No es posible comprobar. El servicio de verificación no proporcionado por el estado miembro  (%s).
@@ -180,8 +180,8 @@ ChangeContactDone=Cambiar el estado a 'Contacto hecho'
 ProspectsByStatus=Perspectivas por estado
 ExportCardToFormat=Exportar la tarjeta al formato
 ContactNotLinkedToCompany=Contacto no vinculado a ningún tercero
-DolibarrLogin=Ingreso Dolibbarr
-NoDolibarrAccess=Sin acceso a Dolibarr
+DigitalProspectsLogin=Ingreso Dolibbarr
+NoDigitalProspectsAccess=Sin acceso a DigitalProspects
 ExportDataset_company_1=Terceros (empresas / fundaciones / personas físicas) y sus propiedades.
 ImportDataset_company_2=Contactos / direcciones y atributos adicionales de terceros
 ImportDataset_company_4=Representantes de ventas de terceros (asignar representantes de ventas / usuarios a empresas)

@@ -48,8 +48,8 @@ print load_fiche_titre($langs->trans("SummarySystem"), '', 'title_setup');
 
 
 print '<table class="noborder centpercent">';
-print "<tr class=\"liste_titre\"><td colspan=\"2\">Dolibarr</td></tr>\n";
-$dolversion = version_dolibarr();
+print "<tr class=\"liste_titre\"><td colspan=\"2\">DigitalProspects</td></tr>\n";
+$dolversion = version_DigitalProspects();
 print "<tr $bc[0]><td width=\"280\">".$langs->trans("Version")."</td><td>".$dolversion."</td></tr>\n";
 print '</table>';
 

@@ -111,7 +111,7 @@ if ($id > 0 || !empty($ref))
 
 $modulepart = 'product';
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $canvas = !empty($object->canvas) ? $object->canvas : GETPOST("canvas");
 $objcanvas = null;
 if (!empty($canvas))
@@ -1057,7 +1057,7 @@ else
         // Description (used in invoice, propal...)
         print '<tr><td class="tdtop">'.$langs->trans("Description").'</td><td colspan="3">';
 
-        $doleditor = new DolEditor('desc', GETPOST('desc', 'none'), '', 160, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
+        $doleditor = new DolEditor('desc', GETPOST('desc', 'none'), '', 160, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
         $doleditor->Create();
 
         print "</td></tr>";
@@ -1190,8 +1190,8 @@ else
         //{
             print '<tr><td class="tdtop">'.$langs->trans("NoteNotVisibleOnBill").'</td><td colspan="3">';
 
-            // We use dolibarr_details as type of DolEditor here, because we must not accept images as description is included into PDF and not accepted by TCPDF.
-            $doleditor = new DolEditor('note_private', GETPOST('note_private', 'none'), '', 140, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_8, '90%');
+            // We use DigitalProspects_details as type of DolEditor here, because we must not accept images as description is included into PDF and not accepted by TCPDF.
+            $doleditor = new DolEditor('note_private', GETPOST('note_private', 'none'), '', 140, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_8, '90%');
     	    $doleditor->Create();
 
             print "</td></tr>";
@@ -1496,8 +1496,8 @@ else
             // Description (used in invoice, propal...)
             print '<tr><td class="tdtop">'.$langs->trans("Description").'</td><td colspan="3">';
 
-            // We use dolibarr_details as type of DolEditor here, because we must not accept images as description is included into PDF and not accepted by TCPDF.
-            $doleditor = new DolEditor('desc', $object->description, '', 160, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
+            // We use DigitalProspects_details as type of DolEditor here, because we must not accept images as description is included into PDF and not accepted by TCPDF.
+            $doleditor = new DolEditor('desc', $object->description, '', 160, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
             $doleditor->Create();
 
             print "</td></tr>";
@@ -1642,7 +1642,7 @@ else
 			{
                 print '<tr><td class="tdtop">'.$langs->trans("NoteNotVisibleOnBill").'</td><td colspan="3">';
 
-                $doleditor = new DolEditor('note_private', $object->note_private, '', 140, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
+                $doleditor = new DolEditor('note_private', $object->note_private, '', 140, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
                 $doleditor->Create();
 
                 print "</td></tr>";

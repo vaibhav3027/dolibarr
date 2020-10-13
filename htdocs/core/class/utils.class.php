@@ -56,7 +56,7 @@ class Utils
 	 */
 	public function purgeFiles($choice = 'tempfilesold', $nbsecondsold = 86400)
 	{
-		global $conf, $langs, $dolibarr_main_data_root;
+		global $conf, $langs, $DigitalProspects_main_data_root;
 
 		$langs->load("admin");
 
@@ -70,9 +70,9 @@ class Utils
 		if ($choice == 'tempfiles' || $choice == 'tempfilesold')
 		{
 			// Delete temporary files
-			if ($dolibarr_main_data_root)
+			if ($DigitalProspects_main_data_root)
 			{
-			    $filesarray = dol_dir_list($dolibarr_main_data_root, "directories", 1, '^temp$', '', 'name', SORT_ASC, 2, 0, '', 1); // Do not follow symlinks
+			    $filesarray = dol_dir_list($DigitalProspects_main_data_root, "directories", 1, '^temp$', '', 'name', SORT_ASC, 2, 0, '', 1); // Do not follow symlinks
 
 			    if ($choice == 'tempfilesold')
 				{
@@ -88,18 +88,18 @@ class Utils
 		if ($choice == 'allfiles')
 		{
 			// Delete all files (except install.lock, do not follow symbolic links)
-			if ($dolibarr_main_data_root)
+			if ($DigitalProspects_main_data_root)
 			{
-				$filesarray = dol_dir_list($dolibarr_main_data_root, "all", 0, '', 'install\.lock$', 'name', SORT_ASC, 0, 0, '', 1);
+				$filesarray = dol_dir_list($DigitalProspects_main_data_root, "all", 0, '', 'install\.lock$', 'name', SORT_ASC, 0, 0, '', 1);
 			}
 		}
 
 		if ($choice == 'logfile')
 		{
 			// Define files log
-			if ($dolibarr_main_data_root)
+			if ($DigitalProspects_main_data_root)
 			{
-				$filesarray = dol_dir_list($dolibarr_main_data_root, "files", 0, '.*\.log[\.0-9]*(\.gz)?$', 'install\.lock$', 'name', SORT_ASC, 0, 0, '', 1);
+				$filesarray = dol_dir_list($DigitalProspects_main_data_root, "files", 0, '.*\.log[\.0-9]*(\.gz)?$', 'install\.lock$', 'name', SORT_ASC, 0, 0, '', 1);
 			}
 
 			$filelog = '';
@@ -195,8 +195,8 @@ class Utils
 	 */
 	public function dumpDatabase($compression = 'none', $type = 'auto', $usedefault = 1, $file = 'auto', $keeplastnfiles = 0, $execmethod = 0)
 	{
-		global $db, $conf, $langs, $dolibarr_main_data_root;
-		global $dolibarr_main_db_name, $dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_port, $dolibarr_main_db_pass;
+		global $db, $conf, $langs, $DigitalProspects_main_data_root;
+		global $DigitalProspects_main_db_name, $DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_port, $DigitalProspects_main_db_pass;
 
 		$langs->load("admin");
 
@@ -228,7 +228,7 @@ class Utils
 			if (in_array($type, array('mysql', 'mysqli'))) { $prefix = 'mysqldump'; $ext = 'sql'; }
 			//if ($label == 'PostgreSQL') { $prefix='pg_dump'; $ext='dump'; }
 			if (in_array($type, array('pgsql'))) { $prefix = 'pg_dump'; $ext = 'sql'; }
-			$file = $prefix.'_'.$dolibarr_main_db_name.'_'.dol_sanitizeFileName(DOL_VERSION).'_'.strftime("%Y%m%d%H%M").'.'.$ext;
+			$file = $prefix.'_'.$DigitalProspects_main_db_name.'_'.dol_sanitizeFileName(DOL_VERSION).'_'.strftime("%Y%m%d%H%M").'.'.$ext;
 		}
 
 		$outputdir = $conf->admin->dir_output.'/backup';
@@ -254,10 +254,10 @@ class Utils
 			$command = preg_replace('/(\$|%)/', '', $command); // We removed chars that can be used to inject vars that contains space inside path of command without seeing there is a space to bypass the escapeshellarg.
 			if (preg_match("/\s/", $command)) $command = escapeshellarg($command); // If there is spaces, we add quotes on command to be sure $command is only a program and not a program+parameters
 
-			//$param=escapeshellarg($dolibarr_main_db_name)." -h ".escapeshellarg($dolibarr_main_db_host)." -u ".escapeshellarg($dolibarr_main_db_user)." -p".escapeshellarg($dolibarr_main_db_pass);
-			$param = $dolibarr_main_db_name." -h ".$dolibarr_main_db_host;
-			$param .= " -u ".$dolibarr_main_db_user;
-			if (!empty($dolibarr_main_db_port)) $param .= " -P ".$dolibarr_main_db_port;
+			//$param=escapeshellarg($DigitalProspects_main_db_name)." -h ".escapeshellarg($DigitalProspects_main_db_host)." -u ".escapeshellarg($DigitalProspects_main_db_user)." -p".escapeshellarg($DigitalProspects_main_db_pass);
+			$param = $DigitalProspects_main_db_name." -h ".$DigitalProspects_main_db_host;
+			$param .= " -u ".$DigitalProspects_main_db_user;
+			if (!empty($DigitalProspects_main_db_port)) $param .= " -P ".$DigitalProspects_main_db_port;
 			if (!GETPOST("use_transaction", "alpha"))    $param .= " -l --single-transaction";
 			if (GETPOST("disable_fk", "alpha") || $usedefault) $param .= " -K";
 			if (GETPOST("sql_compat", "alpha") && GETPOST("sql_compat", "alpha") != 'NONE') $param .= " --compatible=".escapeshellarg(GETPOST("sql_compat", "alpha"));
@@ -290,10 +290,10 @@ class Utils
 			$param .= " --default-character-set=utf8"; // We always save output into utf8 charset
 			$paramcrypted = $param;
 			$paramclear = $param;
-			if (!empty($dolibarr_main_db_pass))
+			if (!empty($DigitalProspects_main_db_pass))
 			{
-				$paramcrypted .= ' -p"'.preg_replace('/./i', '*', $dolibarr_main_db_pass).'"';
-				$paramclear .= ' -p"'.str_replace(array('"', '`'), array('\"', '\`'), $dolibarr_main_db_pass).'"';
+				$paramcrypted .= ' -p"'.preg_replace('/./i', '*', $DigitalProspects_main_db_pass).'"';
+				$paramclear .= ' -p"'.str_replace(array('"', '`'), array('\"', '\`'), $DigitalProspects_main_db_pass).'"';
 			}
 
 			$handle = '';
@@ -458,12 +458,12 @@ class Utils
 			$command = preg_replace('/(\$|%)/', '', $command); // We removed chars that can be used to inject vars that contains space inside path of command without seeing there is a space to bypass the escapeshellarg.
 			if (preg_match("/\s/", $command)) $command = escapeshellarg($command); // If there is spaces, we add quotes on command to be sure $command is only a program and not a program+parameters
 
-			//$param=escapeshellarg($dolibarr_main_db_name)." -h ".escapeshellarg($dolibarr_main_db_host)." -u ".escapeshellarg($dolibarr_main_db_user)." -p".escapeshellarg($dolibarr_main_db_pass);
+			//$param=escapeshellarg($DigitalProspects_main_db_name)." -h ".escapeshellarg($DigitalProspects_main_db_host)." -u ".escapeshellarg($DigitalProspects_main_db_user)." -p".escapeshellarg($DigitalProspects_main_db_pass);
 			//$param="-F c";
 			$param = "-F p";
-			$param .= " --no-tablespaces --inserts -h ".$dolibarr_main_db_host;
-			$param .= " -U ".$dolibarr_main_db_user;
-			if (!empty($dolibarr_main_db_port)) $param .= " -p ".$dolibarr_main_db_port;
+			$param .= " --no-tablespaces --inserts -h ".$DigitalProspects_main_db_host;
+			$param .= " -U ".$DigitalProspects_main_db_user;
+			if (!empty($DigitalProspects_main_db_port)) $param .= " -p ".$DigitalProspects_main_db_port;
 			if (GETPOST("sql_compat") && GETPOST("sql_compat") == 'ANSI') $param .= "  --disable-dollar-quoting";
 			if (GETPOST("drop_database"))        $param .= " -c -C";
 			if (GETPOST("sql_structure"))
@@ -482,13 +482,13 @@ class Utils
 			//if ($compression == 'bz')
 			$paramcrypted = $param;
 			$paramclear = $param;
-			/*if (! empty($dolibarr_main_db_pass))
+			/*if (! empty($DigitalProspects_main_db_pass))
 			 {
-			 $paramcrypted.=" -W".preg_replace('/./i','*',$dolibarr_main_db_pass);
-			 $paramclear.=" -W".$dolibarr_main_db_pass;
+			 $paramcrypted.=" -W".preg_replace('/./i','*',$DigitalProspects_main_db_pass);
+			 $paramclear.=" -W".$DigitalProspects_main_db_pass;
 			 }*/
-			$paramcrypted .= " -w ".$dolibarr_main_db_name;
-			$paramclear .= " -w ".$dolibarr_main_db_name;
+			$paramcrypted .= " -w ".$DigitalProspects_main_db_name;
+			$paramclear .= " -w ".$DigitalProspects_main_db_name;
 
 			$this->output = "";
 			$this->result = array("commandbackuplastdone" => "", "commandbackuptorun" => $command." ".$paramcrypted);
@@ -812,14 +812,14 @@ class Utils
 
 		if (empty($conf->global->SYSLOG_FILE)) {
 			$mainlogdir = DOL_DATA_ROOT;
-			$mainlog = 'dolibarr.log';
+			$mainlog = 'DigitalProspects.log';
 		} else {
 			$mainlogfull = str_replace('DOL_DATA_ROOT', DOL_DATA_ROOT, $conf->global->SYSLOG_FILE);
 			$mainlogdir = dirname($mainlogfull);
 			$mainlog = basename($mainlogfull);
 		}
 
-		$tabfiles = dol_dir_list(DOL_DATA_ROOT, 'files', 0, '^(dolibarr_.+|odt2pdf)\.log$'); // Also handle other log files like dolibarr_install.log
+		$tabfiles = dol_dir_list(DOL_DATA_ROOT, 'files', 0, '^(DigitalProspects_.+|odt2pdf)\.log$'); // Also handle other log files like DigitalProspects_install.log
 		$tabfiles[] = array('name' => $mainlog, 'path' => $mainlogdir);
 
 		foreach ($tabfiles as $file) {
@@ -903,7 +903,7 @@ class Utils
 	/**	Backup the db OR just a table without mysqldump binary, with PHP only (does not require any exec permission)
 	 *	Author: David Walsh (http://davidwalsh.name/backup-mysql-database-php)
 	 *	Updated and enhanced by Stephen Larroque (lrq3000) and by the many commentators from the blog
-	 *	Note about foreign keys constraints: for Dolibarr, since there are a lot of constraints and when imported the tables will be inserted in the dumped order, not in constraints order, then we ABSOLUTELY need to use SET FOREIGN_KEY_CHECKS=0; when importing the sql dump.
+	 *	Note about foreign keys constraints: for DigitalProspects, since there are a lot of constraints and when imported the tables will be inserted in the dumped order, not in constraints order, then we ABSOLUTELY need to use SET FOREIGN_KEY_CHECKS=0; when importing the sql dump.
 	 *	Note2: db2SQL by Howard Yeend can be an alternative, by using SHOW FIELDS FROM and SHOW KEYS FROM we could generate a more precise dump (eg: by getting the type of the field and then precisely outputting the right formatting - in quotes, numeric or null - instead of trying to guess like we are doing now).
 	 *
 	 *	@param	string	$outputfile		Output file name
@@ -952,7 +952,7 @@ class Utils
 
 		// Print headers and global mysql config vars
 		$sqlhead = '';
-		$sqlhead .= "-- ".$db::LABEL." dump via php with Dolibarr ".DOL_VERSION."
+		$sqlhead .= "-- ".$db::LABEL." dump via php with DigitalProspects ".DOL_VERSION."
 --
 -- Host: ".$db->db->host_info."    Database: ".$db->database_name."
 -- ------------------------------------------------------

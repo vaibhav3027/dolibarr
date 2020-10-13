@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - loan
+# DigitalProspects language file - Source file is en_US - loan
 ModuleBuilderDesc=This tool must be used only by experienced users or developers. It provides utilities to build or edit your own module. Documentation for alternative <a href="%s" target="_blank">manual development is here</a>.
 EnterNameOfModuleDesc=Introduceți numele modulului/aplicației pentru a crea fără spații. Utilizați majusculă pentru a separa cuvintele (De exemplu: MyModule, EcommerceForShop, SyncWithMySystem ...)
 EnterNameOfObjectDesc=Introduceți numele obiectului de creat fără spații. Utilizați majusculă pentru a separa cuvintele (De exemplu: MyObject, Student, Profesor ...). Se va genera și fișierul clasa CRUD, dar și fișierul API, paginile care vor lista/adăuga/edita/șterge obiectul și fișierele SQL.
@@ -25,7 +25,7 @@ EnterNameOfModuleToDeleteDesc=You can delete your module. WARNING: All coding fi
 EnterNameOfObjectToDeleteDesc=You can delete an object. WARNING: All coding files (generated or created manually) related to object will be deleted!
 DangerZone=Zona periculoasă
 BuildPackage=Construiți pachetul
-BuildPackageDesc=You can generate a zip package of your application so your are ready to distribute it on any Dolibarr. You can also distribute it or sell it on marketplace like <a href="https://www.dolistore.com">DoliStore.com</a>.
+BuildPackageDesc=You can generate a zip package of your application so your are ready to distribute it on any DigitalProspects. You can also distribute it or sell it on marketplace like <a href="https://www.dolistore.com">DoliStore.com</a>.
 BuildDocumentation=Construiți documentația
 ModuleIsNotActive=This module is not activated yet. Go to %s to make it live or click here
 ModuleIsLive=This module has been activated. Any change may break a current live feature.
@@ -100,7 +100,7 @@ HooksDefDesc=Definiți în proprietatea <b> module_parts ['hooks'] </b>, în des
 TriggerDefDesc=Definiți în fișierul declanșator codul pe care doriți să-l executați pentru fiecare eveniment de afaceri executat.
 SeeIDsInUse=Vedeți ID-urile utilizate în instalarea dvs.
 SeeReservedIDsRangeHere=Vedeți o gamă de ID-uri rezervate
-ToolkitForDevelopers=Toolkit pentru dezvoltatorii Dolibarr
+ToolkitForDevelopers=Toolkit pentru dezvoltatorii DigitalProspects
 TryToUseTheModuleBuilder=Dacă aveți cunoștințe despre SQL și PHP, puteți folosi asistentul nativ modul builder. <br> Activați modulul <strong> %s </strong> și utilizați asistentul dând clic pe <span class="fa fa-bug"> </span> din meniul din dreapta sus. <br> Atenție: Aceasta este o caracteristică avansată a dezvoltatorului, nu efectuați experimentul <b> pe </b> pe site-ul dvs. de producție!
 SeeTopRightMenu=Vedeți <span class="fa fa-bug"> </span> din meniul din dreapta sus
 AddLanguageFile=Adăugați fișierul de limbă

@@ -28,7 +28,7 @@
 /**
  *	\file       htdocs/master.inc.php
  * 	\ingroup	core
- *  \brief      File that defines environment for all Dolibarr process (pages or scripts)
+ *  \brief      File that defines environment for all DigitalProspects process (pages or scripts)
  * 				This script reads the conf file, init $lang, $db and and empty $user
  */
 
@@ -45,46 +45,46 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/conf.class.php';
 $conf = new Conf();
 
 // Set properties specific to database
-$conf->db->host							= $dolibarr_main_db_host;
-$conf->db->port							= $dolibarr_main_db_port;
-$conf->db->name							= $dolibarr_main_db_name;
-$conf->db->user							= $dolibarr_main_db_user;
-$conf->db->pass							= empty($dolibarr_main_db_pass)?'':$dolibarr_main_db_pass;
-$conf->db->type							= $dolibarr_main_db_type;
-$conf->db->prefix = $dolibarr_main_db_prefix;
-$conf->db->character_set = $dolibarr_main_db_character_set;
-$conf->db->dolibarr_main_db_collation = $dolibarr_main_db_collation;
-$conf->db->dolibarr_main_db_encryption = $dolibarr_main_db_encryption;
-$conf->db->dolibarr_main_db_cryptkey = $dolibarr_main_db_cryptkey;
+$conf->db->host							= $DigitalProspects_main_db_host;
+$conf->db->port							= $DigitalProspects_main_db_port;
+$conf->db->name							= $DigitalProspects_main_db_name;
+$conf->db->user							= $DigitalProspects_main_db_user;
+$conf->db->pass							= empty($DigitalProspects_main_db_pass)?'':$DigitalProspects_main_db_pass;
+$conf->db->type							= $DigitalProspects_main_db_type;
+$conf->db->prefix = $DigitalProspects_main_db_prefix;
+$conf->db->character_set = $DigitalProspects_main_db_character_set;
+$conf->db->DigitalProspects_main_db_collation = $DigitalProspects_main_db_collation;
+$conf->db->DigitalProspects_main_db_encryption = $DigitalProspects_main_db_encryption;
+$conf->db->DigitalProspects_main_db_cryptkey = $DigitalProspects_main_db_cryptkey;
 if (defined('TEST_DB_FORCE_TYPE')) $conf->db->type = constant('TEST_DB_FORCE_TYPE'); // Force db type (for test purpose, by PHP unit for example)
 
 // Set properties specific to conf file
-$conf->file->main_limit_users = $dolibarr_main_limit_users;
-$conf->file->mailing_limit_sendbyweb	= $dolibarr_mailing_limit_sendbyweb;
-$conf->file->mailing_limit_sendbycli	= $dolibarr_mailing_limit_sendbycli;
-$conf->file->main_authentication = empty($dolibarr_main_authentication) ? '' : $dolibarr_main_authentication; // Identification mode
-$conf->file->main_force_https = empty($dolibarr_main_force_https) ? '' : $dolibarr_main_force_https; // Force https
-$conf->file->strict_mode 				= empty($dolibarr_strict_mode) ? '' : $dolibarr_strict_mode; // Force php strict mode (for debug)
-$conf->file->instance_unique_id = empty($dolibarr_main_instance_unique_id) ? (empty($dolibarr_main_cookie_cryptkey) ? '' : $dolibarr_main_cookie_cryptkey) : $dolibarr_main_instance_unique_id; // Unique id of instance
+$conf->file->main_limit_users = $DigitalProspects_main_limit_users;
+$conf->file->mailing_limit_sendbyweb	= $DigitalProspects_mailing_limit_sendbyweb;
+$conf->file->mailing_limit_sendbycli	= $DigitalProspects_mailing_limit_sendbycli;
+$conf->file->main_authentication = empty($DigitalProspects_main_authentication) ? '' : $DigitalProspects_main_authentication; // Identification mode
+$conf->file->main_force_https = empty($DigitalProspects_main_force_https) ? '' : $DigitalProspects_main_force_https; // Force https
+$conf->file->strict_mode 				= empty($DigitalProspects_strict_mode) ? '' : $DigitalProspects_strict_mode; // Force php strict mode (for debug)
+$conf->file->instance_unique_id = empty($DigitalProspects_main_instance_unique_id) ? (empty($DigitalProspects_main_cookie_cryptkey) ? '' : $DigitalProspects_main_cookie_cryptkey) : $DigitalProspects_main_instance_unique_id; // Unique id of instance
 $conf->file->dol_document_root = array('main' => (string) DOL_DOCUMENT_ROOT); // Define array of document root directories ('/home/htdocs')
-$conf->file->dol_url_root				= array('main' => (string) DOL_URL_ROOT); // Define array of url root path ('' or '/dolibarr')
-if (!empty($dolibarr_main_document_root_alt))
+$conf->file->dol_url_root				= array('main' => (string) DOL_URL_ROOT); // Define array of url root path ('' or '/DigitalProspects')
+if (!empty($DigitalProspects_main_document_root_alt))
 {
-	// dolibarr_main_document_root_alt can contains several directories
-	$values = preg_split('/[;,]/', $dolibarr_main_document_root_alt);
+	// DigitalProspects_main_document_root_alt can contains several directories
+	$values = preg_split('/[;,]/', $DigitalProspects_main_document_root_alt);
 	$i = 0;
 	foreach ($values as $value) $conf->file->dol_document_root['alt'.($i++)] = (string) $value;
-	$values = preg_split('/[;,]/', $dolibarr_main_url_root_alt);
+	$values = preg_split('/[;,]/', $DigitalProspects_main_url_root_alt);
 	$i = 0;
 	foreach ($values as $value)
 	{
 		if (preg_match('/^http(s)?:/', $value))
 		{
 			// Show error message
-			$correct_value = str_replace($dolibarr_main_url_root, '', $value);
+			$correct_value = str_replace($DigitalProspects_main_url_root, '', $value);
 			print '<b>Error:</b><br>'."\n";
-			print 'Wrong <b>$dolibarr_main_url_root_alt</b> value in <b>conf.php</b> file.<br>'."\n";
-			print 'We now use a relative path to $dolibarr_main_url_root to build alternate URLs.<br>'."\n";
+			print 'Wrong <b>$DigitalProspects_main_url_root_alt</b> value in <b>conf.php</b> file.<br>'."\n";
+			print 'We now use a relative path to $DigitalProspects_main_url_root to build alternate URLs.<br>'."\n";
 			print 'Value found: '.$value.'<br>'."\n";
 			print 'Should be replaced by: '.$correct_value.'<br>'."\n";
 			print "Or something like following examples:<br>\n";
@@ -122,7 +122,7 @@ if (!defined('NOREQUIREDB'))
 	if ($db->error)
 	{
 		// If we were into a website context
-		if (!defined('USEDOLIBARREDITOR') && !defined('USEDOLIBARRSERVER') && !empty($_SERVER['SCRIPT_FILENAME']) && (strpos($_SERVER['SCRIPT_FILENAME'], DOL_DATA_ROOT.'/website') === 0))
+		if (!defined('USEDigitalProspectsEDITOR') && !defined('USEDigitalProspectsSERVER') && !empty($_SERVER['SCRIPT_FILENAME']) && (strpos($_SERVER['SCRIPT_FILENAME'], DOL_DATA_ROOT.'/website') === 0))
 		{
 			$sapi_type = php_sapi_name();
 			if (substr($sapi_type, 0, 3) != 'cgi') http_response_code(503); // To tel search engine this is a temporary error
@@ -146,7 +146,7 @@ if (!defined('NOREQUIREDB'))
 }
 
 // Now database connexion is known, so we can forget password
-//unset($dolibarr_main_db_pass); 	// We comment this because this constant is used in a lot of pages
+//unset($DigitalProspects_main_db_pass); 	// We comment this because this constant is used in a lot of pages
 unset($conf->db->pass); // This is to avoid password to be shown in memory/swap dump
 
 /*
@@ -236,7 +236,7 @@ if (!empty($conf->global->MAIN_ONLY_LOGIN_ALLOWED))
 	}
 }
 
-// Create object $mysoc (A thirdparty object that contains properties of companies managed by Dolibarr.
+// Create object $mysoc (A thirdparty object that contains properties of companies managed by DigitalProspects.
 if (!defined('NOREQUIREDB') && !defined('NOREQUIRESOC'))
 {
 	require_once DOL_DOCUMENT_ROOT.'/societe/class/societe.class.php';

@@ -44,10 +44,10 @@ function versiontostring($versionarray)
 
 /**
  *	Compare 2 versions (stored into 2 arrays).
- *  To check if Dolibarr version is lower than (x,y,z), do "if versioncompare(versiondolibarrarray(), array(x.y.z)) <= 0"
- *  For example: if (versioncompare(versiondolibarrarray(),array(4,0,-4)) >= 0) is true if version is 4.0 alpha or higher.
- *  For example: if (versioncompare(versiondolibarrarray(),array(4,0,0)) >= 0) is true if version is 4.0 final or higher.
- *  For example: if (versioncompare(versiondolibarrarray(),array(4,0,1)) >= 0) is true if version is 4.0.1 or higher.
+ *  To check if DigitalProspects version is lower than (x,y,z), do "if versioncompare(versionDigitalProspectsarray(), array(x.y.z)) <= 0"
+ *  For example: if (versioncompare(versionDigitalProspectsarray(),array(4,0,-4)) >= 0) is true if version is 4.0 alpha or higher.
+ *  For example: if (versioncompare(versionDigitalProspectsarray(),array(4,0,0)) >= 0) is true if version is 4.0 final or higher.
+ *  For example: if (versioncompare(versionDigitalProspectsarray(),array(4,0,1)) >= 0) is true if version is 4.0.1 or higher.
  *  Alternative way to compare: if ((float) DOL_VERSION >= 4.0) is true if version is 4.0 alpha or higher (works only to compare first and second level)
  *
  *	@param      array		$versionarray1      Array of version (vermajor,verminor,patch)
@@ -99,11 +99,11 @@ function versionphparray()
 }
 
 /**
- *	Return version Dolibarr
+ *	Return version DigitalProspects
  *
  *	@return     array               Tableau de version (vermajeur,vermineur,autre)
  */
-function versiondolibarrarray()
+function versionDigitalProspectsarray()
 {
     return explode('.', DOL_VERSION);
 }
@@ -111,7 +111,7 @@ function versiondolibarrarray()
 
 /**
  *	Launch a sql file. Function is used by:
- *  - Migrate process (dolibarr-xyz-abc.sql)
+ *  - Migrate process (DigitalProspects-xyz-abc.sql)
  *  - Loading sql menus (auguria)
  *  - Running specific Sql by a module init
  *  - Loading sql file of website import package
@@ -188,10 +188,10 @@ function run_sql($sqlfile, $silent = 1, $entity = '', $usesavepoint = 1, $handle
             			}
             			else						// This is a test on a constant. For example when we have -- VMYSQLUTF8UNICODE, we test constant $conf->global->UTF8UNICODE
             			{
-            				$dbcollation = strtoupper(preg_replace('/_/', '', $conf->db->dolibarr_main_db_collation));
+            				$dbcollation = strtoupper(preg_replace('/_/', '', $conf->db->DigitalProspects_main_db_collation));
             				//var_dump($reg[2]);
             				//var_dump($dbcollation);
-            				if (empty($conf->db->dolibarr_main_db_collation) || ($reg[2] != $dbcollation)) $qualified = 0;
+            				if (empty($conf->db->DigitalProspects_main_db_collation) || ($reg[2] != $dbcollation)) $qualified = 0;
             				//var_dump($qualified);
             			}
             		}
@@ -434,9 +434,9 @@ function run_sql($sqlfile, $silent = 1, $entity = '', $usesavepoint = 1, $handle
  *	@param	    int			$entity		Multi company id, -1 for all entities
  *	@return     int         			<0 if KO, >0 if OK
  *
- *	@see		dolibarr_get_const(), dolibarr_set_const(), dol_set_user_param()
+ *	@see		DigitalProspects_get_const(), DigitalProspects_set_const(), dol_set_user_param()
  */
-function dolibarr_del_const($db, $name, $entity = 1)
+function DigitalProspects_del_const($db, $name, $entity = 1)
 {
     global $conf;
 
@@ -452,7 +452,7 @@ function dolibarr_del_const($db, $name, $entity = 1)
     $sql .= ")";
     if ($entity >= 0) $sql .= " AND entity = ".$entity;
 
-    dol_syslog("admin.lib::dolibarr_del_const", LOG_DEBUG);
+    dol_syslog("admin.lib::DigitalProspects_del_const", LOG_DEBUG);
     $resql = $db->query($sql);
     if ($resql)
     {
@@ -474,9 +474,9 @@ function dolibarr_del_const($db, $name, $entity = 1)
  *	@param	    int			$entity		Multi company id
  *	@return     string      			Valeur de la constante
  *
- *	@see		dolibarr_del_const(), dolibarr_set_const(), dol_set_user_param()
+ *	@see		DigitalProspects_del_const(), DigitalProspects_set_const(), dol_set_user_param()
  */
-function dolibarr_get_const($db, $name, $entity = 1)
+function DigitalProspects_get_const($db, $name, $entity = 1)
 {
     global $conf;
     $value = '';
@@ -486,7 +486,7 @@ function dolibarr_get_const($db, $name, $entity = 1)
     $sql .= " WHERE name = ".$db->encrypt($name, 1);
     $sql .= " AND entity = ".$entity;
 
-    dol_syslog("admin.lib::dolibarr_get_const", LOG_DEBUG);
+    dol_syslog("admin.lib::DigitalProspects_get_const", LOG_DEBUG);
     $resql = $db->query($sql);
     if ($resql)
     {
@@ -509,9 +509,9 @@ function dolibarr_get_const($db, $name, $entity = 1)
  *	@param	    int			$entity		Multi company id (0 means all entities)
  *	@return     int         			-1 if KO, 1 if OK
  *
- *	@see		dolibarr_del_const(), dolibarr_get_const(), dol_set_user_param()
+ *	@see		DigitalProspects_del_const(), DigitalProspects_get_const(), dol_set_user_param()
  */
-function dolibarr_set_const($db, $name, $value, $type = 'chaine', $visible = 0, $note = '', $entity = 1)
+function DigitalProspects_set_const($db, $name, $value, $type = 'chaine', $visible = 0, $note = '', $entity = 1)
 {
     global $conf;
 
@@ -521,11 +521,11 @@ function dolibarr_set_const($db, $name, $value, $type = 'chaine', $visible = 0, 
     // Check parameters
     if (empty($name))
     {
-        dol_print_error($db, "Error: Call to function dolibarr_set_const with wrong parameters", LOG_ERR);
+        dol_print_error($db, "Error: Call to function DigitalProspects_set_const with wrong parameters", LOG_ERR);
         exit;
     }
 
-    //dol_syslog("dolibarr_set_const name=$name, value=$value type=$type, visible=$visible, note=$note entity=$entity");
+    //dol_syslog("DigitalProspects_set_const name=$name, value=$value type=$type, visible=$visible, note=$note entity=$entity");
 
     $db->begin();
 
@@ -533,7 +533,7 @@ function dolibarr_set_const($db, $name, $value, $type = 'chaine', $visible = 0, 
     $sql .= " WHERE name = ".$db->encrypt($name, 1);
     if ($entity >= 0) $sql .= " AND entity = ".$entity;
 
-    dol_syslog("admin.lib::dolibarr_set_const", LOG_DEBUG);
+    dol_syslog("admin.lib::DigitalProspects_set_const", LOG_DEBUG);
     $resql = $db->query($sql);
 
     if (strcmp($value, ''))	// true if different. Must work for $value='0' or $value=0
@@ -546,7 +546,7 @@ function dolibarr_set_const($db, $name, $value, $type = 'chaine', $visible = 0, 
 
         //print "sql".$value."-".pg_escape_string($value)."-".$sql;exit;
         //print "xx".$db->escape($value);
-        dol_syslog("admin.lib::dolibarr_set_const", LOG_DEBUG);
+        dol_syslog("admin.lib::DigitalProspects_set_const", LOG_DEBUG);
         $resql = $db->query($sql);
     }
 
@@ -825,10 +825,10 @@ function listOfSessions()
                     $sessValues = file_get_contents($fullpath); // get raw session data
                     // Example of possible value
 					//$sessValues = 'newtoken|s:32:"1239f7a0c4b899200fe9ca5ea394f307";dol_loginmesg|s:0:"";newtoken|s:32:"1236457104f7ae0f328c2928973f3cb5";dol_loginmesg|s:0:"";token|s:32:"123615ad8d650c5cc4199b9a1a76783f";
-					// dol_login|s:5:"admin";dol_authmode|s:8:"dolibarr";dol_tz|s:1:"1";dol_tz_string|s:13:"Europe/Berlin";dol_dst|i:0;dol_dst_observed|s:1:"1";dol_dst_first|s:0:"";dol_dst_second|s:0:"";dol_screenwidth|s:4:"1920";
+					// dol_login|s:5:"admin";dol_authmode|s:8:"DigitalProspects";dol_tz|s:1:"1";dol_tz_string|s:13:"Europe/Berlin";dol_dst|i:0;dol_dst_observed|s:1:"1";dol_dst_first|s:0:"";dol_dst_second|s:0:"";dol_screenwidth|s:4:"1920";
 					// dol_screenheight|s:3:"971";dol_company|s:12:"MyBigCompany";dol_entity|i:1;mainmenu|s:4:"home";leftmenuopened|s:10:"admintools";idmenu|s:0:"";leftmenu|s:10:"admintools";';
 
-                    if (preg_match('/dol_login/i', $sessValues) && // limit to dolibarr session
+                    if (preg_match('/dol_login/i', $sessValues) && // limit to DigitalProspects session
                         (preg_match('/dol_entity\|i:'.$conf->entity.';/i', $sessValues) || preg_match('/dol_entity\|s:([0-9]+):"'.$conf->entity.'"/i', $sessValues)) && // limit to current entity
                     preg_match('/dol_company\|s:([0-9]+):"('.$conf->global->MAIN_INFO_SOCIETE_NOM.')"/i', $sessValues)) // limit to company name
                     {
@@ -875,7 +875,7 @@ function purgeSessions($mysessionid)
             {
                 $sessValues = file_get_contents($fullpath); // get raw session data
 
-                if (preg_match('/dol_login/i', $sessValues) && // limit to dolibarr session
+                if (preg_match('/dol_login/i', $sessValues) && // limit to DigitalProspects session
                 preg_match('/dol_entity\|s:([0-9]+):"('.$conf->entity.')"/i', $sessValues) && // limit to current entity
                 preg_match('/dol_company\|s:([0-9]+):"('.$conf->global->MAIN_INFO_SOCIETE_NOM.')"/i', $sessValues)) // limit to company name
                 {
@@ -946,12 +946,12 @@ function activateModule($value, $withdeps = 1)
 		return $ret;
 	}
 
-    // Test if Dolibarr version ok
-    $verdol = versiondolibarrarray();
-    $vermin = isset($objMod->need_dolibarr_version) ? $objMod->need_dolibarr_version : 0;
+    // Test if DigitalProspects version ok
+    $verdol = versionDigitalProspectsarray();
+    $vermin = isset($objMod->need_DigitalProspects_version) ? $objMod->need_DigitalProspects_version : 0;
     //print 'version: '.versioncompare($verdol,$vermin).' - '.join(',',$verdol).' - '.join(',',$vermin);exit;
 	if (is_array($vermin) && versioncompare($verdol, $vermin) < 0) {
-		$ret['errors'][] = $langs->trans("ErrorModuleRequireDolibarrVersion", versiontostring($vermin));
+		$ret['errors'][] = $langs->trans("ErrorModuleRequireDigitalProspectsVersion", versiontostring($vermin));
 		return $ret;
 	}
 
@@ -1086,9 +1086,9 @@ function unActivateModule($value, $requiredby = 1)
     else    // We come here when we try to unactivate a module when module does not exists anymore in sources
     {
         //print $dir.$modFile;exit;
-    	// TODO Replace this after DolibarrModules is moved as abstract class with a try catch to show module we try to disable has not been found or could not be loaded
-        include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
-    	$genericMod = new DolibarrModules($db);
+    	// TODO Replace this after DigitalProspectsModules is moved as abstract class with a try catch to show module we try to disable has not been found or could not be loaded
+        include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
+    	$genericMod = new DigitalProspectsModules($db);
         $genericMod->name = preg_replace('/^mod/i', '', $modName);
         $genericMod->rights_class = strtolower(preg_replace('/^mod/i', '', $modName));
         $genericMod->const_name = 'MAIN_MODULE_'.strtoupper(preg_replace('/^mod/i', '', $modName));
@@ -1564,7 +1564,7 @@ function form_constantes($tableau, $strictw3c = 0, $helptext = '')
                 elseif ($obj->type == 'html')
                 {
                 	require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-                	$doleditor = new DolEditor('constvalue_'.$const.(empty($strictw3c) ? '' : '[]'), $obj->value, '', 160, 'dolibarr_notes', '', false, false, $conf->fckeditor->enabled, ROWS_5, '90%');
+                	$doleditor = new DolEditor('constvalue_'.$const.(empty($strictw3c) ? '' : '[]'), $obj->value, '', 160, 'DigitalProspects_notes', '', false, false, $conf->fckeditor->enabled, ROWS_5, '90%');
                 	$doleditor->Create();
                 }
                 elseif ($obj->type == 'yesno')

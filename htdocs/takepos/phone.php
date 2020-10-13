@@ -132,7 +132,7 @@ elseif ($action == "checkplease") {
     }
 } else {
 	// Title
-	$title = 'TakePOS - Dolibarr '.DOL_VERSION;
+	$title = 'TakePOS - DigitalProspects '.DOL_VERSION;
 	if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = 'TakePOS - '.$conf->global->MAIN_APPLICATION_TITLE;
 	$head = '<meta name="apple-mobile-web-app-title" content="TakePOS"/>
 <meta name="apple-mobile-web-app-capable" content="yes">

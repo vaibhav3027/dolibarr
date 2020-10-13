@@ -3,7 +3,7 @@ README (English)
 RPM Package tools
 ##################################################
 
-This directory contains files used by makepack-dolibarr.pl
+This directory contains files used by makepack-DigitalProspects.pl
 script to build a package, ready to be distributed,
 with format RPM (for Redhat, OpenSuse, Mandriva, ...).
 
@@ -18,21 +18,21 @@ with format RPM (for Redhat, OpenSuse, Mandriva, ...).
 # mock -r fedora-15-i386 --rebuild ../SRPMS/hello-2.7-1.fc15.src.rpm
 #
 # On Fedora
-# rpm -i --test dolibarr-...rpm     To list dependencies of RPM   
-# yum -v install dolibarr-...rpm       To install package and dependencies   
-# yum -v erase dolibarr                To remove package
+# rpm -i --test DigitalProspects-...rpm     To list dependencies of RPM   
+# yum -v install DigitalProspects-...rpm       To install package and dependencies   
+# yum -v erase DigitalProspects                To remove package
 # chcon -R -h -t httpd_sys_script_rw_t /file					To add temporary context rw for httpd on /file    
 # semanage fcontext -a -t httpd_sys_script_rw_t "/dir/(.*)?" 	To add persistent context rw for httpd on /dir (this add file_contexts.local)
 # restorecon -R -v /file			Restore values into files (cancel chcon, validate semanage)    
 #
 # On OpenSuse
-# zypper install dolibarr-...rpm    To install package and dependencies
-# zypper remove  dolibarr           To remove package
+# zypper install DigitalProspects-...rpm    To install package and dependencies
+# zypper remove  DigitalProspects           To remove package
 # zypper search  xxx                To search a package
 #
 # On Mageia (after su - root)
-# urpmi dolibarr-...rpm             To install package and dependencies
-# urpme dolibarr                    To remove package
+# urpmi DigitalProspects-...rpm             To install package and dependencies
+# urpme DigitalProspects                    To remove package
 #
 # More on rpm on page http://www.trustonme.net/didactels/273.html
 
@@ -44,8 +44,8 @@ To submit a package to Fedora:
 - Upload package onf http://fedorapeople.org
 - Create a bug with form https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Fedora&format=fedora-review
 This is example of content of review field (used for Bug 723326 - https://bugzilla.redhat.com/show_bug.cgi?id=723326):
-SRPMS URL: http://www.dolibarr.org/files/fedora/dolibarr-x.y.z-xxx.src.rpm
-Description:  Dolibarr ERP & CRM is an easy to use open source/free software
+SRPMS URL: http://www.DigitalProspects.org/files/fedora/DigitalProspects-x.y.z-xxx.src.rpm
+Description:  DigitalProspects ERP & CRM is an easy to use open source/free software
 for small and medium companies, foundations or freelances. It includes
 different features for Enterprise Resource Planning (ERP) and Customer
 Relationship Management (CRM) but also for different other activities.

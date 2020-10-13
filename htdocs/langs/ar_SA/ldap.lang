@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ldap
+# DigitalProspects language file - Source file is en_US - ldap
 YouMustChangePassNextLogon=كلمة السر للمستخدم <b>٪</b> على النطاق <b>ق ق ٪</b> ويجب أن يتغير.
 UserMustChangePassNextLogon=يجب على المستخدم تغيير كلمة المرور على المجال ق ٪
 LDAPInformationsForThisContact=المعلومات في قاعدة البيانات LDAP لهذا الاتصال
@@ -22,6 +22,6 @@ GroupSynchronized=مجموعة متزامنة
 MemberSynchronized=عضو متزامنة
 MemberTypeSynchronized=Member type synchronized
 ContactSynchronized=وتزامن الاتصال
-ForceSynchronize=واكبت قوة Dolibarr --> LDAP
+ForceSynchronize=واكبت قوة DigitalProspects --> LDAP
 ErrorFailedToReadLDAP=فشل في قراءة قاعدة البيانات LDAP. LDAP وحدة التحقق من الإعداد ، وإمكانية الوصول إلى قاعدة البيانات.
 PasswordOfUserInLDAP=Password of user in LDAP

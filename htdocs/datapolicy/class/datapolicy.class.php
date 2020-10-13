@@ -310,7 +310,7 @@ class DataPolicy
 
         $sendto = $adherent->email;
 
-        // TODO Use a dolibarr email template
+        // TODO Use a DigitalProspects email template
         $s = 'TXTLINKDATAPOLICIESSUBJECT_'.$l;
         $ma = 'TXTLINKDATAPOLICIESMESSAGE_'.$l;
 

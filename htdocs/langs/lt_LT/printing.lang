@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - printing
+# DigitalProspects language file - Source file is en_US - printing
 Module64000Name=Tiesioginis spausdinimas
 Module64000Desc=Įjungti tiesioginio spausdinimo sistemą
 PrintingSetup=Setup of Direct Printing System

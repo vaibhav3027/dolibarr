@@ -7,7 +7,7 @@ Install of package "dialog" is required.
 
 *** Init demo
 
-The script initdemo.sh will erase current database with data into mysqldump_dolibarr_x.y.z.sql and copy files into documents_demo into officiel document directory.
+The script initdemo.sh will erase current database with data into mysqldump_DigitalProspects_x.y.z.sql and copy files into documents_demo into officiel document directory.
 
 Do a chmod 700 initdemo.sh
 then run ./initdemo.sh to launch Graphic User Interface.

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nav pieprasījums kļūdā
 ErrorServiceUnavailableTryLater=Pakalpojums pašlaik nav pieejams. Pamēģini vēlreiz vēlāk.
 ErrorDuplicateField=Dubulta vērtība unikālā laukā
 ErrorSomeErrorWereFoundRollbackIsDone=Dažas kļūdas tika atrastas. Atgriezām atpakaļ visu sākuma stāvoklī.
-ErrorConfigParameterNotDefined=Parametrs <b>%s</b> nav definēts Dolibarr konfigurācijas failā <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Neizdevās atrast lietotāju <b>%s</b> Dolibarr datu bāzē.
+ErrorConfigParameterNotDefined=Parametrs <b>%s</b> nav definēts DigitalProspects konfigurācijas failā <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Neizdevās atrast lietotāju <b>%s</b> DigitalProspects datu bāzē.
 ErrorNoVATRateDefinedForSellerCountry=Kļūda, PVN likme nav definēta sekojošai valstij '%s'.
 ErrorNoSocialContributionForSellerCountry=Kļūda, sociālā/fiskālā rakstura nodokļi nav definēti valstī “%s”.
 ErrorFailedToSaveFile=Kļūda, neizdevās saglabāt failu.
@@ -90,7 +90,7 @@ RecordDeleted=Ieraksts dzēsts
 RecordGenerated=Ieraksts izveidots
 LevelOfFeature=Līmeņa funkcijas
 NotDefined=Nav definēts
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Administrators
 Undefined=Nav definēts
 PasswordForgotten=Aizmirsāt paroli?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Datu bāzes menedžeris
 RequestLastAccessInError=Jaunākās datubāzes piekļuves pieprasījuma kļūdas
 ReturnCodeLastAccessInError=Atgriešanas kods jaunākās datu bāzes piekļuves pieprasījuma kļūdai
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr ir atklājis tehnisku kļūdu
-YouCanSetOptionDolibarrMainProdToZero=Jūs varat izlasīt žurnāla failu vai iestatīt opciju $ dolibarr_main_prod uz '0' savā konfigurācijas failā, lai iegūtu vairāk informācijas.
-InformationToHelpDiagnose=Šī informācija var būt noderīga diagnostikas nolūkos (jūs varat iestatīt iespēju $ dolibarr_main_prod uz "1", lai noņemtu šādus paziņojumus).
+DigitalProspectsHasDetectedError=DigitalProspects ir atklājis tehnisku kļūdu
+YouCanSetOptionDigitalProspectsMainProdToZero=Jūs varat izlasīt žurnāla failu vai iestatīt opciju $ DigitalProspects_main_prod uz '0' savā konfigurācijas failā, lai iegūtu vairāk informācijas.
+InformationToHelpDiagnose=Šī informācija var būt noderīga diagnostikas nolūkos (jūs varat iestatīt iespēju $ DigitalProspects_main_prod uz "1", lai noņemtu šādus paziņojumus).
 MoreInformation=Vairāk informācijas
 TechnicalInformation=Tehniskā informācija
 TechnicalID=Tehniskais ID
 LineID=Līnijas ID
 NotePublic=Piezīme (publiska)
 NotePrivate=Piezīme (privāta)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr iestatīts, lai ierobežotu vienības cenu <b>%s</b> zīmēm aiz komata.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects iestatīts, lai ierobežotu vienības cenu <b>%s</b> zīmēm aiz komata.
 DoTest=Pārbaude
 ToFilter=Filtrs
 NoFilter=Bez filtra
@@ -475,8 +475,8 @@ Generate=Izveidot
 Duration=Ilgums
 TotalDuration=Kopējais pasākuma ilgums
 Summary=Kopsavilkums
-DolibarrStateBoard=Datu bāzes statistika
-DolibarrWorkBoard=Atvērt preces
+DigitalProspectsStateBoard=Datu bāzes statistika
+DigitalProspectsWorkBoard=Atvērt preces
 NoOpenedElementToProcess=Nav atvērtu apstrādājamo elementu
 Available=Pieejams
 NotYetAvailable=Nav vēl pieejams
@@ -703,7 +703,7 @@ MenuECM=Dokumenti
 MenuAWStats=AWStats
 MenuMembers=Dalībnieki
 MenuAgendaGoogle=Google darba kārtība
-ThisLimitIsDefinedInSetup=Dolibarr robeža (Menu mājas uzstādīšana-drošība): %s Kb, PHP robeža: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects robeža (Menu mājas uzstādīšana-drošība): %s Kb, PHP robeža: %s Kb
 NoFileFound=Neviens dokuments nav saglabāts šajā direktorijā
 CurrentUserLanguage=Pašreizējā valoda
 CurrentTheme=Pašreizējā tēma
@@ -736,7 +736,7 @@ PrintContentArea=Rādīt lapu drukāt galveno satura jomā
 MenuManager=Izvēlnes iestatīšana
 WarningYouAreInMaintenanceMode=Brīdinājums, jūs atrodaties apkopes režīmā: lietojumprogrammu šajā režīmā drīkst izmantot tikai pieteikšanās <b> %s </b>.
 CoreErrorTitle=Sistēmas kļūda
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Kredītkarte
 ValidatePayment=Apstiprināt maksājumu
 CreditOrDebitCard=Kredīta vai debetkarte
@@ -875,7 +875,7 @@ Calendar=Kalendārs
 GroupBy=Kārtot pēc...
 ViewFlatList=Skatīt plakanu sarakstu
 RemoveString=Noņemt virkni '%s'
-SomeTranslationAreUncomplete=Dažas piedāvātās valodas var būt tikai daļēji tulkotas vai var saturēt kļūdas. Lūdzu, palīdziet labot savu valodu, reģistrējoties <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a>, lai pievienotu savus uzlabojumus.
+SomeTranslationAreUncomplete=Dažas piedāvātās valodas var būt tikai daļēji tulkotas vai var saturēt kļūdas. Lūdzu, palīdziet labot savu valodu, reģistrējoties <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a>, lai pievienotu savus uzlabojumus.
 DirectDownloadLink=Tiešā lejupielādes saite (publiska / ārēja)
 DirectDownloadInternalLink=Tiešā lejupielādes saite (ir jāreģistrē un tai ir nepieciešamas atļaujas).
 Download=Lejupielādēt

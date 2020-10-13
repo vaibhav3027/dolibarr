@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module export
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module export
  */
-class modExport extends DolibarrModules
+class modExport extends DigitalProspectsModules
 {
 
 	/**
@@ -47,9 +47,9 @@ class modExport extends DolibarrModules
 		$this->module_position = '72';
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
-		$this->description = "Outils d'exports de donnees Dolibarr (via un assistant)";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		$this->description = "Outils d'exports de donnees DigitalProspects (via un assistant)";
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'technic';
 

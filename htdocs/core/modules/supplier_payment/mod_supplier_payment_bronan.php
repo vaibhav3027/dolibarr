@@ -30,10 +30,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/supplier_payment/modules_supplier_
 class mod_supplier_payment_bronan extends ModeleNumRefSupplierPayments
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'SPAY';
 

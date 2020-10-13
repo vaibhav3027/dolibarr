@@ -53,10 +53,10 @@ class doc_generic_shipment_odt extends ModelePdfExpedition
 	public $phpmin = array(5, 5);
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

@@ -22,7 +22,7 @@ create table llx_user
   rowid             integer AUTO_INCREMENT PRIMARY KEY,
   entity            integer DEFAULT 1 NOT NULL, -- multi company id
 
-  ref_ext			varchar(50),				-- reference into an external system (not used by dolibarr)
+  ref_ext			varchar(50),				-- reference into an external system (not used by DigitalProspects)
   ref_int			varchar(50),				-- reference into an internal system (deprecated)
 
   employee          tinyint        DEFAULT 1,	-- 1 if user is an employee

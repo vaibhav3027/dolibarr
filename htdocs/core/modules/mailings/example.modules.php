@@ -2,7 +2,7 @@
 /* Copyright (C) 2005-2006 Laurent Destailleur  <eldy@users.sourceforge.net>
  *
  * This file is an example to follow to add your own email selector inside
- * the Dolibarr email tool.
+ * the DigitalProspects email tool.
  * Follow instructions given in README file to know what to change to build
  * your own emailing list selector.
  * Code that need to be changed in this file are marked by "CHANGE THIS" tag.
@@ -118,7 +118,7 @@ class mailing_example extends MailingTargets
     {
         // CHANGE THIS: Optionnal
 
-        // Example: return parent::getNbOfRecipients("SELECT count(*) as nb from dolibarr_table");
+        // Example: return parent::getNbOfRecipients("SELECT count(*) as nb from DigitalProspects_table");
         // Example: return 500;
         return '?';
     }

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Ledenoverzicht
 MemberCard=Lidmaatschapskaart
 SubscriptionCard=Inschrijvingskaart
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=Lijst van gevalideerde openbare leden
 ErrorThisMemberIsNotPublic=Dit lid is niet openbaar
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Een ander lid <b>(naam: %s, login: %s)</b> is al gekoppeld aan een derde partij <b>%s</b>. Verwijder deze link eerst omdat een derde partij niet kan worden gekoppeld aan slechts een lid (en vice versa).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Om veiligheidsredenen, moeten aan u rechten worden verleend voor het bewerken van alle gebruikers om in staat te zijn een lid te koppelen aan een gebruiker die niet van u is.
-SetLinkToUser=Link naar een Dolibarr gebruiker
-SetLinkToThirdParty=Link naar een derde partij in Dolibarr
+SetLinkToUser=Link naar een DigitalProspects gebruiker
+SetLinkToThirdParty=Link naar een derde partij in DigitalProspects
 MembersCards=Visitekaarten van leden
 MembersList=Ledenlijst
 MembersListToValid=Lijst van conceptleden (te valideren)
@@ -92,10 +92,10 @@ ConfirmDeleteSubscription=Weet u zeker dat u dit abonnement wilt verwijderen?
 Filehtpasswd=htpasswd bestand
 ValidateMember=Valideer een lid
 ConfirmValidateMember=Weet u zeker dat u dit lid wilt valideren?
-FollowingLinksArePublic=De volgende links zijn open pagina&#39;s die niet worden beschermd door enige Dolibarr-toestemming. Het zijn geen opgemaakte pagina&#39;s, die als voorbeeld worden gegeven om te laten zien hoe de ledendatabase moet worden weergegeven.
+FollowingLinksArePublic=De volgende links zijn open pagina&#39;s die niet worden beschermd door enige DigitalProspects-toestemming. Het zijn geen opgemaakte pagina&#39;s, die als voorbeeld worden gegeven om te laten zien hoe de ledendatabase moet worden weergegeven.
 PublicMemberList=Publieke ledenlijst
 BlankSubscriptionForm=Abonnement aanmeldformulier (openbaar)
-BlankSubscriptionFormDesc=Dolibarr kan u een openbare URL / website bieden waarmee externe bezoekers kunnen vragen zich te abonneren op de stichting. Als een online betaalmodule is ingeschakeld, kan ook automatisch een betaalformulier worden verstrekt.
+BlankSubscriptionFormDesc=DigitalProspects kan u een openbare URL / website bieden waarmee externe bezoekers kunnen vragen zich te abonneren op de stichting. Als een online betaalmodule is ingeschakeld, kan ook automatisch een betaalformulier worden verstrekt.
 EnablePublicSubscriptionForm=Schakel de openbare website in met het zelfinschrijvingsformulier
 ForceMemberType=Forceer het lidtype
 ExportDataset_member_1=Leden en abonnementen

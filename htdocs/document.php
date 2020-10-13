@@ -26,7 +26,7 @@
  *  \brief      Wrapper to download data files
  *  \remarks    Call of this wrapper is made with URL:
  * 				DOL_URL_ROOT.'/document.php?modulepart=repfichierconcerne&file=relativepathoffile'
- * 				DOL_URL_ROOT.'/document.php?modulepart=logs&file=dolibarr.log'
+ * 				DOL_URL_ROOT.'/document.php?modulepart=logs&file=DigitalProspects.log'
  * 				DOL_URL_ROOT.'/document.php?hashp=sharekey'
  */
 
@@ -42,14 +42,14 @@ if (isset($_GET["hashp"]) && !defined("NOLOGIN"))
 {
 	if (!defined("NOLOGIN"))		define("NOLOGIN", 1);
 	if (!defined("NOCSRFCHECK"))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 }
 // Some value of modulepart can be used to get resources that are public so no login are required.
 if ((isset($_GET["modulepart"]) && $_GET["modulepart"] == 'medias'))
 {
 	if (!defined("NOLOGIN"))		define("NOLOGIN", 1);
 	if (!defined("NOCSRFCHECK"))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 }
 
 /**

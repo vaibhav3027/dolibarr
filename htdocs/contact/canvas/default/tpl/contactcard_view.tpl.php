@@ -125,8 +125,8 @@ if (!empty($this->control->tpl['action_delete'])) echo $this->control->tpl['acti
 <?php } ?>
 
 <tr>
-	<td><?php echo $langs->trans("DolibarrLogin"); ?></td>
-	<td colspan="3"><?php echo $this->control->tpl['dolibarr_user']; ?></td>
+	<td><?php echo $langs->trans("DigitalProspectsLogin"); ?></td>
+	<td colspan="3"><?php echo $this->control->tpl['DigitalProspects_user']; ?></td>
 </tr>
 
 </table>
@@ -140,7 +140,7 @@ if (empty($user->socid)) {
 	}
 
 	if (!$this->control->tpl['user_id'] && $user->rights->user->user->creer) {
-		print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$this->control->tpl['id'].'&amp;action=create_user&amp;canvas='.$canvas.'">'.$langs->trans("CreateDolibarrLogin").'</a>';
+		print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$this->control->tpl['id'].'&amp;action=create_user&amp;canvas='.$canvas.'">'.$langs->trans("CreateDigitalProspectsLogin").'</a>';
 	}
 
 	if ($user->rights->societe->contact->supprimer) {

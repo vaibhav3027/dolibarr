@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Script build for hudson CI -->
-<project name="dolibarr" default="hudson" basedir=".">
+<project name="DigitalProspects" default="hudson" basedir=".">
 <!-- Exclude/ignore paths -->
  <property name="ignorepaths" value="${basedir}/htdocs/conf,${basedir}/htdocs/core/filemanagerdol,${basedir}/htdocs/includes" />
  <property name="ignoreregexp" value="**/PEAR/*,**/NET/*,**/HTTP/*,**/zendgdata/*,**/reportico/*" />
@@ -92,7 +92,7 @@
  </target>
 
  <!-- Generate Doxygen documentation -->
- <target name="doxygen" description="Dolibarr documentation" >
+ <target name="doxygen" description="DigitalProspects documentation" >
   <exec executable="doxygen" dir="${basedir}" failonerror="false">
    <arg value="${basedir}/build/doxygen/jenkins_doxygen.doxyfile"/>
   </exec>

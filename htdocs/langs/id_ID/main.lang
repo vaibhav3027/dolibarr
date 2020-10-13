@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Tidak ada permintaan yang salah
 ErrorServiceUnavailableTryLater=Layanan tidak tersedia saat ini. Coba lagi nanti.
 ErrorDuplicateField=Nilai duplikat di bidang unik
 ErrorSomeErrorWereFoundRollbackIsDone=Beberapa kesalahan ditemukan. Perubahan telah dibatalkan.
-ErrorConfigParameterNotDefined=Parameter<b>%s</b>tidak didefinisikan dalam file konfigurasi Dolibarr<b>conf.php </b>.
-ErrorCantLoadUserFromDolibarrDatabase=Gagal menemukan pengguna<b>%s</b>di basis data Dolibarr.
+ErrorConfigParameterNotDefined=Parameter<b>%s</b>tidak didefinisikan dalam file konfigurasi DigitalProspects<b>conf.php </b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Gagal menemukan pengguna<b>%s</b>di basis data DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Kesalahan, tidak ada tarif pajak yang ditentukan untuk negara '%s'.
 ErrorNoSocialContributionForSellerCountry=Kesalahan, tidak ada jenis pajak sosial / fiskal yang ditentukan untuk negara '%s'.
 ErrorFailedToSaveFile=Kesalahan, gagal menyimpan file.
@@ -90,7 +90,7 @@ RecordDeleted=Rekam dihapus
 RecordGenerated=Rekaman dihasilkan
 LevelOfFeature=Tingkat fitur
 NotDefined=Tidak terdefinisikan
-DolibarrInHttpAuthenticationSoPasswordUseless=Mode autentikasi Dolibarr diatur ke<b>%s</b>dalam file konfigurasi<b>conf.php </b>. <br> Ini berarti bahwa basis data kata sandi di luar Dolibarr, jadi mengubah bidang ini mungkin tidak berpengaruh.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Mode autentikasi DigitalProspects diatur ke<b>%s</b>dalam file konfigurasi<b>conf.php </b>. <br> Ini berarti bahwa basis data kata sandi di luar DigitalProspects, jadi mengubah bidang ini mungkin tidak berpengaruh.
 Administrator=Administrator
 Undefined=Tidak terdefinisi
 PasswordForgotten=Lupa kata sandi?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Manajer tipe basis data
 RequestLastAccessInError=Kesalahan permintaan akses basis data terbaru
 ReturnCodeLastAccessInError=Kembalikan kode untuk kesalahan permintaan akses database terbaru
 InformationLastAccessInError=Informasi untuk kesalahan permintaan akses database terbaru
-DolibarrHasDetectedError=Dolibarr telah mendeteksi kesalahan teknis
-YouCanSetOptionDolibarrMainProdToZero=Anda dapat membaca file log atau mengatur opsi $ dolibarr_main_prod ke '0' di file konfigurasi Anda untuk mendapatkan informasi lebih lanjut.
-InformationToHelpDiagnose=Informasi ini dapat berguna untuk tujuan diagnostik (Anda dapat mengatur opsi $ dolibarr_main_prod ke '1' untuk menghapus pemberitahuan tersebut)
+DigitalProspectsHasDetectedError=DigitalProspects telah mendeteksi kesalahan teknis
+YouCanSetOptionDigitalProspectsMainProdToZero=Anda dapat membaca file log atau mengatur opsi $ DigitalProspects_main_prod ke '0' di file konfigurasi Anda untuk mendapatkan informasi lebih lanjut.
+InformationToHelpDiagnose=Informasi ini dapat berguna untuk tujuan diagnostik (Anda dapat mengatur opsi $ DigitalProspects_main_prod ke '1' untuk menghapus pemberitahuan tersebut)
 MoreInformation=Informasi lebih lanjut
 TechnicalInformation=Informasi teknis
 TechnicalID=ID Teknis
 LineID=ID baris
 NotePublic=Catatan (publik)
 NotePrivate=Catatan (pribadi)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr disiapkan untuk membatasi presisi harga satuan hingga desimal<b>%s </b>.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects disiapkan untuk membatasi presisi harga satuan hingga desimal<b>%s </b>.
 DoTest=Uji
 ToFilter=Saring
 NoFilter=Tanpa filter
@@ -475,8 +475,8 @@ Generate=Menghasilkan
 Duration=Durasi
 TotalDuration=Durasi total
 Summary=Ringkasan
-DolibarrStateBoard=Statistik Basis Data
-DolibarrWorkBoard=Buka Item
+DigitalProspectsStateBoard=Statistik Basis Data
+DigitalProspectsWorkBoard=Buka Item
 NoOpenedElementToProcess=Tidak ada elemen terbuka untuk diproses
 Available=Tersedia
 NotYetAvailable=Belum tersedia
@@ -703,7 +703,7 @@ MenuECM=Dokumen
 MenuAWStats=AWStats
 MenuMembers=Anggota
 MenuAgendaGoogle=Agenda Google
-ThisLimitIsDefinedInSetup=Batas Dolibarr (Menu home-setup-security): %s Kb, batas PHP: %s Kb
+ThisLimitIsDefinedInSetup=Batas DigitalProspects (Menu home-setup-security): %s Kb, batas PHP: %s Kb
 NoFileFound=Tidak ada dokumen yang disimpan dalam direktori ini
 CurrentUserLanguage=Bahasa saat ini
 CurrentTheme=Tema saat ini
@@ -736,7 +736,7 @@ PrintContentArea=Tampilkan halaman untuk mencetak area konten utama
 MenuManager=Manajer menu
 WarningYouAreInMaintenanceMode=Peringatan, Anda berada dalam mode pemeliharaan: hanya login<b>%s</b>diizinkan untuk menggunakan aplikasi dalam mode ini.
 CoreErrorTitle=Sistem bermasalah
-CoreErrorMessage=Maaf, terjadi kesalahan. Hubungi administrator sistem Anda untuk memeriksa log atau menonaktifkan $ dolibarr_main_prod = 1 untuk mendapatkan informasi lebih lanjut.
+CoreErrorMessage=Maaf, terjadi kesalahan. Hubungi administrator sistem Anda untuk memeriksa log atau menonaktifkan $ DigitalProspects_main_prod = 1 untuk mendapatkan informasi lebih lanjut.
 CreditCard=Kartu kredit
 ValidatePayment=Validasi pembayaran
 CreditOrDebitCard=Kartu kredit atau debit
@@ -875,7 +875,7 @@ Calendar=Kalender
 GroupBy=Kelompokkan oleh ...
 ViewFlatList=Lihat daftar datar
 RemoveString=Hapus string '%s'
-SomeTranslationAreUncomplete=Beberapa bahasa yang ditawarkan mungkin hanya diterjemahkan sebagian atau mengandung kesalahan. Tolong bantu untuk memperbaiki bahasa Anda dengan mendaftar di <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/</a> untuk menambahkan perbaikan dari Anda.
+SomeTranslationAreUncomplete=Beberapa bahasa yang ditawarkan mungkin hanya diterjemahkan sebagian atau mengandung kesalahan. Tolong bantu untuk memperbaiki bahasa Anda dengan mendaftar di <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/</a> untuk menambahkan perbaikan dari Anda.
 DirectDownloadLink=Tautan unduhan langsung (publik / eksternal)
 DirectDownloadInternalLink=Tautan unduhan langsung (perlu dicatat dan perlu izin)
 Download=Unduh

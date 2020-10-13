@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=اسم الشركة ل ٪ موجود بالفعل. اختيار آخر.
 ErrorSetACountryFirst=المجموعة الأولى في البلد
 SelectThirdParty=تحديد طرف ثالث
@@ -12,7 +12,7 @@ MenuNewSupplier=New Vendor
 MenuNewPrivateIndividual=فرد جديد
 NewCompany=New company (prospect, customer, vendor)
 NewThirdParty=New Third Party (prospect, customer, vendor)
-CreateDolibarrThirdPartySupplier=Create a third party (vendor)
+CreateDigitalProspectsThirdPartySupplier=Create a third party (vendor)
 CreateThirdPartyOnly=إنشاء طرف ثالث
 CreateThirdPartyAndContact=Create a third party + a child contact
 ProspectionArea=مجال التنقيب
@@ -347,7 +347,7 @@ CapitalOf=ق ٪ من رأس المال
 EditCompany=تحرير الشركة
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=فحص
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=You can also check manually on the European Commission website <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=آفاق الوضع
 NoParentCompany=بلا
 ExportCardToFormat=تصدير بطاقة شكل
 ContactNotLinkedToCompany=اتصالات ليست مرتبطة بطرف ثالث
-DolibarrLogin=ادخل Dolibarr
-NoDolibarrAccess=لا Dolibarr الوصول
+DigitalProspectsLogin=ادخل DigitalProspects
+NoDigitalProspectsAccess=لا DigitalProspects الوصول
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

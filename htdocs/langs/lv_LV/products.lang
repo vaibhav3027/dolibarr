@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Produkta ref.
 ProductLabel=Produkta marķējums
 ProductLabelTranslated=Tulkots produkta nosaukums
@@ -289,7 +289,7 @@ ComposedProduct=Bērnu produkti
 MinSupplierPrice=Minimālā iepirkuma cena
 MinCustomerPrice=Minimālā pārdošanas cena
 DynamicPriceConfiguration=Dynamic price configuration
-DynamicPriceDesc=Jūs varat noteikt matemātiskās formulas, lai aprēķinātu Klienta vai pārdevēja cenas. Šādas formulas var izmantot visus matemātiskos operatorus, dažas konstantes un mainīgos. Šeit varat definēt mainīgos, kurus vēlaties izmantot. Ja mainīgajam nepieciešams automātisks atjauninājums, varat definēt ārējo URL, lai Dolibarr varētu automātiski atjaunināt vērtību.
+DynamicPriceDesc=Jūs varat noteikt matemātiskās formulas, lai aprēķinātu Klienta vai pārdevēja cenas. Šādas formulas var izmantot visus matemātiskos operatorus, dažas konstantes un mainīgos. Šeit varat definēt mainīgos, kurus vēlaties izmantot. Ja mainīgajam nepieciešams automātisks atjauninājums, varat definēt ārējo URL, lai DigitalProspects varētu automātiski atjaunināt vērtību.
 AddVariable=Pievienot mainīgo
 AddUpdater=Pievienot Atjaunotāju
 GlobalVariables=Global variables
@@ -364,7 +364,7 @@ NewProductAttribute=Jauns atribūts
 NewProductAttributeValue=Jauna atribūta vērtība
 ErrorCreatingProductAttributeValue=Veidojot atribūta vērtību, radās kļūda. Tas varētu būt tādēļ, ka ar šo atsauci jau ir esoša vērtība
 ProductCombinationGeneratorWarning=Ja turpināsiet, pirms jaunu variantu ģenerēšanas visi iepriekšējie tiks izdzēsti. Jau esošie tiks atjaunināti ar jaunajām vērtībām
-TooMuchCombinationsWarning=Daudzu variantu ģenerēšana var izraisīt augstu CPU, atmiņas izmantošanu un Dolibarr nespēj to izveidot. Opcijas "%s" iespējošana var palīdzēt samazināt atmiņas izmantošanu.
+TooMuchCombinationsWarning=Daudzu variantu ģenerēšana var izraisīt augstu CPU, atmiņas izmantošanu un DigitalProspects nespēj to izveidot. Opcijas "%s" iespējošana var palīdzēt samazināt atmiņas izmantošanu.
 DoNotRemovePreviousCombinations=Nedzēst iepriekšējos variantus
 UsePercentageVariations=Izmantojiet procentuālās svārstības
 PercentageVariation=Procentu variācijas

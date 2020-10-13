@@ -41,7 +41,7 @@ $action = GETPOST('action', 'alpha');
 
 if (preg_match('/set(.*)/', $action, $reg))
 {
-    if (!dolibarr_set_const($db, $reg[1], '1', 'chaine', 0, '', $conf->entity) > 0)
+    if (!DigitalProspects_set_const($db, $reg[1], '1', 'chaine', 0, '', $conf->entity) > 0)
     {
         dol_print_error($db);
     }
@@ -49,7 +49,7 @@ if (preg_match('/set(.*)/', $action, $reg))
 
 if (preg_match('/del(.*)/', $action, $reg))
 {
-    if (!dolibarr_set_const($db, $reg[1], '0', 'chaine', 0, '', $conf->entity) > 0)
+    if (!DigitalProspects_set_const($db, $reg[1], '0', 'chaine', 0, '', $conf->entity) > 0)
     {
         dol_print_error($db);
     }

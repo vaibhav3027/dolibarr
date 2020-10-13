@@ -23,12 +23,12 @@
  *	\ingroup    notification
  *	\brief      Fichier de description et activation du module Notification
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 /**
  *	Class to describe and enable module Mailing
  */
-class modNotification extends DolibarrModules
+class modNotification extends DigitalProspectsModules
 {
 
 	/**
@@ -48,10 +48,10 @@ class modNotification extends DolibarrModules
 		$this->module_position = '01';
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
-		$this->description = "EMail notifications (push) on business Dolibarr events";
+		$this->description = "EMail notifications (push) on business DigitalProspects events";
         $this->descriptionlong = 'Module600Long';
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-        $this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+        $this->version = 'DigitalProspects';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'email';
 
@@ -83,7 +83,7 @@ class modNotification extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

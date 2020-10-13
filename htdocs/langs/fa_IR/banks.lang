@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=بانک
 MenuBankCash=بانک | نقد
 MenuVariousPayment=پرداخت‌های متفرقه
@@ -109,7 +109,7 @@ SocialContributionPayment=پرداخت مالیات اجتماعی/سیاست م
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=انتقال داخلی
-TransferDesc=انتقال از یک حساب به حساب دیگر، Dolibarr دو ردیف خواهد نوشت (یک بدهکار در حساب بانکی منبع و یک بستانکار در حساب مقصد). حساب مشابه (منهای امضا)، برچسب، تاریخ برای این تراکنش استفاده خواهد شد)
+TransferDesc=انتقال از یک حساب به حساب دیگر، DigitalProspects دو ردیف خواهد نوشت (یک بدهکار در حساب بانکی منبع و یک بستانکار در حساب مقصد). حساب مشابه (منهای امضا)، برچسب، تاریخ برای این تراکنش استفاده خواهد شد)
 TransferFrom=از
 TransferTo=به
 TransferFromToDone=یک انتقال از <b>%s</b> به <b>%s</b> مربوط به <b>%s</b>%s ثبت شد.

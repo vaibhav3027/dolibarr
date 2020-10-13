@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Rechnung
 Bills=Rechnungen
 BillsCustomers=Kundenrechnungen
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Legen Sie das Startdatum fest
 AutoFillDateTo=Enddatum der Dienstleistung auf das Rechnungsdatum setzen
 AutoFillDateToShort=Enddatum festlegen
 MaxNumberOfGenerationReached=Maximal Anzahl Generierungen erreicht
-BILL_DELETEInDolibarr=Rechnung gelöscht
-BILL_SUPPLIER_DELETEInDolibarr=Lieferantenrechnung gelöscht
+BILL_DELETEInDigitalProspects=Rechnung gelöscht
+BILL_SUPPLIER_DELETEInDigitalProspects=Lieferantenrechnung gelöscht
 UnitPriceXQtyLessDiscount=Stückpreis x Anzahl - Rabatt
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

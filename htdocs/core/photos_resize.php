@@ -247,7 +247,7 @@ elseif ($modulepart == 'bom')
 		$dir = $conf->bank->dir_output; // By default
 	}
 } elseif ($modulepart == 'medias') {
-	$dir = $dolibarr_main_data_root.'/'.$modulepart;
+	$dir = $DigitalProspects_main_data_root.'/'.$modulepart;
 } else {
 	print 'Action crop for modulepart = '.$modulepart.' is not supported yet by photos_resize.php.';
 }

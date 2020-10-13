@@ -242,7 +242,7 @@ class Paiement extends CommonObject
 		$totalamount_converted = 0;
         $atleastonepaymentnotnull = 0;
 
-		if ($way == 'dolibarr')
+		if ($way == 'DigitalProspects')
 		{
 			$amounts = &$this->amounts;
 			$amounts_to_update = &$this->multicurrency_amounts;
@@ -282,7 +282,7 @@ class Paiement extends CommonObject
 
 		$this->ref = $this->getNextNumRef(is_object($thirdparty) ? $thirdparty : '');
 
-		if ($way == 'dolibarr')
+		if ($way == 'DigitalProspects')
 		{
 			$total = $totalamount;
 			$mtotal = $totalamount_converted; // Maybe use price2num with MT for the converted value
@@ -626,7 +626,7 @@ class Paiement extends CommonObject
 			$totalamount = $this->amount;
             if (empty($totalamount)) $totalamount = $this->total; // For backward compatibility
 
-            // if dolibarr currency != bank currency then we received an amount in customer currency (currently I don't manage the case : my currency is USD, the customer currency is EUR and he paid me in GBP. Seems no sense for me)
+            // if DigitalProspects currency != bank currency then we received an amount in customer currency (currently I don't manage the case : my currency is USD, the customer currency is EUR and he paid me in GBP. Seems no sense for me)
             if (!empty($conf->multicurrency->enabled) && $conf->currency != $acc->currency_code) $totalamount = $this->multicurrency_amount;
 
             if ($mode == 'payment_supplier') $totalamount = -$totalamount;
@@ -1136,13 +1136,13 @@ class Paiement extends CommonObject
 	/**
 	 * 	get the right way of payment
 	 *
-	 * 	@return 	string 	'dolibarr' if standard comportment or paid in main currency, 'customer' if payment received from multicurrency inputs
+	 * 	@return 	string 	'DigitalProspects' if standard comportment or paid in main currency, 'customer' if payment received from multicurrency inputs
 	 */
     public function getWay()
 	{
 		global $conf;
 
-		$way = 'dolibarr';
+		$way = 'DigitalProspects';
 		if (!empty($conf->multicurrency->enabled))
 		{
 			foreach ($this->multicurrency_amounts as $value)

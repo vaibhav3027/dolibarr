@@ -27,7 +27,7 @@
 /**
  *     	\file       htdocs/public/website/index.php
  *		\ingroup    website
- *		\brief      Wrapper to output pages when website is powered by Dolibarr instead of a native web server
+ *		\brief      Wrapper to output pages when website is powered by DigitalProspects instead of a native web server
  */
 
 if (!defined('NOTOKENRENEWAL')) define('NOTOKENRENEWAL', 1); // Disables token renewal
@@ -154,20 +154,20 @@ if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $appli = $conf->global->MAIN_
 
 
 // Security: Delete string ../ into $original_file
-global $dolibarr_main_data_root;
+global $DigitalProspects_main_data_root;
 
 if ($pageid == 'css')   // No more used ?
 {
 	header('Content-type: text/css');
-	// Important: Following code is to avoid page request by browser and PHP CPU at each Dolibarr page access.
-	//if (empty($dolibarr_nocache)) header('Cache-Control: max-age=3600, public, must-revalidate');
+	// Important: Following code is to avoid page request by browser and PHP CPU at each DigitalProspects page access.
+	//if (empty($DigitalProspects_nocache)) header('Cache-Control: max-age=3600, public, must-revalidate');
 	//else
 	header('Cache-Control: no-cache');
-	$original_file = $dolibarr_main_data_root.'/website/'.$websitekey.'/styles.css.php';
+	$original_file = $DigitalProspects_main_data_root.'/website/'.$websitekey.'/styles.css.php';
 }
 else
 {
-	$original_file = $dolibarr_main_data_root.'/website/'.$websitekey.'/page'.$pageid.'.tpl.php';
+	$original_file = $DigitalProspects_main_data_root.'/website/'.$websitekey.'/page'.$pageid.'.tpl.php';
 }
 
 // Find the subdirectory name as the reference
@@ -214,8 +214,8 @@ if (!file_exists($original_file_osencoded))
 
 
 // Output page content
-define('USEDOLIBARRSERVER', 1);
-print '<!-- Page content '.$original_file.' rendered with DOLIBARR SERVER : Html with CSS link and html header + Body that was saved into tpl dir -->'."\n";
+define('USEDigitalProspectsSERVER', 1);
+print '<!-- Page content '.$original_file.' rendered with DigitalProspects SERVER : Html with CSS link and html header + Body that was saved into tpl dir -->'."\n";
 include_once $original_file_osencoded; // Note: The pageXXX.tpl.php showed here contains a formatage with dolWebsiteOutput() at end of page.
 
 if (is_object($db)) $db->close();

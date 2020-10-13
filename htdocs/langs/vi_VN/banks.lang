@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Ngân hàng
 MenuBankCash=Ngân hàng | Tiền mặt
 MenuVariousPayment=Thanh toán khác
@@ -109,7 +109,7 @@ SocialContributionPayment=Thanh toán phí/thuế khác
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Chuyển tiền nội bộ
-TransferDesc=Chuyển từ tài khoản này sang tài khoản khác, Dolibarr sẽ viết hai bản ghi (ghi nợ trong tài khoản nguồn và ghi có tài khoản nhận). Cùng số tiền (ngoại trừ ký hiệu), nhãn và ngày sẽ được sử dụng cho giao dịch này
+TransferDesc=Chuyển từ tài khoản này sang tài khoản khác, DigitalProspects sẽ viết hai bản ghi (ghi nợ trong tài khoản nguồn và ghi có tài khoản nhận). Cùng số tiền (ngoại trừ ký hiệu), nhãn và ngày sẽ được sử dụng cho giao dịch này
 TransferFrom=Từ
 TransferTo=Đến
 TransferFromToDone=Một chuyển khoản từ <b>%s</b> đến <b>%s</b> của <b>%s</b> %s đã được ghi lại.

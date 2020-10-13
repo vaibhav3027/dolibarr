@@ -153,7 +153,7 @@ $tabfieldcheck[25] = array();
 $elementList = array();
 $sourceList = array();
 
-// We save list of template email Dolibarr can manage. This list can found by a grep into code on "->param['models']"
+// We save list of template email DigitalProspects can manage. This list can found by a grep into code on "->param['models']"
 $elementList = array();
 if ($conf->propal->enabled && $user->rights->propal->lire)     $elementList['propal_send'] = $langs->trans('MailToSendProposal');
 if ($conf->commande->enabled && $user->rights->commande->lire) $elementList['order_send'] = $langs->trans('MailToSendOrder');
@@ -587,7 +587,7 @@ foreach ($fieldsforcontent as $tmpfieldlist)
 			$okforextended = true;
 			if (empty($conf->global->FCKEDITOR_ENABLE_MAIL))
 				$okforextended = false;
-			$doleditor = new DolEditor($tmpfieldlist, (!empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 120, 'dolibarr_mailings', 'In', 0, false, $okforextended, ROWS_4, '90%');
+			$doleditor = new DolEditor($tmpfieldlist, (!empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 120, 'DigitalProspects_mailings', 'In', 0, false, $okforextended, ROWS_4, '90%');
 			print $doleditor->Create(1);
 		}
 		else
@@ -795,7 +795,7 @@ if ($resql)
                         	print $form->textwithpicto($langs->trans("Content"), $tabhelp[$id][$tmpfieldlist], 1, 'help', '', 0, 2, $tmpfieldlist).'<br>';
                         	$okforextended = true;
                         	if (empty($conf->global->FCKEDITOR_ENABLE_MAIL)) $okforextended = false;
-                        	$doleditor = new DolEditor($tmpfieldlist.'-'.$rowid, (!empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 140, 'dolibarr_mailings', 'In', 0, false, $okforextended, ROWS_6, '90%');
+                        	$doleditor = new DolEditor($tmpfieldlist.'-'.$rowid, (!empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 140, 'DigitalProspects_mailings', 'In', 0, false, $okforextended, ROWS_6, '90%');
                         	print $doleditor->Create(1);
                         }
                         print '</td>';
@@ -934,7 +934,7 @@ if ($resql)
                         $okforextended = true;
                         if (empty($conf->global->FCKEDITOR_ENABLE_MAIL))
                             $okforextended = false;
-                        $doleditor = new DolEditor($tmpfieldlist.'-'.$i, (! empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 140, 'dolibarr_mailings', 'In', 0, false, $okforextended, ROWS_6, '90%', 1);
+                        $doleditor = new DolEditor($tmpfieldlist.'-'.$i, (! empty($obj->{$tmpfieldlist}) ? $obj->{$tmpfieldlist} : ''), '', 140, 'DigitalProspects_mailings', 'In', 0, false, $okforextended, ROWS_6, '90%', 1);
                         print $doleditor->Create(1);
                         print '</td>';
                         print '<td></td><td></td><td></td>';

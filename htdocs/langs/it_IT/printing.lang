@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - printing
+# DigitalProspects language file - Source file is en_US - printing
 Module64000Name=Stampa diretta
 Module64000Desc=Abilita il sistema di stampa diretta
 PrintingSetup=Impostazioni del sistema di stampa diretta

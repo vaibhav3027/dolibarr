@@ -72,7 +72,7 @@ $extrafields->fetch_name_optionals_label($object->table_element);
 
 $socialnetworks = getArrayOfSocialNetworks();
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $object->getCanvas($id);
 $canvas = $object->canvas ? $object->canvas : GETPOST("canvas");
 $objcanvas = null;
@@ -676,7 +676,7 @@ if (empty($reshook))
 					$subjecttosend = make_substitutions($subject, $substitutionarray, $outputlangs);
 					$texttosend = make_substitutions(dol_concatdesc($msg, $adht->getMailOnValid()), $substitutionarray, $outputlangs);
 
-					$moreinheader = 'X-Dolibarr-Info: send_an_email by adherents/card.php'."\r\n";
+					$moreinheader = 'X-DigitalProspects-Info: send_an_email by adherents/card.php'."\r\n";
 
 					$result = $object->send_an_email($texttosend, $subjecttosend, array(), array(), array(), "", "", 0, -1, '', $moreinheader);
 					if ($result < 0)
@@ -757,7 +757,7 @@ if (empty($reshook))
 						$subjecttosend = make_substitutions($subject, $substitutionarray, $outputlangs);
 						$texttosend = make_substitutions(dol_concatdesc($msg, $adht->getMailOnResiliate()), $substitutionarray, $outputlangs);
 
-						$moreinheader = 'X-Dolibarr-Info: send_an_email by adherents/card.php'."\r\n";
+						$moreinheader = 'X-DigitalProspects-Info: send_an_email by adherents/card.php'."\r\n";
 
 						$result = $object->send_an_email($texttosend, $subjecttosend, array(), array(), array(), "", "", 0, -1, '', $moreinheader);
 						if ($result < 0)
@@ -1330,10 +1330,10 @@ else
 			print "</td></tr>";
 		}
 
-		// Third party Dolibarr
+		// Third party DigitalProspects
 		if (!empty($conf->societe->enabled))
 		{
-			print '<tr><td>'.$langs->trans("LinkedToDolibarrThirdParty").'</td><td colspan="2" class="valeur">';
+			print '<tr><td>'.$langs->trans("LinkedToDigitalProspectsThirdParty").'</td><td colspan="2" class="valeur">';
 			if ($object->socid)
 			{
 				$company = new Societe($db);
@@ -1347,13 +1347,13 @@ else
 			print '</td></tr>';
 		}
 
-		// Login Dolibarr
-		print '<tr><td>'.$langs->trans("LinkedToDolibarrUser").'</td><td colspan="2" class="valeur">';
+		// Login DigitalProspects
+		print '<tr><td>'.$langs->trans("LinkedToDigitalProspectsUser").'</td><td colspan="2" class="valeur">';
 		if ($object->user_id)
 		{
 			$form->form_users($_SERVER['PHP_SELF'].'?rowid='.$object->id, $object->user_id, 'none');
 		}
-		else print $langs->trans("NoDolibarrAccess");
+		else print $langs->trans("NoDigitalProspectsAccess");
 		print '</td></tr>';
 
 		// Other attributes. Fields from hook formObjectOptions and Extrafields.
@@ -1424,7 +1424,7 @@ else
 				if ($object->socid > 0) $text .= $langs->trans("UserWillBeExternalUser");
 				else $text .= $langs->trans("UserWillBeInternalUser");
 			}
-			print $form->formconfirm($_SERVER["PHP_SELF"]."?rowid=".$object->id, $langs->trans("CreateDolibarrLogin"), $text, "confirm_create_user", $formquestion, 'yes');
+			print $form->formconfirm($_SERVER["PHP_SELF"]."?rowid=".$object->id, $langs->trans("CreateDigitalProspectsLogin"), $text, "confirm_create_user", $formquestion, 'yes');
 		}
 
 		// Confirm create third party
@@ -1450,7 +1450,7 @@ else
 				array('label' => $langs->trans("AliasNames"), 'type' => 'text', 'name' => 'companyalias', 'value' => $companyalias, 'morecss' => 'minwidth300', 'moreattr' => 'maxlength="128"')
 			);
 
-			print $form->formconfirm($_SERVER["PHP_SELF"]."?rowid=".$object->id, $langs->trans("CreateDolibarrThirdParty"), $langs->trans("ConfirmCreateThirdParty"), "confirm_create_thirdparty", $formquestion, 'yes');
+			print $form->formconfirm($_SERVER["PHP_SELF"]."?rowid=".$object->id, $langs->trans("CreateDigitalProspectsThirdParty"), $langs->trans("ConfirmCreateThirdParty"), "confirm_create_thirdparty", $formquestion, 'yes');
 		}
 
 		// Confirm validate member
@@ -1676,12 +1676,12 @@ else
 		}
 		print '</td></tr>';
 
-		// Third party Dolibarr
+		// Third party DigitalProspects
 		if (!empty($conf->societe->enabled))
 		{
 			print '<tr><td>';
 			$editenable = $user->rights->adherent->creer;
-			print $form->editfieldkey('LinkedToDolibarrThirdParty', 'thirdparty', '', $object, $editenable);
+			print $form->editfieldkey('LinkedToDigitalProspectsThirdParty', 'thirdparty', '', $object, $editenable);
 			print '</td><td colspan="2" class="valeur">';
 			if ($action == 'editthirdparty')
 			{
@@ -1713,10 +1713,10 @@ else
 			print '</td></tr>';
 		}
 
-		// Login Dolibarr
+		// Login DigitalProspects
 		print '<tr><td>';
 		$editenable = $user->rights->adherent->creer && $user->rights->user->user->creer;
-		print $form->editfieldkey('LinkedToDolibarrUser', 'login', '', $object, $editenable);
+		print $form->editfieldkey('LinkedToDigitalProspectsUser', 'login', '', $object, $editenable);
 		print '</td><td colspan="2" class="valeur">';
 		if ($action == 'editlogin')
 		{
@@ -1728,7 +1728,7 @@ else
 			{
 				$form->form_users($_SERVER['PHP_SELF'].'?rowid='.$object->id, $object->user_id, 'none');
 			}
-			else print $langs->trans("NoDolibarrAccess");
+			else print $langs->trans("NoDigitalProspectsAccess");
 		}
 		print '</td></tr>';
 
@@ -1858,12 +1858,12 @@ else
 				{
 					if ($user->rights->societe->creer)
 					{
-						if ($object->statut != -1) print '<div class="inline-block divButAction"><a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&amp;action=create_thirdparty">'.$langs->trans("CreateDolibarrThirdParty").'</a></div>';
-						else print '<div class="inline-block divButAction"><a class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("ValidateBefore")).'">'.$langs->trans("CreateDolibarrThirdParty").'</a></div>';
+						if ($object->statut != -1) print '<div class="inline-block divButAction"><a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&amp;action=create_thirdparty">'.$langs->trans("CreateDigitalProspectsThirdParty").'</a></div>';
+						else print '<div class="inline-block divButAction"><a class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("ValidateBefore")).'">'.$langs->trans("CreateDigitalProspectsThirdParty").'</a></div>';
 					}
 					else
 					{
-						print '<div class="inline-block divButAction"><font class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("NotEnoughPermissions")).'">'.$langs->trans("CreateDolibarrThirdParty")."</font></div>";
+						print '<div class="inline-block divButAction"><font class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("NotEnoughPermissions")).'">'.$langs->trans("CreateDigitalProspectsThirdParty")."</font></div>";
 					}
 				}
 
@@ -1872,12 +1872,12 @@ else
 				{
 					if ($user->rights->user->user->creer)
 					{
-						if ($object->statut != -1) print '<div class="inline-block divButAction"><a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&amp;action=create_user">'.$langs->trans("CreateDolibarrLogin").'</a></div>';
-						else print '<div class="inline-block divButAction"><a class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("ValidateBefore")).'">'.$langs->trans("CreateDolibarrLogin").'</a></div>';
+						if ($object->statut != -1) print '<div class="inline-block divButAction"><a class="butAction" href="'.$_SERVER["PHP_SELF"].'?rowid='.$object->id.'&amp;action=create_user">'.$langs->trans("CreateDigitalProspectsLogin").'</a></div>';
+						else print '<div class="inline-block divButAction"><a class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("ValidateBefore")).'">'.$langs->trans("CreateDigitalProspectsLogin").'</a></div>';
 					}
 					else
 					{
-						print '<div class="inline-block divButAction"><font class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("NotEnoughPermissions")).'">'.$langs->trans("CreateDolibarrLogin")."</font></div>";
+						print '<div class="inline-block divButAction"><font class="butActionRefused classfortooltip" href="#" title="'.dol_escape_htmltag($langs->trans("NotEnoughPermissions")).'">'.$langs->trans("CreateDigitalProspectsLogin")."</font></div>";
 					}
 				}
 

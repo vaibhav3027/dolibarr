@@ -25,14 +25,14 @@
  *  \ingroup    oauth
  *  \brief      File of class to describe and activate module Oauth
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 
 /**
  *  Class to describe and activate module OAuth
  */
-class modOauth extends DolibarrModules
+class modOauth extends DigitalProspectsModules
 {
 
     /**
@@ -52,8 +52,8 @@ class modOauth extends DolibarrModules
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         // Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
         $this->description = "Enable OAuth authentication";
-        // Possible values for version are: 'development', 'experimental', 'dolibarr' or 'dolibarr_deprecated' or version
-        $this->version = 'dolibarr';
+        // Possible values for version are: 'development', 'experimental', 'DigitalProspects' or 'DigitalProspects_deprecated' or version
+        $this->version = 'DigitalProspects';
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         // Name of image file used for this module.
         // If file is in theme/yourtheme/img directory under name object_pictovalue.png, use this->picto='pictovalue'
@@ -72,7 +72,7 @@ class modOauth extends DolibarrModules
 		$this->requiredby = array(); // List of module ids to disable if this one is disabled
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module                    // Minimum version of PHP required by module
-        $this->need_dolibarr_version = array(3, 7, -2); // Minimum version of Dolibarr required by module
+        $this->need_DigitalProspects_version = array(3, 7, -2); // Minimum version of DigitalProspects required by module
         $this->conflictwith = array();
         $this->langfiles = array("oauth");
 
@@ -124,7 +124,7 @@ class modOauth extends DolibarrModules
 
     /**
      *      Function called when module is enabled.
-     *      The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+     *      The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
      *      It also creates data directories
      *
      *      @param      string  $options    Options when enabling module ('', 'noboxes')

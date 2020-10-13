@@ -234,19 +234,19 @@ class SecurityTest extends PHPUnit\Framework\TestCase
      */
     public function testCheckLoginPassEntity()
     {
-        $login=checkLoginPassEntity('loginbidon', 'passwordbidon', 1, array('dolibarr'));
+        $login=checkLoginPassEntity('loginbidon', 'passwordbidon', 1, array('DigitalProspects'));
         print __METHOD__." login=".$login."\n";
         $this->assertEquals($login, '');
 
-        $login=checkLoginPassEntity('admin', 'passwordbidon', 1, array('dolibarr'));
+        $login=checkLoginPassEntity('admin', 'passwordbidon', 1, array('DigitalProspects'));
         print __METHOD__." login=".$login."\n";
         $this->assertEquals($login, '');
 
-        $login=checkLoginPassEntity('admin', 'admin', 1, array('dolibarr'));            // Should works because admin/admin exists
+        $login=checkLoginPassEntity('admin', 'admin', 1, array('DigitalProspects'));            // Should works because admin/admin exists
         print __METHOD__." login=".$login."\n";
         $this->assertEquals($login, 'admin');
 
-        $login=checkLoginPassEntity('admin', 'admin', 1, array('http','dolibarr'));    // Should work because of second authetntication method
+        $login=checkLoginPassEntity('admin', 'admin', 1, array('http','DigitalProspects'));    // Should work because of second authetntication method
         print __METHOD__." login=".$login."\n";
         $this->assertEquals($login, 'admin');
 

@@ -1,7 +1,7 @@
-# Dolibarr language file - Source file is en_US - paybox
+# DigitalProspects language file - Source file is en_US - paybox
 PayBoxSetup=PayBox mooduli seadistamine
-PayBoxDesc=See moodul võimaldab klientidel makseid sooritada <a href="http://www.paybox.com" target="_blank">Payboxi</a> lehel. Seda võib kasutada tavalise maksena või maksena teatud Dolibarri objektidel (arved, tellimused jne)
-FollowingUrlAreAvailableToMakePayments=Dolibarri objektide põhjal maksete sooritamiseks on klientidele pakkuda järgnevate lehtede URLid:
+PayBoxDesc=See moodul võimaldab klientidel makseid sooritada <a href="http://www.paybox.com" target="_blank">Payboxi</a> lehel. Seda võib kasutada tavalise maksena või maksena teatud DigitalProspectsi objektidel (arved, tellimused jne)
+FollowingUrlAreAvailableToMakePayments=DigitalProspectsi objektide põhjal maksete sooritamiseks on klientidele pakkuda järgnevate lehtede URLid:
 PaymentForm=Maksmise vorm
 WelcomeOnPaymentPage=Welcome to our online payment service
 ThisScreenAllowsYouToPay=See ekraan võimaldab teil teha online-makseid üksusele %s.

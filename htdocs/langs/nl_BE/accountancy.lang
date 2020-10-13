@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - accountancy
+# DigitalProspects language file - Source file is en_US - accountancy
 Accountancy=Boekhouding
 ACCOUNTING_EXPORT_SEPARATORCSV=Kolom scheidingsteken voor exporteren naar bestand
 ACCOUNTING_EXPORT_DATE=Datum formaat voor exporteren naar bestand

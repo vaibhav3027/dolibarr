@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - agenda
+# DigitalProspects language file - Source file is en_US - agenda
 Actions=Termine
 LocalAgenda=interner Kalender
 EventsNb=Anzahl der Termine
@@ -10,14 +10,14 @@ MenuToDoMyActions=Meine unvollständige Termine
 ActionAssignedTo=Termin zugwiesen von
 ViewCal=Kalender anzeigen
 ViewDay=Tag anzeigen
-PropalValidatedInDolibarr=Angebot %s verifiziert
-InvoiceValidatedInDolibarr=Rechung %s verifiziert
-InvoiceBackToDraftInDolibarr=Rechnung %s zurück zum provisorischen Status
-ShipmentValidatedInDolibarr=Sendung %s validiert
-OrderValidatedInDolibarr=Bestellung freigegeben
-OrderCanceledInDolibarr=Bestellung %s storiniert
-OrderApprovedInDolibarr=Bestellung %s wurde validiert
-OrderBackToDraftInDolibarr=Bestellung %s zurück zum provisorischen Status
+PropalValidatedInDigitalProspects=Angebot %s verifiziert
+InvoiceValidatedInDigitalProspects=Rechung %s verifiziert
+InvoiceBackToDraftInDigitalProspects=Rechnung %s zurück zum provisorischen Status
+ShipmentValidatedInDigitalProspects=Sendung %s validiert
+OrderValidatedInDigitalProspects=Bestellung freigegeben
+OrderCanceledInDigitalProspects=Bestellung %s storiniert
+OrderApprovedInDigitalProspects=Bestellung %s wurde validiert
+OrderBackToDraftInDigitalProspects=Bestellung %s zurück zum provisorischen Status
 ShippingValidated=Sendung %s validiert
 DateActionStart=Start-Datum
 DateActionEnd=End-Datum

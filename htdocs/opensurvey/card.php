@@ -249,7 +249,7 @@ print '</td></tr>';
 print '<tr><td class="tdtop">'.$langs->trans("Description").'</td><td colspan="2">';
 if ($action == 'edit')
 {
-	$doleditor = new DolEditor('nouveauxcommentaires', $object->description, '', 120, 'dolibarr_notes', 'In', 1, 1, 1, ROWS_7, '90%');
+	$doleditor = new DolEditor('nouveauxcommentaires', $object->description, '', 120, 'DigitalProspects_notes', 'In', 1, 1, 1, ROWS_7, '90%');
 	$doleditor->Create(0, '');
 }
 else
@@ -330,7 +330,7 @@ print '</td></tr>';
 print '<tr><td>'.img_picto('', 'globe').' '.$langs->trans("UrlForSurvey", '').'</td><td colspan="2">';
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

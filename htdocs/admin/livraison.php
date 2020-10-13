@@ -56,7 +56,7 @@ if ($action == 'updateMask')
 {
     $maskconstdelivery = GETPOST('maskconstdelivery', 'alpha');
     $maskdelivery = GETPOST('maskdelivery', 'alpha');
-    if ($maskconstdelivery)  $res = dolibarr_set_const($db, $maskconstdelivery, $maskdelivery, 'chaine', 0, '', $conf->entity);
+    if ($maskconstdelivery)  $res = DigitalProspects_set_const($db, $maskconstdelivery, $maskdelivery, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -73,7 +73,7 @@ if ($action == 'updateMask')
 if ($action == 'set_DELIVERY_FREE_TEXT')
 {
     $free = GETPOST('DELIVERY_FREE_TEXT', 'none'); // No alpha here, we want exact string
-    $res = dolibarr_set_const($db, "DELIVERY_FREE_TEXT", $free, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "DELIVERY_FREE_TEXT", $free, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -142,13 +142,13 @@ if ($action == 'del')
     $ret = delDocumentModel($value, $type);
     if ($ret > 0)
     {
-        if ($conf->global->LIVRAISON_ADDON_PDF == "$value") dolibarr_del_const($db, 'LIVRAISON_ADDON_PDF', $conf->entity);
+        if ($conf->global->LIVRAISON_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'LIVRAISON_ADDON_PDF', $conf->entity);
     }
 }
 
 if ($action == 'setdoc')
 {
-    if (dolibarr_set_const($db, "LIVRAISON_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+    if (DigitalProspects_set_const($db, "LIVRAISON_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
     {
         // La constante qui a ete lue en avant du nouveau set
         // on passe donc par une variable pour avoir un affichage coherent
@@ -168,7 +168,7 @@ if ($action == 'setmod')
     // TODO Verifier si module numerotation choisi peut etre active
     // par appel methode canBeActivated
 
-    dolibarr_set_const($db, "LIVRAISON_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "LIVRAISON_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
 }
 
 
@@ -466,7 +466,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

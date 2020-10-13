@@ -56,7 +56,7 @@ if ($action == 'updateMask')
 {
 	$maskconstpropal = GETPOST('maskconstpropal', 'alpha');
 	$maskpropal = GETPOST('maskpropal', 'alpha');
-	if ($maskconstpropal) $res = dolibarr_set_const($db, $maskconstpropal, $maskpropal, 'chaine', 0, '', $conf->entity);
+	if ($maskconstpropal) $res = DigitalProspects_set_const($db, $maskconstpropal, $maskpropal, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -118,8 +118,8 @@ elseif ($action == 'setribchq')
 	$rib = GETPOST('rib', 'alpha');
 	$chq = GETPOST('chq', 'alpha');
 
-	$res = dolibarr_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -136,7 +136,7 @@ elseif ($action == 'set_PROPALE_DRAFT_WATERMARK')
 {
 	$draft = GETPOST('PROPALE_DRAFT_WATERMARK', 'alpha');
 
-	$res = dolibarr_set_const($db, "PROPALE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PROPALE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 
  	if (!$error)
@@ -152,7 +152,7 @@ elseif ($action == 'set_PROPOSAL_FREE_TEXT')
 {
 	$freetext = GETPOST('PROPOSAL_FREE_TEXT', 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "PROPOSAL_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PROPOSAL_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -167,7 +167,7 @@ elseif ($action == 'set_PROPOSAL_FREE_TEXT')
 }
 elseif ($action == 'setdefaultduration')
 {
-	$res = dolibarr_set_const($db, "PROPALE_VALIDITY_DURATION", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PROPALE_VALIDITY_DURATION", $value, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -183,7 +183,7 @@ elseif ($action == 'setdefaultduration')
 
 elseif ($action == 'set_BANK_ASK_PAYMENT_BANK_DURING_PROPOSAL')
 {
-    $res = dolibarr_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_PROPOSAL", $value, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_PROPOSAL", $value, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -206,13 +206,13 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->PROPALE_ADDON_PDF == "$value") dolibarr_del_const($db, 'PROPALE_ADDON_PDF', $conf->entity);
+        if ($conf->global->PROPALE_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'PROPALE_ADDON_PDF', $conf->entity);
 	}
 }
 
 elseif ($action == 'setdoc')
 {
-    if (dolibarr_set_const($db, "PROPALE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+    if (DigitalProspects_set_const($db, "PROPALE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		$conf->global->PROPALE_ADDON_PDF = $value;
 	}
@@ -230,7 +230,7 @@ elseif ($action == 'setmod')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "PROPALE_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "PROPALE_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 
@@ -689,7 +689,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

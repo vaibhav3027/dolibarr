@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - accountancy
+# DigitalProspects language file - Source file is en_US - accountancy
 Accounting=Compte
 ACCOUNTING_EXPORT_SEPARATORCSV=Séparateur de colonne pour le fichier export
 ACCOUNTING_EXPORT_DATE=Format de date pour le fichier export

@@ -57,7 +57,7 @@ if ($action == 'updateMask')
 {
     $maskconst = GETPOST('maskconstholiday', 'alpha');
     $maskvalue = GETPOST('maskholiday', 'alpha');
-    if ($maskconst) $res = dolibarr_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
+    if ($maskconst) $res = DigitalProspects_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -127,14 +127,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->HOLIDAY_ADDON_PDF == "$value") dolibarr_del_const($db, 'HOLIDAY_ADDON_PDF', $conf->entity);
+        if ($conf->global->HOLIDAY_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'HOLIDAY_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "HOLIDAY_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "HOLIDAY_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -154,16 +154,16 @@ elseif ($action == 'setmod')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "HOLIDAY_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "HOLIDAY_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'set_other')
 {
 	$freetext = GETPOST('HOLIDAY_FREE_TEXT', 'none'); // No alpha here, we want exact string
-	$res1 = dolibarr_set_const($db, "HOLIDAY_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res1 = DigitalProspects_set_const($db, "HOLIDAY_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	$draft = GETPOST('HOLIDAY_DRAFT_WATERMARK', 'alpha');
-	$res2 = dolibarr_set_const($db, "HOLIDAY_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res2 = DigitalProspects_set_const($db, "HOLIDAY_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res1 > 0 || !$res2 > 0) $error++;
 
@@ -505,7 +505,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td></tr>'."\n";

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Kundenauftrags-Übersicht
 SuppliersOrdersArea=Lieferantenbestellungen
 OrderCard=Bestell-Karte
@@ -33,7 +33,7 @@ RefOrderSupplier=Bestellnummer für den Lieferanten
 RefOrderSupplierShort=Lieferanten - Bestellnummer
 OrderMode=Bestellweise
 ConfirmCloneOrder=Bist du sicher, dass du die Bestellung <b>%s</b> duplizieren willst?
-SupplierOrderSubmitedInDolibarr=Lieferantenbestellung %s  ausgelöst
+SupplierOrderSubmitedInDigitalProspects=Lieferantenbestellung %s  ausgelöst
 SupplierOrderClassifiedBilled=Lieferantenbestellung %s  verrechnet
 OtherOrders=Bestellungen Anderer
 TypeContact_commande_internal_SALESREPFOLL=Verantwortlicher Nachkalkulation Kundenbestellung

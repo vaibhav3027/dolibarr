@@ -23,13 +23,13 @@
  *	\ingroup    deplacement
  *	\brief      Fichier de description et activation du module Deplacement et notes de frais
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Deplacement
  */
-class modDeplacement extends DolibarrModules
+class modDeplacement extends DigitalProspectsModules
 {
 
 	/**
@@ -50,8 +50,8 @@ class modDeplacement extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Gestion des notes de frais et deplacements"; // Si traduction Module75Desc non trouvee
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or 'dolibarr_deprecated' or version
-		$this->version = 'dolibarr_deprecated';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or 'DigitalProspects_deprecated' or version
+		$this->version = 'DigitalProspects_deprecated';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = "trip";
@@ -146,7 +146,7 @@ class modDeplacement extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

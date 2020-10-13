@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - errors
+# DigitalProspects language file - Source file is en_US - errors
 
 # No errors
 NoErrorCommitIsDone=Nav kļūda, mēs apstiprinam
@@ -43,10 +43,10 @@ ErrorBadDateFormat=Vērtībai '%s' ir nepareizs datuma formāts
 ErrorWrongDate=Datums nav pareizs
 ErrorFailedToWriteInDir=Neizdevās ierakstīt direktorijā %s
 ErrorFoundBadEmailInFile=Atrasts nepareiza e-pasta sintakse %s līnijām failā (piemērs line %s ar e-pasta = %s)
-ErrorUserCannotBeDelete=Lietotāju nevar izdzēst. Varbūt tas ir saistīts ar Dolibarr vienībām.
+ErrorUserCannotBeDelete=Lietotāju nevar izdzēst. Varbūt tas ir saistīts ar DigitalProspects vienībām.
 ErrorFieldsRequired=Daži nepieciešamie lauki netika aizpildīti.
 ErrorSubjectIsRequired=E-pasta tēma ir nepieciešama
-ErrorFailedToCreateDir=Neizdevās izveidot direktoriju. Pārbaudiet, vai Web servera lietotājam ir tiesības rakstīt uz Dolibarr dokumentus direktorijā. Ja parametrs <b>safe_mode</b> ir iespējots uz šo PHP, pārbaudiet, Dolibarr php faili pieder web servera lietotājam (vai grupa).
+ErrorFailedToCreateDir=Neizdevās izveidot direktoriju. Pārbaudiet, vai Web servera lietotājam ir tiesības rakstīt uz DigitalProspects dokumentus direktorijā. Ja parametrs <b>safe_mode</b> ir iespējots uz šo PHP, pārbaudiet, DigitalProspects php faili pieder web servera lietotājam (vai grupa).
 ErrorNoMailDefinedForThisUser=Nav definēts e-pasts šim lietotājam
 ErrorFeatureNeedJavascript=Šai funkcijai ir nepieciešams aktivizēt javascript. Mainīt to var iestatījumi - attēlojums.
 ErrorTopMenuMustHaveAParentWithId0=Tipa &quot;Top&quot; izvēlnē nevar būt mātes ēdienkarti. Put ar 0 mātes izvēlnes vai izvēlēties izvēlni tips &quot;pa kreisi&quot;.
@@ -72,7 +72,7 @@ ErrorFieldCanNotContainSpecialNorUpperCharacters=Laukā <b>%s</b> nedrīkst būt
 ErrorFieldMustHaveXChar=Laukā <b>%s</b>jābūt vismaz %s rakstzīmēm.
 ErrorNoAccountancyModuleLoaded=Nav grāmatvedības modulis aktivizēts
 ErrorExportDuplicateProfil=Šāds profila nosaukums jau eksistē šim eksportam.
-ErrorLDAPSetupNotComplete=Dolibarr-LDAP saskaņošana nav pilnīga.
+ErrorLDAPSetupNotComplete=DigitalProspects-LDAP saskaņošana nav pilnīga.
 ErrorLDAPMakeManualTest=. LDIF fails ir radīts direktorija %s. Mēģināt ielādēt manuāli no komandrindas, lai būtu vairāk informācijas par kļūdām.
 ErrorCantSaveADoneUserWithZeroPercentage=Nevar saglabāt darbību ar statusu, kas nav startēts, ja arī aizpildīts lauks "done by".
 ErrorRefAlreadyExists=Ref izmantot izveidot jau pastāv.
@@ -104,8 +104,8 @@ ErrorProdIdAlreadyExist=%s piešķirta citai trešajai
 ErrorFailedToSendPassword=Neizdevās nosūtīt paroli
 ErrorFailedToLoadRSSFile=Nespēj iegūt RSS barotni. Centieties, lai pievienotu pastāvīgu MAIN_SIMPLEXMLLOAD_DEBUG ja kļūdu ziņojumi nesniedz pietiekamu informāciju.
 ErrorForbidden=Access denied.<br>You try to access to a page, area or feature of a disabled module or without being in an authenticated session or that is not allowed to your user.
-ErrorForbidden2=Atļaujas šajā lapā var definēt Dolibarr administrators no izvēlnes %s->%s.
-ErrorForbidden3=Šķiet, ka Dolibarr netiek izmantota, izmantojot autentiskums sesiju. Ieskatieties Dolibarr uzstādīšanas dokumentācijas zināt, kā pārvaldīt apstiprinājumi (Htaccess, mod_auth vai citu ...).
+ErrorForbidden2=Atļaujas šajā lapā var definēt DigitalProspects administrators no izvēlnes %s->%s.
+ErrorForbidden3=Šķiet, ka DigitalProspects netiek izmantota, izmantojot autentiskums sesiju. Ieskatieties DigitalProspects uzstādīšanas dokumentācijas zināt, kā pārvaldīt apstiprinājumi (Htaccess, mod_auth vai citu ...).
 ErrorNoImagickReadimage=Klases Imagick nav atrodams šajā PHP. Priekšskatījums nav, var būt pieejamas. Administratori var atspējot šo uzlīmi no izvēlnes Setup - displejs.
 ErrorRecordAlreadyExists=Ieraksts jau eksistē
 ErrorLabelAlreadyExists=Šis nosaukums jau pastāv
@@ -127,8 +127,8 @@ ErrorWebServerUserHasNotPermission=Lietotāja kontam <b>%s</b> kas tiek izmantot
 ErrorNoActivatedBarcode=Nav svītrkodu veids aktivizēts
 ErrUnzipFails=Neizdevās atarhivēt %s izmantojot ZipArchive
 ErrNoZipEngine=Nav dzinēja, lai zip / unzip %s failu šajā PHP
-ErrorFileMustBeADolibarrPackage=Failam %s jābūt Dolibarr zip
-ErrorModuleFileRequired=Jums ir jāizvēlas Dolibarr moduļa pakotnes fails
+ErrorFileMustBeADigitalProspectsPackage=Failam %s jābūt DigitalProspects zip
+ErrorModuleFileRequired=Jums ir jāizvēlas DigitalProspects moduļa pakotnes fails
 ErrorPhpCurlNotInstalled=PHP CURL nav uzstādīts, tas ir svarīgi saziņai ar Paypal
 ErrorFailedToAddToMailmanList=Neizdevās pievienot ierakstu %s, lai pastnieks saraksta %s vai SPIP bāze
 ErrorFailedToRemoveToMailmanList=Neizdevās noņemt ierakstu %s, lai pastnieks saraksta %s vai SPIP bāze
@@ -139,7 +139,7 @@ ErrorFailedToAddContact=Neizdevās pievienot kontaktu
 ErrorDateMustBeBeforeToday=Datums nevar būt lielāks kā šodien
 ErrorPaymentModeDefinedToWithoutSetup=Maksājumu režīms tika noteikts rakstīt %s, bet uzstādīšana moduļa rēķins netika pabeigts, lai noteiktu informāciju, lai parādītu šo maksājumu režīmā.
 ErrorPHPNeedModule=Kļūda, jūsu PHP ir jābūt moduli <b>%s</b> uzstādītas, lai izmantotu šo funkciju.
-ErrorOpenIDSetupNotComplete=Jūs uzstādīšana Dolibarr config failu, lai ļautu OpenID autentifikācijas, bet OpenID pakalpojuma URL nav definēts spēkā salīdzināmajās %s
+ErrorOpenIDSetupNotComplete=Jūs uzstādīšana DigitalProspects config failu, lai ļautu OpenID autentifikācijas, bet OpenID pakalpojuma URL nav definēts spēkā salīdzināmajās %s
 ErrorWarehouseMustDiffers=Avota un mērķa noliktavas jābūt atšķiras
 ErrorBadFormat=Nepareizs formāts
 ErrorMemberNotLinkedToAThirpartyLinkOrCreateFirst=Kļūda, šis dalībnieks vēl nav saistīts ar kādu trešo pusi. Saistiet esošās trešās personas biedru vai izveidojiet jaunu trešo pusi, pirms izveidojat abonementu ar rēķinu.
@@ -202,7 +202,7 @@ ErrorUserNotAssignedToTask=Lietotājam ir jāpiešķir uzdevums, lai varētu iev
 ErrorTaskAlreadyAssigned=Uzdevums jau ir piešķirts lietotājam
 ErrorModuleFileSeemsToHaveAWrongFormat=Šķiet, ka moduļu pakotne ir nepareizā formātā.
 ErrorModuleFileSeemsToHaveAWrongFormat2=Vismaz vienam obligātajam direktorijam jābūt moduļa <strong>ZIP</strong> <strong>failā</strong> : <strong>%s</strong> vai <strong>%s</strong>
-ErrorFilenameDosNotMatchDolibarrPackageRules=Moduļu pakotnes nosaukums (<strong>%s</strong>) neatbilst paredzētai sintaksei: <strong>%s</strong>
+ErrorFilenameDosNotMatchDigitalProspectsPackageRules=Moduļu pakotnes nosaukums (<strong>%s</strong>) neatbilst paredzētai sintaksei: <strong>%s</strong>
 ErrorDuplicateTrigger=Kļūda, dublikātu izraisītāja nosaukums %s. Jau piekrauts no %s.
 ErrorNoWarehouseDefined=Kļūda, noliktavas nav definētas.
 ErrorBadLinkSourceSetButBadValueForRef=Izmantotā saite nav derīga. Maksājuma avots ir definēts, bet "ref" vērtība nav derīga.
@@ -241,7 +241,7 @@ ErrorTooManyDifferentValueForSelectedGroupBy=Tika atrasts pārāk daudz dažādu
 ErrorReplaceStringEmpty=Kļūda: aizvietojamā virkne ir tukša
 # Warnings
 WarningParamUploadMaxFileSizeHigherThanPostMaxSize=Jūsu PHP parametrs upload_max_filesize (%s) ir augstāks nekā PHP parametrs post_max_size (%s). Šī nav konsekventa iestatīšana.
-WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to Dolibarr. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
+WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to DigitalProspects. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
 WarningMandatorySetupNotComplete=Noklikšķiniet šeit, lai iestatītu obligātos parametrus
 WarningEnableYourModulesApplications=Noklikšķiniet šeit, lai iespējotu moduļus un lietojumprogrammas
 WarningSafeModeOnCheckExecDir=Uzmanību, PHP iespēja <b>safe_mode</b> ir par tik komanda jāuzglabā iekšpusē direktorijā deklarēto php parametru <b>safe_mode_exec_dir.</b>

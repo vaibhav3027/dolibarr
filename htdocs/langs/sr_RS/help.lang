@@ -1,12 +1,12 @@
-# Dolibarr language file - Source file is en_US - help
+# DigitalProspects language file - Source file is en_US - help
 CommunitySupport=Forum/Wiki podrške
 EMailSupport=Email podrška
 RemoteControlSupport=Online real time / remote podrška
 OtherSupport=Druga podrška
 ToSeeListOfAvailableRessources=Da biste kontaktirali/videli raspoložive resurse:
 HelpCenter=Help centar
-DolibarrHelpCenter=Dolibarr Help and Support Center
-ToGoBackToDolibarr=Otherwise, <a href="%s">click here to continue to use Dolibarr</a>.
+DigitalProspectsHelpCenter=DigitalProspects Help and Support Center
+ToGoBackToDigitalProspects=Otherwise, <a href="%s">click here to continue to use DigitalProspects</a>.
 TypeOfSupport=Type of support
 TypeSupportCommunauty=Community (besplatno)
 TypeSupportCommercial=Komercijalna
@@ -17,7 +17,7 @@ TypeHelpOnly=Samo pomoć
 TypeHelpDev=Pomoć+Razvoj
 TypeHelpDevForm=Help+Development+Training
 BackToHelpCenter=Otherwise, <a href="%s">go back to Help center home page</a>.
-LinkToGoldMember=You can call one of the trainers preselected by Dolibarr for your language (%s) by clicking their Widget (status and maximum price are automatically updated):
+LinkToGoldMember=You can call one of the trainers preselected by DigitalProspects for your language (%s) by clicking their Widget (status and maximum price are automatically updated):
 PossibleLanguages=Podržani jezici
-SubscribeToFoundation=Help the Dolibarr project, subscribe to the foundation
-SeeOfficalSupport=Za zvaničnu Dolibarr podršku na Vašem jeziku: <br><b><a href="%s" target="_blank">%s</a></b>
+SubscribeToFoundation=Help the DigitalProspects project, subscribe to the foundation
+SeeOfficalSupport=Za zvaničnu DigitalProspects podršku na Vašem jeziku: <br><b><a href="%s" target="_blank">%s</a></b>

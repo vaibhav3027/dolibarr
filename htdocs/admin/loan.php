@@ -55,7 +55,7 @@ if ($action == 'update')
     foreach ($list as $constname) {
         $constvalue = GETPOST($constname, 'alpha');
 
-        if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+        if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
             $error++;
         }
     }

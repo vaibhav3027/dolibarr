@@ -71,17 +71,17 @@ if ($action == 'set')
 	$db->begin();
 	if (GETPOST('socid', 'int') < 0) $_POST["socid"] = '';
 
-	$res = dolibarr_set_const($db, "TAKEPOS_ROOT_CATEGORY_ID", GETPOST('TAKEPOS_ROOT_CATEGORY_ID', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_SUPPLEMENTS_CATEGORY", GETPOST('TAKEPOS_SUPPLEMENTS_CATEGORY', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_NUMPAD", GETPOST('TAKEPOS_NUMPAD', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_SORTPRODUCTFIELD", GETPOST('TAKEPOS_SORTPRODUCTFIELD', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_COLOR_THEME", GETPOST('TAKEPOS_COLOR_THEME', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_NUM_TERMINALS", GETPOST('TAKEPOS_NUM_TERMINALS', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "TAKEPOS_ADDON", GETPOST('TAKEPOS_ADDON', 'alpha'), 'int', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "TAKEPOS_EMAIL_TEMPLATE_INVOICE", GETPOST('TAKEPOS_EMAIL_TEMPLATE_INVOICE', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_ROOT_CATEGORY_ID", GETPOST('TAKEPOS_ROOT_CATEGORY_ID', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_SUPPLEMENTS_CATEGORY", GETPOST('TAKEPOS_SUPPLEMENTS_CATEGORY', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_NUMPAD", GETPOST('TAKEPOS_NUMPAD', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_SORTPRODUCTFIELD", GETPOST('TAKEPOS_SORTPRODUCTFIELD', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_COLOR_THEME", GETPOST('TAKEPOS_COLOR_THEME', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_NUM_TERMINALS", GETPOST('TAKEPOS_NUM_TERMINALS', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "TAKEPOS_ADDON", GETPOST('TAKEPOS_ADDON', 'alpha'), 'int', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "TAKEPOS_EMAIL_TEMPLATE_INVOICE", GETPOST('TAKEPOS_EMAIL_TEMPLATE_INVOICE', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!empty($conf->global->TAKEPOS_ENABLE_SUMUP)) {
-		$res = dolibarr_set_const($db, "TAKEPOS_SUMUP_AFFILIATE", GETPOST('TAKEPOS_SUMUP_AFFILIATE', 'alpha'), 'chaine', 0, '', $conf->entity);
-		$res = dolibarr_set_const($db, "TAKEPOS_SUMUP_APPID", GETPOST('TAKEPOS_SUMUP_APPID', 'alpha'), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "TAKEPOS_SUMUP_AFFILIATE", GETPOST('TAKEPOS_SUMUP_AFFILIATE', 'alpha'), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "TAKEPOS_SUMUP_APPID", GETPOST('TAKEPOS_SUMUP_APPID', 'alpha'), 'chaine', 0, '', $conf->entity);
 	}
 	if ($conf->global->TAKEPOS_ORDER_NOTES == 1)
 	{
@@ -104,13 +104,13 @@ if ($action == 'set')
 } elseif ($action == 'updateMask') {
 	$maskconst = GETPOST('maskconst', 'alpha');
 	$maskvalue = GETPOST('maskvalue', 'alpha');
-	if ($maskconst) $res = dolibarr_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
+	if ($maskconst) $res = DigitalProspects_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) {
 		$error++;
 	}
 } elseif ($action == 'setrefmod') {
 	$value = GETPOST('value', 'alpha');
-	dolibarr_set_const($db, "TAKEPOS_REF_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "TAKEPOS_REF_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action != '') {

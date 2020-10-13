@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - admin
+# DigitalProspects language file - Source file is en_US - admin
 Publisher=Hausgeber
 VersionProgram=Versionsnummer
 VersionLastInstall=Erstinstallationsversion
@@ -20,7 +20,7 @@ SessionId=Sitzungsnummer
 SessionSaveHandler=Sessionmanager
 YourSession=Ihre Anmeldung
 Sessions=Benutzeranmeldungen
-DolibarrSetup=Dolibarr installieren oder aktualisieren
+DigitalProspectsSetup=DigitalProspects installieren oder aktualisieren
 InternalUser=interner Nutzer
 ExternalUser=externer Nutzer
 InternalUsers=interne Nutzer

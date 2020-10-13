@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Producto ref.
 ProductLabel=Etiqueta del producto
 ProductLabelTranslated=Etiqueta traducida del producto
@@ -178,7 +178,7 @@ PriceImpact=Impacto de precio
 WeightImpact=Impacto del peso
 ErrorCreatingProductAttributeValue=Se produjo un error al crear el valor del atributo. Podría ser porque ya existe un valor con esa referencia.
 ProductCombinationGeneratorWarning=Si continúas, antes de generar nuevas variantes, todas las anteriores serán BORRADAS. Los ya existentes serán actualizados con los nuevos valores.
-TooMuchCombinationsWarning=La generación de muchas variantes puede resultar en un alto uso de la CPU y la memoria, y Dolibarr no puede crearlas. Habilitar la opción "%s" puede ayudar a reducir el uso de memoria.
+TooMuchCombinationsWarning=La generación de muchas variantes puede resultar en un alto uso de la CPU y la memoria, y DigitalProspects no puede crearlas. Habilitar la opción "%s" puede ayudar a reducir el uso de memoria.
 DoNotRemovePreviousCombinations=No eliminar variantes anteriores.
 ErrorDeletingGeneratedProducts=Se ha producido un error al intentar eliminar las variantes de producto existentes.
 NbOfDifferentValues=No. de valores diferentes

@@ -22,7 +22,7 @@
 /**
  * \file scripts/invoices/email_unpaid_invoices_to_representatives.php
  * \ingroup facture
- * \brief Script to send a mail to dolibarr users linked to companies with unpaid invoices
+ * \brief Script to send a mail to DigitalProspects users linked to companies with unpaid invoices
  */
 $sapi_type = php_sapi_name();
 $script_file = basename(__FILE__);
@@ -158,7 +158,7 @@ if ($resql) {
 			}
 		}
 	} else {
-		print "No unpaid invoices (for companies linked to a particular commercial dolibarr user) found\n";
+		print "No unpaid invoices (for companies linked to a particular commercial DigitalProspects user) found\n";
 	}
 
 	exit(0);

@@ -50,7 +50,7 @@ if ($action == 'updateMask')
 	$maskconstbom = GETPOST('maskconstBom', 'alpha');
 	$maskbom = GETPOST('maskBom', 'alpha');
 
-	if ($maskconstbom) $res = dolibarr_set_const($db, $maskconstbom, $maskbom, 'chaine', 0, '', $conf->entity);
+	if ($maskconstbom) $res = DigitalProspects_set_const($db, $maskconstbom, $maskbom, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -120,14 +120,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->BOM_ADDON_PDF == "$value") dolibarr_del_const($db, 'BOM_ADDON_PDF', $conf->entity);
+        if ($conf->global->BOM_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'BOM_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "BOM_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "BOM_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// The constant that was read before the new set
 		// We therefore requires a variable to have a coherent view
@@ -147,13 +147,13 @@ elseif ($action == 'setmod')
 	// TODO Check if numbering module chosen can be activated
 	// by calling method canBeActivated
 
-	dolibarr_set_const($db, "BOM_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "BOM_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'set_BOM_DRAFT_WATERMARK')
 {
 	$draft = GETPOST("BOM_DRAFT_WATERMARK");
-	$res = dolibarr_set_const($db, "BOM_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "BOM_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -171,7 +171,7 @@ elseif ($action == 'set_BOM_FREE_TEXT')
 {
 	$freetext = GETPOST("BOM_FREE_TEXT", 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "BOM_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "BOM_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -492,7 +492,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

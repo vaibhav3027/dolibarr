@@ -24,9 +24,9 @@ require_once DOL_DOCUMENT_ROOT.'/product/stock/class/mouvementstock.class.php';
  * API class for stock movements
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class StockMovements extends DolibarrApi
+class StockMovements extends DigitalProspectsApi
 {
     /**
      * @var array   $FIELDS     Mandatory fields, checked when create and update object
@@ -65,7 +65,7 @@ class StockMovements extends DolibarrApi
     /*
     public function get($id)
     {
-        if(! DolibarrApiAccess::$user->rights->stock->lire) {
+        if(! DigitalProspectsApiAccess::$user->rights->stock->lire) {
             throw new RestException(401);
         }
 
@@ -74,8 +74,8 @@ class StockMovements extends DolibarrApi
             throw new RestException(404, 'warehouse not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('warehouse',$this->stockmovement->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('warehouse',$this->stockmovement->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         return $this->_cleanObjectDatas($this->stockmovement);
@@ -99,7 +99,7 @@ class StockMovements extends DolibarrApi
 
         $obj_ret = array();
 
-        if (!DolibarrApiAccess::$user->rights->stock->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->stock->lire) {
             throw new RestException(401);
         }
 
@@ -110,12 +110,12 @@ class StockMovements extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $db->order($sortfield, $sortorder);
@@ -177,7 +177,7 @@ class StockMovements extends DolibarrApi
      */
     public function post($product_id, $warehouse_id, $qty, $lot = '', $movementcode = '', $movementlabel = '', $price = '', $dlc = '', $dluo = '')
     {
-        if (!DolibarrApiAccess::$user->rights->stock->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->stock->creer) {
             throw new RestException(401);
         }
 
@@ -195,7 +195,7 @@ class StockMovements extends DolibarrApi
         $eatBy = empty($dluo) ? '' : dol_stringtotime($dluo);
         $sellBy = empty($dlc) ? '' : dol_stringtotime($dlc);
 
-        if ($this->stockmovement->_create(DolibarrApiAccess::$user, $product_id, $warehouse_id, $qty, $type, $price, $movementlabel, $movementcode, '', $eatBy, $sellBy, $lot) <= 0) {
+        if ($this->stockmovement->_create(DigitalProspectsApiAccess::$user, $product_id, $warehouse_id, $qty, $type, $price, $movementlabel, $movementcode, '', $eatBy, $sellBy, $lot) <= 0) {
         	$errormessage = $this->stockmovement->error;
         	if (empty($errormessage)) $errormessage = join(',', $this->stockmovement->errors);
         	throw new RestException(503, 'Error when create stock movement : '.$errormessage);
@@ -214,7 +214,7 @@ class StockMovements extends DolibarrApi
     /*
     public function put($id, $request_data = null)
     {
-        if(! DolibarrApiAccess::$user->rights->stock->creer) {
+        if(! DigitalProspectsApiAccess::$user->rights->stock->creer) {
             throw new RestException(401);
         }
 
@@ -223,8 +223,8 @@ class StockMovements extends DolibarrApi
             throw new RestException(404, 'stock movement not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('stock',$this->stockmovement->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('stock',$this->stockmovement->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         foreach($request_data as $field => $value) {
@@ -232,7 +232,7 @@ class StockMovements extends DolibarrApi
             $this->stockmovement->$field = $value;
         }
 
-        if($this->stockmovement->update($id, DolibarrApiAccess::$user))
+        if($this->stockmovement->update($id, DigitalProspectsApiAccess::$user))
             return $this->get ($id);
 
         return false;
@@ -247,7 +247,7 @@ class StockMovements extends DolibarrApi
     /*
     public function delete($id)
     {
-        if(! DolibarrApiAccess::$user->rights->stock->supprimer) {
+        if(! DigitalProspectsApiAccess::$user->rights->stock->supprimer) {
             throw new RestException(401);
         }
         $result = $this->stockmovement->fetch($id);
@@ -255,11 +255,11 @@ class StockMovements extends DolibarrApi
             throw new RestException(404, 'stock movement not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('stock',$this->stockmovement->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('stock',$this->stockmovement->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
-        if (! $this->stockmovement->delete(DolibarrApiAccess::$user)) {
+        if (! $this->stockmovement->delete(DigitalProspectsApiAccess::$user)) {
             throw new RestException(401,'error when delete stock movement');
         }
 

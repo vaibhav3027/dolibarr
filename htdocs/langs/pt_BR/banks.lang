@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 MenuBankCash=Banco | Contas - Financeiro
 BankAccounts=Contas bancárias
 BankAccountsAndGateways=Contas Bancárias | Entradas
@@ -83,7 +83,7 @@ Reconciled=Conciliada
 SupplierInvoicePayment=Pagamento do fornecedores
 WithdrawalPayment=Pedido com pagamento por débito
 SocialContributionPayment=Pagamento de contribuição social
-TransferDesc=Transferência de uma conta para outra, o Dolibarr vai escrever dois registros (um débito na conta de origem e um crédito na conta de destino). A mesma quantia (exceto sinal), rótulo e data serão usados para esta transação)
+TransferDesc=Transferência de uma conta para outra, o DigitalProspects vai escrever dois registros (um débito na conta de origem e um crédito na conta de destino). A mesma quantia (exceto sinal), rótulo e data serão usados para esta transação)
 TransferFromToDone=Uma transferência de <b>%s</b> para <b>%s</b> de <b>%s</b> %s foi registrado.
 ValidateCheckReceipt=Validar este comprovante de cheque?
 ConfirmValidateCheckReceipt=Você tem certeza que deseja validar este comprovante de cheque, mesmo sabendo que nenhuma mudança poderá ser feita depois?

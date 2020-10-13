@@ -61,10 +61,10 @@ if ($action == 'updateMask')
     $maskreplacement = GETPOST('maskreplacement', 'alpha');
     $maskcredit = GETPOST('maskcredit', 'alpha');
 	$maskdeposit = GETPOST('maskdeposit', 'alpha');
-    if ($maskconstinvoice) $res = dolibarr_set_const($db, $maskconstinvoice, $maskinvoice, 'chaine', 0, '', $conf->entity);
-    if ($maskconstreplacement) $res = dolibarr_set_const($db, $maskconstreplacement, $maskreplacement, 'chaine', 0, '', $conf->entity);
-    if ($maskconstcredit)  $res = dolibarr_set_const($db, $maskconstcredit, $maskcredit, 'chaine', 0, '', $conf->entity);
-	if ($maskconstdeposit)  $res = dolibarr_set_const($db, $maskconstdeposit, $maskdeposit, 'chaine', 0, '', $conf->entity);
+    if ($maskconstinvoice) $res = DigitalProspects_set_const($db, $maskconstinvoice, $maskinvoice, 'chaine', 0, '', $conf->entity);
+    if ($maskconstreplacement) $res = DigitalProspects_set_const($db, $maskconstreplacement, $maskreplacement, 'chaine', 0, '', $conf->entity);
+    if ($maskconstcredit)  $res = DigitalProspects_set_const($db, $maskconstcredit, $maskcredit, 'chaine', 0, '', $conf->entity);
+	if ($maskconstdeposit)  $res = DigitalProspects_set_const($db, $maskconstdeposit, $maskdeposit, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -132,13 +132,13 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->FACTURE_ADDON_PDF == "$value") dolibarr_del_const($db, 'FACTURE_ADDON_PDF', $conf->entity);
+        if ($conf->global->FACTURE_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'FACTURE_ADDON_PDF', $conf->entity);
 	}
 }
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "FACTURE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "FACTURE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -157,15 +157,15 @@ elseif ($action == 'setmod')
     // TODO Verifier si module numerotation choisi peut etre active
     // par appel methode canBeActivated
 
-    dolibarr_set_const($db, "FACTURE_ADDON", $value, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "FACTURE_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 elseif ($action == 'setribchq')
 {
 	$rib = GETPOST('rib', 'alpha');
 	$chq = GETPOST('chq', 'alpha');
 
-	$res = dolibarr_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -182,7 +182,7 @@ elseif ($action == 'set_FACTURE_DRAFT_WATERMARK')
 {
 	$draft = GETPOST('FACTURE_DRAFT_WATERMARK', 'alpha');
 
-    $res = dolibarr_set_const($db, "FACTURE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FACTURE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -200,7 +200,7 @@ elseif ($action == 'set_INVOICE_FREE_TEXT')
 {
 	$freetext = GETPOST('INVOICE_FREE_TEXT', 'none'); // No alpha here, we want exact string
 
-    $res = dolibarr_set_const($db, "INVOICE_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "INVOICE_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -217,7 +217,7 @@ elseif ($action == 'setforcedate')
 {
 	$forcedate = GETPOST('forcedate', 'alpha');
 
-    $res = dolibarr_set_const($db, "FAC_FORCE_DATE_VALIDATION", $forcedate, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FAC_FORCE_DATE_VALIDATION", $forcedate, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -240,7 +240,7 @@ elseif ($action == 'setDefaultPDFModulesByType')
 
         foreach ($invoicetypemodels as $type => $value)
         {
-            $res = dolibarr_set_const($db, 'FACTURE_ADDON_PDF_'.intval($type), $value, 'chaine', 0, '', $conf->entity);
+            $res = DigitalProspects_set_const($db, 'FACTURE_ADDON_PDF_'.intval($type), $value, 'chaine', 0, '', $conf->entity);
             if (!$res > 0) $error++;
         }
 
@@ -780,7 +780,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

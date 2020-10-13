@@ -806,7 +806,7 @@ class Contact extends CommonObject
 	 *
 	 *  @param      int		$id         	Id of contact
 	 *  @param      User	$user       	Load also alerts of this user (subscribing to alerts) that want alerts about this contact
-     *  @param      string  $ref_ext    	External reference, not given by Dolibarr
+     *  @param      string  $ref_ext    	External reference, not given by DigitalProspects
      *  @param		string	$email			Email
      *  @param		int		$loadalsoroles	Load also roles
 	 *  @return     int     		    	>0 if OK, <0 if KO or if two records found for same ref or idprof, 0 if not found.
@@ -927,7 +927,7 @@ class Contact extends CommonObject
 				// Define gender according to civility
 				$this->setGenderFromCivility();
 
-				// Search Dolibarr user linked to this contact
+				// Search DigitalProspects user linked to this contact
 				$sql = "SELECT u.rowid ";
 				$sql .= " FROM ".MAIN_DB_PREFIX."user as u";
 				$sql .= " WHERE u.fk_socpeople = ".$this->id;
@@ -1459,7 +1459,7 @@ class Contact extends CommonObject
 		// Initialise parameters
 		$this->id = 0;
 		$this->specimen = 1;
-		$this->lastname = 'DOLIBARR';
+		$this->lastname = 'DigitalProspects';
 		$this->firstname = 'SPECIMEN';
 		$this->address = '21 jump street';
 		$this->zip = '99999';

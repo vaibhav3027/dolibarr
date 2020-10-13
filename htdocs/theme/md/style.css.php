@@ -61,8 +61,8 @@ if (empty($user->id) && !empty($_SESSION['dol_login']))
 
 // Define css type
 top_httphead('text/css');
-// Important: Following code is to avoid page request by browser and PHP CPU at each Dolibarr page access.
-if (empty($dolibarr_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
+// Important: Following code is to avoid page request by browser and PHP CPU at each DigitalProspects page access.
+if (empty($DigitalProspects_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
 else header('Cache-Control: no-cache');
 
 if (GETPOST('theme', 'alpha')) $conf->theme = GETPOST('theme', 'alpha'); // If theme was forced on URL
@@ -5291,7 +5291,7 @@ span#select2-boxbookmark-container, span#select2-boxcombo-container {
 }
 
 /* To emulate select 2 style */
-.select2-container-multi-dolibarr .select2-choices-dolibarr .select2-search-choice-dolibarr {
+.select2-container-multi-DigitalProspects .select2-choices-DigitalProspects .select2-search-choice-DigitalProspects {
   padding: 2px 5px 1px 5px;
   margin: 0 0 2px 3px;
   position: relative;
@@ -5314,14 +5314,14 @@ span#select2-boxbookmark-container, span#select2-boxcombo-container {
   background-image: -moz-linear-gradient(top, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
   background-image: linear-gradient(to bottom, #f4f4f4 20%, #f0f0f0 50%, #e8e8e8 52%, #eee 100%);
 }
-.select2-container-multi-dolibarr .select2-choices-dolibarr .select2-search-choice-dolibarr a {
+.select2-container-multi-DigitalProspects .select2-choices-DigitalProspects .select2-search-choice-DigitalProspects a {
 	font-weight: normal;
 }
-.select2-container-multi-dolibarr .select2-choices-dolibarr li {
+.select2-container-multi-DigitalProspects .select2-choices-DigitalProspects li {
   float: left;
   list-style: none;
 }
-.select2-container-multi-dolibarr .select2-choices-dolibarr {
+.select2-container-multi-DigitalProspects .select2-choices-DigitalProspects {
   height: auto !important;
   height: 1%;
   margin: 0;

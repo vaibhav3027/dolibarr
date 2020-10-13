@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Ref. проект
 ProjectRef=Project ref.
 ProjectId=ID Проекта
@@ -150,12 +150,12 @@ ConfirmCloneProject=Are you sure to clone this project?
 ProjectReportDate=Change task dates according to new project start date
 ErrorShiftTaskDate=Невозможно сдвинуть дату задачи по причине новой даты начала проекта
 ProjectsAndTasksLines=Проекты и задачи
-ProjectCreatedInDolibarr=Проект %s создан
-ProjectValidatedInDolibarr=Project %s validated
-ProjectModifiedInDolibarr=Проект %s изменен
-TaskCreatedInDolibarr=Задача %s создана
-TaskModifiedInDolibarr=Задача %s изменена
-TaskDeletedInDolibarr=Задача %s удалена
+ProjectCreatedInDigitalProspects=Проект %s создан
+ProjectValidatedInDigitalProspects=Project %s validated
+ProjectModifiedInDigitalProspects=Проект %s изменен
+TaskCreatedInDigitalProspects=Задача %s создана
+TaskModifiedInDigitalProspects=Задача %s изменена
+TaskDeletedInDigitalProspects=Задача %s удалена
 OpportunityStatus=Lead status
 OpportunityStatusShort=Lead status
 OpportunityProbability=Lead probability

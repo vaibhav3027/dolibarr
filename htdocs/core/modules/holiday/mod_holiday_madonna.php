@@ -30,10 +30,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/holiday/modules_holiday.php';
 class mod_holiday_madonna extends ModelNumRefHolidays
 {
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $prefix = 'HL';
 

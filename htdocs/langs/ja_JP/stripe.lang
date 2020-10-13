@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Stripe module setup
-StripeDesc=Offer customers a Stripe online payment page for payments with credit/cebit cards via <a href="http://www.stripe.com" target="_blank">Stripe</a>. This can be used to allow your customers to make ad-hoc payments or for payments related to a particular Dolibarr object (invoice, order, ...)
+StripeDesc=Offer customers a Stripe online payment page for payments with credit/cebit cards via <a href="http://www.stripe.com" target="_blank">Stripe</a>. This can be used to allow your customers to make ad-hoc payments or for payments related to a particular DigitalProspects object (invoice, order, ...)
 StripeOrCBDoPayment=Pay with credit card or Stripe
-FollowingUrlAreAvailableToMakePayments=以下のURLはDolibarrオブジェクト上で支払いをするために顧客にページを提供するために利用可能です
+FollowingUrlAreAvailableToMakePayments=以下のURLはDigitalProspectsオブジェクト上で支払いをするために顧客にページを提供するために利用可能です
 PaymentForm=支払い形態
 WelcomeOnPaymentPage=Welcome to our online payment service
 ThisScreenAllowsYouToPay=この画面では、%sにオンライン決済を行うことができます。

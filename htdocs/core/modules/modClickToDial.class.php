@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module de click to Dial
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Click to Dial
  */
-class modClickToDial extends DolibarrModules
+class modClickToDial extends DigitalProspectsModules
 {
 
 	/**
@@ -48,7 +48,7 @@ class modClickToDial extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Gestion du Click To Dial";
 
-		$this->version = 'dolibarr'; // 'development' or 'experimental' or 'dolibarr' or version
+		$this->version = 'DigitalProspects'; // 'development' or 'experimental' or 'DigitalProspects' or version
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'phoning';

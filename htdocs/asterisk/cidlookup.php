@@ -21,9 +21,9 @@
  *	\remarks    To use this script, your Asterisk must be compiled with CURL,
  *	            and your dialplan must be something like this:
  *
- *              exten => s,1,Set(CALLERID(name)=${CURL(http://IP-DOLIBARR:80/asterisk/cidlookup.php?phone=${CALLERID(num)})})
+ *              exten => s,1,Set(CALLERID(name)=${CURL(http://IP-DigitalProspects:80/asterisk/cidlookup.php?phone=${CALLERID(num)})})
  *
- *			    Change IP-DOLIBARR to the IP address of your dolibarr server
+ *			    Change IP-DigitalProspects to the IP address of your DigitalProspects server
  */
 
 

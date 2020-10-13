@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Biztonsági kód
 NumberingShort=N °
 Tools=Eszközök
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Helló)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=A kifizetéshez kattintson az alábbi linkre, ha még nem történt meg.\n\n%s\n\n
-DemoDesc=A Dolibarr egy kompakt ERP/CRM, amely számos üzleti modult támogat. Az összes modult bemutató demonstrációnak nincs értelme, mivel ez a forgatókönyv soha nem fordul elő (több száz elérhető). Azonban számos demo profil elérhető.
+DemoDesc=A DigitalProspects egy kompakt ERP/CRM, amely számos üzleti modult támogat. Az összes modult bemutató demonstrációnak nincs értelme, mivel ez a forgatókönyv soha nem fordul elő (több száz elérhető). Azonban számos demo profil elérhető.
 ChooseYourDemoProfil=Válassza ki az igényeinek leginkább megfelelő bemutató profilt ...
 ChooseYourDemoProfilMore=... vagy készítsen saját profilt <br>(manuális modulválasztás)
 DemoFundation=Tagok kezelése egy alapítvány
@@ -177,10 +177,10 @@ SizeUnitpoint=pont
 BugTracker=Bug tracker
 SendNewPasswordDesc=Az űrlap lehetővé teszi új jelszó igénylését, melyet elküldünk az Ön e-mail címére. <br>A változás akkor lép hatályba, ha rákattint az e-mailben található megerősítő linkre. <br>Ellenőrizze a beérkező levelek mappáját.
 BackToLoginPage=Vissza a belépéshez oldalra
-AuthenticationDoesNotAllowSendNewPassword=Hitelesítési mód <b>%s.</b> <br> Ebben az üzemmódban Dolibarr nem lehet tudni, sem megváltoztatni a jelszót. <br> Forduljon a rendszergazdához, ha meg akarja változtatni a jelszavát.
+AuthenticationDoesNotAllowSendNewPassword=Hitelesítési mód <b>%s.</b> <br> Ebben az üzemmódban DigitalProspects nem lehet tudni, sem megváltoztatni a jelszót. <br> Forduljon a rendszergazdához, ha meg akarja változtatni a jelszavát.
 EnableGDLibraryDesc=Telepítse vagy engedélyezze a GD könyvtárat a PHP beállításokban az opció használatához.
 ProfIdShortDesc=<b>Prof Id %s</b> egy információs függően harmadik fél ország. <br> Például, az ország <b>%s,</b> ez <b>%s</b> kódot.
-DolibarrDemo=Dolibarr ERP / CRM demo
+DigitalProspectsDemo=DigitalProspects ERP / CRM demo
 StatsByNumberOfUnits=A termékek/szolgáltatások mennyiségének statisztikája
 StatsByNumberOfEntities=A hivatkozó egységek statisztikája (számla vagy megrendelés száma ...)
 NumberOfProposals=A javaslatok száma
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Az %s költségjelentés jóváhagyva.
 EMailTextHolidayValidated=Az %sszabadságkérelem érvényesítve.
 EMailTextHolidayApproved=Az %s szabadságkérelem jóváhagyva.
 ImportedWithSet=Behozatal adathalmaz
-DolibarrNotification=Automatikus értesítés
+DigitalProspectsNotification=Automatikus értesítés
 ResizeDesc=Írja be az új szélesség <b>vagy</b> új magasság. Arányt kell tartani során átméretezés ...
 NewLength=Új szélesség
 NewHeight=Új magasság

@@ -51,20 +51,20 @@ if ($action == 'setvalue' && $user->admin)
 	$error = 0;
 	$db->begin();
 
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_DN', GETPOST("group", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_OBJECT_CLASS', GETPOST("objectclass", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_DN', GETPOST("group", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_OBJECT_CLASS', GETPOST("objectclass", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
 
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_FIELD_FULLNAME', GETPOST("fieldfullname", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-	//if (! dolibarr_set_const($db, 'LDAP_GROUP_FIELD_NAME',GETPOST("fieldname", 'alphanohtml'),'chaine',0,'',$conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_FIELD_DESCRIPTION', GETPOST("fielddescription", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_FIELD_GROUPMEMBERS', GETPOST("fieldgroupmembers", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_GROUP_FIELD_GROUPID', GETPOST("fieldgroupid", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_FIELD_FULLNAME', GETPOST("fieldfullname", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	//if (! DigitalProspects_set_const($db, 'LDAP_GROUP_FIELD_NAME',GETPOST("fieldname", 'alphanohtml'),'chaine',0,'',$conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_FIELD_DESCRIPTION', GETPOST("fielddescription", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_FIELD_GROUPMEMBERS', GETPOST("fieldgroupmembers", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_GROUP_FIELD_GROUPID', GETPOST("fieldgroupid", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
 
 	// This one must be after the others
     $valkey = '';
     $key = GETPOST("key");
     if ($key) $valkey = $conf->global->$key;
-    if (!dolibarr_set_const($db, 'LDAP_KEY_GROUPS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
+    if (!DigitalProspects_set_const($db, 'LDAP_KEY_GROUPS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
 
     if (!$error)
     {
@@ -134,7 +134,7 @@ print '<br>';
 print '<table class="noborder centpercent">';
 
 print '<tr class="liste_titre">';
-print '<td width="25%">'.$langs->trans("LDAPDolibarrMapping").'</td>';
+print '<td width="25%">'.$langs->trans("LDAPDigitalProspectsMapping").'</td>';
 print '<td colspan="2">'.$langs->trans("LDAPLdapMapping").'</td>';
 print '<td class="right">'.$langs->trans("LDAPNamingAttribute").'</td>';
 print "</tr>\n";
@@ -192,7 +192,7 @@ print '</form>';
 /*
  * Test de la connexion
  */
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap')
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap')
 {
 	$butlabel = $langs->trans("LDAPTestSynchroGroup");
 	$testlabel = 'testgroup';

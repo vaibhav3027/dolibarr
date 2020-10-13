@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Sikkerhetskode
 NumberingShort=Nr
 Tools=Verktøy
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hei)__\n\n\n__(Vennlig hilsen)__\n\n__USER_SI
 PredefinedMailContentContact=__(Hei)__\n\n\n__(Vennlig hilsen)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hei)__\n\n\n__(Vennlig hilsen)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=Du kan klikke på linken under for å utføre betalingen din, hvis det ikke allerede er gjort.\n\n%s\n\n
-DemoDesc=Dolibarr er en kompakt ERP/CRM med støtte for flere forretningsmoduler. En demo som viser alle moduler gir ingen mening da dette scenariet aldri skjer (flere hundre tilgjengelig). Derforer flere demoprofiler er tilgjengelig.
+DemoDesc=DigitalProspects er en kompakt ERP/CRM med støtte for flere forretningsmoduler. En demo som viser alle moduler gir ingen mening da dette scenariet aldri skjer (flere hundre tilgjengelig). Derforer flere demoprofiler er tilgjengelig.
 ChooseYourDemoProfil=Velg en demoprofil som passer best til dine krav
 ChooseYourDemoProfilMore=... eller bygg din egen profil<br>(manuell utvelgelse av moduler)
 DemoFundation=Håndtere medlemmer i en organisasjon
@@ -177,10 +177,10 @@ SizeUnitpoint=punkt
 BugTracker=Feilsporing (bugtracker)
 SendNewPasswordDesc=Dette skjemaet lar deg be om et nytt passord. Det vil bli sendt til din e-postadresse. <br> Endring skjer når du klikker på bekreftelseslinken i e-posten. <br> Sjekk innboksen din.
 BackToLoginPage=Tilbake til innloggingssiden
-AuthenticationDoesNotAllowSendNewPassword=Autensitering er satt til <b>%s</b>.<br>Det betyr at Dolibarr ikke kan vite eller endre passordet ditt.<br>Kontakt systemadministrator hvis du vil endre passordet ditt.
+AuthenticationDoesNotAllowSendNewPassword=Autensitering er satt til <b>%s</b>.<br>Det betyr at DigitalProspects ikke kan vite eller endre passordet ditt.<br>Kontakt systemadministrator hvis du vil endre passordet ditt.
 EnableGDLibraryDesc=Installer eller aktiver GD-bibliotek i din PHP-installasjon for å bruke denne opsjonen.
 ProfIdShortDesc=<b>Prof-ID %s</b> er avhengig av tredjepartens land.<br>For eksempel er det for <b>%s</b>, koden <b>%s</b>.
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistikk over summen av produkter/tjenester
 StatsByNumberOfEntities=Statistikk over antall henvisende enheter (antall fakturaer, eller ordre ...)
 NumberOfProposals=Antall tilbud
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Utgiftsrapport %s er godkjent.
 EMailTextHolidayValidated=Permisjonsforespørsel %s er validert.
 EMailTextHolidayApproved=Permisjonsforespørsel %s er godkjent.
 ImportedWithSet=Datasett for import
-DolibarrNotification=Automatisk varsling
+DigitalProspectsNotification=Automatisk varsling
 ResizeDesc=Skriv inn ny bredde <b>eller</b> ny høyde. BxH forhold vil bli beholdt .
 NewLength=Ny bredde
 NewHeight=Ny høyde

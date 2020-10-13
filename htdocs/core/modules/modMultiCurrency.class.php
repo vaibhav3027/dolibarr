@@ -25,13 +25,13 @@
  *  \ingroup    multicurrency
  *  \brief      Description and activation file for module MultiCurrency
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *  Description and activation class for module MyModule
  */
-class modMultiCurrency extends DolibarrModules
+class modMultiCurrency extends DigitalProspectsModules
 {
 	/**
 	 * Constructor. Define names, constants, directories, boxes, permissions
@@ -45,7 +45,7 @@ class modMultiCurrency extends DolibarrModules
         $this->db = $db;
 
 		// Id for module (must be unique).
-		// Use here a free id (See in Home -> System information -> Dolibarr for list of used modules id).
+		// Use here a free id (See in Home -> System information -> DigitalProspects for list of used modules id).
 		$this->numero = 40000;
 		// Key text used to identify module (for permissions, menus, etc...)
 		$this->rights_class = 'multicurrency';
@@ -61,8 +61,8 @@ class modMultiCurrency extends DolibarrModules
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
 		$this->description = "Module to manage several foreign currencies in prices and documents";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or 'dolibarr_deprecated' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or 'DigitalProspects_deprecated' or version
+		$this->version = 'DigitalProspects';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		// Name of image file used for this module.
@@ -89,7 +89,7 @@ class modMultiCurrency extends DolibarrModules
 		$this->requiredby = array(); // List of modules id to disable if this one is disabled
 		$this->conflictwith = array(); // List of modules id this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(3, 0); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(3, 0); // Minimum version of DigitalProspects required by module
 		$this->langfiles = array("multicurrency");
 
 		// Constants
@@ -256,7 +256,7 @@ class modMultiCurrency extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')
@@ -279,7 +279,7 @@ class modMultiCurrency extends DolibarrModules
 
 	/**
 	 * Function called when module is disabled.
-	 * Remove from database constants, boxes and permissions from Dolibarr database.
+	 * Remove from database constants, boxes and permissions from DigitalProspects database.
 	 * Data directories are not deleted
 	 *
 	 * @param      string	$options    Options when enabling module ('', 'noboxes')

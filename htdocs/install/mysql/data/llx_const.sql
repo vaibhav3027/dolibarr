@@ -40,7 +40,7 @@ insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_S
 
 -- Hidden and common to all entities
 insert into llx_const (name, value, type, note, visible, entity) values ('SYSLOG_HANDLERS','["mod_syslog_file"]','chaine','Which logger to use',0,0);
-insert into llx_const (name, value, type, note, visible, entity) values ('SYSLOG_FILE','DOL_DATA_ROOT/dolibarr.log','chaine','Directory where to write log file',0,0);
+insert into llx_const (name, value, type, note, visible, entity) values ('SYSLOG_FILE','DOL_DATA_ROOT/DigitalProspects.log','chaine','Directory where to write log file',0,0);
 insert into llx_const (name, value, type, note, visible, entity) values ('SYSLOG_LEVEL','7','chaine','Level of debug info to show',0,0);
 insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_UPLOAD_DOC','2048','chaine','Max size for file upload (0 means no upload allowed)',0,0);
 
@@ -51,7 +51,7 @@ insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_M
 
 insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_MAIL_SMTP_SERVER','','chaine','Host or ip address for SMTP server',0,1);
 insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_MAIL_SMTP_PORT','','chaine','Port for SMTP server',0,1);
-insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_MAIL_EMAIL_FROM','robot@domain.com','chaine','EMail emetteur pour les emails automatiques Dolibarr',0,1);
+insert into llx_const (name, value, type, note, visible, entity) values ('MAIN_MAIL_EMAIL_FROM','robot@domain.com','chaine','EMail emetteur pour les emails automatiques DigitalProspects',0,1);
 
 --
 -- IHM
@@ -86,7 +86,7 @@ insert into llx_const (name, value, type, note, visible) values ('MAIN_DELAY_EXP
 -- Mail Mailing
 --
 insert into llx_const (name, value, type, note, visible) values ('MAIN_FIX_FOR_BUGGED_MTA','1','chaine','Set constant to fix email ending from PHP with some linux ike system',1);
-insert into llx_const (name, value, type, note, visible) values ('MAILING_EMAIL_FROM','dolibarr@domain.com','chaine','EMail emmetteur pour les envois d emailings',0);
+insert into llx_const (name, value, type, note, visible) values ('MAILING_EMAIL_FROM','DigitalProspects@domain.com','chaine','EMail emmetteur pour les envois d emailings',0);
 
 
 --

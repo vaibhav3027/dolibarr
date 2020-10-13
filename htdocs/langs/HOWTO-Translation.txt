@@ -1,9 +1,9 @@
 --- Translation How to --- 
 
-An instruction guide for translating Dolibarr in a new language is
-available on Dolibarr wiki:
+An instruction guide for translating DigitalProspects in a new language is
+available on DigitalProspects wiki:
 
-English: https://wiki.dolibarr.org/index.php/Translator_documentation
-French:  https://wiki.dolibarr.org/index.php/Documentation_traducteur
-Spanish: https://wiki.dolibarr.org/index.php/Documentaci%C3%B3n_traductores
-German:  https://wiki.dolibarr.org/index.php/Dokumentation_Uebersetzung 
+English: https://wiki.DigitalProspects.org/index.php/Translator_documentation
+French:  https://wiki.DigitalProspects.org/index.php/Documentation_traducteur
+Spanish: https://wiki.DigitalProspects.org/index.php/Documentaci%C3%B3n_traductores
+German:  https://wiki.DigitalProspects.org/index.php/Dokumentation_Uebersetzung 

@@ -37,12 +37,12 @@ use \Luracast\Restler\RestException;
 
 
 /**
- * Dolibarr API access class
+ * DigitalProspects API access class
  *
  */
-class DolibarrApiAccess implements iAuthenticate
+class DigitalProspectsApiAccess implements iAuthenticate
 {
-	const REALM = 'Restricted Dolibarr API';
+	const REALM = 'Restricted DigitalProspects API';
 
 	/**
 	 * @var array $requires	role required by API method		user / external / admin
@@ -164,7 +164,7 @@ class DolibarrApiAccess implements iAuthenticate
 		}
 
 	    $userClass::setCacheIdentifier(static::$role);
-	    Resources::$accessControlFunction = 'DolibarrApiAccess::verifyAccess';
+	    Resources::$accessControlFunction = 'DigitalProspectsApiAccess::verifyAccess';
 	    $requirefortest = static::$requires;
 	    if (!is_array($requirefortest)) $requirefortest = explode(',', $requirefortest);
 	    return in_array(static::$role, (array) $requirefortest) || static::$role == 'admin';
@@ -190,8 +190,8 @@ class DolibarrApiAccess implements iAuthenticate
      */
     public static function verifyAccess(array $m)
     {
-        $requires = isset($m['class']['DolibarrApiAccess']['properties']['requires'])
-                ? $m['class']['DolibarrApiAccess']['properties']['requires']
+        $requires = isset($m['class']['DigitalProspectsApiAccess']['properties']['requires'])
+                ? $m['class']['DigitalProspectsApiAccess']['properties']['requires']
                 : false;
 
 

@@ -23,14 +23,14 @@
  *  \brief      Trigger file for workflows
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for workflow module
  */
 
-class InterfaceWorkflowManager extends DolibarrTriggers
+class InterfaceWorkflowManager extends DigitalProspectsTriggers
 {
 	/**
 	 * @var string Image of the trigger
@@ -44,10 +44,10 @@ class InterfaceWorkflowManager extends DolibarrTriggers
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * @param string		$action		Event action code
@@ -348,7 +348,7 @@ class InterfaceWorkflowManager extends DolibarrTriggers
     }
 
     /**
-     * @param Object $conf                  Dolibarr settings object
+     * @param Object $conf                  DigitalProspects settings object
      * @param float $totalonlinkedelements  Sum of total amounts (excl VAT) of
      *                                      invoices linked to $object
      * @param float $object_total_ht        The total amount (excl VAT) of the object

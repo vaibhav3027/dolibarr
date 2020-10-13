@@ -168,7 +168,7 @@ class Dolistore
 				}
 				$opt['filter[id]'] = '['.implode('|', $products).']';
 			}
-			$opt['display']        = '[id,name,id_default_image,id_category_default,reference,price,condition,show_price,date_add,date_upd,description_short,description,module_version,dolibarr_min,dolibarr_max]';
+			$opt['display']        = '[id,name,id_default_image,id_category_default,reference,price,condition,show_price,date_add,date_upd,description_short,description,module_version,DigitalProspects_min,DigitalProspects_max]';
 			$opt['sort']           = 'id_desc';
 			$opt['filter[active]'] = '[1]';
 			$opt['limit']          = "$this->start,$this->end";
@@ -281,22 +281,22 @@ class Dolistore
 			}
 
 			//checking versions
-			if ($this->version_compare($product->dolibarr_min, DOL_VERSION) <= 0) {
-				if ($this->version_compare($product->dolibarr_max, DOL_VERSION) >= 0) {
+			if ($this->version_compare($product->DigitalProspects_min, DOL_VERSION) <= 0) {
+				if ($this->version_compare($product->DigitalProspects_max, DOL_VERSION) >= 0) {
 					//compatible
-                    $version = '<span class="compatible">'.$langs->trans('CompatibleUpTo', $product->dolibarr_max,
-						$product->dolibarr_min, $product->dolibarr_max).'</span>';
+                    $version = '<span class="compatible">'.$langs->trans('CompatibleUpTo', $product->DigitalProspects_max,
+						$product->DigitalProspects_min, $product->DigitalProspects_max).'</span>';
 					$compatible = '';
 				} else {
 					//never compatible, module expired
                     $version = '<span class="notcompatible">'.$langs->trans('NotCompatible', DOL_VERSION,
-						$product->dolibarr_min, $product->dolibarr_max).'</span>';
+						$product->DigitalProspects_min, $product->DigitalProspects_max).'</span>';
 					$compatible = 'NotCompatible';
 				}
 			} else {
 				//need update
 				$version    = '<span class="compatibleafterupdate">'.$langs->trans('CompatibleAfterUpdate', DOL_VERSION,
-					$product->dolibarr_min, $product->dolibarr_max).'</span>';
+					$product->DigitalProspects_min, $product->DigitalProspects_max).'</span>';
 				$compatible = 'NotCompatible';
 			}
 

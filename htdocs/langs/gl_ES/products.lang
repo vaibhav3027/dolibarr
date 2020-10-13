@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Ref. produto
 ProductLabel=Etiqueta produto
 ProductLabelTranslated=Tradución etiqueta de produto
@@ -289,7 +289,7 @@ ComposedProduct=Child products
 MinSupplierPrice=Prezo mínimo de compra
 MinCustomerPrice=Prezo mínimo de venda
 DynamicPriceConfiguration=Configuración de prezo dinámico
-DynamicPriceDesc=You may define mathematical formulae to calculate Customer or Vendor prices. Such formulas can use all mathematical operators, some constants and variables. You can define here the variables you wish to use. If the variable needs an automatic update, you may define the external URL to allow Dolibarr to update the value automatically.
+DynamicPriceDesc=You may define mathematical formulae to calculate Customer or Vendor prices. Such formulas can use all mathematical operators, some constants and variables. You can define here the variables you wish to use. If the variable needs an automatic update, you may define the external URL to allow DigitalProspects to update the value automatically.
 AddVariable=Engadir variable
 AddUpdater=Engadir Actualizador
 GlobalVariables=Variables globais
@@ -364,7 +364,7 @@ NewProductAttribute=Novo atributo
 NewProductAttributeValue=Novo valor de atributo
 ErrorCreatingProductAttributeValue=Ocurriu un erro ao crear o valor do atributo. Esto pode ser por que xa existía un valor con esta referencia
 ProductCombinationGeneratorWarning=If you continue, before generating new variants, all previous ones will be DELETED. Already existing ones will be updated with the new values
-TooMuchCombinationsWarning=Generating lots of variants may result in high CPU, memory usage and Dolibarr not able to create them. Enabling the option "%s" may help reduce memory usage.
+TooMuchCombinationsWarning=Generating lots of variants may result in high CPU, memory usage and DigitalProspects not able to create them. Enabling the option "%s" may help reduce memory usage.
 DoNotRemovePreviousCombinations=Non remover variantes previas
 UsePercentageVariations=Utilizar variacións porcentuais
 PercentageVariation=Variación porcentual

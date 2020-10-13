@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Ρύθμιση μονάδας ταινιών
-StripeDesc=Προσφέρετε στους πελάτες μια σελίδα Stripe online πληρωμής για πληρωμές με πιστωτικές κάρτες μέσω του <a href="http://www.stripe.com" target="_blank">Stripe</a> . Αυτό μπορεί να χρησιμοποιηθεί για να επιτρέψει στους πελάτες σας να πραγματοποιούν ad hoc πληρωμές ή για πληρωμές που σχετίζονται με ένα συγκεκριμένο αντικείμενο Dolibarr (τιμολόγιο, παραγγελία, ...)
+StripeDesc=Προσφέρετε στους πελάτες μια σελίδα Stripe online πληρωμής για πληρωμές με πιστωτικές κάρτες μέσω του <a href="http://www.stripe.com" target="_blank">Stripe</a> . Αυτό μπορεί να χρησιμοποιηθεί για να επιτρέψει στους πελάτες σας να πραγματοποιούν ad hoc πληρωμές ή για πληρωμές που σχετίζονται με ένα συγκεκριμένο αντικείμενο DigitalProspects (τιμολόγιο, παραγγελία, ...)
 StripeOrCBDoPayment=Πληρώστε με πιστωτική κάρτα ή Stripe
-FollowingUrlAreAvailableToMakePayments=Μετά από τις διευθύνσεις URL είναι διαθέσιμοι να προσφέρουν μια σελίδα σε έναν πελάτη να προβεί σε πληρωμή σε Dolibarr αντικείμενα
+FollowingUrlAreAvailableToMakePayments=Μετά από τις διευθύνσεις URL είναι διαθέσιμοι να προσφέρουν μια σελίδα σε έναν πελάτη να προβεί σε πληρωμή σε DigitalProspects αντικείμενα
 PaymentForm=Έντυπο πληρωμής
 WelcomeOnPaymentPage=Καλώς ήλθατε στην ηλεκτρονική υπηρεσία πληρωμών μας
 ThisScreenAllowsYouToPay=Αυτή η οθόνη σας επιτρέπει να κάνετε μια online πληρωμή %s.

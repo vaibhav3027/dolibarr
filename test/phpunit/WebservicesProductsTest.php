@@ -15,7 +15,7 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  * or see https://www.gnu.org/
  *
- * Path to WSDL is: http://localhost/dolibarr/webservices/server_productorservice.php?wsdl
+ * Path to WSDL is: http://localhost/DigitalProspects/webservices/server_productorservice.php?wsdl
  */
 
 /**
@@ -154,7 +154,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         $WS_DOL_URL = DOL_MAIN_URL_ROOT.'/webservices/server_productorservice.php';
         $WS_METHOD  = 'createProductOrService';
-        $ns='http://www.dolibarr.org/ns/';
+        $ns='http://www.DigitalProspects.org/ns/';
 
         // Set the WebService URL
         print __METHOD__." create nusoap_client for URL=".$WS_DOL_URL."\n";
@@ -166,7 +166,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         // Call the WebService method and store its result in $result.
         $authentication=array(
-            'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+            'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
             'sourceapplication'=>'DEMO',
             'login'=>'admin',
             'password'=>'admin',
@@ -226,7 +226,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         $WS_DOL_URL = DOL_MAIN_URL_ROOT.'/webservices/server_productorservice.php';
         $WS_METHOD  = 'getProductOrService';
-        $ns='http://www.dolibarr.org/ns/';
+        $ns='http://www.DigitalProspects.org/ns/';
 
         // Set the WebService URL
         print __METHOD__." create nusoap_client for URL=".$WS_DOL_URL."\n";
@@ -238,7 +238,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         // Call the WebService method and store its result in $result.
         $authentication=array(
-            'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+            'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
             'sourceapplication'=>'DEMO',
             'login'=>'admin',
             'password'=>'admin',
@@ -289,7 +289,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         $WS_DOL_URL = DOL_MAIN_URL_ROOT.'/webservices/server_productorservice.php';
         $WS_METHOD  = 'deleteProductOrService';
-        $ns='http://www.dolibarr.org/ns/';
+        $ns='http://www.DigitalProspects.org/ns/';
 
         // Set the WebService URL
         print __METHOD__." create nusoap_client for URL=".$WS_DOL_URL."\n";
@@ -301,7 +301,7 @@ class WebservicesProductsTest extends PHPUnit\Framework\TestCase
 
         // Call the WebService method and store its result in $result.
         $authentication=array(
-            'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+            'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
             'sourceapplication'=>'DEMO',
             'login'=>'admin',
             'password'=>'admin',

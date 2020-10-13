@@ -78,7 +78,7 @@ if ($action == 'add' || (GETPOST('add') && $action != 'update'))
 
 	if (!$error)
 	{
-		if (dolibarr_set_const($db, $constname, $constvalue, 'chaine', 1, $constnote, $entity) >= 0)
+		if (DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 1, $constnote, $entity) >= 0)
 		{
 			setEventMessages($langs->trans("RecordSaved"), null, 'mesgs');
 			$action = "";
@@ -101,7 +101,7 @@ if (!empty($consts) && $action == 'update')
 	{
 		if (!empty($const["check"]))
 		{
-			if (dolibarr_set_const($db, $const["name"], $const["value"], $const["type"], 1, $const["note"], $const["entity"]) >= 0)
+			if (DigitalProspects_set_const($db, $const["name"], $const["value"], $const["type"], 1, $const["note"], $const["entity"]) >= 0)
 			{
 				$nbmodified++;
 			}
@@ -123,7 +123,7 @@ if (!empty($consts) && $action == 'delete')
 	{
 		if (!empty($const["check"]))	// Is checkbox checked
 		{
-			if (dolibarr_del_const($db, $const["rowid"], -1) >= 0)
+			if (DigitalProspects_del_const($db, $const["rowid"], -1) >= 0)
 			{
 				$nbdeleted++;
 			}
@@ -140,7 +140,7 @@ if (!empty($consts) && $action == 'delete')
 // Delete line from delete picto
 if ($action == 'delete')
 {
-	if (dolibarr_del_const($db, $rowid, $entity) >= 0)
+	if (DigitalProspects_del_const($db, $rowid, $entity) >= 0)
 	{
 		setEventMessages($langs->trans("RecordDeleted"), null, 'mesgs');
 	}

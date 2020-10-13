@@ -34,7 +34,7 @@ if (substr($sapi_type, 0, 3) == 'cgi') {
     exit;
 }
 
-// Recupere root dolibarr
+// Recupere root DigitalProspects
 $path = dirname($_SERVER["PHP_SELF"]);
 require $path . "./../htdocs/master.inc.php";
 require $path . "/includes/dbase.class.php";

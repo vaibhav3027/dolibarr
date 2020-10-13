@@ -25,13 +25,13 @@
  *	\brief      Fichier de description et activation du module Mailing
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Mailing
  */
-class modMailing extends DolibarrModules
+class modMailing extends DigitalProspectsModules
 {
 
 	/**
@@ -53,8 +53,8 @@ class modMailing extends DolibarrModules
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Gestion des EMailings";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'email';
 
@@ -143,7 +143,7 @@ class modMailing extends DolibarrModules
 
 	/**
 	 *  Function called when module is enabled.
-	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *  It also creates data directories
 	 *
      *  @param      string	$options    Options when enabling module ('', 'noboxes')

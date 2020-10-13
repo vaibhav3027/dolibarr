@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Comenzi Clienţi
 SuppliersOrdersArea=Zonă de comenzi de achiziție
 OrderCard=Fişă Comandă
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Sigur doriți să clonați această comandă <b> %s </b>?
 DispatchSupplierOrder=Primirea comenzii de achiziție %s
 FirstApprovalAlreadyDone=Prima aprobare a fost deja făcută
 SecondApprovalAlreadyDone=A doua aprobare a fost deja făcută
-SupplierOrderReceivedInDolibarr=Comanda de achiziţie%s primită %s
-SupplierOrderSubmitedInDolibarr=Comanda de achiziţie %s trimisă
+SupplierOrderReceivedInDigitalProspects=Comanda de achiziţie%s primită %s
+SupplierOrderSubmitedInDigitalProspects=Comanda de achiziţie %s trimisă
 SupplierOrderClassifiedBilled=Comanda de achiziţie%s facturată
 OtherOrders=Alte comenzi
 ##### Types de contacts #####

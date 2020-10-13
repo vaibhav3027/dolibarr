@@ -51,7 +51,7 @@ CKEDITOR.editorConfig = function( config )
 	];
 
 	// Used for mailing fields
-	config.toolbar_dolibarr_mailings =
+	config.toolbar_DigitalProspects_mailings =
 	[
 	 	['Maximize','Preview'],
 	 	['SpellChecker', 'Scayt'],
@@ -66,7 +66,7 @@ CKEDITOR.editorConfig = function( config )
 	 ];
 
 	// Used for notes fields
-	config.toolbar_dolibarr_notes =
+	config.toolbar_DigitalProspects_notes =
 	[
 	 	['Maximize'],
 	 	['SpellChecker', 'Scayt'],		// 'Cut','Copy','Paste','-', are useless, can be done with right click, even on smarpthone
@@ -80,7 +80,7 @@ CKEDITOR.editorConfig = function( config )
 	];
 
 	// Used for details lines
-	config.toolbar_dolibarr_details =
+	config.toolbar_DigitalProspects_details =
 	[
 	 	['Maximize'],
 	 	['SpellChecker', 'Scayt'],		// 'Cut','Copy','Paste','-', are useless, can be done with right click, even on smarpthone
@@ -93,7 +93,7 @@ CKEDITOR.editorConfig = function( config )
 	];
 
 	// Used for mailing fields
-	config.toolbar_dolibarr_readonly =
+	config.toolbar_DigitalProspects_readonly =
 	[
 	 	['Maximize'],
 	 	['Find'],

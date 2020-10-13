@@ -30,7 +30,7 @@
  *  MEMBER_NEWFORM_AMOUNT               Default amount for auto-subscribe form
  *  MEMBER_NEWFORM_EDITAMOUNT           0 or 1 = Amount can be edited
  *  MEMBER_NEWFORM_PAYONLINE            Suggest payment with paypal, paybox or stripe
- *  MEMBER_NEWFORM_DOLIBARRTURNOVER     Show field turnover (specific for dolibarr foundation)
+ *  MEMBER_NEWFORM_DigitalProspectsTURNOVER     Show field turnover (specific for DigitalProspects foundation)
  *  MEMBER_URL_REDIRECT_SUBSCRIPTION    Url to redirect once subscribe submitted
  *  MEMBER_NEWFORM_FORCETYPE            Force type of member
  *  MEMBER_NEWFORM_FORCEMORPHY          Force nature of member (mor/phy)
@@ -39,7 +39,7 @@
 
 if (!defined('NOLOGIN'))		define("NOLOGIN", 1); // This means this output page does not require to be logged.
 if (!defined('NOCSRFCHECK'))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-if (!defined('NOIPCHECK'))		define('NOIPCHECK', '1'); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+if (!defined('NOIPCHECK'))		define('NOIPCHECK', '1'); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 
 // For MultiCompany module.
 // Do not use GETPOST here, function is not defined and define must be done before including main.inc.php
@@ -113,9 +113,9 @@ function llxHeaderVierge($title, $head = "", $disablejs = 0, $disablehead = 0, $
         $urllogo = DOL_URL_ROOT.'/viewimage.php?cache=1&amp;modulepart=mycompany&amp;file='.urlencode('logos/'.$mysoc->logo);
         $width = 150;
     }
-    elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/dolibarr_logo.svg'))
+    elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/DigitalProspects_logo.svg'))
     {
-        $urllogo = DOL_URL_ROOT.'/theme/dolibarr_logo.svg';
+        $urllogo = DOL_URL_ROOT.'/theme/DigitalProspects_logo.svg';
         $width = 150;
     }
 
@@ -130,7 +130,7 @@ function llxHeaderVierge($title, $head = "", $disablejs = 0, $disablehead = 0, $
     	print '>';
     	print '</div>';
     	if (empty($conf->global->MAIN_HIDE_POWERED_BY)) {
-    		print '<div class="poweredbypublicpayment opacitymedium right"><a href="https://www.dolibarr.org" target="dolibarr">'.$langs->trans("PoweredBy").'<br><img src="'.DOL_URL_ROOT.'/theme/dolibarr_logo.svg" width="80px"></a></div>';
+    		print '<div class="poweredbypublicpayment opacitymedium right"><a href="https://www.DigitalProspects.org" target="DigitalProspects">'.$langs->trans("PoweredBy").'<br><img src="'.DOL_URL_ROOT.'/theme/DigitalProspects_logo.svg" width="80px"></a></div>';
     	}
     	print '</div>';
     }
@@ -233,7 +233,7 @@ if ($action == 'add')
         $langs->load("errors");
         $errmsg .= $langs->trans("ErrorBadDateFormat")."<br>\n";
     }
-    if (!empty($conf->global->MEMBER_NEWFORM_DOLIBARRTURNOVER))
+    if (!empty($conf->global->MEMBER_NEWFORM_DigitalProspectsTURNOVER))
     {
         if (GETPOST("morphy") == 'mor' && GETPOST('budget') <= 0)
         {
@@ -320,7 +320,7 @@ if ($action == 'add')
 
             	if ($subjecttosend && $texttosend)
             	{
-            		$moreinheader = 'X-Dolibarr-Info: send_an_email by public/members/new.php'."\r\n";
+            		$moreinheader = 'X-DigitalProspects-Info: send_an_email by public/members/new.php'."\r\n";
 
             		$result = $object->send_an_email($texttosend, $subjecttosend, array(), array(), array(), "", "", 0, -1, '', $moreinheader);
             	}
@@ -670,8 +670,8 @@ print '<td class="tdtop">'.$langs->trans("Comments").'</td>';
 print '<td class="tdtop"><textarea name="note_private" id="note_private" wrap="soft" class="quatrevingtpercent" rows="'.ROWS_3.'">'.dol_escape_htmltag(GETPOST('note_private', 'none'), 0, 1).'</textarea></td>';
 print '</tr>'."\n";
 
-// Add specific fields used by Dolibarr foundation for example
-if (!empty($conf->global->MEMBER_NEWFORM_DOLIBARRTURNOVER))
+// Add specific fields used by DigitalProspects foundation for example
+if (!empty($conf->global->MEMBER_NEWFORM_DigitalProspectsTURNOVER))
 {
     $arraybudget = array('50'=>'<= 100 000', '100'=>'<= 200 000', '200'=>'<= 500 000', '300'=>'<= 1 500 000', '600'=>'<= 3 000 000', '1000'=>'<= 5 000 000', '2000'=>'5 000 000+');
     print '<tr id="trbudget" class="trcompany"><td>'.$langs->trans("TurnoverOrBudget").' <FONT COLOR="red">*</FONT></td><td>';

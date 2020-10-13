@@ -48,8 +48,8 @@ $boxes = array();
 
 if ($action == 'addconst')
 {
-    dolibarr_set_const($db, "MAIN_BOXES_MAXLINES", $_POST["MAIN_BOXES_MAXLINES"], '', 0, '', $conf->entity);
-    dolibarr_set_const($db, "MAIN_ACTIVATE_FILECACHE", $_POST["MAIN_ACTIVATE_FILECACHE"], 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "MAIN_BOXES_MAXLINES", $_POST["MAIN_BOXES_MAXLINES"], '', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "MAIN_ACTIVATE_FILECACHE", $_POST["MAIN_ACTIVATE_FILECACHE"], 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == 'add') {

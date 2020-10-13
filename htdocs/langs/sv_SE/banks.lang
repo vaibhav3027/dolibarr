@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Bank
 MenuBankCash=Banker | Kontanter
 MenuVariousPayment=Diverse betalningar
@@ -109,7 +109,7 @@ SocialContributionPayment=Sociala och skattemässiga betalningar
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Intern överföring
-TransferDesc=Överföring från ett konto till ett annat, Dolibarr kommer att skriva två poster (en debit i källkonto och en kredit i målkontot). Samma mängd (förutom tecken), etikett och datum kommer att användas för denna transaktion)
+TransferDesc=Överföring från ett konto till ett annat, DigitalProspects kommer att skriva två poster (en debit i källkonto och en kredit i målkontot). Samma mängd (förutom tecken), etikett och datum kommer att användas för denna transaktion)
 TransferFrom=Från
 TransferTo=För att
 TransferFromToDone=En överföring från <b>%s</b> till <b>%s</b> av <b>%s</b> %s har registrerats.

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - website
+# DigitalProspects language file - Source file is en_US - website
 Shortname=Code
 WebsiteSetupDesc=Erstellen Sie hier die Websites, die Sie verwenden möchten. Dann gehen Sie in das Menü Websites, um sie zu bearbeiten.
 DeleteWebsite=Website löschen
@@ -46,13 +46,13 @@ ViewWebsiteInProduction=Anzeige der Webseite über die Startseite\n\n\n\n\n\n\n\
 SetHereVirtualHost= <u> Verwendung mit Apache / NGinx / ... </u> <br> Erstellen Sie auf Ihrem Webserver (Apache, Nginx, ...) einen dedizierten virtuellen Host mit aktiviertem PHP und einem Stammverzeichnis unter <br> <strong>%s</strong>
 ExampleToUseInApacheVirtualHostConfig=Beispiel für die Einrichtung eines virtuellen Apache-Hosts:
 YouCanAlsoTestWithPHPS=<u>Verwendung mit eingebettetem PHP-Server</u><br>In der Entwicklungsumgebung können Sie die Site mit dem eingebetteten PHP-Webserver (PHP 5.5 erforderlich) testen, indem Sie <br><strong>php -S 0.0.0.0:8080 -t %s</strong> ausführen.
-YouCanAlsoDeployToAnotherWHP=<u>Betreibe deine Website mit einem anderen Dolibarr Hosting-Anbieter</u><br>Wenn kein Apache oder NGinx Webserver online verfügbar ist, kann deine Website exportiert und importiert werden und zu einer anderen Dolibarr Instanz umziehen, die durch einen anderen Dolibarr Hosting-Anbieter mit kompletter Integration des Webseiten-Moduls bereitgestellt wird. Eine Liste mit Dolibarr Hosting-Anbietern ist hier abufbar <a href="https://saas.dolibarr.org" target="_blank">https://saas.dolibarr.org</a>
+YouCanAlsoDeployToAnotherWHP=<u>Betreibe deine Website mit einem anderen DigitalProspects Hosting-Anbieter</u><br>Wenn kein Apache oder NGinx Webserver online verfügbar ist, kann deine Website exportiert und importiert werden und zu einer anderen DigitalProspects Instanz umziehen, die durch einen anderen DigitalProspects Hosting-Anbieter mit kompletter Integration des Webseiten-Moduls bereitgestellt wird. Eine Liste mit DigitalProspects Hosting-Anbietern ist hier abufbar <a href="https://saas.DigitalProspects.org" target="_blank">https://saas.DigitalProspects.org</a>
 CheckVirtualHostPerms=Kontrolliere dass auch der Virtuelle Host die <strong>%s</strong> Berechtigung für die die Dateien in <br><strong>%s</strong> hat
 ReadPerm=Lesen
 WritePerm=Schreiben
 TestDeployOnWeb=Test/Bereitstellung im Web
 PreviewSiteServedByWebServer=Die <u>Vorschau %s in einem neuen Tab</u><br><br>%s wird durch einen externen Webserver (Wie Apache, Nginx, IIS) ausgeliefert. Dieser Server muss installiert und eingerichtet sein, bevor Sie den Verzeichnis <br><strong>%s</strong> anzeigen können.<br> URL, die von dem externen Server bereitgestellt wird: <br><strong>%s</strong>
-PreviewSiteServedByDolibarr=<u>Vorschau %sin neuem Tab. <br><br>%s wird durch den Dolibarr Server so bereit gestellt, dass kein zusätzlicher Webserver (Wie Apache, Nginx, IIS) notwendig ist. <br>Dadurch erhalten die Seiten URL's, die nicht Benutzerfreundlich sind und der Pfad beginnt mit ihrer Dolibarr Installation.<br> Durch Dolibarr bereit gestellte URL: <br><strong>%s</strong><br><br>Um Ihren eigenen externen Webserver für diese Website zu verwenden, erstellen Sie einen virtuellen Host auf Ihrem Webserver, der auf das Verzeichnis <br><strong>%s</strong>zeigt<br>. Vorschau durch Klick auf den anderen Vorschaubutton.
+PreviewSiteServedByDigitalProspects=<u>Vorschau %sin neuem Tab. <br><br>%s wird durch den DigitalProspects Server so bereit gestellt, dass kein zusätzlicher Webserver (Wie Apache, Nginx, IIS) notwendig ist. <br>Dadurch erhalten die Seiten URL's, die nicht Benutzerfreundlich sind und der Pfad beginnt mit ihrer DigitalProspects Installation.<br> Durch DigitalProspects bereit gestellte URL: <br><strong>%s</strong><br><br>Um Ihren eigenen externen Webserver für diese Website zu verwenden, erstellen Sie einen virtuellen Host auf Ihrem Webserver, der auf das Verzeichnis <br><strong>%s</strong>zeigt<br>. Vorschau durch Klick auf den anderen Vorschaubutton.
 VirtualHostUrlNotDefined=Die URL des virtuellen Hosts, der von einem externen Webserver bereit gestellt wird, ist nicht definiert
 NoPageYet=Noch keine Seiten
 YouCanCreatePageOrImportTemplate=Sie können eine neue Seite erstellen oder eine komplette Website-Vorlage importieren

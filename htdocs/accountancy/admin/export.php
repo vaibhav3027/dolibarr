@@ -87,11 +87,11 @@ if ($action == 'update') {
 	$modelcsv = GETPOST('ACCOUNTING_EXPORT_MODELCSV', 'int');
 
 	if (!empty($modelcsv)) {
-		if (!dolibarr_set_const($db, 'ACCOUNTING_EXPORT_MODELCSV', $modelcsv, 'chaine', 0, '', $conf->entity)) {
+		if (!DigitalProspects_set_const($db, 'ACCOUNTING_EXPORT_MODELCSV', $modelcsv, 'chaine', 0, '', $conf->entity)) {
 			$error++;
 		}
 		//if ($modelcsv==AccountancyExport::$EXPORT_TYPE_QUADRATUS || $modelcsv==AccountancyExport::$EXPORT_TYPE_CIEL) {
-		//	dolibarr_set_const($db, 'ACCOUNTING_EXPORT_FORMAT', 'txt', 'chaine', 0, '', $conf->entity);
+		//	DigitalProspects_set_const($db, 'ACCOUNTING_EXPORT_FORMAT', 'txt', 'chaine', 0, '', $conf->entity);
 		//}
 	} else {
 		$error++;
@@ -100,7 +100,7 @@ if ($action == 'update') {
 	foreach ($main_option as $constname) {
 		$constvalue = GETPOST($constname, 'alpha');
 
-		if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+		if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
 			$error++;
 		}
 	}
@@ -110,7 +110,7 @@ if ($action == 'update') {
 
         if (strpos($constante, 'ACCOUNTING') !== false) {
             $constvalue = GETPOST($key, 'alpha');
-            if (!dolibarr_set_const($db, $constante, $constvalue, 'chaine', 0, '', $conf->entity)) {
+            if (!DigitalProspects_set_const($db, $constante, $constvalue, 'chaine', 0, '', $conf->entity)) {
                 $error++;
             }
         }

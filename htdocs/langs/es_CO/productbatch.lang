@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - productbatch
+# DigitalProspects language file - Source file is en_US - productbatch
 ManageLotSerial=Use número de lote/serie
 ProductStatusOnBatch=Si (lote/serie requerido)
 ProductStatusNotOnBatch=No (lote/serie no usado)

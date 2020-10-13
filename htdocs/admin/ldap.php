@@ -58,19 +58,19 @@ if (empty($reshook))
 
 		$db->begin();
 
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_TYPE', GETPOST("type", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_PROTOCOLVERSION', GETPOST("LDAP_SERVER_PROTOCOLVERSION", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_HOST', GETPOST("host", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_HOST_SLAVE', GETPOST("slave", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_PORT', GETPOST("port", 'int'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_DN', GETPOST("dn", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_ADMIN_DN', GETPOST("admin", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_ADMIN_PASS', GETPOST("pass", 'none'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SERVER_USE_TLS', GETPOST("usetls", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_SYNCHRO_ACTIVE', GETPOST("activesynchro", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_CONTACT_ACTIVE', GETPOST("activecontact", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_MEMBER_ACTIVE', GETPOST("activemembers", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
-		if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_ACTIVE', GETPOST("activememberstypes", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_TYPE', GETPOST("type", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_PROTOCOLVERSION', GETPOST("LDAP_SERVER_PROTOCOLVERSION", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_HOST', GETPOST("host", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_HOST_SLAVE', GETPOST("slave", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_PORT', GETPOST("port", 'int'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_DN', GETPOST("dn", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_ADMIN_DN', GETPOST("admin", 'alphanohtml'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_ADMIN_PASS', GETPOST("pass", 'none'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SERVER_USE_TLS', GETPOST("usetls", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_SYNCHRO_ACTIVE', GETPOST("activesynchro", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_ACTIVE', GETPOST("activecontact", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_ACTIVE', GETPOST("activemembers", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
+		if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_ACTIVE', GETPOST("activememberstypes", 'aZ09'), 'chaine', 0, '', $conf->entity)) $error++;
 
 		if (!$error)
 		{
@@ -124,8 +124,8 @@ print "</tr>\n";
 print '<tr class="oddeven"><td>'.$langs->trans("LDAPDnSynchroActive").'</td><td>';
 $arraylist = array();
 $arraylist['0'] = $langs->trans("No");
-$arraylist['ldap2dolibarr'] = $langs->trans("LDAPToDolibarr");
-$arraylist['dolibarr2ldap'] = $langs->trans("DolibarrToLDAP");
+$arraylist['ldap2DigitalProspects'] = $langs->trans("LDAPToDigitalProspects");
+$arraylist['DigitalProspects2ldap'] = $langs->trans("DigitalProspectsToLDAP");
 print $form->selectarray('activesynchro', $arraylist, $conf->global->LDAP_SYNCHRO_ACTIVE);
 print '</td><td>'.$langs->trans("LDAPDnSynchroActiveExample");
 if ($conf->global->LDAP_SYNCHRO_ACTIVE && !$conf->global->LDAP_USER_DN)
@@ -140,7 +140,7 @@ if (!empty($conf->societe->enabled))
 	print '<tr class="oddeven"><td>'.$langs->trans("LDAPDnContactActive").'</td><td>';
 	$arraylist = array();
 	$arraylist['0'] = $langs->trans("No");
-	$arraylist['1'] = $langs->trans("DolibarrToLDAP");
+	$arraylist['1'] = $langs->trans("DigitalProspectsToLDAP");
 	print $form->selectarray('activecontact', $arraylist, $conf->global->LDAP_CONTACT_ACTIVE);
 	print '</td><td>'.$langs->trans("LDAPDnContactActiveExample").'</td></tr>';
 }
@@ -151,8 +151,8 @@ if (!empty($conf->adherent->enabled))
 	print '<tr class="oddeven"><td>'.$langs->trans("LDAPDnMemberActive").'</td><td>';
 	$arraylist = array();
 	$arraylist['0'] = $langs->trans("No");
-	$arraylist['1'] = $langs->trans("DolibarrToLDAP");
-	$arraylist['ldap2dolibarr'] = $langs->trans("LDAPToDolibarr").' ('.$langs->trans("SupportedForLDAPImportScriptOnly").')';
+	$arraylist['1'] = $langs->trans("DigitalProspectsToLDAP");
+	$arraylist['ldap2DigitalProspects'] = $langs->trans("LDAPToDigitalProspects").' ('.$langs->trans("SupportedForLDAPImportScriptOnly").')';
 	print $form->selectarray('activemembers', $arraylist, $conf->global->LDAP_MEMBER_ACTIVE);
 	print '</td><td>'.$langs->trans("LDAPDnMemberActiveExample").'</td></tr>';
 }
@@ -163,8 +163,8 @@ if (!empty($conf->adherent->enabled))
 	print '<tr class="oddeven"><td>'.$langs->trans("LDAPDnMemberTypeActive").'</td><td>';
 	$arraylist = array();
 	$arraylist['0'] = $langs->trans("No");
-	$arraylist['1'] = $langs->trans("DolibarrToLDAP");
-	$arraylist['ldap2dolibarr'] = $langs->trans("LDAPToDolibarr").' ('.$langs->trans("SupportedForLDAPImportScriptOnly").')';
+	$arraylist['1'] = $langs->trans("DigitalProspectsToLDAP");
+	$arraylist['ldap2DigitalProspects'] = $langs->trans("LDAPToDigitalProspects").' ('.$langs->trans("SupportedForLDAPImportScriptOnly").')';
 	print $form->selectarray('activememberstypes', $arraylist, $conf->global->LDAP_MEMBER_TYPE_ACTIVE);
 	print '</td><td>'.$langs->trans("LDAPDnMemberTypeActiveExample").'</td></tr>';
 }

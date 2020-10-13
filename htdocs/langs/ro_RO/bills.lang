@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Factură
 Bills=Facturi
 BillsCustomers=Facturi Clienţi
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Setați data de începere
 AutoFillDateTo=Setați data de încheiere pentru linia de servicii cu data următoare a facturii
 AutoFillDateToShort=Setați data de încheiere
 MaxNumberOfGenerationReached=Numărul maxim de gen. atins
-BILL_DELETEInDolibarr=Factură ştearsă
-BILL_SUPPLIER_DELETEInDolibarr=Supplier invoice deleted
+BILL_DELETEInDigitalProspects=Factură ştearsă
+BILL_SUPPLIER_DELETEInDigitalProspects=Supplier invoice deleted
 UnitPriceXQtyLessDiscount=Unit price x Qty - Discount
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

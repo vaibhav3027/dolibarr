@@ -17,10 +17,10 @@ Change code of this function to return true if couple
 $usertotest / $passwordtotest is ok for you.
 
 Then, you must edit you conf.php file to change the value of
-$dolibarr_main_authentication
+$DigitalProspects_main_authentication
 parameter to set it to :
 mypasschecker
 
-Once this is done, when you log in to Dolibarr, the function 
+Once this is done, when you log in to DigitalProspects, the function 
 check_user_mypasschecker in this file is called.
 If the function return true and login exists, login is accepted.

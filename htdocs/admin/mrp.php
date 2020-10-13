@@ -51,7 +51,7 @@ if ($action == 'updateMask')
 	$maskconstmrp = GETPOST('maskconstMo', 'alpha');
 	$maskmrp = GETPOST('maskMo', 'alpha');
 
-	if ($maskconstmrp) $res = dolibarr_set_const($db, $maskconstmrp, $maskmrp, 'chaine', 0, '', $conf->entity);
+	if ($maskconstmrp) $res = DigitalProspects_set_const($db, $maskconstmrp, $maskmrp, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -121,14 +121,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->MRP_MO_ADDON_PDF == "$value") dolibarr_del_const($db, 'MRP_MO_ADDON_PDF', $conf->entity);
+        if ($conf->global->MRP_MO_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'MRP_MO_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "MRP_MO_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "MRP_MO_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// The constant that was read before the new set
 		// We therefore requires a variable to have a coherent view
@@ -148,13 +148,13 @@ elseif ($action == 'setmod')
 	// TODO Check if numbering module chosen can be activated
 	// by calling method canBeActivated
 
-	dolibarr_set_const($db, "MRP_MO_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MRP_MO_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'set_MRP_MO_DRAFT_WATERMARK')
 {
 	$draft = GETPOST("MRP_MO_DRAFT_WATERMARK");
-	$res = dolibarr_set_const($db, "MRP_MO_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "MRP_MO_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -172,7 +172,7 @@ elseif ($action == 'set_MRP_MO_FREE_TEXT')
 {
 	$freetext = GETPOST("MRP_MO_FREE_TEXT", 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "MRP_MO_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "MRP_MO_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -493,7 +493,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

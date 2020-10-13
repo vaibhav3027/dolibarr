@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - cashdesk
+# DigitalProspects language file - Source file is en_US - cashdesk
 CashdeskShowServices=Serviços de venda
 CashDeskStock=Estoque
 CashDeskOn=ligar
@@ -14,7 +14,7 @@ Change=Excesso recebido
 ShowCompany=Mostar empresa
 DeleteArticle=Clique para remover esse artigo
 FilterRefOrLabelOrBC=Procurar (Ref/Rótulo)
-DolibarrReceiptPrinter=Impressão de Recibo Dolibarr
+DigitalProspectsReceiptPrinter=Impressão de Recibo DigitalProspects
 PointOfSale=Ponto de vendas
 PointOfSaleShort=PDV
 CloseBill=Fechar fatura
@@ -31,7 +31,7 @@ NbOfInvoices=Núm. de faturas
 Paymentnumpad=Tipo de Pad para inserir pagamento
 Numberspad=Números de Pad
 BillsCoinsPad=Almofada de moedas e notas
-DolistorePosCategory=Módulos TakePOS e outras soluções de PDV para Dolibarr
+DolistorePosCategory=Módulos TakePOS e outras soluções de PDV para DigitalProspects
 TakeposNeedsCategories=TakePOS precisa de categorias de produtos para funcionar
 OrderNotes=Notas de pedidos
 CashDeskBankAccountFor=Conta padrão a ser usada para pagamentos em

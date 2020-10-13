@@ -470,7 +470,7 @@ if (empty($reshook))
 	            $message .= "\n";
 	            $message .= "- ".$langs->transnoentitiesnoconv("Name")." : ".dolGetFirstLastname($expediteur->firstname, $expediteur->lastname)."\n";
 	            $message .= "- ".$langs->transnoentitiesnoconv("Period")." : ".dol_print_date($object->date_debut, 'day')." ".$langs->transnoentitiesnoconv("To")." ".dol_print_date($object->date_fin, 'day')."\n";
-	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$dolibarr_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
+	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$DigitalProspects_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
 	            $message .= "\n";
 
 	            $trackid = 'leav'.$object->id;
@@ -601,7 +601,7 @@ if (empty($reshook))
 
 	                $message .= "- ".$langs->transnoentitiesnoconv("ValidatedBy")." : ".dolGetFirstLastname($expediteur->firstname, $expediteur->lastname)."\n";
 
-	                $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$dolibarr_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
+	                $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$DigitalProspects_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
 	                $message .= "\n";
 
 	                $trackid = 'leav'.$object->id;
@@ -690,7 +690,7 @@ if (empty($reshook))
 
 	    	            $message .= "- ".$langs->transnoentitiesnoconv("ModifiedBy")." : ".dolGetFirstLastname($expediteur->firstname, $expediteur->lastname)."\n";
 
-	    	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$dolibarr_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
+	    	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$DigitalProspects_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
 	                    $message .= "\n";
 
 	    	            $trackid = 'leav'.$object->id;
@@ -843,7 +843,7 @@ if (empty($reshook))
 	            $message .= $langs->transnoentities("HolidaysCanceledBody", dol_print_date($object->date_debut, 'day'), dol_print_date($object->date_fin, 'day'))."\n";
 	            $message .= "- ".$langs->transnoentitiesnoconv("ModifiedBy")." : ".dolGetFirstLastname($expediteur->firstname, $expediteur->lastname)."\n";
 
-	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$dolibarr_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
+	            $message .= "- ".$langs->transnoentitiesnoconv("Link")." : ".$DigitalProspects_main_url_root."/holiday/card.php?id=".$object->id."\n\n";
 	            $message .= "\n";
 
 	            $trackid = 'leav'.$object->id;
@@ -1106,7 +1106,7 @@ if ((empty($id) && empty($ref)) || $action == 'add' || $action == 'request' || $
         print '<tr>';
         print '<td>'.$langs->trans("DescCP").'</td>';
         print '<td class="tdtop">';
-        $doleditor = new DolEditor('description', GETPOST('description', 'none'), '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+        $doleditor = new DolEditor('description', GETPOST('description', 'none'), '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
         print $doleditor->Create(1);
         print '</td></tr>';
 
@@ -1317,7 +1317,7 @@ else
                     print '<tr>';
                     print '<td>'.$langs->trans('DescCP').'</td>';
                     print '<td class="tdtop">';
-                    $doleditor = new DolEditor('description', $object->description, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+                    $doleditor = new DolEditor('description', $object->description, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
                     print $doleditor->Create(1);
                     print '</td></tr>';
                 }

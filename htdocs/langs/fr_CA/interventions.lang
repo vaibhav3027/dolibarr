@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 InterventionCard=Carte d'intervention
 AddIntervention=Créer une intervention
 ActionsOnFicheInter=Actions sur l'intervention
@@ -20,9 +20,9 @@ InterventionClassifyUnBilled=Classer "Non facturé"
 InterventionClassifyDone=Classer "Terminé"
 StatusInterInvoiced=Facturées
 SendInterventionRef=Soumission de l'intervention %s
-InterventionClassifiedBilledInDolibarr=Intervention %s définie comme facturée
-InterventionClassifiedUnbilledInDolibarr=Intervention %s définie comme non facturée
-InterventionDeletedInDolibarr=Intervention %s supprimé
+InterventionClassifiedBilledInDigitalProspects=Intervention %s définie comme facturée
+InterventionClassifiedUnbilledInDigitalProspects=Intervention %s définie comme non facturée
+InterventionDeletedInDigitalProspects=Intervention %s supprimé
 InterventionsArea=Zone d'intervention
 DraftFichinter=Projet d'interventions
 LastModifiedInterventions=Dernières %s interventions modifiées

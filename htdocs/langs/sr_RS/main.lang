@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nema upita sa greškom
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=Dupla vrednost u jedinstvenom polju
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Korisnik <b>%s</b> nije pronađen u Dolibarr bazi.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Korisnik <b>%s</b> nije pronađen u DigitalProspects bazi.
 ErrorNoVATRateDefinedForSellerCountry=Greška, PDV stopa nije definisana za zemlju "%s".
 ErrorNoSocialContributionForSellerCountry=Greška, nema poreskih stopa definisanih za zemlju "%s".
 ErrorFailedToSaveFile=Greška, nemoguće sačuvati fajl.
@@ -90,7 +90,7 @@ RecordDeleted=Linija obrisana
 RecordGenerated=Record generated
 LevelOfFeature=Nivo funkcionalnosti
 NotDefined=Nije definisano
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Administrator
 Undefined=Nedefinisano
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Manager tipa baze
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr je detektovao tehničku grešku
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects je detektovao tehničku grešku
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=Više informacija
 TechnicalInformation=Tehnički podaci
 TechnicalID=Tehnički ID
 LineID=Line ID
 NotePublic=Beleška (javna)
 NotePrivate=Beleška (privatna)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr je podešen da zaokružuje cene na <b>%s</b> decimala.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects je podešen da zaokružuje cene na <b>%s</b> decimala.
 DoTest=Test
 ToFilter=Filter
 NoFilter=Nema filtera
@@ -475,8 +475,8 @@ Generate=Gereriši
 Duration=Trajanje
 TotalDuration=Ukupno trajanje
 Summary=Rezime
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Dostupno
 NotYetAvailable=Još uvek nedostupno
@@ -703,7 +703,7 @@ MenuECM=Dokumenti
 MenuAWStats=AWStats
 MenuMembers=Članovi
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Dolibarr limit (Meni home-podešavanja-bezbednost): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects limit (Meni home-podešavanja-bezbednost): %s Kb, PHP limit: %s Kb
 NoFileFound=Nema sačuvanih dokumenata u folderu
 CurrentUserLanguage=Aktivni jezik
 CurrentTheme=Aktivna tema
@@ -736,7 +736,7 @@ PrintContentArea=Prikaži stranu za štampanje glavnog sadržaja
 MenuManager=Menu manager
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Sistemska greška
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Kreditna kartica
 ValidatePayment=Potvrdi plaćanje
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Kalendar
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

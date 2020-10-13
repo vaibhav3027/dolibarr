@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Интервенция
 Interventions=Интервенции
 InterventionCard=Протокол за интервенция
@@ -30,13 +30,13 @@ InterventionClassifyDone=Класифициране като 'Изпълнена
 StatusInterInvoiced=Фактурирана
 SendInterventionRef=Изпращане на интервенция %s
 SendInterventionByMail=Изпращане на интервенция по имейл
-InterventionCreatedInDolibarr=Интервенция %s е създадена
-InterventionValidatedInDolibarr=Интервенция %s е валидирана
-InterventionModifiedInDolibarr=Интервенция %s е променена
-InterventionClassifiedBilledInDolibarr=Интервенция %s е фактурирана
-InterventionClassifiedUnbilledInDolibarr=Интервенция %s е нетаксувана
+InterventionCreatedInDigitalProspects=Интервенция %s е създадена
+InterventionValidatedInDigitalProspects=Интервенция %s е валидирана
+InterventionModifiedInDigitalProspects=Интервенция %s е променена
+InterventionClassifiedBilledInDigitalProspects=Интервенция %s е фактурирана
+InterventionClassifiedUnbilledInDigitalProspects=Интервенция %s е нетаксувана
 InterventionSentByEMail=Интервенция %s е изпратена по имейл
-InterventionDeletedInDolibarr=Интервенция %s е изтрита
+InterventionDeletedInDigitalProspects=Интервенция %s е изтрита
 InterventionsArea=Секция с интервенции
 DraftFichinter=Чернови интервенции
 LastModifiedInterventions=Интервенции: %s последно променени

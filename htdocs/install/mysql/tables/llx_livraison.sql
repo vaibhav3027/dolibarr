@@ -25,8 +25,8 @@ create table llx_livraison
   entity                integer DEFAULT 1 NOT NULL,		-- multi company id
   fk_soc                integer      NOT NULL,
   
-  ref_ext               varchar(255),					-- reference into an external system (not used by dolibarr)
-  ref_int				varchar(255),					-- reference into an internal system (used by dolibarr to store extern id like paypal info)
+  ref_ext               varchar(255),					-- reference into an external system (not used by DigitalProspects)
+  ref_int				varchar(255),					-- reference into an internal system (used by DigitalProspects to store extern id like paypal info)
   ref_customer          varchar(255),					-- customer number
   
   date_creation         datetime,						-- date de creation

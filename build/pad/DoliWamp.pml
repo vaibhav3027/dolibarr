@@ -16,7 +16,7 @@
 		<Program_Install_Support>Install and Uninstall</Program_Install_Support>
 		<Program_OS_Support>Win2000,Win7 x32,Win7 x64,Win98,WinOther,WinServer,WinVista,WinVista x64,WinXP,Other</Program_OS_Support>
 		<Program_Language>English,Arabic,Catalan,Chinese,Dutch,Finnish,French,German,Icelandic,Italian,Norwegian,Polish,Portuguese,Romanian,Russian,Slovenian,Spanish,Swedish,Turkish</Program_Language>
-		<Program_Change_Info>http://www.dolibarr.org</Program_Change_Info>
+		<Program_Change_Info>http://www.DigitalProspects.org</Program_Change_Info>
 		<Program_Specific_Category>Business</Program_Specific_Category>
 		<Program_Category_Class>Business::Accounting &amp; Finance</Program_Category_Class>
 		<Program_System_Requirements>None</Program_System_Requirements>
@@ -37,42 +37,42 @@
 	</Program_Info>
 	<Program_Descriptions>
 		<English>
-			<Keywords>doliwamp, dolibarr, erp, crm, invoices, commercial proposals, orders, accounting, stock, products, agenda, bank, business, company, foundation, management</Keywords>
-			<Char_Desc_45>DoliWamp, Dolibarr ERP/CRM for Windows</Char_Desc_45>
-			<Char_Desc_80>DoliWamp, the easy to use Dolibarr for Windows to manage your company,foundation</Char_Desc_80>
-			<Char_Desc_250>DoliWamp is the Dolibarr ERP/CRM for Windows, the easy to use open source software to manage your activity (invoices, customers, suppliers, contracts, agenda, emailings...) and any other things a small or mid-sized business or a foundation needs.</Char_Desc_250>
-			<Char_Desc_450>DoliWamp is the Dolibarr ERP/CRM autoinstaller for Windows users with no technical knowledge to install Dolibarr and all its prerequisites (Apache, Mysql, PHP) with just one auto-exe file. Dolibarr ERP/CRM is a software package built by modules addition (you enable only features you need), to manage small or mid-sized businesses, freelancers or foundations.</Char_Desc_450>
-			<Char_Desc_2000>DoliWamp is the Dolibarr ERP/CRM for Windows. Dolibarr ERP &amp; CRM is a software built by modules addition (you enable only features you need), to manage small or mid-sized businesses, freelancers or foundations (You can manage or follow contacts, invoices, orders, commercial proposals, products, stock management, agenda, mass emailings, members of a foundation, bank accounts...). Based on a WAMP, MAMP or LAMP server (Apache, Mysql, PHP for all Operating Systems), you can install it as a standalone program or use it from anywhere with any web browser. Dolibarr is an OpenSource project. It differs from other ERP or CRM softwares (like OpenAguila, OpenBravo, OpenERP, Neogia, Compiere, etc) because everything was made to be more simple: Simple to install, Simple to use, Simple to develop. 
-DoliWamp is the auto-installer for Windows users with no technical knowledge to install Dolibarr ERP/CRM and all its prerequisites (Apache, Mysql, PHP) with just one auto-exe file.</Char_Desc_2000>
+			<Keywords>doliwamp, DigitalProspects, erp, crm, invoices, commercial proposals, orders, accounting, stock, products, agenda, bank, business, company, foundation, management</Keywords>
+			<Char_Desc_45>DoliWamp, DigitalProspects ERP/CRM for Windows</Char_Desc_45>
+			<Char_Desc_80>DoliWamp, the easy to use DigitalProspects for Windows to manage your company,foundation</Char_Desc_80>
+			<Char_Desc_250>DoliWamp is the DigitalProspects ERP/CRM for Windows, the easy to use open source software to manage your activity (invoices, customers, suppliers, contracts, agenda, emailings...) and any other things a small or mid-sized business or a foundation needs.</Char_Desc_250>
+			<Char_Desc_450>DoliWamp is the DigitalProspects ERP/CRM autoinstaller for Windows users with no technical knowledge to install DigitalProspects and all its prerequisites (Apache, Mysql, PHP) with just one auto-exe file. DigitalProspects ERP/CRM is a software package built by modules addition (you enable only features you need), to manage small or mid-sized businesses, freelancers or foundations.</Char_Desc_450>
+			<Char_Desc_2000>DoliWamp is the DigitalProspects ERP/CRM for Windows. DigitalProspects ERP &amp; CRM is a software built by modules addition (you enable only features you need), to manage small or mid-sized businesses, freelancers or foundations (You can manage or follow contacts, invoices, orders, commercial proposals, products, stock management, agenda, mass emailings, members of a foundation, bank accounts...). Based on a WAMP, MAMP or LAMP server (Apache, Mysql, PHP for all Operating Systems), you can install it as a standalone program or use it from anywhere with any web browser. DigitalProspects is an OpenSource project. It differs from other ERP or CRM softwares (like OpenAguila, OpenBravo, OpenERP, Neogia, Compiere, etc) because everything was made to be more simple: Simple to install, Simple to use, Simple to develop. 
+DoliWamp is the auto-installer for Windows users with no technical knowledge to install DigitalProspects ERP/CRM and all its prerequisites (Apache, Mysql, PHP) with just one auto-exe file.</Char_Desc_2000>
 		</English>
 		<French>
-			<Keywords>doliwamp, dolibarr, erp, crm, factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations, entreprises, PME, TPE</Keywords>
-			<Char_Desc_45>DoliWamp, Dolibarr ERP/CRM pour Windows</Char_Desc_45>
-			<Char_Desc_80>DoliWamp, la distribution de Dolibarr pour gérer votre entreprise ou association</Char_Desc_80>
-			<Char_Desc_250>DoliWamp est la version spécialisée pour Windows de Dolibarr ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_250>
-			<Char_Desc_450>DoliWamp est la version spécialisée pour Windows de Dolibarr ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_450>
-			<Char_Desc_2000>DoliWamp est la version spécialisée pour Windows de Dolibarr ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_2000>
+			<Keywords>doliwamp, DigitalProspects, erp, crm, factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations, entreprises, PME, TPE</Keywords>
+			<Char_Desc_45>DoliWamp, DigitalProspects ERP/CRM pour Windows</Char_Desc_45>
+			<Char_Desc_80>DoliWamp, la distribution de DigitalProspects pour gérer votre entreprise ou association</Char_Desc_80>
+			<Char_Desc_250>DoliWamp est la version spécialisée pour Windows de DigitalProspects ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_250>
+			<Char_Desc_450>DoliWamp est la version spécialisée pour Windows de DigitalProspects ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_450>
+			<Char_Desc_2000>DoliWamp est la version spécialisée pour Windows de DigitalProspects ERP-CRM, le logiciel simple et OpenSource pour gérer votre activité (factures, devis, facturation, commandes, compta, trésorerie, stocks, produits, agenda, comptes bancaires, associations)</Char_Desc_2000>
 		</French>
 		<Italian>
-			<Keywords>doliwamp, dolibarr, erp, crm, gestionale, medie imprese, fondazioni</Keywords>
-			<Char_Desc_45>DoliWamp, Dolibarr ERP/CRM per Windows</Char_Desc_45>
+			<Keywords>doliwamp, DigitalProspects, erp, crm, gestionale, medie imprese, fondazioni</Keywords>
+			<Char_Desc_45>DoliWamp, DigitalProspects ERP/CRM per Windows</Char_Desc_45>
 			<Char_Desc_80>Gestionale open source e gratuito per piccole e medie imprese, fondazioni</Char_Desc_80>
-			<Char_Desc_250>Dolibarr è un a gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività.</Char_Desc_250>
-			<Char_Desc_450>Dolibarr è un programma gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività. Dolibar è progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare.</Char_Desc_450>
-			<Char_Desc_2000>Dolibarr è un programma gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività. Dolibar è progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare. Dolibar è completamente web-based, progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare.</Char_Desc_2000>
+			<Char_Desc_250>DigitalProspects è un a gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività.</Char_Desc_250>
+			<Char_Desc_450>DigitalProspects è un programma gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività. Dolibar è progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare.</Char_Desc_450>
+			<Char_Desc_2000>DigitalProspects è un programma gestionale open source e gratuito per piccole e medie imprese, fondazioni e liberi professionisti. Include varie funzionalità per Enterprise Resource Planning e gestione dei clienti (CRM), ma anche ulteriori attività. Dolibar è progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare. Dolibar è completamente web-based, progettato per poter fornire solo ciò di cui hai bisogno ed essere facile da usare.</Char_Desc_2000>
 		</Italian>
 	</Program_Descriptions>
 	<Web_Info>
 		<Application_URLs>
-			<Application_Info_URL>http://www.nltechno.com/pages/dolibarrwinbin.php</Application_Info_URL>
-			<Application_Order_URL>http://www.nltechno.com/pages/dolibarrwinbin.php</Application_Order_URL>
-			<Application_Screenshot_URL>http://www.dolibarr.org/images/dolibarr_screenshot1.png</Application_Screenshot_URL>
-			<Application_Icon_URL>http://www.dolibarr.org/images/dolibarr.gif</Application_Icon_URL>
-			<Application_XML_File_URL>http://www.dolibarr.org/files/pad_doliwamp.xml</Application_XML_File_URL>
+			<Application_Info_URL>http://www.nltechno.com/pages/DigitalProspectswinbin.php</Application_Info_URL>
+			<Application_Order_URL>http://www.nltechno.com/pages/DigitalProspectswinbin.php</Application_Order_URL>
+			<Application_Screenshot_URL>http://www.DigitalProspects.org/images/DigitalProspects_screenshot1.png</Application_Screenshot_URL>
+			<Application_Icon_URL>http://www.DigitalProspects.org/images/DigitalProspects.gif</Application_Icon_URL>
+			<Application_XML_File_URL>http://www.DigitalProspects.org/files/pad_doliwamp.xml</Application_XML_File_URL>
 		</Application_URLs>
 		<Download_URLs>
-			<Primary_Download_URL>http://www.dolibarr.org/files/doliwamp.exe</Primary_Download_URL>
-			<Secondary_Download_URL>http://www.dolibarr.org/files/doliwamp.exe</Secondary_Download_URL>
+			<Primary_Download_URL>http://www.DigitalProspects.org/files/doliwamp.exe</Primary_Download_URL>
+			<Secondary_Download_URL>http://www.DigitalProspects.org/files/doliwamp.exe</Secondary_Download_URL>
 			<Additional_Download_URL_1 />
 			<Additional_Download_URL_2 />
 		</Download_URLs>

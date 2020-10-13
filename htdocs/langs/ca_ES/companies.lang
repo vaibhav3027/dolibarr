@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=El nom de l'empresa %s ja existeix. Indica un altre.
 ErrorSetACountryFirst=Indica en primer lloc el país
 SelectThirdParty=Seleccionar un tercer
@@ -12,7 +12,7 @@ MenuNewSupplier=Nou proveïdor
 MenuNewPrivateIndividual=Nou particular
 NewCompany=Nova empresa (client potencial, client, proveïdor)
 NewThirdParty=Nou tercer (client potencial, client, proveïdor)
-CreateDolibarrThirdPartySupplier=Crea un tercer (proveïdor)
+CreateDigitalProspectsThirdPartySupplier=Crea un tercer (proveïdor)
 CreateThirdPartyOnly=Crea tercer
 CreateThirdPartyAndContact=Crea un tercer + un contacte fill
 ProspectionArea=Àrea de pressupostos
@@ -392,8 +392,8 @@ ProspectsByStatus=Clients potencials per estat
 NoParentCompany=Cap
 ExportCardToFormat=Exporta fitxa a format
 ContactNotLinkedToCompany=Contacte no vinculat a un tercer
-DolibarrLogin=Login usuari
-NoDolibarrAccess=Sense accés d'usuari
+DigitalProspectsLogin=Login usuari
+NoDigitalProspectsAccess=Sense accés d'usuari
 ExportDataset_company_1=Tercers (empreses/entitats/persones físiques) i propietats
 ExportDataset_company_2=Contactes i propietats
 ImportDataset_company_1=Usuaris i les seves propietats

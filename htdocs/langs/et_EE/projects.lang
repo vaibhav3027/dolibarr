@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Ref. projekt
 ProjectRef=Project ref.
 ProjectId=Projekti ID
@@ -150,12 +150,12 @@ ConfirmCloneProject=Are you sure to clone this project?
 ProjectReportDate=Change task dates according to new project start date
 ErrorShiftTaskDate=Ülesande kuupäeva ei ole võimalik nihutada vastavalt uuele projekti alguskuupäevale
 ProjectsAndTasksLines=Projektid ja ülesanded
-ProjectCreatedInDolibarr=Projekt %s on loodud
-ProjectValidatedInDolibarr=Project %s validated
-ProjectModifiedInDolibarr=Projekti %s muudetud
-TaskCreatedInDolibarr=Ülesanne %s on loodud
-TaskModifiedInDolibarr=Ülesannet %s on muudetud
-TaskDeletedInDolibarr=Ülesanne %s on kustutatud
+ProjectCreatedInDigitalProspects=Projekt %s on loodud
+ProjectValidatedInDigitalProspects=Project %s validated
+ProjectModifiedInDigitalProspects=Projekti %s muudetud
+TaskCreatedInDigitalProspects=Ülesanne %s on loodud
+TaskModifiedInDigitalProspects=Ülesannet %s on muudetud
+TaskDeletedInDigitalProspects=Ülesanne %s on kustutatud
 OpportunityStatus=Lead status
 OpportunityStatusShort=Lead status
 OpportunityProbability=Lead probability

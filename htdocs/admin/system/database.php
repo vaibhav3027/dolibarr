@@ -51,7 +51,7 @@ print '<tr '.$bc[0].'><td width="300">'.$langs->trans("DatabasePort").'</td><td>
 print '<tr '.$bc[1].'><td width="300">'.$langs->trans("DatabaseName").'</td><td>'.$conf->db->name.'</td></tr>'."\n";
 print '<tr '.$bc[0].'><td width="300">'.$langs->trans("DriverType").'</td><td>'.$conf->db->type.($db->getDriverInfo() ? ' ('.$db->getDriverInfo().')' : '').'</td></tr>'."\n";
 print '<tr '.$bc[1].'><td width="300">'.$langs->trans("User").'</td><td>'.$conf->db->user.'</td></tr>'."\n";
-print '<tr '.$bc[0].'><td width="300">'.$langs->trans("Password").'</td><td>'.preg_replace('/./i', '*', $dolibarr_main_db_pass).'</td></tr>'."\n";
+print '<tr '.$bc[0].'><td width="300">'.$langs->trans("Password").'</td><td>'.preg_replace('/./i', '*', $DigitalProspects_main_db_pass).'</td></tr>'."\n";
 print '<tr '.$bc[1].'><td width="300">'.$langs->trans("DBStoringCharset").'</td><td>'.$db->getDefaultCharacterSetDatabase().'</td></tr>'."\n";
 print '<tr '.$bc[0].'><td width="300">'.$langs->trans("DBSortingCharset").'</td><td>'.$db->getDefaultCollationDatabase().'</td></tr>'."\n";
 print '</table>';
@@ -91,8 +91,8 @@ else
 		if (preg_match('/mysql/i', $db->type))
 		{
 			$arraytest = array(
-				'character_set_database'=>array('var'=>'dolibarr_main_db_character_set', 'valifempty'=>'utf8'),
-				'collation_database'=>array('var'=>'dolibarr_main_db_collation', 'valifempty'=>'utf8_unicode_ci')
+				'character_set_database'=>array('var'=>'DigitalProspects_main_db_character_set', 'valifempty'=>'utf8'),
+				'collation_database'=>array('var'=>'DigitalProspects_main_db_collation', 'valifempty'=>'utf8_unicode_ci')
 			);
 		}
 

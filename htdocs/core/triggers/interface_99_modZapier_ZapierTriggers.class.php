@@ -31,13 +31,13 @@
  * - The name property name must be MyTrigger
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for Zapier module
  */
-class InterfaceZapierTriggers extends DolibarrTriggers
+class InterfaceZapierTriggers extends DigitalProspectsTriggers
 {
     /**
      * @var DoliDB Database handler
@@ -56,7 +56,7 @@ class InterfaceZapierTriggers extends DolibarrTriggers
         $this->name = preg_replace('/^Interface/i', '', get_class($this));
         $this->family = "technic";
         $this->description = "Zapier triggers.";
-        // 'development', 'experimental', 'dolibarr' or version
+        // 'development', 'experimental', 'DigitalProspects' or version
         $this->version = 'development';
         $this->picto = 'zapier';
     }
@@ -83,7 +83,7 @@ class InterfaceZapierTriggers extends DolibarrTriggers
 
 
     /**
-     * Function called when a Dolibarrr business event is done.
+     * Function called when a DigitalProspectsr business event is done.
      * All functions "runTrigger" are triggered if file
      * is inside directory core/triggers
      *

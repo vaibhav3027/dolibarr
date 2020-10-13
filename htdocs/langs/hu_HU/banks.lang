@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Bank
 MenuBankCash=Banks | Cash
 MenuVariousPayment=Miscellaneous payments
@@ -109,7 +109,7 @@ SocialContributionPayment=Szociális/költségvetési adó fizetés
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Belső átutalás
-TransferDesc=Transfer from one account to another, Dolibarr will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
+TransferDesc=Transfer from one account to another, DigitalProspects will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
 TransferFrom=Feladó
 TransferTo=Címzett
 TransferFromToDone=A transzfer <b>%s</b> a <b>%s</b> a <b>%s</b> %s lett felvéve.

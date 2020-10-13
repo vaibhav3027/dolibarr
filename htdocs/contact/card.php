@@ -64,7 +64,7 @@ $extrafields->fetch_name_optionals_label($object->table_element);
 
 $socialnetworks = getArrayOfSocialNetworks();
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $object->getCanvas($id);
 $objcanvas = null;
 $canvas = (!empty($object->canvas) ? $object->canvas : GETPOST("canvas"));
@@ -1159,13 +1159,13 @@ else
 
             // Note Public
             print '<tr><td class="tdtop"><label for="note_public">'.$langs->trans("NotePublic").'</label></td><td colspan="3">';
-            $doleditor = new DolEditor('note_public', $object->note_public, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+            $doleditor = new DolEditor('note_public', $object->note_public, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
             print $doleditor->Create(1);
             print '</td></tr>';
 
             // Note Private
             print '<tr><td class="tdtop"><label for="note_private">'.$langs->trans("NotePrivate").'</label></td><td colspan="3">';
-            $doleditor = new DolEditor('note_private', $object->note_private, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+            $doleditor = new DolEditor('note_private', $object->note_private, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
             print $doleditor->Create(1);
             print '</td></tr>';
 
@@ -1236,15 +1236,15 @@ else
                 print '</td></tr>';
             }
 
-            // Login Dolibarr
-            print '<tr><td>'.$langs->trans("DolibarrLogin").'</td><td colspan="3">';
+            // Login DigitalProspects
+            print '<tr><td>'.$langs->trans("DigitalProspectsLogin").'</td><td colspan="3">';
             if ($object->user_id)
             {
-                $dolibarr_user = new User($db);
-                $result = $dolibarr_user->fetch($object->user_id);
-                print $dolibarr_user->getLoginUrl(1);
+                $DigitalProspects_user = new User($db);
+                $result = $DigitalProspects_user->fetch($object->user_id);
+                print $DigitalProspects_user->getLoginUrl(1);
             }
-            else print $langs->trans("NoDolibarrAccess");
+            else print $langs->trans("NoDigitalProspectsAccess");
             print '</td></tr>';
 
             // Photo
@@ -1320,7 +1320,7 @@ else
                 if ($object->socid > 0) $text .= $langs->trans("UserWillBeExternalUser");
                 else $text .= $langs->trans("UserWillBeInternalUser");
             }
-            print $form->formconfirm($_SERVER["PHP_SELF"]."?id=".$object->id, $langs->trans("CreateDolibarrLogin"), $text, "confirm_create_user", $formquestion, 'yes');
+            print $form->formconfirm($_SERVER["PHP_SELF"]."?id=".$object->id, $langs->trans("CreateDigitalProspectsLogin"), $text, "confirm_create_user", $formquestion, 'yes');
         }
 
         $linkback = '<a href="'.DOL_URL_ROOT.'/contact/list.php?restore_lastsearch_values=1">'.$langs->trans("BackToList").'</a>';
@@ -1447,14 +1447,14 @@ else
             print '</td></tr>';
         }
 
-        print '<tr><td>'.$langs->trans("DolibarrLogin").'</td><td colspan="3">';
+        print '<tr><td>'.$langs->trans("DigitalProspectsLogin").'</td><td colspan="3">';
         if ($object->user_id)
         {
-            $dolibarr_user = new User($db);
-            $result = $dolibarr_user->fetch($object->user_id);
-            print $dolibarr_user->getLoginUrl(1);
+            $DigitalProspects_user = new User($db);
+            $result = $DigitalProspects_user->fetch($object->user_id);
+            print $DigitalProspects_user->getLoginUrl(1);
         }
-        else print $langs->trans("NoDolibarrAccess");
+        else print $langs->trans("NoDigitalProspectsAccess");
         print '</td></tr>';
 
         print '<tr><td>';
@@ -1499,7 +1499,7 @@ else
 
             if (!$object->user_id && $user->rights->user->user->creer)
             {
-                print '<a class="butAction" href="'.$_SERVER['PHP_SELF'].'?id='.$object->id.'&action=create_user">'.$langs->trans("CreateDolibarrLogin").'</a>';
+                print '<a class="butAction" href="'.$_SERVER['PHP_SELF'].'?id='.$object->id.'&action=create_user">'.$langs->trans("CreateDigitalProspectsLogin").'</a>';
             }
 
             // Activer

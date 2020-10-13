@@ -23,13 +23,13 @@
  *      \ingroup    opensurvey
  *      \brief      Description and activation file for module OpenSurvey
  */
-include_once DOL_DOCUMENT_ROOT."/core/modules/DolibarrModules.class.php";
+include_once DOL_DOCUMENT_ROOT."/core/modules/DigitalProspectsModules.class.php";
 
 
 /**
  * Description and activation class for module opensurvey
  */
-class modOpenSurvey extends DolibarrModules
+class modOpenSurvey extends DigitalProspectsModules
 {
 
 	/**
@@ -44,7 +44,7 @@ class modOpenSurvey extends DolibarrModules
 		$this->db = $db;
 
 		// Id for module (must be unique).
-		// Use here a free id (See in Home -> System information -> Dolibarr for list of used module id).
+		// Use here a free id (See in Home -> System information -> DigitalProspects for list of used module id).
 		$this->numero = 55000;
 		// Key text used to identify module (for permission, menus, etc...)
 		$this->rights_class = 'opensurvey';
@@ -57,8 +57,8 @@ class modOpenSurvey extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		// Module description used if translation string 'ModuleXXXDesc' not found (XXX is value MyModule)
 		$this->description = "Module to make online surveys (like Doodle, Studs, Rdvz, ...)";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		// Name of image file used for this module.
@@ -77,7 +77,7 @@ class modOpenSurvey extends DolibarrModules
 		$this->requiredby = array(); // List of module ids to disable if this one is disabled
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(3, 4, 0); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(3, 4, 0); // Minimum version of DigitalProspects required by module
 
 		// Constants
 		$this->const = array(); // List of parameters
@@ -173,7 +173,7 @@ class modOpenSurvey extends DolibarrModules
 
 	/**
 	 *	Function called when module is enabled.
-	 *	The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *	The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *	It also creates data directories
 	 *
      *  @param      string	$options    Options when enabling module ('', 'noboxes')

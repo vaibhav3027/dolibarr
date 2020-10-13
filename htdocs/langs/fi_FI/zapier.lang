@@ -17,12 +17,12 @@
 # Generic
 #
 
-# Module label 'ModuleZapierForDolibarrName'
-ModuleZapierForDolibarrName = Zapier Dolibarr:lle
-# Module description 'ModuleZapierForDolibarrDesc'
-ModuleZapierForDolibarrDesc = Zapier Dolibarr-moduulille
+# Module label 'ModuleZapierForDigitalProspectsName'
+ModuleZapierForDigitalProspectsName = Zapier DigitalProspects:lle
+# Module description 'ModuleZapierForDigitalProspectsDesc'
+ModuleZapierForDigitalProspectsDesc = Zapier DigitalProspects-moduulille
 
 #
 # Admin page
 #
-ZapierForDolibarrSetup = Zapier Dolibarr:lle asetukset
+ZapierForDigitalProspectsSetup = Zapier DigitalProspects:lle asetukset

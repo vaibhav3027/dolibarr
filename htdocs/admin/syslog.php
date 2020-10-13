@@ -100,8 +100,8 @@ if ($action == 'set')
 				if (isset($_POST[$option['constant']]))
 				{
 					$_POST[$option['constant']] = trim($_POST[$option['constant']]);
-					dolibarr_del_const($db, $option['constant'], -1);
-					dolibarr_set_const($db, $option['constant'], $_POST[$option['constant']], 'chaine', 0, '', 0);
+					DigitalProspects_del_const($db, $option['constant'], -1);
+					DigitalProspects_set_const($db, $option['constant'], $_POST[$option['constant']], 'chaine', 0, '', 0);
 				}
 			}
 		}
@@ -109,8 +109,8 @@ if ($action == 'set')
 
 	$activeModules = $newActiveModules;
 
-    dolibarr_del_const($db, 'SYSLOG_HANDLERS', -1); // To be sure ther is not a setup into another entity
-    dolibarr_set_const($db, 'SYSLOG_HANDLERS', json_encode($activeModules), 'chaine', 0, '', 0);
+    DigitalProspects_del_const($db, 'SYSLOG_HANDLERS', -1); // To be sure ther is not a setup into another entity
+    DigitalProspects_set_const($db, 'SYSLOG_HANDLERS', json_encode($activeModules), 'chaine', 0, '', 0);
 
 	// Check configuration
 	foreach ($activeModules as $modulename) {
@@ -138,7 +138,7 @@ if ($action == 'set')
 if ($action == 'setlevel')
 {
 	$level = GETPOST("level");
-	$res = dolibarr_set_const($db, "SYSLOG_LEVEL", $level, 'chaine', 0, '', 0);
+	$res = DigitalProspects_set_const($db, "SYSLOG_LEVEL", $level, 'chaine', 0, '', 0);
 	dol_syslog("admin/syslog: level ".$level);
 
 	if (!$res > 0) $error++;
@@ -146,7 +146,7 @@ if ($action == 'setlevel')
 	if (!$error)
 	{
 		$file_saves = GETPOST("file_saves");
-		$res = dolibarr_set_const($db, "SYSLOG_FILE_SAVES", $file_saves, 'chaine', 0, '', 0);
+		$res = DigitalProspects_set_const($db, "SYSLOG_FILE_SAVES", $file_saves, 'chaine', 0, '', 0);
 		dol_syslog("admin/syslog: file saves  ".$file_saves);
 
 		if (!$res > 0) $error++;
@@ -176,11 +176,11 @@ print '<br>';
 
 $def = array();
 
-$syslogfacility = $defaultsyslogfacility = dolibarr_get_const($db, "SYSLOG_FACILITY", 0);
-$syslogfile = $defaultsyslogfile = dolibarr_get_const($db, "SYSLOG_FILE", 0);
+$syslogfacility = $defaultsyslogfacility = DigitalProspects_get_const($db, "SYSLOG_FACILITY", 0);
+$syslogfile = $defaultsyslogfile = DigitalProspects_get_const($db, "SYSLOG_FILE", 0);
 
 if (!$defaultsyslogfacility) $defaultsyslogfacility = 'LOG_USER';
-if (!$defaultsyslogfile) $defaultsyslogfile = 'dolibarr.log';
+if (!$defaultsyslogfile) $defaultsyslogfile = 'DigitalProspects.log';
 
 if ($conf->global->MAIN_MODULE_MULTICOMPANY && $user->entity)
 {

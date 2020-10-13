@@ -726,7 +726,7 @@ class UserGroup extends CommonObject
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $morecss = '', $save_lastsearch_value = -1)
 	{
 		global $langs, $conf, $db, $hookmanager;
-		global $dolibarr_main_authentication, $dolibarr_main_demo;
+		global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
 		global $menumanager;
 
 		if (!empty($conf->global->MAIN_OPTIMIZEFORTEXTBROWSER) && $withpicto) $withpicto = 0;
@@ -835,7 +835,7 @@ class UserGroup extends CommonObject
 		if (!empty($conf->global->LDAP_GROUP_FIELD_GROUPMEMBERS))
 		{
 			$valueofldapfield = array();
-			foreach ($this->members as $key=>$val)    // This is array of users for group into dolibarr database.
+			foreach ($this->members as $key=>$val)    // This is array of users for group into DigitalProspects database.
 			{
 				$muser = new User($this->db);
 				$muser->fetch($val->id);
@@ -867,7 +867,7 @@ class UserGroup extends CommonObject
 		$this->ref = 'SPECIMEN';
 		$this->specimen = 1;
 
-		$this->name = 'DOLIBARR GROUP SPECIMEN';
+		$this->name = 'DigitalProspects GROUP SPECIMEN';
 		$this->note = 'This is a note';
 		$this->datec = time();
 		$this->datem = time();

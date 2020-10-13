@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ecm
+# DigitalProspects language file - Source file is en_US - ecm
 ECMNbOfDocs=No. of documents in directory
 ECMSection=ディレクトリ
 ECMSectionManual=手動のディレクトリ
@@ -15,7 +15,7 @@ ECMNbOfSubDir=サブディレクトリの数
 ECMNbOfFilesInSubDir=Number of files in sub-directories
 ECMCreationUser=クリエイター
 ECMArea=DMS/ECM area
-ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in Dolibarr.
+ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in DigitalProspects.
 ECMAreaDesc2=要素のカードからドキュメントを追加するときに*自動ディレクトリは自動的に入力されます。 <br> *マニュアルのディレクトリは、特定の要素にリンクされていないドキュメントを保存するために使用することができます。
 ECMSectionWasRemoved=ディレクトリの<b>%sが</b>削除されています。
 ECMSectionWasCreated=Directory <b>%s</b> has been created.

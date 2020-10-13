@@ -50,11 +50,11 @@ $action = GETPOST('action', 'aZ09');
 
 if ($action == 'update' && !$cancel)
 {
-	dolibarr_set_const($db, "MAIN_DISABLE_ALL_SMS", GETPOST("MAIN_DISABLE_ALL_SMS", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_DISABLE_ALL_SMS", GETPOST("MAIN_DISABLE_ALL_SMS", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
 
-	dolibarr_set_const($db, "MAIN_SMS_SENDMODE", GETPOST("MAIN_SMS_SENDMODE", 'alphahtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_SMS_SENDMODE", GETPOST("MAIN_SMS_SENDMODE", 'alphahtml'), 'chaine', 0, '', $conf->entity);
 
-	dolibarr_set_const($db, "MAIN_MAIL_SMS_FROM", GETPOST("MAIN_MAIL_SMS_FROM", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_MAIL_SMS_FROM", GETPOST("MAIN_MAIL_SMS_FROM", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
 
 	header("Location: ".$_SERVER["PHP_SELF"]."?mainmenu=home&leftmenu=setup");
 	exit;

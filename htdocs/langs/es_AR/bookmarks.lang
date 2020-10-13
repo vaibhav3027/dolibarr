@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bookmarks
+# DigitalProspects language file - Source file is en_US - bookmarks
 AddThisPageToBookmarks=Agregar página actual a favoritos
 Bookmark=Favorito
 Bookmarks=Favoritos
@@ -12,7 +12,7 @@ BookmarkTitle=Nombre del favorito
 BehaviourOnClick=Comportamiento al seleccionar la URL de un favorito
 CreateBookmark=Crear favorito
 SetHereATitleForLink=Elegir un nombre para el favorito
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Usar un enlace externo/absoluto (https://URL) o un enlace interno/relativo (/DOLIBARR_ROOT/htdocs/...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Usar un enlace externo/absoluto (https://URL) o un enlace interno/relativo (/DigitalProspects_ROOT/htdocs/...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Elegir si el sitio vinculado debe abrirse en la pestaña actual o en una nueva
 BookmarksManagement=Administración de favoritos
 BookmarksMenuShortCut=Ctrl+Shift+M

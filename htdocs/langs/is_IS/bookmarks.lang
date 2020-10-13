@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Add current page to bookmarks
 Bookmark=Bookmark
 Bookmarks=Bókamerki
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Behaviour when a bookmark URL is selected
 CreateBookmark=Búa til bókamerki
 SetHereATitleForLink=Setja inn titil fyrir bókamerkið
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Notaðu utanáliggjandi http URL eða ættingja Dolibarr URL
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Notaðu utanáliggjandi http URL eða ættingja DigitalProspects URL
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Choose if linked page must open in new window or not
 BookmarksManagement=Bókamerki stjórnun

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - errors
+# DigitalProspects language file - Source file is en_US - errors
 
 # No errors
 NoErrorCommitIsDone=Нет ошибок, мы принимаем
@@ -43,10 +43,10 @@ ErrorBadDateFormat= Значение '%s' имеет неверный форма
 ErrorWrongDate=Дата некорректна!
 ErrorFailedToWriteInDir=Не удалось записать в директорию %s
 ErrorFoundBadEmailInFile=Found incorrect email syntax for %s lines in file (example line %s with email=Найдено неверный электронный синтаксис% с линии в файл (например, строка %s с электронной почтой= %s)
-ErrorUserCannotBeDelete=User cannot be deleted. Maybe it is associated to Dolibarr entities.
+ErrorUserCannotBeDelete=User cannot be deleted. Maybe it is associated to DigitalProspects entities.
 ErrorFieldsRequired=Некоторые обязательные поля не были заполнены.
 ErrorSubjectIsRequired=The email topic is required
-ErrorFailedToCreateDir=Не удалось создать каталог. Убедитесь, что веб-сервер пользователь имеет разрешения на запись в каталог Dolibarr документы. Если параметр <b>safe_mode</b> включен по этому PHP, проверьте, что Dolibarr PHP файлы принадлежат к веб-серверу пользователей (или группы).
+ErrorFailedToCreateDir=Не удалось создать каталог. Убедитесь, что веб-сервер пользователь имеет разрешения на запись в каталог DigitalProspects документы. Если параметр <b>safe_mode</b> включен по этому PHP, проверьте, что DigitalProspects PHP файлы принадлежат к веб-серверу пользователей (или группы).
 ErrorNoMailDefinedForThisUser=Нет определена почта для этого пользователя
 ErrorFeatureNeedJavascript=Эта функция JavaScript должны быть активированы на работу. Изменить это в настройки - дисплей.
 ErrorTopMenuMustHaveAParentWithId0=Меню типа 'Top' не может быть родителем меню. Положить 0 родителей в меню или выбрать меню типа 'левых'.
@@ -72,7 +72,7 @@ ErrorFieldCanNotContainSpecialNorUpperCharacters=The field <b>%s</b> must not co
 ErrorFieldMustHaveXChar=The field <b>%s</b> must have at least %s characters.
 ErrorNoAccountancyModuleLoaded=Нет бухгалтерского модуля активируется
 ErrorExportDuplicateProfil=Имя этого профиля уже сущесвует для этого набора для экспорта.
-ErrorLDAPSetupNotComplete=Dolibarr-LDAP соответствия не является полной.
+ErrorLDAPSetupNotComplete=DigitalProspects-LDAP соответствия не является полной.
 ErrorLDAPMakeManualTest=. LDIF файл был создан в директории %s. Попробуйте загрузить его вручную из командной строки, чтобы иметь больше информации об ошибках.
 ErrorCantSaveADoneUserWithZeroPercentage=Can't save an action with "status not started" if field "done by" is also filled.
 ErrorRefAlreadyExists=Ссылки, используемые для создания, уже существует.
@@ -104,8 +104,8 @@ ErrorProdIdAlreadyExist=%s назначается еще одна треть
 ErrorFailedToSendPassword=Не удалось отправить пароль
 ErrorFailedToLoadRSSFile=Не в состоянии получить RSS-канал. Попробуйте добавить постоянные MAIN_SIMPLEXMLLOAD_DEBUG если сообщения об ошибках не предоставляет достаточно информации.
 ErrorForbidden=Access denied.<br>You try to access to a page, area or feature of a disabled module or without being in an authenticated session or that is not allowed to your user.
-ErrorForbidden2=Разрешение на этот логин может быть определено администратором вашей Dolibarr из меню %s-> %s.
-ErrorForbidden3=Кажется, что Dolibarr не используется через аутентифицированных сессии. Взгляните на Dolibarr Настройка документации знать, как управлять подлинности (htaccess, mod_auth или другие ...).
+ErrorForbidden2=Разрешение на этот логин может быть определено администратором вашей DigitalProspects из меню %s-> %s.
+ErrorForbidden3=Кажется, что DigitalProspects не используется через аутентифицированных сессии. Взгляните на DigitalProspects Настройка документации знать, как управлять подлинности (htaccess, mod_auth или другие ...).
 ErrorNoImagickReadimage=Функция imagick_readimage не найдена в этой PHP. Нет предварительного просмотра могут быть доступны. Администраторы могут отключить эту закладку из меню Настройка - Экран.
 ErrorRecordAlreadyExists=Запись уже существует
 ErrorLabelAlreadyExists=This label already exists
@@ -127,8 +127,8 @@ ErrorWebServerUserHasNotPermission=Учетная запись пользова�
 ErrorNoActivatedBarcode=Нет штрих-кодов типа активированного
 ErrUnzipFails=Невозможно распаковать %s с помощью  ZipArchive
 ErrNoZipEngine=No engine to zip/unzip %s file in this PHP
-ErrorFileMustBeADolibarrPackage=Файл %s  должен быть архивом zip системы Dolibarr 
-ErrorModuleFileRequired=You must select a Dolibarr module package file
+ErrorFileMustBeADigitalProspectsPackage=Файл %s  должен быть архивом zip системы DigitalProspects 
+ErrorModuleFileRequired=You must select a DigitalProspects module package file
 ErrorPhpCurlNotInstalled=Модуль CURL для PHP  не установлен, он необходим для работы с PayPal
 ErrorFailedToAddToMailmanList=Невозможно добавить запись %s в список %s  системы Mailman или в базу  SPIP
 ErrorFailedToRemoveToMailmanList=Невозможно удалить  запись %s из  списка %s  системы Mailman или  базы  SPIP
@@ -139,7 +139,7 @@ ErrorFailedToAddContact=Ошибка при добавлении контакт�
 ErrorDateMustBeBeforeToday=The date cannot be greater than today
 ErrorPaymentModeDefinedToWithoutSetup=A payment mode was set to type %s but setup of module Invoice was not completed to define information to show for this payment mode.
 ErrorPHPNeedModule=Ошибка. Ваш PHP  должен иметь модуль <b>%s</b> для использования этой функции. 
-ErrorOpenIDSetupNotComplete=You setup Dolibarr config file to allow OpenID authentication, but URL of OpenID service is not defined into constant %s
+ErrorOpenIDSetupNotComplete=You setup DigitalProspects config file to allow OpenID authentication, but URL of OpenID service is not defined into constant %s
 ErrorWarehouseMustDiffers=Исходящий и входящий склад должны отличаться
 ErrorBadFormat=Неправильный формат!
 ErrorMemberNotLinkedToAThirpartyLinkOrCreateFirst=Error, this member is not yet linked to any third party. Link member to an existing third party or create a new third party before creating subscription with invoice.
@@ -202,7 +202,7 @@ ErrorUserNotAssignedToTask=User must be assigned to task to be able to enter tim
 ErrorTaskAlreadyAssigned=Task already assigned to user
 ErrorModuleFileSeemsToHaveAWrongFormat=The module package seems to have a wrong format.
 ErrorModuleFileSeemsToHaveAWrongFormat2=At least one mandatory directory must exists into zip of module: <strong>%s</strong> or <strong>%s</strong>
-ErrorFilenameDosNotMatchDolibarrPackageRules=The name of the module package (<strong>%s</strong>) does not match expected name syntax: <strong>%s</strong>
+ErrorFilenameDosNotMatchDigitalProspectsPackageRules=The name of the module package (<strong>%s</strong>) does not match expected name syntax: <strong>%s</strong>
 ErrorDuplicateTrigger=Error, duplicate trigger name %s. Already loaded from %s.
 ErrorNoWarehouseDefined=Error, no warehouses defined.
 ErrorBadLinkSourceSetButBadValueForRef=The link you use is not valid. A 'source' for payment is defined, but value for 'ref' is not valid.
@@ -241,7 +241,7 @@ ErrorTooManyDifferentValueForSelectedGroupBy=Found too many different value (mor
 ErrorReplaceStringEmpty=Error, the string to replace into is empty
 # Warnings
 WarningParamUploadMaxFileSizeHigherThanPostMaxSize=Your PHP parameter upload_max_filesize (%s) is higher than PHP parameter post_max_size (%s). This is not a consistent setup.
-WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to Dolibarr. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
+WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to DigitalProspects. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
 WarningMandatorySetupNotComplete=Click here to setup mandatory parameters
 WarningEnableYourModulesApplications=Click here to enable your modules and applications
 WarningSafeModeOnCheckExecDir=Предупреждение, PHP <b>safe_mode</b> вариант находится на так команда должна храниться в каталог заявил на PHP <b>safe_mode_exec_dir</b> параметра.

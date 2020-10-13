@@ -1,8 +1,8 @@
 README (English)
 --------------------------------
 
-This directory contains samples of code to use Dolibarr business classes to build
-external interfaces that need to read/update data from/into Dolibarr.
+This directory contains samples of code to use DigitalProspects business classes to build
+external interfaces that need to read/update data from/into DigitalProspects.
 
-You can also have a look at the Dolibarr doxygen doc that describes all files and classes:
-http://www.dolibarr.org/html_doxygen/index.html
+You can also have a look at the DigitalProspects doxygen doc that describes all files and classes:
+http://www.DigitalProspects.org/html_doxygen/index.html

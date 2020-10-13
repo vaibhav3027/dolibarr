@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Add current page to bookmarks
 Bookmark=Záložka
 Bookmarks=Záložky
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Behaviour when a bookmark URL is selected
 CreateBookmark=Vytvoriť záložku
 SetHereATitleForLink=Nastavte názov pre záložku
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Použite externú http adresu URL alebo relatívnu adresu URL Dolibarr
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Použite externú http adresu URL alebo relatívnu adresu URL DigitalProspects
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Zvolte či sa odkaz na stránku má otvoriť na novej krate alebo nie 
 BookmarksManagement=Záložky riadenie

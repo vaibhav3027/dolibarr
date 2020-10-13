@@ -95,7 +95,7 @@ class Form
 	 * @param   string	$preselected    Value to show/edit (not used in this function)
 	 * @param	object	$object			Object
 	 * @param	boolean	$perm			Permission to allow button to edit parameter. Set it to 0 to have a not edited field.
-	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols', 'datepicker' ('day' do not work, don't know why), 'ckeditor:dolibarr_zzz:width:height:savemethod:1:rows:cols', 'select;xxx[:class]'...)
+	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols', 'datepicker' ('day' do not work, don't know why), 'ckeditor:DigitalProspects_zzz:width:height:savemethod:1:rows:cols', 'select;xxx[:class]'...)
 	 * @param	string	$moreparam		More param to add on a href URL.
 	 * @param   int     $fieldrequired  1 if we want to show field as mandatory using the "fieldrequired" CSS.
 	 * @param   int     $notabletag     1=Do not output table tags but output a ':', 2=Do not output table tags and no ':', 3=Do not output table tags but output a ' '
@@ -167,7 +167,7 @@ class Form
 	 * @param	string	$value			Value to show/edit
 	 * @param	object	$object			Object
 	 * @param	boolean	$perm			Permission to allow button to edit parameter
-	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols%', 'datepicker' ('day' do not work, don't know why), 'dayhour' or 'datepickerhour', 'ckeditor:dolibarr_zzz:width:height:savemethod:toolbarstartexpanded:rows:cols', 'select;xkey:xval,ykey:yval,...')
+	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols%', 'datepicker' ('day' do not work, don't know why), 'dayhour' or 'datepickerhour', 'ckeditor:DigitalProspects_zzz:width:height:savemethod:toolbarstartexpanded:rows:cols', 'select;xkey:xval,ykey:yval,...')
 	 * @param	string	$editvalue		When in edit mode, use this value as $value instead of value (for example, you can provide here a formated price instead of value). Use '' to use same than $value
 	 * @param	object	$extObject		External object
 	 * @param	mixed	$custommsg		String or Array of custom messages : eg array('success' => 'MyMessage', 'error' => 'MyMessage')
@@ -254,9 +254,9 @@ class Form
 				}
 				elseif (preg_match('/^ckeditor/', $typeofdata))
 				{
-					$tmp = explode(':', $typeofdata); // Example: ckeditor:dolibarr_zzz:width:height:savemethod:toolbarstartexpanded:rows:cols:uselocalbrowser
+					$tmp = explode(':', $typeofdata); // Example: ckeditor:DigitalProspects_zzz:width:height:savemethod:toolbarstartexpanded:rows:cols:uselocalbrowser
 					require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-					$doleditor = new DolEditor($htmlname, ($editvalue ? $editvalue : $value), ($tmp[2] ? $tmp[2] : ''), ($tmp[3] ? $tmp[3] : '100'), ($tmp[1] ? $tmp[1] : 'dolibarr_notes'), 'In', ($tmp[5] ? $tmp[5] : 0), (isset($tmp[8]) ? ($tmp[8] ?true:false) : true), true, ($tmp[6] ? $tmp[6] : '20'), ($tmp[7] ? $tmp[7] : '100'));
+					$doleditor = new DolEditor($htmlname, ($editvalue ? $editvalue : $value), ($tmp[2] ? $tmp[2] : ''), ($tmp[3] ? $tmp[3] : '100'), ($tmp[1] ? $tmp[1] : 'DigitalProspects_notes'), 'In', ($tmp[5] ? $tmp[5] : 0), (isset($tmp[8]) ? ($tmp[8] ?true:false) : true), true, ($tmp[6] ? $tmp[6] : '20'), ($tmp[7] ? $tmp[7] : '100'));
 					$ret .= $doleditor->Create(1);
 				}
 				if (empty($notabletag)) $ret .= '</td>';
@@ -322,7 +322,7 @@ class Form
 	 * @param   string	$fieldname		Name of the field
 	 * @param	object	$object			Object
 	 * @param	boolean	$perm			Permission to allow button to edit parameter. Set it to 0 to have a not edited field.
-	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols', 'datepicker' ('day' do not work, don't know why), 'ckeditor:dolibarr_zzz:width:height:savemethod:1:rows:cols', 'select;xxx[:class]'...)
+	 * @param	string	$typeofdata		Type of data ('string' by default, 'email', 'amount:99', 'numeric:99', 'text' or 'textarea:rows:cols', 'datepicker' ('day' do not work, don't know why), 'ckeditor:DigitalProspects_zzz:width:height:savemethod:1:rows:cols', 'select;xxx[:class]'...)
 	 * @param	string	$check			Same coe than $check parameter of GETPOST()
 	 * @param	string	$morecss		More CSS
 	 * @return	string   		      	HTML code for the edit of alternative language
@@ -394,7 +394,7 @@ class Form
 	 * @param	string	$value			Value to show/edit
 	 * @param	string	$htmlname		DIV ID (field name)
 	 * @param	int		$condition		Condition to edit
-	 * @param	string	$inputType		Type of input ('string', 'numeric', 'datepicker' ('day' do not work, don't know why), 'textarea:rows:cols', 'ckeditor:dolibarr_zzz:width:height:?:1:rows:cols', 'select:loadmethod:savemethod:buttononly')
+	 * @param	string	$inputType		Type of input ('string', 'numeric', 'datepicker' ('day' do not work, don't know why), 'textarea:rows:cols', 'ckeditor:DigitalProspects_zzz:width:height:?:1:rows:cols', 'select:loadmethod:savemethod:buttononly')
 	 * @param	string	$editvalue		When in edit mode, use this value as $value instead of value
 	 * @param	object	$extObject		External object
 	 * @param	mixed	$custommsg		String or Array of custom messages : eg array('success' => 'MyMessage', 'error' => 'MyMessage')
@@ -6178,7 +6178,7 @@ class Form
 			if (!$user->rights->societe->client->voir && !$user->socid) $sql .= " AND t.rowid = sc.fk_soc AND sc.fk_user = ".$user->id;
 		}
 		if ($objecttmp->filter) {	 // Syntax example "(t.ref:like:'SO-%') and (t.date_creation:<:'20160101')"
-			/*if (! DolibarrApi::_checkFilters($objecttmp->filter))
+			/*if (! DigitalProspectsApi::_checkFilters($objecttmp->filter))
 			{
 				throw new RestException(503, 'Error when validating parameter sqlfilters '.$objecttmp->filter);
 			}*/
@@ -6416,7 +6416,7 @@ class Form
 		global $conf, $langs;
 		global $delayedhtmlcontent;
 
-		// TODO Use an internal dolibarr component instead of select2
+		// TODO Use an internal DigitalProspects component instead of select2
 		if (empty($conf->global->MAIN_USE_JQUERY_MULTISELECT) && !defined('REQUIRE_JQUERY_MULTISELECT')) return '';
 
 		$out = '<select type="text" class="'.$htmlname.($morecss ? ' '.$morecss : '').'" '.($moreparam ? $moreparam.' ' : '').'name="'.$htmlname.'"></select>';
@@ -6518,7 +6518,7 @@ class Form
 		global $conf, $langs;
 		global $delayedhtmlcontent;
 
-		// TODO Use an internal dolibarr component instead of select2
+		// TODO Use an internal DigitalProspects component instead of select2
 		if (empty($conf->global->MAIN_USE_JQUERY_MULTISELECT) && !defined('REQUIRE_JQUERY_MULTISELECT')) return '';
 
 		$out = '<select type="text" class="'.$htmlname.($morecss ? ' '.$morecss : '').'" '.($moreparam ? $moreparam.' ' : '').'name="'.$htmlname.'"><option></option></select>';
@@ -6853,10 +6853,10 @@ class Form
 				$ways = $c->print_all_ways(' &gt;&gt; ', '', 0, 1); // $ways[0] = "ccc2 >> ccc2a >> ccc2a1" with html formated text
 				foreach ($ways as $way)
 				{
-					$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories"'.($c->color ? ' style="background: #'.$c->color.';"' : ' style="background: #aaa"').'>'.$way.'</li>';
+					$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories"'.($c->color ? ' style="background: #'.$c->color.';"' : ' style="background: #aaa"').'>'.$way.'</li>';
 				}
 			}
-			return '<div class="select2-container-multi-dolibarr" style="width: 90%;"><ul class="select2-choices-dolibarr">'.implode(' ', $toprint).'</ul></div>';
+			return '<div class="select2-container-multi-DigitalProspects" style="width: 90%;"><ul class="select2-choices-DigitalProspects">'.implode(' ', $toprint).'</ul></div>';
 		}
 
 		if ($rendermode == 0)
@@ -7652,7 +7652,7 @@ class Form
 					/**
 					 * @see https://gravatar.com/site/implement/images/php/
 					 */
-					global $dolibarr_main_url_root;
+					global $DigitalProspects_main_url_root;
 					$ret .= '<!-- Put link to gravatar -->';
 					//$defaultimg=urlencode(dol_buildpath($nophoto,3));
 					$defaultimg = 'mm';

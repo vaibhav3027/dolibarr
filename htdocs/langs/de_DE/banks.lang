@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Bank
 MenuBankCash=Banken | Kasse
 MenuVariousPayment=Sonstige Zahlungen
@@ -109,7 +109,7 @@ SocialContributionPayment=Zahlung von Sozialabgaben/Steuern
 BankTransfer=Überweisung
 BankTransfers=Überweisungen
 MenuBankInternalTransfer=interner Transfer
-TransferDesc=Von einem zum anderen Konto übertragen. Dolibarr wird zwei Buchungen erstellen - Debit in der Quell- und Credit im Zielkonto. (Identischer Betrag (bis auf das Vorzeichen), Beschreibung und Datum werden benutzt)
+TransferDesc=Von einem zum anderen Konto übertragen. DigitalProspects wird zwei Buchungen erstellen - Debit in der Quell- und Credit im Zielkonto. (Identischer Betrag (bis auf das Vorzeichen), Beschreibung und Datum werden benutzt)
 TransferFrom=von
 TransferTo=bis
 TransferFromToDone=Eine Überweisung <b>von %s nach %s iHv %s %s</b> wurde verbucht.

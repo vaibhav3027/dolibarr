@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Bezpečnostní kód
 NumberingShort=N°
 Tools=Nástroje
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Ahoj)__\n\n\n__(S pozdravem)__\n\n__USER_SIGN
 PredefinedMailContentContact=__(Ahoj)__\n\n\n__(S pozdravem)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Ahoj)__\n\n\n__(S pozdravem)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=Klepnutím na níže uvedený odkaz proveďte platbu, pokud ještě není hotovo.\n\n%s\n\n
-DemoDesc=Dolibarr je kompaktní ERP/CRM systém, který se  skládá z více funkčních modulů. Demo, které obsahuje všechny moduly vám nepředstaví všechny možnosti, protože v reálné situaci všechny moduly najednou používat nebudete.  Pro lepší a snadnější seznámení s celým systémem máte k dispozici několik demo profilů lépe vystihujících vaše požadavky. 
+DemoDesc=DigitalProspects je kompaktní ERP/CRM systém, který se  skládá z více funkčních modulů. Demo, které obsahuje všechny moduly vám nepředstaví všechny možnosti, protože v reálné situaci všechny moduly najednou používat nebudete.  Pro lepší a snadnější seznámení s celým systémem máte k dispozici několik demo profilů lépe vystihujících vaše požadavky. 
 ChooseYourDemoProfil=Vyberte demo profil, který nejlépe odpovídá vaší činnosti, nebo zaměření ...
 ChooseYourDemoProfilMore=... nebo vytvořit vlastní profil <br> (manuální výběr požadovaných modulů)
 DemoFundation=Spravovat nadaci, nebo neziskovou organizaci a její členy
@@ -177,10 +177,10 @@ SizeUnitpoint=bod
 BugTracker=Hlášení chyb
 SendNewPasswordDesc=Tento formulář umožňuje požádat o nové heslo. Bude zaslán na vaši e-mailovou adresu. <br> Změna se projeví až po kliknutí na potvrzovací odkaz v e-mailu. <br> Zkontrolujte doručenou poštu.
 BackToLoginPage=Zpět na přihlašovací stránku
-AuthenticationDoesNotAllowSendNewPassword=Režim ověřování je <b>%s.</b> <br> V tomto režimu Dolibarr nepozná, zda může změnit vaše heslo. <br> Obraťte se na správce systému, pokud chcete heslo změnit.
+AuthenticationDoesNotAllowSendNewPassword=Režim ověřování je <b>%s.</b> <br> V tomto režimu DigitalProspects nepozná, zda může změnit vaše heslo. <br> Obraťte se na správce systému, pokud chcete heslo změnit.
 EnableGDLibraryDesc=Nainstalujte nebo povolte GD knihovnu ve vaší PHP pro využití této možnosti
 ProfIdShortDesc=<b>Prof Id %s</b> je informace v závislosti na třetích stranách země. <br> Například pro země <b>%s,</b> je to kód <b>%s.</b>
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistiky součtu množství produktů / služeb
 StatsByNumberOfEntities=Statistiky počtu odesílajících subjektů (číslo faktury nebo objednávky ...)
 NumberOfProposals=Počet návrhů
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Zpráva o výdajích %s byla schválena.
 EMailTextHolidayValidated=Oprávnění %s bylo ověřeno.
 EMailTextHolidayApproved=Opustit požadavek %s byl schválen.
 ImportedWithSet=Import souboru dat
-DolibarrNotification=Automatické upozornění
+DigitalProspectsNotification=Automatické upozornění
 ResizeDesc=Zadejte novou šířku <b>nebo</b> novou výšku. Poměry budou uchovávány při změně velikosti ...
 NewLength=Nová šířka
 NewHeight=Nová výška

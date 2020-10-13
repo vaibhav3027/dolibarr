@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=Масови имейли
 EMailing=Масови имейли
 EMailings=Масови имейли
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Контакти с категории
 MailingModuleDescContactsByFunction=Контакти с длъжност
 MailingModuleDescEmailsFromFile=Имейли от файл
 MailingModuleDescEmailsFromUser=Имейли, въведени от потребител
-MailingModuleDescDolibarrUsers=Потребители с имейли
+MailingModuleDescDigitalProspectsUsers=Потребители с имейли
 MailingModuleDescThirdPartiesByCategories=Контрагенти (с категории)
 SendingFromWebInterfaceIsNotAllowed=Изпращането от уеб интерфейса не е позволено.
 

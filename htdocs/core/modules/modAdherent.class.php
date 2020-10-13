@@ -29,12 +29,12 @@
  *      \ingroup    member
  *      \brief      File descriptor or module Member
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 /**
  *  Class to describe and enable module Adherent
  */
-class modAdherent extends DolibarrModules
+class modAdherent extends DigitalProspectsModules
 {
 
     /**
@@ -54,8 +54,8 @@ class modAdherent extends DolibarrModules
         // Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         $this->description = "Management of members of a foundation or association";
-        // Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-        $this->version = 'dolibarr';
+        // Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+        $this->version = 'DigitalProspects';
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         $this->picto = 'member';
 
@@ -376,7 +376,7 @@ class modAdherent extends DolibarrModules
 
     /**
      *		Function called when module is enabled.
-     *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+     *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
      *		It also creates data directories
      *
      *      @param      string	$options    Options when enabling module ('', 'newboxdefonly', 'noboxes')

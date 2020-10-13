@@ -26,12 +26,12 @@
  * \ingroup agenda
  * \brief Trigger file for company - contactroles
  */
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 /**
  * Class of triggered functions for agenda module
  */
-class InterfaceContactRoles extends DolibarrTriggers
+class InterfaceContactRoles extends DigitalProspectsTriggers
 {
 
 	public $family = 'agenda';
@@ -43,7 +43,7 @@ class InterfaceContactRoles extends DolibarrTriggers
 	 *
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
 	 *
@@ -52,7 +52,7 @@ class InterfaceContactRoles extends DolibarrTriggers
 	public $picto = 'action';
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * Following properties may be set before calling trigger. The may be completed by this trigger to be used for writing the event into database:

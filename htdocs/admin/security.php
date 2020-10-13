@@ -42,7 +42,7 @@ $allow_disable_encryption = true;
  */
 if ($action == 'setgeneraterule')
 {
-	if (!dolibarr_set_const($db, 'USER_PASSWORD_GENERATED', $_GET["value"], 'chaine', 0, '', $conf->entity))
+	if (!DigitalProspects_set_const($db, 'USER_PASSWORD_GENERATED', $_GET["value"], 'chaine', 0, '', $conf->entity))
 	{
 		dol_print_error($db);
 	}
@@ -59,7 +59,7 @@ if ($action == 'activate_encrypt')
 
 	$db->begin();
 
-    dolibarr_set_const($db, "DATABASE_PWD_ENCRYPTED", "1", 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "DATABASE_PWD_ENCRYPTED", "1", 'chaine', 0, '', $conf->entity);
 
     $sql = "SELECT u.rowid, u.pass, u.pass_crypted";
     $sql .= " FROM ".MAIN_DB_PREFIX."user as u";
@@ -114,7 +114,7 @@ elseif ($action == 'disable_encrypt')
 	//Do not allow "disable encryption" as passwords cannot be decrypted
 	if ($allow_disable_encryption)
 	{
-		dolibarr_del_const($db, "DATABASE_PWD_ENCRYPTED", $conf->entity);
+		DigitalProspects_del_const($db, "DATABASE_PWD_ENCRYPTED", $conf->entity);
     }
 	header("Location: security.php");
     exit;
@@ -128,13 +128,13 @@ if ($action == 'activate_encryptdbpassconf')
 	    sleep(3); // Don't know why but we need to wait file is completely saved before making the reload. Even with flush and clearstatcache, we need to wait.
 
 	    // database value not required
-		//dolibarr_set_const($db, "MAIN_DATABASE_PWD_CONFIG_ENCRYPTED", "1");
+		//DigitalProspects_set_const($db, "MAIN_DATABASE_PWD_CONFIG_ENCRYPTED", "1");
 		header("Location: security.php");
 		exit;
 	}
 	else
 	{
-		setEventMessages($langs->trans('InstrucToEncodePass', dol_encode($dolibarr_main_db_pass)), null, 'warnings');
+		setEventMessages($langs->trans('InstrucToEncodePass', dol_encode($DigitalProspects_main_db_pass)), null, 'warnings');
 	}
 }
 elseif ($action == 'disable_encryptdbpassconf')
@@ -145,25 +145,25 @@ elseif ($action == 'disable_encryptdbpassconf')
 	    sleep(3); // Don't know why but we need to wait file is completely saved before making the reload. Even with flush and clearstatcache, we need to wait.
 
 		// database value not required
-		//dolibarr_del_const($db, "MAIN_DATABASE_PWD_CONFIG_ENCRYPTED",$conf->entity);
+		//DigitalProspects_del_const($db, "MAIN_DATABASE_PWD_CONFIG_ENCRYPTED",$conf->entity);
 		header("Location: security.php");
 		exit;
 	}
 	else
 	{
-		setEventMessages($langs->trans('InstrucToClearPass', $dolibarr_main_db_pass), null, 'warnings');
+		setEventMessages($langs->trans('InstrucToClearPass', $DigitalProspects_main_db_pass), null, 'warnings');
 	}
 }
 
 if ($action == 'activate_MAIN_SECURITY_DISABLEFORGETPASSLINK')
 {
-	dolibarr_set_const($db, "MAIN_SECURITY_DISABLEFORGETPASSLINK", '1', 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_SECURITY_DISABLEFORGETPASSLINK", '1', 'chaine', 0, '', $conf->entity);
 	header("Location: security.php");
 	exit;
 }
 elseif ($action == 'disable_MAIN_SECURITY_DISABLEFORGETPASSLINK')
 {
-	dolibarr_del_const($db, "MAIN_SECURITY_DISABLEFORGETPASSLINK", $conf->entity);
+	DigitalProspects_del_const($db, "MAIN_SECURITY_DISABLEFORGETPASSLINK", $conf->entity);
 	header("Location: security.php");
 	exit;
 }
@@ -183,7 +183,7 @@ if ($action == 'updatepattern')
     }
 
     if (!$patternInError) {
-	    dolibarr_set_const($db, "USER_PASSWORD_PATTERN", $pattern, 'chaine', 0, '', $conf->entity);
+	    DigitalProspects_set_const($db, "USER_PASSWORD_PATTERN", $pattern, 'chaine', 0, '', $conf->entity);
 	    setEventMessages($langs->trans("SetupSaved"), null, 'mesgs');
 	    header("Location: security.php");
 	    exit;
@@ -450,7 +450,7 @@ print '</tr>';
 print '<tr class="oddeven">';
 print '<td colspan="3">'.$langs->trans("MainDbPasswordFileConfEncrypted").'</td>';
 print '<td align="center" width="60">';
-if (preg_match('/crypted:/i', $dolibarr_main_db_pass) || !empty($dolibarr_main_db_encrypted_pass))
+if (preg_match('/crypted:/i', $DigitalProspects_main_db_pass) || !empty($DigitalProspects_main_db_encrypted_pass))
 {
 	print img_picto($langs->trans("Active"), 'tick');
 }
@@ -458,18 +458,18 @@ if (preg_match('/crypted:/i', $dolibarr_main_db_pass) || !empty($dolibarr_main_d
 print '</td>';
 
 print '<td align="center" width="100">';
-if (empty($dolibarr_main_db_pass) && empty($dolibarr_main_db_encrypted_pass))
+if (empty($DigitalProspects_main_db_pass) && empty($DigitalProspects_main_db_encrypted_pass))
 {
 	$langs->load("errors");
 	print img_warning($langs->trans("WarningPassIsEmpty"));
 }
 else
 {
-	if (empty($dolibarr_main_db_encrypted_pass))
+	if (empty($DigitalProspects_main_db_encrypted_pass))
 	{
 		print '<a href="security.php?action=activate_encryptdbpassconf">'.$langs->trans("Activate").'</a>';
 	}
-	if (!empty($dolibarr_main_db_encrypted_pass))
+	if (!empty($DigitalProspects_main_db_encrypted_pass))
 	{
 		print '<a href="security.php?action=disable_encryptdbpassconf">'.$langs->trans("Disable").'</a>';
 	}

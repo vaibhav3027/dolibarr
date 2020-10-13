@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banka
 MenuBankCash=Banky | Hotovost
 MenuVariousPayment=Různé platby
@@ -109,7 +109,7 @@ SocialContributionPayment=Social/fiscal tax payment
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Internal transfer
-TransferDesc=Převod z jednoho účtu na jiný, Dolibarr zapíše dva záznamy (debet na zdrojovém účtu a kredit na cílový účet). Pro tuto transakci bude použita stejná částka (kromě znaménka), štítek a datum)
+TransferDesc=Převod z jednoho účtu na jiný, DigitalProspects zapíše dva záznamy (debet na zdrojovém účtu a kredit na cílový účet). Pro tuto transakci bude použita stejná částka (kromě znaménka), štítek a datum)
 TransferFrom=Z
 TransferTo=Na
 TransferFromToDone=Převod z <b>%s</b> na <b>%s</b> %s <b>%s</b> byl zaznamenán.

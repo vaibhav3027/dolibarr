@@ -129,8 +129,8 @@ echo $this->control->tpl['ajax_selectcountry'];
 </tr>
 
 <tr>
-	<td><?php echo $langs->trans("DolibarrLogin"); ?></td>
-	<td colspan="3"><?php echo $this->control->tpl['dolibarr_user']; ?></td>
+	<td><?php echo $langs->trans("DigitalProspectsLogin"); ?></td>
+	<td colspan="3"><?php echo $this->control->tpl['DigitalProspects_user']; ?></td>
 </tr>
 
 <tr>

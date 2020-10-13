@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nei, farið fram á villu
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=Tvöfalt gildi í einstakri sviði
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Gat ekki fundið <b>notandann %s </b> í Dolibarr gagnagrunninum.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Gat ekki fundið <b>notandann %s </b> í DigitalProspects gagnagrunninum.
 ErrorNoVATRateDefinedForSellerCountry=Villa, enginn VSK hlutfall er skilgreind fyrir% landsins.
 ErrorNoSocialContributionForSellerCountry=Error, no social/fiscal taxes type defined for country '%s'.
 ErrorFailedToSaveFile=Villa tókst að vista skrána.
@@ -90,7 +90,7 @@ RecordDeleted=Record deleted
 RecordGenerated=Record generated
 LevelOfFeature=Stig af lögun
 NotDefined=Ekki skilgreint
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Stjórnandi
 Undefined=Óskilgreint
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Gagnasafn tegund framkvæmdastjóri
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr hefur fundist tæknilega villu
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects hefur fundist tæknilega villu
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=Meiri upplýsingar
 TechnicalInformation=Technical information
 TechnicalID=Technical ID
 LineID=Line ID
 NotePublic=Ath (public)
 NotePrivate=Ath (einka)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr var skipulag að takmarka nákvæmni verði eining <b>í %s </b> brotum.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects var skipulag að takmarka nákvæmni verði eining <b>í %s </b> brotum.
 DoTest=Próf
 ToFilter=Sía
 NoFilter=No filter
@@ -475,8 +475,8 @@ Generate=Mynda
 Duration=Lengd
 TotalDuration=Samtals tímalengd
 Summary=Yfirlit
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Laus
 NotYetAvailable=Ekki enn í boði
@@ -703,7 +703,7 @@ MenuECM=Skjöl
 MenuAWStats=Awstats
 MenuMembers=Members
 MenuAgendaGoogle=Google dagskrá
-ThisLimitIsDefinedInSetup=Dolibarr takmörk (Valmynd heim-skipulag-öryggi): %s  KB, PHP takmörk: %s  Kb
+ThisLimitIsDefinedInSetup=DigitalProspects takmörk (Valmynd heim-skipulag-öryggi): %s  KB, PHP takmörk: %s  Kb
 NoFileFound=Engin skjöl sem vistuð eru í þessari möppu
 CurrentUserLanguage=Valið tungumál
 CurrentTheme=Núverandi þema
@@ -736,7 +736,7 @@ PrintContentArea=Sýna síðu til að prenta aðalefni area
 MenuManager=Menu manager
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Kerfi villa
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Kreditkort
 ValidatePayment=Validate payment
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Calendar
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

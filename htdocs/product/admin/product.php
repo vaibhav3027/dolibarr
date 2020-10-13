@@ -62,7 +62,7 @@ if ($conf->global->MAIN_FEATURES_LEVEL >= 2 || !empty($conf->global->$keyforpara
 
 // Clean param
 if (!empty($conf->global->PRODUIT_MULTIPRICES) && empty($conf->global->PRODUIT_MULTIPRICES_LIMIT)) {
-	dolibarr_set_const($db, 'PRODUIT_MULTIPRICES_LIMIT', 5, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, 'PRODUIT_MULTIPRICES_LIMIT', 5, 'chaine', 0, '', $conf->entity);
 }
 
 $error = 0;
@@ -77,7 +77,7 @@ include DOL_DOCUMENT_ROOT.'/core/actions_setmoduleoptions.inc.php';
 
 if ($action == 'setcodeproduct')
 {
-	if (dolibarr_set_const($db, "PRODUCT_CODEPRODUCT_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, "PRODUCT_CODEPRODUCT_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -90,12 +90,12 @@ if ($action == 'setcodeproduct')
 
 if ($action == 'other' && GETPOST('value_PRODUIT_LIMIT_SIZE') >= 0)
 {
-	$res = dolibarr_set_const($db, "PRODUIT_LIMIT_SIZE", GETPOST('value_PRODUIT_LIMIT_SIZE'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_LIMIT_SIZE", GETPOST('value_PRODUIT_LIMIT_SIZE'), 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 }
 if ($action == 'other' && GETPOST('value_PRODUIT_MULTIPRICES_LIMIT') > 0)
 {
-	$res = dolibarr_set_const($db, "PRODUIT_MULTIPRICES_LIMIT", GETPOST('value_PRODUIT_MULTIPRICES_LIMIT'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_MULTIPRICES_LIMIT", GETPOST('value_PRODUIT_MULTIPRICES_LIMIT'), 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 }
 if ($action == 'other')
@@ -107,45 +107,45 @@ if ($action == 'other')
 		{
 			if ($princingrules == 'PRODUCT_PRICE_UNIQ') // For this case, we disable entries manually
 			{
-				$res = dolibarr_set_const($db, 'PRODUIT_MULTIPRICES', 0, 'chaine', 0, '', $conf->entity);
-				$res = dolibarr_set_const($db, 'PRODUIT_CUSTOMER_PRICES_BY_QTY', 0, 'chaine', 0, '', $conf->entity);
-				$res = dolibarr_set_const($db, 'PRODUIT_CUSTOMER_PRICES', 0, 'chaine', 0, '', $conf->entity);
-				dolibarr_set_const($db, 'PRODUCT_PRICE_UNIQ', 1, 'chaine', 0, '', $conf->entity);
+				$res = DigitalProspects_set_const($db, 'PRODUIT_MULTIPRICES', 0, 'chaine', 0, '', $conf->entity);
+				$res = DigitalProspects_set_const($db, 'PRODUIT_CUSTOMER_PRICES_BY_QTY', 0, 'chaine', 0, '', $conf->entity);
+				$res = DigitalProspects_set_const($db, 'PRODUIT_CUSTOMER_PRICES', 0, 'chaine', 0, '', $conf->entity);
+				DigitalProspects_set_const($db, 'PRODUCT_PRICE_UNIQ', 1, 'chaine', 0, '', $conf->entity);
 			}
 			else
 			{
 				$multirule = explode('&', $princingrules);
 				foreach ($multirule as $rulesselected)
 				{
-					$res = dolibarr_set_const($db, $rulesselected, 1, 'chaine', 0, '', $conf->entity);
+					$res = DigitalProspects_set_const($db, $rulesselected, 1, 'chaine', 0, '', $conf->entity);
 				}
 			}
 		}
 		else	// We clear this mode
 		{
 			if (strpos($rule, '&') === false) {
-				$res = dolibarr_set_const($db, $rule, 0, 'chaine', 0, '', $conf->entity);
+				$res = DigitalProspects_set_const($db, $rule, 0, 'chaine', 0, '', $conf->entity);
 			}
 		}
 	}
 
 	$value = GETPOST('PRODUIT_SOUSPRODUITS', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_SOUSPRODUITS", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_SOUSPRODUITS", $value, 'chaine', 0, '', $conf->entity);
 
 	$value = GETPOST('activate_viewProdDescInForm', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_DESC_IN_FORM", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_DESC_IN_FORM", $value, 'chaine', 0, '', $conf->entity);
 
 	$value = GETPOST('activate_viewProdTextsInThirdpartyLanguage', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_TEXTS_IN_THIRDPARTY_LANGUAGE", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_TEXTS_IN_THIRDPARTY_LANGUAGE", $value, 'chaine', 0, '', $conf->entity);
 
 	$value = GETPOST('activate_mergePropalProductCard', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_PDF_MERGE_PROPAL", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_PDF_MERGE_PROPAL", $value, 'chaine', 0, '', $conf->entity);
 
 	$value = GETPOST('activate_usesearchtoselectproduct', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_USE_SEARCH_TO_SELECT", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_USE_SEARCH_TO_SELECT", $value, 'chaine', 0, '', $conf->entity);
 
 	$value = GETPOST('activate_useProdFournDesc', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUIT_FOURN_TEXTS", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUIT_FOURN_TEXTS", $value, 'chaine', 0, '', $conf->entity);
 
 	if ($value) {
 	    $sql_test = "SELECT count(desc_fourn) as cpt FROM ".MAIN_DB_PREFIX."product_fournisseur_price WHERE 1";
@@ -158,7 +158,7 @@ if ($action == 'other')
 	}
 
 	$value = GETPOST('activate_useProdSupplierPackaging', 'alpha');
-	$res = dolibarr_set_const($db, "PRODUCT_USE_SUPPLIER_PACKAGING", $value, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "PRODUCT_USE_SUPPLIER_PACKAGING", $value, 'chaine', 0, '', $conf->entity);
 	if ($value) {
 		$sql_test = "SELECT count(packaging) as cpt FROM ".MAIN_DB_PREFIX."product_fournisseur_price WHERE 1";
 		$resql = $db->query($sql_test);
@@ -226,14 +226,14 @@ if ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-		if ($conf->global->PRODUCT_ADDON_PDF == "$value") dolibarr_del_const($db, 'PRODUCT_ADDON_PDF', $conf->entity);
+		if ($conf->global->PRODUCT_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'PRODUCT_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 if ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "PRODUCT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "PRODUCT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -253,15 +253,15 @@ if ($action == 'set')
 {
 	$const = "PRODUCT_SPECIAL_".strtoupper(GETPOST('spe', 'alpha'));
 	$value = GETPOST('value');
-	if (GETPOST('value', 'alpha')) $res = dolibarr_set_const($db, $const, $value, 'chaine', 0, '', $conf->entity);
-	else $res = dolibarr_del_const($db, $const, $conf->entity);
+	if (GETPOST('value', 'alpha')) $res = DigitalProspects_set_const($db, $const, $value, 'chaine', 0, '', $conf->entity);
+	else $res = DigitalProspects_del_const($db, $const, $conf->entity);
 	if (!$res > 0) $error++;
 }
 
 //if ($action == 'other')
 //{
 //    $value = GETPOST('activate_units', 'alpha');
-//    $res = dolibarr_set_const($db, "PRODUCT_USE_UNITS", $value, 'chaine', 0, '', $conf->entity);
+//    $res = DigitalProspects_set_const($db, "PRODUCT_USE_UNITS", $value, 'chaine', 0, '', $conf->entity);
 //	if (! $res > 0) $error++;
 //}
 

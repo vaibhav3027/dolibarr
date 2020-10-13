@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banca
 MenuBankCash=Bănci | Casa
 MenuVariousPayment=Diverse plăţi
@@ -109,7 +109,7 @@ SocialContributionPayment=Plata taxe sociale sau fiscale și tva
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Transfer intern
-TransferDesc=La un transfer de la un cont la altul, Dolibarr va scrie două înregistrări (un debit în contul sursă și un credit în contul țintă). Aceeași sumă (cu excepția semnului), eticheta și data va fi utilizată pentru această tranzacție)
+TransferDesc=La un transfer de la un cont la altul, DigitalProspects va scrie două înregistrări (un debit în contul sursă și un credit în contul țintă). Aceeași sumă (cu excepția semnului), eticheta și data va fi utilizată pentru această tranzacție)
 TransferFrom=De la
 TransferTo=La
 TransferFromToDone=Un viramentr de la  <b>%s</b> la <b> %s </b>  de<b> %s</b> %s a fost creată.

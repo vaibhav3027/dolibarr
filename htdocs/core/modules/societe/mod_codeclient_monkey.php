@@ -46,10 +46,10 @@ class mod_codeclient_monkey extends ModeleThirdPartyCode
 	public $code_null; // Code facultatif
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	/**
 	 * @var int Automatic numbering
@@ -70,7 +70,7 @@ class mod_codeclient_monkey extends ModeleThirdPartyCode
 	{
 		$this->nom = "Monkey";
 		$this->name = "Monkey";
-		$this->version = "dolibarr";
+		$this->version = "DigitalProspects";
 		$this->code_null = 1;
 		$this->code_modifiable = 1;
 		$this->code_modifiable_invalide = 1;

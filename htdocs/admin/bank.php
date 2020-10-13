@@ -51,7 +51,7 @@ $type = 'bankaccount';
 
 // Order display of bank account
 if ($action == 'setbankorder') {
-    if (dolibarr_set_const($db, "BANK_SHOW_ORDER_OPTION", GETPOST('value', 'alpha'), 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, "BANK_SHOW_ORDER_OPTION", GETPOST('value', 'alpha'), 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -63,7 +63,7 @@ if ($action == 'setbankorder') {
 
 // Auto report last num releve on conciliate
 if ($action == 'setreportlastnumreleve') {
-    if (dolibarr_set_const($db, "BANK_REPORT_LAST_NUM_RELEVE", 1, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, "BANK_REPORT_LAST_NUM_RELEVE", 1, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -73,7 +73,7 @@ if ($action == 'setreportlastnumreleve') {
     }
 }
 elseif ($action == 'unsetreportlastnumreleve') {
-    if (dolibarr_set_const($db, "BANK_REPORT_LAST_NUM_RELEVE", 0, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, "BANK_REPORT_LAST_NUM_RELEVE", 0, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -85,7 +85,7 @@ elseif ($action == 'unsetreportlastnumreleve') {
 
 // Colorize movements
 if ($action == 'setbankcolorizemovement') {
-    if (dolibarr_set_const($db, "BANK_COLORIZE_MOVEMENT", 1, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, "BANK_COLORIZE_MOVEMENT", 1, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -95,7 +95,7 @@ if ($action == 'setbankcolorizemovement') {
     }
 }
 elseif ($action == 'unsetbankcolorizemovement') {
-    if (dolibarr_set_const($db, "BANK_COLORIZE_MOVEMENT", 0, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, "BANK_COLORIZE_MOVEMENT", 0, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -118,7 +118,7 @@ if ($actionsave)
         $color = trim(GETPOST('BANK_COLORIZE_MOVEMENT_COLOR'.$i, 'alpha'));
         if ($color == '-1') $color = '';
 
-        $res = dolibarr_set_const($db, 'BANK_COLORIZE_MOVEMENT_COLOR'.$i, $color, 'chaine', 0, '', $conf->entity);
+        $res = DigitalProspects_set_const($db, 'BANK_COLORIZE_MOVEMENT_COLOR'.$i, $color, 'chaine', 0, '', $conf->entity);
         if (!$res > 0) $error++;
         $i++;
     }
@@ -189,12 +189,12 @@ elseif ($action == 'del') {
     $ret = delDocumentModel($value, $type);
     if ($ret > 0) {
         if ($conf->global->BANKADDON_PDF == "$value")
-            dolibarr_del_const($db, 'BANKADDON_PDF', $conf->entity);
+            DigitalProspects_del_const($db, 'BANKADDON_PDF', $conf->entity);
     }
 }
 // Set default model
 elseif ($action == 'setdoc') {
-    if (dolibarr_set_const($db, "BANKADDON_PDF", $value, 'chaine', 0, '', $conf->entity)) {
+    if (DigitalProspects_set_const($db, "BANKADDON_PDF", $value, 'chaine', 0, '', $conf->entity)) {
         // The constant that was read before the new set
         // We therefore requires a variable to have a coherent view
         $conf->global->BANKADDON_PDF = $value;

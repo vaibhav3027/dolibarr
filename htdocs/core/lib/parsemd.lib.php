@@ -59,11 +59,11 @@ function dolMd2Html($content, $parser = 'parsedown', $replaceimagepath = null)
  * Function to parse MD content into ASCIIDOC
  *
  * @param	string	  $content			    MD content
- * @param   string    $parser               'dolibarr'
+ * @param   string    $parser               'DigitalProspects'
  * @param   string    $replaceimagepath     Replace path to image with another path. Exemple: ('doc/'=>'xxx/aaa/')
  * @return	string                          Parsed content
  */
-function dolMd2Asciidoc($content, $parser = 'dolibarr', $replaceimagepath = null)
+function dolMd2Asciidoc($content, $parser = 'DigitalProspects', $replaceimagepath = null)
 {
     if (is_array($replaceimagepath))
     {
@@ -74,7 +74,7 @@ function dolMd2Asciidoc($content, $parser = 'dolibarr', $replaceimagepath = null
             $content = preg_replace('/'.preg_quote($keytoreplace, '/').'/m', $valafter, $content);
         }
     }
-    //if ($parser == 'dolibarr')
+    //if ($parser == 'DigitalProspects')
     //{
         $content = preg_replace('/<!--.*-->/msU', '', $content);
     //}

@@ -805,7 +805,7 @@ abstract class CommonObject
 	 */
 	public function getLastMainDocLink($modulepart, $initsharekey = 0, $relativelink = 0)
 	{
-		global $user, $dolibarr_main_url_root;
+		global $user, $DigitalProspects_main_url_root;
 
 		if (empty($this->last_main_doc))
 		{
@@ -860,7 +860,7 @@ abstract class CommonObject
 			else return '';
 		}
 		// Define $urlwithroot
-		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 		// This is to use external domain name found into config file
 		//if (DOL_URL_ROOT && ! preg_match('/\/$/', $urlwithouturlroot) && ! preg_match('/^\//', DOL_URL_ROOT)) $urlwithroot=$urlwithouturlroot.'/'.DOL_URL_ROOT;
 		//else
@@ -6167,7 +6167,7 @@ abstract class CommonObject
 			if (!preg_match('/search_/', $keyprefix))		// If keyprefix is search_ or search_options_, we must just use a simple text field
 			{
 				require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-				$doleditor = new DolEditor($keyprefix.$key.$keysuffix, $value, '', 200, 'dolibarr_notes', 'In', false, false, false, ROWS_5, '90%');
+				$doleditor = new DolEditor($keyprefix.$key.$keysuffix, $value, '', 200, 'DigitalProspects_notes', 'In', false, false, false, ROWS_5, '90%');
 				$out = $doleditor->Create(1);
 			}
 			else
@@ -6180,7 +6180,7 @@ abstract class CommonObject
 			if (!preg_match('/search_/', $keyprefix))		// If keyprefix is search_ or search_options_, we must just use a simple text field
 			{
 				require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-				$doleditor = new DolEditor($keyprefix.$key.$keysuffix, $value, '', 200, 'dolibarr_notes', 'In', false, false, !empty($conf->fckeditor->enabled) && $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_5, '90%');
+				$doleditor = new DolEditor($keyprefix.$key.$keysuffix, $value, '', 200, 'DigitalProspects_notes', 'In', false, false, !empty($conf->fckeditor->enabled) && $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_5, '90%');
 				$out = $doleditor->Create(1);
 			}
 			else
@@ -6901,9 +6901,9 @@ abstract class CommonObject
 			{
 				$toprint = array();
 				foreach ($value_arr as $keyval=>$valueval) {
-					$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories" style="background: #aaa">'.$param['options'][$valueval].'</li>';
+					$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories" style="background: #aaa">'.$param['options'][$valueval].'</li>';
 				}
-				$value = '<div class="select2-container-multi-dolibarr" style="width: 90%;"><ul class="select2-choices-dolibarr">'.implode(' ', $toprint).'</ul></div>';
+				$value = '<div class="select2-container-multi-DigitalProspects" style="width: 90%;"><ul class="select2-choices-DigitalProspects">'.implode(' ', $toprint).'</ul></div>';
 			}
 		}
 		elseif ($type == 'chkbxlst')
@@ -6951,9 +6951,9 @@ abstract class CommonObject
 									$translabel = $langs->trans($obj->$field_toshow);
 								}
 								if ($translabel != $field_toshow) {
-									$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories" style="background: #aaa">'.dol_trunc($translabel, 18).'</li>';
+									$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories" style="background: #aaa">'.dol_trunc($translabel, 18).'</li>';
 								} else {
-									$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories" style="background: #aaa">'.$obj->$field_toshow.'</li>';
+									$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories" style="background: #aaa">'.$obj->$field_toshow.'</li>';
 								}
 							}
 						} else {
@@ -6962,14 +6962,14 @@ abstract class CommonObject
 								$translabel = $langs->trans($obj->{$InfoFieldList[1]});
 							}
 							if ($translabel != $obj->{$InfoFieldList[1]}) {
-								$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories" style="background: #aaa">'.dol_trunc($translabel, 18).'</li>';
+								$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories" style="background: #aaa">'.dol_trunc($translabel, 18).'</li>';
 							} else {
-								$toprint[] = '<li class="select2-search-choice-dolibarr noborderoncategories" style="background: #aaa">'.$obj->{$InfoFieldList[1]}.'</li>';
+								$toprint[] = '<li class="select2-search-choice-DigitalProspects noborderoncategories" style="background: #aaa">'.$obj->{$InfoFieldList[1]}.'</li>';
 							}
 						}
 					}
 				}
-				$value = '<div class="select2-container-multi-dolibarr" style="width: 90%;"><ul class="select2-choices-dolibarr">'.implode(' ', $toprint).'</ul></div>';
+				$value = '<div class="select2-container-multi-DigitalProspects" style="width: 90%;"><ul class="select2-choices-DigitalProspects">'.implode(' ', $toprint).'</ul></div>';
 			} else {
 				dol_syslog(get_class($this).'::showOutputField error '.$this->db->lasterror(), LOG_WARNING);
 			}

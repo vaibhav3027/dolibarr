@@ -998,7 +998,7 @@ class FormMail extends Form
 				}
 				else
 				{
-					if (!isset($this->ckeditortoolbar)) $this->ckeditortoolbar = 'dolibarr_notes';
+					if (!isset($this->ckeditortoolbar)) $this->ckeditortoolbar = 'DigitalProspects_notes';
 
 					// Editor wysiwyg
 					require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';

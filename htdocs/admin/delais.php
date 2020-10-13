@@ -178,21 +178,21 @@ if ($action == 'update')
     		{
     			if (GETPOST($delay['code']) != '')
     			{
-    				dolibarr_set_const($db, $delay['code'], GETPOST($delay['code']), 'chaine', 0, '', $conf->entity);
+    				DigitalProspects_set_const($db, $delay['code'], GETPOST($delay['code']), 'chaine', 0, '', $conf->entity);
     			}
     		}
     	}
 	}
 
-	dolibarr_set_const($db, "MAIN_DISABLE_METEO", $_POST["MAIN_DISABLE_METEO"], 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_USE_METEO_WITH_PERCENTAGE", GETPOST("MAIN_USE_METEO_WITH_PERCENTAGE"), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_DISABLE_METEO", $_POST["MAIN_DISABLE_METEO"], 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_USE_METEO_WITH_PERCENTAGE", GETPOST("MAIN_USE_METEO_WITH_PERCENTAGE"), 'chaine', 0, '', $conf->entity);
 
 	// For update value with percentage
 	$plus = '';
 	if (!empty($conf->global->MAIN_USE_METEO_WITH_PERCENTAGE)) $plus = '_PERCENTAGE';
 	// Update values
 	for ($i = 0; $i < 4; $i++) {
-    	if (isset($_POST['MAIN_METEO'.$plus.'_LEVEL'.$i])) dolibarr_set_const($db, 'MAIN_METEO'.$plus.'_LEVEL'.$i, GETPOST('MAIN_METEO'.$plus.'_LEVEL'.$i, 'int'), 'chaine', 0, '', $conf->entity);
+    	if (isset($_POST['MAIN_METEO'.$plus.'_LEVEL'.$i])) DigitalProspects_set_const($db, 'MAIN_METEO'.$plus.'_LEVEL'.$i, GETPOST('MAIN_METEO'.$plus.'_LEVEL'.$i, 'int'), 'chaine', 0, '', $conf->entity);
     }
 }
 

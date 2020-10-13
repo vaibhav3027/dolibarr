@@ -34,12 +34,12 @@ $langs->loadLangs(array('admin', 'fckeditor'));
 
 $action = GETPOST('action', 'alpha');
 // Possible modes are:
-// dolibarr_details
-// dolibarr_notes
-// dolibarr_readonly
-// dolibarr_mailings
+// DigitalProspects_details
+// DigitalProspects_notes
+// DigitalProspects_readonly
+// DigitalProspects_mailings
 // Full (not sure this one is used)
-$mode = GETPOST('mode') ?GETPOST('mode', 'alpha') : 'dolibarr_notes';
+$mode = GETPOST('mode') ?GETPOST('mode', 'alpha') : 'DigitalProspects_notes';
 
 if (!$user->admin) accessforbidden();
 
@@ -84,18 +84,18 @@ foreach ($modules as $const => $desc)
 {
     if ($action == 'activate_'.strtolower($const))
     {
-        dolibarr_set_const($db, "FCKEDITOR_ENABLE_".$const, "1", 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, "FCKEDITOR_ENABLE_".$const, "1", 'chaine', 0, '', $conf->entity);
         // Si fckeditor est active dans la description produit/service, on l'active dans les formulaires
         if ($const == 'PRODUCTDESC' && !empty($conf->global->PRODUIT_DESC_IN_FORM))
         {
-            dolibarr_set_const($db, "FCKEDITOR_ENABLE_DETAILS", "1", 'chaine', 0, '', $conf->entity);
+            DigitalProspects_set_const($db, "FCKEDITOR_ENABLE_DETAILS", "1", 'chaine', 0, '', $conf->entity);
         }
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
     }
     if ($action == 'disable_'.strtolower($const))
     {
-        dolibarr_del_const($db, "FCKEDITOR_ENABLE_".$const, $conf->entity);
+        DigitalProspects_del_const($db, "FCKEDITOR_ENABLE_".$const, $conf->entity);
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
     }
@@ -107,7 +107,7 @@ if (GETPOST('save', 'alpha'))
 
 	$fckeditor_skin = GETPOST('fckeditor_skin', 'alpha');
 	if (!empty($fckeditor_skin)) {
-		if (!dolibarr_set_const($db, 'FCKEDITOR_SKIN', $fckeditor_skin, 'chaine', 0, '', $conf->entity)) {
+		if (!DigitalProspects_set_const($db, 'FCKEDITOR_SKIN', $fckeditor_skin, 'chaine', 0, '', $conf->entity)) {
 			$error++;
 		}
 	} else {
@@ -116,7 +116,7 @@ if (GETPOST('save', 'alpha'))
 
 	$fckeditor_test = GETPOST('formtestfield');
     if (!empty($fckeditor_test)) {
-		if (!dolibarr_set_const($db, 'FCKEDITOR_TEST', $fckeditor_test, 'chaine', 0, '', $conf->entity)) {
+		if (!DigitalProspects_set_const($db, 'FCKEDITOR_TEST', $fckeditor_test, 'chaine', 0, '', $conf->entity)) {
 			$error++;
 		}
 	} else {
@@ -191,7 +191,7 @@ else
     show_skin(null, 1);
     print '<br>'."\n";
 
-    $listofmodes = array('dolibarr_mailings', 'dolibarr_notes', 'dolibarr_details', 'dolibarr_readonly', 'Full', 'Full_inline');
+    $listofmodes = array('DigitalProspects_mailings', 'DigitalProspects_notes', 'DigitalProspects_details', 'DigitalProspects_readonly', 'Full', 'Full_inline');
     $linkstomode = '';
     foreach ($listofmodes as $newmode)
     {
@@ -208,7 +208,7 @@ else
     if ($mode != 'Full_inline')
     {
         $uselocalbrowser = true;
-        $readonly = ($mode == 'dolibarr_readonly' ? 1 : 0);
+        $readonly = ($mode == 'DigitalProspects_readonly' ? 1 : 0);
         $editor = new DolEditor('formtestfield', isset($conf->global->FCKEDITOR_TEST) ? $conf->global->FCKEDITOR_TEST : 'Test', '', 200, $mode, 'In', true, $uselocalbrowser, 1, 120, 8, $readonly);
         $editor->Create();
     }

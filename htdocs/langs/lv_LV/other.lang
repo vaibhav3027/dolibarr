@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Drošības kods
 NumberingShort=N°
 Tools=Darbarīki
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Labdien)__\n\n\n__ (Ar cieņu) __\n\n__USER_S
 PredefinedMailContentContact=__(Labdien,)__\n\n\n__ (Ar cieņu) __\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Labdien,)__\n\n\n__ (Ar cieņu) __\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=Jūs varat noklikšķināt uz zemāk esošās saites, lai veiktu maksājumu, ja tas vēl nav izdarīts.\n\n%s\n\n
-DemoDesc=Dolibarr ir kompakts ERP / CRM, kas atbalsta vairākus biznesa moduļus. Demonstrācija, kas demonstrē visus moduļus, nav jēga, jo šis scenārijs nekad nenotiek (pieejami vairāki simti). Tātad, ir pieejami vairāki demo profili.
+DemoDesc=DigitalProspects ir kompakts ERP / CRM, kas atbalsta vairākus biznesa moduļus. Demonstrācija, kas demonstrē visus moduļus, nav jēga, jo šis scenārijs nekad nenotiek (pieejami vairāki simti). Tātad, ir pieejami vairāki demo profili.
 ChooseYourDemoProfil=Izvēlies demo profilu, kas vislabāk atbilst jūsu vajadzībām ...
 ChooseYourDemoProfilMore=... vai izveidojiet savu profilu <br> (manuālā moduļa izvēle)
 DemoFundation=Pārvaldīt nodibinājuma dalībniekus
@@ -177,10 +177,10 @@ SizeUnitpoint=punkts
 BugTracker=Kļūdu meklētājs
 SendNewPasswordDesc=Šī veidlapa ļauj pieprasīt jaunu paroli. Tas tiks nosūtīts uz jūsu e-pasta adresi. <br> Mainīšana stāsies spēkā pēc tam, kad noklikšķināsit uz e-pasta ziņojuma apstiprinājuma saites. <br> Pārbaudiet savu iesūtni.
 BackToLoginPage=Atpakaļ uz autorizācijas lapu
-AuthenticationDoesNotAllowSendNewPassword=Autentifikācijas režīms ir <b>%s.</b> <br> Šajā režīmā, Dolibarr nevar zināt, ne nomainīt savu paroli. <br> Sazinieties ar sistēmas administratoru, ja jūs vēlaties mainīt savu paroli.
+AuthenticationDoesNotAllowSendNewPassword=Autentifikācijas režīms ir <b>%s.</b> <br> Šajā režīmā, DigitalProspects nevar zināt, ne nomainīt savu paroli. <br> Sazinieties ar sistēmas administratoru, ja jūs vēlaties mainīt savu paroli.
 EnableGDLibraryDesc=Instalējiet vai iespējojiet GD bibliotēku savā PHP instalācijā, lai izmantotu šo opciju.
 ProfIdShortDesc=<b>Prof ID %s</b> ir informācija, atkarībā no trešās puses valstīm. <br> Piemēram, attiecībā uz valstu <b>%s,</b> tas ir kods <b>%s.</b>
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Pārskatu subjektu skaita statistika (rēķina numurs vai pasūtījums ...)
 NumberOfProposals=Priekšlikumu skaits
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Izdevumu pārskats %s ir apstiprināts.
 EMailTextHolidayValidated=Atstāt pieprasījumu %s ir apstiprināta.
 EMailTextHolidayApproved=Atstāt pieprasījumu %s ir apstiprināts.
 ImportedWithSet=Ievešanas datu kopu
-DolibarrNotification=Automātiska paziņošana
+DigitalProspectsNotification=Automātiska paziņošana
 ResizeDesc=Ievadiet jaunu platumu <b>vai</b> jaunu augstumu. Attiecība būs jātur laikā izmēru maiņas ...
 NewLength=Jauns platums
 NewHeight=Jauns augstums

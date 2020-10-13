@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Lisa see leht järjehoidjatesse
 Bookmark=Järjehoidja
 Bookmarks=Järjehoidjad
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Käitumine URLil klõpsamise puhul
 CreateBookmark=Loo järjehoidja
 SetHereATitleForLink=Sea järjehoidja pealkiri
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Kasuta välise lehe URLi või Dolibarri sisest linki
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Kasuta välise lehe URLi või DigitalProspectsi sisest linki
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Choose if linked page must open in new window or not
 BookmarksManagement=Järjehoidjate haldamine

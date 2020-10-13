@@ -38,8 +38,8 @@ require_once '../../main.inc.php';
 
 // Define javascript type
 top_httphead('text/javascript; charset=UTF-8');
-// Important: Following code is to avoid page request by browser and PHP CPU at each Dolibarr page access.
-if (empty($dolibarr_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
+// Important: Following code is to avoid page request by browser and PHP CPU at each DigitalProspects page access.
+if (empty($DigitalProspects_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
 else header('Cache-Control: no-cache');
 
 
@@ -106,7 +106,7 @@ $langs->trans("SaturdayMin")
 );
 
 ?>
-// Javascript libraries for Dolibarr ERP CRM (https://www.dolibarr.org)
+// Javascript libraries for DigitalProspects ERP CRM (https://www.DigitalProspects.org)
 
 // For jQuery date picker
 var tradMonths = <?php echo json_encode($tradMonths) ?>;
@@ -223,7 +223,7 @@ function dpChangeDay(dateFieldID,format)
  * (2 digits) Month | MM (2 digits) Day of Month | dd (2 digits) Hour (1-12) |
  * hh (2 digits) Hour (0-23) | HH (2 digits) Minute | mm (2 digits) Second | ss
  * (2 digits) Author: Laurent Destailleur Author: Matelli (see
- * http://matelli.fr/showcases/patchs-dolibarr/update-date-input-in-action-form.html)
+ * http://matelli.fr/showcases/patchs-DigitalProspects/update-date-input-in-action-form.html)
  * Licence: GPL
  * ==================================================================
  */
@@ -781,7 +781,7 @@ function confirmConstantAction(action, url, code, input, box, entity, yesButton,
                         }
                     }
                 })
-                .addClass( "ui-widget ui-widget-content ui-corner-left dolibarrcombobox" );
+                .addClass( "ui-widget ui-widget-content ui-corner-left DigitalProspectscombobox" );
 
             input.data("ui-autocomplete")._renderItem = function( ul, item ) {
                 return $("<li>")

@@ -103,7 +103,7 @@ function pdf_getInstance($format = '', $metric = 'mm', $pagetype = 'P')
 		define('PDF_CREATOR', 'TCPDF');
 		define('PDF_AUTHOR', 'TCPDF');
 		define('PDF_HEADER_TITLE', 'TCPDF Example');
-		define('PDF_HEADER_STRING', "by Dolibarr ERP CRM");
+		define('PDF_HEADER_STRING', "by DigitalProspects ERP CRM");
 		define('PDF_UNIT', 'mm');
 		define('PDF_MARGIN_HEADER', 5);
 		define('PDF_MARGIN_FOOTER', 10);
@@ -911,7 +911,7 @@ function pdf_pagefoot(&$pdf, $outputlangs, $paramfreetext, $fromcompany, $marge_
 		$newfreetext = make_substitutions($conf->global->$paramfreetext, $substitutionarray, $outputlangs);
 
 		// Make a change into HTML code to allow to include images from medias directory.
-		// <img alt="" src="/dolibarr_dev/htdocs/viewimage.php?modulepart=medias&amp;entity=1&amp;file=image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
+		// <img alt="" src="/DigitalProspects_dev/htdocs/viewimage.php?modulepart=medias&amp;entity=1&amp;file=image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
 		// become
 		// <img alt="" src="'.DOL_DATA_ROOT.'/medias/image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
 		$newfreetext = preg_replace('/(<img.*src=")[^\"]*viewimage\.php[^\"]*modulepart=medias[^\"]*file=([^\"]*)("[^\/]*\/>)/', '\1file:/'.DOL_DATA_ROOT.'/medias/\2\3', $newfreetext);
@@ -2056,7 +2056,7 @@ function pdf_getlinetotalwithtax($object, $i, $outputlangs, $hidedetails = 0)
  *	@param	string		$type				Type
  *  @param  Translate	$outputlangs		Object langs for output
  * 	@return	integer
- *  @deprecated Not used by Dolibarr core, so will be removed.
+ *  @deprecated Not used by DigitalProspects core, so will be removed.
  */
 function pdf_getTotalQty($object, $type, $outputlangs)
 {

@@ -22,7 +22,7 @@
  *  \brief      Tab for documents linked to MyObject
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 require '../main.inc.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/company.lib.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/files.lib.php';

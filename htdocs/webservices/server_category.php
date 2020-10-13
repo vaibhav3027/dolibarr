@@ -18,7 +18,7 @@
 
 /**
  *       \file       htdocs/webservices/server_category.php
- *       \brief      File that is entry point to call Dolibarr WebServices
+ *       \brief      File that is entry point to call DigitalProspects WebServices
  */
 
 if (!defined("NOCSRFCHECK"))    define("NOCSRFCHECK", '1');
@@ -29,13 +29,13 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/ws.lib.php';
 require_once DOL_DOCUMENT_ROOT."/categories/class/categorie.class.php";
 
 
-dol_syslog("Call Dolibarr webservices interfaces");
+dol_syslog("Call DigitalProspects webservices interfaces");
 
 // Enable and test if module web services is enabled
 if (empty($conf->global->MAIN_MODULE_WEBSERVICES))
 {
 	$langs->load("admin");
-	dol_syslog("Call Dolibarr webservices interfaces with module webservices disabled");
+	dol_syslog("Call DigitalProspects webservices interfaces with module webservices disabled");
 	print $langs->trans("WarningModuleNotActive", 'WebServices').'.<br><br>';
 	print $langs->trans("ToActivateModule");
 	exit;
@@ -45,8 +45,8 @@ if (empty($conf->global->MAIN_MODULE_WEBSERVICES))
 $server = new nusoap_server();
 $server->soap_defencoding = 'UTF-8';
 $server->decode_utf8 = false;
-$ns = 'http://www.dolibarr.org/ns/';
-$server->configureWSDL('WebServicesDolibarrCategorie', $ns);
+$ns = 'http://www.DigitalProspects.org/ns/';
+$server->configureWSDL('WebServicesDigitalProspectsCategorie', $ns);
 $server->wsdl->schemaTargetNamespace = $ns;
 
 
@@ -58,7 +58,7 @@ $server->wsdl->addComplexType(
 	'all',
 	'',
 	array(
-		'dolibarrkey' => array('name'=>'dolibarrkey', 'type'=>'xsd:string'),
+		'DigitalProspectskey' => array('name'=>'DigitalProspectskey', 'type'=>'xsd:string'),
 		'sourceapplication' => array('name'=>'sourceapplication', 'type'=>'xsd:string'),
 		'login' => array('name'=>'login', 'type'=>'xsd:string'),
 		'password' => array('name'=>'password', 'type'=>'xsd:string'),

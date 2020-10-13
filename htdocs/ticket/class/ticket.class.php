@@ -1232,7 +1232,7 @@ class Ticket extends CommonObject
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $morecss = '', $save_lastsearch_value = -1)
 	{
 		global $db, $conf, $langs;
-		global $dolibarr_main_authentication, $dolibarr_main_demo;
+		global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
 		global $menumanager;
 
 		if (!empty($conf->dol_no_mouse_hover)) $notooltip = 1; // Force disable tooltips
@@ -2044,7 +2044,7 @@ class Ticket extends CommonObject
 	 */
 	public function messageSend($subject, $texte)
 	{
-		global $conf, $langs, $mysoc, $dolibarr_main_url_root;
+		global $conf, $langs, $mysoc, $DigitalProspects_main_url_root;
 
 		$langs->load("other");
 
@@ -2065,9 +2065,9 @@ class Ticket extends CommonObject
 				if (dol_strlen($sendto))
 				{
 					include_once DOL_DOCUMENT_ROOT.'/core/lib/files.lib.php';
-					$application = ($conf->global->MAIN_APPLICATION_TITLE ? $conf->global->MAIN_APPLICATION_TITLE : 'Dolibarr ERP/CRM');
+					$application = ($conf->global->MAIN_APPLICATION_TITLE ? $conf->global->MAIN_APPLICATION_TITLE : 'DigitalProspects ERP/CRM');
 
-					$subject = '['.$application.'] '.$langs->transnoentitiesnoconv("DolibarrNotification");
+					$subject = '['.$application.'] '.$langs->transnoentitiesnoconv("DigitalProspectsNotification");
 
 					$message = $langs->transnoentities("YouReceiveMailBecauseOfNotification", $application, $mysoc->name)."\n";
 					$message .= $langs->transnoentities("YouReceiveMailBecauseOfNotification2", $application, $mysoc->name)."\n";
@@ -2093,7 +2093,7 @@ class Ticket extends CommonObject
 							break;
 					}
 					// Define $urlwithroot
-					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 					$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 					//$urlwithroot=DOL_MAIN_URL_ROOT;                        // This is to use same domain name than current
 					if ($link) {

@@ -861,8 +861,8 @@ class BonPrelevement extends CommonObject
 	 *	Create a direct debit order or a credit transfer order
 	 *  TODO delete params banque and agence when not necessary
 	 *
-	 *	@param 	int		$banque			dolibarr mysoc bank
-	 *	@param	int		$agence			dolibarr mysoc bank office (guichet)
+	 *	@param 	int		$banque			DigitalProspects mysoc bank
+	 *	@param	int		$agence			DigitalProspects mysoc bank office (guichet)
 	 *	@param	string	$mode			real=do action, simu=test only
 	 *  @param	string	$format			FRST, RCUR or ALL
 	 *  @param  string  $executiondate	Date to execute the transfer

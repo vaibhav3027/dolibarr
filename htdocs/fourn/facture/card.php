@@ -2113,7 +2113,7 @@ if ($action == 'create')
 	print '<td>';
 	$note_public = $object->getDefaultCreateValueFor('note_public');
 	if (empty($note_public))$note_public = $objectsrc->note_public;
-	$doleditor = new DolEditor('note_public', (GETPOSTISSET('note_public') ?GETPOST('note_public', 'none') : $note_public), '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_public', (GETPOSTISSET('note_public') ?GETPOST('note_public', 'none') : $note_public), '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td>';
     // print '<td><textarea name="note" wrap="soft" cols="60" rows="'.ROWS_5.'"></textarea></td>';
@@ -2125,7 +2125,7 @@ if ($action == 'create')
 	$note_private = $object->getDefaultCreateValueFor('note_private');
 	if (empty($note_private))$note_private = $objectsrc->note_private;
 
-	$doleditor = new DolEditor('note_private', (GETPOSTISSET('note_private') ?GETPOST('note_private', 'none') : $note_private), '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_private', (GETPOSTISSET('note_private') ?GETPOST('note_private', 'none') : $note_private), '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td>';
 	// print '<td><textarea name="note" wrap="soft" cols="60" rows="'.ROWS_5.'"></textarea></td>';

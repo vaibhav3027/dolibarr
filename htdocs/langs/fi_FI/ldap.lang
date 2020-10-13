@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ldap
+# DigitalProspects language file - Source file is en_US - ldap
 YouMustChangePassNextLogon=Salasana <b>käyttäjän %s verkkotunnuksen %s</b> on muuttunut.
 UserMustChangePassNextLogon=Käyttäjän on muutettava salasana verkkotunnuksen %s
 LDAPInformationsForThisContact=Tiedot LDAP-tietokannan tämä yhteystieto
@@ -22,6 +22,6 @@ GroupSynchronized=Ryhmän synkronoidaan
 MemberSynchronized=Jäsen synkronoidaan
 MemberTypeSynchronized=Member type synchronized
 ContactSynchronized=Yhteystiedot synkronoidaan
-ForceSynchronize=Force synkronointi Dolibarr -> LDAP
+ForceSynchronize=Force synkronointi DigitalProspects -> LDAP
 ErrorFailedToReadLDAP=Lukeminen epäonnistui LDAP-tietokantaan. Tarkista LDAP-moduulin asennus ja tietokannan saavutettavuus.
 PasswordOfUserInLDAP=Password of user in LDAP

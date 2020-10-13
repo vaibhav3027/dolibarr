@@ -39,7 +39,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/commonobject.class.php';
 require_once DOL_DOCUMENT_ROOT.'/user/class/usergroup.class.php';
 
 /**
- *	Class to manage Dolibarr users
+ *	Class to manage DigitalProspects users
  */
 class User extends CommonObject
 {
@@ -1981,7 +1981,7 @@ class User extends CommonObject
 	{
         // phpcs:enable
 		global $conf, $langs;
-		global $dolibarr_main_url_root;
+		global $DigitalProspects_main_url_root;
 
 		require_once DOL_DOCUMENT_ROOT.'/core/class/CMailFile.class.php';
 
@@ -2015,7 +2015,7 @@ class User extends CommonObject
 		$subject = $outputlangs->transnoentitiesnoconv("SubjectNewPassword", $appli);
 
 		// Define $urlwithroot
-		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 		$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 
 		if (!$changelater)
@@ -2327,7 +2327,7 @@ class User extends CommonObject
 	public function getNomUrl($withpictoimg = 0, $option = '', $infologin = 0, $notooltip = 0, $maxlen = 24, $hidethirdpartylogo = 0, $mode = '', $morecss = '', $save_lastsearch_value = -1)
 	{
 		global $langs, $conf, $db, $hookmanager, $user;
-		global $dolibarr_main_authentication, $dolibarr_main_demo;
+		global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
 		global $menumanager;
 
         if (!$user->rights->user->user->lire && $user->id != $this->id) $option = 'nolink';
@@ -2370,7 +2370,7 @@ class User extends CommonObject
 			$label .= '<br><u>'.$langs->trans("Session").'</u>';
 			$label .= '<br><b>'.$langs->trans("IPAddress").'</b>: '.$_SERVER["REMOTE_ADDR"];
 			if (!empty($conf->global->MAIN_MODULE_MULTICOMPANY)) $label .= '<br><b>'.$langs->trans("ConnectedOnMultiCompany").':</b> '.$conf->entity.' (user entity '.$this->entity.')';
-			$label .= '<br><b>'.$langs->trans("AuthenticationMode").':</b> '.$_SESSION["dol_authmode"].(empty($dolibarr_main_demo) ? '' : ' (demo)');
+			$label .= '<br><b>'.$langs->trans("AuthenticationMode").':</b> '.$_SESSION["dol_authmode"].(empty($DigitalProspects_main_demo) ? '' : ' (demo)');
 			$label .= '<br><b>'.$langs->trans("ConnectedSince").':</b> '.dol_print_date($this->datelastlogin, "dayhour", 'tzuser');
 			$label .= '<br><b>'.$langs->trans("PreviousConnexion").':</b> '.dol_print_date($this->datepreviouslogin, "dayhour", 'tzuser');
 			$label .= '<br><b>'.$langs->trans("CurrentTheme").':</b> '.$conf->theme;
@@ -2637,7 +2637,7 @@ class User extends CommonObject
 				if (empty($conf->global->MAIN_SECURITY_HASH_ALGO))
 				{
 					if ($this->pass_indatabase_crypted && !empty($conf->global->LDAP_FIELD_PASSWORD_CRYPTED)) {
-						$info[$conf->global->LDAP_FIELD_PASSWORD_CRYPTED] = dol_hash($this->pass_indatabase_crypted, 5); // Create OpenLDAP MD5 password from Dolibarr MD5 password
+						$info[$conf->global->LDAP_FIELD_PASSWORD_CRYPTED] = dol_hash($this->pass_indatabase_crypted, 5); // Create OpenLDAP MD5 password from DigitalProspects MD5 password
 					}
 				}
 			}
@@ -2710,7 +2710,7 @@ class User extends CommonObject
 		$this->ref = 'SPECIMEN';
 		$this->specimen = 1;
 
-		$this->lastname = 'DOLIBARR';
+		$this->lastname = 'DigitalProspects';
 		$this->firstname = 'SPECIMEN';
 		$this->gender = 'man';
 		$this->note_public = 'This is a note public';
@@ -2858,7 +2858,7 @@ class User extends CommonObject
 	 *  @param	Object	$ldapuser	Ladp User
 	 *  @return int  				<0 if KO, >0 if OK
 	 */
-	public function update_ldap2dolibarr(&$ldapuser)
+	public function update_ldap2DigitalProspects(&$ldapuser)
 	{
         // phpcs:enable
 		// TODO: Voir pourquoi le update met à jour avec toutes les valeurs vide (global $user écrase ?)
@@ -2885,7 +2885,7 @@ class User extends CommonObject
 
 		$result = $this->update($user);
 
-		dol_syslog(get_class($this)."::update_ldap2dolibarr result=".$result, LOG_DEBUG);
+		dol_syslog(get_class($this)."::update_ldap2DigitalProspects result=".$result, LOG_DEBUG);
 
 		return $result;
 	}

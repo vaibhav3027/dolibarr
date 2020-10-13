@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Hatalı istek yok
 ErrorServiceUnavailableTryLater=Hizmet şu anda kullanılamıyor. Daha sonra tekrar deneyin.
 ErrorDuplicateField=Benzersiz bir alanda yinelenen değer
 ErrorSomeErrorWereFoundRollbackIsDone=Bazı hatalar bulundu. Değişiklikler geri alındı.
-ErrorConfigParameterNotDefined=<b>%s</b> parametresi Dolibarr yapılandırma dosyası <b>conf.php</b>'de tanımlanmadı.
-ErrorCantLoadUserFromDolibarrDatabase=Dolibarr veritabanında kullanıcı <b>%s</b> bulunamadı.
+ErrorConfigParameterNotDefined=<b>%s</b> parametresi DigitalProspects yapılandırma dosyası <b>conf.php</b>'de tanımlanmadı.
+ErrorCantLoadUserFromDigitalProspectsDatabase=DigitalProspects veritabanında kullanıcı <b>%s</b> bulunamadı.
 ErrorNoVATRateDefinedForSellerCountry=Hata, ülke '%s' için herhangi bir KDV oranı tanımlanmamış.
 ErrorNoSocialContributionForSellerCountry=Hata, '%s' ülkesi için sosyal/mali vergi tipi tanımlanmamış.
 ErrorFailedToSaveFile=Hata, dosya kaydedilemedi.
@@ -90,7 +90,7 @@ RecordDeleted=Kayıt silindi
 RecordGenerated=Kayıt oluşturuldu
 LevelOfFeature=Özellik düzeyleri
 NotDefined=Tanımlanmamış
-DolibarrInHttpAuthenticationSoPasswordUseless=<b>conf.php</b> yapılandırma dosyasındaki Dolibarr kimlik doğrulama modu <b>%s</b> olarak ayarlanmış.<br>Bu demektir ki; veritabanı parolası Dolibarr dışıdır, yani bu alanı değiştirmek hiçbir etki yaratmaz.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=<b>conf.php</b> yapılandırma dosyasındaki DigitalProspects kimlik doğrulama modu <b>%s</b> olarak ayarlanmış.<br>Bu demektir ki; veritabanı parolası DigitalProspects dışıdır, yani bu alanı değiştirmek hiçbir etki yaratmaz.
 Administrator=Yönetici
 Undefined=Tanımlanmamış
 PasswordForgotten=Parolanızı mı unuttunuz?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Veritabanı türü yöneticisi
 RequestLastAccessInError=Son veritabanı erişim isteği hatası
 ReturnCodeLastAccessInError=Son veritabanı erişim isteği hata kodunu göster
 InformationLastAccessInError=Son veritabanı erişim isteği hatası bilgisi
-DolibarrHasDetectedError=Dolibarr teknik bir hata algıladı
-YouCanSetOptionDolibarrMainProdToZero=Daha fazla bilgi almak için log dosyasını okuyabilir veya $dolibarr_main_prod seçeneğini '0' olarak ayarlayabilirsiniz.
-InformationToHelpDiagnose=Bu bilgi sorun tespiti amaçları için yararlı olabilir (bu tür bildirimleri kapatmak için $dolibarr_main_prod seçeneğini '1' olarak ayarlayabilirsiniz)
+DigitalProspectsHasDetectedError=DigitalProspects teknik bir hata algıladı
+YouCanSetOptionDigitalProspectsMainProdToZero=Daha fazla bilgi almak için log dosyasını okuyabilir veya $DigitalProspects_main_prod seçeneğini '0' olarak ayarlayabilirsiniz.
+InformationToHelpDiagnose=Bu bilgi sorun tespiti amaçları için yararlı olabilir (bu tür bildirimleri kapatmak için $DigitalProspects_main_prod seçeneğini '1' olarak ayarlayabilirsiniz)
 MoreInformation=Daha fazla bilgi
 TechnicalInformation=Teknik bilgi
 TechnicalID=Teknik Kimlik
 LineID=Line ID
 NotePublic=Not (genel)
 NotePrivate=Not (özel)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr birim fiyatlar için hassasiyeti <b>%s</b> ondalık olarak sınırlandırmıştır.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects birim fiyatlar için hassasiyeti <b>%s</b> ondalık olarak sınırlandırmıştır.
 DoTest=Deneme
 ToFilter=Süzgeç
 NoFilter=Süzgeç yok
@@ -475,8 +475,8 @@ Generate=Oluştur
 Duration=Süre
 TotalDuration=Toplam süre
 Summary=Özet
-DolibarrStateBoard=Veritabanı İstatistikleri
-DolibarrWorkBoard=Bekleyen İşlemler
+DigitalProspectsStateBoard=Veritabanı İstatistikleri
+DigitalProspectsWorkBoard=Bekleyen İşlemler
 NoOpenedElementToProcess=No open element to process
 Available=Mevcut
 NotYetAvailable=Henüz mevcut değil
@@ -703,7 +703,7 @@ MenuECM=Belgeler
 MenuAWStats=AWStats
 MenuMembers=Üyeler
 MenuAgendaGoogle=Google gündemi
-ThisLimitIsDefinedInSetup=Dolibarr sınırı (Giriş-Ayarlar-Güvenlik menüsü):%s Kb, PHP sınırı:%s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects sınırı (Giriş-Ayarlar-Güvenlik menüsü):%s Kb, PHP sınırı:%s Kb
 NoFileFound=Hiçbir belge bu dizine kaydedilmedi
 CurrentUserLanguage=Geçerli dil
 CurrentTheme=Geçerli tema
@@ -736,7 +736,7 @@ PrintContentArea=Yazdırılıcak Sayfanın ana içerik alanını göster
 MenuManager=Menu yöneticisi
 WarningYouAreInMaintenanceMode=Uyarı: Bakım modundasınız: bu uygulamayı kullanma iznine sadece <b>%s</b> sahiptir.
 CoreErrorTitle=Sistem hatası
-CoreErrorMessage=Üzgünüz, bir hata oluştu. Günlükleri kontrol etmek için sistem yöneticinize başvurun veya daha fazla bilgi almak için $dolibarr_main_prod=1 devre dışı bırakın.
+CoreErrorMessage=Üzgünüz, bir hata oluştu. Günlükleri kontrol etmek için sistem yöneticinize başvurun veya daha fazla bilgi almak için $DigitalProspects_main_prod=1 devre dışı bırakın.
 CreditCard=Kredi kartı
 ValidatePayment=Ödeme doğrula
 CreditOrDebitCard=Kredi veya banka kartı
@@ -875,7 +875,7 @@ Calendar=Takvim
 GroupBy=Gruplandır...
 ViewFlatList=Düz listeyi incele
 RemoveString='%s' dizisini kaldır
-SomeTranslationAreUncomplete=Sunulan dillerden bazıları sadece kısmen çevrilmiş olabilir veya çeviri hatalarına sahip olabilir. Lütfen <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> adresi üzerinden kayıt yaparak dilinizdeki çeviri hatalarını düzeltmeye yardımcı olun ve yazılımın gelişimine katkıda bulunun.
+SomeTranslationAreUncomplete=Sunulan dillerden bazıları sadece kısmen çevrilmiş olabilir veya çeviri hatalarına sahip olabilir. Lütfen <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> adresi üzerinden kayıt yaparak dilinizdeki çeviri hatalarını düzeltmeye yardımcı olun ve yazılımın gelişimine katkıda bulunun.
 DirectDownloadLink=Direkt indirme linki (herkese açık/harici)
 DirectDownloadInternalLink=Direkt indirme linki (giriş yapılmış olmalı ve izin gerekli)
 Download=İndir

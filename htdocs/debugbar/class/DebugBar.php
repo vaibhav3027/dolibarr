@@ -11,16 +11,16 @@ dol_include_once('/debugbar/class/DataCollector/DolTimeDataCollector.php');
 dol_include_once('/debugbar/class/DataCollector/DolMemoryCollector.php');
 dol_include_once('/debugbar/class/DataCollector/DolExceptionsCollector.php');
 dol_include_once('/debugbar/class/DataCollector/DolQueryCollector.php');
-dol_include_once('/debugbar/class/DataCollector/DolibarrCollector.php');
+dol_include_once('/debugbar/class/DataCollector/DigitalProspectsCollector.php');
 dol_include_once('/debugbar/class/DataCollector/DolLogsCollector.php');
 
 /**
- * DolibarrDebugBar class
+ * DigitalProspectsDebugBar class
  *
  * @see http://phpdebugbar.com/docs/base-collectors.html#base-collectors
  */
 
-class DolibarrDebugBar extends DebugBar
+class DigitalProspectsDebugBar extends DebugBar
 {
 	/**
 	 * Constructor
@@ -38,7 +38,7 @@ class DolibarrDebugBar extends DebugBar
 		$this->addCollector(new DolMemoryCollector());
 		//$this->addCollector(new DolExceptionsCollector());
 		$this->addCollector(new DolQueryCollector());
-		$this->addCollector(new DolibarrCollector());
+		$this->addCollector(new DigitalProspectsCollector());
 		if ($conf->syslog->enabled) {
 			$this->addCollector(new DolLogsCollector());
 		}

@@ -1,12 +1,12 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MemberCard=Mitgliederkarte
 ShowMember=Mitgliederkarte anzeigen
 UserNotLinkedToMember=Benutzer nicht mit einem Mitglied verknüpft
 FundationMembers=Gründungsmitglieder
 ListOfValidatedPublicMembers=Liste der verifizierten öffentlichen Mitglieder
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Ein anderes Mitglied (Name: <b>%s</b>, login: <b>%s</b>) ist schon mit Partner <b>%s</b> verknüpft. Entfernen Sie zuerst die Verknüpfung, da immer nur ein Mitglied zugewiesen sein kann (und umgekehrt).
-SetLinkToUser=Verknüpfung zu Dolibarr Benutzer
-SetLinkToThirdParty=Verknüpfung zu Dolibarr Partner
+SetLinkToUser=Verknüpfung zu DigitalProspects Benutzer
+SetLinkToThirdParty=Verknüpfung zu DigitalProspects Partner
 MembersList=Mitgliederliste
 MembersListToValid=Liste der zu verifizierenden Mitglieder
 MembersListValid=Liste der verifizierten Mitglieder

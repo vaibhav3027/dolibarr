@@ -22,12 +22,12 @@
  *       \ingroup    webservices
  *       \brief      File to describe client for supplier webservices module
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 /**
  *	Class to describe a sync supplier web services module
  */
-class modWebServicesClient extends DolibarrModules
+class modWebServicesClient extends DigitalProspectsModules
 {
 
     /**
@@ -45,7 +45,7 @@ class modWebServicesClient extends DolibarrModules
         // Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         $this->description = "Enable the web service client to call external supplier web services";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
         $this->version = 'experimental';
         // Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);

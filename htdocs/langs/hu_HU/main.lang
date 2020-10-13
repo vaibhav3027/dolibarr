@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nincs kérés a hibában
 ErrorServiceUnavailableTryLater=A szolgáltatás nem elérhető. Kérjük ismételd meg később.
 ErrorDuplicateField=Két példányú érték egyedülálló mezőben
 ErrorSomeErrorWereFoundRollbackIsDone=Hibát találtunk. A változtatások nincsenek elmentve.
-ErrorConfigParameterNotDefined=A <b>%s</b> paraméter nincs definiálva a <b>conf.php</b> Dolibarr configurációs fájlban .
-ErrorCantLoadUserFromDolibarrDatabase=<b>%s</b> felhasználó nem található a Dolibarr adatbázisban.
+ErrorConfigParameterNotDefined=A <b>%s</b> paraméter nincs definiálva a <b>conf.php</b> DigitalProspects configurációs fájlban .
+ErrorCantLoadUserFromDigitalProspectsDatabase=<b>%s</b> felhasználó nem található a DigitalProspects adatbázisban.
 ErrorNoVATRateDefinedForSellerCountry=Hiba '%s' számára nincs Áfa meghatározva.
 ErrorNoSocialContributionForSellerCountry=Hiba, nincsenek meghatározva társadalombiztosítási és adóügyi adattípusok a '%s' ország részére.
 ErrorFailedToSaveFile=Hiba, nem sikerült a fájl mentése.
@@ -90,7 +90,7 @@ RecordDeleted=Rekord törölve
 RecordGenerated=Rekord létrehozva
 LevelOfFeature=Funkciók szintje
 NotDefined=Nem meghatározott
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr hitelesítési mód beélítva ehhez <b>%s</b> a <b>conf.php</b> beállító fájlban.<br>Ez azt jelenti, hogy ez a jelszó adatbázis Dolibarr rendszertől független, így ennek a mezönek a megváltoztatása nem befolyásoló.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects hitelesítési mód beélítva ehhez <b>%s</b> a <b>conf.php</b> beállító fájlban.<br>Ez azt jelenti, hogy ez a jelszó adatbázis DigitalProspects rendszertől független, így ennek a mezönek a megváltoztatása nem befolyásoló.
 Administrator=Rendszergazda
 Undefined=Nincs definiálva
 PasswordForgotten=Elfelejtett jelszó ?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Adatbázis tipus kezelő
 RequestLastAccessInError=Az utolsó adatbázis hozzáférés hibaüzenete
 ReturnCodeLastAccessInError=Az utolsó adatbázis hozzáférés hibakódja
 InformationLastAccessInError=Az utolsó adatbázis hozzáférési hiba leírása
-DolibarrHasDetectedError=A Dolibarr technikai hibát észlelt
-YouCanSetOptionDolibarrMainProdToZero=Elolvashatja a naplófájlt, vagy beállíthatja a $ dolibarr_main_prod opciót '0' értékre a konfigurációs fájlban, hogy további információkat kapjon.
-InformationToHelpDiagnose=Diagnosztika információk (a $dolibarr_main_prod változót '1'-re állítva eltávolíthatja ezt a figyelmeztetést)
+DigitalProspectsHasDetectedError=A DigitalProspects technikai hibát észlelt
+YouCanSetOptionDigitalProspectsMainProdToZero=Elolvashatja a naplófájlt, vagy beállíthatja a $ DigitalProspects_main_prod opciót '0' értékre a konfigurációs fájlban, hogy további információkat kapjon.
+InformationToHelpDiagnose=Diagnosztika információk (a $DigitalProspects_main_prod változót '1'-re állítva eltávolíthatja ezt a figyelmeztetést)
 MoreInformation=További információ
 TechnicalInformation=Technikai információk
 TechnicalID=Technikai azon.
 LineID=Sorazonosító
 NotePublic=Megjegyzés (nyilvános)
 NotePrivate=Megjegyzés (privát)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr beállított pontossági határral az egység árakhoz <b>%s</b> decimálisokkal.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects beállított pontossági határral az egység árakhoz <b>%s</b> decimálisokkal.
 DoTest=Teszt
 ToFilter=Szűrő
 NoFilter=Nincs szűrő
@@ -475,8 +475,8 @@ Generate=Generálás
 Duration=Időtartam
 TotalDuration=Teljes időtartam
 Summary=Összefoglalás
-DolibarrStateBoard=Adatbázis statisztikák
-DolibarrWorkBoard=Nyitott elemek
+DigitalProspectsStateBoard=Adatbázis statisztikák
+DigitalProspectsWorkBoard=Nyitott elemek
 NoOpenedElementToProcess=Nincs feldolgozandó elem
 Available=Elérhető
 NotYetAvailable=Még nem elérhető
@@ -703,7 +703,7 @@ MenuECM=Dokumentumok
 MenuAWStats=AWStats
 MenuMembers=Tagok
 MenuAgendaGoogle=Google naptár
-ThisLimitIsDefinedInSetup=Dolibarr limit (Menu home-setup-security): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects limit (Menu home-setup-security): %s Kb, PHP limit: %s Kb
 NoFileFound=Nincs mentett dokumentum ebben a könyvtárban
 CurrentUserLanguage=Jelenlegi nyelv
 CurrentTheme=Jelenlegi téma
@@ -736,7 +736,7 @@ PrintContentArea=Show page to print main content area
 MenuManager=Menü-menedzser
 WarningYouAreInMaintenanceMode=Figyelem, karbantartási módban van: csak <b> %s </b> bejelentkezés engedélyezett ebben az üzemmódban.
 CoreErrorTitle=Rendszerhiba
-CoreErrorMessage=Sajnálatos hiba történt. Lépjen kapcsolatba a rendszergazdával a naplófájlok megtekintéséhez vagy állítsa 0-ra a $dolibarr_main_prod=1 paramétert részletesebb információkért !
+CoreErrorMessage=Sajnálatos hiba történt. Lépjen kapcsolatba a rendszergazdával a naplófájlok megtekintéséhez vagy állítsa 0-ra a $DigitalProspects_main_prod=1 paramétert részletesebb információkért !
 CreditCard=Hitelkártya
 ValidatePayment=Jóváhagyott fizetés
 CreditOrDebitCard=Hitel- vagy bankkártya
@@ -875,7 +875,7 @@ Calendar=Naptár
 GroupBy=Csoportosít...
 ViewFlatList=Lapos lista megtekintése
 RemoveString=Távolítsa el a '%s' karakterláncot
-SomeTranslationAreUncomplete=A felkínált nyelvek némelyike csak részben fordítható le, vagy hibákat tartalmazhat. Kérjük, segítsen nyelvének javításában az <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> címen regisztrálva.
+SomeTranslationAreUncomplete=A felkínált nyelvek némelyike csak részben fordítható le, vagy hibákat tartalmazhat. Kérjük, segítsen nyelvének javításában az <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> címen regisztrálva.
 DirectDownloadLink=Közvetlen letöltési link (nyilvános / külső)
 DirectDownloadInternalLink=Link a közvetlen letöltéshez (belépés és jogosultság szükséges)
 Download=Letöltés

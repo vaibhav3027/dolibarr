@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=E-post
 EMailing=E-post
 EMailings=E-post
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Kontakter efter kategorier
 MailingModuleDescContactsByFunction=Kontakter efter position
 MailingModuleDescEmailsFromFile=E-post från fil
 MailingModuleDescEmailsFromUser=E-postmeddelanden inskrivna av användaren
-MailingModuleDescDolibarrUsers=Användare med e-post
+MailingModuleDescDigitalProspectsUsers=Användare med e-post
 MailingModuleDescThirdPartiesByCategories=Tredje part (enligt kategorier)
 SendingFromWebInterfaceIsNotAllowed=Skicka från webbgränssnitt är inte tillåtet.
 

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Übersicht Kundenaufträge
 SuppliersOrdersArea=Übersicht Lieferantenbestellungen
 OrderCard=Bestellung - Übersicht
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Möchten Sie die Bestellung <b>%s</b> wirklich duplizieren?
 DispatchSupplierOrder=Lieferantenbestellung %s erhalten
 FirstApprovalAlreadyDone=1. Bestätigung bereits erledigt
 SecondApprovalAlreadyDone=2. Bestätigung bereits erledigt
-SupplierOrderReceivedInDolibarr=Lieferantenbestellung %s erhalten %s
-SupplierOrderSubmitedInDolibarr=Lieferantenbestellung %s versendet
+SupplierOrderReceivedInDigitalProspects=Lieferantenbestellung %s erhalten %s
+SupplierOrderSubmitedInDigitalProspects=Lieferantenbestellung %s versendet
 SupplierOrderClassifiedBilled=Bestellung %s als verrechnet markieren
 OtherOrders=zeige weitere Bestellungen dieses Partners
 ##### Types de contacts #####

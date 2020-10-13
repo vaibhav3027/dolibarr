@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Öryggisnúmer
 NumberingShort=N°
 Tools=Verkfæri
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=Manage meðlimum úr grunni
@@ -177,10 +177,10 @@ SizeUnitpoint=point
 BugTracker=Bug rekja spor einhvers
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=Til baka innskráningarsíðu
-AuthenticationDoesNotAllowSendNewPassword=Auðkenning háttur <b>er %s .</b> <br> Í þessum ham, Dolibarr geta ekki veit né breyta lykilorðinu þínu. <br> Hafðu samband við kerfisstjóra ef þú vilt breyta lykilorðinu þínu.
+AuthenticationDoesNotAllowSendNewPassword=Auðkenning háttur <b>er %s .</b> <br> Í þessum ham, DigitalProspects geta ekki veit né breyta lykilorðinu þínu. <br> Hafðu samband við kerfisstjóra ef þú vilt breyta lykilorðinu þínu.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>Prof Id %s </b> er upplýsingamiðstöð ráðast á þriðja aðila land. <br> Til dæmis, þegar <b>landið %s , kóði%</b> það <b>er.</b>
-DolibarrDemo=Dolibarr ERP / CRM kynningu
+DigitalProspectsDemo=DigitalProspects ERP / CRM kynningu
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=Innflutningur gögnum
-DolibarrNotification=Sjálfvirk tilkynning
+DigitalProspectsNotification=Sjálfvirk tilkynning
 ResizeDesc=Sláðu inn nýja breidd <b>EÐA</b> nýja hæð. Hlutfall verður haldið á resizing ...
 NewLength=New breidd
 NewHeight=Ný hæð

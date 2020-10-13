@@ -62,7 +62,7 @@ elseif ($action == 'del_default')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->USER_ADDON_PDF_ODT == "$value") dolibarr_del_const($db, 'USER_ADDON_PDF_ODT', $conf->entity);
+        if ($conf->global->USER_ADDON_PDF_ODT == "$value") DigitalProspects_del_const($db, 'USER_ADDON_PDF_ODT', $conf->entity);
 	}
 	$res = true;
 }
@@ -70,7 +70,7 @@ elseif ($action == 'del_default')
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "USER_ADDON_PDF_ODT", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "USER_ADDON_PDF_ODT", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -88,7 +88,7 @@ elseif ($action == 'setdoc')
 elseif (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 {
     $code = $reg[1];
-    if (dolibarr_set_const($db, $code, 1, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, $code, 1, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -102,7 +102,7 @@ elseif (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 elseif (preg_match('/del_([a-z0-9_\-]+)/i', $action, $reg))
 {
     $code = $reg[1];
-    if (dolibarr_del_const($db, $code, $conf->entity) > 0)
+    if (DigitalProspects_del_const($db, $code, $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -117,7 +117,7 @@ elseif ($action == 'sethideinactiveuser')
 {
 	$status = GETPOST('status', 'alpha');
 
-	if (dolibarr_set_const($db, "USER_HIDE_INACTIVE_IN_COMBOBOX", $status, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, "USER_HIDE_INACTIVE_IN_COMBOBOX", $status, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;

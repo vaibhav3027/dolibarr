@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Sezione riservata membri
 MemberCard=Scheda membro
 SubscriptionCard=Tessera di adesione
@@ -13,7 +13,7 @@ ListOfValidatedPublicMembers=Elenco membri pubblici convalidati
 ErrorThisMemberIsNotPublic=Questo membro non è pubblico
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Un altro membro (nome: <b>%s</b>, login: <b>%s</b>) è già collegato al soggettoterzo <b>%s</b>. Rimuovi il collegamento esistente. Un soggetto terzo può essere collegato ad un solo membro (e viceversa).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Per motivi di sicurezza, è necessario possedere permessi di modifica di tutti gli utenti per poter modificare un membro diverso da sé stessi.
-SetLinkToUser=Link a un utente Dolibarr
+SetLinkToUser=Link a un utente DigitalProspects
 SetLinkToThirdParty=Link ad un soggetto terzo
 MembersCards=Schede membri
 MembersList=Elenco dei membri
@@ -92,10 +92,10 @@ ConfirmDeleteSubscription=Are you sure you want to delete this subscription?
 Filehtpasswd=File htpasswd
 ValidateMember=Convalida un membro
 ConfirmValidateMember=Are you sure you want to validate this member?
-FollowingLinksArePublic=The following links are open pages not protected by any Dolibarr permission. They are not formatted pages, provided as example to show how to list members database.
+FollowingLinksArePublic=The following links are open pages not protected by any DigitalProspects permission. They are not formatted pages, provided as example to show how to list members database.
 PublicMemberList=Elenco pubblico dei membri
 BlankSubscriptionForm=Public self-subscription form
-BlankSubscriptionFormDesc=Dolibarr can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
+BlankSubscriptionFormDesc=DigitalProspects can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
 EnablePublicSubscriptionForm=Enable the public website with self-subscription form
 ForceMemberType=Force the member type
 ExportDataset_member_1=Membri e adesioni

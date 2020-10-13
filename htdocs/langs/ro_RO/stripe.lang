@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Modul de configurare a Stripe
-StripeDesc=Oferiți clienților o pagină de plată on-line Stripe pentru plățile cu carduri de credit / de debit prin intermediul <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Aceasta poate fi utilizată pentru a permite clienților dvs. să efectueze plăți ad-hoc sau pentru plăți legate de un anumit obiect Dolibarr (factură, comandă, ...)
+StripeDesc=Oferiți clienților o pagină de plată on-line Stripe pentru plățile cu carduri de credit / de debit prin intermediul <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Aceasta poate fi utilizată pentru a permite clienților dvs. să efectueze plăți ad-hoc sau pentru plăți legate de un anumit obiect DigitalProspects (factură, comandă, ...)
 StripeOrCBDoPayment=Plătiți cu cardul de credit sau Stripe
-FollowingUrlAreAvailableToMakePayments=Ca urmare a URL-uri sunt disponibile pentru a oferi o pagină de la un client pentru a face o plată pe Dolibarr obiecte
+FollowingUrlAreAvailableToMakePayments=Ca urmare a URL-uri sunt disponibile pentru a oferi o pagină de la un client pentru a face o plată pe DigitalProspects obiecte
 PaymentForm=Formă de plată
 WelcomeOnPaymentPage=Bine ați venit la serviciul nostru de plată online
 ThisScreenAllowsYouToPay=Acest ecran vă permite de a face o plată online pentru %s.

@@ -19,15 +19,15 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/functions.lib.php';
 
 
 /**
- * API that gives the status of the Dolibarr instance.
+ * API that gives the status of the DigitalProspects instance.
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
 class Status
 {
     /**
-     * Get status (Dolibarr version)
+     * Get status (DigitalProspects version)
      *
      * @return array
      */
@@ -38,7 +38,7 @@ class Status
         return array(
             'success' => array(
                 'code' => 200,
-                'dolibarr_version' => DOL_VERSION,
+                'DigitalProspects_version' => DOL_VERSION,
                 'access_locked' => (empty($conf->global->MAIN_ONLY_LOGIN_ALLOWED) ? '0' : $conf->global->MAIN_ONLY_LOGIN_ALLOWED),
             ),
         );

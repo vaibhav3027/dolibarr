@@ -57,7 +57,7 @@ if ($actionsave)
     $db->begin();
 
     $disableext = GETPOST('AGENDA_DISABLE_EXT', 'alpha');
-	$res = dolibarr_set_const($db, 'AGENDA_DISABLE_EXT', $disableext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'AGENDA_DISABLE_EXT', $disableext, 'chaine', 0, '', $conf->entity);
 
 	$i = 1; $errorsaved = 0;
 	$error = 0;
@@ -81,15 +81,15 @@ if ($actionsave)
 		}
 
 		//print '-name='.$name.'-color='.$color;
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_NAME'.$i, $name, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_NAME'.$i, $name, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_SRC'.$i, $src, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_SRC'.$i, $src, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_OFFSETTZ'.$i, $offsettz, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_OFFSETTZ'.$i, $offsettz, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_COLOR'.$i, $color, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_COLOR'.$i, $color, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_ENABLED'.$i, $enabled, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_ENABLED'.$i, $enabled, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
 		$i++;
 	}
@@ -97,7 +97,7 @@ if ($actionsave)
 	// Save nb of agenda
 	if (!$error)
 	{
-		$res = dolibarr_set_const($db, 'AGENDA_EXT_NB', trim(GETPOST('AGENDA_EXT_NB', 'int')), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'AGENDA_EXT_NB', trim(GETPOST('AGENDA_EXT_NB', 'int')), 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
 		if (empty($conf->global->AGENDA_EXT_NB)) $conf->global->AGENDA_EXT_NB = 5;
 		$MAXAGENDA = empty($conf->global->AGENDA_EXT_NB) ? 5 : $conf->global->AGENDA_EXT_NB;

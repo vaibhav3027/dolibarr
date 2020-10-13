@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - workflow
+# DigitalProspects language file - Source file is en_US - workflow
 WorkflowSetup=Nastavení workflow modulu
 WorkflowDesc=Tento modul je určen k úpravě chování automatických akcí, v aplikaci. Ve výchozím nastavení workflow je otevřen (uděláte něco, co chcete). Můžete aktivovat automatické akce, které jsou zajímavé.
 ThereIsNoWorkflowToModify=Workflow zde není nastaven, můžete upravit modul pokud ho chcete aktivovat.

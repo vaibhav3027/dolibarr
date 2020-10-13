@@ -17,12 +17,12 @@
 # Generic
 #
 
-# Module label 'ModuleZapierForDolibarrName'
-ModuleZapierForDolibarrName = Zapier cho Dolibarr
-# Module description 'ModuleZapierForDolibarrDesc'
-ModuleZapierForDolibarrDesc = Mô-đun Zapier cho Dolibarr
+# Module label 'ModuleZapierForDigitalProspectsName'
+ModuleZapierForDigitalProspectsName = Zapier cho DigitalProspects
+# Module description 'ModuleZapierForDigitalProspectsDesc'
+ModuleZapierForDigitalProspectsDesc = Mô-đun Zapier cho DigitalProspects
 
 #
 # Admin page
 #
-ZapierForDolibarrSetup = Thiết lập Zapier cho Dolibarr
+ZapierForDigitalProspectsSetup = Thiết lập Zapier cho DigitalProspects

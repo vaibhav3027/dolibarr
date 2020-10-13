@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=EMailing
 EMailing=EMailing
 EMailings=EMailings
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Contacts by categories
 MailingModuleDescContactsByFunction=Contacts by position
 MailingModuleDescEmailsFromFile=Τα μηνύματα ηλεκτρονικού ταχυδρομείου από το αρχείο
 MailingModuleDescEmailsFromUser=Εισαγωγή μηνυμάτων ηλεκτρονικού ταχυδρομείου από το χρήστη
-MailingModuleDescDolibarrUsers=Χρήστες με μηνύματα ηλεκτρονικού ταχυδρομείου
+MailingModuleDescDigitalProspectsUsers=Χρήστες με μηνύματα ηλεκτρονικού ταχυδρομείου
 MailingModuleDescThirdPartiesByCategories=Τρίτα μέρη (κατά κατηγορίες)
 SendingFromWebInterfaceIsNotAllowed=Η αποστολή από τη διεπαφή ιστού δεν επιτρέπεται.
 

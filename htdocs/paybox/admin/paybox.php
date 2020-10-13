@@ -41,37 +41,37 @@ $action = GETPOST('action', 'alpha');
 if ($action == 'setvalue' && $user->admin)
 {
 	$db->begin();
-	//$result=dolibarr_set_const($db, "PAYBOX_IBS_DEVISE",$_POST["PAYBOX_IBS_DEVISE"],'chaine',0,'',$conf->entity);
-	$result = dolibarr_set_const($db, "PAYBOX_CGI_URL_V1", GETPOST('PAYBOX_CGI_URL_V1', 'alpha'), 'chaine', 0, '', $conf->entity);
+	//$result=DigitalProspects_set_const($db, "PAYBOX_IBS_DEVISE",$_POST["PAYBOX_IBS_DEVISE"],'chaine',0,'',$conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_CGI_URL_V1", GETPOST('PAYBOX_CGI_URL_V1', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYBOX_CGI_URL_V2", GETPOST('PAYBOX_CGI_URL_V2', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_CGI_URL_V2", GETPOST('PAYBOX_CGI_URL_V2', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYBOX_IBS_SITE", GETPOST('PAYBOX_IBS_SITE', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_IBS_SITE", GETPOST('PAYBOX_IBS_SITE', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYBOX_IBS_RANG", GETPOST('PAYBOX_IBS_RANG', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_IBS_RANG", GETPOST('PAYBOX_IBS_RANG', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYBOX_PBX_IDENTIFIANT", GETPOST('PAYBOX_PBX_IDENTIFIANT', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_PBX_IDENTIFIANT", GETPOST('PAYBOX_PBX_IDENTIFIANT', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_CREDITOR", GETPOST('ONLINE_PAYMENT_CREDITOR', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_CREDITOR", GETPOST('ONLINE_PAYMENT_CREDITOR', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYBOX_BANK_ACCOUNT_FOR_PAYMENTS", GETPOST('PAYBOX_BANK_ACCOUNT_FOR_PAYMENTS', 'int'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYBOX_BANK_ACCOUNT_FOR_PAYMENTS", GETPOST('PAYBOX_BANK_ACCOUNT_FOR_PAYMENTS', 'int'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_CSS_URL", GETPOST('ONLINE_PAYMENT_CSS_URL', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_CSS_URL", GETPOST('ONLINE_PAYMENT_CSS_URL', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_MESSAGE_FORM", GETPOST('ONLINE_PAYMENT_MESSAGE_FORM', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_MESSAGE_FORM", GETPOST('ONLINE_PAYMENT_MESSAGE_FORM', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_MESSAGE_OK", GETPOST('ONLINE_PAYMENT_MESSAGE_OK', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_MESSAGE_OK", GETPOST('ONLINE_PAYMENT_MESSAGE_OK', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_MESSAGE_KO", GETPOST('ONLINE_PAYMENT_MESSAGE_KO', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_MESSAGE_KO", GETPOST('ONLINE_PAYMENT_MESSAGE_KO', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "ONLINE_PAYMENT_SENDEMAIL", GETPOST('ONLINE_PAYMENT_SENDEMAIL'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "ONLINE_PAYMENT_SENDEMAIL", GETPOST('ONLINE_PAYMENT_SENDEMAIL'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
 	// Payment token for URL
-	$result = dolibarr_set_const($db, "PAYMENT_SECURITY_TOKEN", GETPOST('PAYMENT_SECURITY_TOKEN', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYMENT_SECURITY_TOKEN", GETPOST('PAYMENT_SECURITY_TOKEN', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-	$result = dolibarr_set_const($db, "PAYMENT_SECURITY_TOKEN_UNIQUE", GETPOST('PAYMENT_SECURITY_TOKEN_UNIQUE', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, "PAYMENT_SECURITY_TOKEN_UNIQUE", GETPOST('PAYMENT_SECURITY_TOKEN_UNIQUE', 'alpha'), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
-        $result = dolibarr_set_const($db, "PAYBOX_HMAC_KEY", dol_encode(GETPOST('PAYBOX_HMAC_KEY', 'alpha')), 'chaine', 0, '', $conf->entity);
+        $result = DigitalProspects_set_const($db, "PAYBOX_HMAC_KEY", dol_encode(GETPOST('PAYBOX_HMAC_KEY', 'alpha')), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0) $error++;
 
 
@@ -211,20 +211,20 @@ print '</td></tr>';
 
 print '<tr class="oddeven"><td>';
 print $langs->trans("MessageForm").'</td><td>';
-$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_FORM', $conf->global->ONLINE_PAYMENT_MESSAGE_FORM, '', 100, 'dolibarr_details', 'In', false, true, true, ROWS_2, '90%');
+$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_FORM', $conf->global->ONLINE_PAYMENT_MESSAGE_FORM, '', 100, 'DigitalProspects_details', 'In', false, true, true, ROWS_2, '90%');
 $doleditor->Create();
 print '</td></tr>';
 
 print '<tr class="oddeven"><td>';
 print $langs->trans("MessageOK").'</td><td>';
-$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_OK', $conf->global->ONLINE_PAYMENT_MESSAGE_OK, '', 100, 'dolibarr_details', 'In', false, true, true, ROWS_2, '90%');
+$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_OK', $conf->global->ONLINE_PAYMENT_MESSAGE_OK, '', 100, 'DigitalProspects_details', 'In', false, true, true, ROWS_2, '90%');
 $doleditor->Create();
 print '</td></tr>';
 
 
 print '<tr class="oddeven"><td>';
 print $langs->trans("MessageKO").'</td><td>';
-$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_KO', $conf->global->ONLINE_PAYMENT_MESSAGE_KO, '', 100, 'dolibarr_details', 'In', false, true, true, ROWS_2, '90%');
+$doleditor = new DolEditor('ONLINE_PAYMENT_MESSAGE_KO', $conf->global->ONLINE_PAYMENT_MESSAGE_KO, '', 100, 'DigitalProspects_details', 'In', false, true, true, ROWS_2, '90%');
 $doleditor->Create();
 print '</td></tr>';
 

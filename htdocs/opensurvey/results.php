@@ -476,7 +476,7 @@ print '</td></tr>';
 print '<tr><td>'.img_picto('', 'globe').' '.$langs->trans("UrlForSurvey", '').'</td><td colspan="2">';
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

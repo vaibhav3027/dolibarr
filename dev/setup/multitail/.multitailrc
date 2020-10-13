@@ -1,6 +1,6 @@
-# This is an example of multitail setup file you can use to analyze dolibarr log files.
-# Usage: multitail -cS dolibarr documents/dolibarr.log
-colorscheme:dolibarr
+# This is an example of multitail setup file you can use to analyze DigitalProspects log files.
+# Usage: multitail -cS DigitalProspects documents/DigitalProspects.log
+colorscheme:DigitalProspects
 bright:1
 cs_re:yellow,red:.*EMERG.*
 cs_re:white,red:.*ALERT.*

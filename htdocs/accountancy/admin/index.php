@@ -68,7 +68,7 @@ if ($action == 'update') {
 	    {
 	        $constvalue = GETPOST($constname, 'alpha');
 
-	        if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+	        if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
 	            $error++;
 	        }
 	    }
@@ -84,7 +84,7 @@ if ($action == 'update') {
 
 if ($action == 'setlistsorttodo') {
     $setlistsorttodo = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "ACCOUNTING_LIST_SORT_VENTILATION_TODO", $setlistsorttodo, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "ACCOUNTING_LIST_SORT_VENTILATION_TODO", $setlistsorttodo, 'yesno', 0, '', $conf->entity);
     if (!$res > 0)
         $error++;
 
@@ -97,7 +97,7 @@ if ($action == 'setlistsorttodo') {
 
 if ($action == 'setlistsortdone') {
     $setlistsortdone = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "ACCOUNTING_LIST_SORT_VENTILATION_DONE", $setlistsortdone, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "ACCOUNTING_LIST_SORT_VENTILATION_DONE", $setlistsortdone, 'yesno', 0, '', $conf->entity);
     if (!$res > 0)
         $error++;
     if (!$error) {
@@ -109,7 +109,7 @@ if ($action == 'setlistsortdone') {
 
 if ($action == 'setmanagezero') {
     $setmanagezero = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "ACCOUNTING_MANAGE_ZERO", $setmanagezero, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "ACCOUNTING_MANAGE_ZERO", $setmanagezero, 'yesno', 0, '', $conf->entity);
     if (!$res > 0)
         $error++;
     if (!$error) {
@@ -121,7 +121,7 @@ if ($action == 'setmanagezero') {
 
 if ($action == 'setdisabledirectinput') {
 	$setdisabledirectinput = GETPOST('value', 'int');
-	$res = dolibarr_set_const($db, "BANK_DISABLE_DIRECT_INPUT", $setdisabledirectinput, 'yesno', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "BANK_DISABLE_DIRECT_INPUT", $setdisabledirectinput, 'yesno', 0, '', $conf->entity);
 	if (!$res > 0)
 		$error++;
 	if (!$error) {
@@ -133,7 +133,7 @@ if ($action == 'setdisabledirectinput') {
 
 if ($action == 'setenabledraftexport') {
 	$setenabledraftexport = GETPOST('value', 'int');
-	$res = dolibarr_set_const($db, "ACCOUNTING_ENABLE_EXPORT_DRAFT_JOURNAL", $setenabledraftexport, 'yesno', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "ACCOUNTING_ENABLE_EXPORT_DRAFT_JOURNAL", $setenabledraftexport, 'yesno', 0, '', $conf->entity);
 	if (!$res > 0)
 		$error++;
 	if (!$error) {
@@ -145,7 +145,7 @@ if ($action == 'setenabledraftexport') {
 
 if ($action == 'setenablesubsidiarylist') {
     $setenablesubsidiarylist = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "ACCOUNTANCY_COMBO_FOR_AUX", $setenablesubsidiarylist, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "ACCOUNTANCY_COMBO_FOR_AUX", $setenablesubsidiarylist, 'yesno', 0, '', $conf->entity);
     if (!$res > 0)
         $error++;
     if (!$error) {

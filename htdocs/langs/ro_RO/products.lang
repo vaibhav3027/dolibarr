@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Ref. Produs
 ProductLabel=Etichetă produs
 ProductLabelTranslated=Etichetă de produs tradusă
@@ -289,7 +289,7 @@ ComposedProduct=Produse pentru copii
 MinSupplierPrice=Preţul minim de achiziţie
 MinCustomerPrice=Prețul minim de vânzare
 DynamicPriceConfiguration=Setarea dinamică a prețului
-DynamicPriceDesc=Puteți defini formule matematice pentru a calcula prețurile clienților sau furnizorilor. Astfel de formule pot folosi toți operatorii matematici, unele constante și variabile. Puteți defini aici variabilele pe care doriți să le utilizați. Dacă variabila are nevoie de o actualizare automată, puteți defini adresa URL externă pentru a permite Dolibarr să actualizeze automat valoarea.
+DynamicPriceDesc=Puteți defini formule matematice pentru a calcula prețurile clienților sau furnizorilor. Astfel de formule pot folosi toți operatorii matematici, unele constante și variabile. Puteți defini aici variabilele pe care doriți să le utilizați. Dacă variabila are nevoie de o actualizare automată, puteți defini adresa URL externă pentru a permite DigitalProspects să actualizeze automat valoarea.
 AddVariable=Adăugați variabilă
 AddUpdater=Adăugați Updater
 GlobalVariables=Variabile globale
@@ -364,7 +364,7 @@ NewProductAttribute=Atribut nou
 NewProductAttributeValue=Valoare nouă a atributului
 ErrorCreatingProductAttributeValue=A apărut o eroare la crearea valorii atributului. Ar putea fi pentru că există deja o valoare cu această referință
 ProductCombinationGeneratorWarning=Dacă veți continua, înainte de a genera noi variante, toate cele anterioare vor fi STERSE. Cele deja existente vor fi actualizate cu noile valori
-TooMuchCombinationsWarning=Generarea de numeroase variante poate avea ca rezultat un procesor ridicat, utilizarea memoriei și Dolibarr care nu le poate crea. Activarea opțiunii "%s" poate ajuta la reducerea utilizării memoriei.
+TooMuchCombinationsWarning=Generarea de numeroase variante poate avea ca rezultat un procesor ridicat, utilizarea memoriei și DigitalProspects care nu le poate crea. Activarea opțiunii "%s" poate ajuta la reducerea utilizării memoriei.
 DoNotRemovePreviousCombinations=Nu eliminați variantele anterioare
 UsePercentageVariations=Utilizați variații procentuale
 PercentageVariation=Procentaj variație

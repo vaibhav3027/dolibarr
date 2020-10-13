@@ -25,8 +25,8 @@
  */
 
 include 'inc.php';
-require_once $dolibarr_main_document_root.'/core/class/conf.class.php';
-require_once $dolibarr_main_document_root.'/core/lib/admin.lib.php';
+require_once $DigitalProspects_main_document_root.'/core/class/conf.class.php';
+require_once $DigitalProspects_main_document_root.'/core/lib/admin.lib.php';
 
 global $langs;
 
@@ -49,18 +49,18 @@ $langs->setDefaultLang($setuplang);
 $langs->loadLangs(array("admin", "install"));
 
 $choix = 0;
-if ($dolibarr_main_db_type == "mysqli") $choix = 1;
-if ($dolibarr_main_db_type == "pgsql")  $choix = 2;
-if ($dolibarr_main_db_type == "mssql")  $choix = 3;
-if ($dolibarr_main_db_type == "sqlite")  $choix = 4;
-if ($dolibarr_main_db_type == "sqlite3")  $choix = 5;
+if ($DigitalProspects_main_db_type == "mysqli") $choix = 1;
+if ($DigitalProspects_main_db_type == "pgsql")  $choix = 2;
+if ($DigitalProspects_main_db_type == "mssql")  $choix = 3;
+if ($DigitalProspects_main_db_type == "sqlite")  $choix = 4;
+if ($DigitalProspects_main_db_type == "sqlite3")  $choix = 5;
 
-//if (empty($choix)) dol_print_error('','Database type '.$dolibarr_main_db_type.' not supported into step2.php page');
+//if (empty($choix)) dol_print_error('','Database type '.$DigitalProspects_main_db_type.' not supported into step2.php page');
 
 // Now we load forced values from install.forced.php file.
 $useforcedwizard = false;
 $forcedfile = "./install.forced.php";
-if ($conffile == "/etc/dolibarr/conf.php") $forcedfile = "/etc/dolibarr/install.forced.php";
+if ($conffile == "/etc/DigitalProspects/conf.php") $forcedfile = "/etc/DigitalProspects/install.forced.php";
 if (@file_exists($forcedfile)) {
 	$useforcedwizard = true;
 	include_once $forcedfile;
@@ -68,7 +68,7 @@ if (@file_exists($forcedfile)) {
 	if (!empty($argv[1]) && $argv[1] == "set") $action = "set";
 }
 
-dolibarr_install_syslog("- step2: entering step2.php page");
+DigitalProspects_install_syslog("- step2: entering step2.php page");
 
 
 /*
@@ -109,11 +109,11 @@ if ($action == "set")
     {
         if ($db->database_selected)
         {
-            dolibarr_install_syslog("step2: successful connection to database: ".$conf->db->name);
+            DigitalProspects_install_syslog("step2: successful connection to database: ".$conf->db->name);
         }
         else
         {
-            dolibarr_install_syslog("step2: failed connection to database :".$conf->db->name, LOG_ERR);
+            DigitalProspects_install_syslog("step2: failed connection to database :".$conf->db->name, LOG_ERR);
             print "<tr><td>Failed to select database ".$conf->db->name.'</td><td><img src="../theme/eldy/img/error.png" alt="Error"></td></tr>';
             $ok = 0;
         }
@@ -137,7 +137,7 @@ if ($action == "set")
     $requestnb = 0;
 
     // To disable some code, so you can call step2 with url like
-    // http://localhost/dolibarrnew/install/step2.php?action=set&createtables=0&createkeys=0&createfunctions=0&createdata=llx_20_c_departements
+    // http://localhost/DigitalProspectsnew/install/step2.php?action=set&createtables=0&createkeys=0&createfunctions=0&createdata=llx_20_c_departements
     $createtables = isset($_GET['createtables']) ?GETPOST('createtables') : 1;
     $createkeys = isset($_GET['createkeys']) ?GETPOST('createkeys') : 1;
     $createfunctions = isset($_GET['createfunctions']) ?GETPOST('createfunction') : 1;
@@ -161,7 +161,7 @@ if ($action == "set")
 
         $ok = 0;
         $handle = opendir($dir);
-        dolibarr_install_syslog("step2: open tables directory ".$dir." handle=".$handle);
+        DigitalProspects_install_syslog("step2: open tables directory ".$dir." handle=".$handle);
         $tablefound = 0;
         $tabledata = array();
         if (is_resource($handle))
@@ -211,15 +211,15 @@ if ($action == "set")
                 }
 
                 // Replace the prefix tables
-                if ($dolibarr_main_db_prefix != 'llx_')
+                if ($DigitalProspects_main_db_prefix != 'llx_')
                 {
-                	$buffer = preg_replace('/llx_/i', $dolibarr_main_db_prefix, $buffer);
+                	$buffer = preg_replace('/llx_/i', $DigitalProspects_main_db_prefix, $buffer);
                 }
 
                 //print "<tr><td>Creation de la table $name/td>";
                 $requestnb++;
 
-                dolibarr_install_syslog("step2: request: ".$buffer);
+                DigitalProspects_install_syslog("step2: request: ".$buffer);
                 $resql = $db->query($buffer, 0, 'dml');
                 if ($resql)
                 {
@@ -249,7 +249,7 @@ if ($action == "set")
                 print "</td>";
                 print '<td><span class="error">'.$langs->trans("Error").' Failed to open file '.$dir.$file.'</span></td></tr>';
                 $error++;
-                dolibarr_install_syslog("step2: failed to open file ".$dir.$file, LOG_ERR);
+                DigitalProspects_install_syslog("step2: failed to open file ".$dir.$file, LOG_ERR);
             }
         }
 
@@ -265,7 +265,7 @@ if ($action == "set")
         else
         {
             print '<tr><td>'.$langs->trans("ErrorFailedToFindSomeFiles", $dir).'</td><td><img src="../theme/eldy/img/error.png" alt="Error"></td></tr>';
-            dolibarr_install_syslog("step2: failed to find files to create database in directory ".$dir, LOG_ERR);
+            DigitalProspects_install_syslog("step2: failed to find files to create database in directory ".$dir, LOG_ERR);
         }
     }
 
@@ -283,7 +283,7 @@ if ($action == "set")
 
         $okkeys = 0;
         $handle = opendir($dir);
-        dolibarr_install_syslog("step2: open keys directory ".$dir." handle=".$handle);
+        DigitalProspects_install_syslog("step2: open keys directory ".$dir." handle=".$handle);
         $tablefound = 0;
         $tabledata = array();
         if (is_resource($handle))
@@ -354,15 +354,15 @@ if ($action == "set")
                     if ($buffer)
                     {
                     	// Replace the prefix tables
-                    	if ($dolibarr_main_db_prefix != 'llx_')
+                    	if ($DigitalProspects_main_db_prefix != 'llx_')
                     	{
-                    		$buffer = preg_replace('/llx_/i', $dolibarr_main_db_prefix, $buffer);
+                    		$buffer = preg_replace('/llx_/i', $DigitalProspects_main_db_prefix, $buffer);
                     	}
 
                         //print "<tr><td>Creation des cles et index de la table $name: '$buffer'</td>";
                         $requestnb++;
 
-                        dolibarr_install_syslog("step2: request: ".$buffer);
+                        DigitalProspects_install_syslog("step2: request: ".$buffer);
                         $resql = $db->query($buffer, 0, 'dml');
                         if ($resql)
                         {
@@ -398,7 +398,7 @@ if ($action == "set")
                 print "</td>";
                 print '<td><span class="error">'.$langs->trans("Error")." Failed to open file ".$dir.$file."</span></td></tr>";
                 $error++;
-                dolibarr_install_syslog("step2: failed to open file ".$dir.$file, LOG_ERR);
+                DigitalProspects_install_syslog("step2: failed to open file ".$dir.$file, LOG_ERR);
             }
         }
 
@@ -429,7 +429,7 @@ if ($action == "set")
         if (file_exists($dir.$file))
         {
             $fp = fopen($dir.$file, "r");
-            dolibarr_install_syslog("step2: open function file ".$dir.$file." handle=".$fp);
+            DigitalProspects_install_syslog("step2: open function file ".$dir.$file." handle=".$fp);
             if ($fp)
             {
                 $buffer = '';
@@ -453,11 +453,11 @@ if ($action == "set")
                 if ($buffer)
                 {
                     // Replace the prefix in table names
-                    if ($dolibarr_main_db_prefix != 'llx_')
+                    if ($DigitalProspects_main_db_prefix != 'llx_')
                     {
-                        $buffer = preg_replace('/llx_/i', $dolibarr_main_db_prefix, $buffer);
+                        $buffer = preg_replace('/llx_/i', $DigitalProspects_main_db_prefix, $buffer);
                     }
-                    dolibarr_install_syslog("step2: request: ".$buffer);
+                    DigitalProspects_install_syslog("step2: request: ".$buffer);
                     print "<!-- Insert line : ".$buffer."<br>-->\n";
                     $resql = $db->query($buffer, 0, 'dml');
                     if ($resql)
@@ -512,7 +512,7 @@ if ($action == "set")
 
         // Insert data
         $handle = opendir($dir);
-        dolibarr_install_syslog("step2: open directory data ".$dir." handle=".$handle);
+        DigitalProspects_install_syslog("step2: open directory data ".$dir." handle=".$handle);
         $tablefound = 0;
         $tabledata = array();
         if (is_resource($handle))
@@ -540,7 +540,7 @@ if ($action == "set")
         {
             $name = substr($file, 0, dol_strlen($file) - 4);
             $fp = fopen($dir.$file, "r");
-            dolibarr_install_syslog("step2: open data file ".$dir.$file." handle=".$fp);
+            DigitalProspects_install_syslog("step2: open data file ".$dir.$file." handle=".$fp);
             if ($fp)
             {
                 $arrayofrequests = array();
@@ -569,7 +569,7 @@ if ($action == "set")
                 }
                 fclose($fp);
 
-                dolibarr_install_syslog("step2: found ".$linefound." records, defined ".count($arrayofrequests)." group(s).");
+                DigitalProspects_install_syslog("step2: found ".$linefound." records, defined ".count($arrayofrequests)." group(s).");
 
                 $okallfile = 1;
                 $db->begin();
@@ -578,12 +578,12 @@ if ($action == "set")
                 foreach ($arrayofrequests as $buffer)
                 {
                 	// Replace the prefix tables
-                	if ($dolibarr_main_db_prefix != 'llx_')
+                	if ($DigitalProspects_main_db_prefix != 'llx_')
                 	{
-                		$buffer = preg_replace('/llx_/i', $dolibarr_main_db_prefix, $buffer);
+                		$buffer = preg_replace('/llx_/i', $DigitalProspects_main_db_prefix, $buffer);
                 	}
 
-                    //dolibarr_install_syslog("step2: request: " . $buffer);
+                    //DigitalProspects_install_syslog("step2: request: " . $buffer);
                     $resql = $db->query($buffer, 1);
                     if ($resql)
                     {
@@ -630,22 +630,22 @@ else
 
 $ret = 0;
 if (!$ok && isset($argv[1])) $ret = 1;
-dolibarr_install_syslog("Exit ".$ret);
+DigitalProspects_install_syslog("Exit ".$ret);
 
-dolibarr_install_syslog("- step2: end");
+DigitalProspects_install_syslog("- step2: end");
 
 
-$out  = '<input type="checkbox" name="dolibarrpingno" id="dolibarrpingno" value="checked" checked="true"> ';
+$out  = '<input type="checkbox" name="DigitalProspectspingno" id="DigitalProspectspingno" value="checked" checked="true"> ';
 $out .= $langs->trans("MakeAnonymousPing");
 
 $out .= '<!-- Add js script to manage the uncheck of option to not send the ping -->';
 $out .= '<script type="text/javascript">';
 $out .= 'jQuery(document).ready(function(){';
-$out .= '  document.cookie = "DOLINSTALLNOPING_'.md5($dolibarr_main_instance_unique_id).'=0; path=/"'."\n";
-$out .= '  jQuery("#dolibarrpingno").click(function() {';
+$out .= '  document.cookie = "DOLINSTALLNOPING_'.md5($DigitalProspects_main_instance_unique_id).'=0; path=/"'."\n";
+$out .= '  jQuery("#DigitalProspectspingno").click(function() {';
 $out .= '    if (! $(this).is(\':checked\')) {';
 $out .= '      console.log("We uncheck anonymous ping");';
-$out .= '      document.cookie = "DOLINSTALLNOPING_'.md5($dolibarr_main_instance_unique_id).'=1; path=/"'."\n";
+$out .= '      document.cookie = "DOLINSTALLNOPING_'.md5($DigitalProspects_main_instance_unique_id).'=1; path=/"'."\n";
 $out .= '    }';
 $out .= '  });';
 $out .= '});';

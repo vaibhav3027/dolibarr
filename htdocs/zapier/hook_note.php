@@ -22,7 +22,7 @@
  *  \brief      Car with notes on MyObject
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 require '../main.inc.php';
 dol_include_once('/mymodule/class/myobject.class.php');
 dol_include_once('/mymodule/lib/mymodule_myobject.lib.php');

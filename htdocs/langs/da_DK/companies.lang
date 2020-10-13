@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Firmanavn %s eksisterer allerede. Vælg et andet.
 ErrorSetACountryFirst=Indstil land først
 SelectThirdParty=Vælg en tredjepart
@@ -12,7 +12,7 @@ MenuNewSupplier=Ny leverandør
 MenuNewPrivateIndividual=Ny privatperson
 NewCompany=Nyt selskab (potentielle kunder, kunde, leverandør)
 NewThirdParty=Ny tredjepart (potentielle kunder, kunde, leverandør)
-CreateDolibarrThirdPartySupplier=Opret en tredjepart (levenrandør)
+CreateDigitalProspectsThirdPartySupplier=Opret en tredjepart (levenrandør)
 CreateThirdPartyOnly=Opret tredjepart
 CreateThirdPartyAndContact=Opret en tredjepart + en børnekontakt
 ProspectionArea=Prospekteringsområde
@@ -392,8 +392,8 @@ ProspectsByStatus=Potentielle kunder efter status
 NoParentCompany=Ingen
 ExportCardToFormat=Eksporter kort til format
 ContactNotLinkedToCompany=Kontakt ikke knyttet til nogen tredjepart
-DolibarrLogin=Dolibarr login
-NoDolibarrAccess=Ingen Dolibarr adgang
+DigitalProspectsLogin=DigitalProspects login
+NoDigitalProspectsAccess=Ingen DigitalProspects adgang
 ExportDataset_company_1=Tredjeparter (virksomheder/fonde/fysiske personer) og deres egenskaber
 ExportDataset_company_2=Kontakter og deres egenskaber
 ImportDataset_company_1=Tredjeparter og deres egenskaber

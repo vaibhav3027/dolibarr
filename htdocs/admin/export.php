@@ -45,7 +45,7 @@ $action = GETPOST('action', 'alpha');
  */
 
 if ($action == 'save') {
-	dolibarr_set_const($db, 'EXPORT_CSV_SEPARATOR_TO_USE', GETPOST('EXPORT_CSV_SEPARATOR_TO_USE', 'alphanohtml'));
+	DigitalProspects_set_const($db, 'EXPORT_CSV_SEPARATOR_TO_USE', GETPOST('EXPORT_CSV_SEPARATOR_TO_USE', 'alphanohtml'));
 }
 
 

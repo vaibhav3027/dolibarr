@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=沒有錯誤請求
 ErrorServiceUnavailableTryLater=服務目前無法使用。稍後再試。
 ErrorDuplicateField=在唯一的欄位有重覆的值
 ErrorSomeErrorWereFoundRollbackIsDone=找到一些錯誤。變更已經回復。
-ErrorConfigParameterNotDefined=參數<b>%s</b>沒有在Dolibarr設定檔案<b>conf.php</b>中定義。
-ErrorCantLoadUserFromDolibarrDatabase=在 Dolibarr 資料庫中無法找到用戶<b>%s</b>。
+ErrorConfigParameterNotDefined=參數<b>%s</b>沒有在DigitalProspects設定檔案<b>conf.php</b>中定義。
+ErrorCantLoadUserFromDigitalProspectsDatabase=在 DigitalProspects 資料庫中無法找到用戶<b>%s</b>。
 ErrorNoVATRateDefinedForSellerCountry=錯誤，沒有定義 '%s' 國家的營業稅率。
 ErrorNoSocialContributionForSellerCountry=錯誤，在 '%s' 國家中沒有定義社會/財務稅務類別。
 ErrorFailedToSaveFile=錯誤，無法儲存檔案。
@@ -90,7 +90,7 @@ RecordDeleted=記錄已刪除
 RecordGenerated=記錄已產生
 LevelOfFeature=功能等級
 NotDefined=未定義
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr 認證模式是在設定檔案<b> conf.php </b> 中設定成 <b>%s</b>。<br>即密碼資料庫是位於外部並連線到 Dolibarr，所以變更此欄位是沒有效果的。
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects 認證模式是在設定檔案<b> conf.php </b> 中設定成 <b>%s</b>。<br>即密碼資料庫是位於外部並連線到 DigitalProspects，所以變更此欄位是沒有效果的。
 Administrator=管理員
 Undefined=未定義
 PasswordForgotten=忘記密碼？
@@ -108,16 +108,16 @@ DatabaseTypeManager=資料庫類型管理器
 RequestLastAccessInError=最新資料庫訪問請求錯誤
 ReturnCodeLastAccessInError=最新的數據庫訪問請求錯誤返回代碼
 InformationLastAccessInError=最新資料庫訪問請求錯誤的資訊
-DolibarrHasDetectedError=Dolibarr 偵測到一個技術性錯誤
-YouCanSetOptionDolibarrMainProdToZero=您可以讀取 log 檔案或是在編好設定檔案中設定  $dolibarr_main_prod 選項的值為 0，以取得更多資訊。
-InformationToHelpDiagnose=此資訊對於診斷錯誤很有用 ( 您可以在 $dolibarr_main_prod 選項中設定為 1  移除類似的警告)
+DigitalProspectsHasDetectedError=DigitalProspects 偵測到一個技術性錯誤
+YouCanSetOptionDigitalProspectsMainProdToZero=您可以讀取 log 檔案或是在編好設定檔案中設定  $DigitalProspects_main_prod 選項的值為 0，以取得更多資訊。
+InformationToHelpDiagnose=此資訊對於診斷錯誤很有用 ( 您可以在 $DigitalProspects_main_prod 選項中設定為 1  移除類似的警告)
 MoreInformation=更多資訊
 TechnicalInformation=技術資訊
 TechnicalID=技術ID
 LineID=行ID
 NotePublic=備註（公開）
 NotePrivate=備註（不公開）
-PrecisionUnitIsLimitedToXDecimals=Dolibarr 已設定每單位價格的小數位數可到 <b>%s</b> 位。
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects 已設定每單位價格的小數位數可到 <b>%s</b> 位。
 DoTest=測試
 ToFilter=篩選器
 NoFilter=沒有篩選器
@@ -475,8 +475,8 @@ Generate=產生
 Duration=期間
 TotalDuration=總時間
 Summary=摘要
-DolibarrStateBoard=資料庫統計
-DolibarrWorkBoard=開啟項目
+DigitalProspectsStateBoard=資料庫統計
+DigitalProspectsWorkBoard=開啟項目
 NoOpenedElementToProcess=沒有已開啟元件要執行
 Available=可用
 NotYetAvailable=尚不可用
@@ -703,7 +703,7 @@ MenuECM=文件
 MenuAWStats=AWStats 軟體
 MenuMembers=會員
 MenuAgendaGoogle=Google 行事曆
-ThisLimitIsDefinedInSetup=Dolibarr 的限制（選單 首頁 - 設定 - 安全）： %s Kb, PHP的限制：%s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects 的限制（選單 首頁 - 設定 - 安全）： %s Kb, PHP的限制：%s Kb
 NoFileFound=此資料夾沒有任何檔案
 CurrentUserLanguage=目前語言
 CurrentTheme=目前主題
@@ -736,7 +736,7 @@ PrintContentArea=顯示列印頁面的主要內容區域
 MenuManager=選單管理器
 WarningYouAreInMaintenanceMode=警告，您處於維護模式：僅允許<b>%s</b>登入且在此模式下使用應用程序。
 CoreErrorTitle=系統錯誤
-CoreErrorMessage=很抱歉，發生錯誤。連絡您的系統管理員以確認記錄檔或禁用 $dolibarr_main_prod=1 以取得更多資訊。
+CoreErrorMessage=很抱歉，發生錯誤。連絡您的系統管理員以確認記錄檔或禁用 $DigitalProspects_main_prod=1 以取得更多資訊。
 CreditCard=信用卡
 ValidatePayment=驗證付款
 CreditOrDebitCard=信用卡或金融信用卡
@@ -875,7 +875,7 @@ Calendar=行事曆
 GroupBy=群組依...
 ViewFlatList=檢視平面清單
 RemoveString=移除字串‘%s’
-SomeTranslationAreUncomplete=提供的某些語言可能僅被部分翻譯，或者可能包含錯誤。請通過註冊<a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a>來進行改進，以幫助修正您的語言。
+SomeTranslationAreUncomplete=提供的某些語言可能僅被部分翻譯，或者可能包含錯誤。請通過註冊<a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a>來進行改進，以幫助修正您的語言。
 DirectDownloadLink=直接下載連結(公共/外部)
 DirectDownloadInternalLink=直接下載連結(需要登入及存取權限)
 Download=下載

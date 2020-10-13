@@ -30,7 +30,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/files.lib.php';
  * @access protected
  * @class Documents {@requires user,external}
  */
-class Documents extends DolibarrApi
+class Documents extends DigitalProspectsApi
 {
 
 	/**
@@ -91,7 +91,7 @@ class Documents extends DolibarrApi
 		$relativefile = $tmpreldir.dol_sanitizeFileName($object->ref); */
 		$relativefile = $original_file;
 
-		$check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DolibarrApiAccess::$user, '', 'read');
+		$check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DigitalProspectsApiAccess::$user, '', 'read');
 		$accessallowed = $check_access['accessallowed'];
 		$sqlprotectagainstexternals = $check_access['sqlprotectagainstexternals'];
 		$original_file = $check_access['original_file'];
@@ -168,7 +168,7 @@ class Documents extends DolibarrApi
 		$relativefile = $tmpreldir.dol_sanitizeFileName($object->ref); */
 		$relativefile = $original_file;
 
-		$check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DolibarrApiAccess::$user, '', 'write');
+		$check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DigitalProspectsApiAccess::$user, '', 'write');
 		$accessallowed              = $check_access['accessallowed'];
 		$sqlprotectagainstexternals = $check_access['sqlprotectagainstexternals'];
 		$original_file              = $check_access['original_file'];
@@ -282,7 +282,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/societe/class/societe.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->societe->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->societe->lire) {
 				throw new RestException(401);
 			}
 
@@ -299,7 +299,7 @@ class Documents extends DolibarrApi
 			require_once DOL_DOCUMENT_ROOT.'/user/class/user.class.php';
 
 			// Can get doc if has permission to read all user or if it is user itself
-			if (!DolibarrApiAccess::$user->rights->user->user->lire && DolibarrApiAccess::$user->id != $id) {
+			if (!DigitalProspectsApiAccess::$user->rights->user->user->lire && DigitalProspectsApiAccess::$user->id != $id) {
 				throw new RestException(401);
 			}
 
@@ -315,7 +315,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/adherents/class/adherent.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->adherent->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->adherent->lire) {
 				throw new RestException(401);
 			}
 
@@ -331,7 +331,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/comm/propal/class/propal.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->propal->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->propal->lire) {
 				throw new RestException(401);
 			}
 
@@ -347,7 +347,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/commande/class/commande.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->commande->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->commande->lire) {
 				throw new RestException(401);
 			}
 
@@ -363,7 +363,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/expedition/class/expedition.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->expedition->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->expedition->lire) {
 				throw new RestException(401);
 			}
 
@@ -379,7 +379,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/compta/facture/class/facture.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->facture->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->facture->lire) {
 				throw new RestException(401);
 			}
 
@@ -397,7 +397,7 @@ class Documents extends DolibarrApi
 
 			require_once DOL_DOCUMENT_ROOT.'/fourn/class/fournisseur.facture.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->fournisseur->facture->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->fournisseur->facture->lire) {
 				throw new RestException(401);
 			}
 
@@ -413,7 +413,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/product/class/product.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->produit->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->produit->lire) {
 				throw new RestException(401);
 			}
 
@@ -429,7 +429,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/comm/action/class/actioncomm.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->agenda->myactions->read && !DolibarrApiAccess::$user->rights->agenda->allactions->read) {
+			if (!DigitalProspectsApiAccess::$user->rights->agenda->myactions->read && !DigitalProspectsApiAccess::$user->rights->agenda->allactions->read) {
 				throw new RestException(401);
 			}
 
@@ -445,7 +445,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/expensereport/class/expensereport.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->expensereport->read && !DolibarrApiAccess::$user->rights->expensereport->read) {
+			if (!DigitalProspectsApiAccess::$user->rights->expensereport->read && !DigitalProspectsApiAccess::$user->rights->expensereport->read) {
 				throw new RestException(401);
 			}
 
@@ -461,7 +461,7 @@ class Documents extends DolibarrApi
 		{
 			require_once DOL_DOCUMENT_ROOT.'/categories/class/categorie.class.php';
 
-			if (!DolibarrApiAccess::$user->rights->categorie->lire) {
+			if (!DigitalProspectsApiAccess::$user->rights->categorie->lire) {
 				throw new RestException(401);
 			}
 
@@ -538,7 +538,7 @@ class Documents extends DolibarrApi
 			throw new RestException(400, 'Modulepart not provided.');
 		}
 
-		if (!DolibarrApiAccess::$user->rights->ecm->upload) {
+		if (!DigitalProspectsApiAccess::$user->rights->ecm->upload) {
 			throw new RestException(401);
 		}
 
@@ -550,7 +550,7 @@ class Documents extends DolibarrApi
 
 		// Define $uploadir
 		$object = null;
-		$entity = DolibarrApiAccess::$user->entity;
+		$entity = DigitalProspectsApiAccess::$user->entity;
 		if ($ref)
 		{
 			$tmpreldir = '';
@@ -647,7 +647,7 @@ class Documents extends DolibarrApi
 
 			$relativefile = $tmpreldir.dol_sanitizeFileName($object->ref);
 
-			$tmp = dol_check_secure_access_document($modulepart, $relativefile, $entity, DolibarrApiAccess::$user, $ref, 'write');
+			$tmp = dol_check_secure_access_document($modulepart, $relativefile, $entity, DigitalProspectsApiAccess::$user, $ref, 'write');
 			$upload_dir = $tmp['original_file']; // No dirname here, tmp['original_file'] is already the dir because dol_check_secure_access_document was called with param original_file that is only the dir
 
 			if (empty($upload_dir) || $upload_dir == '/')
@@ -662,7 +662,7 @@ class Documents extends DolibarrApi
 
 			$relativefile = $subdir;
 
-			$tmp = dol_check_secure_access_document($modulepart, $relativefile, $entity, DolibarrApiAccess::$user, '', 'write');
+			$tmp = dol_check_secure_access_document($modulepart, $relativefile, $entity, DigitalProspectsApiAccess::$user, '', 'write');
 			$upload_dir = $tmp['original_file']; // No dirname here, tmp['original_file'] is already the dir because dol_check_secure_access_document was called with param original_file that is only the dir
 
 			if (empty($upload_dir) || $upload_dir == '/')
@@ -752,7 +752,7 @@ class Documents extends DolibarrApi
 	    $relativefile = $tmpreldir.dol_sanitizeFileName($object->ref); */
 	    $relativefile = $original_file;
 
-	    $check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DolibarrApiAccess::$user, '', 'read');
+	    $check_access = dol_check_secure_access_document($modulepart, $relativefile, $entity, DigitalProspectsApiAccess::$user, '', 'read');
 	    $accessallowed = $check_access['accessallowed'];
 	    $sqlprotectagainstexternals = $check_access['sqlprotectagainstexternals'];
 	    $original_file = $check_access['original_file'];

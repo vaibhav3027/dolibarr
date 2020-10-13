@@ -57,7 +57,7 @@ $left = ($langs->trans("DIRECTION") == 'rtl' ? 'right' : 'left');
 
 $title = $langs->trans("Menu");
 
-// URL http://mydolibarr/core/get_menudiv.php?dol_use_jmobile=1 can be used for tests
+// URL http://myDigitalProspects/core/get_menudiv.php?dol_use_jmobile=1 can be used for tests
 $head = '<!-- Menu -->'."\n";
 $arrayofjs = array();
 $arrayofcss = array();
@@ -91,7 +91,7 @@ print '
         padding: 1em 15px 1em 40px;
     }
     li.lilevel0 font.vsmenudisabled {
-        /* background-image: url(/dolibarr_dev/htdocs/theme/eldy/img/next.png) !important; */
+        /* background-image: url(/DigitalProspects_dev/htdocs/theme/eldy/img/next.png) !important; */
         background-repeat: no-repeat !important;
         background-position-x: 10px;
         background-position-y: 16px;

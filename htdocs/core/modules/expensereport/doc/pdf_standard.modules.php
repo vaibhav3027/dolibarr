@@ -71,10 +71,10 @@ class pdf_standard extends ModeleExpenseReport
 	public $phpmin = array(5, 5);
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	/**
      * @var int page_largeur
@@ -285,7 +285,7 @@ class pdf_standard extends ModeleExpenseReport
 
 				$pdf->SetTitle($outputlangs->convToOutputCharset($object->ref));
 				$pdf->SetSubject($outputlangs->transnoentities("Trips"));
-				$pdf->SetCreator("Dolibarr ".DOL_VERSION);
+				$pdf->SetCreator("DigitalProspects ".DOL_VERSION);
 				$pdf->SetAuthor($outputlangs->convToOutputCharset($user->getFullName($outputlangs)));
 				$pdf->SetKeyWords($outputlangs->convToOutputCharset($object->ref)." ".$outputlangs->transnoentities("Trips"));
 				if (!empty($conf->global->MAIN_DISABLE_PDF_COMPRESSION)) $pdf->SetCompression(false);

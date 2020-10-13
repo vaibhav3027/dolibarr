@@ -50,9 +50,9 @@ class doc_generic_proposal_odt extends ModelePDFPropales
 	public $phpmin = array(5, 5);
 
     /**
-     * @var string Dolibarr version of the loaded document
+     * @var string DigitalProspects version of the loaded document
      */
-    public $version = 'dolibarr';
+    public $version = 'DigitalProspects';
 
 
 	/**

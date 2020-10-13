@@ -31,10 +31,10 @@ dol_include_once('/mymodule/core/modules/mymodule/modules_myobject.php');
 class mod_myobject_standard extends ModeleNumRefMyObject
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'MYOBJECT';
 

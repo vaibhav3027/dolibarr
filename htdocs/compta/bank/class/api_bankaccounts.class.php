@@ -25,9 +25,9 @@ require_once DOL_DOCUMENT_ROOT.'/compta/bank/class/account.class.php';
  *
  * @property DoliDB db
  * @access protected
- * @class DolibarrApiAccess {@requires user,external}
+ * @class DigitalProspectsApiAccess {@requires user,external}
  */
-class BankAccounts extends DolibarrApi
+class BankAccounts extends DigitalProspectsApi
 {
 
     /**
@@ -67,7 +67,7 @@ class BankAccounts extends DolibarrApi
     {
         $list = array();
 
-        if (!DolibarrApiAccess::$user->rights->banque->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->lire) {
             throw new RestException(401);
         }
 
@@ -83,12 +83,12 @@ class BankAccounts extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $this->db->order($sortfield, $sortorder);
@@ -132,7 +132,7 @@ class BankAccounts extends DolibarrApi
      */
     public function get($id)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->lire) {
             throw new RestException(401);
         }
 
@@ -153,7 +153,7 @@ class BankAccounts extends DolibarrApi
      */
     public function post($request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->configurer) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->configurer) {
             throw new RestException(401);
         }
         // Check mandatory fields
@@ -169,7 +169,7 @@ class BankAccounts extends DolibarrApi
         // creating an account is courant
         $account->courant = $account->type;
 
-        if ($account->create(DolibarrApiAccess::$user) < 0) {
+        if ($account->create(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(500, 'Error creating bank account', array_merge(array($account->error), $account->errors));
         }
         return $account->id;
@@ -198,7 +198,7 @@ class BankAccounts extends DolibarrApi
      */
     public function transfer($bankaccount_from_id = 0, $bankaccount_to_id = 0, $date = null, $description = "", $amount = 0.0, $amount_to = 0.0)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->configurer) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->configurer) {
             throw new RestException(401);
         }
 
@@ -240,7 +240,7 @@ class BankAccounts extends DolibarrApi
         $bank_line_id_from = 0;
         $bank_line_id_to = 0;
         $result = 0;
-        $user = DolibarrApiAccess::$user;
+        $user = DigitalProspectsApiAccess::$user;
 
         // By default, electronic transfert from bank to bank
         $typefrom = 'PRE';
@@ -320,7 +320,7 @@ class BankAccounts extends DolibarrApi
      */
     public function put($id, $request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->configurer) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->configurer) {
             throw new RestException(401);
         }
 
@@ -335,7 +335,7 @@ class BankAccounts extends DolibarrApi
             $account->$field = $value;
         }
 
-        if ($account->update(DolibarrApiAccess::$user) > 0)
+        if ($account->update(DigitalProspectsApiAccess::$user) > 0)
         {
             return $this->get($id);
         }
@@ -353,7 +353,7 @@ class BankAccounts extends DolibarrApi
      */
     public function delete($id)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->configurer) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->configurer) {
             throw new RestException(401);
         }
         $account = new Account($this->db);
@@ -362,7 +362,7 @@ class BankAccounts extends DolibarrApi
             throw new RestException(404, 'account not found');
         }
 
-        if ($account->delete(DolibarrApiAccess::$user) < 0) {
+        if ($account->delete(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(401, 'error when deleting account');
         }
 
@@ -425,7 +425,7 @@ class BankAccounts extends DolibarrApi
     {
         $list = array();
 
-        if (!DolibarrApiAccess::$user->rights->banque->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->lire) {
             throw new RestException(401);
         }
 
@@ -441,12 +441,12 @@ class BankAccounts extends DolibarrApi
 		// Add sql filters
 		if ($sqlfilters)
 		{
-			if (!DolibarrApi::_checkFilters($sqlfilters))
+			if (!DigitalProspectsApi::_checkFilters($sqlfilters))
 			{
 				throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
 			}
 			$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-			$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+			$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
 		}
 
         $sql .= " ORDER BY rowid";
@@ -487,7 +487,7 @@ class BankAccounts extends DolibarrApi
      */
     public function addLine($id, $date, $type, $label, $amount, $category = 0, $cheque_number = '', $cheque_writer = '', $cheque_bank = '')
     {
-        if (!DolibarrApiAccess::$user->rights->banque->modifier) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->modifier) {
             throw new RestException(401);
         }
 
@@ -504,7 +504,7 @@ class BankAccounts extends DolibarrApi
             $amount,
             $cheque_number,
             $category,
-            DolibarrApiAccess::$user,
+            DigitalProspectsApiAccess::$user,
             $cheque_writer, $cheque_bank
         );
         if ($result < 0) {
@@ -528,7 +528,7 @@ class BankAccounts extends DolibarrApi
      */
     public function addLink($id, $line_id, $url_id, $url, $label, $type)
     {
-        if (!DolibarrApiAccess::$user->rights->banque->modifier) {
+        if (!DigitalProspectsApiAccess::$user->rights->banque->modifier) {
             throw new RestException(401);
         }
 

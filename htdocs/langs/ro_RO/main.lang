@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nicio cerere în eroare
 ErrorServiceUnavailableTryLater=Serviciul nu este disponibil momentan. Încercați mai târziu.
 ErrorDuplicateField=Valoare duplicat într-un câmp unic
 ErrorSomeErrorWereFoundRollbackIsDone=Au fost găsite unele erori. Modificările au fost reluate.
-ErrorConfigParameterNotDefined=Parametrul <b> %s </b> nu este definit în fișierul de configurare Dolibarr <b> conf.php </b>.
-ErrorCantLoadUserFromDolibarrDatabase=Utilizatorul<b>%s</b>  negăsit  în baza de date Dolibarr.
+ErrorConfigParameterNotDefined=Parametrul <b> %s </b> nu este definit în fișierul de configurare DigitalProspects <b> conf.php </b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Utilizatorul<b>%s</b>  negăsit  în baza de date DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Eroare,  nici o cota de TVA definită pentru  ţara '% s'.
 ErrorNoSocialContributionForSellerCountry=Eroare, niciun tip taxa sociala /fiscala definit pentru ţara '%s'.
 ErrorFailedToSaveFile=Eroare,  salvarea fişierului eşuată.
@@ -90,7 +90,7 @@ RecordDeleted=Înregistrare ştearsă
 RecordGenerated=Înregistrată generată
 LevelOfFeature=Nivel funcţionalităţi
 NotDefined=Nedefinit
-DolibarrInHttpAuthenticationSoPasswordUseless=Modul de autentificare Dolibarr este setat la <b> %s </b> în fișierul de configurare <b> conf.php </b>. <br> Aceasta înseamnă că baza de date pentru parole este externă pentru Dolibarr, deci schimbarea acestui câmp poate să nu aibă efect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Modul de autentificare DigitalProspects este setat la <b> %s </b> în fișierul de configurare <b> conf.php </b>. <br> Aceasta înseamnă că baza de date pentru parole este externă pentru DigitalProspects, deci schimbarea acestui câmp poate să nu aibă efect.
 Administrator=Administrator
 Undefined=Nedefinit
 PasswordForgotten=Parola uitata ?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Tip gestiune Baza de date
 RequestLastAccessInError=Ultima eroare de solicitare acces baza de date
 ReturnCodeLastAccessInError=Cod returnat pentru ultima eroare de acces la baza de date
 InformationLastAccessInError=Info pentru ultima eroare de acces la baza de date
-DolibarrHasDetectedError=Dolibarr a detectat o eroare tehnică
-YouCanSetOptionDolibarrMainProdToZero=Puteți citi fișierul jurnal sau setați opțiunea $ dolibarr_main_prod la "0" din fișierul config pentru a obține mai multe informații.
-InformationToHelpDiagnose=Aceste informații pot fi utile în scopuri de diagnoză (puteți seta opțiunea $ dolibarr_main_prod la "1" pentru a elimina aceste anunțuri)
+DigitalProspectsHasDetectedError=DigitalProspects a detectat o eroare tehnică
+YouCanSetOptionDigitalProspectsMainProdToZero=Puteți citi fișierul jurnal sau setați opțiunea $ DigitalProspects_main_prod la "0" din fișierul config pentru a obține mai multe informații.
+InformationToHelpDiagnose=Aceste informații pot fi utile în scopuri de diagnoză (puteți seta opțiunea $ DigitalProspects_main_prod la "1" pentru a elimina aceste anunțuri)
 MoreInformation=Mai multe informaţii
 TechnicalInformation=Informații Tehnice
 TechnicalID= ID Technic
 LineID=Line ID
 NotePublic=Notă (publică)
 NotePrivate=Notă (privată)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr a fost de configurat  pentru o limita de precizie pentru prețuri unitare  la<b>% s</b> zecimale.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects a fost de configurat  pentru o limita de precizie pentru prețuri unitare  la<b>% s</b> zecimale.
 DoTest=Test
 ToFilter=Filtru
 NoFilter=Fara filtru
@@ -475,8 +475,8 @@ Generate=Generează
 Duration=Durata
 TotalDuration=Durată totală
 Summary=Sumar
-DolibarrStateBoard=Statisticile bazei de date
-DolibarrWorkBoard=Deschideți Elementele
+DigitalProspectsStateBoard=Statisticile bazei de date
+DigitalProspectsWorkBoard=Deschideți Elementele
 NoOpenedElementToProcess=No open element to process
 Available=Disponibil
 NotYetAvailable=Nedisponibil încă
@@ -703,7 +703,7 @@ MenuECM=Documente
 MenuAWStats=AWStats
 MenuMembers=Membri
 MenuAgendaGoogle=Agenda Google
-ThisLimitIsDefinedInSetup=Limită Dolibarr  (Menu Home-setup-securitate): %s Kb, PHP limita: %s Kb
+ThisLimitIsDefinedInSetup=Limită DigitalProspects  (Menu Home-setup-securitate): %s Kb, PHP limita: %s Kb
 NoFileFound=Niciun document salvat  în acest director,
 CurrentUserLanguage=Limba curentă
 CurrentTheme=Tema curentă
@@ -736,7 +736,7 @@ PrintContentArea=Afişaţi pagina pentru imprimat în zona conţinutului princip
 MenuManager=Manager Meniu
 WarningYouAreInMaintenanceMode=Atenție, sunteți în modul de întreținere: este permisă numai utilizarea sistemului de conectare <b> %s </b> în acest mod.
 CoreErrorTitle=Eroare de sistem
-CoreErrorMessage=Scuze, a aparut o eroare. Contactați administratorul de sistem pentru a verifica jurnalele sau  dezactivați $ dolibarr_main_prod = 1 pentru a obține mai multe informații.
+CoreErrorMessage=Scuze, a aparut o eroare. Contactați administratorul de sistem pentru a verifica jurnalele sau  dezactivați $ DigitalProspects_main_prod = 1 pentru a obține mai multe informații.
 CreditCard=Card de credit
 ValidatePayment=Validează plata
 CreditOrDebitCard=Card de credit sau debit
@@ -875,7 +875,7 @@ Calendar=Calendar
 GroupBy=A se grupa cu...
 ViewFlatList=Vizualizați lista plată
 RemoveString=Eliminați șirul "%s"
-SomeTranslationAreUncomplete=Unele dintre limbile oferite pot fi traduse numai parțial sau pot conține erori. Vă rugăm să vă ajutați să vă corectați limba prin înscrierea la <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a> pentru a vă adăuga îmbunătățirile.
+SomeTranslationAreUncomplete=Unele dintre limbile oferite pot fi traduse numai parțial sau pot conține erori. Vă rugăm să vă ajutați să vă corectați limba prin înscrierea la <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a> pentru a vă adăuga îmbunătățirile.
 DirectDownloadLink=Link direct de descărcare (public / extern)
 DirectDownloadInternalLink=Link direct de descărcare (trebuie înregistrare și are nevoie de permisiuni)
 Download=Descarcă

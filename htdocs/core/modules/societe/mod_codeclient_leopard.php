@@ -52,10 +52,10 @@ class mod_codeclient_leopard extends ModeleThirdPartyCode
 	public $code_null; // Code facultatif
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	/**
 	 * @var int Automatic numbering

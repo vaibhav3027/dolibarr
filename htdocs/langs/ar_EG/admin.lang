@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - admin
+# DigitalProspects language file - Source file is en_US - admin
 Foundation=مؤسسة
 Version=إصدار
 Publisher=الناشر
@@ -18,7 +18,7 @@ RemoteSignature=التوقيع عن بعد (أكثر موثوقية)
 FilesUpdated=الملفات المحدثة
 FilesModified=الملفات المعدلة
 FilesAdded=الملفات المضافة
-FileCheckDolibarr=تحقق من سلامة ملفات التطبيق
+FileCheckDigitalProspects=تحقق من سلامة ملفات التطبيق
 AvailableOnlyOnPackagedVersions=لا يتوفر الملف المحلي لفحص السلامة إلا عندما يتم تثبيت التطبيق من حزمة رسمية
 XmlNotFound=لم يتم العثور على ملف تكامل Xml للتطبيق
 SessionId=هوية المتصل
@@ -28,7 +28,7 @@ PurgeSessions=مسح الجلسات
 ConfirmPurgeSessions=هل تريد حقًا تطهير جميع الجلسات؟ سيؤدي هذا إلى فصل كل مستخدم (باستثناء نفسك).
 NoSessionListWithThisHandler=لا يسمح معالج حفظ الجلسة الذي تم تكوينه في PHP بإدراج جميع الجلسات الجارية.
 LockNewSessions=اغلاق الدخول للمتصلين الجدد
-ConfirmLockNewSessions=هل أنت متأكد من أنك تريد تقييد أي اتصال Dolibarr جديد لنفسك؟ سيتمكن المستخدم <b> %s </b> فقط من الاتصال بعد ذلك.
+ConfirmLockNewSessions=هل أنت متأكد من أنك تريد تقييد أي اتصال DigitalProspects جديد لنفسك؟ سيتمكن المستخدم <b> %s </b> فقط من الاتصال بعد ذلك.
 UnlockNewSessions=الغاء حظر الاتصال
 YourSession=جلستك
 Sessions=جلسات المستخدمين
@@ -40,7 +40,7 @@ ClientCharset=مجموع حروف العميل
 ClientSortingCharset=ترتيب العميل
 WarningModuleNotActive=إن الوحدة <b>%s</b> لابد أن تكون مفعلة
 WarningOnlyPermissionOfActivatedModules=أن الصلاحيات المرتبطة بالوحدات المفعلة فقط تظهر هنا. تستطيع تفعيل وحدات أخرى من: الرئيسية ثم التنصيب ثم صفحة الوحدات
-DolibarrSetup=تثبيت أو ترقية البرنامج
+DigitalProspectsSetup=تثبيت أو ترقية البرنامج
 InternalUsers=مستخدمون داخليون
 ExternalUsers=مستخدمون خارجيون
 FormToTestFileUploadForm=نموذج تجربة رفع الملفات (تبعا للتنصيب)

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=No request in error
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=Duplicate value in a unique field
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Failed to find user <b>%s</b> in Dolibarr database.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Failed to find user <b>%s</b> in DigitalProspects database.
 ErrorNoVATRateDefinedForSellerCountry=Error, no vat rates defined for country '%s'.
 ErrorNoSocialContributionForSellerCountry=Error, no social/fiscal taxes type defined for country '%s'.
 ErrorFailedToSaveFile=Error, failed to save file.
@@ -90,7 +90,7 @@ RecordDeleted=Record deleted
 RecordGenerated=Record generated
 LevelOfFeature=Level of features
 NotDefined=Not defined
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Administrator
 Undefined=Undefined
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Database type manager
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr has detected a technical error
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects has detected a technical error
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=More information
 TechnicalInformation=Technical information
 TechnicalID=Technical ID
 LineID=Line ID
 NotePublic=Note (public)
 NotePrivate=Note (private)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr was setup to limit precision of unit prices to <b>%s</b> decimals.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects was setup to limit precision of unit prices to <b>%s</b> decimals.
 DoTest=Test
 ToFilter=Iragazia
 NoFilter=No filter
@@ -475,8 +475,8 @@ Generate=Generate
 Duration=Duration
 TotalDuration=Total duration
 Summary=Summary
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Available
 NotYetAvailable=Not yet available
@@ -703,7 +703,7 @@ MenuECM=Documents
 MenuAWStats=AWStats
 MenuMembers=Kideak
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Dolibarr limit (Menu home-setup-security): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects limit (Menu home-setup-security): %s Kb, PHP limit: %s Kb
 NoFileFound=No documents saved in this directory
 CurrentUserLanguage=Current language
 CurrentTheme=Current theme
@@ -736,7 +736,7 @@ PrintContentArea=Show page to print main content area
 MenuManager=Menu manager
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=System error
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Credit card
 ValidatePayment=Ordainketak balioztatu
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Egutegia
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

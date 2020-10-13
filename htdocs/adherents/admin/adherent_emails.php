@@ -69,7 +69,7 @@ if ($action == 'updateall')
 {
     $db->begin();
     $res1 = $res2 = $res3 = $res4 = $res5 = $res6 = 0;
-    $res1 = dolibarr_set_const($db, 'XXXX', GETPOST('ADHERENT_LOGIN_NOT_REQUIRED', 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res1 = DigitalProspects_set_const($db, 'XXXX', GETPOST('ADHERENT_LOGIN_NOT_REQUIRED', 'alpha'), 'chaine', 0, '', $conf->entity);
     if ($res1 < 0 || $res2 < 0 || $res3 < 0 || $res4 < 0 || $res5 < 0 || $res6 < 0)
     {
         setEventMessages('ErrorFailedToSaveDate', null, 'errors');
@@ -95,7 +95,7 @@ if ($action == 'update' || $action == 'add')
 	$typetouse = empty($oldtypetonewone[$consttype]) ? $consttype : $oldtypetonewone[$consttype];
 	$constvalue = preg_replace('/:member$/', '', $constvalue);
 
-	$res = dolibarr_set_const($db, $constname, $constvalue, $typetouse, 0, $constnote, $conf->entity);
+	$res = DigitalProspects_set_const($db, $constname, $constvalue, $typetouse, 0, $constnote, $conf->entity);
 
 	if (!$res > 0) $error++;
 

@@ -509,7 +509,7 @@ class Commande extends CommonOrder
 						$mouvP = new MouvementStock($this->db);
 						$mouvP->origin = &$this;
 						// We decrement stock of product (and sub-products)
-						$result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("OrderValidatedInDolibarr", $num));
+						$result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("OrderValidatedInDigitalProspects", $num));
 						if ($result < 0)
 						{
 							$error++;
@@ -648,7 +648,7 @@ class Commande extends CommonOrder
 						$mouvP = new MouvementStock($this->db);
 						$mouvP->origin = &$this;
 						// We increment stock of product (and sub-products)
-						$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("OrderBackToDraftInDolibarr", $this->ref));
+						$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("OrderBackToDraftInDigitalProspects", $this->ref));
 						if ($result < 0) { $error++; $this->error = $mouvP->error; break; }
 					}
 				}
@@ -837,7 +837,7 @@ class Commande extends CommonOrder
 					{
 						$mouvP = new MouvementStock($this->db);
 						// We increment stock of product (and sub-products)
-						$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("OrderCanceledInDolibarr", $this->ref)); // price is 0, we don't want WAP to be changed
+						$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("OrderCanceledInDigitalProspects", $this->ref)); // price is 0, we don't want WAP to be changed
 						if ($result < 0)
 						{
 							$error++;
@@ -1443,8 +1443,8 @@ class Commande extends CommonOrder
 	 *	@param      int				$fk_remise_except	Id remise
 	 *	@param      string			$price_base_type	HT or TTC
 	 *	@param      float			$pu_ttc    		    Prix unitaire TTC
-	 *	@param      int				$date_start       	Start date of the line - Added by Matelli (See http://matelli.fr/showcases/patchs-dolibarr/add-dates-in-order-lines.html)
-	 *	@param      int				$date_end         	End date of the line - Added by Matelli (See http://matelli.fr/showcases/patchs-dolibarr/add-dates-in-order-lines.html)
+	 *	@param      int				$date_start       	Start date of the line - Added by Matelli (See http://matelli.fr/showcases/patchs-DigitalProspects/add-dates-in-order-lines.html)
+	 *	@param      int				$date_end         	End date of the line - Added by Matelli (See http://matelli.fr/showcases/patchs-DigitalProspects/add-dates-in-order-lines.html)
 	 *	@param      int				$type				Type of line (0=product, 1=service). Not used if fk_product is defined, the type of product is used.
 	 *	@param      int				$rang             	Position of line
 	 *	@param		int				$special_code		Special code (also used by externals modules!)

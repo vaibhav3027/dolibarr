@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Ref. projekt
 ProjectRef=Projekt ref.
 ProjectId=Projekt-id
@@ -150,12 +150,12 @@ ConfirmCloneProject=Er du sikker på at klone dette projekt?
 ProjectReportDate=Skift opgaver datoer i henhold til ny projekt startdato
 ErrorShiftTaskDate=Det er umuligt at skifte arbejdsdato i henhold til ny projekt startdato
 ProjectsAndTasksLines=Projekter og opgaver
-ProjectCreatedInDolibarr=Projekt %s oprettet
-ProjectValidatedInDolibarr=Projekt %s bekræftet
-ProjectModifiedInDolibarr=Projekt %s ændret
-TaskCreatedInDolibarr=Opgave %s oprettet
-TaskModifiedInDolibarr=Opgave %s ændret
-TaskDeletedInDolibarr=Opgave %s slettet
+ProjectCreatedInDigitalProspects=Projekt %s oprettet
+ProjectValidatedInDigitalProspects=Projekt %s bekræftet
+ProjectModifiedInDigitalProspects=Projekt %s ændret
+TaskCreatedInDigitalProspects=Opgave %s oprettet
+TaskModifiedInDigitalProspects=Opgave %s ændret
+TaskDeletedInDigitalProspects=Opgave %s slettet
 OpportunityStatus=Lederstatus
 OpportunityStatusShort=Lead status
 OpportunityProbability=Ledsandsynlighed

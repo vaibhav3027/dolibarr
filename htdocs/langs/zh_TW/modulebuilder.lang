@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - loan
+# DigitalProspects language file - Source file is en_US - loan
 ModuleBuilderDesc=此工具只能由有經驗的使用者或開發人員使用。它提供了用於建構或編輯您自己模組。另個<a href="%s" target="_blank">手動開發的文件在此處</a>。
 EnterNameOfModuleDesc=輸入要新建的 模組/程式 名稱不留空白。使用大寫字母分隔單詞（例如：example: MyModule, EcommerceForShop, SyncWithMySystem...）
 EnterNameOfObjectDesc=輸入要新建的物件名稱不留空白。使用大寫字母分隔單詞（例如：MyObject, Student, Teacher...）。將生成 CRUD class 檔案，以及 API 檔案，頁面用來 列出/新增/編輯/刪除 對象及SQL的檔案將自動生成。
@@ -25,7 +25,7 @@ EnterNameOfModuleToDeleteDesc=You can delete your module. WARNING: All coding fi
 EnterNameOfObjectToDeleteDesc=You can delete an object. WARNING: All coding files (generated or created manually) related to object will be deleted!
 DangerZone=危險區域
 BuildPackage=建立軟體包
-BuildPackageDesc=You can generate a zip package of your application so your are ready to distribute it on any Dolibarr. You can also distribute it or sell it on marketplace like <a href="https://www.dolistore.com">DoliStore.com</a>.
+BuildPackageDesc=You can generate a zip package of your application so your are ready to distribute it on any DigitalProspects. You can also distribute it or sell it on marketplace like <a href="https://www.dolistore.com">DoliStore.com</a>.
 BuildDocumentation=建立文件
 ModuleIsNotActive=This module is not activated yet. Go to %s to make it live or click here
 ModuleIsLive=此模組已被啟動。任何更改都可能會破壞目前的即時功能。
@@ -100,7 +100,7 @@ HooksDefDesc=Define in the <b>module_parts['hooks']</b> property, in the module 
 TriggerDefDesc=Define in the trigger file the code you want to execute for each business event executed.
 SeeIDsInUse=See IDs in use in your installation
 SeeReservedIDsRangeHere=See range of reserved IDs
-ToolkitForDevelopers=Toolkit for Dolibarr developers
+ToolkitForDevelopers=Toolkit for DigitalProspects developers
 TryToUseTheModuleBuilder=如果您具有SQL和PHP的知識，則可以使用本機模組建構器精靈。 <br>啟用模組<strong> %s </strong>並通過點擊右上方選單上的<span class="fa fa-bug"> </span>使用精靈。 <br>警告：這是高級開發人員功能，請<b>不要</b>在生產 網站上進行實驗！
 SeeTopRightMenu=請參閱右上方選單中的<span class="fa fa-bug"> </span>
 AddLanguageFile=增加語言檔案

@@ -49,8 +49,8 @@ if (!$user->admin) accessforbidden();
 
 if ($file && !$what)
 {
-    //print DOL_URL_ROOT.'/dolibarr_export.php';
-	header("Location: ".DOL_URL_ROOT.'/admin/tools/dolibarr_export.php?msg='.urlencode($langs->trans("ErrorFieldRequired", $langs->transnoentities("ExportMethod"))).(GETPOST('page_y', 'int') ? '&page_y='.GETPOST('page_y', 'int') : ''));
+    //print DOL_URL_ROOT.'/DigitalProspects_export.php';
+	header("Location: ".DOL_URL_ROOT.'/admin/tools/DigitalProspects_export.php?msg='.urlencode($langs->trans("ErrorFieldRequired", $langs->transnoentities("ExportMethod"))).(GETPOST('page_y', 'int') ? '&page_y='.GETPOST('page_y', 'int') : ''));
     exit;
 }
 
@@ -125,10 +125,10 @@ if ($what == 'mysql')
     $cmddump = GETPOST("mysqldump"); // Do not sanitize here with 'alpha', will be sanitize later by dol_sanitizePathName and escapeshellarg
     $cmddump = dol_sanitizePathName($cmddump);
 
-    if (!empty($dolibarr_main_restrict_os_commands))
+    if (!empty($DigitalProspects_main_restrict_os_commands))
     {
-        $arrayofallowedcommand = explode(',', $dolibarr_main_restrict_os_commands);
-        dol_syslog("Command are restricted to ".$dolibarr_main_restrict_os_commands.". We check that one of this command is inside ".$cmddump);
+        $arrayofallowedcommand = explode(',', $DigitalProspects_main_restrict_os_commands);
+        dol_syslog("Command are restricted to ".$DigitalProspects_main_restrict_os_commands.". We check that one of this command is inside ".$cmddump);
         $basenamecmddump = basename($cmddump);
         if (!in_array($basenamecmddump, $arrayofallowedcommand))	// the provided command $cmddump must be an allowed command
         {
@@ -138,7 +138,7 @@ if ($what == 'mysql')
 
     if (!$errormsg && $cmddump)
     {
-        dolibarr_set_const($db, 'SYSTEMTOOLS_MYSQLDUMP', $cmddump, 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, 'SYSTEMTOOLS_MYSQLDUMP', $cmddump, 'chaine', 0, '', $conf->entity);
     }
 
     if (!$errormsg)
@@ -167,10 +167,10 @@ if ($what == 'postgresql')
     $cmddump = dol_sanitizePathName($cmddump);
 
     /* Not required, the command is output on screen but not ran for pgsql
-    if (! empty($dolibarr_main_restrict_os_commands))
+    if (! empty($DigitalProspects_main_restrict_os_commands))
     {
-    	$arrayofallowedcommand=explode(',', $dolibarr_main_restrict_os_commands);
-    	dol_syslog("Command are restricted to ".$dolibarr_main_restrict_os_commands.". We check that one of this command is inside ".$cmddump);
+    	$arrayofallowedcommand=explode(',', $DigitalProspects_main_restrict_os_commands);
+    	dol_syslog("Command are restricted to ".$DigitalProspects_main_restrict_os_commands.". We check that one of this command is inside ".$cmddump);
     	$basenamecmddump=basename($cmddump);
     	if (! in_array($basenamecmddump, $arrayofallowedcommand))	// the provided command $cmddump must be an allowed command
     	{
@@ -180,7 +180,7 @@ if ($what == 'postgresql')
 
     if (!$errormsg && $cmddump)
     {
-        dolibarr_set_const($db, 'SYSTEMTOOLS_POSTGRESQLDUMP', $cmddump, 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, 'SYSTEMTOOLS_POSTGRESQLDUMP', $cmddump, 'chaine', 0, '', $conf->entity);
     }
 
     if (!$errormsg)
@@ -219,20 +219,20 @@ else
 	}
 	/*else
 	{
-		setEventMessages($langs->trans("YouMustRunCommandFromCommandLineAfterLoginToUser",$dolibarr_main_db_user,$dolibarr_main_db_user), null, 'warnings');
+		setEventMessages($langs->trans("YouMustRunCommandFromCommandLineAfterLoginToUser",$DigitalProspects_main_db_user,$DigitalProspects_main_db_user), null, 'warnings');
 	}*/
 }
 
 
 /*
 $filearray=dol_dir_list($conf->admin->dir_output.'/backup','files',0,'','',$sortfield,(strtolower($sortorder)=='asc'?SORT_ASC:SORT_DESC),1);
-$result=$formfile->list_of_documents($filearray,null,'systemtools','',1,'backup/',1,0,($langs->trans("NoBackupFileAvailable").'<br>'.$langs->trans("ToBuildBackupFileClickHere",DOL_URL_ROOT.'/admin/tools/dolibarr_export.php')),0,$langs->trans("PreviousDumpFiles"));
+$result=$formfile->list_of_documents($filearray,null,'systemtools','',1,'backup/',1,0,($langs->trans("NoBackupFileAvailable").'<br>'.$langs->trans("ToBuildBackupFileClickHere",DOL_URL_ROOT.'/admin/tools/DigitalProspects_export.php')),0,$langs->trans("PreviousDumpFiles"));
 
 print '<br>';
 */
 
 // Redirect to backup page
-header("Location: dolibarr_export.php".(GETPOST('page_y', 'int') ? '?page_y='.GETPOST('page_y', 'int') : ''));
+header("Location: DigitalProspects_export.php".(GETPOST('page_y', 'int') ? '?page_y='.GETPOST('page_y', 'int') : ''));
 
 $time_end = time();
 

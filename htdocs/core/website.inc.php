@@ -71,7 +71,7 @@ if ($pageid > 0)
 	$weblangs->setDefaultLang(GETPOSTISSET('lang') ? GETPOST('lang', 'aZ09') : (empty($_COOKIE['weblangs-shortcode']) ? 'auto' : $_COOKIE['weblangs-shortcode']));
 	$pagelangs->setDefaultLang($websitepage->lang ? $websitepage->lang : $weblangs->shortlang);
 
-	if (!defined('USEDOLIBARREDITOR') && in_array($websitepage->type_container, array('menu', 'other')))
+	if (!defined('USEDigitalProspectsEDITOR') && in_array($websitepage->type_container, array('menu', 'other')))
 	{
 		$weblangs->load("website");
 		http_response_code(404);
@@ -80,7 +80,7 @@ if ($pageid > 0)
 	}
 }
 
-if (!defined('USEDOLIBARRSERVER') && !defined('USEDOLIBARREDITOR')) {
+if (!defined('USEDigitalProspectsSERVER') && !defined('USEDigitalProspectsEDITOR')) {
 	header("X-Content-Type-Options: nosniff");
 	/* TODO Manage allow_frames flag on websitepage.
 	if (empty($websitepage->allow_frames) && empty($conf->global->WEBSITE_ALLOW_FRAMES_ON_ALL_PAGES)) {
@@ -92,7 +92,7 @@ if (!defined('USEDOLIBARRSERVER') && !defined('USEDOLIBARREDITOR')) {
 // A lang was forced, so we change weblangs init
 if (GETPOST('l', 'aZ09')) $weblangs->setDefaultLang(GETPOST('l', 'aZ09'));
 // A lang was forced, so we check to find if we must make a redirect on translation page
-if ($_SERVER['PHP_SELF'] != DOL_URL_ROOT.'/website/index.php')	// If we browsing page using Dolibarr server or a Native web server
+if ($_SERVER['PHP_SELF'] != DOL_URL_ROOT.'/website/index.php')	// If we browsing page using DigitalProspects server or a Native web server
 {
 	//print_r(get_defined_constants(true));exit;
 	if (GETPOST('l', 'aZ09'))
@@ -114,7 +114,7 @@ if ($_SERVER['PHP_SELF'] != DOL_URL_ROOT.'/website/index.php')	// If we browsing
 				$newpageid = $obj->rowid;
 				if ($newpageid != $pageid) 		// To avoid to make a redirect on same page (infinite loop)
 				{
-					if (defined('USEDOLIBARRSERVER')) {
+					if (defined('USEDigitalProspectsSERVER')) {
 						header("Location: ".DOL_URL_ROOT.'/public/website/index.php?website='.$websitekey.'&pageid='.$newpageid.'&l='.GETPOST('l', 'aZ09'));
 						exit;
 					}
@@ -131,7 +131,7 @@ if ($_SERVER['PHP_SELF'] != DOL_URL_ROOT.'/website/index.php')	// If we browsing
 }
 
 // Show off line message
-if (!defined('USEDOLIBARREDITOR') && empty($website->status))
+if (!defined('USEDigitalProspectsEDITOR') && empty($website->status))
 {
 	$weblangs->load("website");
 	http_response_code(503);

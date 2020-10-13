@@ -32,7 +32,7 @@ global $langs;
 $err = 0;
 
 // If the config file exists and is filled, we're not on first install so we skip the language selection page
-if (file_exists($conffile) && isset($dolibarr_main_url_root))
+if (file_exists($conffile) && isset($DigitalProspects_main_url_root))
 {
 	header("Location: check.php?testget=ok");
 	exit;

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - accountancy
+# DigitalProspects language file - Source file is en_US - accountancy
 ACCOUNTING_EXPORT_PIECE=Export the number of pieces
 ConfigAccountingExpert=Configuration for the financial expert module
 Journalization=Journalisation

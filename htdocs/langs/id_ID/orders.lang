@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Area pesanan pelanggan
 SuppliersOrdersArea=Area pesanan pembelian
 OrderCard=Pesan kartu
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Apakah Anda yakin ingin mengkloning pesanan ini<b>%s </b>?
 DispatchSupplierOrder=Menerima pesanan pembelian %s
 FirstApprovalAlreadyDone=Persetujuan pertama sudah dilakukan
 SecondApprovalAlreadyDone=Persetujuan kedua sudah dilakukan
-SupplierOrderReceivedInDolibarr=Purchase Order %s menerima %s
-SupplierOrderSubmitedInDolibarr=Pesanan Pembelian %s dikirimkan
+SupplierOrderReceivedInDigitalProspects=Purchase Order %s menerima %s
+SupplierOrderSubmitedInDigitalProspects=Pesanan Pembelian %s dikirimkan
 SupplierOrderClassifiedBilled=Pesanan Pembelian %s ditetapkan ditagih
 OtherOrders=Pesanan lainnya
 ##### Types de contacts #####

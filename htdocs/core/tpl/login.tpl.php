@@ -50,7 +50,7 @@ $arrayofjs = array(
 	'/includes/jstz/jstz.min.js'.(empty($conf->dol_use_jmobile) ? '' : '?version='.urlencode(DOL_VERSION)),
 	'/core/js/dst.js'.(empty($conf->dol_use_jmobile) ? '' : '?version='.urlencode(DOL_VERSION))
 );
-$titleofloginpage = $langs->trans('Login').' @ '.$titletruedolibarrversion; // $titletruedolibarrversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true dolibarr version.
+$titleofloginpage = $langs->trans('Login').' @ '.$titletrueDigitalProspectsversion; // $titletrueDigitalProspectsversion is defined by dol_loginfunction in security2.lib.php. We must keep the @, some tools use it to know it is login page and find true DigitalProspects version.
 
 $disablenofollow = 1;
 if (!preg_match('/'.constant('DOL_APPLICATION_TITLE').'/', $title)) $disablenofollow = 0;
@@ -113,7 +113,7 @@ $(document).ready(function () {
 <!-- Title with version -->
 <div class="login_table_title center" title="<?php echo dol_escape_htmltag($title); ?>">
 <?php
-if ($disablenofollow) echo '<a class="login_table_title" href="https://www.dolibarr.org" target="_blank">';
+if ($disablenofollow) echo '<a class="login_table_title" href="https://www.DigitalProspects.org" target="_blank">';
 echo dol_escape_htmltag($title);
 if ($disablenofollow) echo '</a>';
 ?>

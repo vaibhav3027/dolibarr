@@ -406,7 +406,7 @@ class Cchargesociales
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $maxlen = 24, $morecss = '')
 	{
 		global $langs, $conf, $db;
-        global $dolibarr_main_authentication, $dolibarr_main_demo;
+        global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
         global $menumanager;
 
 

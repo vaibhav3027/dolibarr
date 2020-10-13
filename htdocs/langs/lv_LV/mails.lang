@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=E-pasta sūtīšana
 EMailing=E-pasta sūtīšanas
 EMailings=E-pastu sūtīšana
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Kontakti pa sadaļām
 MailingModuleDescContactsByFunction=Kontakti pēc amata
 MailingModuleDescEmailsFromFile=E-pasti no faila
 MailingModuleDescEmailsFromUser=Lietotāja ievadītie e-pasti
-MailingModuleDescDolibarrUsers=Lietotāji ar e-pastu
+MailingModuleDescDigitalProspectsUsers=Lietotāji ar e-pastu
 MailingModuleDescThirdPartiesByCategories=Trešās personas (pēc sadaļām)
 SendingFromWebInterfaceIsNotAllowed=Sūtīšana no tīmekļa saskarnes nav atļauta.
 

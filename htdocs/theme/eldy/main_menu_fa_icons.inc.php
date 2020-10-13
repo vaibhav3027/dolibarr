@@ -166,16 +166,16 @@ div.mainmenu.generic4::before {
 	color: #555;
 }
 
-/* Define square Dolibarr logo in pure CSS */
+/* Define square DigitalProspects logo in pure CSS */
 
-.fa-dolibarr-css{
+.fa-DigitalProspects-css{
 	color: #235481;
 	background: currentColor;
 	height: 150px;
 	width: 150px;
 	position: relative;
 }
-.fa-dolibarr-css:before{
+.fa-DigitalProspects-css:before{
 	content: '';
 	position: absolute;
 	left: 19%;
@@ -185,7 +185,7 @@ div.mainmenu.generic4::before {
 	border: solid 30px white;
 	border-radius: 0% 200% 200% 0% / 0% 180% 180% 0%;
 }
-.fa-dolibarr-css:after{
+.fa-DigitalProspects-css:after{
 	content: '';
 	position: absolute;
 	left: 19%;

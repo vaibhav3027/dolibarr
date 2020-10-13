@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Beveiligingscode
 NumberingShort=N °
 Tools=Gereedschap
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__ (Hallo) __ __ (Met vriendelijke groet) __ __U
 PredefinedMailContentContact=__ (Hallo) __ __ (Met vriendelijke groet) __ __USER_SIGNATURE__
 PredefinedMailContentUser=__ (Hallo) __ __ (Met vriendelijke groet) __ __USER_SIGNATURE__
 PredefinedMailContentLink=Indien u nog niet heeft betaald kunt u op de onderstaande link klikken. %s
-DemoDesc=Dolibarr is een compacte ERP / CRM die verschillende bedrijfsmodules ondersteunt. Een demo met alle modules heeft geen zin omdat dit scenario zich nooit voordoet (enkele honderden beschikbaar). Er zijn dus verschillende demoprofielen beschikbaar.
+DemoDesc=DigitalProspects is een compacte ERP / CRM die verschillende bedrijfsmodules ondersteunt. Een demo met alle modules heeft geen zin omdat dit scenario zich nooit voordoet (enkele honderden beschikbaar). Er zijn dus verschillende demoprofielen beschikbaar.
 ChooseYourDemoProfil=Kies het demoprofiel dat het beste bij u past ...
 ChooseYourDemoProfilMore=... of bouw je eigen profiel <br> (handmatige moduleselectie)
 DemoFundation=Ledenbeheer van een stichting
@@ -177,10 +177,10 @@ SizeUnitpoint=punt
 BugTracker=Bug tracker
 SendNewPasswordDesc=Met dit formulier kunt u een nieuw wachtwoord aanvragen. Het wordt naar uw e-mailadres verzonden. <br> De wijziging wordt van kracht zodra u op de bevestigingslink in de e-mail klikt. <br> Controleer je inbox.
 BackToLoginPage=Terug naar de inlogpagina
-AuthenticationDoesNotAllowSendNewPassword=Authenticatiemodus is <b>%s</b>.<br>In deze modus kan Dolibarr uw wachtwoord niet weten of wijzigen.<br>Neem contact op met uw systeembeheerder als u uw wachtwoord  wilt wijzigen.
+AuthenticationDoesNotAllowSendNewPassword=Authenticatiemodus is <b>%s</b>.<br>In deze modus kan DigitalProspects uw wachtwoord niet weten of wijzigen.<br>Neem contact op met uw systeembeheerder als u uw wachtwoord  wilt wijzigen.
 EnableGDLibraryDesc=Installeer of schakel GD-bibliotheek op uw PHP-installatie in om deze optie te gebruiken.
 ProfIdShortDesc=Prof. id <b>%s</b> is een gegeven afhankelijk van het land.<br>Voor land <b>%s</b>, is de code bijvoorbeeld <b>%s</b>.
-DolibarrDemo=Dolibarr ERP / CRM demonstratie
+DigitalProspectsDemo=DigitalProspects ERP / CRM demonstratie
 StatsByNumberOfUnits=Statistieken voor som van aantal producten / diensten
 StatsByNumberOfEntities=Statistieken in aantal verwijzende entiteiten (factuurnummer of bestelling ...)
 NumberOfProposals=Aantal voorstellen
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Onkostendeclaratie %s is goedgekeurd.
 EMailTextHolidayValidated=Verlofaanvraag %s is gevalideerd.
 EMailTextHolidayApproved=Verlofaanvraag %s is goedgekeurd.
 ImportedWithSet=Invoer dataset
-DolibarrNotification=Automatische kennisgeving
+DigitalProspectsNotification=Automatische kennisgeving
 ResizeDesc=Voer een nieuwe breedte <b>of</b> nieuwe hoogte in. Verhoudingen zullen intact blijven tijdens het schalen
 NewLength=Nieuwe breedte
 NewHeight=Nieuwe hoogte

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Защитный код
 NumberingShort=N°
 Tools=Инструменты
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=Управление членов Фонда
@@ -177,10 +177,10 @@ SizeUnitpoint=point
 BugTracker=Ошибка Tracker
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=Перейти на страницу входа
-AuthenticationDoesNotAllowSendNewPassword=Аутентификация <b>режим %s.</b> <br> В этом режиме Dolibarr можете не знать, ни изменить свой пароль. <br> Обратитесь к системному администратору, если вы хотите изменить свой пароль.
+AuthenticationDoesNotAllowSendNewPassword=Аутентификация <b>режим %s.</b> <br> В этом режиме DigitalProspects можете не знать, ни изменить свой пароль. <br> Обратитесь к системному администратору, если вы хотите изменить свой пароль.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>Проф Id %s</b> является информация в зависимости от сторонних страны. <br> Например, для страны <b>с%,</b> то <b>с кодом%.</b>
-DolibarrDemo=Dolibarr ERP / CRM демо
+DigitalProspectsDemo=DigitalProspects ERP / CRM демо
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=Импорт данных
-DolibarrNotification=Автоматические уведомления
+DigitalProspectsNotification=Автоматические уведомления
 ResizeDesc=Skriv inn ny <b>bredde</b> eller ny høyde. Forhold vil bli holdt under resizing ...
 NewLength=Ny bredde
 NewHeight=Ny høyde

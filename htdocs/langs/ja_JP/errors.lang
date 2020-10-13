@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - errors
+# DigitalProspects language file - Source file is en_US - errors
 
 # No errors
 NoErrorCommitIsDone=No error, we commit
@@ -43,10 +43,10 @@ ErrorBadDateFormat=値 '%s'に間違った日付の形式になっています
 ErrorWrongDate=Date is not correct!
 ErrorFailedToWriteInDir=ディレクトリ%sの書き込みに失敗しました
 ErrorFoundBadEmailInFile=ファイル内の%s線の発見誤った電子メールのシンタックス（電子メール= %sを使用したサンプルライン%s）
-ErrorUserCannotBeDelete=User cannot be deleted. Maybe it is associated to Dolibarr entities.
+ErrorUserCannotBeDelete=User cannot be deleted. Maybe it is associated to DigitalProspects entities.
 ErrorFieldsRequired=いくつかの必須フィールドが満たされていませんでした。
 ErrorSubjectIsRequired=The email topic is required
-ErrorFailedToCreateDir=ディレクトリの作成に失敗しました。そのWebサーバのユーザがDolibarrのドキュメントディレクトリに書き込む権限を持って確認してください。パラメータの<b>safe_modeが</b>このPHPが有効になっている場合、Dolibarr PHPファイルは、Webサーバーのユーザー（またはグループ）に所有していることを確認してください。
+ErrorFailedToCreateDir=ディレクトリの作成に失敗しました。そのWebサーバのユーザがDigitalProspectsのドキュメントディレクトリに書き込む権限を持って確認してください。パラメータの<b>safe_modeが</b>このPHPが有効になっている場合、DigitalProspects PHPファイルは、Webサーバーのユーザー（またはグループ）に所有していることを確認してください。
 ErrorNoMailDefinedForThisUser=このユーザーに定義されたメールはありません
 ErrorFeatureNeedJavascript=この機能が動作するようにアクティブにするjavascriptをする必要があります。セットアップでこれを変更 - 表示されます。
 ErrorTopMenuMustHaveAParentWithId0=タイプは 'top'のメニューが親メニューを持つことはできません。親メニューに0を置くか、または型 &quot;左&quot;のメニューを選択します。
@@ -72,7 +72,7 @@ ErrorFieldCanNotContainSpecialNorUpperCharacters=The field <b>%s</b> must not co
 ErrorFieldMustHaveXChar=The field <b>%s</b> must have at least %s characters.
 ErrorNoAccountancyModuleLoaded=全く会計モジュールが活性化しない
 ErrorExportDuplicateProfil=This profile name already exists for this export set.
-ErrorLDAPSetupNotComplete=Dolibarr-LDAPのマッチングは完全ではありません。
+ErrorLDAPSetupNotComplete=DigitalProspects-LDAPのマッチングは完全ではありません。
 ErrorLDAPMakeManualTest=。ldifファイルは、ディレクトリ%sで生成されました。エラーの詳細情報を持つようにコマンドラインから手動でそれをロードしようとする。
 ErrorCantSaveADoneUserWithZeroPercentage=Can't save an action with "status not started" if field "done by" is also filled.
 ErrorRefAlreadyExists=作成に使用refは、すでに存在しています。
@@ -104,8 +104,8 @@ ErrorProdIdAlreadyExist=%sは別の第三者に割り当てられています
 ErrorFailedToSendPassword=パスワードの送信に失敗しました
 ErrorFailedToLoadRSSFile=RSSフィードの取得に失敗した。エラーメッセージが十分な情報を提供していない場合は定数MAIN_SIMPLEXMLLOAD_DEBUGを追加しようとする。
 ErrorForbidden=Access denied.<br>You try to access to a page, area or feature of a disabled module or without being in an authenticated session or that is not allowed to your user.
-ErrorForbidden2=このログインの許可は、メニュー%s  - &gt; %sからDolibarr管理者によって定義することができます。
-ErrorForbidden3=そのDolibarrが認証セッションを介して使用されていないようです。認証を（htaccessファイルは、mod_authまたは他の...）を管理する方法を知ってDolibarrセットアップドキュメントを見てみましょう。
+ErrorForbidden2=このログインの許可は、メニュー%s  - &gt; %sからDigitalProspects管理者によって定義することができます。
+ErrorForbidden3=そのDigitalProspectsが認証セッションを介して使用されていないようです。認証を（htaccessファイルは、mod_authまたは他の...）を管理する方法を知ってDigitalProspectsセットアップドキュメントを見てみましょう。
 ErrorNoImagickReadimage=クラスImagickが、このPHPで発見さ​​れていません。なしプレビューは利用できません。管理者は、メニューのSetupから、このタブを無効にすることができます - 表示します。
 ErrorRecordAlreadyExists=レコードがすでに存在している
 ErrorLabelAlreadyExists=This label already exists
@@ -127,8 +127,8 @@ ErrorWebServerUserHasNotPermission=Webサーバを実行するユーザーアカ
 ErrorNoActivatedBarcode=活性化バーコード·タイプません
 ErrUnzipFails=Failed to unzip %s with ZipArchive
 ErrNoZipEngine=No engine to zip/unzip %s file in this PHP
-ErrorFileMustBeADolibarrPackage=The file %s must be a Dolibarr zip package
-ErrorModuleFileRequired=You must select a Dolibarr module package file
+ErrorFileMustBeADigitalProspectsPackage=The file %s must be a DigitalProspects zip package
+ErrorModuleFileRequired=You must select a DigitalProspects module package file
 ErrorPhpCurlNotInstalled=The PHP CURL is not installed, this is essential to talk with Paypal
 ErrorFailedToAddToMailmanList=Failed to add record %s to Mailman list %s or SPIP base
 ErrorFailedToRemoveToMailmanList=Failed to remove record %s to Mailman list %s or SPIP base
@@ -139,7 +139,7 @@ ErrorFailedToAddContact=Failed to add contact
 ErrorDateMustBeBeforeToday=The date cannot be greater than today
 ErrorPaymentModeDefinedToWithoutSetup=A payment mode was set to type %s but setup of module Invoice was not completed to define information to show for this payment mode.
 ErrorPHPNeedModule=Error, your PHP must have module <b>%s</b> installed to use this feature.
-ErrorOpenIDSetupNotComplete=You setup Dolibarr config file to allow OpenID authentication, but URL of OpenID service is not defined into constant %s
+ErrorOpenIDSetupNotComplete=You setup DigitalProspects config file to allow OpenID authentication, but URL of OpenID service is not defined into constant %s
 ErrorWarehouseMustDiffers=Source and target warehouses must differs
 ErrorBadFormat=Bad format!
 ErrorMemberNotLinkedToAThirpartyLinkOrCreateFirst=Error, this member is not yet linked to any third party. Link member to an existing third party or create a new third party before creating subscription with invoice.
@@ -202,7 +202,7 @@ ErrorUserNotAssignedToTask=User must be assigned to task to be able to enter tim
 ErrorTaskAlreadyAssigned=Task already assigned to user
 ErrorModuleFileSeemsToHaveAWrongFormat=The module package seems to have a wrong format.
 ErrorModuleFileSeemsToHaveAWrongFormat2=At least one mandatory directory must exists into zip of module: <strong>%s</strong> or <strong>%s</strong>
-ErrorFilenameDosNotMatchDolibarrPackageRules=The name of the module package (<strong>%s</strong>) does not match expected name syntax: <strong>%s</strong>
+ErrorFilenameDosNotMatchDigitalProspectsPackageRules=The name of the module package (<strong>%s</strong>) does not match expected name syntax: <strong>%s</strong>
 ErrorDuplicateTrigger=Error, duplicate trigger name %s. Already loaded from %s.
 ErrorNoWarehouseDefined=Error, no warehouses defined.
 ErrorBadLinkSourceSetButBadValueForRef=The link you use is not valid. A 'source' for payment is defined, but value for 'ref' is not valid.
@@ -241,7 +241,7 @@ ErrorTooManyDifferentValueForSelectedGroupBy=Found too many different value (mor
 ErrorReplaceStringEmpty=Error, the string to replace into is empty
 # Warnings
 WarningParamUploadMaxFileSizeHigherThanPostMaxSize=Your PHP parameter upload_max_filesize (%s) is higher than PHP parameter post_max_size (%s). This is not a consistent setup.
-WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to Dolibarr. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
+WarningPasswordSetWithNoAccount=A password was set for this member. However, no user account was created. So this password is stored but can't be used to login to DigitalProspects. It may be used by an external module/interface but if you don't need to define any login nor password for a member, you can disable option "Manage a login for each member" from Member module setup. If you need to manage a login but don't need any password, you can keep this field empty to avoid this warning. Note: Email can also be used as a login if the member is linked to a user.
 WarningMandatorySetupNotComplete=Click here to setup mandatory parameters
 WarningEnableYourModulesApplications=Click here to enable your modules and applications
 WarningSafeModeOnCheckExecDir=警告、PHPのオプション<b>セーフモードは、PHP</b>のパラメータ<b>safe_mode_exec_dirの</b>宣言されたディレクトリ内に格納する必要がありますので、コマンドにあります。

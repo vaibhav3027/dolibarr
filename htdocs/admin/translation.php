@@ -81,8 +81,8 @@ if (GETPOST('button_removefilter_x', 'alpha') || GETPOST('button_removefilter.x'
 
 if ($action == 'setMAIN_ENABLE_OVERWRITE_TRANSLATION')
 {
-    if (GETPOST('value')) dolibarr_set_const($db, 'MAIN_ENABLE_OVERWRITE_TRANSLATION', 1, 'chaine', 0, '', $conf->entity);
-    else dolibarr_set_const($db, 'MAIN_ENABLE_OVERWRITE_TRANSLATION', 0, 'chaine', 0, '', $conf->entity);
+    if (GETPOST('value')) DigitalProspects_set_const($db, 'MAIN_ENABLE_OVERWRITE_TRANSLATION', 1, 'chaine', 0, '', $conf->entity);
+    else DigitalProspects_set_const($db, 'MAIN_ENABLE_OVERWRITE_TRANSLATION', 0, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == 'update')
@@ -260,7 +260,7 @@ if ($mode == 'overwrite')
 
 	print '<div class="justify"><span class="opacitymedium">';
     print img_info().' '.$langs->trans("SomeTranslationAreUncomplete");
-    $urlwikitranslatordoc = 'https://wiki.dolibarr.org/index.php/Translator_documentation';
+    $urlwikitranslatordoc = 'https://wiki.DigitalProspects.org/index.php/Translator_documentation';
     print ' ('.$langs->trans("SeeAlso", '<a href="'.$urlwikitranslatordoc.'" target="_blank">'.$langs->trans("Here").'</a>').')<br>';
     print $langs->trans("TranslationOverwriteDesc", $langs->transnoentitiesnoconv("Language"), $langs->transnoentitiesnoconv("Key"), $langs->transnoentitiesnoconv("NewTranslationStringToShow"))."\n";
     print ' ('.$langs->trans("TranslationOverwriteDesc2").').'."<br>\n";
@@ -546,8 +546,8 @@ if ($mode == 'searchkey')
             if (!empty($conf->global->MAIN_FEATURES_LEVEL))
             {
             	$transifexlangfile = '$'; // $ means 'All'
-            	//$transifexurl = 'https://www.transifex.com/dolibarr-association/dolibarr/translate/#'.$langcode.'/'.$transifexlangfile.'?key='.$key;
-            	$transifexurl = 'https://www.transifex.com/dolibarr-association/dolibarr/translate/#'.$langcode.'/'.$transifexlangfile.'?q=key%3A'.$key;
+            	//$transifexurl = 'https://www.transifex.com/DigitalProspects-association/DigitalProspects/translate/#'.$langcode.'/'.$transifexlangfile.'?key='.$key;
+            	$transifexurl = 'https://www.transifex.com/DigitalProspects-association/DigitalProspects/translate/#'.$langcode.'/'.$transifexlangfile.'?q=key%3A'.$key;
 
             	print ' &nbsp; <a href="'.$transifexurl.'" target="transifex">'.img_picto($langs->trans('FixOnTransifex'), 'globe').'</a>';
             }

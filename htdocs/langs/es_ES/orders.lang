@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Área pedidos de clientes
 SuppliersOrdersArea=Área pedidos a proveedores
 OrderCard=Ficha pedido
@@ -116,8 +116,8 @@ ConfirmCloneOrder=¿Está seguro de querer clonar este pedido <b>%s</b>?
 DispatchSupplierOrder=Recepción del pedido a proveedor %s
 FirstApprovalAlreadyDone=Primera aprobación realizada
 SecondApprovalAlreadyDone=Segunda aprobación realizada
-SupplierOrderReceivedInDolibarr=Pedido a proveedor %s recibido %s
-SupplierOrderSubmitedInDolibarr=Pedido a proveedor %s enviado
+SupplierOrderReceivedInDigitalProspects=Pedido a proveedor %s recibido %s
+SupplierOrderSubmitedInDigitalProspects=Pedido a proveedor %s enviado
 SupplierOrderClassifiedBilled=Pedido a proveedor %s clasificado como facturado
 OtherOrders=Otros pedidos
 ##### Types de contacts #####

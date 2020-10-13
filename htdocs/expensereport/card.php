@@ -83,7 +83,7 @@ if (!empty($conf->multicompany->enabled) && !empty($conf->entity) && $conf->enti
 $conf->expensereport->dir_output = $rootfordata.'/expensereport';
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -1186,7 +1186,7 @@ if (empty($reshook))
     	    }
     	}
 
-		// if VAT is not used in Dolibarr, set VAT rate to 0 because VAT rate is necessary.
+		// if VAT is not used in DigitalProspects, set VAT rate to 0 because VAT rate is necessary.
     	if (empty($vatrate)) $vatrate = "0.000";
     	$tmpvat = price2num(preg_replace('/\s*\(.*\)/', '', $vatrate));
 
@@ -1347,7 +1347,7 @@ if (empty($reshook))
     	$qty = GETPOST('qty', 'int');
     	$vatrate = GETPOST('vatrate', 'alpha');
 
-    	// if VAT is not used in Dolibarr, set VAT rate to 0 because VAT rate is necessary.
+    	// if VAT is not used in DigitalProspects, set VAT rate to 0 because VAT rate is necessary.
     	if (empty($vatrate)) $vatrate = "0.000";
     	$tmpvat = price2num(preg_replace('/\s*\(.*\)/', '', $vatrate));
 
@@ -1524,7 +1524,7 @@ if ($action == 'create')
 	print '<td class="tdtop">'.$langs->trans('NotePublic').'</td>';
 	print '<td>';
 
-	$doleditor = new DolEditor('note_public', $note_public, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_public', $note_public, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td></tr>';
 
@@ -1534,7 +1534,7 @@ if ($action == 'create')
 		print '<td class="tdtop">'.$langs->trans('NotePrivate').'</td>';
 		print '<td>';
 
-		$doleditor = new DolEditor('note_private', $note_private, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+		$doleditor = new DolEditor('note_private', $note_private, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 		print $doleditor->Create(1);
 		print '</td></tr>';
 	}

@@ -425,7 +425,7 @@ class MultiCurrency extends CommonObject
 	 * @param	double	$rate	new rate
 	 * @return int -1 if KO, 1 if OK, 2 if label found and OK
 	 */
-    public function addRateFromDolibarr($code, $rate)
+    public function addRateFromDigitalProspects($code, $rate)
     {
         global $db, $user;
 
@@ -551,17 +551,17 @@ class MultiCurrency extends CommonObject
      *
      * @param	int		$fk_facture		id of facture
      * @param	double	$amount			amount to convert
-     * @param	string	$way			dolibarr mean the amount is in dolibarr currency
+     * @param	string	$way			DigitalProspects mean the amount is in DigitalProspects currency
      * @param	string	$table			facture or facture_fourn
      * @return	double					amount converted
      */
-    public static function getAmountConversionFromInvoiceRate($fk_facture, $amount, $way = 'dolibarr', $table = 'facture')
+    public static function getAmountConversionFromInvoiceRate($fk_facture, $amount, $way = 'DigitalProspects', $table = 'facture')
     {
         $multicurrency_tx = self::getInvoiceRate($fk_facture, $table);
 
         if ($multicurrency_tx)
         {
-            if ($way == 'dolibarr') return $amount * $multicurrency_tx;
+            if ($way == 'DigitalProspects') return $amount * $multicurrency_tx;
             else return $amount / $multicurrency_tx;
         }
         else return $amount;
@@ -662,7 +662,7 @@ class MultiCurrency extends CommonObject
 					}
 					elseif ($addifnotfound)
 					{
-						self::addRateFromDolibarr($code, $rate);
+						self::addRateFromDigitalProspects($code, $rate);
 					}
 				}
 			}

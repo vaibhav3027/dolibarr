@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=رمز الحماية
 NumberingShort=N°
 Tools=أدوات
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=أعضاء في إدارة مؤسسة
@@ -177,10 +177,10 @@ SizeUnitpoint=نقطة
 BugTracker=علة تعقب
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=عودة إلى صفحة تسجيل الدخول
-AuthenticationDoesNotAllowSendNewPassword=طريقة التوثيق <b>٪ ق.</b> <br> في هذا الوضع ، لا يمكن معرفة Dolibarr أو تغيير كلمة السر الخاصة بك. <br> اتصل بمسؤول النظام إذا كنت تريد تغيير كلمة السر الخاصة بك.
+AuthenticationDoesNotAllowSendNewPassword=طريقة التوثيق <b>٪ ق.</b> <br> في هذا الوضع ، لا يمكن معرفة DigitalProspects أو تغيير كلمة السر الخاصة بك. <br> اتصل بمسؤول النظام إذا كنت تريد تغيير كلمة السر الخاصة بك.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>الأستاذ عيد ٪ ق</b> هي المعلومات التي تعتمد على طرف ثالث. <br> على سبيل المثال ، لبلد <b>ق ٪</b> انها رمز <b>٪ ق.</b>
-DolibarrDemo=Dolibarr تخطيط موارد المؤسسات وإدارة علاقات العملاء التجريبي
+DigitalProspectsDemo=DigitalProspects تخطيط موارد المؤسسات وإدارة علاقات العملاء التجريبي
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=استيراد مجموعة البيانات
-DolibarrNotification=إشعار تلقائي
+DigitalProspectsNotification=إشعار تلقائي
 ResizeDesc=أدخل عرض جديدة <b>أو</b> ارتفاع جديد. وستبقى نسبة خلال تغيير حجم...
 NewLength=عرض جديد
 NewHeight=ارتفاع جديد

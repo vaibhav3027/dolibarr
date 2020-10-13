@@ -1387,10 +1387,10 @@ if (empty($reshook))
 		$ws_thirdparty  = GETPOST('ws_thirdparty', 'int');
 
 		// NS and Authentication parameters
-		$ws_ns = 'http://www.dolibarr.org/ns/';
+		$ws_ns = 'http://www.DigitalProspects.org/ns/';
 		$ws_authentication = array(
-			'dolibarrkey'=>$ws_key,
-			'sourceapplication'=>'DolibarrWebServiceClient',
+			'DigitalProspectskey'=>$ws_key,
+			'sourceapplication'=>'DigitalProspectsWebServiceClient',
 			'login'=>$ws_user,
 			'password'=>$ws_password,
 			'entity'=>$ws_entity
@@ -1760,7 +1760,7 @@ if ($action == 'create')
 
 	print '<tr><td>'.$langs->trans('NotePublic').'</td>';
 	print '<td>';
-	$doleditor = new DolEditor('note_public', isset($note_public) ? $note_public : GETPOST('note_public', 'none'), '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_public', isset($note_public) ? $note_public : GETPOST('note_public', 'none'), '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td>';
 	//print '<textarea name="note_public" wrap="soft" cols="60" rows="'.ROWS_5.'"></textarea>';
@@ -1768,7 +1768,7 @@ if ($action == 'create')
 
 	print '<tr><td>'.$langs->trans('NotePrivate').'</td>';
 	print '<td>';
-	$doleditor = new DolEditor('note_private', isset($note_private) ? $note_private : GETPOST('note_private', 'none'), '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_private', isset($note_private) ? $note_private : GETPOST('note_private', 'none'), '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td>';
 	//print '<td><textarea name="note_private" wrap="soft" cols="60" rows="'.ROWS_5.'"></textarea></td>';
@@ -2772,10 +2772,10 @@ elseif (!empty($object->id))
 			$ws_password = GETPOST('ws_password', 'alpha');
 
 			// NS and Authentication parameters
-			$ws_ns = 'http://www.dolibarr.org/ns/';
+			$ws_ns = 'http://www.DigitalProspects.org/ns/';
 			$ws_authentication = array(
-			'dolibarrkey'=>$ws_key,
-			'sourceapplication'=>'DolibarrWebServiceClient',
+			'DigitalProspectskey'=>$ws_key,
+			'sourceapplication'=>'DigitalProspectsWebServiceClient',
 			'login'=>$ws_user,
 			'password'=>$ws_password,
 			'entity'=>''
@@ -2903,8 +2903,8 @@ elseif (!empty($object->id))
 
 
 							// Ensure that price is equal and warn user if it's not
-							$supplier_price = price($result_product["product"]["price_net"]); //Price of client tab in supplier dolibarr
-							$local_price = null; //Price of supplier as stated in product suppliers tab on this dolibarr, NULL if not found
+							$supplier_price = price($result_product["product"]["price_net"]); //Price of client tab in supplier DigitalProspects
+							$local_price = null; //Price of supplier as stated in product suppliers tab on this DigitalProspects, NULL if not found
 
 							$product_fourn = new ProductFournisseur($db);
 							$product_fourn_list = $product_fourn->list_product_fournisseur_price($line->fk_product);

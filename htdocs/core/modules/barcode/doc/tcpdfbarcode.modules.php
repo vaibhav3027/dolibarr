@@ -32,10 +32,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/barcode.lib.php'; // This is to includ
 class modTcpdfbarcode extends ModeleBarCode
 {
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	/**
 	 * @var string Error code (or message)
@@ -202,7 +202,7 @@ class modTcpdfbarcode extends ModeleBarCode
 	/**
 	 *	get available output_modes for tcpdf class wth its translated description
 	 *
-	 * @param	string $dolEncodingType dolibarr barcode encoding type
+	 * @param	string $dolEncodingType DigitalProspects barcode encoding type
 	 * @return	string tcpdf encoding type
 	 */
 	public function getTcpdfEncodingType($dolEncodingType)

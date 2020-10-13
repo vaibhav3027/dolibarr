@@ -47,13 +47,13 @@ if ($reshook < 0) setEventMessages($hookmanager->error, $hookmanager->errors, 'e
 if (($action == 'update' && !GETPOST("cancel", 'alpha'))
 || ($action == 'updateedit'))
 {
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_MONDAY", GETPOST("monday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_TUESDAY", GETPOST("tuesday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_WEDNESDAY", GETPOST("wednesday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_THURSDAY", GETPOST("thursday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_FRIDAY", GETPOST("friday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_SATURDAY", GETPOST("saturday", 'alpha'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, "MAIN_INFO_OPENINGHOURS_SUNDAY", GETPOST('sunday', 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_MONDAY", GETPOST("monday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_TUESDAY", GETPOST("tuesday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_WEDNESDAY", GETPOST("wednesday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_THURSDAY", GETPOST("thursday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_FRIDAY", GETPOST("friday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_SATURDAY", GETPOST("saturday", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_OPENINGHOURS_SUNDAY", GETPOST('sunday', 'alpha'), 'chaine', 0, '', $conf->entity);
 
 	if ($action != 'updateedit' && !$error)
 	{

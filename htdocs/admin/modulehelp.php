@@ -325,10 +325,10 @@ if ($mode == 'desc')
     if ($objMod->isCoreOrExternalModule() == 'external')
     {
         $textexternal .= '<br><span class="opacitymedium">'.$langs->trans("Origin").':</span> '.$langs->trans("ExternalModule").' - '.$langs->trans("InstalledInto", $dirofmodule);
-        if ($objMod->editor_name != 'dolibarr') $textexternal .= '<br><span class="opacitymedium">'.$langs->trans("Publisher").':</span> '.(empty($objMod->editor_name) ? $langs->trans("Unknown") : $objMod->editor_name);
+        if ($objMod->editor_name != 'DigitalProspects') $textexternal .= '<br><span class="opacitymedium">'.$langs->trans("Publisher").':</span> '.(empty($objMod->editor_name) ? $langs->trans("Unknown") : $objMod->editor_name);
         $editor_url = $objMod->editor_url;
         if (!preg_match('/^http/', $editor_url)) $editor_url = 'http://'.$editor_url;
-        if (!empty($objMod->editor_url) && !preg_match('/dolibarr\.org/i', $objMod->editor_url)) $textexternal .= ($objMod->editor_name != 'dolibarr' ? ' - ' : '').img_picto('', 'globe').' <a href="'.$editor_url.'" target="_blank">'.$objMod->editor_url.'</a>';
+        if (!empty($objMod->editor_url) && !preg_match('/DigitalProspects\.org/i', $objMod->editor_url)) $textexternal .= ($objMod->editor_name != 'DigitalProspects' ? ' - ' : '').img_picto('', 'globe').' <a href="'.$editor_url.'" target="_blank">'.$objMod->editor_url.'</a>';
         $text .= $textexternal;
         $text .= '<br>';
     }

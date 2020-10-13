@@ -19,7 +19,7 @@
 
 /**
  *		\file 		htdocs/admin/system/constall.php
- *		\brief      Page to show all Dolibarr setup (config file and database constants)
+ *		\brief      Page to show all DigitalProspects setup (config file and database constants)
  */
 
 require '../../main.inc.php';
@@ -44,53 +44,53 @@ print load_fiche_titre($langs->trans("SummaryConst"), '', 'title_setup');
 print load_fiche_titre($langs->trans("ConfigurationFile").' ('.$conffiletoshowshort.')');
 // Parameters in conf.php file (when a parameter start with ?, it is shown only if defined)
 $configfileparameters = array(
-							'dolibarr_main_url_root',
-							'dolibarr_main_url_root_alt',
-							'dolibarr_main_document_root',
-							'dolibarr_main_document_root_alt',
-							'dolibarr_main_data_root',
+							'DigitalProspects_main_url_root',
+							'DigitalProspects_main_url_root_alt',
+							'DigitalProspects_main_document_root',
+							'DigitalProspects_main_document_root_alt',
+							'DigitalProspects_main_data_root',
 							'separator',
-							'dolibarr_main_db_host',
-							'dolibarr_main_db_port',
-							'dolibarr_main_db_name',
-							'dolibarr_main_db_type',
-							'dolibarr_main_db_user',
-							'dolibarr_main_db_pass',
-							'dolibarr_main_db_character_set',
-							'dolibarr_main_db_collation',
-							'?dolibarr_main_db_prefix',
+							'DigitalProspects_main_db_host',
+							'DigitalProspects_main_db_port',
+							'DigitalProspects_main_db_name',
+							'DigitalProspects_main_db_type',
+							'DigitalProspects_main_db_user',
+							'DigitalProspects_main_db_pass',
+							'DigitalProspects_main_db_character_set',
+							'DigitalProspects_main_db_collation',
+							'?DigitalProspects_main_db_prefix',
 							'separator',
-							'dolibarr_main_authentication',
+							'DigitalProspects_main_authentication',
 							'separator',
-							'?dolibarr_main_auth_ldap_login_attribute',
-							'?dolibarr_main_auth_ldap_host',
-							'?dolibarr_main_auth_ldap_port',
-							'?dolibarr_main_auth_ldap_version',
-							'?dolibarr_main_auth_ldap_dn',
-							'?dolibarr_main_auth_ldap_admin_login',
-							'?dolibarr_main_auth_ldap_admin_pass',
-							'?dolibarr_main_auth_ldap_debug',
+							'?DigitalProspects_main_auth_ldap_login_attribute',
+							'?DigitalProspects_main_auth_ldap_host',
+							'?DigitalProspects_main_auth_ldap_port',
+							'?DigitalProspects_main_auth_ldap_version',
+							'?DigitalProspects_main_auth_ldap_dn',
+							'?DigitalProspects_main_auth_ldap_admin_login',
+							'?DigitalProspects_main_auth_ldap_admin_pass',
+							'?DigitalProspects_main_auth_ldap_debug',
 							'separator',
-							'?dolibarr_lib_ADODB_PATH',
-							'?dolibarr_lib_FPDF_PATH',
-							'?dolibarr_lib_TCPDF_PATH',
-							'?dolibarr_lib_FPDI_PATH',
-							'?dolibarr_lib_TCPDI_PATH',
-							'?dolibarr_lib_NUSOAP_PATH',
-							'?dolibarr_lib_PHPEXCEL_PATH',
-							'?dolibarr_lib_GEOIP_PATH',
-							'?dolibarr_lib_ODTPHP_PATH',
-							'?dolibarr_lib_ODTPHP_PATHTOPCLZIP',
-							'?dolibarr_js_CKEDITOR',
-							'?dolibarr_js_JQUERY',
-							'?dolibarr_js_JQUERY_UI',
-							'?dolibarr_js_JQUERY_FLOT',
-							'?dolibarr_font_DOL_DEFAULT_TTF',
-							'?dolibarr_font_DOL_DEFAULT_TTF_BOLD',
+							'?DigitalProspects_lib_ADODB_PATH',
+							'?DigitalProspects_lib_FPDF_PATH',
+							'?DigitalProspects_lib_TCPDF_PATH',
+							'?DigitalProspects_lib_FPDI_PATH',
+							'?DigitalProspects_lib_TCPDI_PATH',
+							'?DigitalProspects_lib_NUSOAP_PATH',
+							'?DigitalProspects_lib_PHPEXCEL_PATH',
+							'?DigitalProspects_lib_GEOIP_PATH',
+							'?DigitalProspects_lib_ODTPHP_PATH',
+							'?DigitalProspects_lib_ODTPHP_PATHTOPCLZIP',
+							'?DigitalProspects_js_CKEDITOR',
+							'?DigitalProspects_js_JQUERY',
+							'?DigitalProspects_js_JQUERY_UI',
+							'?DigitalProspects_js_JQUERY_FLOT',
+							'?DigitalProspects_font_DOL_DEFAULT_TTF',
+							'?DigitalProspects_font_DOL_DEFAULT_TTF_BOLD',
 							'separator',
-							'?dolibarr_mailing_limit_sendbyweb',
-							'?dolibarr_mailing_limit_sendbycli',
-							'?dolibarr_strict_mode'
+							'?DigitalProspects_mailing_limit_sendbyweb',
+							'?DigitalProspects_mailing_limit_sendbycli',
+							'?DigitalProspects_strict_mode'
 						);
 $configfilelib = array(
 //					'separator',
@@ -112,29 +112,29 @@ $configfilelib = array(
 					'separator',
 					$langs->trans("AuthenticationMode"),
 					'separator',
-					'dolibarr_main_auth_ldap_login_attribute',
-					'dolibarr_main_auth_ldap_host',
-					'dolibarr_main_auth_ldap_port',
-					'dolibarr_main_auth_ldap_version',
-					'dolibarr_main_auth_ldap_dn',
-					'dolibarr_main_auth_ldap_admin_login',
-					'dolibarr_main_auth_ldap_admin_pass',
-					'dolibarr_main_auth_ldap_debug',
+					'DigitalProspects_main_auth_ldap_login_attribute',
+					'DigitalProspects_main_auth_ldap_host',
+					'DigitalProspects_main_auth_ldap_port',
+					'DigitalProspects_main_auth_ldap_version',
+					'DigitalProspects_main_auth_ldap_dn',
+					'DigitalProspects_main_auth_ldap_admin_login',
+					'DigitalProspects_main_auth_ldap_admin_pass',
+					'DigitalProspects_main_auth_ldap_debug',
 					'separator',
-					'dolibarr_lib_ADODB_PATH',
-					'dolibarr_lib_TCPDF_PATH',
-					'dolibarr_lib_FPDI_PATH',
-					'dolibarr_lib_NUSOAP_PATH',
-					'dolibarr_lib_PHPEXCEL_PATH',
-					'dolibarr_lib_GEOIP_PATH',
-					'dolibarr_lib_ODTPHP_PATH',
-					'dolibarr_lib_ODTPHP_PATHTOPCLZIP',
-					'dolibarr_js_CKEDITOR',
-					'dolibarr_js_JQUERY',
-					'dolibarr_js_JQUERY_UI',
-					'dolibarr_js_JQUERY_FLOT',
-					'dolibarr_font_DOL_DEFAULT_TTF',
-					'dolibarr_font_DOL_DEFAULT_TTF_BOLD',
+					'DigitalProspects_lib_ADODB_PATH',
+					'DigitalProspects_lib_TCPDF_PATH',
+					'DigitalProspects_lib_FPDI_PATH',
+					'DigitalProspects_lib_NUSOAP_PATH',
+					'DigitalProspects_lib_PHPEXCEL_PATH',
+					'DigitalProspects_lib_GEOIP_PATH',
+					'DigitalProspects_lib_ODTPHP_PATH',
+					'DigitalProspects_lib_ODTPHP_PATHTOPCLZIP',
+					'DigitalProspects_js_CKEDITOR',
+					'DigitalProspects_js_JQUERY',
+					'DigitalProspects_js_JQUERY_UI',
+					'DigitalProspects_js_JQUERY_FLOT',
+					'DigitalProspects_font_DOL_DEFAULT_TTF',
+					'DigitalProspects_font_DOL_DEFAULT_TTF_BOLD',
 					'separator',
 					'Limit nb of email sent by page',
 					'Strict mode is on/off'
@@ -150,8 +150,8 @@ foreach ($configfileparameters as $key)
 {
 	$ignore = 0;
 
-	if ($key == 'dolibarr_main_url_root_alt' && empty(${$key})) $ignore = 1;
-	if ($key == 'dolibarr_main_document_root_alt' && empty(${$key})) $ignore = 1;
+	if ($key == 'DigitalProspects_main_url_root_alt' && empty(${$key})) $ignore = 1;
+	if ($key == 'DigitalProspects_main_document_root_alt' && empty(${$key})) $ignore = 1;
 
 	if (empty($ignore))
 	{
@@ -182,10 +182,10 @@ foreach ($configfileparameters as $key)
 			print '<td>'.$newkey.'</td>';
 			// Value
 			print "<td>";
-			if ($newkey == 'dolibarr_main_db_pass') print preg_replace('/./i', '*', ${$newkey});
-			elseif ($newkey == 'dolibarr_main_url_root' && preg_match('/__auto__/', ${$newkey})) print ${$newkey}.' => '.constant('DOL_MAIN_URL_ROOT');
+			if ($newkey == 'DigitalProspects_main_db_pass') print preg_replace('/./i', '*', ${$newkey});
+			elseif ($newkey == 'DigitalProspects_main_url_root' && preg_match('/__auto__/', ${$newkey})) print ${$newkey}.' => '.constant('DOL_MAIN_URL_ROOT');
 			else print ${$newkey};
-			if ($newkey == 'dolibarr_main_url_root' && ${$newkey} != DOL_MAIN_URL_ROOT) print ' (currently overwritten by autodetected value: '.DOL_MAIN_URL_ROOT.')';
+			if ($newkey == 'DigitalProspects_main_url_root' && ${$newkey} != DOL_MAIN_URL_ROOT) print ' (currently overwritten by autodetected value: '.DOL_MAIN_URL_ROOT.')';
 			print "</td>";
 		}
 		print "</tr>\n";

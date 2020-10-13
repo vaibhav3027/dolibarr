@@ -17,9 +17,9 @@ default.properties
 .idea
 *.iml
 Thumbs.db
-/dolibarr_genesis.mp4
+/DigitalProspects_genesis.mp4
 # Log files
-dolibarr_install.log
+DigitalProspects_install.log
 upgrade.log
 doxygen_warnings.log
 # Vagrant generated files

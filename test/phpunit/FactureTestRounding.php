@@ -130,7 +130,7 @@ class FactureTestRounding extends PHPUnit\Framework\TestCase
 
     /**
      * testFactureRoundingCreate1
-     * Test according to page http://wiki.dolibarr.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
+     * Test according to page http://wiki.DigitalProspects.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
      *
      * @return int
      */
@@ -175,7 +175,7 @@ class FactureTestRounding extends PHPUnit\Framework\TestCase
      * @return int
      *
      * @depends	testFactureRoundingCreate1
-     * Test according to page http://wiki.dolibarr.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
+     * Test according to page http://wiki.DigitalProspects.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
      */
     public function testFactureRoundingCreate2()
     {

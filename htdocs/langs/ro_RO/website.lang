@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - website
+# DigitalProspects language file - Source file is en_US - website
 Shortname=Cod
 WebsiteSetupDesc=Creați aici site-urile pe care doriți să le utilizați. Apoi intrați în meniul Websites pentru a le edita.
 DeleteWebsite=Şterge website
@@ -46,13 +46,13 @@ ViewWebsiteInProduction=Vizualizați site-ul web utilizând URL-urile de home
 SetHereVirtualHost=<u>Use with Apache/NGinx/...</u><br>Create on your web server (Apache, Nginx, ...) a dedicated Virtual Host with PHP enabled and a Root directory on<br><strong>%s</strong>
 ExampleToUseInApacheVirtualHostConfig=Example to use in Apache virtual host setup:
 YouCanAlsoTestWithPHPS=<u> Utilizarea cu serverul încorporat PHP </u> <br> În mediul de dezvoltare, puteți prefera să testați site-ul cu serverul web încorporat PHP (PHP 5.5 necesar) executând <br> <strong> php -S 0.0.0.0:8080 -t %s </strong>
-YouCanAlsoDeployToAnotherWHP=<u>Run your web site with another Dolibarr Hosting provider</u><br>If you don't have a web server like Apache or NGinx available on internet, you can export and import your web site onto another Dolibarr instance provided by another Dolibarr hosting provider that provide full integration with the Website module. You can find a list of some Dolibarr hosting providers on <a href="https://saas.dolibarr.org" target="_blank">https://saas.dolibarr.org</a>
+YouCanAlsoDeployToAnotherWHP=<u>Run your web site with another DigitalProspects Hosting provider</u><br>If you don't have a web server like Apache or NGinx available on internet, you can export and import your web site onto another DigitalProspects instance provided by another DigitalProspects hosting provider that provide full integration with the Website module. You can find a list of some DigitalProspects hosting providers on <a href="https://saas.DigitalProspects.org" target="_blank">https://saas.DigitalProspects.org</a>
 CheckVirtualHostPerms=Verificați, de asemenea, că gazda virtuală are permisiunea <strong> %s </strong> pe fișiere în <br> <strong> %s </strong>
 ReadPerm=Citit
 WritePerm=Scrie
 TestDeployOnWeb=Testați/implementați pe web
 PreviewSiteServedByWebServer=<u>Previzualizați %s într-o filă nouă. </u> <br> <br> %s va fi deservit de un server web extern (cum ar fi Apache, Nginx, IIS). Trebuie să instalați și să configurați acest server înainte să indicați directorul: <br> <strong> %s </strong> <br> URL deservit de server extern: <br> <strong> %s </strong>
-PreviewSiteServedByDolibarr=<u> Previzualizați %s într-o filă nouă. </u> <br> <br> %s va fi deservit de serverul Dolibarr, deci nu are nevoie de nici un server web suplimentar (cum ar fi Apache, Nginx, IIS) care să fie instalat. <br> Inconvenientul este că adresa URL a paginilor nu este ușor de utilizat și începe cu calea Dolibarr. <br> URL deservită de Dolibarr: <br> <strong> %s </strong> <br> <br> Pentru a utiliza propriul server de web extern pentru a servi acestui site web, de a crea o gazdă virtuală de pe serverul de web acel punct de pe directorul <br> <strong> %s </strong> <br> apoi introduceți numele acestui server virtual și faceți clic pe celălalt buton de previzualizare.
+PreviewSiteServedByDigitalProspects=<u> Previzualizați %s într-o filă nouă. </u> <br> <br> %s va fi deservit de serverul DigitalProspects, deci nu are nevoie de nici un server web suplimentar (cum ar fi Apache, Nginx, IIS) care să fie instalat. <br> Inconvenientul este că adresa URL a paginilor nu este ușor de utilizat și începe cu calea DigitalProspects. <br> URL deservită de DigitalProspects: <br> <strong> %s </strong> <br> <br> Pentru a utiliza propriul server de web extern pentru a servi acestui site web, de a crea o gazdă virtuală de pe serverul de web acel punct de pe directorul <br> <strong> %s </strong> <br> apoi introduceți numele acestui server virtual și faceți clic pe celălalt buton de previzualizare.
 VirtualHostUrlNotDefined=URL-ul gazdei virtuale deservite de serverul web extern nu este definit
 NoPageYet=Nici o pagină
 YouCanCreatePageOrImportTemplate=Puteți să creați o pagină nouă sau să importați un șablon de site complet

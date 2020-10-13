@@ -1,7 +1,7 @@
 {
-	"name" : "dolibarr/dolibarr",
+	"name" : "DigitalProspects/DigitalProspects",
 	"type" : "project",
-	"description" : "Dolibarr ERP & CRM is a modern and easy to use web software to manage your business",
+	"description" : "DigitalProspects ERP & CRM is a modern and easy to use web software to manage your business",
 	"keywords" : [
 		"erp",
 		"crm",
@@ -12,13 +12,13 @@
 		"stock",
 		"agenda"
 	],
-	"homepage" : "https://www.dolibarr.org",
+	"homepage" : "https://www.DigitalProspects.org",
 	"license" : "GPL-3.0-or-later",
 	"support" : {
-		"issues" : "https://github.com/Dolibarr/dolibarr/issues",
-		"forum" : "https://www.dolibarr.org/forum",
-		"wiki" : "https://wiki.dolibarr.org",
-		"source" : "https://github.com/Dolibarr/dolibarr"
+		"issues" : "https://github.com/DigitalProspects/DigitalProspects/issues",
+		"forum" : "https://www.DigitalProspects.org/forum",
+		"wiki" : "https://wiki.DigitalProspects.org",
+		"source" : "https://github.com/DigitalProspects/DigitalProspects"
 	},
 	"config" : {
 		"vendor-dir" : "htdocs/includes"

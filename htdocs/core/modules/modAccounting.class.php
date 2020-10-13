@@ -25,12 +25,12 @@
  * \ingroup		Double entry accounting
  * \brief		Module to activate the double entry accounting module
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 /**
  * Description and activation class for module accounting expert
  */
-class modAccounting extends DolibarrModules
+class modAccounting extends DigitalProspectsModules
 {
 	/**
 	 *   Constructor. Define names, constants, directories, boxes, permissions
@@ -50,8 +50,8 @@ class modAccounting extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Double entry accounting management";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or 'dolibarr_deprecated' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or 'DigitalProspects_deprecated' or version
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'accounting';
@@ -67,7 +67,7 @@ class modAccounting extends DolibarrModules
 		$this->requiredby = array(); // List of modules id to disable if this one is disabled
 		$this->conflictwith = array("modComptabilite"); // List of modules are in conflict with this module
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(3, 9); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(3, 9); // Minimum version of DigitalProspects required by module
 		$this->langfiles = array("accountancy", "compta");
 
 		// Constants

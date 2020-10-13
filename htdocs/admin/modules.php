@@ -88,7 +88,7 @@ if (!GETPOST('buttonreset', 'alpha'))
 }
 
 $dirins = DOL_DOCUMENT_ROOT.'/custom';
-$urldolibarrmodules = 'https://www.dolistore.com/';
+$urlDigitalProspectsmodules = 'https://www.dolistore.com/';
 
 // Initialize technical object to manage hooks of page. Note that conf->hooks_modules contains array of hook context
 $hookmanager->initHooks(array('adminmodules', 'globaladmin'));
@@ -132,13 +132,13 @@ if ($action == 'install')
 		if (!$error && !preg_match('/\.zip$/i', $original_file))
 		{
 			$langs->load("errors");
-			setEventMessages($langs->trans("ErrorFileMustBeADolibarrPackage", $original_file), null, 'errors');
+			setEventMessages($langs->trans("ErrorFileMustBeADigitalProspectsPackage", $original_file), null, 'errors');
 			$error++;
 		}
 		if (!$error && !preg_match('/^(module[a-zA-Z0-9]*|theme)_.*\-([0-9][0-9\.]*)\.zip$/i', $original_file))
 		{
 			$langs->load("errors");
-			setEventMessages($langs->trans("ErrorFilenameDosNotMatchDolibarrPackageRules", $original_file, 'module_*-x.y*.zip'), null, 'errors');
+			setEventMessages($langs->trans("ErrorFilenameDosNotMatchDigitalProspectsPackageRules", $original_file, 'module_*-x.y*.zip'), null, 'errors');
 			$error++;
 		}
 		if (empty($_FILES['fileinstall']['tmp_name']))
@@ -852,7 +852,7 @@ if ($mode == 'common' || $mode == 'commonkanban')
 			// Picto + Name of module
 			print '  <td width="200px">';
 			$alttext = '';
-			//if (is_array($objMod->need_dolibarr_version)) $alttext.=($alttext?' - ':'').'Dolibarr >= '.join('.',$objMod->need_dolibarr_version);
+			//if (is_array($objMod->need_DigitalProspects_version)) $alttext.=($alttext?' - ':'').'DigitalProspects >= '.join('.',$objMod->need_DigitalProspects_version);
 			//if (is_array($objMod->phpmin)) $alttext.=($alttext?' - ':'').'PHP >= '.join('.',$objMod->phpmin);
 			if (!empty($objMod->picto))
 			{
@@ -1016,16 +1016,16 @@ if ($mode == 'deploy')
 {
 	dol_fiche_head($head, $mode, '', -1);
 
-	$dolibarrdataroot = preg_replace('/([\\/]+)$/i', '', DOL_DATA_ROOT);
+	$DigitalProspectsdataroot = preg_replace('/([\\/]+)$/i', '', DOL_DATA_ROOT);
 	$allowonlineinstall = true;
 	$allowfromweb = 1;
-	if (dol_is_file($dolibarrdataroot.'/installmodules.lock')) $allowonlineinstall = false;
+	if (dol_is_file($DigitalProspectsdataroot.'/installmodules.lock')) $allowonlineinstall = false;
 
-	$fullurl = '<a href="'.$urldolibarrmodules.'" target="_blank">'.$urldolibarrmodules.'</a>';
+	$fullurl = '<a href="'.$urlDigitalProspectsmodules.'" target="_blank">'.$urlDigitalProspectsmodules.'</a>';
 	$message = '';
 	if (!empty($allowonlineinstall))
 	{
-		if (!in_array('/custom', explode(',', $dolibarr_main_url_root_alt)))
+		if (!in_array('/custom', explode(',', $DigitalProspects_main_url_root_alt)))
 		{
 			$message = info_admin($langs->trans("ConfFileMustContainCustom", DOL_DOCUMENT_ROOT.'/custom', DOL_DOCUMENT_ROOT));
 			$allowfromweb = -1;
@@ -1050,7 +1050,7 @@ if ($mode == 'deploy')
 	}
 	else
 	{
-		$message = info_admin($langs->trans("InstallModuleFromWebHasBeenDisabledByFile", $dolibarrdataroot.'/installmodules.lock'));
+		$message = info_admin($langs->trans("InstallModuleFromWebHasBeenDisabledByFile", $DigitalProspectsdataroot.'/installmodules.lock'));
 		$allowfromweb = 0;
 	}
 
@@ -1200,7 +1200,7 @@ if ($mode == 'develop')
 	print '<tr class="oddeven" height="80">'."\n";
 	print '<td class="left">';
 	//span class="fa fa-bug"></span>
-	//print '<img border="0" class="imgautosize imgmaxwidth180" src="'.DOL_URL_ROOT.'/theme/dolibarr_preferred_partner.png">';
+	//print '<img border="0" class="imgautosize imgmaxwidth180" src="'.DOL_URL_ROOT.'/theme/DigitalProspects_preferred_partner.png">';
 	print '<div class="imgmaxheight50 logo_setup"></div>';
 	print '</td>';
 	print '<td>'.$langs->trans("TryToUseTheModuleBuilder", $langs->transnoentitiesnoconv("ModuleBuilder")).'</td>';
@@ -1208,9 +1208,9 @@ if ($mode == 'develop')
 	print '</tr>';
 
 	print '<tr class="oddeven" height="80">'."\n";
-	$url = 'https://partners.dolibarr.org';
+	$url = 'https://partners.DigitalProspects.org';
 	print '<td class="left">';
-	print'<a href="'.$url.'" target="_blank" rel="external"><img border="0" class="imgautosize imgmaxwidth180" src="'.DOL_URL_ROOT.'/theme/dolibarr_preferred_partner.png"></a>';
+	print'<a href="'.$url.'" target="_blank" rel="external"><img border="0" class="imgautosize imgmaxwidth180" src="'.DOL_URL_ROOT.'/theme/DigitalProspects_preferred_partner.png"></a>';
 	print '</td>';
 	print '<td>'.$langs->trans("DoliPartnersDesc").'</td>';
 	print '<td><a href="'.$url.'" target="_blank" rel="external">'.$url.'</a></td>';

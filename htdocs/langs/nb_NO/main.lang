@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -60,7 +60,7 @@ ErrorServiceUnavailableTryLater=Tjenesten er ikke tilgjengelig for øyeblikket. 
 ErrorDuplicateField=Duplikate verdier i unik felttype
 ErrorSomeErrorWereFoundRollbackIsDone=Noen feil ble funnet. Endringer har blitt rullet tilbake.
 ErrorConfigParameterNotDefined=Parameter <b>%s</b> er ikke definert i konfigurasjonsfilen <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Fant ikke brukeren <b>%s</b> i databasen.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Fant ikke brukeren <b>%s</b> i databasen.
 ErrorNoVATRateDefinedForSellerCountry=Feil: Det er ikke definert noen MVA-satser for landet '%s'.
 ErrorNoSocialContributionForSellerCountry=Feil! Ingen skatter og avgifter definert for landet '%s'
 ErrorFailedToSaveFile=Feil: Klarte ikke å lagre filen.
@@ -90,7 +90,7 @@ RecordDeleted=Oppføring slettet
 RecordGenerated=Post generert
 LevelOfFeature=Funksjonsnivå
 NotDefined=Ikke angitt
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarrs godkjenningsmodus er satt til <b>%s</b> i konfigurasjonsfilen <b>conf.php</b>. <br> Dette betyr at passorddatabasen er ekstern, så å endre dette feltet har kanskje ikke noen effekt.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspectss godkjenningsmodus er satt til <b>%s</b> i konfigurasjonsfilen <b>conf.php</b>. <br> Dette betyr at passorddatabasen er ekstern, så å endre dette feltet har kanskje ikke noen effekt.
 Administrator=Administrator
 Undefined=Udefinert
 PasswordForgotten=Glemt passordet?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Databasetype manager
 RequestLastAccessInError=Siste database adgangsfeil
 ReturnCodeLastAccessInError=Returkode for siste database adgangsfeil
 InformationLastAccessInError=Informasjom om siste database adgangsfeil
-DolibarrHasDetectedError=Dolibarr oppdaget en teknisk feil
-YouCanSetOptionDolibarrMainProdToZero=Du kan lese loggfilen eller angi alternativet $dolibarr_main_prod til '0' i konfigurasjonsfilen din for å få mer informasjon.
-InformationToHelpDiagnose=Denne informasjonen kan være nyttig for diagnostiske formål (du kan angi alternativ $dolibarr_main_prod til '1' for å fjerne slike merknader)
+DigitalProspectsHasDetectedError=DigitalProspects oppdaget en teknisk feil
+YouCanSetOptionDigitalProspectsMainProdToZero=Du kan lese loggfilen eller angi alternativet $DigitalProspects_main_prod til '0' i konfigurasjonsfilen din for å få mer informasjon.
+InformationToHelpDiagnose=Denne informasjonen kan være nyttig for diagnostiske formål (du kan angi alternativ $DigitalProspects_main_prod til '1' for å fjerne slike merknader)
 MoreInformation=Mer informasjon
 TechnicalInformation=Teknisk informasjon
 TechnicalID=Teknisk ID
 LineID=Linje-ID
 NotePublic=Notat (offentlig)
 NotePrivate=Notat (privat)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr er satt opp til å bruke priser med <b>%s</b> desimaler.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects er satt opp til å bruke priser med <b>%s</b> desimaler.
 DoTest=Test
 ToFilter=Filter
 NoFilter=Ingen filter
@@ -475,8 +475,8 @@ Generate=Generer
 Duration=Varighet
 TotalDuration=Total varighet
 Summary=Oppsummering
-DolibarrStateBoard=Databasestatistikk
-DolibarrWorkBoard=Åpne elementer
+DigitalProspectsStateBoard=Databasestatistikk
+DigitalProspectsWorkBoard=Åpne elementer
 NoOpenedElementToProcess=Ingen åpne elementer å behandle
 Available=Tilgjengelig
 NotYetAvailable=Ikke tilgjengelig ennå
@@ -703,7 +703,7 @@ MenuECM=Dokumenter
 MenuAWStats=AWStats
 MenuMembers=Medlemmer
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Dolibarr grense (Menu home-setup-security): %s Kb, PHP grense: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects grense (Menu home-setup-security): %s Kb, PHP grense: %s Kb
 NoFileFound=Ingen dokumenter er lagret i denne mappen
 CurrentUserLanguage=Gjeldende språk
 CurrentTheme=Gjeldende tema
@@ -736,7 +736,7 @@ PrintContentArea=Vis nettstedet for å skrive ut innholdet på hovedområdet
 MenuManager=Menymanager
 WarningYouAreInMaintenanceMode=Advarsel, du er i vedlikeholdsmodus: bare brukeren <b> %s </b> har lov til å bruke programmet i denne modusen.
 CoreErrorTitle=Systemfeil
-CoreErrorMessage=Beklager, en feil oppsto. Kontakt din systemadministrator for å sjekke loggene eller deaktiver $dolibarr_main_prod=1 for mer informasjon
+CoreErrorMessage=Beklager, en feil oppsto. Kontakt din systemadministrator for å sjekke loggene eller deaktiver $DigitalProspects_main_prod=1 for mer informasjon
 CreditCard=Kredittkort
 ValidatePayment=Valider betaling
 CreditOrDebitCard=Kreditt- eller debetkort
@@ -875,7 +875,7 @@ Calendar=Kalender
 GroupBy=Grupper etter...
 ViewFlatList=Vis liste
 RemoveString=Fjern strengen '%s'
-SomeTranslationAreUncomplete=Noen av språkene som tilbys kan bare oversettes delvis eller kan inneholde feil. Vennligst hjelp å korrigere språket ditt ved å registrere deg på <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a> for å legge til forbedringene dine.
+SomeTranslationAreUncomplete=Noen av språkene som tilbys kan bare oversettes delvis eller kan inneholde feil. Vennligst hjelp å korrigere språket ditt ved å registrere deg på <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a> for å legge til forbedringene dine.
 DirectDownloadLink=Direkte nedlastingslink (offentlig/ekstern)
 DirectDownloadInternalLink=Direkte nedlastingslink (må være logget på og trenger tillatelser)
 Download=Last ned

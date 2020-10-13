@@ -31,7 +31,7 @@ include_once DOL_DOCUMENT_ROOT."/core/boxes/modules_boxes.php";
 /**
  * Class to manage the box
  *
- * Warning: for the box to be detected correctly by dolibarr,
+ * Warning: for the box to be detected correctly by DigitalProspects,
  * the filename should be the lowercase classname
  */
 class mymodulewidget1 extends ModeleBoxes
@@ -100,7 +100,7 @@ class mymodulewidget1 extends ModeleBoxes
 	}
 
 	/**
-	 * Load data into info_box_contents array to show array later. Called by Dolibarr before displaying the box.
+	 * Load data into info_box_contents array to show array later. Called by DigitalProspects before displaying the box.
 	 *
 	 * @param int $max Maximum number of records to load
 	 * @return void
@@ -195,7 +195,7 @@ class mymodulewidget1 extends ModeleBoxes
 	}
 
 	/**
-	 * Method to show box. Called by Dolibarr eatch time it wants to display the box.
+	 * Method to show box. Called by DigitalProspects eatch time it wants to display the box.
 	 *
 	 * @param array $head       Array with properties of box title
 	 * @param array $contents   Array with properties of box lines

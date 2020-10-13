@@ -3,7 +3,7 @@
 # Script to launch LinPhone softphone.
 # This script can be used to setup a ClickToDial system
 # when using LinPhone soft phone.
-# More information on http://wiki.dolibarr.org/index.php/Module_ClickToDial_En
+# More information on http://wiki.DigitalProspects.org/index.php/Module_ClickToDial_En
 #---------------------------------------------------------
 
 # Note: Adding handler into gconf-tools seems to do nothing

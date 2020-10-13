@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - admin
+# DigitalProspects language file - Source file is en_US - admin
 VersionProgram=Versión del programa
 VersionLastInstall=Instalar versión inicial
 ExampleOfDirectoriesForModelGen=Ejemplo de sintaxis:<br>c:\\mydir<br>/home/mydir<br>DOL_DATA_ROOT/ecm/ecmdir

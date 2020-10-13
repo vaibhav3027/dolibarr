@@ -235,7 +235,7 @@ if ($action == 'edit')
 			print '<table class="border centpercent">';
 			print '<tr><td class="tdtop titlefieldcreate fieldrequired">'.$langs->trans('Label').'</td><td><input name="libelle-'.$key.'" size="40" value="'.dol_escape_htmltag($object->multilangs[$key]["label"]).'"></td></tr>';
 			print '<tr><td class="tdtop">'.$langs->trans('Description').'</td><td>';
-			$doleditor = new DolEditor("desc-$key", $object->multilangs[$key]["description"], '', 160, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
+			$doleditor = new DolEditor("desc-$key", $object->multilangs[$key]["description"], '', 160, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
 			$doleditor->Create();
 			print '</td></tr>';
 			print '</td></tr>';
@@ -299,7 +299,7 @@ if ($action == 'add' && $user->rights->adherent->configurer)
 	print '</td></tr>';
 	print '<tr><td class="tdtop fieldrequired">'.$langs->trans('Label').'</td><td><input name="libelle" size="40"></td></tr>';
 	print '<tr><td class="tdtop">'.$langs->trans('Description').'</td><td>';
-	$doleditor = new DolEditor('desc', '', '', 160, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
+	$doleditor = new DolEditor('desc', '', '', 160, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_3, '90%');
 	$doleditor->Create();
 	print '</td></tr>';
 

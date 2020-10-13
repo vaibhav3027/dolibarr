@@ -33,7 +33,7 @@ if (substr($sapi_type, 0, 3) == 'cgi') {
 }
 
 @set_time_limit(0); // No timeout for this script
-define('EVEN_IF_ONLY_LOGIN_ALLOWED', 1); // Set this define to 0 if you want to lock your script when dolibarr setup is "locked to admin user only".
+define('EVEN_IF_ONLY_LOGIN_ALLOWED', 1); // Set this define to 0 if you want to lock your script when DigitalProspects setup is "locked to admin user only".
 
 $error = 0;
 
@@ -69,8 +69,8 @@ $db->begin();
 
 $listofpages = $websitepagestatic->fetchAll($website->id, '', '', $max);
 
-global $dolibarr_main_data_root;
-$pathofwebsite = $dolibarr_main_data_root.'/website/'.$websiteref;
+global $DigitalProspects_main_data_root;
+$pathofwebsite = $DigitalProspects_main_data_root.'/website/'.$websiteref;
 
 $nbgenerated = 0;
 foreach ($listofpages as $websitepage) {

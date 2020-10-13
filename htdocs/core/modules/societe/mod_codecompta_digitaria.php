@@ -38,10 +38,10 @@ class mod_codecompta_digitaria extends ModeleAccountancyCode
     public $name = 'Digitaria';
 
     /**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-    public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+    public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
     /**
      * Prefix customer accountancy code

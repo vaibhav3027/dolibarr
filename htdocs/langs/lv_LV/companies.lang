@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Uzņēmuma nosaukums %s jau pastāv. Izvēlieties citu.
 ErrorSetACountryFirst=Izvēlieties vispirms valsti
 SelectThirdParty=Izvēlieties trešo pusi
@@ -12,7 +12,7 @@ MenuNewSupplier=Jauns pārdevējs
 MenuNewPrivateIndividual=Jauna privātpersona
 NewCompany=Jauns uzņēmums (perspektīva, klients, pārdevējs)
 NewThirdParty=Jauna trešā persona (perspektīva, klients, pārdevējs)
-CreateDolibarrThirdPartySupplier=Izveidot trešo pusi (pārdevējs)
+CreateDigitalProspectsThirdPartySupplier=Izveidot trešo pusi (pārdevējs)
 CreateThirdPartyOnly=Izveidot trešo personu
 CreateThirdPartyAndContact=Izveidojiet trešo personu + bērnu kontaktu
 ProspectionArea=Apzināšanas lauks
@@ -347,7 +347,7 @@ CapitalOf=%s kapitāls
 EditCompany=Labot uzņēmumu
 ThisUserIsNot=Šis lietotājs nav potenciālais pircējs, klients vai pārdevējs
 VATIntraCheck=Pārbaudīt
-VATIntraCheckDesc=PVN ID ir jāiekļauj valsts prefikss. Saite <b> %s </b> izmanto Eiropas PVN pārbaudes pakalpojumu (VIES), kas pieprasa interneta piekļuvi no Dolibarr servera.
+VATIntraCheckDesc=PVN ID ir jāiekļauj valsts prefikss. Saite <b> %s </b> izmanto Eiropas PVN pārbaudes pakalpojumu (VIES), kas pieprasa interneta piekļuvi no DigitalProspects servera.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Pārbaudiet Kopienas iekšējo PVN identifikācijas numuru Eiropas Komisijas tīmekļa vietnē
 VATIntraManualCheck=Jūs varat manuāli pārbaudīt arī Eiropas Komisijas vietnē <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Perspektīvu statuss
 NoParentCompany=Nav
 ExportCardToFormat=Eksportēt karti uz formātu
 ContactNotLinkedToCompany=Kontakts nav saistīts ar trešajām personām
-DolibarrLogin=Dolibarr pieteikšanās
-NoDolibarrAccess=Nav Dolibarr piekļuve
+DigitalProspectsLogin=DigitalProspects pieteikšanās
+NoDigitalProspectsAccess=Nav DigitalProspects piekļuve
 ExportDataset_company_1=Trešās puses (uzņēmumi/fondi/fiziskie cilvēki) un to īpašības
 ExportDataset_company_2=Kontakti un to īpašības
 ImportDataset_company_1=Trešās puses un to īpašības

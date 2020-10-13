@@ -128,8 +128,8 @@ if (!empty($tag) && ($unsuscrib == '1'))
 	print "<html>\n";
 	print "<head>\n";
 	print '<meta name="robots" content="noindex,nofollow">'."\n";
-	print '<meta name="keywords" content="dolibarr,emailing">'."\n";
-	print '<meta name="description" content="Dolibarr EMailing unsubcribe page">'."\n";
+	print '<meta name="keywords" content="DigitalProspects,emailing">'."\n";
+	print '<meta name="description" content="DigitalProspects EMailing unsubcribe page">'."\n";
 	print "<title>".$langs->trans("MailUnsubcribe")."</title>\n";
 	print '<link rel="stylesheet" type="text/css" href="'.DOL_URL_ROOT.$conf->css.'?lang='.$langs->defaultlang.'">'."\n";
 	print '<style type="text/css">';

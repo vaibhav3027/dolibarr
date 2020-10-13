@@ -1640,7 +1640,7 @@ class Holiday extends CommonObject
 	 *    Get list of Users or list of vacation balance.
 	 *
 	 *    @param      boolean			$stringlist	    If true return a string list of id. If false, return an array with detail.
-	 *    @param      boolean   		$type			If true, read Dolibarr user list, if false, return vacation balance list.
+	 *    @param      boolean   		$type			If true, read DigitalProspects user list, if false, return vacation balance list.
 	 *    @param      string            $filters        Filters
 	 *    @return     array|string|int      			Return an array
 	 */
@@ -1654,7 +1654,7 @@ class Holiday extends CommonObject
 		{
 			if ($type)
 			{
-				// If user of Dolibarr
+				// If user of DigitalProspects
 				$sql = "SELECT";
 				if (!empty($conf->multicompany->enabled) && !empty($conf->global->MULTICOMPANY_TRANSVERSE_MODE)) {
 					$sql .= " DISTINCT";
@@ -1750,10 +1750,10 @@ class Holiday extends CommonObject
 		else
 		{
 			// Si faux donc return array
-			// List for Dolibarr users
+			// List for DigitalProspects users
 			if ($type)
 			{
-								// If user of Dolibarr
+								// If user of DigitalProspects
 				$sql = "SELECT";
 				if (!empty($conf->multicompany->enabled) && !empty($conf->global->MULTICOMPANY_TRANSVERSE_MODE)) {
 					$sql .= " DISTINCT";
@@ -1906,7 +1906,7 @@ class Holiday extends CommonObject
 
 
 	/**
-	 *	Compte le nombre d'utilisateur actifs dans Dolibarr
+	 *	Compte le nombre d'utilisateur actifs dans DigitalProspects
 	 *
 	 *  @return     int      retourne le nombre d'utilisateur
 	 */
@@ -1922,7 +1922,7 @@ class Holiday extends CommonObject
 		return $objet->compteur;
 	}
 	/**
-	 *	Compte le nombre d'utilisateur actifs dans Dolibarr sans CP
+	 *	Compte le nombre d'utilisateur actifs dans DigitalProspects sans CP
 	 *
 	 *  @return     int      retourne le nombre d'utilisateur
 	 */
@@ -1940,16 +1940,16 @@ class Holiday extends CommonObject
 	}
 
 	/**
-	 *  Compare le nombre d'utilisateur actif de Dolibarr à celui des utilisateurs des congés payés
+	 *  Compare le nombre d'utilisateur actif de DigitalProspects à celui des utilisateurs des congés payés
 	 *
-	 *  @param    int	$userDolibarrWithoutCP	Number of active users in Dolibarr without holidays
+	 *  @param    int	$userDigitalProspectsWithoutCP	Number of active users in DigitalProspects without holidays
 	 *  @param    int	$userCP    				Number of active users into table of holidays
 	 *  @return   int							<0 if KO, >0 if OK
 	 */
-	public function verifNbUsers($userDolibarrWithoutCP, $userCP)
+	public function verifNbUsers($userDigitalProspectsWithoutCP, $userCP)
 	{
 		if (empty($userCP)) $userCP = 0;
-		dol_syslog(get_class($this).'::verifNbUsers userDolibarr='.$userDolibarrWithoutCP.' userCP='.$userCP);
+		dol_syslog(get_class($this).'::verifNbUsers userDigitalProspects='.$userDigitalProspectsWithoutCP.' userCP='.$userCP);
 		return 1;
 	}
 

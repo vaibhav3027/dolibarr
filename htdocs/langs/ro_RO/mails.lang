@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=Email-uri
 EMailing=Email-uri
 EMailings=EMailings
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Contacte pe categorii
 MailingModuleDescContactsByFunction=Contacte după poziție
 MailingModuleDescEmailsFromFile=Emailuri din fișier
 MailingModuleDescEmailsFromUser=Emailuri introduse de utilizator
-MailingModuleDescDolibarrUsers=Utilizatorii cu emailuri
+MailingModuleDescDigitalProspectsUsers=Utilizatorii cu emailuri
 MailingModuleDescThirdPartiesByCategories=Terți (pe categorii)
 SendingFromWebInterfaceIsNotAllowed=Trimiterea de pe interfața web nu este permisă.
 

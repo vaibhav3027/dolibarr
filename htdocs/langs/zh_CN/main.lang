@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=升
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=无请求错误
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=在唯一的栏位中使用了重复值
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=在数据库无法找到用户<b>%s</b>
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=在数据库无法找到用户<b>%s</b>
 ErrorNoVATRateDefinedForSellerCountry=错误，没有为国家'%s'设置增值税税率。
 ErrorNoSocialContributionForSellerCountry=错误，没有为国家'%s'定义社会/财政税类型
 ErrorFailedToSaveFile=错误，无法保存文件。
@@ -90,7 +90,7 @@ RecordDeleted=记录已删除
 RecordGenerated=Record generated
 LevelOfFeature=权限级别
 NotDefined=未定义
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr身份验证模式在配置文件<b> conf.php </ b>中设置为<b> %s </ b>。<br>这意味着密码数据库在Dolibarr外部，因此更改此字段可能无效。
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects身份验证模式在配置文件<b> conf.php </ b>中设置为<b> %s </ b>。<br>这意味着密码数据库在DigitalProspects外部，因此更改此字段可能无效。
 Administrator=管理员
 Undefined=未定义
 PasswordForgotten=忘记密码？
@@ -108,16 +108,16 @@ DatabaseTypeManager=数据库类型管理员
 RequestLastAccessInError=最后数据库访问请求错误
 ReturnCodeLastAccessInError=返回最后数据库访问请求错误代码
 InformationLastAccessInError=最后数据库访问请求错误信息
-DolibarrHasDetectedError=Dolibarr检测到一个技术性错误
-YouCanSetOptionDolibarrMainProdToZero=您可以在配置文件中读取日志文件或将选项$ dolibarr_main_prod设置为“0”以获取更多信息。
-InformationToHelpDiagnose=此信息可用于诊断目的（您可以将选项$ dolibarr_main_prod设置为'1'以删除此类通知）
+DigitalProspectsHasDetectedError=DigitalProspects检测到一个技术性错误
+YouCanSetOptionDigitalProspectsMainProdToZero=您可以在配置文件中读取日志文件或将选项$ DigitalProspects_main_prod设置为“0”以获取更多信息。
+InformationToHelpDiagnose=此信息可用于诊断目的（您可以将选项$ DigitalProspects_main_prod设置为'1'以删除此类通知）
 MoreInformation=更多信息
 TechnicalInformation=技术信息
 TechnicalID=技术ID
 LineID=Line ID
 NotePublic=备注 (公开)
 NotePrivate=备注(私人)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr是安装精度的限制价格单位为<b>%s</b>小数。
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects是安装精度的限制价格单位为<b>%s</b>小数。
 DoTest=测试
 ToFilter=筛选
 NoFilter=不筛选
@@ -475,8 +475,8 @@ Generate=生成
 Duration=为期
 TotalDuration=总时间
 Summary=摘要
-DolibarrStateBoard=数据库统计
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=数据库统计
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=可用的
 NotYetAvailable=不可用的
@@ -703,7 +703,7 @@ MenuECM=文件
 MenuAWStats=AWStats
 MenuMembers=会员
 MenuAgendaGoogle=谷歌议程
-ThisLimitIsDefinedInSetup=来自Dolibarr本身的大小限制(菜单：home-setup-security)为：%s Kb，而PHP的限制为: %s Kb
+ThisLimitIsDefinedInSetup=来自DigitalProspects本身的大小限制(菜单：home-setup-security)为：%s Kb，而PHP的限制为: %s Kb
 NoFileFound=这个目录没保存有文档
 CurrentUserLanguage=当前语言
 CurrentTheme=当前主题样式
@@ -736,7 +736,7 @@ PrintContentArea=显示打印页面，用来打印主要内容区域
 MenuManager=菜单管理器
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=系统错误
-CoreErrorMessage=对不起，发生了错误。请与您的系统管理员联系以检查日志或禁用$ dolibarr_main_prod = 1以获取更多信息。
+CoreErrorMessage=对不起，发生了错误。请与您的系统管理员联系以检查日志或禁用$ DigitalProspects_main_prod = 1以获取更多信息。
 CreditCard=信用卡
 ValidatePayment=确认付款
 CreditOrDebitCard=信用卡或借记卡
@@ -875,7 +875,7 @@ Calendar=日历
 GroupBy=分组：
 ViewFlatList=查看全部列表
 RemoveString=删除字符串'%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=直接下载链接（公共/外部）
 DirectDownloadInternalLink=直接下载链接（需要登录且需要权限）
 Download=下载

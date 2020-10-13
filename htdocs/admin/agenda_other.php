@@ -55,7 +55,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 {
 	$code = $reg[1];
 	$value = (GETPOST($code, 'alpha') ? GETPOST($code, 'alpha') : 1);
-	if (dolibarr_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		Header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -69,7 +69,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 if (preg_match('/del_([a-z0-9_\-]+)/i', $action, $reg))
 {
 	$code = $reg[1];
-	if (dolibarr_del_const($db, $code, $conf->entity) > 0)
+	if (DigitalProspects_del_const($db, $code, $conf->entity) > 0)
 	{
 		Header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -83,10 +83,10 @@ if ($action == 'set')
 {
 	$getDefaultFilter = GETPOST('AGENDA_DEFAULT_FILTER_TYPE');
 	$defaultfilter = (is_array($getDefaultFilter)) ? implode(',', $getDefaultFilter) : $getDefaultFilter;
-	dolibarr_set_const($db, 'AGENDA_USE_EVENT_TYPE_DEFAULT', GETPOST('AGENDA_USE_EVENT_TYPE_DEFAULT'), 'chaine', 0, '', $conf->entity);
-    dolibarr_set_const($db, 'AGENDA_DEFAULT_FILTER_TYPE', $defaultfilter, 'chaine', 0, '', $conf->entity);
-    dolibarr_set_const($db, 'AGENDA_DEFAULT_FILTER_STATUS', GETPOST('AGENDA_DEFAULT_FILTER_STATUS'), 'chaine', 0, '', $conf->entity);
-	dolibarr_set_const($db, 'AGENDA_DEFAULT_VIEW', GETPOST('AGENDA_DEFAULT_VIEW'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, 'AGENDA_USE_EVENT_TYPE_DEFAULT', GETPOST('AGENDA_USE_EVENT_TYPE_DEFAULT'), 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, 'AGENDA_DEFAULT_FILTER_TYPE', $defaultfilter, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, 'AGENDA_DEFAULT_FILTER_STATUS', GETPOST('AGENDA_DEFAULT_FILTER_STATUS'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, 'AGENDA_DEFAULT_VIEW', GETPOST('AGENDA_DEFAULT_VIEW'), 'chaine', 0, '', $conf->entity);
 }
 elseif ($action == 'specimen')  // For orders
 {
@@ -146,14 +146,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->ACTION_EVENT_ADDON_PDF == "$value") dolibarr_del_const($db, 'ACTION_EVENT_ADDON_PDF', $conf->entity);
+        if ($conf->global->ACTION_EVENT_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'ACTION_EVENT_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "ACTION_EVENT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "ACTION_EVENT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent

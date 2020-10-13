@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Fatura
 Bills=Faturalar
 BillsCustomers=Müşteri faturaları
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Başlangıç tarihini ayarla
 AutoFillDateTo=Set end date for service line with next invoice date
 AutoFillDateToShort=Bitiş tarihini ayarla
 MaxNumberOfGenerationReached=Max number of gen. reached
-BILL_DELETEInDolibarr=Fatura silindi
-BILL_SUPPLIER_DELETEInDolibarr=Supplier invoice deleted
+BILL_DELETEInDigitalProspects=Fatura silindi
+BILL_SUPPLIER_DELETEInDigitalProspects=Supplier invoice deleted
 UnitPriceXQtyLessDiscount=Unit price x Qty - Discount
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

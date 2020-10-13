@@ -2,12 +2,12 @@
 License
 -------
 
-Dolibarr is released under the terms of the GNU General Public License as
+DigitalProspects is released under the terms of the GNU General Public License as
 published by the Free Software Foundation; either version 3 of the License,
 or (at your option) any later version (GPL-3+).
 More information: https://www.gnu.org/licenses/gpl-3.0.txt
 
-Dolibarr uses some external libraries released under different licenses. This is compatibility summary:
+DigitalProspects uses some external libraries released under different licenses. This is compatibility summary:
 
 Component              Version       License                     GPL Compatible  Usage
 -------------------------------------------------------------------------------------
@@ -70,4 +70,4 @@ https://www.gnu.org/licenses/licenses.en.html
 Copyright / Authors
 -------------------
 
-See page https://github.com/Dolibarr/dolibarr/graphs/contributors
+See page https://github.com/DigitalProspects/DigitalProspects/graphs/contributors

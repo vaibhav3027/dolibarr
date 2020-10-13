@@ -10,7 +10,7 @@
 # Laurent Destailleur - eldy@users.sourceforge.net
 #------------------------------------------------------
 # Usage: initdemo.sh confirm 
-# usage: initdemo.sh confirm mysqldump_dolibarr_x.x.x.sql database port login pass
+# usage: initdemo.sh confirm mysqldump_DigitalProspects_x.x.x.sql database port login pass
 #------------------------------------------------------
 
 
@@ -42,7 +42,7 @@ passwd=$6;
 if [ "x$confirm" != "xconfirm" ]
 then
 	echo "----- $0 -----"
-	echo "Usage: initdemo.sh confirm [mysqldump_dolibarr_x.x.x.sql database port login pass]"
+	echo "Usage: initdemo.sh confirm [mysqldump_DigitalProspects_x.x.x.sql database port login pass]"
 	exit
 fi
 
@@ -50,7 +50,7 @@ fi
 # ----------------------------- if no params on command line
 if [ "x$passwd" = "x" ]
 then
-	export dumpfile=`ls -v $mydir/mysqldump_dolibarr_*.sql | tail -n 1`
+	export dumpfile=`ls -v $mydir/mysqldump_DigitalProspects_*.sql | tail -n 1`
 	export dumpfile=`basename $dumpfile`
 
 	# ----------------------------- input file
@@ -58,7 +58,7 @@ then
 	DIALOG="$DIALOG --ascii-lines"
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
 	        --inputbox "Input dump file :" 16 55 $dumpfile 2> $fichtemp
 	valret=$?
 	case $valret in
@@ -75,8 +75,8 @@ then
 	DIALOG="$DIALOG --ascii-lines"
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
-	        --inputbox "Mysql database name :" 16 55 dolibarrdemo 2> $fichtemp
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
+	        --inputbox "Mysql database name :" 16 55 DigitalProspectsdemo 2> $fichtemp
 	valret=$?
 	case $valret in
 	  0)
@@ -91,7 +91,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
 	        --inputbox "Mysql port (ex: 3306):" 16 55 3306 2> $fichtemp
 	
 	valret=$?
@@ -109,7 +109,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
 	        --inputbox "Mysql user login (ex: root):" 16 55 root 2> $fichtemp
 	
 	valret=$?
@@ -127,7 +127,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
 	        --inputbox "Password for Mysql user login :" 16 55 2> $fichtemp
 	
 	valret=$?
@@ -142,12 +142,12 @@ then
 	esac
 	
 	
-	export documentdir=`cat $mydir/../../htdocs/conf/conf.php | grep '^\$dolibarr_main_data_root' | sed -e 's/$dolibarr_main_data_root=//' | sed -e 's/;//' | sed -e "s/'//g" | sed -e 's/"//g' `
+	export documentdir=`cat $mydir/../../htdocs/conf/conf.php | grep '^\$DigitalProspects_main_data_root' | sed -e 's/$DigitalProspects_main_data_root=//' | sed -e 's/;//' | sed -e "s/'//g" | sed -e 's/"//g' `
 
 
 	# ---------------------------- confirmation
 	DIALOG=${DIALOG=dialog}
-	$DIALOG --title "Init Dolibarr with demo values" --clear \
+	$DIALOG --title "Init DigitalProspects with demo values" --clear \
 	        --yesno "Do you confirm ? \n Dump file : '$dumpfile' \n Dump dir : '$mydir' \n Document dir : '$documentdir' \n Mysql database : '$base' \n Mysql port : '$port' \n Mysql login: '$admin' \n Mysql password : '$passwd'" 15 55
 	
 	case $? in
@@ -181,7 +181,7 @@ $mydir/updatedemo.php confirm
 export res=$?
 
 # ---------------------------- copy demo files
-export documentdir=`cat $mydir/../../htdocs/conf/conf.php | grep '^\$dolibarr_main_data_root' | sed -e 's/$dolibarr_main_data_root=//' | sed -e 's/;//' | sed -e "s/'//g" | sed -e 's/"//g' `
+export documentdir=`cat $mydir/../../htdocs/conf/conf.php | grep '^\$DigitalProspects_main_data_root' | sed -e 's/$DigitalProspects_main_data_root=//' | sed -e 's/;//' | sed -e "s/'//g" | sed -e 's/"//g' `
 if [ "x$documentdir" != "x" ]
 then
 	$DIALOG --title "Reset document directory tpp" --clear \

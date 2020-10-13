@@ -25,9 +25,9 @@
 
 include_once 'inc.php';
 if (file_exists($conffile)) include_once $conffile;
-require_once $dolibarr_main_document_root.'/core/lib/admin.lib.php';
-include_once $dolibarr_main_document_root.'/core/lib/images.lib.php';
-require_once $dolibarr_main_document_root.'/core/class/extrafields.class.php';
+require_once $DigitalProspects_main_document_root.'/core/lib/admin.lib.php';
+include_once $DigitalProspects_main_document_root.'/core/lib/images.lib.php';
+require_once $DigitalProspects_main_document_root.'/core/class/extrafields.class.php';
 require_once 'lib/repair.lib.php';
 
 $grant_query = '';
@@ -47,13 +47,13 @@ $langs->setDefaultLang($setuplang);
 
 $langs->loadLangs(array("admin", "install", "other"));
 
-if ($dolibarr_main_db_type == "mysqli") $choix = 1;
-if ($dolibarr_main_db_type == "pgsql") $choix = 2;
-if ($dolibarr_main_db_type == "mssql") $choix = 3;
+if ($DigitalProspects_main_db_type == "mysqli") $choix = 1;
+if ($DigitalProspects_main_db_type == "pgsql") $choix = 2;
+if ($DigitalProspects_main_db_type == "mssql") $choix = 3;
 
 
-dolibarr_install_syslog("--- repair: entering upgrade.php page");
-if (!is_object($conf)) dolibarr_install_syslog("repair: conf file not initialized", LOG_ERR);
+DigitalProspects_install_syslog("--- repair: entering upgrade.php page");
+if (!is_object($conf)) DigitalProspects_install_syslog("repair: conf file not initialized", LOG_ERR);
 
 
 /*
@@ -91,43 +91,43 @@ print '<table cellspacing="0" cellpadding="1" border="0" width="100%">';
 $error = 0;
 
 // If password is encoded, we decode it
-if (preg_match('/crypted:/i', $dolibarr_main_db_pass) || !empty($dolibarr_main_db_encrypted_pass))
+if (preg_match('/crypted:/i', $DigitalProspects_main_db_pass) || !empty($DigitalProspects_main_db_encrypted_pass))
 {
-    require_once $dolibarr_main_document_root.'/core/lib/security.lib.php';
-    if (preg_match('/crypted:/i', $dolibarr_main_db_pass))
+    require_once $DigitalProspects_main_document_root.'/core/lib/security.lib.php';
+    if (preg_match('/crypted:/i', $DigitalProspects_main_db_pass))
     {
-        $dolibarr_main_db_pass = preg_replace('/crypted:/i', '', $dolibarr_main_db_pass);
-        $dolibarr_main_db_pass = dol_decode($dolibarr_main_db_pass);
-        $dolibarr_main_db_encrypted_pass = $dolibarr_main_db_pass; // We need to set this as it is used to know the password was initially crypted
+        $DigitalProspects_main_db_pass = preg_replace('/crypted:/i', '', $DigitalProspects_main_db_pass);
+        $DigitalProspects_main_db_pass = dol_decode($DigitalProspects_main_db_pass);
+        $DigitalProspects_main_db_encrypted_pass = $DigitalProspects_main_db_pass; // We need to set this as it is used to know the password was initially crypted
     }
-    else $dolibarr_main_db_pass = dol_decode($dolibarr_main_db_encrypted_pass);
+    else $DigitalProspects_main_db_pass = dol_decode($DigitalProspects_main_db_encrypted_pass);
 }
 
 // $conf is already instancied inside inc.php
-$conf->db->type = $dolibarr_main_db_type;
-$conf->db->host = $dolibarr_main_db_host;
-$conf->db->port = $dolibarr_main_db_port;
-$conf->db->name = $dolibarr_main_db_name;
-$conf->db->user = $dolibarr_main_db_user;
-$conf->db->pass = $dolibarr_main_db_pass;
+$conf->db->type = $DigitalProspects_main_db_type;
+$conf->db->host = $DigitalProspects_main_db_host;
+$conf->db->port = $DigitalProspects_main_db_port;
+$conf->db->name = $DigitalProspects_main_db_name;
+$conf->db->user = $DigitalProspects_main_db_user;
+$conf->db->pass = $DigitalProspects_main_db_pass;
 
 // For encryption
-$conf->db->dolibarr_main_db_encryption = isset($dolibarr_main_db_encryption) ? $dolibarr_main_db_encryption : '';
-$conf->db->dolibarr_main_db_cryptkey = isset($dolibarr_main_db_cryptkey) ? $dolibarr_main_db_cryptkey : '';
+$conf->db->DigitalProspects_main_db_encryption = isset($DigitalProspects_main_db_encryption) ? $DigitalProspects_main_db_encryption : '';
+$conf->db->DigitalProspects_main_db_cryptkey = isset($DigitalProspects_main_db_cryptkey) ? $DigitalProspects_main_db_cryptkey : '';
 
 $db = getDoliDBInstance($conf->db->type, $conf->db->host, $conf->db->user, $conf->db->pass, $conf->db->name, $conf->db->port);
 
 if ($db->connected)
 {
     print '<tr><td class="nowrap">';
-    print $langs->trans("ServerConnection")." : $dolibarr_main_db_host</td><td class=\"right\">".$langs->trans("OK")."</td></tr>";
-    dolibarr_install_syslog("repair: ".$langs->transnoentities("ServerConnection").": ".$dolibarr_main_db_host.$langs->transnoentities("OK"));
+    print $langs->trans("ServerConnection")." : $DigitalProspects_main_db_host</td><td class=\"right\">".$langs->trans("OK")."</td></tr>";
+    DigitalProspects_install_syslog("repair: ".$langs->transnoentities("ServerConnection").": ".$DigitalProspects_main_db_host.$langs->transnoentities("OK"));
     $ok = 1;
 }
 else
 {
-    print "<tr><td>".$langs->trans("ErrorFailedToConnectToDatabase", $dolibarr_main_db_name)."</td><td class=\"right\">".$langs->transnoentities("Error")."</td></tr>";
-    dolibarr_install_syslog("repair: ".$langs->transnoentities("ErrorFailedToConnectToDatabase", $dolibarr_main_db_name));
+    print "<tr><td>".$langs->trans("ErrorFailedToConnectToDatabase", $DigitalProspects_main_db_name)."</td><td class=\"right\">".$langs->transnoentities("Error")."</td></tr>";
+    DigitalProspects_install_syslog("repair: ".$langs->transnoentities("ErrorFailedToConnectToDatabase", $DigitalProspects_main_db_name));
     $ok = 0;
 }
 
@@ -136,14 +136,14 @@ if ($ok)
     if ($db->database_selected)
     {
         print '<tr><td class="nowrap">';
-        print $langs->trans("DatabaseConnection")." : ".$dolibarr_main_db_name."</td><td class=\"right\">".$langs->trans("OK")."</td></tr>";
-        dolibarr_install_syslog("repair: database connection successful: ".$dolibarr_main_db_name);
+        print $langs->trans("DatabaseConnection")." : ".$DigitalProspects_main_db_name."</td><td class=\"right\">".$langs->trans("OK")."</td></tr>";
+        DigitalProspects_install_syslog("repair: database connection successful: ".$DigitalProspects_main_db_name);
         $ok = 1;
     }
     else
     {
-        print "<tr><td>".$langs->trans("ErrorFailedToConnectToDatabase", $dolibarr_main_db_name)."</td><td class=\"right\">".$langs->trans("Error")."</td></tr>";
-        dolibarr_install_syslog("repair: ".$langs->transnoentities("ErrorFailedToConnectToDatabase", $dolibarr_main_db_name));
+        print "<tr><td>".$langs->trans("ErrorFailedToConnectToDatabase", $DigitalProspects_main_db_name)."</td><td class=\"right\">".$langs->trans("Error")."</td></tr>";
+        DigitalProspects_install_syslog("repair: ".$langs->transnoentities("ErrorFailedToConnectToDatabase", $DigitalProspects_main_db_name));
         $ok = 0;
     }
 }
@@ -155,7 +155,7 @@ if ($ok)
     $versionarray = $db->getVersionArray();
     print '<tr><td>'.$langs->trans("ServerVersion").'</td>';
     print '<td class="right">'.$version.'</td></tr>';
-    dolibarr_install_syslog("repair: ".$langs->transnoentities("ServerVersion").": ".$version);
+    DigitalProspects_install_syslog("repair: ".$langs->transnoentities("ServerVersion").": ".$version);
     //print '<td class="right">'.join('.',$versionarray).'</td></tr>';
 }
 
@@ -525,20 +525,20 @@ if ($ok && GETPOST('restore_thirdparties_logos'))
 
 			if (!empty($name))
 			{
-				$filetotest = $dolibarr_main_data_root.'/societe/logos/'.$name.$ext;
-				$filetotestsmall = $dolibarr_main_data_root.'/societe/logos/thumbs/'.$name.'_small'.$ext;
+				$filetotest = $DigitalProspects_main_data_root.'/societe/logos/'.$name.$ext;
+				$filetotestsmall = $DigitalProspects_main_data_root.'/societe/logos/thumbs/'.$name.'_small'.$ext;
 				$exists = dol_is_file($filetotest);
 				print 'Check thirdparty '.$obj->rowid.' name='.$obj->name.' logo='.$obj->logo.' file '.$filetotest." exists=".$exists."<br>\n";
 				if ($exists)
 				{
-					$filetarget = $dolibarr_main_data_root.'/societe/'.$obj->rowid.'/logos/'.$name.$ext;
-					$filetargetsmall = $dolibarr_main_data_root.'/societe/'.$obj->rowid.'/logos/thumbs/'.$name.'_small'.$ext;
+					$filetarget = $DigitalProspects_main_data_root.'/societe/'.$obj->rowid.'/logos/'.$name.$ext;
+					$filetargetsmall = $DigitalProspects_main_data_root.'/societe/'.$obj->rowid.'/logos/thumbs/'.$name.'_small'.$ext;
 					$existt = dol_is_file($filetarget);
 					if (!$existt)
 					{
 						if (GETPOST('restore_thirdparties_logos', 'alpha') == 'confirmed')
 						{
-							dol_mkdir($dolibarr_main_data_root.'/societe/'.$obj->rowid.'/logos');
+							dol_mkdir($DigitalProspects_main_data_root.'/societe/'.$obj->rowid.'/logos');
 						}
 
 						print "  &nbsp; &nbsp; &nbsp; -> Copy file ".$filetotest." -> ".$filetarget."<br>\n";
@@ -553,7 +553,7 @@ if ($ok && GETPOST('restore_thirdparties_logos'))
 					{
 						if (GETPOST('restore_thirdparties_logos', 'alpha') == 'confirmed')
 						{
-							dol_mkdir($dolibarr_main_data_root.'/societe/'.$obj->rowid.'/logos/thumbs');
+							dol_mkdir($DigitalProspects_main_data_root.'/societe/'.$obj->rowid.'/logos/thumbs');
 						}
 						print "  &nbsp; &nbsp; &nbsp; -> Copy file ".$filetotestsmall." -> ".$filetargetsmall."<br>\n";
 						if (GETPOST('restore_thirdparties_logos', 'alpha') == 'confirmed')
@@ -610,23 +610,23 @@ if ($ok && GETPOST('restore_user_pictures', 'alpha'))
 
 			if (!empty($name))
 			{
-				$filetotest = $dolibarr_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/'.$name.$ext;
-				$filetotestsmall = $dolibarr_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/thumbs/'.$name.'_small'.$ext;
-				$filetotestmini = $dolibarr_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/thumbs/'.$name.'_mini'.$ext;
+				$filetotest = $DigitalProspects_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/'.$name.$ext;
+				$filetotestsmall = $DigitalProspects_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/thumbs/'.$name.'_small'.$ext;
+				$filetotestmini = $DigitalProspects_main_data_root.'/users/'.substr(sprintf('%08d', $obj->rowid), -1, 1).'/'.substr(sprintf('%08d', $obj->rowid), -2, 1).'/thumbs/'.$name.'_mini'.$ext;
 				$exists = dol_is_file($filetotest);
 				print 'Check user '.$obj->rowid.' lastname='.$obj->lastname.' fistname='.$obj->firstname.' photo='.$obj->photo.' file '.$filetotest." exists=".$exists."<br>\n";
 				if ($exists)
 				{
-					$filetarget = $dolibarr_main_data_root.'/users/'.$obj->rowid.'/'.$name.$ext;
-					$filetargetsmall = $dolibarr_main_data_root.'/users/'.$obj->rowid.'/thumbs/'.$name.'_small'.$ext;
-					$filetargetmini = $dolibarr_main_data_root.'/users/'.$obj->rowid.'/thumbs/'.$name.'_mini'.$ext;
+					$filetarget = $DigitalProspects_main_data_root.'/users/'.$obj->rowid.'/'.$name.$ext;
+					$filetargetsmall = $DigitalProspects_main_data_root.'/users/'.$obj->rowid.'/thumbs/'.$name.'_small'.$ext;
+					$filetargetmini = $DigitalProspects_main_data_root.'/users/'.$obj->rowid.'/thumbs/'.$name.'_mini'.$ext;
 
 					$existt = dol_is_file($filetarget);
 					if (!$existt)
 					{
 						if (GETPOST('restore_user_pictures', 'alpha') == 'confirmed')
 						{
-							dol_mkdir($dolibarr_main_data_root.'/users/'.$obj->rowid);
+							dol_mkdir($DigitalProspects_main_data_root.'/users/'.$obj->rowid);
 						}
 
 						print "  &nbsp; &nbsp; &nbsp; -> Copy file ".$filetotest." -> ".$filetarget."<br>\n";
@@ -641,7 +641,7 @@ if ($ok && GETPOST('restore_user_pictures', 'alpha'))
 					{
 						if (GETPOST('restore_user_pictures', 'alpha') == 'confirmed')
 						{
-							dol_mkdir($dolibarr_main_data_root.'/users/'.$obj->rowid.'/thumbs');
+							dol_mkdir($DigitalProspects_main_data_root.'/users/'.$obj->rowid.'/thumbs');
 						}
 
 						print "  &nbsp; &nbsp; &nbsp; -> Copy file ".$filetotestsmall." -> ".$filetargetsmall."<br>\n";
@@ -656,7 +656,7 @@ if ($ok && GETPOST('restore_user_pictures', 'alpha'))
 					{
 						if (GETPOST('restore_user_pictures', 'alpha') == 'confirmed')
 						{
-							dol_mkdir($dolibarr_main_data_root.'/users/'.$obj->rowid.'/thumbs');
+							dol_mkdir($DigitalProspects_main_data_root.'/users/'.$obj->rowid.'/thumbs');
 						}
 
 						print "  &nbsp; &nbsp; &nbsp; -> Copy file ".$filetotestmini." -> ".$filetargetmini."<br>\n";
@@ -702,7 +702,7 @@ if ($ok && GETPOST('rebuild_product_thumbs', 'alpha'))
 
             if (!empty($obj->ref))
             {
-                $files = dol_dir_list($dolibarr_main_data_root.'/produit/'.$obj->ref, 'files', 0);
+                $files = dol_dir_list($DigitalProspects_main_data_root.'/produit/'.$obj->ref, 'files', 0);
                 foreach ($files as $file)
                 {
 					// Generate thumbs.
@@ -1369,7 +1369,7 @@ if ($ok && GETPOST('force_utf8_on_tables', 'alpha'))
         foreach ($listoftables as $table)
         {
         	// do not convert llx_const if mysql encrypt/decrypt is used
-        	if ($conf->db->dolibarr_main_db_encryption != 0 && preg_match('/\_const$/', $table)) continue;
+        	if ($conf->db->DigitalProspects_main_db_encryption != 0 && preg_match('/\_const$/', $table)) continue;
 
             print '<tr><td colspan="2">';
             print $table;
@@ -1401,7 +1401,7 @@ if ($ok && GETPOST('force_utf8_on_tables', 'alpha'))
 //
 if ($ok && GETPOST('repair_link_dispatch_lines_supplier_order_lines')) {
     /*
-     * This script is meant to be run when upgrading from a dolibarr version < 3.8
+     * This script is meant to be run when upgrading from a DigitalProspects version < 3.8
      * to a newer version.
      *
      * Version 3.8 introduces a new column in llx_commande_fournisseur_dispatch, which
@@ -1410,7 +1410,7 @@ if ($ok && GETPOST('repair_link_dispatch_lines_supplier_order_lines')) {
      * which line were dispatched where).
      *
      * However when migrating, the new column has a default value of 0, which means that
-     * old supplier orders whose lines were dispatched using the old dolibarr version
+     * old supplier orders whose lines were dispatched using the old DigitalProspects version
      * have unspecific dispatch lines, which are not taken into account by the new version,
      * thus making the order look like it was never dispatched at all.
      *
@@ -1549,7 +1549,7 @@ if (empty($actiondone))
 if ($oneoptionset)
 {
 	print '<div class="center" style="padding-top: 10px"><a href="../index.php?mainmenu=home&leftmenu=home'.(isset($_POST["login"]) ? '&username='.urlencode($_POST["login"]) : '').'">';
-	print $langs->trans("GoToDolibarr");
+	print $langs->trans("GoToDigitalProspects");
 	print '</a></div>';
 }
 else
@@ -1559,7 +1559,7 @@ else
 	print '</div>';
 }
 
-dolibarr_install_syslog("--- repair: end");
+DigitalProspects_install_syslog("--- repair: end");
 pFooter(1, $setuplang);
 
 if ($db->connected) $db->close();

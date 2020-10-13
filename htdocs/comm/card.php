@@ -510,7 +510,7 @@ if ($object->id > 0)
         $langs->load("members");
         $langs->load("users");
 
-        print '<tr><td class="titlefield">'.$langs->trans("LinkedToDolibarrMember").'</td>';
+        print '<tr><td class="titlefield">'.$langs->trans("LinkedToDigitalProspectsMember").'</td>';
         print '<td>';
         $adh = new Adherent($db);
         $result = $adh->fetch('', '', $object->id);
@@ -581,7 +581,7 @@ if ($object->id > 0)
 
 	// Lien recap
 	$boxstat .= '<div class="box">';
-	$boxstat .= '<table summary="'.dol_escape_htmltag($langs->trans("DolibarrStateBoard")).'" class="border boxtable boxtablenobottom boxtablenotop" width="100%">';
+	$boxstat .= '<table summary="'.dol_escape_htmltag($langs->trans("DigitalProspectsStateBoard")).'" class="border boxtable boxtablenobottom boxtablenotop" width="100%">';
 	$boxstat .= '<tr class="impair nohover"><td colspan="2" class="tdboxstats nohover">';
 
 	if (!empty($conf->propal->enabled) && $user->rights->propal->lire)

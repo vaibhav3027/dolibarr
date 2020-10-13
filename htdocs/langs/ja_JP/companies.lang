@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=会社名%sはすでに存在しています。別のいずれかを選択します。
 ErrorSetACountryFirst=始めに国を設定する
 SelectThirdParty=サードパーティを選択します。
@@ -12,7 +12,7 @@ MenuNewSupplier=New Vendor
 MenuNewPrivateIndividual=新しい民間の個々の
 NewCompany=New company (prospect, customer, vendor)
 NewThirdParty=New Third Party (prospect, customer, vendor)
-CreateDolibarrThirdPartySupplier=Create a third party (vendor)
+CreateDigitalProspectsThirdPartySupplier=Create a third party (vendor)
 CreateThirdPartyOnly=Create third party
 CreateThirdPartyAndContact=Create a third party + a child contact
 ProspectionArea=Prospectionエリア
@@ -347,7 +347,7 @@ CapitalOf=%sの首都
 EditCompany=会社を編集します。
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=チェック
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=You can also check manually on the European Commission website <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=ステータス別の見通し
 NoParentCompany=なし
 ExportCardToFormat=形式にカードをエクスポートする
 ContactNotLinkedToCompany=第三者にリンクされて接触しない
-DolibarrLogin=Dolibarrログイン
-NoDolibarrAccess=いいえDolibarrアクセス​​できない
+DigitalProspectsLogin=DigitalProspectsログイン
+NoDigitalProspectsAccess=いいえDigitalProspectsアクセス​​できない
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

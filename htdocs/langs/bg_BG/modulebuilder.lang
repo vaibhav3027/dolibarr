@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - loan
+# DigitalProspects language file - Source file is en_US - loan
 ModuleBuilderDesc=Този инструмент трябва да се използва само от опитни потребители или разработчици. Той предоставя помощни средства за изграждане или редактиране на собствен модул. Документацията за алтернативна самостоятелна разработка е <a href="%s" target="_blank">тук</a>.
 EnterNameOfModuleDesc=Въведете име на модул / приложение за създаване, без интервали. Използвайте главни букви за отделяне на думи (Например: MyModule, EcommerceForShop, SyncWithMySystem ...).
 EnterNameOfObjectDesc=Въведете име на обект, който да създадете, без интервали. Използвайте главни букви за отделяне на думи (Например: MyObject, Student, Teacher ...). CRUD class файл, API файл, страници за листване / добавяне / променяне / изтриване на обект и SQL файлове ще бъдат генерирани.
@@ -25,7 +25,7 @@ EnterNameOfModuleToDeleteDesc=Може да изтриете модула си. 
 EnterNameOfObjectToDeleteDesc=Може да изтриете обект. ВНИМАНИЕ: Всички файлове с код (генерирани или създадени ръчно), свързани с обекта, ще бъдат изтрити!
 DangerZone=Опасна зона
 BuildPackage=Създаване на пакет
-BuildPackageDesc=Може да генерирате zip пакет, така че да сте готови да го разпространите към всеки Dolibarr. Може също така да го разпространите или да го продадете в онлайн магазина <a href="https://www.dolistore.com">DoliStore.com</a>.
+BuildPackageDesc=Може да генерирате zip пакет, така че да сте готови да го разпространите към всеки DigitalProspects. Може също така да го разпространите или да го продадете в онлайн магазина <a href="https://www.dolistore.com">DoliStore.com</a>.
 BuildDocumentation=Създаване на документация
 ModuleIsNotActive=This module is not activated yet. Go to %s to make it live or click here
 ModuleIsLive=Този модул е активиран. Всяка промяна може да прекъсне текуща функция.
@@ -100,8 +100,8 @@ HooksDefDesc=Определете в свойството <b>module_parts['hooks
 TriggerDefDesc=Дефинирайте във файла на тригера код, който искате да изпълните за всяко бизнес събитие.
 SeeIDsInUse=Вижте идентификаторите, които се използват във вашата инсталация.
 SeeReservedIDsRangeHere=Вижте обхвата от запазени идентификатори
-ToolkitForDevelopers=Инструментариум за разработчици на Dolibarr
-TryToUseTheModuleBuilder=Ако имате познания за SQL и PHP може да използвате съветника за създаване на Dolibarr модул.<br>Активирайте модула <strong>%s</strong> и използвайте съветника като кликнете върху <span class="fa fa-bug"></span> в десния край на горното меню.<br>ВНИМАНИЕ: Това е функция за опитни разработчици, <b>не</b> правете експеримент на вашата работна система!
+ToolkitForDevelopers=Инструментариум за разработчици на DigitalProspects
+TryToUseTheModuleBuilder=Ако имате познания за SQL и PHP може да използвате съветника за създаване на DigitalProspects модул.<br>Активирайте модула <strong>%s</strong> и използвайте съветника като кликнете върху <span class="fa fa-bug"></span> в десния край на горното меню.<br>ВНИМАНИЕ: Това е функция за опитни разработчици, <b>не</b> правете експеримент на вашата работна система!
 SeeTopRightMenu=Вижте <span class="fa fa-bug"></span> в десния край на горното меню
 AddLanguageFile=Добавяне на езиков файл
 YouCanUseTranslationKey=Може да използвате тук ключ, който е ключ за превод от езиков файл (вижте раздел 'Езици').

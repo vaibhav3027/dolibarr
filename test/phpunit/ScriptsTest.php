@@ -178,7 +178,7 @@ class ScriptsTest extends PHPUnit\Framework\TestCase
 		$db=$this->savdb;
 
 		/*
-		$script=dirname(__FILE__).'/../../scripts/company/sync_contacts_dolibarr_2ldap now';
+		$script=dirname(__FILE__).'/../../scripts/company/sync_contacts_DigitalProspects_2ldap now';
 		$result=exec($script, $output, $returnvar);
 
 		print __METHOD__." result=".$result."\n";

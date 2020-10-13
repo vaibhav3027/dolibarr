@@ -2285,7 +2285,7 @@ class Adherent extends CommonObject
 		$this->id = 0;
 		$this->specimen = 1;
 		$this->civility_id = 0;
-		$this->lastname = 'DOLIBARR';
+		$this->lastname = 'DigitalProspects';
 		$this->firstname = 'SPECIMEN';
 		$this->gender = 'man';
 		$this->login = 'dolibspec';
@@ -2424,7 +2424,7 @@ class Adherent extends CommonObject
 				// Just for the default MD5 !
 				if (empty($conf->global->MAIN_SECURITY_HASH_ALGO)) {
 					if ($this->pass_indatabase_crypted && !empty($conf->global->LDAP_MEMBER_FIELD_PASSWORD_CRYPTED)) {
-						// Create OpenLDAP MD5 password from Dolibarr MD5 password
+						// Create OpenLDAP MD5 password from DigitalProspects MD5 password
 						// Note: This suppose that "pass_indatabase_crypted" is a md5 (guaranted by the previous test if "(empty($conf->global->MAIN_SECURITY_HASH_ALGO))"
 						$info[$conf->global->LDAP_MEMBER_FIELD_PASSWORD_CRYPTED] = '{md5}'.base64_encode(hex2bin($this->pass_indatabase_crypted));
 					}
@@ -2701,7 +2701,7 @@ class Adherent extends CommonObject
 							$to = $adherent->email;
 
 							$trackid = 'mem'.$adherent->id;
-							$moreinheader = 'X-Dolibarr-Info: sendReminderForExpiredSubscription'."\r\n";
+							$moreinheader = 'X-DigitalProspects-Info: sendReminderForExpiredSubscription'."\r\n";
 
 							include_once DOL_DOCUMENT_ROOT.'/core/class/CMailFile.class.php';
 							$cmail = new CMailFile($subject, $to, $from, $msg, array(), array(), array(), '', '', 0, 1, '', '', $trackid, $moreinheader);

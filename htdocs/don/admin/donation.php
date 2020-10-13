@@ -87,7 +87,7 @@ if ($action == 'specimen')
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "DON_ADDON_MODEL", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "DON_ADDON_MODEL", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// The constant that was read before the new set
 		// So we go through a variable for a coherent display
@@ -113,7 +113,7 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->DON_ADDON_MODEL == "$value") dolibarr_del_const($db, 'DON_ADDON_MODEL', $conf->entity);
+        if ($conf->global->DON_ADDON_MODEL == "$value") DigitalProspects_del_const($db, 'DON_ADDON_MODEL', $conf->entity);
 	}
 }
 
@@ -122,7 +122,7 @@ if ($action == 'set_DONATION_ACCOUNTINGACCOUNT')
 {
 	$account = GETPOST('DONATION_ACCOUNTINGACCOUNT', 'alpha');
 
-    $res = dolibarr_set_const($db, "DONATION_ACCOUNTINGACCOUNT", $account, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "DONATION_ACCOUNTINGACCOUNT", $account, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -140,7 +140,7 @@ if ($action == 'set_DONATION_MESSAGE')
 {
 	$freemessage = GETPOST('DONATION_MESSAGE', 'none'); // No alpha here, we want exact string
 
-    $res = dolibarr_set_const($db, "DONATION_MESSAGE", $freemessage, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "DONATION_MESSAGE", $freemessage, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -160,7 +160,7 @@ if ($action == 'set_DONATION_MESSAGE')
 if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 {
     $code = $reg[1];
-    if (dolibarr_set_const($db, $code, 1, 'chaine', 0, '', $conf->entity) > 0)
+    if (DigitalProspects_set_const($db, $code, 1, 'chaine', 0, '', $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;
@@ -174,7 +174,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 if (preg_match('/del_([a-z0-9_\-]+)/i', $action, $reg))
 {
     $code = $reg[1];
-    if (dolibarr_del_const($db, $code, $conf->entity) > 0)
+    if (DigitalProspects_del_const($db, $code, $conf->entity) > 0)
     {
         header("Location: ".$_SERVER["PHP_SELF"]);
         exit;

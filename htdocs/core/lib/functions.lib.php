@@ -33,7 +33,7 @@
 
 /**
  *	\file			htdocs/core/lib/functions.lib.php
- *	\brief			A set of functions for Dolibarr
+ *	\brief			A set of functions for DigitalProspects
  *					This file contains all frequently used functions.
  */
 
@@ -639,7 +639,7 @@ function GETPOST($paramname, $check = 'alphanohtml', $method = 0, $filter = null
 if (!function_exists('dol_getprefix'))
 {
     /**
-     *  Return a prefix to use for this Dolibarr instance, for session/cookie names or email id.
+     *  Return a prefix to use for this DigitalProspects instance, for session/cookie names or email id.
      *  The prefix is unique for instance and avoid conflict between multi-instances, even when having two instances with same root dir
      *  or two instances in same virtual servers.
      *
@@ -712,7 +712,7 @@ function dol_include_once($relpath, $classname = '')
  *	Return path of url or filesystem. Can check into alternate dir or alternate dir + main dir depending on value of $returnemptyifnotfound.
  *
  * 	@param	string	$path						Relative path to file (if mode=0) or relative url (if mode=1). Ie: mydir/myfile, ../myfile
- *  @param	int		$type						0=Used for a Filesystem path, 1=Used for an URL path (output relative), 2=Used for an URL path (output full path using same host that current url), 3=Used for an URL path (output full path using host defined into $dolibarr_main_url_root of conf file)
+ *  @param	int		$type						0=Used for a Filesystem path, 1=Used for an URL path (output relative), 2=Used for an URL path (output full path using same host that current url), 3=Used for an URL path (output full path using host defined into $DigitalProspects_main_url_root of conf file)
  *  @param	int		$returnemptyifnotfound		0:If $type==0 and if file was not found into alternate dir, return default path into main dir (no test on it)
  *  											1:If $type==0 and if file was not found into alternate dir, return empty string
  *  											2:If $type==0 and if file was not found into alternate dir, test into main dir, return default path if found, empty string if not found
@@ -764,10 +764,10 @@ function dol_buildpath($path, $type = 0, $returnemptyifnotfound = 0)
 			{
 				if ($type == 3)
 				{
-					global $dolibarr_main_url_root;
+					global $DigitalProspects_main_url_root;
 
 					// Define $urlwithroot
-					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 					$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 					//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -791,10 +791,10 @@ function dol_buildpath($path, $type = 0, $returnemptyifnotfound = 0)
 					}
 					if ($type == 3)
 					{
-						global $dolibarr_main_url_root;
+						global $DigitalProspects_main_url_root;
 
 						// Define $urlwithroot
-						$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+						$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 						$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 						//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -1063,7 +1063,7 @@ function dol_strtoupper($utf8_string)
  *
  * 	@param  string		$message				Line to log. ''=Show nothing
  *  @param  int			$level					Log level
- *												On Windows LOG_ERR=4, LOG_WARNING=5, LOG_NOTICE=LOG_INFO=6, LOG_DEBUG=6 si define_syslog_variables ou PHP 5.3+, 7 si dolibarr
+ *												On Windows LOG_ERR=4, LOG_WARNING=5, LOG_NOTICE=LOG_INFO=6, LOG_DEBUG=6 si define_syslog_variables ou PHP 5.3+, 7 si DigitalProspects
  *												On Linux   LOG_ERR=3, LOG_WARNING=4, LOG_INFO=6, LOG_DEBUG=7
  *  @param	int			$ident					1=Increase ident of 1, -1=Decrease ident of 1
  *  @param	string		$suffixinfilename		When output is a file, append this suffix into default log filename.
@@ -1079,7 +1079,7 @@ function dol_syslog($message, $level = LOG_INFO, $ident = 0, $suffixinfilename =
 	if (empty($conf->syslog->enabled)) return;
 
 	// Check if we are into execution of code of a website
-	if (defined('USEEXTERNALSERVER') && ! defined('USEDOLIBARRSERVER') && ! defined('USEDOLIBARREDITOR')) {
+	if (defined('USEEXTERNALSERVER') && ! defined('USEDigitalProspectsSERVER') && ! defined('USEDigitalProspectsEDITOR')) {
 		global $website, $websitekey;
 		if (is_object($website) && ! empty($website->ref)) $suffixinfilename.='_website_'.$website->ref;
 		elseif (! empty($websitekey)) $suffixinfilename.='_website_'.$websitekey;
@@ -2947,7 +2947,7 @@ function isValidEmail($address, $acceptsupervisorkey = 0)
  *	Return if the domain name has a valid MX record.
  *  WARNING: This need function idn_to_ascii, checkdnsrr and getmxrr
  *
- *	@param	    string		$domain	    			Domain name (Ex: "yahoo.com", "yhaoo.com", "dolibarr.fr")
+ *	@param	    string		$domain	    			Domain name (Ex: "yahoo.com", "yhaoo.com", "DigitalProspects.fr")
  *	@return     int     							-1 if error (function not available), 0=Not valid, 1=Valid
  */
 function isValidMXRecord($domain)
@@ -3939,7 +3939,7 @@ function info_admin($text, $infoonimgalt = 0, $nodiv = 0, $admin = '1', $morecss
 function dol_print_error($db = '', $error = '', $errors = null)
 {
 	global $conf, $langs, $argv;
-	global $dolibarr_main_prod;
+	global $DigitalProspects_main_prod;
 
 	$out = '';
 	$syslog = '';
@@ -3956,12 +3956,12 @@ function dol_print_error($db = '', $error = '', $errors = null)
 
 	if ($_SERVER['DOCUMENT_ROOT'])    // Mode web
 	{
-		$out .= $langs->trans("DolibarrHasDetectedError").".<br>\n";
+		$out .= $langs->trans("DigitalProspectsHasDetectedError").".<br>\n";
 		if (!empty($conf->global->MAIN_FEATURES_LEVEL)) $out .= "You use an experimental or develop level of features, so please do NOT report any bugs, except if problem is confirmed moving option MAIN_FEATURES_LEVEL back to 0.<br>\n";
 		$out .= $langs->trans("InformationToHelpDiagnose").":<br>\n";
 
 		$out .= "<b>".$langs->trans("Date").":</b> ".dol_print_date(time(), 'dayhourlog')."<br>\n";
-		$out .= "<b>".$langs->trans("Dolibarr").":</b> ".DOL_VERSION." - https://www.dolibarr.org<br>\n";
+		$out .= "<b>".$langs->trans("DigitalProspects").":</b> ".DOL_VERSION." - https://www.DigitalProspects.org<br>\n";
 		if (isset($conf->global->MAIN_FEATURES_LEVEL)) $out .= "<b>".$langs->trans("LevelOfFeature").":</b> ".$conf->global->MAIN_FEATURES_LEVEL."<br>\n";
 		if (function_exists("phpversion"))
 		{
@@ -4038,7 +4038,7 @@ function dol_print_error($db = '', $error = '', $errors = null)
 			$syslog .= ", msg=".$msg;
 		}
 	}
-	if (empty($dolibarr_main_prod) && $_SERVER['DOCUMENT_ROOT'] && function_exists('xdebug_print_function_stack') && function_exists('xdebug_call_file'))
+	if (empty($DigitalProspects_main_prod) && $_SERVER['DOCUMENT_ROOT'] && function_exists('xdebug_print_function_stack') && function_exists('xdebug_call_file'))
 	{
 		xdebug_print_function_stack();
 		$out .= '<b>XDebug informations:</b>'."<br>\n";
@@ -4048,16 +4048,16 @@ function dol_print_error($db = '', $error = '', $errors = null)
 		$out .= "<br>\n";
 	}
 
-	if (empty($dolibarr_main_prod)) print $out;
+	if (empty($DigitalProspects_main_prod)) print $out;
 	else	// This should not happen, except if there is a bug somewhere. Enabled and check log in such case.
 	{
 		print 'This website or feature is currently temporarly not available or failed after a technical error.<br><br>This may be due to a maintenance operation. Current status of operation are on next line...<br><br>'."\n";
 		$langs->load("errors");
-		print $langs->trans("DolibarrHasDetectedError").'. ';
-		print $langs->trans("YouCanSetOptionDolibarrMainProdToZero");
+		print $langs->trans("DigitalProspectsHasDetectedError").'. ';
+		print $langs->trans("YouCanSetOptionDigitalProspectsMainProdToZero");
 		define("MAIN_CORE_ERROR", 1);
 	}
-	//else print 'Sorry, an error occured but the parameter $dolibarr_main_prod is defined in conf file so no message is reported to your browser. Please read the log file for error message.';
+	//else print 'Sorry, an error occured but the parameter $DigitalProspects_main_prod is defined in conf file so no message is reported to your browser. Please read the log file for error message.';
 	dol_syslog("Error ".$syslog, LOG_ERR);
 }
 
@@ -4724,8 +4724,8 @@ function price2num($amount, $rounding = '', $alreadysqlnb = 0)
 	{
 		//print 'PP'.$amount.' - '.$dec.' - '.$thousand.' - '.intval($amount).'<br>';
 
-		// Convert amount to format with dolibarr dec and thousand (this is because PHP convert a number
-		// to format defined by LC_NUMERIC after a calculation and we want source format to be like defined by Dolibarr setup.
+		// Convert amount to format with DigitalProspects dec and thousand (this is because PHP convert a number
+		// to format defined by LC_NUMERIC after a calculation and we want source format to be like defined by DigitalProspects setup.
 		if (is_numeric($amount))
 		{
 			// We put in temps value of decimal ("0.00001"). Works with 0 and 2.0E-5 and 9999.10
@@ -4757,15 +4757,15 @@ function price2num($amount, $rounding = '', $alreadysqlnb = 0)
 		else return 'ErrorBadParameterProvidedToFunction';
 		//print 'SS'.$amount.' - '.$nbofdec.' - '.$dec.' - '.$thousand.' - '.$nbofdectoround.'<br>';
 
-		// Convert amount to format with dolibarr dec and thousand (this is because PHP convert a number
-		// to format defined by LC_NUMERIC after a calculation and we want source format to be defined by Dolibarr setup.
+		// Convert amount to format with DigitalProspects dec and thousand (this is because PHP convert a number
+		// to format defined by LC_NUMERIC after a calculation and we want source format to be defined by DigitalProspects setup.
 		if (is_numeric($amount))
 		{
 			// We put in temps value of decimal ("0.00001"). Works with 0 and 2.0E-5 and 9999.10
 			$temps = sprintf("%0.10F", $amount - intval($amount)); // temps=0.0000000000 or 0.0000200000 or 9999.1000000000
 			$temps = preg_replace('/([\.1-9])0+$/', '\\1', $temps); // temps=0. or 0.00002 or 9999.1
 			$nbofdec = max(0, dol_strlen($temps) - 2); // -2 to remove "0."
-			$amount = number_format($amount, min($nbofdec, $nbofdectoround), $dec, $thousand); // Convert amount to format with dolibarr dec and thousand
+			$amount = number_format($amount, min($nbofdec, $nbofdectoround), $dec, $thousand); // Convert amount to format with DigitalProspects dec and thousand
 		}
 		//print "TT".$amount.'<br>';
 
@@ -7707,7 +7707,7 @@ function printCommonFooter($zone = 'private')
 								// Add property 'required' on input
 								print 'jQuery("input[name=\''.$paramkey.'\']").prop(\'required\',true);'."\n";
 								print 'jQuery("textarea[name=\''.$paramkey.'\']").prop(\'required\',true);'."\n";
-								print 'jQuery("select[name=\''.$paramkey.'\']").prop(\'required\',true);'."\n"; // required on a select works only if key is "", this does not happen in Dolibarr
+								print 'jQuery("select[name=\''.$paramkey.'\']").prop(\'required\',true);'."\n"; // required on a select works only if key is "", this does not happen in DigitalProspects
 							}
 						}
 					}

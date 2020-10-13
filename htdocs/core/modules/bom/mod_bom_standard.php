@@ -30,10 +30,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/bom/modules_bom.php';
 class mod_bom_standard extends ModeleNumRefboms
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'BOM';
 

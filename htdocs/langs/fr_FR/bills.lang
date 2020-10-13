@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Facture
 Bills=Factures
 BillsCustomers=Factures clients
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Définir la date de début
 AutoFillDateTo=Définir la date de fin de la ligne de service avec la date de la prochaine facture
 AutoFillDateToShort=Définir la date de fin
 MaxNumberOfGenerationReached=Nb maximum de gén. atteint
-BILL_DELETEInDolibarr=Facture supprimée
-BILL_SUPPLIER_DELETEInDolibarr=Facture fournisseur supprimée
+BILL_DELETEInDigitalProspects=Facture supprimée
+BILL_SUPPLIER_DELETEInDigitalProspects=Facture fournisseur supprimée
 UnitPriceXQtyLessDiscount=Prix unitaire x Qté - Remise
 CustomersInvoicesArea=Zone de facturation client
 SupplierInvoicesArea=Zone de facturation fournisseur

@@ -51,17 +51,17 @@ include DOL_DOCUMENT_ROOT.'/core/actions_setmoduleoptions.inc.php';
 if ($action == 'setvalue' && $user->admin) {
 	$db->begin();
 	$sub = "DATAPOLICIESSUBJECT_".$l;
-	$result = dolibarr_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
 	$cont = "DATAPOLICIESCONTENT_".$l;
-	$result = dolibarr_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
 	$cont = "TXTLINKDATAPOLICIESACCEPT_".$l;
-	$result = dolibarr_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
 	$cont = "TXTLINKDATAPOLICIESREFUSE_".$l;
-	$result = dolibarr_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $cont, GETPOST($cont), 'chaine', 0, '', $conf->entity);
 	$sub = "DATAPOLICIESACCEPT_".$l;
-	$result = dolibarr_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
 	$sub = "DATAPOLICIESREFUSE_".$l;
-	$result = dolibarr_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
+	$result = DigitalProspects_set_const($db, $sub, GETPOST($sub), 'chaine', 0, '', $conf->entity);
 	if (!$result > 0)
 		$error++;
 	if (!$error) {

@@ -78,7 +78,7 @@ $(document).ready(function () {
 <!-- Title with version -->
 <div class="login_table_title center" title="<?php echo dol_escape_htmltag($title); ?>">
 <?php
-if ($disablenofollow) echo '<a class="login_table_title" href="https://www.dolibarr.org" target="_blank">';
+if ($disablenofollow) echo '<a class="login_table_title" href="https://www.DigitalProspects.org" target="_blank">';
 echo dol_escape_htmltag($title);
 if ($disablenofollow) echo '</a>';
 ?>
@@ -186,7 +186,7 @@ if (!empty($morelogincontent)) {
 
 
 <div class="center login_main_home divpasswordmessagedesc paddingtopbottom<?php echo empty($conf->global->MAIN_LOGIN_BACKGROUND) ? '' : ' backgroundsemitransparent'; ?>" style="max-width: 70%">
-<?php if ($mode == 'dolibarr' || !$disabled) { ?>
+<?php if ($mode == 'DigitalProspects' || !$disabled) { ?>
 	<span class="passwordmessagedesc">
 	<?php echo $langs->trans('SendNewPasswordDesc'); ?>
 	</span>

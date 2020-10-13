@@ -32,10 +32,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/propale/modules_propale.php';
 class mod_propale_marbre extends ModeleNumRefPropales
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'PR';
 

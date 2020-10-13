@@ -99,7 +99,7 @@ class printing_printipp extends PrintingDriver
         include_once DOL_DOCUMENT_ROOT.'/includes/printipp/CupsPrintIPP.php';
 
         $ipp = new CupsPrintIPP();
-        $ipp->setLog(DOL_DATA_ROOT.'/dolibarr_printipp.log', 'file', 3); // logging very verbose
+        $ipp->setLog(DOL_DATA_ROOT.'/DigitalProspects_printipp.log', 'file', 3); // logging very verbose
         $ipp->setHost($this->host);
         $ipp->setPort($this->port);
         $ipp->setJobName($file, true);
@@ -213,7 +213,7 @@ class printing_printipp extends PrintingDriver
         global $conf, $db;
         include_once DOL_DOCUMENT_ROOT.'/includes/printipp/CupsPrintIPP.php';
         $ipp = new CupsPrintIPP();
-        $ipp->setLog(DOL_DATA_ROOT.'/dolibarr_printipp.log', 'file', 3); // logging very verbose
+        $ipp->setLog(DOL_DATA_ROOT.'/DigitalProspects_printipp.log', 'file', 3); // logging very verbose
         $ipp->setHost($this->host);
         $ipp->setPort($this->port);
         $ipp->setUserName($this->userid);
@@ -236,7 +236,7 @@ class printing_printipp extends PrintingDriver
 
         include_once DOL_DOCUMENT_ROOT.'/includes/printipp/CupsPrintIPP.php';
         $ipp = new CupsPrintIPP();
-        $ipp->setLog(DOL_DATA_ROOT.'/dolibarr_printipp.log', 'file', 3); // logging very verbose
+        $ipp->setLog(DOL_DATA_ROOT.'/DigitalProspects_printipp.log', 'file', 3); // logging very verbose
         $ipp->setHost($this->host);
         $ipp->setPort($this->port);
         $ipp->setUserName($this->userid);
@@ -262,7 +262,7 @@ class printing_printipp extends PrintingDriver
         $html = '';
         include_once DOL_DOCUMENT_ROOT.'/includes/printipp/CupsPrintIPP.php';
         $ipp = new CupsPrintIPP();
-        $ipp->setLog(DOL_DATA_ROOT.'/dolibarr_printipp.log', 'file', 3); // logging very verbose
+        $ipp->setLog(DOL_DATA_ROOT.'/DigitalProspects_printipp.log', 'file', 3); // logging very verbose
         $ipp->setHost($this->host);
         $ipp->setPort($this->port);
         $ipp->setUserName($this->userid);

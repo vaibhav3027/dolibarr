@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Ingen anmodning ved fejl
 ErrorServiceUnavailableTryLater=Tjenesten er ikke tilgængelig i øjeblikket. Prøv igen senere.
 ErrorDuplicateField=Dobbelt værdi i et unikt område
 ErrorSomeErrorWereFoundRollbackIsDone=Nogle fejl blev fundet. Ændringer er blevet rullet tilbage.
-ErrorConfigParameterNotDefined=Parameter <b> %s </b> er ikke defineret i Dolibarr konfigurationsfilen <b> conf.php </b>.
-ErrorCantLoadUserFromDolibarrDatabase=Kunne ikke finde <b>bruger %s</b> i Dolibarr database.
+ErrorConfigParameterNotDefined=Parameter <b> %s </b> er ikke defineret i DigitalProspects konfigurationsfilen <b> conf.php </b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Kunne ikke finde <b>bruger %s</b> i DigitalProspects database.
 ErrorNoVATRateDefinedForSellerCountry=Fejl, der ikke momssatser defineret for land ' %s'.
 ErrorNoSocialContributionForSellerCountry=Fejl, ingen type af skatter/afgifter defineret for landet '%s'.
 ErrorFailedToSaveFile=Fejl, kunne ikke gemme filen.
@@ -90,7 +90,7 @@ RecordDeleted=Post slettet
 RecordGenerated=Data genereret
 LevelOfFeature=Niveau funktionsliste
 NotDefined=Ikke defineret
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode er sat til <b>%s</b> i konfigurationsfilen <b>conf.php</b>.<br>Dette betyder, at adgangskoden databasen er ekstern i forhold til Dolibarr, så ændrer dette felt har ingen effekt.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode er sat til <b>%s</b> i konfigurationsfilen <b>conf.php</b>.<br>Dette betyder, at adgangskoden databasen er ekstern i forhold til DigitalProspects, så ændrer dette felt har ingen effekt.
 Administrator=Administrator
 Undefined=Undefineret
 PasswordForgotten=Har du glemt dit kodeord ?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Database type opsætning
 RequestLastAccessInError=Seneste database adgang forspørelses fejl
 ReturnCodeLastAccessInError=Retur kode for seneste fejl i database forspørgelse
 InformationLastAccessInError=Information efter seneste database adgang anmodning fejl
-DolibarrHasDetectedError=Dolibarr har opdaget en teknisk fejl
-YouCanSetOptionDolibarrMainProdToZero=Du kan læse logfil eller sæt indstillingen $ dolibarr_main_prod til '0' i din config-fil for at få flere oplysninger.
-InformationToHelpDiagnose=Denne information kan være nyttig til diagnostiske formål (du kan indstille mulighed $dolibarr_main_prod til " 1 " for at fjerne sådanne oplysninger)
+DigitalProspectsHasDetectedError=DigitalProspects har opdaget en teknisk fejl
+YouCanSetOptionDigitalProspectsMainProdToZero=Du kan læse logfil eller sæt indstillingen $ DigitalProspects_main_prod til '0' i din config-fil for at få flere oplysninger.
+InformationToHelpDiagnose=Denne information kan være nyttig til diagnostiske formål (du kan indstille mulighed $DigitalProspects_main_prod til " 1 " for at fjerne sådanne oplysninger)
 MoreInformation=Mere information
 TechnicalInformation=Tekniske oplysninger
 TechnicalID=Teknisk id
 LineID=Linje ID
 NotePublic=Note (offentlige)
 NotePrivate=Note (privat)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr blev setup at begrænse præcision på enhedspriser <b>til %s</b> decimaler.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects blev setup at begrænse præcision på enhedspriser <b>til %s</b> decimaler.
 DoTest=Test
 ToFilter=Filter
 NoFilter=Intet filter
@@ -475,8 +475,8 @@ Generate=Generer
 Duration=Varighed
 TotalDuration=Varighed i alt
 Summary=Resumé
-DolibarrStateBoard=Database Statistik
-DolibarrWorkBoard=Åbn genstande
+DigitalProspectsStateBoard=Database Statistik
+DigitalProspectsWorkBoard=Åbn genstande
 NoOpenedElementToProcess=Intet åbent element til behandling
 Available=Tilgængelig
 NotYetAvailable=Ikke tilgængelig endnu 
@@ -703,7 +703,7 @@ MenuECM=Dokumenter
 MenuAWStats=AWStats
 MenuMembers=Medlemmer
 MenuAgendaGoogle=Google dagsorden
-ThisLimitIsDefinedInSetup=Dolibarr grænse (Menu hjemme-setup-sikkerhed): %s Kb, PHP grænse: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects grænse (Menu hjemme-setup-sikkerhed): %s Kb, PHP grænse: %s Kb
 NoFileFound=Ingen dokumenter gemt i denne mappe
 CurrentUserLanguage=Valgt sprog
 CurrentTheme=Nuværende tema
@@ -736,7 +736,7 @@ PrintContentArea=Vis side for at udskrive hovedindhold område
 MenuManager=Menuhåndtering
 WarningYouAreInMaintenanceMode=Advarsel, du er i vedligeholdelsestilstand: kun login <b> %s </b> har tilladelse til at bruge applikationen i denne tilstand.
 CoreErrorTitle=Systemfejl
-CoreErrorMessage=Beklager, der opstod en fejl. Kontakt systemadministratoren for at kontrollere logfilerne eller deaktivere $dolibarr_main_prod=1 for at få flere oplysninger.
+CoreErrorMessage=Beklager, der opstod en fejl. Kontakt systemadministratoren for at kontrollere logfilerne eller deaktivere $DigitalProspects_main_prod=1 for at få flere oplysninger.
 CreditCard=Kreditkort
 ValidatePayment=Godkend betaling
 CreditOrDebitCard=Kredit- eller betalingskort
@@ -875,7 +875,7 @@ Calendar=Kalender
 GroupBy=Gruppér efter
 ViewFlatList=Se flad liste
 RemoveString=Fjern streng '%s'
-SomeTranslationAreUncomplete=Nogle af de sprog, der tilbydes, kan kun oversættes eller måske indeholde fejl. Hjælp venligst med at korrigere dit sprog ved at registrere dig på <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a> at tilføje dine forbedringer.
+SomeTranslationAreUncomplete=Nogle af de sprog, der tilbydes, kan kun oversættes eller måske indeholde fejl. Hjælp venligst med at korrigere dit sprog ved at registrere dig på <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a> at tilføje dine forbedringer.
 DirectDownloadLink=Direkte download link (offentlig/ekstern)
 DirectDownloadInternalLink=Direkte download link (skal logges og har brug for tilladelser)
 Download=Hent

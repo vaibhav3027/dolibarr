@@ -2205,8 +2205,8 @@ class Facture extends CommonInvoice
 						$mouvP = new MouvementStock($this->db);
 						$mouvP->origin = &$this;
 						// We decrease stock for product
-						if ($this->type == self::TYPE_CREDIT_NOTE) $result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceDeleteDolibarr", $this->ref));
-						else $result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceDeleteDolibarr", $this->ref)); // we use 0 for price, to not change the weighted average value
+						if ($this->type == self::TYPE_CREDIT_NOTE) $result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceDeleteDigitalProspects", $this->ref));
+						else $result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceDeleteDigitalProspects", $this->ref)); // we use 0 for price, to not change the weighted average value
 					}
 				}
 			}
@@ -2632,7 +2632,7 @@ class Facture extends CommonInvoice
 							$mouvP->origin = &$this;
 							// We decrease stock for product
 							if ($this->type == self::TYPE_CREDIT_NOTE) {
-								$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceValidatedInDolibarr", $num));
+								$result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceValidatedInDigitalProspects", $num));
 								if ($result < 0) {
 									$error++;
 									$this->error = $mouvP->error;
@@ -2679,7 +2679,7 @@ class Facture extends CommonInvoice
 												else {
 													$product_batch_qty = $batch->qty;
 												}
-												$result = $mouvP->livraison($user, $productStatic->id, $idwarehouse, $product_batch_qty, $this->lines[$i]->subprice, $langs->trans('InvoiceValidatedInDolibarr', $num), '', '', '', $batch->batch);
+												$result = $mouvP->livraison($user, $productStatic->id, $idwarehouse, $product_batch_qty, $this->lines[$i]->subprice, $langs->trans('InvoiceValidatedInDigitalProspects', $num), '', '', '', $batch->batch);
 												if ($result < 0) {
 													$error++;
 													$this->error = $mouvP->error;
@@ -2695,7 +2695,7 @@ class Facture extends CommonInvoice
 												if ($conf->global->STOCK_ALLOW_NEGATIVE_TRANSFER) {
 													// take in the first batch
 													$batch = $batchList[0];
-													$result = $mouvP->livraison($user, $productStatic->id, $idwarehouse, $product_qty_remain, $this->lines[$i]->subprice, $langs->trans('InvoiceValidatedInDolibarr', $num), '', '', '', $batch->batch);
+													$result = $mouvP->livraison($user, $productStatic->id, $idwarehouse, $product_qty_remain, $this->lines[$i]->subprice, $langs->trans('InvoiceValidatedInDigitalProspects', $num), '', '', '', $batch->batch);
 													if ($result < 0) {
 														$error++;
 														$this->error = $mouvP->error;
@@ -2713,7 +2713,7 @@ class Facture extends CommonInvoice
 								}
 
 								if (!$is_batch_line) {
-									$result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceValidatedInDolibarr", $num));
+									$result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceValidatedInDigitalProspects", $num));
 									if ($result < 0) {
 										$error++;
 										$this->error = $mouvP->error;
@@ -2916,8 +2916,8 @@ class Facture extends CommonInvoice
 						$mouvP = new MouvementStock($this->db);
 						$mouvP->origin = &$this;
 						// We decrease stock for product
-						if ($this->type == self::TYPE_CREDIT_NOTE) $result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceBackToDraftInDolibarr", $this->ref));
-						else $result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceBackToDraftInDolibarr", $this->ref)); // we use 0 for price, to not change the weighted average value
+						if ($this->type == self::TYPE_CREDIT_NOTE) $result = $mouvP->livraison($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, $this->lines[$i]->subprice, $langs->trans("InvoiceBackToDraftInDigitalProspects", $this->ref));
+						else $result = $mouvP->reception($user, $this->lines[$i]->fk_product, $idwarehouse, $this->lines[$i]->qty, 0, $langs->trans("InvoiceBackToDraftInDigitalProspects", $this->ref)); // we use 0 for price, to not change the weighted average value
 					}
 				}
 			}

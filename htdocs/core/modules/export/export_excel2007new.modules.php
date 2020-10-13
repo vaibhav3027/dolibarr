@@ -46,10 +46,10 @@ class ExportExcel2007new extends ModeleExports
 	public $extension;
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $label_lib;
 
@@ -214,7 +214,7 @@ class ExportExcel2007new extends ModeleExports
         //$this->workbook = new PHPExcel();
         $this->workbook = new Spreadsheet();
         $this->workbook->getProperties()->setCreator($user->getFullName($outputlangs).' - '.DOL_APPLICATION_TITLE.' '.DOL_VERSION);
-        //$this->workbook->getProperties()->setLastModifiedBy('Dolibarr '.DOL_VERSION);
+        //$this->workbook->getProperties()->setLastModifiedBy('DigitalProspects '.DOL_VERSION);
         $this->workbook->getProperties()->setTitle(basename($file));
         $this->workbook->getProperties()->setSubject(basename($file));
         $this->workbook->getProperties()->setDescription(DOL_APPLICATION_TITLE.' '.DOL_VERSION);
@@ -418,7 +418,7 @@ class ExportExcel2007new extends ModeleExports
     public function excel_clean($newvalue)
     {
         // phpcs:enable
-		// Rule Dolibarr: No HTML
+		// Rule DigitalProspects: No HTML
     	$newvalue = dol_string_nohtmltag($newvalue);
 
     	return $newvalue;

@@ -1547,7 +1547,7 @@ class ActionComm extends CommonObject
         global $hookmanager;
 
         // phpcs:enable
-        global $conf, $langs, $dolibarr_main_url_root, $mysoc;
+        global $conf, $langs, $DigitalProspects_main_url_root, $mysoc;
 
         require_once DOL_DOCUMENT_ROOT."/core/lib/xcal.lib.php";
         require_once DOL_DOCUMENT_ROOT."/core/lib/date.lib.php";
@@ -1684,7 +1684,7 @@ class ActionComm extends CommonObject
 
                     // 'eid','startdate','duration','enddate','title','summary','category','email','url','desc','author'
                     $event = array();
-                    $event['uid'] = 'dolibarragenda-'.$this->db->database_name.'-'.$obj->id."@".$_SERVER["SERVER_NAME"];
+                    $event['uid'] = 'DigitalProspectsagenda-'.$this->db->database_name.'-'.$obj->id."@".$_SERVER["SERVER_NAME"];
                     $event['type'] = $type;
                     $datestart = $this->db->jdate($obj->datep) - (empty($conf->global->AGENDA_EXPORT_FIX_TZ) ? 0 : ($conf->global->AGENDA_EXPORT_FIX_TZ * 3600));
 
@@ -1714,7 +1714,7 @@ class ActionComm extends CommonObject
                     $event['category'] = $obj->type_label;
                     $event['email'] = $obj->email;
 					// Define $urlwithroot
-					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+					$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 					$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 					//$urlwithroot=DOL_MAIN_URL_ROOT;						// This is to use same domain name than current
                     $url = $urlwithroot.'/comm/action/card.php?id='.$obj->id;
@@ -1808,11 +1808,11 @@ class ActionComm extends CommonObject
                             $timestampEnd   = - ($conf->global->AGENDA_EXPORT_FIX_TZ * 3600);
                         }
 
-                        $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+                        $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
                         $urlwithroot       = $urlwithouturlroot.DOL_URL_ROOT;
                         $url               = $urlwithroot.'/holiday/card.php?id='.$obj->rowid;
 
-                        $event['uid']          = 'dolibarrholiday-'.$this->db->database_name.'-'.$obj->rowid."@".$_SERVER["SERVER_NAME"];
+                        $event['uid']          = 'DigitalProspectsholiday-'.$this->db->database_name.'-'.$obj->rowid."@".$_SERVER["SERVER_NAME"];
                         $event['author']       = dolGetFirstLastname($obj->firstname, $obj->lastname);
                         $event['type']         = 'event';
                         $event['category']     = "Holiday";
@@ -1853,15 +1853,15 @@ class ActionComm extends CommonObject
             if ($logind) $more = $langs->transnoentities("ActionsDoneBy").' '.$logind;
             if ($more)
             {
-                $title = 'Dolibarr actions '.$mysoc->name.' - '.$more;
+                $title = 'DigitalProspects actions '.$mysoc->name.' - '.$more;
                 $desc = $more;
-                $desc .= ' ('.$mysoc->name.' - built by Dolibarr)';
+                $desc .= ' ('.$mysoc->name.' - built by DigitalProspects)';
             }
             else
             {
-                $title = 'Dolibarr actions '.$mysoc->name;
+                $title = 'DigitalProspects actions '.$mysoc->name;
                 $desc = $langs->transnoentities('ListOfActions');
-                $desc .= ' ('.$mysoc->name.' - built by Dolibarr)';
+                $desc .= ' ('.$mysoc->name.' - built by DigitalProspects)';
             }
 
             // Create temp file

@@ -41,7 +41,7 @@ $cfg['PmaNoRelation_DisableWarning']  = TRUE;
  * passphrase that will be used by blowfish. The maximum length seems to be 46
  * characters.
  */
-$cfg['blowfish_secret'] = 'dolibarrblowfishkey';
+$cfg['blowfish_secret'] = 'DigitalProspectsblowfishkey';
 
 /**
  * Server(s) configuration

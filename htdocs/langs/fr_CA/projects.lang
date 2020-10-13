@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 ProjectRef=Projet ref.
 ProjectId=Id de projet
 ProjectLabel=Étiquette du projet
@@ -74,7 +74,7 @@ CloneMoveDate=Mettre à jour les dates de projets / tâches à partir de mainten
 ConfirmCloneProject=Êtes-vous sûr de cloner ce projet?
 ProjectReportDate=Modifier les dates des tâches en fonction de la nouvelle date de début du projet
 ErrorShiftTaskDate=Impossible de modifier la date de la tâche selon la nouvelle date de début du projet
-TaskDeletedInDolibarr=Tâche %s supprimé
+TaskDeletedInDigitalProspects=Tâche %s supprimé
 WonLostExcluded=Won / Lost excluded
 TypeContact_project_internal_PROJECTCONTRIBUTOR=Donateur
 TypeContact_project_external_PROJECTCONTRIBUTOR=Donateur

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Projekt-Nr.
 ProjectRef=Projekt-Nr.
 ProjectId=Projekt-ID
@@ -150,12 +150,12 @@ ConfirmCloneProject=Möchten Sie dieses Projekt wirklich duplizieren?
 ProjectReportDate=Passe Aufgaben-Datum dem neuen Projekt-Startdatum an
 ErrorShiftTaskDate=Es ist nicht möglich, das Aufgabendatum dem neuen Projektdatum anzupassen
 ProjectsAndTasksLines=Projekte und Aufgaben
-ProjectCreatedInDolibarr=Projekt %s erstellt
-ProjectValidatedInDolibarr=Projekt %s validiert
-ProjectModifiedInDolibarr=Projekt %s geändert
-TaskCreatedInDolibarr=Aufgabe %s erstellt
-TaskModifiedInDolibarr=Aufgabe %s geändert
-TaskDeletedInDolibarr=Aufgabe %s gelöscht
+ProjectCreatedInDigitalProspects=Projekt %s erstellt
+ProjectValidatedInDigitalProspects=Projekt %s validiert
+ProjectModifiedInDigitalProspects=Projekt %s geändert
+TaskCreatedInDigitalProspects=Aufgabe %s erstellt
+TaskModifiedInDigitalProspects=Aufgabe %s geändert
+TaskDeletedInDigitalProspects=Aufgabe %s gelöscht
 OpportunityStatus=Status / Chancen Lead
 OpportunityStatusShort=Status / Chancen Lead
 OpportunityProbability=Wahrscheinlichkeit Kundeninteresse

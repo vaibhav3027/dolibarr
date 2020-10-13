@@ -18,7 +18,7 @@
  */
 
 /**
- * 	\defgroup   api     Module DolibarrApi
+ * 	\defgroup   api     Module DigitalProspectsApi
  *  \brief      API loader
  *				Search files htdocs/<module>/class/api_<module>.class.php
  *  \file       htdocs/api/index.php
@@ -70,7 +70,7 @@ if (!empty($conf->global->MAIN_NGINX_FIX))
 if (empty($conf->global->MAIN_MODULE_API))
 {
     $langs->load("admin");
-    dol_syslog("Call Dolibarr API interfaces with module REST disabled");
+    dol_syslog("Call DigitalProspects API interfaces with module REST disabled");
     print $langs->trans("WarningModuleNotActive", 'Api').'.<br><br>';
     print $langs->trans("ToActivateModule");
     //session_destroy();
@@ -81,7 +81,7 @@ if (empty($conf->global->MAIN_MODULE_API))
 if (preg_match('/api\/index\.php\/explorer/', $url) && !empty($conf->global->API_EXPLORER_DISABLED))
 {
     $langs->load("admin");
-    dol_syslog("Call Dolibarr API interfaces with module REST disabled");
+    dol_syslog("Call DigitalProspects API interfaces with module REST disabled");
     print $langs->trans("WarningAPIExplorerDisabled").'.<br><br>';
     //session_destroy();
     exit(0);
@@ -117,7 +117,7 @@ if (!empty($reg[1]) && $reg[1] == 'explorer' && ($reg[2] == '/swagger.json' || $
     $refreshcache = true;
 }
 
-$api = new DolibarrApi($db, '', $refreshcache);
+$api = new DigitalProspectsApi($db, '', $refreshcache);
 //var_dump($api->r->apiVersionMap);
 
 // Enable the Restler API Explorer.
@@ -125,7 +125,7 @@ $api = new DolibarrApi($db, '', $refreshcache);
 $api->r->addAPIClass('Luracast\\Restler\\Explorer');
 
 $api->r->setSupportedFormats('JsonFormat', 'XmlFormat', 'UploadFormat'); // 'YamlFormat'
-$api->r->addAuthenticationClass('DolibarrApiAccess', '');
+$api->r->addAuthenticationClass('DigitalProspectsApiAccess', '');
 
 // Define accepted mime types
 UploadFormat::$allowedMimeTypes = array('image/jpeg', 'image/png', 'text/plain', 'application/octet-stream');

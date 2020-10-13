@@ -40,7 +40,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/menubase.class.php';
 function print_auguria_menu($db, $atarget, $type_user, &$tabMenu, &$menu, $noout = 0, $mode = '')
 {
 	global $user, $conf, $langs, $mysoc;
-	global $dolibarr_main_db_name;
+	global $DigitalProspects_main_db_name;
 
 	$mainmenu = (empty($_SESSION["mainmenu"]) ? '' : $_SESSION["mainmenu"]);
 	$leftmenu = (empty($_SESSION["leftmenu"]) ? '' : $_SESSION["leftmenu"]);
@@ -147,7 +147,7 @@ function print_auguria_menu($db, $atarget, $type_user, &$tabMenu, &$menu, $noout
 		 }*/
 		else
 		{
-			$urllogo = DOL_URL_ROOT.'/theme/dolibarr_512x512_white.png';
+			$urllogo = DOL_URL_ROOT.'/theme/DigitalProspects_512x512_white.png';
 			$logoContainerAdditionalClass = '';
 		}
 
@@ -292,7 +292,7 @@ function print_end_menu_array_auguria()
  */
 function print_left_auguria_menu($db, $menu_array_before, $menu_array_after, &$tabMenu, &$menu, $noout = 0, $forcemainmenu = '', $forceleftmenu = '', $moredata = null)
 {
-	global $user, $conf, $langs, $dolibarr_main_db_name, $mysoc;
+	global $user, $conf, $langs, $DigitalProspects_main_db_name, $mysoc;
 
 	$newmenu = $menu;
 

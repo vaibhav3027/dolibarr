@@ -60,7 +60,7 @@ $object->getrights();
  * Actions
  */
 
-if ($action == 'dolibarr2ldap')
+if ($action == 'DigitalProspects2ldap')
 {
 	$ldap = new Ldap();
 	$result = $ldap->connect_bind();
@@ -155,14 +155,14 @@ dol_fiche_end();
 
 print '<div class="tabsAction">';
 
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap')
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap')
 {
-	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=dolibarr2ldap">'.$langs->trans("ForceSynchronize").'</a>';
+	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=DigitalProspects2ldap">'.$langs->trans("ForceSynchronize").'</a>';
 }
 
 print "</div>\n";
 
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap') print "<br>\n";
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap') print "<br>\n";
 
 
 

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bookmarks
+# DigitalProspects language file - Source file is en_US - bookmarks
 ListOfBookmarks=Lista de marcadores
 NewBookmark=Nuevo favorito
 ShowBookmark=Mostrar marcador
@@ -6,4 +6,4 @@ OpenANewWindow=Abra una nueva ventana
 ReplaceWindow=Reemplace ventana actual
 BookmarkTitle=Bookmark título
 SetHereATitleForLink=Establezca un título para el marcador
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Utilice una dirección URL http externo o una URL relativa Dolibarr
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Utilice una dirección URL http externo o una URL relativa DigitalProspects

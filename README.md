@@ -1,9 +1,9 @@
-# DOLIBARR ERP & CRM
+# DigitalProspects ERP & CRM
 
-![Downloads per day](https://img.shields.io/sourceforge/dw/dolibarr.svg)
-![Build status](https://img.shields.io/travis/Dolibarr/dolibarr/develop.svg)
+![Downloads per day](https://img.shields.io/sourceforge/dw/DigitalProspects.svg)
+![Build status](https://img.shields.io/travis/DigitalProspects/DigitalProspects/develop.svg)
 
-Dolibarr ERP & CRM is a modern software package to manage your organization's activity (contacts, suppliers, invoices, orders, stocks, agenda…).
+DigitalProspects ERP & CRM is a modern software package to manage your organization's activity (contacts, suppliers, invoices, orders, stocks, agenda…).
 
 It's an Open Source Software (written in PHP language) designed for small, medium or large companies, foundations and freelancers.
 
@@ -11,76 +11,76 @@ You can freely use, study, modify or distribute it according to its Free Softwar
 
 You can use it as a standalone application or as a web application to be able to access it from the Internet or a LAN.
 
-![ScreenShot](https://www.dolibarr.org/images/dolibarr_screenshot1_1920x1080.jpg)
+![ScreenShot](https://www.DigitalProspects.org/images/DigitalProspects_screenshot1_1920x1080.jpg)
 
 ## LICENSE
 
-Dolibarr is released under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version (GPL-3+).
+DigitalProspects is released under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version (GPL-3+).
 
-See the [COPYING](https://github.com/Dolibarr/dolibarr/blob/develop/COPYING) file for a full copy of the license.
+See the [COPYING](https://github.com/DigitalProspects/DigitalProspects/blob/develop/COPYING) file for a full copy of the license.
 
-Other licenses apply for some included dependencies. See [COPYRIGHT](https://github.com/Dolibarr/dolibarr/blob/develop/COPYRIGHT) for a full list.
+Other licenses apply for some included dependencies. See [COPYRIGHT](https://github.com/DigitalProspects/DigitalProspects/blob/develop/COPYRIGHT) for a full list.
 
 ## INSTALLING
 
 ### Simple setup
 
-If you have low technical skills and you're looking to install Dolibarr ERP/CRM in just a few clicks, you can use one of the packaged versions:
+If you have low technical skills and you're looking to install DigitalProspects ERP/CRM in just a few clicks, you can use one of the packaged versions:
 
-- [DoliWamp for Windows](https://wiki.dolibarr.org/index.php/Dolibarr_for_Windows_(DoliWamp)
-- [DoliDeb for Debian](https://wiki.dolibarr.org/index.php/Dolibarr_for_Ubuntu_or_Debian
+- [DoliWamp for Windows](https://wiki.DigitalProspects.org/index.php/DigitalProspects_for_Windows_(DoliWamp)
+- [DoliDeb for Debian](https://wiki.DigitalProspects.org/index.php/DigitalProspects_for_Ubuntu_or_Debian
 - DoliRpm for Redhat, Fedora, OpenSuse, Mandriva or Mageia
 
-Releases can be downloaded from [official website](https://www.dolibarr.org/).
+Releases can be downloaded from [official website](https://www.DigitalProspects.org/).
 
 ### Advanced setup
 
 You can use a Web server and a supported database (MariaDB, MySQL or PostgreSQL) to install the standard version.
 
-- Check that your installed PHP version is supported [see PHP support](https://wiki.dolibarr.org/index.php/Versions).
+- Check that your installed PHP version is supported [see PHP support](https://wiki.DigitalProspects.org/index.php/Versions).
 
-- Uncompress the downloaded .zip archive to copy the "dolibarr/htdocs" directory and all its files inside your web server root or get the files directly from GitHub (recommanded if you known git):
+- Uncompress the downloaded .zip archive to copy the "DigitalProspects/htdocs" directory and all its files inside your web server root or get the files directly from GitHub (recommanded if you known git):
 
-  `git clone https://github.com/dolibarr/dolibarr -b x.y`     (where x.y is main version like 3.6, 9.0, ...)
+  `git clone https://github.com/DigitalProspects/DigitalProspects -b x.y`     (where x.y is main version like 3.6, 9.0, ...)
 
-- Set up your web server to use "*dolibarr/htdocs*" as root if your web server does not have an already defined directory to point to.
+- Set up your web server to use "*DigitalProspects/htdocs*" as root if your web server does not have an already defined directory to point to.
 
 - Create an empty `htdocs/conf/conf.php` file and set *write* permissions for your web server user (*write* permission will be removed once install is finished)
 
-- From your browser, go to the dolibarr "install/" page
+- From your browser, go to the DigitalProspects "install/" page
 
-  The URL will depends on how you web setup was setup to point to your dolibarr installation. It may looks like:
+  The URL will depends on how you web setup was setup to point to your DigitalProspects installation. It may looks like:
 
-  `http://localhost/dolibarr/htdocs/install/`
-
-  or
-
-  `http://localhost/dolibarr/install/`
+  `http://localhost/DigitalProspects/htdocs/install/`
 
   or
 
-  `http://yourdolibarrvirtualhost/install/`
+  `http://localhost/DigitalProspects/install/`
+
+  or
+
+  `http://yourDigitalProspectsvirtualhost/install/`
 
 - Follow the installer instructions
 
 ### Saas/Cloud setup
 
-If you don't have time to install it yourself, you can try some commercial 'ready to use' Cloud offers (See https://saas.dolibarr.org). However, this third solution is not free.
+If you don't have time to install it yourself, you can try some commercial 'ready to use' Cloud offers (See https://saas.DigitalProspects.org). However, this third solution is not free.
 
 
 ## UPGRADING
 
-- At first make a backup of your Dolibarr files & than see https://wiki.dolibarr.org/index.php/Installation_-_Upgrade#Upgrade_Dolibarr
+- At first make a backup of your DigitalProspects files & than see https://wiki.DigitalProspects.org/index.php/Installation_-_Upgrade#Upgrade_DigitalProspects
 - Check that your installed PHP version is supported by the new version [see PHP support](./doc/phpmatrix.md).
-- Overwrite all old files from 'dolibarr' directory with files provided into the new version's package.
-- At first next access, Dolibarr will redirect your to the "install/" page to follow the upgrade process.
+- Overwrite all old files from 'DigitalProspects' directory with files provided into the new version's package.
+- At first next access, DigitalProspects will redirect your to the "install/" page to follow the upgrade process.
   If an `install.lock` file exists to lock any other upgrade process, the application will ask you to remove the file manually (you should find the `install.lock` file into the directory used to store generated and uploaded documents, in most cases, it is the directory called "*documents*").
 
 *Note: migration process can be safely done multiple times by calling the `/install/index.php` page*
 
 ## WHAT'S NEW
 
-See the [ChangeLog](https://github.com/Dolibarr/dolibarr/blob/develop/ChangeLog) file.
+See the [ChangeLog](https://github.com/DigitalProspects/DigitalProspects/blob/develop/ChangeLog) file.
 
 ## FEATURES
 
@@ -154,48 +154,48 @@ See the [ChangeLog](https://github.com/Dolibarr/dolibarr/blob/develop/ChangeLog)
 
 ### System Environment / Requirements
 
-- Works with PHP 5.5+ and MariaDB 5.0.3+, MySQL 5.0.3+ or PostgreSQL 8.1.4+ (See requirements on the [Wiki](https://wiki.dolibarr.org/index.php/Prerequisite))
+- Works with PHP 5.5+ and MariaDB 5.0.3+, MySQL 5.0.3+ or PostgreSQL 8.1.4+ (See requirements on the [Wiki](https://wiki.DigitalProspects.org/index.php/Prerequisite))
 - Compatible with all Cloud solutions that match MySQL, PHP or PostgreSQL prerequisites.
 
 ### Extending
 
-Dolibarr can be extended with a lot of other external application or modules from third party developers available at the [DoliStore](https://www.dolistore.com).
+DigitalProspects can be extended with a lot of other external application or modules from third party developers available at the [DoliStore](https://www.dolistore.com).
 
-## WHAT DOLIBARR CAN'T DO YET
+## WHAT DigitalProspects CAN'T DO YET
 
-These are features that Dolibarr does **not** yet fully support:
+These are features that DigitalProspects does **not** yet fully support:
 
 - Tasks dependencies in projects
 - Payroll module
 - No native embedded Webmail
-- Dolibarr can't do coffee (yet)
+- DigitalProspects can't do coffee (yet)
 
 ## DOCUMENTATION
 
-Administrator, user, developer and translator's documentations are available along with other community resources on the [Wiki](https://wiki.dolibarr.org).
+Administrator, user, developer and translator's documentations are available along with other community resources on the [Wiki](https://wiki.DigitalProspects.org).
 
 ## CONTRIBUTING
 
-This project exists thanks to all the people who contribute. [[Contribute](https://github.com/Dolibarr/dolibarr/blob/develop/.github/CONTRIBUTING.md)]
+This project exists thanks to all the people who contribute. [[Contribute](https://github.com/DigitalProspects/DigitalProspects/blob/develop/.github/CONTRIBUTING.md)]
 
-<a href="https://github.com/Dolibarr/dolibarr/graphs/contributors"><img src="https://opencollective.com/dolibarr/contributors.svg?width=890&button=false" /></a>
+<a href="https://github.com/DigitalProspects/DigitalProspects/graphs/contributors"><img src="https://opencollective.com/DigitalProspects/contributors.svg?width=890&button=false" /></a>
 
 ## CREDITS
 
-Dolibarr is the work of many contributors over the years and uses some fine libraries.
+DigitalProspects is the work of many contributors over the years and uses some fine libraries.
 
-See [COPYRIGHT](https://github.com/Dolibarr/dolibarr/blob/develop/COPYRIGHT) file.
+See [COPYRIGHT](https://github.com/DigitalProspects/DigitalProspects/blob/develop/COPYRIGHT) file.
 
 ## NEWS AND SOCIAL NETWORKS
 
-Follow Dolibarr project on:
+Follow DigitalProspects project on:
 
-- [Facebook](https://www.facebook.com/dolibarr)
-- [Twitter](https://www.twitter.com/dolibarr)
-- [LinkedIn](https://www.linkedin.com/company/association-dolibarr)
-- [YouTube](https://www.youtube.com/user/DolibarrERPCRM)
-- [GitHub](https://github.com/Dolibarr/dolibarr)
+- [Facebook](https://www.facebook.com/DigitalProspects)
+- [Twitter](https://www.twitter.com/DigitalProspects)
+- [LinkedIn](https://www.linkedin.com/company/association-DigitalProspects)
+- [YouTube](https://www.youtube.com/user/DigitalProspectsERPCRM)
+- [GitHub](https://github.com/DigitalProspects/DigitalProspects)
 
 ### Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here. 🙏 [[Become a sponsor/backer](https://opencollective.com/dolibarr#backer)]
+Support this project by becoming a sponsor. Your logo will show up here. 🙏 [[Become a sponsor/backer](https://opencollective.com/DigitalProspects#backer)]

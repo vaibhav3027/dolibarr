@@ -158,13 +158,13 @@ function showOnlinePaymentUrl($type, $ref)
  */
 function getOnlinePaymentUrl($mode, $type, $ref = '', $amount = '9.99', $freetag = 'your_tag', $localorexternal = 0)
 {
-    global $conf, $dolibarr_main_url_root;
+    global $conf, $DigitalProspects_main_url_root;
 
 	$ref = str_replace(' ', '', $ref);
 	$out = '';
 
 	// Define $urlwithroot
-	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 	$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 	//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

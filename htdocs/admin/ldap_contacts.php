@@ -50,29 +50,29 @@ if ($action == 'setvalue' && $user->admin)
 
 	$db->begin();
 
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_DN', GETPOST("contactdn"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_DN', GETPOST("contactdn"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
 
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_NAME', GETPOST("fieldname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_FIRSTNAME', GETPOST("fieldfirstname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_COMPANY', GETPOST("fieldcompany"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_MAIL', GETPOST("fieldmail"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_PHONE', GETPOST("fieldphone"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_HOMEPHONE', GETPOST("fieldhomephone"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_MOBILE', GETPOST("fieldmobile"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_SKYPE', GETPOST("fieldskype"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_FAX', GETPOST("fieldfax"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_ADDRESS', GETPOST("fieldaddress"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_ZIP', GETPOST("fieldzip"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_TOWN', GETPOST("fieldtown"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_CONTACT_FIELD_COUNTRY', GETPOST("fieldcountry"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_NAME', GETPOST("fieldname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_FIRSTNAME', GETPOST("fieldfirstname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_COMPANY', GETPOST("fieldcompany"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_MAIL', GETPOST("fieldmail"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_PHONE', GETPOST("fieldphone"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_HOMEPHONE', GETPOST("fieldhomephone"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_MOBILE', GETPOST("fieldmobile"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_SKYPE', GETPOST("fieldskype"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_FAX', GETPOST("fieldfax"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_ADDRESS', GETPOST("fieldaddress"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_ZIP', GETPOST("fieldzip"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_TOWN', GETPOST("fieldtown"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_CONTACT_FIELD_COUNTRY', GETPOST("fieldcountry"), 'chaine', 0, '', $conf->entity)) $error++;
 
 	// This one must be after the others
 	$valkey = '';
 	$key = GETPOST("key");
 	if ($key) $valkey = $conf->global->$key;
-	if (!dolibarr_set_const($db, 'LDAP_KEY_CONTACTS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_KEY_CONTACTS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
 
 	if (!$error)
 	{
@@ -141,7 +141,7 @@ print '<br>';
 print '<table class="noborder centpercent">';
 
 print '<tr class="liste_titre">';
-print '<td width="25%">'.$langs->trans("LDAPDolibarrMapping").'</td>';
+print '<td width="25%">'.$langs->trans("LDAPDigitalProspectsMapping").'</td>';
 print '<td colspan="2">'.$langs->trans("LDAPLdapMapping").'</td>';
 print '<td class="right">'.$langs->trans("LDAPNamingAttribute").'</td>';
 print "</tr>\n";

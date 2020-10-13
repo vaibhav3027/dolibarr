@@ -64,7 +64,7 @@ if (($conf->global->TAKEPOS_PHONE_BASIC_LAYOUT == 1 && $conf->browser->layout ==
 		}
 	}
 	$mobilepage = GETPOST('mobilepage', 'alpha');
-	$title = 'TakePOS - Dolibarr '.DOL_VERSION;
+	$title = 'TakePOS - DigitalProspects '.DOL_VERSION;
 	if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = 'TakePOS - '.$conf->global->MAIN_APPLICATION_TITLE;
 	$head = '<meta name="apple-mobile-web-app-title" content="TakePOS"/>
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -595,7 +595,7 @@ if ($action == "valid" || $action == "history")
 		if (filter_var($conf->global->TAKEPOS_PRINT_SERVER, FILTER_VALIDATE_URL) == true) $sectionwithinvoicelink .= ' <button id="buttonprint" type="button" onclick="TakeposConnector('.$placeid.');">'.$langs->trans('PrintTicket').'</button>';
 		else $sectionwithinvoicelink .= ' <button id="buttonprint" type="button" onclick="TakeposPrinting('.$placeid.');">'.$langs->trans('PrintTicket').'</button>';
     } elseif ($conf->global->TAKEPOS_PRINT_METHOD == "receiptprinter") {
-        $sectionwithinvoicelink .= ' <button id="buttonprint" type="button" onclick="DolibarrTakeposPrinting('.$placeid.');">'.$langs->trans('PrintTicket').'</button>';
+        $sectionwithinvoicelink .= ' <button id="buttonprint" type="button" onclick="DigitalProspectsTakeposPrinting('.$placeid.');">'.$langs->trans('PrintTicket').'</button>';
     } else {
         $sectionwithinvoicelink .= ' <button id="buttonprint" type="button" onclick="Print('.$placeid.');">'.$langs->trans('PrintTicket').'</button>';
     }
@@ -732,8 +732,8 @@ function TakeposConnector(id){
     });
 }
 
-function DolibarrTakeposPrinting(id) {
-    console.log("DolibarrTakeposPrinting Printing invoice ticket " + id)
+function DigitalProspectsTakeposPrinting(id) {
+    console.log("DigitalProspectsTakeposPrinting Printing invoice ticket " + id)
     $.ajax({
         type: "GET",
         url: "<?php print dol_buildpath('/takepos/ajax/ajax.php', 1).'?action=printinvoiceticket&term='.$_SESSION["takeposterminal"].'&id='; ?>" + id,
@@ -843,7 +843,7 @@ $( document ).ready(function() {
 // for tooltip and other js beautifiers must be reexecuted too.
 if (!empty($conf->use_javascript_ajax))
 {
-    print "\n".'<!-- Includes JS Footer of Dolibarr -->'."\n";
+    print "\n".'<!-- Includes JS Footer of DigitalProspects -->'."\n";
     print '<script src="'.DOL_URL_ROOT.'/core/js/lib_foot.js.php?lang='.$langs->defaultlang.($ext ? '&'.$ext : '').'"></script>'."\n";
 }
 

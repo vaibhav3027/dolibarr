@@ -31,10 +31,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/fichinter/modules_fichinter.php';
 class mod_pacific extends ModeleNumRefFicheinter
 {
     /**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'FI';
 

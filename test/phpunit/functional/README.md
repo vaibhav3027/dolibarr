@@ -1,4 +1,4 @@
-Functional tests for Dolibarr
+Functional tests for DigitalProspects
 =============================
 A.k.a. end-to-end or acceptance tests.
 
@@ -7,9 +7,9 @@ Prerequisites
 
 ### Web server
 
-Any web server compatible with Dolibarr will do.
+Any web server compatible with DigitalProspects will do.
 
-For the full test, it should be configured for serving Dolibarr's htdocs directory at `https://dev.dolibarr.org` with SSL/TLS enabled.
+For the full test, it should be configured for serving DigitalProspects's htdocs directory at `https://dev.DigitalProspects.org` with SSL/TLS enabled.
 
 If you want to test at another address and/or without SSL/TLS, you will have to alter the test configuration.
 
@@ -19,13 +19,13 @@ If you want to test at another address and/or without SSL/TLS, you will have to 
 
 Running on localhost with the root user without password.
 
-The database used for the test is `dolibarr_test`.
+The database used for the test is `DigitalProspects_test`.
 
 **WARNING:**  
 This database will be dropped before and after the test.  
 Make sure you don't hold any valuable information in it!
 
-A user called `dolibarr` with a password `dolibarr` will be created as part of the test.
+A user called `DigitalProspects` with a password `DigitalProspects` will be created as part of the test.
 
 You can alter the test configuration to use another host, users and/or database.
 
@@ -72,6 +72,6 @@ Usage
 
 Make sure your servers (web, database and browser automation) are started.
 
-Then from Dolibarr's root directory, run:
+Then from DigitalProspects's root directory, run:
 
 ```htdocs/includes/bin/phpunit test/phpunit/functional```

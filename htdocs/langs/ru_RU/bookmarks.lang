@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Добавить текущую страницу в закладки
 Bookmark=Закладка
 Bookmarks=Закладки
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Поведение когда выбран URL закладки
 CreateBookmark=Создать закладку
 SetHereATitleForLink=Задать имя закладки
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Использовать внешнюю/абсолютную ссылку (https://URL) или внутреннюю/относительную ссылку (/DOLIBARR_ROOT/ htdocs /...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Использовать внешнюю/абсолютную ссылку (https://URL) или внутреннюю/относительную ссылку (/DigitalProspects_ROOT/ htdocs /...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Выберите, должна ли связанная страница открываться в текущей вкладке или в новой вкладке
 BookmarksManagement=Управление закладками

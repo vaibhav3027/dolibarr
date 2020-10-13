@@ -56,7 +56,7 @@ if ($action == 'updateMask')
 {
 	$maskconst = GETPOST('maskconst', 'alpha');
 	$maskvalue = GETPOST('maskvalue', 'alpha');
-	if ($maskconst) $res = dolibarr_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
+	if ($maskconst) $res = DigitalProspects_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -126,14 +126,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->FICHEINTER_ADDON_PDF == "$value") dolibarr_del_const($db, 'FICHEINTER_ADDON_PDF', $conf->entity);
+        if ($conf->global->FICHEINTER_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'FICHEINTER_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "FICHEINTER_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "FICHEINTER_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -153,13 +153,13 @@ elseif ($action == 'setmod')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "FICHEINTER_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "FICHEINTER_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'set_FICHINTER_FREE_TEXT')
 {
 	$freetext = GETPOST('FICHINTER_FREE_TEXT', 'none'); // No alpha here, we want exact string
-	$res = dolibarr_set_const($db, "FICHINTER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FICHINTER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -176,7 +176,7 @@ elseif ($action == 'set_FICHINTER_FREE_TEXT')
 elseif ($action == 'set_FICHINTER_DRAFT_WATERMARK')
 {
 	$draft = GETPOST('FICHINTER_DRAFT_WATERMARK', 'alpha');
-	$res = dolibarr_set_const($db, "FICHINTER_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FICHINTER_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -193,7 +193,7 @@ elseif ($action == 'set_FICHINTER_DRAFT_WATERMARK')
 elseif ($action == 'set_FICHINTER_PRINT_PRODUCTS')
 {
 	$val = GETPOST('FICHINTER_PRINT_PRODUCTS', 'alpha');
-	$res = dolibarr_set_const($db, "FICHINTER_PRINT_PRODUCTS", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FICHINTER_PRINT_PRODUCTS", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -207,7 +207,7 @@ elseif ($action == 'set_FICHINTER_PRINT_PRODUCTS')
     }
 } elseif ($action == 'set_FICHINTER_USE_SERVICE_DURATION') {
 	$val = GETPOST('FICHINTER_USE_SERVICE_DURATION', 'alpha');
-    $res = dolibarr_set_const($db, "FICHINTER_USE_SERVICE_DURATION", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FICHINTER_USE_SERVICE_DURATION", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
 
 	if (!$res > 0) {
 		$error++;
@@ -220,7 +220,7 @@ elseif ($action == 'set_FICHINTER_PRINT_PRODUCTS')
 	}
 } elseif ($action == 'set_FICHINTER_WITHOUT_DURATION') {
     $val = GETPOST('FICHINTER_WITHOUT_DURATION', 'alpha');
-    $res = dolibarr_set_const($db, "FICHINTER_WITHOUT_DURATION", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FICHINTER_WITHOUT_DURATION", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
 
     if (!$res > 0) {
         $error++;
@@ -233,7 +233,7 @@ elseif ($action == 'set_FICHINTER_PRINT_PRODUCTS')
     }
 } elseif ($action == 'set_FICHINTER_DATE_WITHOUT_HOUR') {
     $val = GETPOST('FICHINTER_DATE_WITHOUT_HOUR', 'alpha');
-    $res = dolibarr_set_const($db, "FICHINTER_DATE_WITHOUT_HOUR", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "FICHINTER_DATE_WITHOUT_HOUR", ($val == 'on' ? 1 : 0), 'bool', 0, '', $conf->entity);
 
     if (!$res > 0) {
         $error++;
@@ -548,7 +548,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

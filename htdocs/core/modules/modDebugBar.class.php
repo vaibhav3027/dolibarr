@@ -23,13 +23,13 @@
  *  \ingroup    debugbar
  *  \brief      Description and activation file for module debugbar
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module
  */
-class modDebugBar extends DolibarrModules
+class modDebugBar extends DigitalProspectsModules
 {
 
     /**
@@ -51,8 +51,8 @@ class modDebugBar extends DolibarrModules
         // Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         $this->description = "A tool for developper adding a debug bar in your browser.";
-        // Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-        $this->version = 'dolibarr';
+        // Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+        $this->version = 'DigitalProspects';
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         $this->picto = 'bug';
 
@@ -89,7 +89,7 @@ class modDebugBar extends DolibarrModules
 
     /**
      *      Function called when module is enabled.
-     *      The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+     *      The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
      *      It also creates data directories.
      *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

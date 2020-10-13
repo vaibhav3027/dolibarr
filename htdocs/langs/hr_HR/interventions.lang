@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Intervencija
 Interventions=Intervencije
 InterventionCard=Radni nalog
@@ -30,13 +30,13 @@ InterventionClassifyDone=Classify "Done"
 StatusInterInvoiced=Zaračunato
 SendInterventionRef=Intervencija %s
 SendInterventionByMail=Send intervention by email
-InterventionCreatedInDolibarr=Intervencija %s kreirana
-InterventionValidatedInDolibarr=Intervencija %s ovjerena
-InterventionModifiedInDolibarr=Intervencija %s promjenjena
-InterventionClassifiedBilledInDolibarr=Intervencija %s je postavljena "Naplačena"
-InterventionClassifiedUnbilledInDolibarr=Intervencija %s je postavljena "Nenaplačena"
+InterventionCreatedInDigitalProspects=Intervencija %s kreirana
+InterventionValidatedInDigitalProspects=Intervencija %s ovjerena
+InterventionModifiedInDigitalProspects=Intervencija %s promjenjena
+InterventionClassifiedBilledInDigitalProspects=Intervencija %s je postavljena "Naplačena"
+InterventionClassifiedUnbilledInDigitalProspects=Intervencija %s je postavljena "Nenaplačena"
 InterventionSentByEMail=Intervention %s sent by email
-InterventionDeletedInDolibarr=Intervencija %s obrisana
+InterventionDeletedInDigitalProspects=Intervencija %s obrisana
 InterventionsArea=Sučelje intervencija
 DraftFichinter=Skica intervencija
 LastModifiedInterventions=Zadnje %s izmijenjene intervencije

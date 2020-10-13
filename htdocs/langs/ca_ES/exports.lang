@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - exports
+# DigitalProspects language file - Source file is en_US - exports
 ExportsArea=Exportacions
 ImportArea=Importació
 NewExport=Nova exportació
@@ -58,7 +58,7 @@ ChooseFormatOfFileToImport=Trieu el format del fitxer que voleu utilitzar com a 
 ChooseFileToImport=Pengeu un fitxer i feu clic a la icona %s per seleccionar el fitxer com a fitxer d'importació d'origen ...
 SourceFileFormat=Format de l'arxiu origen
 FieldsInSourceFile=Camps en el fitxer origen
-FieldsInTargetDatabase=Camps destinació a la base de dades Dolibarr (*=obligatori)
+FieldsInTargetDatabase=Camps destinació a la base de dades DigitalProspects (*=obligatori)
 Field=Camp
 NoFields=Cap camp
 MoveField=Moure camp columna número %s

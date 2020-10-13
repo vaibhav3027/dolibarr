@@ -31,10 +31,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/facture/modules_facture.php';
 class mod_facture_terre extends ModeleNumRefFactures
 {
     /**
-     * Dolibarr version of the loaded document 'development', 'experimental', 'dolibarr'
+     * DigitalProspects version of the loaded document 'development', 'experimental', 'DigitalProspects'
      * @var string
      */
-    public $version = 'dolibarr';
+    public $version = 'DigitalProspects';
 
     /**
      * Prefix for invoices

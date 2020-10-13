@@ -51,10 +51,10 @@ class doc_generic_supplier_proposal_odt extends ModelePDFSupplierProposal
 	public $phpmin = array(5, 5);
 
 	/**
-   * Dolibarr version of the loaded document
+   * DigitalProspects version of the loaded document
    * @var string
    */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

@@ -496,7 +496,7 @@ if ($id > 0 || $ref)
 					{
 						if (empty($form->result))
 						{
-							print ' - <a href="'.DOL_URL_ROOT.'/societe/card.php?action=create&type=f&backtopage='.urlencode($_SERVER["PHP_SELF"].'?id='.$object->id.'&action='.$action).'">'.$langs->trans("CreateDolibarrThirdPartySupplier").'</a>';
+							print ' - <a href="'.DOL_URL_ROOT.'/societe/card.php?action=create&type=f&backtopage='.urlencode($_SERVER["PHP_SELF"].'?id='.$object->id.'&action='.$action).'">'.$langs->trans("CreateDigitalProspectsThirdPartySupplier").'</a>';
 						}
 					}
 				}
@@ -771,7 +771,7 @@ SCRIPT;
     				print '<td>'.$langs->trans('ProductSupplierDescription').'</td>';
     				print '<td>';
 
-    				$doleditor = new DolEditor('supplier_description', $object->desc_supplier, '', 160, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
+    				$doleditor = new DolEditor('supplier_description', $object->desc_supplier, '', 160, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_PRODUCTDESC, ROWS_4, '90%');
     				$doleditor->Create();
 
     				print '</td>';

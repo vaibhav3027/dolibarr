@@ -161,13 +161,13 @@ $urllogofull = '';
 if (!empty($logosmall) && is_readable($conf->mycompany->dir_output.'/logos/thumbs/'.$logosmall))
 {
 	$urllogo = DOL_URL_ROOT.'/viewimage.php?modulepart=mycompany&amp;entity='.$conf->entity.'&amp;file='.urlencode('logos/thumbs/'.$logosmall);
-	$urllogofull = $dolibarr_main_url_root.'/viewimage.php?modulepart=mycompany&entity='.$conf->entity.'&file='.urlencode('logos/thumbs/'.$logosmall);
+	$urllogofull = $DigitalProspects_main_url_root.'/viewimage.php?modulepart=mycompany&entity='.$conf->entity.'&file='.urlencode('logos/thumbs/'.$logosmall);
 	$width = 150;
 }
 elseif (!empty($logo) && is_readable($conf->mycompany->dir_output.'/logos/'.$logo))
 {
 	$urllogo = DOL_URL_ROOT.'/viewimage.php?modulepart=mycompany&amp;entity='.$conf->entity.'&amp;file='.urlencode('logos/'.$logo);
-	$urllogofull = $dolibarr_main_url_root.'/viewimage.php?modulepart=mycompany&entity='.$conf->entity.'&file='.urlencode('logos/'.$logo);
+	$urllogofull = $DigitalProspects_main_url_root.'/viewimage.php?modulepart=mycompany&entity='.$conf->entity.'&file='.urlencode('logos/'.$logo);
 	$width = 150;
 }
 
@@ -181,7 +181,7 @@ if ($urllogo)
 	print '>';
 	print '</div>';
 	if (empty($conf->global->MAIN_HIDE_POWERED_BY)) {
-		print '<div class="poweredbypublicpayment opacitymedium right"><a href="https://www.dolibarr.org" target="dolibarr">'.$langs->trans("PoweredBy").'<br><img src="'.DOL_URL_ROOT.'/theme/dolibarr_logo.svg" width="80px"></a></div>';
+		print '<div class="poweredbypublicpayment opacitymedium right"><a href="https://www.DigitalProspects.org" target="DigitalProspects">'.$langs->trans("PoweredBy").'<br><img src="'.DOL_URL_ROOT.'/theme/DigitalProspects_logo.svg" width="80px"></a></div>';
 	}
 	print '</div>';
 }
@@ -580,7 +580,7 @@ if ($ispaymentok)
 							$listofmimes = array(dol_mimetype($file));
 						}
 
-						$moreinheader = 'X-Dolibarr-Info: send_an_email by public/payment/paymentok.php'."\r\n";
+						$moreinheader = 'X-DigitalProspects-Info: send_an_email by public/payment/paymentok.php'."\r\n";
 
 						$result = $object->send_an_email($texttosend, $subjecttosend, $listofpaths, $listofmimes, $listofnames, "", "", 0, -1, "", $moreinheader);
 
@@ -778,7 +778,7 @@ if ($ispaymentok)
 		$sendto = $sendemail;
 		$from = $conf->global->MAILING_EMAIL_FROM;
 		// Define $urlwithroot
-		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 		$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 		//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -916,7 +916,7 @@ else
     	$sendto = $sendemail;
         $from = $conf->global->MAILING_EMAIL_FROM;
         // Define $urlwithroot
-        $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+        $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
         $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
         //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

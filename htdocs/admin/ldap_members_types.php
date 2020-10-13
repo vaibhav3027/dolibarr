@@ -51,18 +51,18 @@ if ($action == 'setvalue' && $user->admin)
 	$error = 0;
 	$db->begin();
 
-	if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_DN', GETPOST("membertype"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_DN', GETPOST("membertype"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
 
-	if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_DESCRIPTION', GETPOST("fielddescription"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_GROUPMEMBERS', GETPOST("fieldmembertypemembers"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_DESCRIPTION', GETPOST("fielddescription"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_MEMBER_TYPE_FIELD_GROUPMEMBERS', GETPOST("fieldmembertypemembers"), 'chaine', 0, '', $conf->entity)) $error++;
 
 	// This one must be after the others
 	$valkey = '';
 	$key = GETPOST("key");
 	if ($key) $valkey = $conf->global->$key;
-	if (!dolibarr_set_const($db, 'LDAP_KEY_MEMBERS_TYPES', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_KEY_MEMBERS_TYPES', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
 
 	if (!$error)
 	{
@@ -132,7 +132,7 @@ print '<br>';
 print '<table class="noborder centpercent">';
 
 print '<tr class="liste_titre">';
-print '<td width="25%">'.$langs->trans("LDAPDolibarrMapping").'</td>';
+print '<td width="25%">'.$langs->trans("LDAPDigitalProspectsMapping").'</td>';
 print '<td colspan="2">'.$langs->trans("LDAPLdapMapping").'</td>';
 print '<td class="right">'.$langs->trans("LDAPNamingAttribute").'</td>';
 print "</tr>\n";

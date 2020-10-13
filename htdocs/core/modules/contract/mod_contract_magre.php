@@ -31,10 +31,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/contract/modules_contract.php';
 class mod_contract_magre extends ModelNumRefContracts
 {
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	/**
 	 * @var string Error message

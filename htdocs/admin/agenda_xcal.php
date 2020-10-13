@@ -45,10 +45,10 @@ if ($actionsave)
 
     $db->begin();
 
-    $i += dolibarr_set_const($db, 'MAIN_AGENDA_XCAL_EXPORTKEY', trim(GETPOST('MAIN_AGENDA_XCAL_EXPORTKEY', 'alpha')), 'chaine', 0, '', $conf->entity);
-    $i += dolibarr_set_const($db, 'MAIN_AGENDA_EXPORT_PAST_DELAY', trim(GETPOST('MAIN_AGENDA_EXPORT_PAST_DELAY', 'alpha')), 'chaine', 0, '', $conf->entity);
-    $i += dolibarr_set_const($db, 'MAIN_AGENDA_EXPORT_CACHE', trim(GETPOST('MAIN_AGENDA_EXPORT_CACHE', 'alpha')), 'chaine', 0, '', $conf->entity);
-    $i += dolibarr_set_const($db, 'AGENDA_EXPORT_FIX_TZ', trim(GETPOST('AGENDA_EXPORT_FIX_TZ', 'alpha')), 'chaine', 0, '', $conf->entity);
+    $i += DigitalProspects_set_const($db, 'MAIN_AGENDA_XCAL_EXPORTKEY', trim(GETPOST('MAIN_AGENDA_XCAL_EXPORTKEY', 'alpha')), 'chaine', 0, '', $conf->entity);
+    $i += DigitalProspects_set_const($db, 'MAIN_AGENDA_EXPORT_PAST_DELAY', trim(GETPOST('MAIN_AGENDA_EXPORT_PAST_DELAY', 'alpha')), 'chaine', 0, '', $conf->entity);
+    $i += DigitalProspects_set_const($db, 'MAIN_AGENDA_EXPORT_CACHE', trim(GETPOST('MAIN_AGENDA_EXPORT_CACHE', 'alpha')), 'chaine', 0, '', $conf->entity);
+    $i += DigitalProspects_set_const($db, 'AGENDA_EXPORT_FIX_TZ', trim(GETPOST('AGENDA_EXPORT_FIX_TZ', 'alpha')), 'chaine', 0, '', $conf->entity);
 
     if ($i >= 4)
     {
@@ -153,7 +153,7 @@ print "<br>";
 
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

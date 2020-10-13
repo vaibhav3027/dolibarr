@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Няма грешна заявка
 ErrorServiceUnavailableTryLater=Услугата не е налична в момента. Опитайте отново по-късно.
 ErrorDuplicateField=Дублиране в поле с уникални стойности
 ErrorSomeErrorWereFoundRollbackIsDone=Намерени са някои грешки. Промените бяха отменени.
-ErrorConfigParameterNotDefined=Параметър <b> %s </b> не е дефиниран в конфигурационния файл на Dolibarr <b> conf.php </b>.
-ErrorCantLoadUserFromDolibarrDatabase=Не е открит потребител <b>%s</b> в базата данни.
+ErrorConfigParameterNotDefined=Параметър <b> %s </b> не е дефиниран в конфигурационния файл на DigitalProspects <b> conf.php </b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Не е открит потребител <b>%s</b> в базата данни.
 ErrorNoVATRateDefinedForSellerCountry=Грешка, не са дефинирани ДДС ставки за държавата "%s".
 ErrorNoSocialContributionForSellerCountry=Грешка, не е дефиниран тип за социални / фискални данъци за държавата "%s".
 ErrorFailedToSaveFile=Грешка, неуспешно записване на файл.
@@ -90,7 +90,7 @@ RecordDeleted=Записът е изтрит
 RecordGenerated=Записът е генериран
 LevelOfFeature=Ниво на функции
 NotDefined=Не е дефинирано
-DolibarrInHttpAuthenticationSoPasswordUseless=Режимът за удостоверяване в Dolibarr е зададен на <b> %s </b> в конфигурационен файл <b> conf.php </b>. <br> Това означава, че базата данни с пароли е външна за Dolibarr, така че промяната в това поле може да няма ефект.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Режимът за удостоверяване в DigitalProspects е зададен на <b> %s </b> в конфигурационен файл <b> conf.php </b>. <br> Това означава, че базата данни с пароли е външна за DigitalProspects, така че промяната в това поле може да няма ефект.
 Administrator=Администратор
 Undefined=Неопределен
 PasswordForgotten=Забравена парола?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Мениджър на типовете база данни
 RequestLastAccessInError=Последна грешка в заявката за достъп до базата данни
 ReturnCodeLastAccessInError=Върнат код за грешка при последната заявка за достъп до базата данни
 InformationLastAccessInError=Информация за грешка при последната заявка за достъп до базата данни
-DolibarrHasDetectedError=Dolibarr засече техническа грешка
-YouCanSetOptionDolibarrMainProdToZero=Можете да прочетете .log файл или да зададете опция $ dolibarr_main_prod на '0' в конфигурационния си файл, за да получите повече информация.
-InformationToHelpDiagnose=Тази информация може да бъде полезна за диагностични цели (може да зададете опция $dolibarr_main_prod на '1', за да премахнете такива известия)
+DigitalProspectsHasDetectedError=DigitalProspects засече техническа грешка
+YouCanSetOptionDigitalProspectsMainProdToZero=Можете да прочетете .log файл или да зададете опция $ DigitalProspects_main_prod на '0' в конфигурационния си файл, за да получите повече информация.
+InformationToHelpDiagnose=Тази информация може да бъде полезна за диагностични цели (може да зададете опция $DigitalProspects_main_prod на '1', за да премахнете такива известия)
 MoreInformation=Повече информация
 TechnicalInformation=Техническа информация
 TechnicalID=Технически идентификатор
 LineID=Идентификатор на ред
 NotePublic=Бележка (публична)
 NotePrivate=Бележка (лична)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr е настроен да ограничи прецизността на единичните цени до <b> %s </b> десетични числа.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects е настроен да ограничи прецизността на единичните цени до <b> %s </b> десетични числа.
 DoTest=Тест
 ToFilter=Филтър
 NoFilter=Без филтър
@@ -475,8 +475,8 @@ Generate=Генериране
 Duration=Продължителност
 TotalDuration=Обща продължителност
 Summary=Резюме
-DolibarrStateBoard=Статистика от базата данни
-DolibarrWorkBoard=Активни елементи
+DigitalProspectsStateBoard=Статистика от базата данни
+DigitalProspectsWorkBoard=Активни елементи
 NoOpenedElementToProcess=Няма активен елемент за обработка
 Available=Налично
 NotYetAvailable=Все още не е налично
@@ -736,7 +736,7 @@ PrintContentArea=Показване на страница за печат сам
 MenuManager=Меню манипулатор
 WarningYouAreInMaintenanceMode=Внимание, вие сте в режим на поддръжка: позволено е само за потребител <b> %s </b> да използва приложението в този режим.
 CoreErrorTitle=Системна грешка
-CoreErrorMessage=За съжаление възникна грешка. Обърнете се към системния си администратор, за да проверите log файлове или да забраните $dolibarr_main_prod=1, за да получите повече информация.
+CoreErrorMessage=За съжаление възникна грешка. Обърнете се към системния си администратор, за да проверите log файлове или да забраните $DigitalProspects_main_prod=1, за да получите повече информация.
 CreditCard=Кредитна карта
 ValidatePayment=Валидиране на плащане
 CreditOrDebitCard=Кредитна или дебитна карта
@@ -875,7 +875,7 @@ Calendar=Календар
 GroupBy=Групиране по...
 ViewFlatList=Преглед на плосък списък
 RemoveString=Премахване на низ „%s“
-SomeTranslationAreUncomplete=Някои от предлаганите езици могат да бъдат само частично преведени или да съдържат грешки. Моля, помогнете ни да коригираме езика ви като се регистрирате на адрес <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a>, за да добавите подобренията си.
+SomeTranslationAreUncomplete=Някои от предлаганите езици могат да бъдат само частично преведени или да съдържат грешки. Моля, помогнете ни да коригираме езика ви като се регистрирате на адрес <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a>, за да добавите подобренията си.
 DirectDownloadLink=Директна връзка за изтегляне (публична / външна)
 DirectDownloadInternalLink=Директна връзка за изтегляне (изисква регистрация в системата и съответни права)
 Download=Изтегляне

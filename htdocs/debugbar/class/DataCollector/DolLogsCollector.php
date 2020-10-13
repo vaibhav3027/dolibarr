@@ -106,8 +106,8 @@ class DolLogsCollector extends MessagesCollector
 	 */
 	public function getLogsFile()
 	{
-	    // default dolibarr log file
-	    $path = DOL_DATA_ROOT.'/dolibarr.log';
+	    // default DigitalProspects log file
+	    $path = DOL_DATA_ROOT.'/DigitalProspects.log';
 	    return $path;
 	}
 

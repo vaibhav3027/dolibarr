@@ -270,7 +270,7 @@ if ($action == 'edit')
     print (empty($conf->global->MAIN_LANDING_PAGE) ? '' : $conf->global->MAIN_LANDING_PAGE);
     print '</td>';
     print '<td class="nowrap" width="20%"><input class="oddeven" name="check_MAIN_LANDING_PAGE" id="check_MAIN_LANDING_PAGE" type="checkbox" '.(!empty($object->conf->MAIN_LANDING_PAGE) ? " checked" : "");
-    print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
+    print empty($DigitalProspects_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
     print '> '.$langs->trans("UsePersonalValue").'</td>';
     print '<td>';
     print $form->selectarray('MAIN_LANDING_PAGE', $tmparray, (!empty($object->conf->MAIN_LANDING_PAGE) ? $object->conf->MAIN_LANDING_PAGE : ''), 0, 0, 0, '', 1);
@@ -285,17 +285,17 @@ if ($action == 'edit')
     print ($conf->global->MAIN_LANG_DEFAULT == 'auto' ? $langs->trans("AutoDetectLang") : $langs->trans("Language_".$conf->global->MAIN_LANG_DEFAULT));
     print '</td>';
     print '<td class="nowrap" width="20%"><input class="oddeven" name="check_MAIN_LANG_DEFAULT" id="check_MAIN_LANG_DEFAULT" type="checkbox" '.(!empty($object->conf->MAIN_LANG_DEFAULT) ? " checked" : "");
-    print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
+    print empty($DigitalProspects_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
     print '> '.$langs->trans("UsePersonalValue").'</td>';
     print '<td>';
-    print $formadmin->select_language((!empty($object->conf->MAIN_LANG_DEFAULT) ? $object->conf->MAIN_LANG_DEFAULT : ''), 'main_lang_default', 1, null, 0, 0, (!empty($dolibarr_main_demo)));
+    print $formadmin->select_language((!empty($object->conf->MAIN_LANG_DEFAULT) ? $object->conf->MAIN_LANG_DEFAULT : ''), 'main_lang_default', 1, null, 0, 0, (!empty($DigitalProspects_main_demo)));
     print '</td></tr>';
 
     // Max size of lists
     print '<tr class="oddeven"><td>'.$langs->trans("MaxSizeList").'</td>';
     print '<td>'.$conf->global->MAIN_SIZE_LISTE_LIMIT.'</td>';
     print '<td class="nowrap" width="20%"><input class="oddeven" name="check_SIZE_LISTE_LIMIT" id="check_SIZE_LISTE_LIMIT" type="checkbox" '.(!empty($object->conf->MAIN_SIZE_LISTE_LIMIT) ? " checked" : "");
-    print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
+    print empty($DigitalProspects_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
     print '> '.$langs->trans("UsePersonalValue").'</td>';
     print '<td><input class="flat" name="main_size_liste_limit" id="main_size_liste_limit" size="4" value="'.(!empty($object->conf->MAIN_SIZE_LISTE_LIMIT) ? $object->conf->MAIN_SIZE_LISTE_LIMIT : '').'"></td></tr>';
 
@@ -304,7 +304,7 @@ if ($action == 'edit')
     print '<td>'.$langs->trans("AGENDA_DEFAULT_VIEW").'</td>'."\n";
     print '<td class="center">&nbsp;</td>'."\n";
     print '<td class="nowrap" width="20%"><input class="oddeven" name="check_AGENDA_DEFAULT_VIEW" id="check_AGENDA_DEFAULT_VIEW" type="checkbox" '.(!empty($object->conf->AGENDA_DEFAULT_VIEW) ? " checked" : "");
-    print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
+    print empty($DigitalProspects_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
     print '> '.$langs->trans("UsePersonalValue").'</td>';
     print '<td>'."\n";
     $tmplist = array(''=>'&nbsp;', 'show_list'=>$langs->trans("ViewList"), 'show_month'=>$langs->trans("ViewCal"), 'show_week'=>$langs->trans("ViewWeek"), 'show_day'=>$langs->trans("ViewDay"), 'show_peruser'=>$langs->trans("ViewPerUser"));
@@ -314,7 +314,7 @@ if ($action == 'edit')
     print '</table><br>';
 
     // Theme
-    showSkins($object, (($user->admin || empty($dolibarr_main_demo)) ? 1 : 0), true);
+    showSkins($object, (($user->admin || empty($DigitalProspects_main_demo)) ? 1 : 0), true);
 
     dol_fiche_end();
 
@@ -342,7 +342,7 @@ else
     print (empty($conf->global->MAIN_LANDING_PAGE) ? '' : $conf->global->MAIN_LANDING_PAGE);
     print '</td>';
     print '<td class="nowrap"><input class="oddeven" name="check_MAIN_LANDING_PAGE" disabled id="check_MAIN_LANDING_PAGE" type="checkbox" '.(!empty($object->conf->MAIN_LANDING_PAGE) ? " checked" : "");
-    print empty($dolibarr_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
+    print empty($DigitalProspects_main_demo) ? '' : ' disabled="disabled"'; // Disabled for demo
     print '> '.$langs->trans("UsePersonalValue").'</td>';
     print '<td>';
     if (!empty($tmparray[$object->conf->MAIN_LANDING_PAGE]))
@@ -393,7 +393,7 @@ else
 
 
     print '<div class="tabsAction">';
-    if (empty($user->admin) && !empty($dolibarr_main_demo))
+    if (empty($user->admin) && !empty($DigitalProspects_main_demo))
     {
         print "<a class=\"butActionRefused classfortooltip\" title=\"".$langs->trans("FeatureDisabledInDemo")."\" href=\"#\">".$langs->trans("Modify")."</a>";
     }

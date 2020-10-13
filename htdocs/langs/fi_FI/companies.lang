@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Yrityksen nimi %s on jo olemassa. Valitse toinen.
 ErrorSetACountryFirst=Aseta ensin maa
 SelectThirdParty=Valitse sidosryhmä
@@ -12,7 +12,7 @@ MenuNewSupplier=Uusi toimittaja
 MenuNewPrivateIndividual=Uusi yksityishenkilö
 NewCompany=Uusi yritys (asiakas, toimittaja, mahd. asiakas)
 NewThirdParty=Uusi sidosryhmä (asiakas toimittaja, mahd. asiakas)
-CreateDolibarrThirdPartySupplier=Luo sidosryhmä (toimittaja)
+CreateDigitalProspectsThirdPartySupplier=Luo sidosryhmä (toimittaja)
 CreateThirdPartyOnly=Luo sidosryhmä
 CreateThirdPartyAndContact=Luo sidosryhmä + ala yhteystieto
 ProspectionArea=Uusien mahdollisuuksien alue
@@ -347,7 +347,7 @@ CapitalOf=%s:n pääoma
 EditCompany=Muokkaa yritystä
 ThisUserIsNot=Tämä ei ole prospekti, asiakas tai toimittaja
 VATIntraCheck=Shekki
-VATIntraCheckDesc=ALV-tunnuksen täytyy sisältää maatunnus. Linkki <b>%s</b> käyttää European VAT checker service (VIES)  - palvelua ja tarvii internet-yhteyden Dolibarr-palvelimeen
+VATIntraCheckDesc=ALV-tunnuksen täytyy sisältää maatunnus. Linkki <b>%s</b> käyttää European VAT checker service (VIES)  - palvelua ja tarvii internet-yhteyden DigitalProspects-palvelimeen
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Tarkasta ALV-tunnus E.U: n sivuilta
 VATIntraManualCheck=Voit tehdä tarkastuksen myös käsin E.U: n sivuilla <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Prospektit tilan mukaan
 NoParentCompany=Ei mitään
 ExportCardToFormat=Vienti kortin muodossa
 ContactNotLinkedToCompany=Yhteystiedot eivät liity minkään kolmannen osapuolen
-DolibarrLogin=Dolibarr sisäänkirjoittautumissivuksesi
-NoDolibarrAccess=Ei Dolibarr pääsyä
+DigitalProspectsLogin=DigitalProspects sisäänkirjoittautumissivuksesi
+NoDigitalProspectsAccess=Ei DigitalProspects pääsyä
 ExportDataset_company_1=Sidosryhmät (yritykset, yhteisöt, ihmiset) ja niiden ominaisuudet
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

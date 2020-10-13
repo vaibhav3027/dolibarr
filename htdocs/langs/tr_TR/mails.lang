@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=E-postalama
 EMailing=E-postalama
 EMailings=E-postalamalar
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Kategorilere göre kişiler
 MailingModuleDescContactsByFunction=Pozisyona göre kişiler
 MailingModuleDescEmailsFromFile=Dosyadan e-postalar
 MailingModuleDescEmailsFromUser=Kullanıcı tarafından girilen e-postalar
-MailingModuleDescDolibarrUsers=E-postaları olan kullanıcılar
+MailingModuleDescDigitalProspectsUsers=E-postaları olan kullanıcılar
 MailingModuleDescThirdPartiesByCategories=Üçüncü taraflar (kategorilere göre)
 SendingFromWebInterfaceIsNotAllowed=Sending from web interface is not allowed.
 

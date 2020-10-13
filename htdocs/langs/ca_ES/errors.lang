@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - errors
+# DigitalProspects language file - Source file is en_US - errors
 
 # No errors
 NoErrorCommitIsDone=Sense errors, és vàlid
@@ -43,10 +43,10 @@ ErrorBadDateFormat=El valor '%s' té un format de data no reconegut
 ErrorWrongDate=La data no es correcta!
 ErrorFailedToWriteInDir=No es pot escriure a la carpeta %s
 ErrorFoundBadEmailInFile=Trobada sintaxi incorrecta en email a %s línies en fitxer (exemple linia %s amb email=%s)
-ErrorUserCannotBeDelete=No es pot eliminar l'usuari. És possible que estigui relacionat amb entitats de Dolibarr.
+ErrorUserCannotBeDelete=No es pot eliminar l'usuari. És possible que estigui relacionat amb entitats de DigitalProspects.
 ErrorFieldsRequired=No s'han indicat alguns camps obligatoris
 ErrorSubjectIsRequired=The email topic is required
-ErrorFailedToCreateDir=Error en la creació d'una carpeta. Comprovi que l'usuari del servidor web té drets d'escriptura en les carpetes de documents de Dolibarr. Si el paràmetre <b>safe_mode</b> està actiu en aquest PHP, Comproveu que els fitxers php dolibarr pertanyen a l'usuari del servidor web.
+ErrorFailedToCreateDir=Error en la creació d'una carpeta. Comprovi que l'usuari del servidor web té drets d'escriptura en les carpetes de documents de DigitalProspects. Si el paràmetre <b>safe_mode</b> està actiu en aquest PHP, Comproveu que els fitxers php DigitalProspects pertanyen a l'usuari del servidor web.
 ErrorNoMailDefinedForThisUser=E-Mail no definit per a aquest usuari
 ErrorFeatureNeedJavascript=Aquesta funcionalitat requereix javascript actiu per funcionar. Modifiqueu en configuració->entorn.
 ErrorTopMenuMustHaveAParentWithId0=Un menú del tipus 'Superior' no pot tenir un menú pare. Poseu 0 en l'ID pare o busqueu un menu del tipus 'Esquerra'
@@ -72,7 +72,7 @@ ErrorFieldCanNotContainSpecialNorUpperCharacters=El camp <b> %s </b> no pot cont
 ErrorFieldMustHaveXChar=El camp <b> %s </b> ha de tenir com a mínim %s caràcters.
 ErrorNoAccountancyModuleLoaded=Mòdul de comptabilitat no activat
 ErrorExportDuplicateProfil=El nom d'aquest perfil ja existeix per aquest conjunt d'exportació
-ErrorLDAPSetupNotComplete=La configuració Dolibarr-LDAP és incompleta.
+ErrorLDAPSetupNotComplete=La configuració DigitalProspects-LDAP és incompleta.
 ErrorLDAPMakeManualTest=S'ha creat un arxiu .ldif a la carpeta %s. Intenta carregar-lo manualment des de la línia de comandes per tenir més informació sobre l'error.
 ErrorCantSaveADoneUserWithZeroPercentage=No es pot desar una acció amb "estat no iniciat" si el camp "fet per" també s'omple.
 ErrorRefAlreadyExists=La referència utilitzada per a la creació ja existeix
@@ -104,8 +104,8 @@ ErrorProdIdAlreadyExist=%s es troba assignat a altre tercer
 ErrorFailedToSendPassword=Error en l'enviament de la contrasenya
 ErrorFailedToLoadRSSFile=Error en la recuperació del flux RSS. Afegiu la constant MAIN_SIMPLEXMLLOAD_DEBUG si el missatge d'error no és molt explícit.
 ErrorForbidden=Accés denegat. <br> Intentes accedir a una pàgina, àrea o funcionalitat d'un mòdul amb desactivat o sense estar en una sessió autenticada o que no se li permet al seu usuari.
-ErrorForbidden2=Els permisos per a aquest usuari poden ser assignats per l'administrador Dolibarr mitjançant el menú  %s-> %s.
-ErrorForbidden3=Dolibarr no sembla funcionar en una sessió autentificada. Consulteu la documentació d'instal lació de Dolibarr per saber com administrar les autenticacions (htacces, mod_auth o altre ...).
+ErrorForbidden2=Els permisos per a aquest usuari poden ser assignats per l'administrador DigitalProspects mitjançant el menú  %s-> %s.
+ErrorForbidden3=DigitalProspects no sembla funcionar en una sessió autentificada. Consulteu la documentació d'instal lació de DigitalProspects per saber com administrar les autenticacions (htacces, mod_auth o altre ...).
 ErrorNoImagickReadimage=No s'ha trobat la classe Imagick en aquesta instal lació PHP. La previsualització no està disponible. Els administradors poden deshabilitar aquesta pestanya en el menú Configuració - Entorn.
 ErrorRecordAlreadyExists=Registre ja existent
 ErrorLabelAlreadyExists=Aquesta etiqueta ja existeix
@@ -127,8 +127,8 @@ ErrorWebServerUserHasNotPermission=El compte d'execució del servidor web <b>%s<
 ErrorNoActivatedBarcode=No hi ha activat cap tipus de codi de barres
 ErrUnzipFails=No s'ha pogut descomprimir el fitxer %s amb ZipArchive
 ErrNoZipEngine=No engine to zip/unzip %s file in this PHP
-ErrorFileMustBeADolibarrPackage=El fitxer %s ha de ser un paquet Dolibarr en format zip
-ErrorModuleFileRequired=Ha de seleccionar un arxiu del paquet del mòdul de Dolibarr
+ErrorFileMustBeADigitalProspectsPackage=El fitxer %s ha de ser un paquet DigitalProspects en format zip
+ErrorModuleFileRequired=Ha de seleccionar un arxiu del paquet del mòdul de DigitalProspects
 ErrorPhpCurlNotInstalled=L'extensió PHP CURL no es troba instal·lada, és indispensable per dialogar amb Paypal.
 ErrorFailedToAddToMailmanList=S'ha produït un error en intentar afegir un registre a la llista Mailman o base de dades SPIP
 ErrorFailedToRemoveToMailmanList=Error en l'eliminació de %s de la llista Mailmain %s o base SPIP
@@ -139,7 +139,7 @@ ErrorFailedToAddContact=Error en l'addició del contacte
 ErrorDateMustBeBeforeToday=La data no pot ser més gran que avui
 ErrorPaymentModeDefinedToWithoutSetup=S'ha establert la forma de pagament al tipus %s però a la configuració del mòdul de factures no s'ha indicat la informació per mostrar aquesta forma de pagament.
 ErrorPHPNeedModule=Error, el seu PHP ha de tenir instal·lat el mòdul <b>%s</b> per utilitzar aquesta funcionalitat.
-ErrorOpenIDSetupNotComplete=Ha configurat Dolibarr per acceptar l'autentificació OpenID, però la URL del servei OpenID no es troba definida a la constant %s
+ErrorOpenIDSetupNotComplete=Ha configurat DigitalProspects per acceptar l'autentificació OpenID, però la URL del servei OpenID no es troba definida a la constant %s
 ErrorWarehouseMustDiffers=El magatzem d'origen i destí han de ser diferents
 ErrorBadFormat=El format és incorrecte!
 ErrorMemberNotLinkedToAThirpartyLinkOrCreateFirst=Error, aquest soci encara no s'ha enllaçat a un tercer. Enllaça el soci a un tercer existent o crea un tercer nou abans de crear la quota amb factura.
@@ -202,7 +202,7 @@ ErrorUserNotAssignedToTask=L'usuari ha d'estar assignat a la tasca per poder int
 ErrorTaskAlreadyAssigned=La tasca també està assignada a l'usuari
 ErrorModuleFileSeemsToHaveAWrongFormat=Pareix que el mòdul té un format incorrecte.
 ErrorModuleFileSeemsToHaveAWrongFormat2=Al ZIP d'un mòdul ha d'haver necessàriament com a mínim un d'aquests directoris: <strong>%s</strong> o <strong>%s</strong>
-ErrorFilenameDosNotMatchDolibarrPackageRules=El nom de l'arxiu del mòdul (<strong>%s</strong>) no coincideix amb la sintaxi del nom esperat: <strong>%s</strong>
+ErrorFilenameDosNotMatchDigitalProspectsPackageRules=El nom de l'arxiu del mòdul (<strong>%s</strong>) no coincideix amb la sintaxi del nom esperat: <strong>%s</strong>
 ErrorDuplicateTrigger=Error, nom de disparador %s duplicat. Ja es troba carregat des de %s.
 ErrorNoWarehouseDefined=Error, no hi ha magatzems definits.
 ErrorBadLinkSourceSetButBadValueForRef=The link you use is not valid. A 'source' for payment is defined, but value for 'ref' is not valid.
@@ -241,7 +241,7 @@ ErrorTooManyDifferentValueForSelectedGroupBy=S'han trobat massa valors diferents
 ErrorReplaceStringEmpty=Error, la cadena a on fer la substitució és buida
 # Warnings
 WarningParamUploadMaxFileSizeHigherThanPostMaxSize=El paràmetre PHP upload_max_filesize (%s) és superior al paràmetre PHP post_max_size (%s). No es tracta d’una configuració consistent.
-WarningPasswordSetWithNoAccount=S'ha indicat una contrasenya per aquest soci. En canvi, no s'ha creat cap compte d'usuari, de manera que aquesta contrasenya s'ha desat però no pot ser utilitzada per entrar a Dolibarr. Es pot utilitzar per un mòdul/interfície extern, però si no cal definir cap usuari i contrasenya per un soci, pots deshabilitar la opció "Gestiona l'entrada per tots els socis" des de la configuració del mòdul Socis. Si necessites gestionar una entrada sense contrasenya, pots mantenir aquest camp buit i permetre aquest avís. Nota: El correu electrònic es pot utilitzar per entrar si el soci està enllaçat a un usuarí
+WarningPasswordSetWithNoAccount=S'ha indicat una contrasenya per aquest soci. En canvi, no s'ha creat cap compte d'usuari, de manera que aquesta contrasenya s'ha desat però no pot ser utilitzada per entrar a DigitalProspects. Es pot utilitzar per un mòdul/interfície extern, però si no cal definir cap usuari i contrasenya per un soci, pots deshabilitar la opció "Gestiona l'entrada per tots els socis" des de la configuració del mòdul Socis. Si necessites gestionar una entrada sense contrasenya, pots mantenir aquest camp buit i permetre aquest avís. Nota: El correu electrònic es pot utilitzar per entrar si el soci està enllaçat a un usuarí
 WarningMandatorySetupNotComplete=Feu clic aquí per configurar els paràmetres obligatoris
 WarningEnableYourModulesApplications=Feu clic aquí per activar els vostres mòduls i aplicacions
 WarningSafeModeOnCheckExecDir=Atenció, està activada l'opció PHP <b>safe_mode</b>, la comanda ha d'estar dins d'un directori declarat dins del paràmetre php <b>safe_mode_exec_dir</b>.

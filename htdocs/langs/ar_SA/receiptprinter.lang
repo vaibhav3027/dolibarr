@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - receiptprinter
+# DigitalProspects language file - Source file is en_US - receiptprinter
 ReceiptPrinterSetup=Setup of module ReceiptPrinter
 PrinterAdded=تم إضافة الطابعة %s
 PrinterUpdated=تم تحديث الطابعة %s

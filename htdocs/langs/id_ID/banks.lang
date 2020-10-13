@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Bank
 MenuBankCash=Bank | Kas
 MenuVariousPayment=Pembayaran lain-lain
@@ -109,7 +109,7 @@ SocialContributionPayment=Pembayaran pajak sosial / fiskal
 BankTransfer=Transfer Kredit
 BankTransfers=Transfer Kredit
 MenuBankInternalTransfer=Transfer internal
-TransferDesc=Transfer dari satu akun ke akun lainnya, Dolibarr akan menulis dua catatan (satu akun debit di sumber dan satu kredit di akun target). Jumlah yang sama (kecuali tanda), label dan tanggal akan digunakan untuk transaksi ini)
+TransferDesc=Transfer dari satu akun ke akun lainnya, DigitalProspects akan menulis dua catatan (satu akun debit di sumber dan satu kredit di akun target). Jumlah yang sama (kecuali tanda), label dan tanggal akan digunakan untuk transaksi ini)
 TransferFrom=Dari
 TransferTo=Kepada
 TransferFromToDone=Transfer dari <b>%s</b> ke <b>%s</b> dari <b>%s</b> %s telah dicatat.

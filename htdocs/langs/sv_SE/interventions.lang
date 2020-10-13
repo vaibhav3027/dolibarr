@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Insats
 Interventions=Insatser
 InterventionCard=Insatskort
@@ -30,13 +30,13 @@ InterventionClassifyDone=Märk "klar"
 StatusInterInvoiced=Fakturerade
 SendInterventionRef=Inlämning av insats %s
 SendInterventionByMail=Skicka insats via e-post
-InterventionCreatedInDolibarr=Insats %s skapad
-InterventionValidatedInDolibarr=Insats %s bekräftades
-InterventionModifiedInDolibarr=Insats %s modifierade
-InterventionClassifiedBilledInDolibarr=Insats %s uppsättning som faktureras
-InterventionClassifiedUnbilledInDolibarr=Insats %s uppsättning som ofakturerade
+InterventionCreatedInDigitalProspects=Insats %s skapad
+InterventionValidatedInDigitalProspects=Insats %s bekräftades
+InterventionModifiedInDigitalProspects=Insats %s modifierade
+InterventionClassifiedBilledInDigitalProspects=Insats %s uppsättning som faktureras
+InterventionClassifiedUnbilledInDigitalProspects=Insats %s uppsättning som ofakturerade
 InterventionSentByEMail=Insats %s skickad av email
-InterventionDeletedInDolibarr=Insats %s raderad
+InterventionDeletedInDigitalProspects=Insats %s raderad
 InterventionsArea=Insatssområde
 DraftFichinter=Utkast till ingripanden
 LastModifiedInterventions=Senaste %s modifierade interventioner

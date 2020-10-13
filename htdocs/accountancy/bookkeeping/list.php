@@ -385,7 +385,7 @@ if ($action == 'delmouvconfirm' && $user->rights->accounting->mouvements->suppri
 }
 if ($action == 'setreexport') {
 	$setreexport = GETPOST('value', 'int');
-	if (!dolibarr_set_const($db, "ACCOUNTING_REEXPORT", $setreexport, 'yesno', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, "ACCOUNTING_REEXPORT", $setreexport, 'yesno', 0, '', $conf->entity)) $error++;
 
 	if (!$error) {
 		if ($conf->global->ACCOUNTING_REEXPORT == 1) {

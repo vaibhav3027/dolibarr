@@ -49,7 +49,7 @@ include DOL_DOCUMENT_ROOT.'/core/actions_setmoduleoptions.inc.php';
 
 if ($action == 'setcodeclient')
 {
-	if (dolibarr_set_const($db, "SOCIETE_CODECLIENT_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, "SOCIETE_CODECLIENT_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -62,7 +62,7 @@ if ($action == 'setcodeclient')
 
 if ($action == 'setcodecompta')
 {
-	if (dolibarr_set_const($db, "SOCIETE_CODECOMPTA_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, "SOCIETE_CODECOMPTA_ADDON", $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -78,7 +78,7 @@ if ($action == 'updateoptions')
 	if (GETPOST('COMPANY_USE_SEARCH_TO_SELECT'))
 	{
 		$companysearch = GETPOST('activate_COMPANY_USE_SEARCH_TO_SELECT', 'alpha');
-		$res = dolibarr_set_const($db, "COMPANY_USE_SEARCH_TO_SELECT", $companysearch, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "COMPANY_USE_SEARCH_TO_SELECT", $companysearch, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
 		if (!$error)
 	    {
@@ -93,7 +93,7 @@ if ($action == 'updateoptions')
 	if (GETPOST('CONTACT_USE_SEARCH_TO_SELECT'))
 	{
 		$contactsearch = GETPOST('activate_CONTACT_USE_SEARCH_TO_SELECT', 'alpha');
-		$res = dolibarr_set_const($db, "CONTACT_USE_SEARCH_TO_SELECT", $contactsearch, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "CONTACT_USE_SEARCH_TO_SELECT", $contactsearch, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
 		if (!$error)
 		{
@@ -108,7 +108,7 @@ if ($action == 'updateoptions')
 	if (GETPOST('THIRDPARTY_CUSTOMERTYPE_BY_DEFAULT'))
 	{
 		$customertypedefault = GETPOST('defaultcustomertype', 'int');
-		$res = dolibarr_set_const($db, "THIRDPARTY_CUSTOMERTYPE_BY_DEFAULT", $customertypedefault, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, "THIRDPARTY_CUSTOMERTYPE_BY_DEFAULT", $customertypedefault, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) $error++;
 		if (!$error)
 		{
@@ -156,7 +156,7 @@ if ($action == 'setdoc')
 
 	$db->begin();
 
-	dolibarr_set_const($db, "COMPANY_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "COMPANY_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity);
 
 	// On active le modele
 	$type = 'company';
@@ -187,7 +187,7 @@ if ($action == 'setdoc')
 //Activate Set ref in list
 if ($action == "setaddrefinlist") {
 	$setaddrefinlist = GETPOST('value', 'int');
-	$res = dolibarr_set_const($db, "SOCIETE_ADD_REF_IN_LIST", $setaddrefinlist, 'yesno', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "SOCIETE_ADD_REF_IN_LIST", $setaddrefinlist, 'yesno', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 	if (!$error)
 	{
@@ -202,7 +202,7 @@ if ($action == "setaddrefinlist") {
 //Activate Set adress in list
 if ($action == "setaddadressinlist") {
 	$val = GETPOST('value', 'int');
-	$res = dolibarr_set_const($db, "COMPANY_SHOW_ADDRESS_SELECTLIST", $val, 'yesno', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "COMPANY_SHOW_ADDRESS_SELECTLIST", $val, 'yesno', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 	if (!$error)
 	{
@@ -217,7 +217,7 @@ if ($action == "setaddadressinlist") {
 //Activate Ask For Preferred Shipping Method
 if ($action == "setaskforshippingmet") {
 	$setaskforshippingmet = GETPOST('value', 'int');
-	$res = dolibarr_set_const($db, "SOCIETE_ASK_FOR_SHIPPING_METHOD", $setaskforshippingmet, 'yesno', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "SOCIETE_ASK_FOR_SHIPPING_METHOD", $setaskforshippingmet, 'yesno', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 	if (!$error)
 	{
@@ -232,7 +232,7 @@ if ($action == "setaskforshippingmet") {
 //Activate "Disable prospect/customer type"
 if ($action == "setdisableprospectcustomer") {
     $setdisableprospectcustomer = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "SOCIETE_DISABLE_PROSPECTSCUSTOMERS", $setdisableprospectcustomer, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "SOCIETE_DISABLE_PROSPECTSCUSTOMERS", $setdisableprospectcustomer, 'yesno', 0, '', $conf->entity);
     if (!$res > 0) $error++;
     if (!$error)
     {
@@ -250,7 +250,7 @@ if ($action == 'setprofid')
 	$status = GETPOST('status', 'alpha');
 
 	$idprof = "SOCIETE_".$value."_UNIQUE";
-	if (dolibarr_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		//header("Location: ".$_SERVER["PHP_SELF"]);
 		//exit;
@@ -267,7 +267,7 @@ if ($action == 'setprofidmandatory')
 	$status = GETPOST('status', 'alpha');
 
 	$idprof = "SOCIETE_".$value."_MANDATORY";
-	if (dolibarr_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		//header("Location: ".$_SERVER["PHP_SELF"]);
 		//exit;
@@ -284,7 +284,7 @@ if ($action == 'setprofidinvoicemandatory')
 	$status = GETPOST('status', 'alpha');
 
 	$idprof = "SOCIETE_".$value."_INVOICE_MANDATORY";
-	if (dolibarr_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $idprof, $status, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		//header("Location: ".$_SERVER["PHP_SELF"]);
 		//exit;
@@ -300,7 +300,7 @@ if ($action == 'sethideinactivethirdparty')
 {
 	$status = GETPOST('status', 'alpha');
 
-	if (dolibarr_set_const($db, "COMPANY_HIDE_INACTIVE_IN_COMBOBOX", $status, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, "COMPANY_HIDE_INACTIVE_IN_COMBOBOX", $status, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -312,7 +312,7 @@ if ($action == 'sethideinactivethirdparty')
 }
 if ($action == 'setonsearchandlistgooncustomerorsuppliercard') {
     $setonsearchandlistgooncustomerorsuppliercard = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "SOCIETE_ON_SEARCH_AND_LIST_GO_ON_CUSTOMER_OR_SUPPLIER_CARD", $setonsearchandlistgooncustomerorsuppliercard, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "SOCIETE_ON_SEARCH_AND_LIST_GO_ON_CUSTOMER_OR_SUPPLIER_CARD", $setonsearchandlistgooncustomerorsuppliercard, 'yesno', 0, '', $conf->entity);
     if (!$res > 0) $error++;
     if (!$error)
     {

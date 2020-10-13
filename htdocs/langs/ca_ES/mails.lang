@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=E-Mailing
 EMailing=E-Mailing
 EMailings=E-Mailings
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Contactes per categories
 MailingModuleDescContactsByFunction=Contactes per càrrec
 MailingModuleDescEmailsFromFile=Correus electrònics desde fitxer
 MailingModuleDescEmailsFromUser=Entrada de correus electrònics per usuari
-MailingModuleDescDolibarrUsers=Usuaris amb correus electrònics
+MailingModuleDescDigitalProspectsUsers=Usuaris amb correus electrònics
 MailingModuleDescThirdPartiesByCategories=Tercers (per categories)
 SendingFromWebInterfaceIsNotAllowed=L'enviament des de la interfície web no està permès.
 

@@ -23,13 +23,13 @@
  *	\brief      File of geoipmaxmind module descriptor
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Import
  */
-class modGeoIPMaxmind extends DolibarrModules
+class modGeoIPMaxmind extends DigitalProspectsModules
 {
 
 	/**
@@ -49,8 +49,8 @@ class modGeoIPMaxmind extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		// Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
 		$this->description = "GeoIP Maxmind conversions capabilities";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		// Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		// Name of image file used for this module.
@@ -71,7 +71,7 @@ class modGeoIPMaxmind extends DolibarrModules
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4);
 		$this->phpmax = array();
-		$this->need_dolibarr_version = array(2, 7, -1); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(2, 7, -1); // Minimum version of DigitalProspects required by module
 		$this->need_javascript_ajax = 1;
 
 		// Constants

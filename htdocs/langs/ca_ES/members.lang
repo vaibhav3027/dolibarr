@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Àrea de socis
 MemberCard=Fitxa de soci
 SubscriptionCard=Fitxa cotització
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=Llistat de socis públics validats
 ErrorThisMemberIsNotPublic=Aquest soci no és públic
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Un altre soci (nom: <b>%s</b>, login: <b>%s</b>) està vinculat al tercer <b>%s</b>. Esborreu l'enllaç existent ja que un tercer només pot estar vinculat a un sol soci (i viceversa).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Per raons de seguretat, ha de posseir els drets de modificació de tots els usuaris per poder vincular un soci a un usuari que no sigui vostè mateix.
-SetLinkToUser=Vincular a un usuari Dolibarr
-SetLinkToThirdParty=Vincular a un tercer Dolibarr
+SetLinkToUser=Vincular a un usuari DigitalProspects
+SetLinkToThirdParty=Vincular a un tercer DigitalProspects
 MembersCards=Carnets de socis
 MembersList=Llistat de socis
 MembersListToValid=Llistat de socis esborrany (per validar)
@@ -92,10 +92,10 @@ ConfirmDeleteSubscription=Vols esborrar aquesta subscripció?
 Filehtpasswd=Arxiu htpasswd
 ValidateMember=Valida un soci
 ConfirmValidateMember=Vols validar aquest soci?
-FollowingLinksArePublic=Els següents enllaços són pàgines obertes que no estan protegides per cap permís Dolibarr. No tenen pàgines amb format, es proporciona com a exemple per mostrar com es llista la base de dades dels socis.
+FollowingLinksArePublic=Els següents enllaços són pàgines obertes que no estan protegides per cap permís DigitalProspects. No tenen pàgines amb format, es proporciona com a exemple per mostrar com es llista la base de dades dels socis.
 PublicMemberList=Llistat públic de socis
 BlankSubscriptionForm=Formulari públic d'auto-subscripció
-BlankSubscriptionFormDesc=Dolibarr us pot proporcionar una URL/lloc web públic per permetre que els visitants externs sol·licitin subscriure's a la fundació. Si un mòdul de pagament en línia està habilitat, també es pot proporcionar automàticament un formulari de pagament.
+BlankSubscriptionFormDesc=DigitalProspects us pot proporcionar una URL/lloc web públic per permetre que els visitants externs sol·licitin subscriure's a la fundació. Si un mòdul de pagament en línia està habilitat, també es pot proporcionar automàticament un formulari de pagament.
 EnablePublicSubscriptionForm=Activa el lloc web públic amb el formulari d'auto-subscripció
 ForceMemberType=Força el tipus de soci
 ExportDataset_member_1=Socis i quotes

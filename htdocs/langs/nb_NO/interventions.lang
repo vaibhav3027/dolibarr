@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Intervensjon
 Interventions=Intervensjoner
 InterventionCard=Intervensjonskort
@@ -30,13 +30,13 @@ InterventionClassifyDone=Klassifiser som "utført"
 StatusInterInvoiced=Fakturert
 SendInterventionRef=Send intervensjon %s
 SendInterventionByMail=Send intervensjon via e-post
-InterventionCreatedInDolibarr=Intervensjon %s opprettet
-InterventionValidatedInDolibarr=Intervensjon %s validert
-InterventionModifiedInDolibarr=Intervensjon %s endret
-InterventionClassifiedBilledInDolibarr=Intervensjon %s satt til fakturert
-InterventionClassifiedUnbilledInDolibarr=Intervensjon %s satt til ufakturert
+InterventionCreatedInDigitalProspects=Intervensjon %s opprettet
+InterventionValidatedInDigitalProspects=Intervensjon %s validert
+InterventionModifiedInDigitalProspects=Intervensjon %s endret
+InterventionClassifiedBilledInDigitalProspects=Intervensjon %s satt til fakturert
+InterventionClassifiedUnbilledInDigitalProspects=Intervensjon %s satt til ufakturert
 InterventionSentByEMail=Intervensjon %s sendt via epost
-InterventionDeletedInDolibarr=Intervensjon %s ble slettet
+InterventionDeletedInDigitalProspects=Intervensjon %s ble slettet
 InterventionsArea=Område for intervensjoner
 DraftFichinter=Intervensjonskladder
 LastModifiedInterventions=Siste %s endrede intervensjoner

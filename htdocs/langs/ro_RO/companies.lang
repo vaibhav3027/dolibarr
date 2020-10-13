@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Numele societăţii %s există deja. Alegeţi un altul.
 ErrorSetACountryFirst=Setaţi mai întâi ţară
 SelectThirdParty=Selectaţi un terţ
@@ -12,7 +12,7 @@ MenuNewSupplier=Furnizor nou
 MenuNewPrivateIndividual=Particular nou
 NewCompany=Compania nouă (prospect, client, furnizor)
 NewThirdParty=Terț nou (prospect, client, furnizor)
-CreateDolibarrThirdPartySupplier=Creează un terț (furnizor)
+CreateDigitalProspectsThirdPartySupplier=Creează un terț (furnizor)
 CreateThirdPartyOnly=Creare terţ
 CreateThirdPartyAndContact=Creați un terț + un contact pentru copil
 ProspectionArea=Prospecte
@@ -347,7 +347,7 @@ CapitalOf=Capital de % s
 EditCompany=Modifică societate
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Verifică
-VATIntraCheckDesc=ID-ul de TVA trebuie să includă prefixul țării. Linkul <b> %s </b> utilizează serviciul european de verificare a TVA-ului (VIES), care necesită acces la internet de pe serverul Dolibarr.
+VATIntraCheckDesc=ID-ul de TVA trebuie să includă prefixul țării. Linkul <b> %s </b> utilizează serviciul european de verificare a TVA-ului (VIES), care necesită acces la internet de pe serverul DigitalProspects.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Verificați codul TV intracomunitar pe site-ul web al Comisiei Europene
 VATIntraManualCheck=De asemenea, puteți verifica manual pe site-ul web al Comisiei Europene <a href="%s" target="_blank"> %s </a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Prospectele pe status
 NoParentCompany=Niciunul
 ExportCardToFormat=Export fişă în format
 ContactNotLinkedToCompany=Contact nelegat la un terţ
-DolibarrLogin=Identificator utilizator
-NoDolibarrAccess=Niciun acces utilizator
+DigitalProspectsLogin=Identificator utilizator
+NoDigitalProspectsAccess=Niciun acces utilizator
 ExportDataset_company_1=Terți (companii / fundații / persoane fizice) și proprietățile acestora
 ExportDataset_company_2=Persoanele de contact și proprietățile acestora
 ImportDataset_company_1=Terți și proprietățile acestora

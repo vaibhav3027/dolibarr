@@ -150,7 +150,7 @@ if (empty($reshook))
 				}
 			}
 
-            if (!dolibarr_set_const($db, 'CHARTOFACCOUNTS', $chartofaccounts, 'chaine', 0, '', $conf->entity)) {
+            if (!DigitalProspects_set_const($db, 'CHARTOFACCOUNTS', $chartofaccounts, 'chaine', 0, '', $conf->entity)) {
                 $error++;
             }
         } else {

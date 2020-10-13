@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Společnost %s již existuje. Zadejte jiný název.
 ErrorSetACountryFirst=Nejprve vyberte zemi.
 SelectThirdParty=Vyberte subjekt
@@ -12,7 +12,7 @@ MenuNewSupplier=Nový dodavatel
 MenuNewPrivateIndividual=Nová soukromá osoba
 NewCompany=Nová společnost (cíl. zákazník, dodavatel)
 NewThirdParty=Nový subjekt (cíl, zákazník, dodavatel)
-CreateDolibarrThirdPartySupplier=Vytvořit subjekt (dodavatele)
+CreateDigitalProspectsThirdPartySupplier=Vytvořit subjekt (dodavatele)
 CreateThirdPartyOnly=Vytvořit subjekt
 CreateThirdPartyAndContact=Vytvořte subjekt + přidružený kontakt
 ProspectionArea=Oblast cílových kontaktů
@@ -347,7 +347,7 @@ CapitalOf=Hlavní město %s
 EditCompany=Upravit společnost
 ThisUserIsNot=Tento uživatel není cílem, zákazníkem ani prodejcem
 VATIntraCheck=Kontrola
-VATIntraCheckDesc=Kód DPH ID musí obsahovat předčíslí země. Odkaz <b> %s </b> používá službu European VAT Checker (VIES), která vyžaduje přístup na internet z Dolibarr serveru.
+VATIntraCheckDesc=Kód DPH ID musí obsahovat předčíslí země. Odkaz <b> %s </b> používá službu European VAT Checker (VIES), která vyžaduje přístup na internet z DigitalProspects serveru.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Zkontrolujte ID DPH uvnitř Společenství na webových stránkách Evropské komise
 VATIntraManualCheck=Můžete také zkontrolovat ručně na evropských stránkách <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Cíle dle stavu
 NoParentCompany=Nikdo
 ExportCardToFormat=Exportovat kartu do formátu
 ContactNotLinkedToCompany=Kontakt není spojen s žádným subjektem
-DolibarrLogin=Přihlášení do Dolibarru
-NoDolibarrAccess=Žádný přístup k Dolibarr
+DigitalProspectsLogin=Přihlášení do DigitalProspectsu
+NoDigitalProspectsAccess=Žádný přístup k DigitalProspects
 ExportDataset_company_1=Subjekty (společnosti / nadace / fyzické osoby) a jejich vlastnosti
 ExportDataset_company_2=Kontakty a jejich vlastnosti
 ImportDataset_company_1=Subjekty a jejich vlastnosti

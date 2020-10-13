@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Không yêu cầu do lỗi
 ErrorServiceUnavailableTryLater=Dịch vụ không có sẵn tại thời điểm này. Thử lại sau.
 ErrorDuplicateField=Trùng giá trị trong trường duy nhất
 ErrorSomeErrorWereFoundRollbackIsDone=Một số lỗi đã được tìm thấy. Những thay đổi đã được khôi phục lại như trước đó.
-ErrorConfigParameterNotDefined=Tham số <b>%s</b> không được xác định trong tệp cấu hình Dolibarr <b> conf.php</b> .
-ErrorCantLoadUserFromDolibarrDatabase=Không tìm thấy người dùng <b>%s</b> trong cơ sở dữ liệu Dolibarr.
+ErrorConfigParameterNotDefined=Tham số <b>%s</b> không được xác định trong tệp cấu hình DigitalProspects <b> conf.php</b> .
+ErrorCantLoadUserFromDigitalProspectsDatabase=Không tìm thấy người dùng <b>%s</b> trong cơ sở dữ liệu DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Lỗi, không xác định tỉ lệ VAT cho quốc gia '%s'.
 ErrorNoSocialContributionForSellerCountry=Lỗi, không có loại thuế xã hội/ tài chính được xác định cho quốc gia '%s'.
 ErrorFailedToSaveFile=Lỗi, lưu tập tin thất bại
@@ -90,7 +90,7 @@ RecordDeleted=Bản ghi đã xóa
 RecordGenerated=Bản ghi được tạo
 LevelOfFeature=Mức tính năng
 NotDefined=Không xác định
-DolibarrInHttpAuthenticationSoPasswordUseless=Chế độ xác thực Dolibarr được đặt thành <b>%s</b> trong tệp cấu hình <b> conf.php</b>.<br> Điều này có nghĩa là cơ sở dữ liệu mật khẩu nằm ngoài Dolibarr, vì vậy việc thay đổi trường này có thể không có hiệu lực.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Chế độ xác thực DigitalProspects được đặt thành <b>%s</b> trong tệp cấu hình <b> conf.php</b>.<br> Điều này có nghĩa là cơ sở dữ liệu mật khẩu nằm ngoài DigitalProspects, vì vậy việc thay đổi trường này có thể không có hiệu lực.
 Administrator=Quản trị
 Undefined=Không xác định
 PasswordForgotten=Quên mật khẩu?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Quản lý loại cơ sở dữ liệu
 RequestLastAccessInError=Lỗi yêu cầu truy cập cơ sở dữ liệu mới nhất
 ReturnCodeLastAccessInError=Trả về mã cho lỗi yêu cầu truy cập cơ sở dữ liệu mới nhất
 InformationLastAccessInError=Thông tin cho lỗi yêu cầu truy cập cơ sở dữ liệu mới nhất
-DolibarrHasDetectedError=Dolibarr đã phát hiện một lỗi kỹ thuật
-YouCanSetOptionDolibarrMainProdToZero=Để có thêm thông tin, bạn có thể đọc tệp nhật ký hoặc thiết lâp tùy chọn $ dolibarr_main_prod thành '0' trong tệp cấu hình của bạn.
-InformationToHelpDiagnose=Thông tin này có thể hữu ích cho mục đích chẩn đoán (bạn có thể đặt tùy chọn $ dolibarr_main_prod thành '1' để xóa các thông báo như vậy)
+DigitalProspectsHasDetectedError=DigitalProspects đã phát hiện một lỗi kỹ thuật
+YouCanSetOptionDigitalProspectsMainProdToZero=Để có thêm thông tin, bạn có thể đọc tệp nhật ký hoặc thiết lâp tùy chọn $ DigitalProspects_main_prod thành '0' trong tệp cấu hình của bạn.
+InformationToHelpDiagnose=Thông tin này có thể hữu ích cho mục đích chẩn đoán (bạn có thể đặt tùy chọn $ DigitalProspects_main_prod thành '1' để xóa các thông báo như vậy)
 MoreInformation=Thông tin chi tiết
 TechnicalInformation=Thông tin kỹ thuật
 TechnicalID=ID kỹ thuật
 LineID=ID Dòng
 NotePublic=Ghi chú (công khai)
 NotePrivate=Ghi chú (cá nhân)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr đã được thiết lập để giới hạn độ chính xác của các đơn giá cho <b>%s</b> theo thập phân.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects đã được thiết lập để giới hạn độ chính xác của các đơn giá cho <b>%s</b> theo thập phân.
 DoTest=Kiểm tra
 ToFilter=Bộ lọc
 NoFilter=Không có bộ lọc
@@ -475,8 +475,8 @@ Generate=Xuất ra
 Duration=Thời hạn
 TotalDuration=Tổng thời hạn
 Summary=Tóm tắt
-DolibarrStateBoard=Thống kê cơ sở dữ liệu
-DolibarrWorkBoard=Các chỉ mục mở
+DigitalProspectsStateBoard=Thống kê cơ sở dữ liệu
+DigitalProspectsWorkBoard=Các chỉ mục mở
 NoOpenedElementToProcess=Không có phần tử mở để xử lý
 Available=Sẵn có
 NotYetAvailable=Chưa có
@@ -703,7 +703,7 @@ MenuECM=Chứng từ
 MenuAWStats=AWStats
 MenuMembers=Thành viên
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Giới hạn của Dolibarr (Thực đơn Nhà-Thiết lập-Bảo mật): %s Kb, giới hạn của PHP: %s Kb
+ThisLimitIsDefinedInSetup=Giới hạn của DigitalProspects (Thực đơn Nhà-Thiết lập-Bảo mật): %s Kb, giới hạn của PHP: %s Kb
 NoFileFound=Không có chứng từ được lưu trong thư mục này
 CurrentUserLanguage=Ngôn ngữ hiện tại
 CurrentTheme=Theme hiện tại
@@ -736,7 +736,7 @@ PrintContentArea=Hiển thị trang in khu vực nội dung chính
 MenuManager=Menu quản lý
 WarningYouAreInMaintenanceMode=Cảnh báo, bạn đang ở chế độ bảo trì: chỉ đăng nhập <b>%s mới</b> được phép sử dụng ứng dụng ở chế độ này.
 CoreErrorTitle=Lỗi hệ thống
-CoreErrorMessage=Xin lỗi, đã xảy ra lỗi. Liên hệ với quản trị viên hệ thống của bạn để kiểm tra nhật ký hoặc vô hiệu $ dolibarr_main_prod = 1 để có thêm thông tin.
+CoreErrorMessage=Xin lỗi, đã xảy ra lỗi. Liên hệ với quản trị viên hệ thống của bạn để kiểm tra nhật ký hoặc vô hiệu $ DigitalProspects_main_prod = 1 để có thêm thông tin.
 CreditCard=Thẻ tín dụng
 ValidatePayment=Xác nhận thanh toán
 CreditOrDebitCard=Thẻ tín dụng hoặc thẻ ghi nợ
@@ -875,7 +875,7 @@ Calendar=Lịch
 GroupBy=Nhóm bởi ...
 ViewFlatList=Xem danh sách phẳng
 RemoveString=Xóa chuỗi '%s'
-SomeTranslationAreUncomplete=Một số ngôn ngữ được cung cấp có thể chỉ được dịch một phần hoặc có thể có lỗi. Vui lòng giúp sửa ngôn ngữ của bạn bằng cách đăng ký tại <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> để thêm các cải tiến của bạn.
+SomeTranslationAreUncomplete=Một số ngôn ngữ được cung cấp có thể chỉ được dịch một phần hoặc có thể có lỗi. Vui lòng giúp sửa ngôn ngữ của bạn bằng cách đăng ký tại <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> để thêm các cải tiến của bạn.
 DirectDownloadLink=Liên kết tải xuống trực tiếp (public/external)
 DirectDownloadInternalLink=Liên kết tải xuống trực tiếp (cần phải đăng nhập và cần quyền)
 Download=Tải xuống

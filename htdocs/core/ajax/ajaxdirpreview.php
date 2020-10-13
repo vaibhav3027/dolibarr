@@ -252,7 +252,7 @@ if ($type == 'directory')
     		 */
     		$relativepath = GETPOST('file', 'alpha') ?GETPOST('file', 'alpha') : GETPOST('section_dir', 'alpha');
     		if ($relativepath && $relativepath != '/') $relativepath .= '/';
-    		$upload_dir = $dolibarr_main_data_root.'/'.$module.'/'.$relativepath;
+    		$upload_dir = $DigitalProspects_main_data_root.'/'.$module.'/'.$relativepath;
     		if (GETPOSTISSET('website') || GETPOSTISSET('file_manager'))
 	    	{
 	    		$param .= '&file_manager=1';

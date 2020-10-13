@@ -43,13 +43,13 @@ $langs->load("install");
 // Now we load forced/pre-set values from install.forced.php file.
 $useforcedwizard = false;
 $forcedfile = "./install.forced.php";
-if ($conffile == "/etc/dolibarr/conf.php") $forcedfile = "/etc/dolibarr/install.forced.php";
+if ($conffile == "/etc/DigitalProspects/conf.php") $forcedfile = "/etc/DigitalProspects/install.forced.php";
 if (@file_exists($forcedfile)) {
 	$useforcedwizard = true;
 	include_once $forcedfile;
 }
 
-dolibarr_install_syslog("- check: Dolibarr install/upgrade process started");
+DigitalProspects_install_syslog("- check: DigitalProspects install/upgrade process started");
 
 
 /*
@@ -226,7 +226,7 @@ if ($memmaxorig != '')
 clearstatcache();
 if (is_readable($conffile) && filesize($conffile) > 8)
 {
-	dolibarr_install_syslog("check: conf file '".$conffile."' already defined");
+	DigitalProspects_install_syslog("check: conf file '".$conffile."' already defined");
 	$confexists = 1;
 	include_once $conffile;
 
@@ -244,19 +244,19 @@ if (is_readable($conffile) && filesize($conffile) > 8)
 else
 {
 	// If not, we create it
-	dolibarr_install_syslog("check: we try to create conf file '".$conffile."'");
+	DigitalProspects_install_syslog("check: we try to create conf file '".$conffile."'");
 	$confexists = 0;
 
 	// First we try by copying example
 	if (@copy($conffile.".example", $conffile))
 	{
 		// Success
-		dolibarr_install_syslog("check: successfully copied file ".$conffile.".example into ".$conffile);
+		DigitalProspects_install_syslog("check: successfully copied file ".$conffile.".example into ".$conffile);
 	}
 	else
 	{
 		// If failed, we try to create an empty file
-		dolibarr_install_syslog("check: failed to copy file ".$conffile.".example into ".$conffile.". We try to create it.", LOG_WARNING);
+		DigitalProspects_install_syslog("check: failed to copy file ".$conffile.".example into ".$conffile.". We try to create it.", LOG_WARNING);
 
 		$fp = @fopen($conffile, "w");
 		if ($fp)
@@ -265,7 +265,7 @@ else
 			@fputs($fp, "\n");
 			fclose($fp);
 		}
-		else dolibarr_install_syslog("check: failed to create a new file ".$conffile." into current dir ".getcwd().". Please check permissions.", LOG_ERR);
+		else DigitalProspects_install_syslog("check: failed to create a new file ".$conffile." into current dir ".getcwd().". Please check permissions.", LOG_ERR);
 	}
 
 	// First install: no upgrade necessary/required
@@ -338,36 +338,36 @@ else
 		if (file_exists($conffile))
 		{
 			include_once $conffile;
-			if (!empty($dolibarr_main_db_type) && !empty($dolibarr_main_document_root))
+			if (!empty($DigitalProspects_main_db_type) && !empty($DigitalProspects_main_document_root))
 			{
-				if (!file_exists($dolibarr_main_document_root."/core/lib/admin.lib.php"))
+				if (!file_exists($DigitalProspects_main_document_root."/core/lib/admin.lib.php"))
 				{
-                    print '<span class="error">A '.$conffiletoshow.' file exists with a dolibarr_main_document_root to '.$dolibarr_main_document_root.' that seems wrong. Try to fix or remove the '.$conffiletoshow.' file.</span><br>'."\n";
-				    dol_syslog("A '".$conffiletoshow."' file exists with a dolibarr_main_document_root to ".$dolibarr_main_document_root." that seems wrong. Try to fix or remove the '".$conffiletoshow."' file.", LOG_WARNING);
+                    print '<span class="error">A '.$conffiletoshow.' file exists with a DigitalProspects_main_document_root to '.$DigitalProspects_main_document_root.' that seems wrong. Try to fix or remove the '.$conffiletoshow.' file.</span><br>'."\n";
+				    dol_syslog("A '".$conffiletoshow."' file exists with a DigitalProspects_main_document_root to ".$DigitalProspects_main_document_root." that seems wrong. Try to fix or remove the '".$conffiletoshow."' file.", LOG_WARNING);
 				}
 				else
 				{
-                    require_once $dolibarr_main_document_root.'/core/lib/admin.lib.php';
+                    require_once $DigitalProspects_main_document_root.'/core/lib/admin.lib.php';
 
                     // If password is encoded, we decode it
-                    if (preg_match('/crypted:/i', $dolibarr_main_db_pass) || !empty($dolibarr_main_db_encrypted_pass))
+                    if (preg_match('/crypted:/i', $DigitalProspects_main_db_pass) || !empty($DigitalProspects_main_db_encrypted_pass))
                     {
-                        require_once $dolibarr_main_document_root.'/core/lib/security.lib.php';
-                        if (preg_match('/crypted:/i', $dolibarr_main_db_pass))
+                        require_once $DigitalProspects_main_document_root.'/core/lib/security.lib.php';
+                        if (preg_match('/crypted:/i', $DigitalProspects_main_db_pass))
                         {
-                            $dolibarr_main_db_encrypted_pass = preg_replace('/crypted:/i', '', $dolibarr_main_db_pass); // We need to set this as it is used to know the password was initially crypted
-                            $dolibarr_main_db_pass = dol_decode($dolibarr_main_db_encrypted_pass);
+                            $DigitalProspects_main_db_encrypted_pass = preg_replace('/crypted:/i', '', $DigitalProspects_main_db_pass); // We need to set this as it is used to know the password was initially crypted
+                            $DigitalProspects_main_db_pass = dol_decode($DigitalProspects_main_db_encrypted_pass);
                         }
-                        else $dolibarr_main_db_pass = dol_decode($dolibarr_main_db_encrypted_pass);
+                        else $DigitalProspects_main_db_pass = dol_decode($DigitalProspects_main_db_encrypted_pass);
                     }
 
     				// $conf already created in inc.php
-    				$conf->db->type = $dolibarr_main_db_type;
-    				$conf->db->host = $dolibarr_main_db_host;
-    				$conf->db->port = $dolibarr_main_db_port;
-    				$conf->db->name = $dolibarr_main_db_name;
-    				$conf->db->user = $dolibarr_main_db_user;
-    				$conf->db->pass = $dolibarr_main_db_pass;
+    				$conf->db->type = $DigitalProspects_main_db_type;
+    				$conf->db->host = $DigitalProspects_main_db_host;
+    				$conf->db->port = $DigitalProspects_main_db_port;
+    				$conf->db->name = $DigitalProspects_main_db_name;
+    				$conf->db->user = $DigitalProspects_main_db_user;
+    				$conf->db->pass = $DigitalProspects_main_db_pass;
                     $db = getDoliDBInstance($conf->db->type, $conf->db->host, $conf->db->user, $conf->db->pass, $conf->db->name, $conf->db->port);
     				if ($db->connected && $db->database_selected)
     				{
@@ -380,10 +380,10 @@ else
 		// If database access is available, we set more variables
 		if ($ok)
 		{
-			if (empty($dolibarr_main_db_encryption)) $dolibarr_main_db_encryption = 0;
-			$conf->db->dolibarr_main_db_encryption = $dolibarr_main_db_encryption;
-			if (empty($dolibarr_main_db_cryptkey)) $dolibarr_main_db_cryptkey = '';
-			$conf->db->dolibarr_main_db_cryptkey = $dolibarr_main_db_cryptkey;
+			if (empty($DigitalProspects_main_db_encryption)) $DigitalProspects_main_db_encryption = 0;
+			$conf->db->DigitalProspects_main_db_encryption = $DigitalProspects_main_db_encryption;
+			if (empty($DigitalProspects_main_db_cryptkey)) $DigitalProspects_main_db_cryptkey = '';
+			$conf->db->DigitalProspects_main_db_cryptkey = $DigitalProspects_main_db_cryptkey;
 
 			$conf->setValues($db);
 			// Reset forced setup after the setValues
@@ -392,8 +392,8 @@ else
 
 			// Current version is $conf->global->MAIN_VERSION_LAST_UPGRADE
 			// Version to install is DOL_VERSION
-			$dolibarrlastupgradeversionarray = preg_split('/[\.-]/', isset($conf->global->MAIN_VERSION_LAST_UPGRADE) ? $conf->global->MAIN_VERSION_LAST_UPGRADE : (isset($conf->global->MAIN_VERSION_LAST_INSTALL) ? $conf->global->MAIN_VERSION_LAST_INSTALL : ''));
-			$dolibarrversiontoinstallarray = versiondolibarrarray();
+			$DigitalProspectslastupgradeversionarray = preg_split('/[\.-]/', isset($conf->global->MAIN_VERSION_LAST_UPGRADE) ? $conf->global->MAIN_VERSION_LAST_UPGRADE : (isset($conf->global->MAIN_VERSION_LAST_INSTALL) ? $conf->global->MAIN_VERSION_LAST_INSTALL : ''));
+			$DigitalProspectsversiontoinstallarray = versionDigitalProspectsarray();
 		}
 
 		// Show title
@@ -415,7 +415,7 @@ else
         $available_choices = array();
         $notavailable_choices = array();
 
-        if (empty($dolibarr_main_db_host))	// This means install process was not run
+        if (empty($DigitalProspects_main_db_host))	// This means install process was not run
         {
         	$foundrecommandedchoice = 1; // To show only once
         }
@@ -426,7 +426,7 @@ else
 		$choice .= '</td>';
         $choice .= '<td class="listofchoicesdesc">';
 		$choice .= $langs->trans("FreshInstallDesc");
-		if (empty($dolibarr_main_db_host))	// This means install process was not run
+		if (empty($DigitalProspects_main_db_host))	// This means install process was not run
 		{
 			$choice .= '<br>';
 			//print $langs->trans("InstallChoiceRecommanded",DOL_VERSION,$conf->global->MAIN_VERSION_LAST_UPGRADE);
@@ -456,7 +456,7 @@ else
 
 		// Show upgrade lines
 		$allowupgrade = true;
-		if (empty($dolibarr_main_db_host))	// This means install process was not run
+		if (empty($DigitalProspects_main_db_host))	// This means install process was not run
 		{
 			$allowupgrade = false;
 		}
@@ -493,24 +493,24 @@ else
 			$versionfrom = $migarray['from'];
             $versionto = $migarray['to'];
             $versionarray = preg_split('/[\.-]/', $version);
-            $dolibarrversionfromarray = preg_split('/[\.-]/', $versionfrom);
-            $dolibarrversiontoarray = preg_split('/[\.-]/', $versionto);
+            $DigitalProspectsversionfromarray = preg_split('/[\.-]/', $versionfrom);
+            $DigitalProspectsversiontoarray = preg_split('/[\.-]/', $versionto);
             // Define string newversionxxx that are used for text to show
             $newversionfrom = preg_replace('/(\.[0-9]+)$/i', '.*', $versionfrom);
             $newversionto = preg_replace('/(\.[0-9]+)$/i', '.*', $versionto);
             $newversionfrombis = '';
-            if (versioncompare($dolibarrversiontoarray, $versionarray) < -2)	// From x.y.z -> x.y.z+1
+            if (versioncompare($DigitalProspectsversiontoarray, $versionarray) < -2)	// From x.y.z -> x.y.z+1
             {
             	$newversionfrombis = ' '.$langs->trans("or").' '.$versionto;
             }
 
             if ($ok)
             {
-                if (count($dolibarrlastupgradeversionarray) >= 2)	// If database access is available and last upgrade version is known
+                if (count($DigitalProspectslastupgradeversionarray) >= 2)	// If database access is available and last upgrade version is known
                 {
                     // Now we check if this is the first qualified choice
                     if ($allowupgrade && empty($foundrecommandedchoice) &&
-                        (versioncompare($dolibarrversiontoarray, $dolibarrlastupgradeversionarray) > 0 || versioncompare($dolibarrversiontoarray, $versionarray) < -2)
+                        (versioncompare($DigitalProspectsversiontoarray, $DigitalProspectslastupgradeversionarray) > 0 || versioncompare($DigitalProspectsversiontoarray, $versionarray) < -2)
                     )
                     {
                         $foundrecommandedchoice = 1; // To show only once
@@ -635,5 +635,5 @@ $(".runupgrade").click(function() {
 
 </script>';
 
-dolibarr_install_syslog("- check: end");
+DigitalProspects_install_syslog("- check: end");
 pFooter(1); // Never display next button

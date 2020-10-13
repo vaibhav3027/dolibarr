@@ -289,7 +289,7 @@ class pdf_paiement
 
 		$pdf->SetTitle($outputlangs->transnoentities("Payments"));
 		$pdf->SetSubject($outputlangs->transnoentities("Payments"));
-		$pdf->SetCreator("Dolibarr ".DOL_VERSION);
+		$pdf->SetCreator("DigitalProspects ".DOL_VERSION);
 		$pdf->SetAuthor($outputlangs->convToOutputCharset($user->getFullName($outputlangs)));
 		//$pdf->SetKeyWords();
 		if (!empty($conf->global->MAIN_DISABLE_PDF_COMPRESSION)) $pdf->SetCompression(false);

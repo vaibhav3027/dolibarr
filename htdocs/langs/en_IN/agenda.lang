@@ -1,5 +1,5 @@
-# Dolibarr language file - Source file is en_US - agenda
-PropalClosedSignedInDolibarr=Quotation %s signed
-PropalClosedRefusedInDolibarr=Quotation %s refused
-PropalValidatedInDolibarr=Quotation %s validated
-PropalClassifiedBilledInDolibarr=Quotation %s classified billed
+# DigitalProspects language file - Source file is en_US - agenda
+PropalClosedSignedInDigitalProspects=Quotation %s signed
+PropalClosedRefusedInDigitalProspects=Quotation %s refused
+PropalValidatedInDigitalProspects=Quotation %s validated
+PropalClassifiedBilledInDigitalProspects=Quotation %s classified billed

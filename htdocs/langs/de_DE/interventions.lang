@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Serviceauftrag
 Interventions=Serviceaufträge
 InterventionCard=Serviceauftrag - Arbeitsbericht
@@ -30,13 +30,13 @@ InterventionClassifyDone=Als "erledigt" markieren
 StatusInterInvoiced=Angekündigt
 SendInterventionRef=Serviceauftrag %s
 SendInterventionByMail=Serviceauftrag per E-Mail versenden 
-InterventionCreatedInDolibarr=Serviceauftrag %s erstellt
-InterventionValidatedInDolibarr=Serviceauftrag %s freigegeben
-InterventionModifiedInDolibarr=Serviceauftrag %s geändert
-InterventionClassifiedBilledInDolibarr=Serviceauftrag %s als verrechnet eingestuft
-InterventionClassifiedUnbilledInDolibarr=Serviceauftrag %s als nicht verrechnet eingestuft
+InterventionCreatedInDigitalProspects=Serviceauftrag %s erstellt
+InterventionValidatedInDigitalProspects=Serviceauftrag %s freigegeben
+InterventionModifiedInDigitalProspects=Serviceauftrag %s geändert
+InterventionClassifiedBilledInDigitalProspects=Serviceauftrag %s als verrechnet eingestuft
+InterventionClassifiedUnbilledInDigitalProspects=Serviceauftrag %s als nicht verrechnet eingestuft
 InterventionSentByEMail=Serviceauftrag %s per E-Mail versendet
-InterventionDeletedInDolibarr=Serviceauftrag %s gelöscht
+InterventionDeletedInDigitalProspects=Serviceauftrag %s gelöscht
 InterventionsArea=Übersicht Serviceaufträge
 DraftFichinter=Serviceaufträge entwerfen
 LastModifiedInterventions=Zuletzt bearbeitete Serviceaufträge (maximal %s)

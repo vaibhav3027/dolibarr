@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Le nom de société %s existe déjà. Veuillez en choisir un autre.
 ErrorSetACountryFirst=Définissez d'abord le pays
 SelectThirdParty=Sélectionner un tiers
@@ -12,7 +12,7 @@ MenuNewSupplier=Nouveau fournisseur
 MenuNewPrivateIndividual=Nouveau particulier
 NewCompany=Nouvelle société (prospect, client, fournisseur)
 NewThirdParty=Nouveau tiers (prospect, client, fournisseur)
-CreateDolibarrThirdPartySupplier=Créer un Tiers (fournisseur)
+CreateDigitalProspectsThirdPartySupplier=Créer un Tiers (fournisseur)
 CreateThirdPartyOnly=Créer tiers
 CreateThirdPartyAndContact=Créer un tiers + un contact/adresse fils
 ProspectionArea=Espace prospection
@@ -392,8 +392,8 @@ ProspectsByStatus=Prospects par état
 NoParentCompany=Aucune
 ExportCardToFormat=Exporter fiche au format
 ContactNotLinkedToCompany=Contact non lié à un tiers
-DolibarrLogin=Identifiant utilisateur
-NoDolibarrAccess=Pas d'accès utilisateur
+DigitalProspectsLogin=Identifiant utilisateur
+NoDigitalProspectsAccess=Pas d'accès utilisateur
 ExportDataset_company_1=Tiers (sociétés/institutions/particuliers) et attributs
 ExportDataset_company_2=Contacts (de tiers) et attributs
 ImportDataset_company_1=Tiers (sociétés/institutions/particuliers) et attributs

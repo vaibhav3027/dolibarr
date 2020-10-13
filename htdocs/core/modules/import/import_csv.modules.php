@@ -63,10 +63,10 @@ class ImportCsv extends ModeleImports
 	public $extension; // Extension of files imported by driver
 
 	/**
-     * Dolibarr version of driver
+     * DigitalProspects version of driver
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $label_lib; // Label of external lib used by driver
 
@@ -110,7 +110,7 @@ class ImportCsv extends ModeleImports
 		$this->version = '1.34'; // Driver version
 
 		// If driver use an external library, put its name here
-		$this->label_lib = 'Dolibarr';
+		$this->label_lib = 'DigitalProspects';
 		$this->version_lib = DOL_VERSION;
 
 		$this->datatoimport = $datatoimport;
@@ -904,7 +904,7 @@ class ImportCsv extends ModeleImports
 								$resql = $this->db->query($sql);
 								if ($resql)
 								{
-								    $last_insert_id_array[$tablename] = $this->db->last_insert_id($tablename); // store the last inserted auto_increment id for each table, so that child tables can be inserted with the appropriate id. This must be done just after the INSERT request, else we risk losing the id (because another sql query will be issued somewhere in Dolibarr).
+								    $last_insert_id_array[$tablename] = $this->db->last_insert_id($tablename); // store the last inserted auto_increment id for each table, so that child tables can be inserted with the appropriate id. This must be done just after the INSERT request, else we risk losing the id (because another sql query will be issued somewhere in DigitalProspects).
 								    $insertdone = true;
 								}
 								else

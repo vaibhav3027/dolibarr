@@ -24,7 +24,7 @@
 /**
  *       \file       htdocs/install/fileconf.php
  *       \ingroup    install
- *       \brief      Ask all information required to build Dolibarr htdocs/conf/conf.php file (will be written to disk on next page step1)
+ *       \brief      Ask all information required to build DigitalProspects htdocs/conf/conf.php file (will be written to disk on next page step1)
  */
 
 include_once 'inc.php';
@@ -38,9 +38,9 @@ $langs->setDefaultLang($setuplang);
 
 $langs->loadLangs(array("install", "errors"));
 
-dolibarr_install_syslog("- fileconf: entering fileconf.php page");
+DigitalProspects_install_syslog("- fileconf: entering fileconf.php page");
 
-// You can force preselected values of the config step of Dolibarr by adding a file
+// You can force preselected values of the config step of DigitalProspects by adding a file
 // install.forced.php into directory htdocs/install (This is the case with some wizard
 // installer like DoliWamp, DoliMamp or DoliBuntu).
 // We first init "forced values" to nothing.
@@ -58,7 +58,7 @@ if (!isset($force_install_databaserootpass))	$force_install_databaserootpass = '
 // Now we load forced values from install.forced.php file.
 $useforcedwizard = false;
 $forcedfile = "./install.forced.php";
-if ($conffile == "/etc/dolibarr/conf.php") $forcedfile = "/etc/dolibarr/install.forced.php"; // Must be after inc.php
+if ($conffile == "/etc/DigitalProspects/conf.php") $forcedfile = "/etc/DigitalProspects/install.forced.php"; // Must be after inc.php
 if (@file_exists($forcedfile)) {
     $useforcedwizard = true;
     include_once $forcedfile;
@@ -72,14 +72,14 @@ if (@file_exists($forcedfile)) {
 
 session_start(); // To be able to keep info into session (used for not losing pass during navigation. pass must not transit through parmaeters)
 
-pHeader($langs->trans("ConfigurationFile"), "step1", "set", "", (empty($force_dolibarr_js_JQUERY) ? '' : $force_dolibarr_js_JQUERY.'/'), 'main-inside-bis');
+pHeader($langs->trans("ConfigurationFile"), "step1", "set", "", (empty($force_DigitalProspects_js_JQUERY) ? '' : $force_DigitalProspects_js_JQUERY.'/'), 'main-inside-bis');
 
 // Test if we can run a first install process
 if (!is_writable($conffile))
 {
     print $langs->trans("ConfFileIsNotWritable", $conffiletoshow);
-    dolibarr_install_syslog("fileconf: config file is not writable", LOG_WARNING);
-    dolibarr_install_syslog("- fileconf: end");
+    DigitalProspects_install_syslog("fileconf: config file is not writable", LOG_WARNING);
+    DigitalProspects_install_syslog("- fileconf: end");
     pFooter(1, $setuplang, 'jscheckparam');
     exit;
 }
@@ -114,12 +114,12 @@ if (!empty($force_install_message))
 		</td>
 	</tr>
 
-	<!-- Documents root $dolibarr_main_document_root -->
+	<!-- Documents root $DigitalProspects_main_document_root -->
 	<tr>
         <td class="label"><label for="main_dir"><b><?php print $langs->trans("WebPagesDirectory"); ?></b></label></td>
 <?php
-if (empty($dolibarr_main_url_root)) {
-	$dolibarr_main_document_root = detect_dolibarr_main_document_root();
+if (empty($DigitalProspects_main_url_root)) {
+	$DigitalProspects_main_document_root = detect_DigitalProspects_main_document_root();
 }
 ?>
 		<td class="label">
@@ -127,7 +127,7 @@ if (empty($dolibarr_main_url_root)) {
 			       class="minwidth300"
                    id="main_dir"
                    name="main_dir"
-                   value="<?php print $dolibarr_main_document_root ?>"
+                   value="<?php print $DigitalProspects_main_document_root ?>"
 <?php
 if (!empty($force_install_noedit)) {
 	print ' disabled';
@@ -140,19 +140,19 @@ if (!empty($force_install_noedit)) {
 		print $langs->trans("Examples").":<br>";
 		?>
 		<ul>
-			<li>/var/www/dolibarr/htdocs</li>
-			<li>C:/wwwroot/dolibarr/htdocs</li>
+			<li>/var/www/DigitalProspects/htdocs</li>
+			<li>C:/wwwroot/DigitalProspects/htdocs</li>
 		</ul>
 		</td>
 	</tr>
 
-	<!-- Documents URL $dolibarr_main_data_root -->
+	<!-- Documents URL $DigitalProspects_main_data_root -->
 	<tr>
 		<td class="label"><label for="main_data_dir"><b><?php print $langs->trans("DocumentsDirectory"); ?></b></label></td>
 		<?php
-		$dolibarr_main_data_root = @$force_install_main_data_root;
-		if (empty($dolibarr_main_data_root)) {
-			$dolibarr_main_data_root = detect_dolibarr_main_data_root($dolibarr_main_document_root);
+		$DigitalProspects_main_data_root = @$force_install_main_data_root;
+		if (empty($DigitalProspects_main_data_root)) {
+			$DigitalProspects_main_data_root = detect_DigitalProspects_main_data_root($DigitalProspects_main_document_root);
 		}
 		?>
 		<td class="label">
@@ -160,7 +160,7 @@ if (!empty($force_install_noedit)) {
 			       class="minwidth300"
                    id="main_data_dir"
                    name="main_data_dir"
-                   value="<?php print $dolibarr_main_data_root ?>"
+                   value="<?php print $DigitalProspects_main_data_root ?>"
 <?php if (!empty($force_install_noedit)) {
 	print ' disabled';
 } ?>
@@ -172,16 +172,16 @@ if (!empty($force_install_noedit)) {
 		print $langs->trans("Examples").":<br>";
 		?>
 		<ul>
-			<li>/var/lib/dolibarr/documents</li>
-			<li>C:/My Documents/dolibarr/documents</li>
+			<li>/var/lib/DigitalProspects/documents</li>
+			<li>C:/My Documents/DigitalProspects/documents</li>
 		</ul>
 		</td>
 	</tr>
 
-	<!-- Root URL $dolibarr_main_url_root -->
+	<!-- Root URL $DigitalProspects_main_url_root -->
 	<?php
-	if (empty($dolibarr_main_url_root)) {
-		$dolibarr_main_url_root = detect_dolibarr_main_url_root();
+	if (empty($DigitalProspects_main_url_root)) {
+		$DigitalProspects_main_url_root = detect_DigitalProspects_main_url_root();
 	}
 	?>
 	<tr>
@@ -192,7 +192,7 @@ if (!empty($force_install_noedit)) {
 			       class="minwidth300"
 			       id="main_url"
                    name="main_url"
-			       value="<?php print $dolibarr_main_url_root; ?> "
+			       value="<?php print $DigitalProspects_main_url_root; ?> "
 <?php if (!empty($force_install_noedit)) {
 	print ' disabled';
 }
@@ -202,8 +202,8 @@ if (!empty($force_install_noedit)) {
 		<td class="comment"><?php print $langs->trans("Examples").":<br>"; ?>
 		<ul>
 			<li>http://localhost/</li>
-			<li>http://www.myserver.com:8180/dolibarr</li>
-			<li>https://www.myvirtualfordolibarr.com/</li>
+			<li>http://www.myserver.com:8180/DigitalProspects</li>
+			<li>https://www.myvirtualforDigitalProspects.com/</li>
 		</ul>
 		</td>
 	</tr>
@@ -229,11 +229,11 @@ if (!empty($force_install_noedit)) {
 	}
 	?>
 
-	<!-- Dolibarr database -->
+	<!-- DigitalProspects database -->
 
 	<tr>
 		<td colspan="3" class="label"><br>
-		<h3><img class="valigntextbottom" src="../theme/common/octicons/build/svg/database.svg" width="20" alt="webserver"> <?php echo $langs->trans("DolibarrDatabase"); ?></h3>
+		<h3><img class="valigntextbottom" src="../theme/common/octicons/build/svg/database.svg" width="20" alt="webserver"> <?php echo $langs->trans("DigitalProspectsDatabase"); ?></h3>
 		</td>
 	</tr>
 
@@ -243,7 +243,7 @@ if (!empty($force_install_noedit)) {
 			<input type="text"
 			       id="db_name"
                    name="db_name"
-			       value="<?php echo (!empty($dolibarr_main_db_name)) ? $dolibarr_main_db_name : ($force_install_database ? $force_install_database : 'dolibarr'); ?>"
+			       value="<?php echo (!empty($DigitalProspects_main_db_name)) ? $DigitalProspects_main_db_name : ($force_install_database ? $force_install_database : 'DigitalProspects'); ?>"
 				<?php if ($force_install_noedit == 2 && $force_install_database !== null) { print ' disabled'; } ?>
 			>
 		</td>
@@ -252,9 +252,9 @@ if (!empty($force_install_noedit)) {
 
 
 	<?php
-	if (!isset($dolibarr_main_db_host))
+	if (!isset($DigitalProspects_main_db_host))
 	{
-	    $dolibarr_main_db_host = "localhost";
+	    $DigitalProspects_main_db_host = "localhost";
 	}
 	?>
 	<tr>
@@ -264,7 +264,7 @@ if (!empty($force_install_noedit)) {
 		<td class="label">
 		<?php
 
-		$defaultype = !empty($dolibarr_main_db_type) ? $dolibarr_main_db_type : ($force_install_type ? $force_install_type : 'mysqli');
+		$defaultype = !empty($DigitalProspects_main_db_type) ? $DigitalProspects_main_db_type : ($force_install_type ? $force_install_type : 'mysqli');
 
 		$modules = array();
 		$nbok = $nbko = 0;
@@ -337,7 +337,7 @@ if (!empty($force_install_noedit)) {
 			<input type="text"
                    id="db_host"
 			       name="db_host"
-			       value="<?php print (!empty($force_install_dbserver) ? $force_install_dbserver : (!empty($dolibarr_main_db_host) ? $dolibarr_main_db_host : 'localhost')); ?>"
+			       value="<?php print (!empty($force_install_dbserver) ? $force_install_dbserver : (!empty($DigitalProspects_main_db_host) ? $DigitalProspects_main_db_host : 'localhost')); ?>"
 				<?php if ($force_install_noedit == 2 && $force_install_dbserver !== null) { print ' disabled'; } ?>
 			>
 		</td>
@@ -352,7 +352,7 @@ if (!empty($force_install_noedit)) {
 			<input type="text"
 			       name="db_port"
 			       id="db_port"
-			       value="<?php print (!empty($force_install_port)) ? $force_install_port : $dolibarr_main_db_port; ?>"
+			       value="<?php print (!empty($force_install_port)) ? $force_install_port : $DigitalProspects_main_db_port; ?>"
 				<?php if ($force_install_noedit == 2 && $force_install_port !== null) { print ' disabled'; } ?>
 			>
 		</td>
@@ -367,7 +367,7 @@ if (!empty($force_install_noedit)) {
 			<input type="text"
                    id="db_prefix"
 			       name="db_prefix"
-			       value="<?php echo(!empty($force_install_prefix) ? $force_install_prefix : (!empty($dolibarr_main_db_prefix) ? $dolibarr_main_db_prefix : 'llx_')); ?>"
+			       value="<?php echo(!empty($force_install_prefix) ? $force_install_prefix : (!empty($DigitalProspects_main_db_prefix) ? $DigitalProspects_main_db_prefix : 'llx_')); ?>"
 				<?php if ($force_install_noedit == 2 && $force_install_prefix !== null) { print ' disabled'; } ?>
 			>
 		</td>
@@ -394,7 +394,7 @@ if (!empty($force_install_noedit)) {
 			<input type="text"
                    id="db_user"
 			       name="db_user"
-			       value="<?php print (!empty($force_install_databaselogin)) ? $force_install_databaselogin : $dolibarr_main_db_user; ?>"
+			       value="<?php print (!empty($force_install_databaselogin)) ? $force_install_databaselogin : $DigitalProspects_main_db_user; ?>"
 				<?php if ($force_install_noedit == 2 && $force_install_databaselogin !== null) { print ' disabled'; } ?>
 			>
 		</td>
@@ -411,7 +411,7 @@ if (!empty($force_install_noedit)) {
 				<?php
 			    // If $force_install_databasepass is on, we don't want to set password, we just show '***'. Real value will be extracted from the forced install file at step1.
 			    $autofill = ((!empty($_SESSION['dol_save_pass'])) ? $_SESSION['dol_save_pass'] : str_pad('', strlen($force_install_databasepass), '*'));
-			    if (!empty($dolibarr_main_prod)) {
+			    if (!empty($DigitalProspects_main_prod)) {
 				    $autofill = '';
 			    }
 			    print dol_escape_htmltag($autofill);
@@ -481,7 +481,7 @@ if (!empty($force_install_noedit)) {
 			       value="<?php
 			        // If $force_install_databaserootpass is on, we don't want to set password here, we just show '***'. Real value will be extracted from the forced install file at step1.
 			        $autofill = ((!empty($force_install_databaserootpass)) ? str_pad('', strlen($force_install_databaserootpass), '*') : @$db_pass_root);
-			        if (!empty($dolibarr_main_prod)) {
+			        if (!empty($DigitalProspects_main_prod)) {
 				        $autofill = '';
 			        }
 				    // Do not autofill password if instance is a production instance
@@ -619,5 +619,5 @@ function jscheckparam()
 
 // $db->close();	Not database connexion yet
 
-dolibarr_install_syslog("- fileconf: end");
+DigitalProspects_install_syslog("- fileconf: end");
 pFooter($err, $setuplang, 'jscheckparam');

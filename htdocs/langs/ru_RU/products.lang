@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Продукт исх.
 ProductLabel=Этикетка товара
 ProductLabelTranslated=Переведенная этикетка продукта
@@ -289,7 +289,7 @@ ComposedProduct=Child products
 MinSupplierPrice=Минимальная закупочная цена
 MinCustomerPrice=Minimum selling price
 DynamicPriceConfiguration=Настройка динамического ценообразования
-DynamicPriceDesc=You may define mathematical formulae to calculate Customer or Vendor prices. Such formulas can use all mathematical operators, some constants and variables. You can define here the variables you wish to use. If the variable needs an automatic update, you may define the external URL to allow Dolibarr to update the value automatically.
+DynamicPriceDesc=You may define mathematical formulae to calculate Customer or Vendor prices. Such formulas can use all mathematical operators, some constants and variables. You can define here the variables you wish to use. If the variable needs an automatic update, you may define the external URL to allow DigitalProspects to update the value automatically.
 AddVariable=Добавить переменную
 AddUpdater=Добавить обновление
 GlobalVariables=Глобальные переменные
@@ -364,7 +364,7 @@ NewProductAttribute=Новый атрибут
 NewProductAttributeValue=Новое значение атрибута
 ErrorCreatingProductAttributeValue=При создании значения атрибута произошла ошибка. Это может быть потому, что уже существует существующее значение с этой ссылкой
 ProductCombinationGeneratorWarning=Если вы продолжите, прежде чем генерировать новые варианты, все предыдущие будут удалены. Уже существующие будут обновляться новыми значениями
-TooMuchCombinationsWarning=Создание множества вариантов может привести к высокой загрузке процессора, памяти и Dolibarr, которые не смогут их создать. Включение опции «%s» может помочь уменьшить использование памяти.
+TooMuchCombinationsWarning=Создание множества вариантов может привести к высокой загрузке процессора, памяти и DigitalProspects, которые не смогут их создать. Включение опции «%s» может помочь уменьшить использование памяти.
 DoNotRemovePreviousCombinations=Не удалять предыдущие варианты
 UsePercentageVariations=Использовать процентные вариации
 PercentageVariation=Изменение процентов

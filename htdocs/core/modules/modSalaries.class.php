@@ -29,13 +29,13 @@
  *  \ingroup    salaries
  *  \brief      File to activate module salaries
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to manage salaries module
  */
-class modSalaries extends DolibarrModules
+class modSalaries extends DigitalProspectsModules
 {
 
 	/**
@@ -58,8 +58,8 @@ class modSalaries extends DolibarrModules
 		// Module description used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
 		$this->description = "Payment of salaries";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'payment';
@@ -159,7 +159,7 @@ class modSalaries extends DolibarrModules
 
 	/**
 	 *  Function called when module is enabled.
-	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *  It also creates data directories
 	 *
 	 *  @param      string	$options    Options when enabling module ('', 'noboxes')

@@ -72,7 +72,7 @@ if (empty($reshook))
 	{
 		for ($i = 1; $i < 9; $i++)
 		{
-			dolibarr_set_const($db, GETPOST("nom$i"), GETPOST("value$i"), 'chaine', 0, '', $conf->entity);
+			DigitalProspects_set_const($db, GETPOST("nom$i"), GETPOST("value$i"), 'chaine', 0, '', $conf->entity);
 		}
 	}
 	if ($action == 'create')

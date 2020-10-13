@@ -23,13 +23,13 @@
  *  \brief      Trigger file for
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for security audit events
  */
-class InterfaceLogevents extends DolibarrTriggers
+class InterfaceLogevents extends DigitalProspectsTriggers
 {
 	/**
 	 * @var string Image of the trigger
@@ -38,16 +38,16 @@ class InterfaceLogevents extends DolibarrTriggers
 
 	public $family = 'core';
 
-	public $description = "Triggers of this module allows to add security event records inside Dolibarr.";
+	public $description = "Triggers of this module allows to add security event records inside DigitalProspects.";
 
 	/**
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
-	 * Function called when a Dolibarrr security audit event is done.
+	 * Function called when a DigitalProspectsr security audit event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * @param string		$action		Event action code

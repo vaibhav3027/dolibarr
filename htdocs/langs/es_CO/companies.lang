@@ -1,7 +1,7 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ConfirmDeleteContact=Está seguro de borrar este contacto y todas la información relacionada?
 NewCompany=Nueva compañía (prospecto, cliente, vendedor)
-CreateDolibarrThirdPartySupplier=Crear un tercero (vendedor)
+CreateDigitalProspectsThirdPartySupplier=Crear un tercero (vendedor)
 ParentCompany=Sede principal
 Subsidiaries=Sucursales
 RegisteredOffice=Domicilio principal

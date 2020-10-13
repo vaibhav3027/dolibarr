@@ -49,7 +49,7 @@ $left = ($langs->trans("DIRECTION") == 'rtl' ? 'right' : 'left');
 
 $title = $langs->trans("Search");
 
-// URL http://mydolibarr/core/search_page?dol_use_jmobile=1 can be used for tests
+// URL http://myDigitalProspects/core/search_page?dol_use_jmobile=1 can be used for tests
 $head = '<!-- Quick access -->'."\n";
 $arrayofjs = array();
 $arrayofcss = array();

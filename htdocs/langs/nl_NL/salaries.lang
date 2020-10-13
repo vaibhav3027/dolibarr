@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - salaries
+# DigitalProspects language file - Source file is en_US - salaries
 SALARIES_ACCOUNTING_ACCOUNT_PAYMENT=Grootboekrekening voor medewerker derde partij
 SALARIES_ACCOUNTING_ACCOUNT_PAYMENT_Desc=De specifieke account die op de gebruikerskaart is gedefinieerd, wordt alleen voor de boekhouding van subgrootboek gebruikt. Deze wordt gebruikt voor grootboek en als standaardwaarde voor subgrootboek-boekhouding als specifieke gebruikersaccount voor de account op gebruiker niet is gedefinieerd.
 SALARIES_ACCOUNTING_ACCOUNT_CHARGE=Standaard grootboekrekening voor salaris betalingen

@@ -1270,7 +1270,7 @@ class DolGraph
 				if ($i > 0) $this->stringtoshow .= ', ';
 				$this->stringtoshow .= "\n";
 				$this->stringtoshow .= '{';
-				$this->stringtoshow .= 'dolibarrinfo: \'y_'.$i.'\', ';
+				$this->stringtoshow .= 'DigitalProspectsinfo: \'y_'.$i.'\', ';
 				$this->stringtoshow .= 'label: \''.dol_escape_js(dol_string_nohtmltag($textoflegend)).'\', ';
 				$this->stringtoshow .= 'pointStyle: \''.($this->type[$i] == 'linesnopoint' ? 'line' : 'circle').'\', ';
 				$this->stringtoshow .= 'fill: '.($type == 'bar' ? 'true' : 'false').', ';

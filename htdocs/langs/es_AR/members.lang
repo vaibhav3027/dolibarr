@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Area de miembros
 MemberCard=Ficha de miembro
 SubscriptionCard=Ficha de la suscripción
@@ -8,7 +8,7 @@ MembersTickets=Tickets de miembros
 FundationMembers=Miembros de la fundación
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Otro miembro (nombre: <b>%s</b>, usuario: <b>%s</b>) está vinculado al tercero <b>%s</b>. Debes quitar primero este vínculo pues un tercero no puede estar vinculado a más de un miembro (y viceversa).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Por motivos de seguridad, debe tener permisos para editar todos los usuarios para poder vincular a un miembro a un usuario que no sea suyo.
-SetLinkToThirdParty=Vincular a un tercedo de Dolibarr
+SetLinkToThirdParty=Vincular a un tercedo de DigitalProspects
 MembersCards=Cartas de presentación de miembros
 MembersList=Lista de miembros
 MembersListToValid=Lista de miembros en estado borrador (a ser validados)
@@ -70,7 +70,7 @@ Filehtpasswd=archivo htpasswd
 ConfirmValidateMember=¿Estás seguro que quieres validar a este miembro?
 PublicMemberList=Lista pública de miembros
 BlankSubscriptionForm=Formulario público de auto suscripción
-BlankSubscriptionFormDesc=Dolibarr puede proporcionarte una URL/sitio web público para permitir que los visitantes externos puedan solicitar suscribirse a la fundación. Si se habilita un módulo de pago en línea, también se puede proporcionar automáticamente un formulario para este fin.
+BlankSubscriptionFormDesc=DigitalProspects puede proporcionarte una URL/sitio web público para permitir que los visitantes externos puedan solicitar suscribirse a la fundación. Si se habilita un módulo de pago en línea, también se puede proporcionar automáticamente un formulario para este fin.
 EnablePublicSubscriptionForm=Habilite el sitio público con el formulario de auto suscripción
 ExportDataset_member_1=Miembros y suscripciones
 LastMembersModified=Últimos %smiembros modificados

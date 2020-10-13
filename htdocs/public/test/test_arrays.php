@@ -4,11 +4,11 @@ define("NOCSRFCHECK", 1); // We accept to go on this page from external web site
 
 require '../../main.inc.php';
 
-if ($dolibarr_main_prod) {
+if ($DigitalProspects_main_prod) {
 	accessforbidden();
 }
 
-$usedolheader = 1; // 1 = Test inside a dolibarr page, 0 = Use hard coded header
+$usedolheader = 1; // 1 = Test inside a DigitalProspects page, 0 = Use hard coded header
 
 $form = new Form($db);
 
@@ -26,7 +26,7 @@ if (empty($usedolheader))
 	<html>
 	<head>
 	<meta name="robots" content="noindex,nofollow" />
-	<meta name="author" content="Dolibarr Development Team">
+	<meta name="author" content="DigitalProspects Development Team">
 	<title>Test page</title>
 	<!-- Includes for JQuery (Ajax library) -->
 	<link rel="stylesheet" type="text/css" href="<?php echo DOL_URL_ROOT ?>/includes/jquery/css/base/jquery-ui.css" />

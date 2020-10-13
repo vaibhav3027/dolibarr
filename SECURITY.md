@@ -9,5 +9,5 @@
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, please send an email to security@dolibarr.org
+To report a vulnerability, please send an email to security@DigitalProspects.org
 In most cases, after fixing the security, we make an answer by email to say the issue has been fixed.

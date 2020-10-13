@@ -104,9 +104,9 @@ if (empty($pageid))
 */
 
 // Security: Delete string ../ into $original_file
-global $dolibarr_main_data_root;
+global $DigitalProspects_main_data_root;
 
-$original_file = $dolibarr_main_data_root.'/website/'.$website.'/styles.css.php';
+$original_file = $DigitalProspects_main_data_root.'/website/'.$website.'/styles.css.php';
 
 // Find the subdirectory name as the reference
 $refname = basename(dirname($original_file)."/");
@@ -148,7 +148,7 @@ if (!file_exists($original_file_osencoded))
 
 
 // Output page content
-define('USEDOLIBARRSERVER', 1);
+define('USEDigitalProspectsSERVER', 1);
 print '/* Page content '.$original_file.' : CSS content that was saved into tpl dir */'."\n";
 require_once $original_file_osencoded;
 

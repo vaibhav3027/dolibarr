@@ -22,13 +22,13 @@
  *      \ingroup    pos
  *      \brief      File to enable/disable module Point Of Sales
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Point Of Sales
  */
-class modCashDesk extends DolibarrModules
+class modCashDesk extends DigitalProspectsModules
 {
 	/**
 	 *   Constructor. Define names, constants, directories, boxes, permissions
@@ -40,7 +40,7 @@ class modCashDesk extends DolibarrModules
 		$this->db = $db;
 
 		// Id for module (must be unique).
-		// Use here a free id (See in Home -> System information -> Dolibarr for list of used module id).
+		// Use here a free id (See in Home -> System information -> DigitalProspects for list of used module id).
 		$this->numero = 50100;
 		// Key text used to identify module (for permission, menus, etc...)
 		$this->rights_class = 'cashdesk';
@@ -52,7 +52,7 @@ class modCashDesk extends DolibarrModules
 		$this->description = "CashDesk module";
 
 		$this->revision = '1.27';
-		$this->version = 'dolibarr';
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'cash-register';
@@ -68,7 +68,7 @@ class modCashDesk extends DolibarrModules
 		$this->depends = array('always'=>"modBanque", 'always'=>"modFacture", 'always'=>"modProduct", 'FR'=>'modBlockedLog'); // List of modules id that must be enabled if this module is enabled
 		$this->requiredby = array(); // List of modules id to disable if this one is disabled
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(2, 4); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(2, 4); // Minimum version of DigitalProspects required by module
 		$this->langfiles = array("cashdesk");
 		$this->warnings_activation = array('FR'=>'WarningNoteModulePOSForFrenchLaw'); // Warning to show when we activate module. array('always'='text') or array('FR'='text')
 		//$this->warnings_activation_ext = array('FR'=>'WarningInstallationMayBecomeNotCompliantWithLaw');  // Warning to show when we activate an external module. array('always'='text') or array('FR'='text')
@@ -126,7 +126,7 @@ class modCashDesk extends DolibarrModules
 
     /**
      *  Function called when module is enabled.
-     *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+     *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
      *  It also creates data directories
      *
      *  @param      string	$options    Options when enabling module ('', 'noboxes')

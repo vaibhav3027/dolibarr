@@ -1247,14 +1247,14 @@ if ($action == 'create')
 	}
 
 	print '<tr><td>'.$langs->trans("NotePublic").'</td><td class="tdtop">';
-	$doleditor = new DolEditor('note_public', $note_public, '', '100', 'dolibarr_notes', 'In', 1, true, true, ROWS_3, '90%');
+	$doleditor = new DolEditor('note_public', $note_public, '', '100', 'DigitalProspects_notes', 'In', 1, true, true, ROWS_3, '90%');
 	print $doleditor->Create(1);
 	print '</td></tr>';
 
 	if (empty($user->socid))
 	{
 		print '<tr><td>'.$langs->trans("NotePrivate").'</td><td class="tdtop">';
-		$doleditor = new DolEditor('note_private', $note_private, '', '100', 'dolibarr_notes', 'In', 1, true, true, ROWS_3, '90%');
+		$doleditor = new DolEditor('note_private', $note_private, '', '100', 'DigitalProspects_notes', 'In', 1, true, true, ROWS_3, '90%');
 		print $doleditor->Create(1);
 		print '</td></tr>';
 	}
@@ -1734,7 +1734,7 @@ else
 					$nbrows = ROWS_2;
 					if (!empty($conf->global->MAIN_INPUT_DESC_HEIGHT)) $nbrows = $conf->global->MAIN_INPUT_DESC_HEIGHT;
 					$enable = (isset($conf->global->FCKEDITOR_ENABLE_DETAILS) ? $conf->global->FCKEDITOR_ENABLE_DETAILS : 0);
-					$doleditor = new DolEditor('product_desc', $objp->description, '', 92, 'dolibarr_details', '', false, true, $enable, $nbrows, '90%');
+					$doleditor = new DolEditor('product_desc', $objp->description, '', 92, 'DigitalProspects_details', '', false, true, $enable, $nbrows, '90%');
 					$doleditor->Create();
 
 					print '</td>';

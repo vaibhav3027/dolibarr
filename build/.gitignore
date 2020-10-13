@@ -1,9 +1,9 @@
-/dolibarr_*.deb
-/dolibarr_*.dsc
-/dolibarr_*.changes
-/dolibarr_*.gz
-/dolibarr-*.tgz
-/dolibarr-*.rpm
-/dolibarr-*.zip
+/DigitalProspects_*.deb
+/DigitalProspects_*.dsc
+/DigitalProspects_*.changes
+/DigitalProspects_*.gz
+/DigitalProspects-*.tgz
+/DigitalProspects-*.rpm
+/DigitalProspects-*.zip
 /*.exe
 /html

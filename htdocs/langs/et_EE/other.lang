@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Turvakood
 NumberingShort=N°
 Tools=Tööriistad
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=Halda ühenduse liikmeid
@@ -177,10 +177,10 @@ SizeUnitpoint=punkt
 BugTracker=Bug tracker
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=Tagasi sisselogimise lehele
-AuthenticationDoesNotAllowSendNewPassword=Autentimisrežiim on hetkel <b>%s</b>.<br>Selles režiimis ei tea Dolibarri sinu parooli ja ei ole ka võimeline seda muutma.<br>Parooli muutmiseks võta ühendust oma süsteemiadministraatoriga.
+AuthenticationDoesNotAllowSendNewPassword=Autentimisrežiim on hetkel <b>%s</b>.<br>Selles režiimis ei tea DigitalProspectsi sinu parooli ja ei ole ka võimeline seda muutma.<br>Parooli muutmiseks võta ühendust oma süsteemiadministraatoriga.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>Reg kood %s</b> on info, mis sõltub kolmanda isiku riigist.<br>Näiteks riigi <b>%s</b> puhul on see kood <b>%s</b>.
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=Andmekogu import
-DolibarrNotification=Automaatne teavitamine
+DigitalProspectsNotification=Automaatne teavitamine
 ResizeDesc=Sisesta uus laius <b>VÕI</b> uus kõrgus. Suuruse muutmise käigus säilitatakse kõrguse ja laiuse suhe...
 NewLength=Uus laius
 NewHeight=Uus kõrgus

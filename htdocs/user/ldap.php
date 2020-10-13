@@ -59,7 +59,7 @@ if ($reshook < 0) setEventMessages($hookmanager->error, $hookmanager->errors, 'e
 
 if (empty($reshook))
 {
-	if ($_GET["action"] == 'dolibarr2ldap')
+	if ($_GET["action"] == 'DigitalProspects2ldap')
 	{
 		$ldap = new Ldap();
 		$result = $ldap->connect_bind();
@@ -112,7 +112,7 @@ print '<table class="border centpercent">';
 print '<tr><td class="titlefield">'.$langs->trans("Login").'</td>';
 if ($object->ldap_sid)
 {
-	print '<td class="warning">'.$langs->trans("LoginAccountDisableInDolibarr").'</td>';
+	print '<td class="warning">'.$langs->trans("LoginAccountDisableInDigitalProspects").'</td>';
 }
 else
 {
@@ -158,14 +158,14 @@ dol_fiche_end();
 
 print '<div class="tabsAction">';
 
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap')
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap')
 {
-	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=dolibarr2ldap">'.$langs->trans("ForceSynchronize").'</a>';
+	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=DigitalProspects2ldap">'.$langs->trans("ForceSynchronize").'</a>';
 }
 
 print "</div>\n";
 
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap') print "<br>\n";
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap') print "<br>\n";
 
 
 

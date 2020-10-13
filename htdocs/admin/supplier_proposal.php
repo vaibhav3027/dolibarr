@@ -53,7 +53,7 @@ if ($action == 'updateMask')
 {
 	$maskconstsupplier_proposal = GETPOST('maskconstsupplier_proposal', 'alpha');
 	$masksupplier_proposal = GETPOST('masksupplier_proposal', 'alpha');
-	if ($maskconstsupplier_proposal) $res = dolibarr_set_const($db, $maskconstsupplier_proposal, $masksupplier_proposal, 'chaine', 0, '', $conf->entity);
+	if ($maskconstsupplier_proposal) $res = DigitalProspects_set_const($db, $maskconstsupplier_proposal, $masksupplier_proposal, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -116,7 +116,7 @@ if ($action == 'set_SUPPLIER_PROPOSAL_DRAFT_WATERMARK')
 {
 	$draft = GETPOST('SUPPLIER_PROPOSAL_DRAFT_WATERMARK', 'alpha');
 
-	$res = dolibarr_set_const($db, "SUPPLIER_PROPOSAL_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "SUPPLIER_PROPOSAL_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 
  	if (!$error)
@@ -133,7 +133,7 @@ if ($action == 'set_SUPPLIER_PROPOSAL_FREE_TEXT')
 {
 	$freetext = GETPOST('SUPPLIER_PROPOSAL_FREE_TEXT', 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "SUPPLIER_PROPOSAL_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "SUPPLIER_PROPOSAL_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -149,7 +149,7 @@ if ($action == 'set_SUPPLIER_PROPOSAL_FREE_TEXT')
 
 if ($action == 'set_BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_PROPOSAL')
 {
-    $res = dolibarr_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_PROPOSAL", $value, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_SUPPLIER_PROPOSAL", $value, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -174,13 +174,13 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->SUPPLIER_PROPOSAL_ADDON_PDF == "$value") dolibarr_del_const($db, 'SUPPLIER_PROPOSAL_ADDON_PDF', $conf->entity);
+        if ($conf->global->SUPPLIER_PROPOSAL_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'SUPPLIER_PROPOSAL_ADDON_PDF', $conf->entity);
 	}
 }
 
 elseif ($action == 'setdoc')
 {
-    if (dolibarr_set_const($db, "SUPPLIER_PROPOSAL_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+    if (DigitalProspects_set_const($db, "SUPPLIER_PROPOSAL_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		$conf->global->SUPPLIER_PROPOSAL_ADDON_PDF = $value;
 	}
@@ -198,7 +198,7 @@ elseif ($action == 'setmod')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "SUPPLIER_PROPOSAL_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "SUPPLIER_PROPOSAL_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 
@@ -515,7 +515,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

@@ -75,7 +75,7 @@ if ($action == 'view' && $object->fetch($socid) <= 0)
 	exit;
 }
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $object->getCanvas($socid);
 $canvas = $object->canvas ? $object->canvas : GETPOST("canvas");
 $objcanvas = null;

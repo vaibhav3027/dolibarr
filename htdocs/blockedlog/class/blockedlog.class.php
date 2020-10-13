@@ -1066,7 +1066,7 @@ class BlockedLog
 
 			$fingerprint = dol_hash(print_r($mysoc, true).getRandomPassword(1), '5');
 
-			dolibarr_set_const($db, 'BLOCKEDLOG_ENTITY_FINGERPRINT', $fingerprint, 'chaine', 0, 'Numeric Unique Fingerprint', $conf->entity);
+			DigitalProspects_set_const($db, 'BLOCKEDLOG_ENTITY_FINGERPRINT', $fingerprint, 'chaine', 0, 'Numeric Unique Fingerprint', $conf->entity);
 
 			$conf->global->BLOCKEDLOG_ENTITY_FINGERPRINT = $fingerprint;
 		}

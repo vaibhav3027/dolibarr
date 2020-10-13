@@ -69,7 +69,7 @@ if ($action == 'update')
 
 
     if (in_array($accounting_mode, $accounting_modes)) {
-        if (!dolibarr_set_const($db, 'ACCOUNTING_MODE', $accounting_mode, 'chaine', 0, '', $conf->entity)) {
+        if (!DigitalProspects_set_const($db, 'ACCOUNTING_MODE', $accounting_mode, 'chaine', 0, '', $conf->entity)) {
             $error++;
         }
     } else {
@@ -79,7 +79,7 @@ if ($action == 'update')
     foreach ($list as $constname) {
         $constvalue = GETPOST($constname, 'alpha');
 
-        if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+        if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
             $error++;
         }
     }
@@ -87,16 +87,16 @@ if ($action == 'update')
     $report_include_varpay = GETPOST('ACCOUNTING_REPORTS_INCLUDE_VARPAY', 'alpha');
     if (!empty($report_include_varpay))
         if ($report_include_varpay == 'yes')
-            if (!dolibarr_set_const($db, 'ACCOUNTING_REPORTS_INCLUDE_VARPAY', 1, 'chaine', 0, '', $conf->entity)) $error++;
+            if (!DigitalProspects_set_const($db, 'ACCOUNTING_REPORTS_INCLUDE_VARPAY', 1, 'chaine', 0, '', $conf->entity)) $error++;
         if ($report_include_varpay == 'no')
-            if (!dolibarr_del_const($db, 'ACCOUNTING_REPORTS_INCLUDE_VARPAY', $conf->entity)) $error++;
+            if (!DigitalProspects_del_const($db, 'ACCOUNTING_REPORTS_INCLUDE_VARPAY', $conf->entity)) $error++;
 
     $report_include_loan = GETPOST('ACCOUNTING_REPORTS_INCLUDE_LOAN', 'alpha');
     if (!empty($report_include_loan))
         if ($report_include_loan == 'yes')
-            if (!dolibarr_set_const($db, 'ACCOUNTING_REPORTS_INCLUDE_LOAN', 1, 'chaine', 0, '', $conf->entity)) $error++;
+            if (!DigitalProspects_set_const($db, 'ACCOUNTING_REPORTS_INCLUDE_LOAN', 1, 'chaine', 0, '', $conf->entity)) $error++;
         if ($report_include_loan == 'no')
-            if (!dolibarr_del_const($db, 'ACCOUNTING_REPORTS_INCLUDE_LOAN', $conf->entity)) $error++;
+            if (!DigitalProspects_del_const($db, 'ACCOUNTING_REPORTS_INCLUDE_LOAN', $conf->entity)) $error++;
 
     if (!$error)
     {

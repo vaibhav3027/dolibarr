@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - website
+# DigitalProspects language file - Source file is en_US - website
 WebsiteSetupDesc=Crea aquí los sitios web que deseas utilizar. Luego entra en el menú de sitios web para editarlos.
 ConfirmDeleteWebsite=¿Estás seguro de que deseas eliminar este sitio web? Todas sus páginas y contenido también serán eliminados. Los archivos cargados (como en el directorio de medios, el módulo ECM, ...) permanecerán.
 WEBSITE_PAGENAME=Nombre / alias de la página
@@ -33,7 +33,7 @@ CheckVirtualHostPerms=Compruebe también que el host virtual tiene permiso <stro
 ReadPerm=Leer
 TestDeployOnWeb=Prueba / despliegue en la web
 PreviewSiteServedByWebServer=<u> Obtenga una vista previa de %s en una nueva pestaña. </ u> <br> <br> El %s será atendido por un servidor web externo (como Apache, Nginx, IIS). Debe instalar y configurar este servidor antes de apuntar al directorio: <br> <strong> %s </ strong> <br> URL servida por un servidor externo: <br> <strong> %s </ strong>
-PreviewSiteServedByDolibarr=<u> Obtenga una vista previa de %s en una nueva pestaña. </ u> <br> <br> El servidor Dolibarr servirá %s, por lo que no necesita ningún servidor web adicional (como Apache, Nginx, IIS) para su instalación. < br> El inconveniente es que la URL de las páginas no es fácil de usar y comienza con la ruta de Dolibarr. <br> URL servida por Dolibarr: <br> <strong> %s </ strong> <br> <br> Para usar la suya servidor web externo para servir a este sitio web, crear un servidor virtual en su servidor web que apunte en el directorio <br> <strong> %s </ strong> <br> y luego ingresar el nombre de este servidor virtual y hacer clic en el otro botón de vista previa .
+PreviewSiteServedByDigitalProspects=<u> Obtenga una vista previa de %s en una nueva pestaña. </ u> <br> <br> El servidor DigitalProspects servirá %s, por lo que no necesita ningún servidor web adicional (como Apache, Nginx, IIS) para su instalación. < br> El inconveniente es que la URL de las páginas no es fácil de usar y comienza con la ruta de DigitalProspects. <br> URL servida por DigitalProspects: <br> <strong> %s </ strong> <br> <br> Para usar la suya servidor web externo para servir a este sitio web, crear un servidor virtual en su servidor web que apunte en el directorio <br> <strong> %s </ strong> <br> y luego ingresar el nombre de este servidor virtual y hacer clic en el otro botón de vista previa .
 VirtualHostUrlNotDefined=La URL del servidor virtual servido por un servidor web externo no está definido
 NoPageYet=No hay páginas aún
 SyntaxHelp=Ayuda en consejos de sintaxis específicos

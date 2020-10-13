@@ -19,9 +19,9 @@
  * 	\file       htdocs/public/agenda/agendaexport.php
  * 	\ingroup    agenda
  * 	\brief      Page to export agenda
- * 				http://127.0.0.1/dolibarr/public/agenda/agendaexport.php?format=vcal&exportkey=cle
- * 				http://127.0.0.1/dolibarr/public/agenda/agendaexport.php?format=ical&type=event&exportkey=cle
- * 				http://127.0.0.1/dolibarr/public/agenda/agendaexport.php?format=rss&exportkey=cle
+ * 				http://127.0.0.1/DigitalProspects/public/agenda/agendaexport.php?format=vcal&exportkey=cle
+ * 				http://127.0.0.1/DigitalProspects/public/agenda/agendaexport.php?format=ical&type=event&exportkey=cle
+ * 				http://127.0.0.1/DigitalProspects/public/agenda/agendaexport.php?format=rss&exportkey=cle
  *              Other parameters into url are:
  *              &notolderthan=99
  *              &year=2015
@@ -34,7 +34,7 @@ if (!defined('NOREQUIREHTML'))  define('NOREQUIREHTML', '1'); // If we don't nee
 if (!defined('NOREQUIREAJAX'))  define('NOREQUIREAJAX', '1');
 if (!defined('NOLOGIN'))        define("NOLOGIN", 1); // This means this output page does not require to be logged.
 if (!defined('NOCSRFCHECK'))    define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-if (!defined('NOIPCHECK'))		 define('NOIPCHECK', '1'); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+if (!defined('NOIPCHECK'))		 define('NOIPCHECK', '1'); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 
 
 // It's a wrapper, so empty header
@@ -124,7 +124,7 @@ elseif (empty($reshook)) {
 
 
 // Define filename with prefix on filters predica (each predica set must have on cache file)
-$shortfilename = 'dolibarrcalendar';
+$shortfilename = 'DigitalProspectscalendar';
 $filename = $shortfilename;
 // Complete long filename
 foreach ($filters as $key => $value)
@@ -144,7 +144,7 @@ if ($format == 'vcal') { $shortfilename .= '.vcs'; $filename .= '.vcs'; }
 if ($format == 'ical') { $shortfilename .= '.ics'; $filename .= '.ics'; }
 if ($format == 'rss') { $shortfilename .= '.rss'; $filename .= '.rss'; }
 
-if ($shortfilename == 'dolibarrcalendar')
+if ($shortfilename == 'DigitalProspectscalendar')
 {
 	$langs->load("main");
 	$langs->load("errors");

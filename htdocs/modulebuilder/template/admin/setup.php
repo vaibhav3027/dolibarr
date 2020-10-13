@@ -22,7 +22,7 @@
  * \brief   MyModule setup page.
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 $res = 0;
 // Try main.inc.php into web root known defined into CONTEXT_DOCUMENT_ROOT (not always defined)
 if (!$res && !empty($_SERVER["CONTEXT_DOCUMENT_ROOT"])) $res = @include $_SERVER["CONTEXT_DOCUMENT_ROOT"]."/main.inc.php";
@@ -78,7 +78,7 @@ if ($action == 'updateMask')
 	$maskconstorder = GETPOST('maskconstorder', 'alpha');
 	$maskorder = GETPOST('maskorder', 'alpha');
 
-	if ($maskconstorder) $res = dolibarr_set_const($db, $maskconstorder, $maskorder, 'chaine', 0, '', $conf->entity);
+	if ($maskconstorder) $res = DigitalProspects_set_const($db, $maskconstorder, $maskorder, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -142,7 +142,7 @@ elseif ($action == 'set')
 	if ($ret > 0)
 	{
 		$constforval = strtoupper($tmpobjectkey).'_ADDON_PDF';
-		if ($conf->global->$constforval == "$value") dolibarr_del_const($db, $constforval, $conf->entity);
+		if ($conf->global->$constforval == "$value") DigitalProspects_del_const($db, $constforval, $conf->entity);
 	}
 }
 
@@ -151,7 +151,7 @@ elseif ($action == 'setdoc')
 {
 	$tmpobjectkey = GETPOST('object');
 	$constforval = strtoupper($tmpobjectkey).'_ADDON_PDF';
-	if (dolibarr_set_const($db, $constforval, $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, $constforval, $value, 'chaine', 0, '', $conf->entity))
 	{
 		// The constant that was read before the new set
 		// We therefore requires a variable to have a coherent view
@@ -170,7 +170,7 @@ elseif ($action == 'setdoc')
 	// by calling method canBeActivated
 	$tmpobjectkey = GETPOST('object');
 	$constforval = 'MYMODULE_'.strtoupper($tmpobjectkey)."_ADDON";
-	dolibarr_set_const($db, $constforval, $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, $constforval, $value, 'chaine', 0, '', $conf->entity);
 }
 
 

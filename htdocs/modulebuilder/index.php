@@ -16,14 +16,14 @@
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  *
  * You can also make a direct call the page with parameter like this:
- * htdocs/modulebuilder/index.php?module=Inventory@/pathtodolibarr/htdocs/product
+ * htdocs/modulebuilder/index.php?module=Inventory@/pathtoDigitalProspects/htdocs/product
  */
 
 /**
  *       \file       htdocs/modulebuilder/index.php
  *       \brief      Home page for module builder module
  *
- *       You can add parameter dirins=/home/ldestailleur/git/dolibarr/htdocs/mymodule to force generation of module
+ *       You can add parameter dirins=/home/ldestailleur/git/DigitalProspects/htdocs/mymodule to force generation of module
  *       into the dirins directory.
  */
 
@@ -62,7 +62,7 @@ if (!$user->admin && empty($conf->global->MODULEBUILDER_FOREVERYONE)) accessforb
 
 
 // Dir for custom dirs
-$tmp = explode(',', $dolibarr_main_document_root_alt);
+$tmp = explode(',', $DigitalProspects_main_document_root_alt);
 $dirins = $tmp[0];
 $dirread = $dirins;
 $forceddirread = 0;
@@ -1526,7 +1526,7 @@ $text = $langs->trans("ModuleBuilder");
 
 print load_fiche_titre($text, '', 'title_setup');
 
-print '<span class="opacitymedium hideonsmartphone">'.$langs->trans("ModuleBuilderDesc", 'https://wiki.dolibarr.org/index.php/Module_development#Create_your_module').'</span><br>';
+print '<span class="opacitymedium hideonsmartphone">'.$langs->trans("ModuleBuilderDesc", 'https://wiki.DigitalProspects.org/index.php/Module_development#Create_your_module').'</span><br>';
 
 $dirsrootforscan = array($dirread);
 // Add also the core modules into the list of modules to show/edit
@@ -1592,7 +1592,7 @@ foreach ($dirsrootforscan as $dirread)
 	$newdircustom = $dirins;
 	if (empty($newdircustom)) $newdircustom = img_warning();
 	// If dirread was forced to somewhere else, by using URL
-	// htdocs/modulebuilder/index.php?module=Inventory@/home/ldestailleur/git/dolibarr/htdocs/product
+	// htdocs/modulebuilder/index.php?module=Inventory@/home/ldestailleur/git/DigitalProspects/htdocs/product
 	if (empty($i)) print $langs->trans("DirScanned").' : ';
 	else print ', ';
 	print '<strong class="wordbreakimp">'.$dirread.'</strong>';
@@ -1948,7 +1948,7 @@ elseif (!empty($module))
 					print '</td><td>';
 					print $moduleobj->numero;
 					print ' &nbsp; (<a href="'.DOL_URL_ROOT.'/admin/system/modules.php?mainmenu=home&leftmenu=admintools_info" target="_blank">'.$langs->trans("SeeIDsInUse").'</a>';
-					print ' - <a href="https://wiki.dolibarr.org/index.php/List_of_modules_id" target="_blank">'.$langs->trans("SeeReservedIDsRangeHere").'</a>)';
+					print ' - <a href="https://wiki.DigitalProspects.org/index.php/List_of_modules_id" target="_blank">'.$langs->trans("SeeReservedIDsRangeHere").'</a>)';
 					print '</td></tr>';
 
 					print '<tr><td>';
@@ -2594,7 +2594,7 @@ elseif (!empty($module))
 							print '<table class="noborder">';
 							print '<tr class="liste_titre">';
 							print '<th>'.$langs->trans("Property");
-							print ' (<a class="" href="https://wiki.dolibarr.org/index.php/Language_and_development_rules#Table_and_fields_structures" target="_blank">'.$langs->trans("SeeExamples").'</a>)';
+							print ' (<a class="" href="https://wiki.DigitalProspects.org/index.php/Language_and_development_rules#Table_and_fields_structures" target="_blank">'.$langs->trans("SeeExamples").'</a>)';
 							print '</th>';
 							print '<th>';
 							print $form->textwithpicto($langs->trans("Label"), $langs->trans("YouCanUseTranslationKey"));

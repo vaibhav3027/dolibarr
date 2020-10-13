@@ -884,7 +884,7 @@ class EmailCollector extends CommonObject
     {
         global $conf, $langs, $user;
 
-        //$conf->global->SYSLOG_FILE = 'DOL_DATA_ROOT/dolibarr_mydedicatedlofile.log';
+        //$conf->global->SYSLOG_FILE = 'DOL_DATA_ROOT/DigitalProspects_mydedicatedlofile.log';
 
         require_once DOL_DOCUMENT_ROOT.'/comm/action/class/actioncomm.class.php';
 
@@ -1249,15 +1249,15 @@ class EmailCollector extends CommonObject
                 $contactid = 0; $thirdpartyid = 0; $projectid = 0;
 
                 // Analyze TrackId in field References. For example:
-                // References: <1542377954.SMTPs-dolibarr-thi649@8f6014fde11ec6cdec9a822234fc557e>
-                // References: <1542377954.SMTPs-dolibarr-tic649@8f6014fde11ec6cdec9a822234fc557e>
-                // References: <1542377954.SMTPs-dolibarr-abc649@8f6014fde11ec6cdec9a822234fc557e>
+                // References: <1542377954.SMTPs-DigitalProspects-thi649@8f6014fde11ec6cdec9a822234fc557e>
+                // References: <1542377954.SMTPs-DigitalProspects-tic649@8f6014fde11ec6cdec9a822234fc557e>
+                // References: <1542377954.SMTPs-DigitalProspects-abc649@8f6014fde11ec6cdec9a822234fc557e>
                 $trackid = '';
                 $objectid = 0;
                 $objectemail = null;
 
                 $reg = array();
-                if (!empty($headers['References']) && preg_match('/dolibarr-([a-z]+)([0-9]+)@'.preg_quote($host, '/').'/', $headers['References'], $reg))
+                if (!empty($headers['References']) && preg_match('/DigitalProspects-([a-z]+)([0-9]+)@'.preg_quote($host, '/').'/', $headers['References'], $reg))
                 {
                     $trackid = $reg[1].$reg[2];
 

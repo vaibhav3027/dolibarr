@@ -671,7 +671,7 @@ if ($action == 'create' && $user->rights->projet->creer)
 	// Description
 	print '<tr><td class="tdtop">'.$langs->trans("Description").'</td>';
 	print '<td>';
-	$doleditor = new DolEditor('description', GETPOST("description", 'none'), '', 90, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
+	$doleditor = new DolEditor('description', GETPOST("description", 'none'), '', 90, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
 	$doleditor->Create();
 	print '</td></tr>';
 
@@ -956,7 +956,7 @@ elseif ($object->id > 0)
 		// Description
 		print '<tr><td class="tdtop">'.$langs->trans("Description").'</td>';
 		print '<td>';
-		$doleditor = new DolEditor('description', $object->description, '', 90, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
+		$doleditor = new DolEditor('description', $object->description, '', 90, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
 		$doleditor->Create();
 		print '</td></tr>';
 

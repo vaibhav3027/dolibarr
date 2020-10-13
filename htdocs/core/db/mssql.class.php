@@ -27,7 +27,7 @@
 require_once DOL_DOCUMENT_ROOT.'/core/db/DoliDB.class.php';
 
 /**
- *	Classe de gestion de la database de dolibarr
+ *	Classe de gestion de la database de DigitalProspects
  */
 class DoliDBMssql extends DoliDB
 {
@@ -86,8 +86,8 @@ class DoliDBMssql extends DoliDB
 		$this->db = $this->connect($host, $user, $pass, $name, $port);
 		if ($this->db)
 		{
-			// Si client connecte avec charset different de celui de la base Dolibarr
-			// (La base Dolibarr a ete forcee en this->forcecharset a l'install)
+			// Si client connecte avec charset different de celui de la base DigitalProspects
+			// (La base DigitalProspects a ete forcee en this->forcecharset a l'install)
 			$this->connected = true;
 			$this->ok = true;
 		}
@@ -171,7 +171,7 @@ class DoliDBMssql extends DoliDB
 		$this->db = @mssql_connect($newhost, $login, $passwd);
 		//force les enregistrement en latin1 si la base est en utf8 par defaut
 		// Supprime car plante sur mon PHP-Mysql. De plus, la base est forcement en latin1 avec
-		// les nouvelles version de Dolibarr car force par l'install Dolibarr.
+		// les nouvelles version de DigitalProspects car force par l'install DigitalProspects.
 		//$this->query('SET NAMES '.$this->forcecharset);
 		//print "Resultat fonction connect: ".$this->db;
 		$set_options = array('SET ANSI_PADDING ON;',
@@ -600,7 +600,7 @@ class DoliDBMssql extends DoliDB
 		}
 		else
 		{
-			// Constants to convert a MSSql error code to a generic Dolibarr error code
+			// Constants to convert a MSSql error code to a generic DigitalProspects error code
 			$errorcode_map = array(
 			1004 => 'DB_ERROR_CANNOT_CREATE',
 			1005 => 'DB_ERROR_CANNOT_CREATE',
@@ -690,10 +690,10 @@ class DoliDBMssql extends DoliDB
 		global $conf;
 
 		// Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-		$cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+		$cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
 		//Encryption key
-		$cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+		$cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
 		$return = $fieldorvalue;
 		return ($withQuotes ? "'" : "").$this->escape($return).($withQuotes ? "'" : "");
@@ -710,10 +710,10 @@ class DoliDBMssql extends DoliDB
 		global $conf;
 
 		// Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-		$cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+		$cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
 		//Encryption key
-		$cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+		$cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
 		$return = $value;
 		return $return;
@@ -1020,16 +1020,16 @@ class DoliDBMssql extends DoliDB
 	/**
 	 * 	Create a user and privileges to connect to database (even if database does not exists yet)
 	 *
-	 *	@param	string	$dolibarr_main_db_host 		Ip serveur
-	 *	@param	string	$dolibarr_main_db_user 		Nom user a creer
-	 *	@param	string	$dolibarr_main_db_pass 		Mot de passe user a creer
-	 *	@param	string	$dolibarr_main_db_name		Database name where user must be granted
+	 *	@param	string	$DigitalProspects_main_db_host 		Ip serveur
+	 *	@param	string	$DigitalProspects_main_db_user 		Nom user a creer
+	 *	@param	string	$DigitalProspects_main_db_pass 		Mot de passe user a creer
+	 *	@param	string	$DigitalProspects_main_db_name		Database name where user must be granted
 	 *	@return	int									<0 if KO, >=0 if OK
 	 */
-    public function DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name)
+    public function DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name)
 	{
         // phpcs:enable
-        $sql = "CREATE LOGIN ".$this->EscapeFieldName($dolibarr_main_db_user)." WITH PASSWORD='$dolibarr_main_db_pass'";
+        $sql = "CREATE LOGIN ".$this->EscapeFieldName($DigitalProspects_main_db_user)." WITH PASSWORD='$DigitalProspects_main_db_pass'";
         dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG); // No sql to avoid password in log
         $resql = $this->query($sql);
         if (!$resql)
@@ -1044,7 +1044,7 @@ class DoliDBMssql extends DoliDB
             	dol_syslog(get_class($this)."::DDLCreateUser sql=".$sql, LOG_WARNING);
             }
         }
-        $sql = "SELECT name from sys.databases where name='".$dolibarr_main_db_name."'";
+        $sql = "SELECT name from sys.databases where name='".$DigitalProspects_main_db_name."'";
         $ressql = $this->query($sql);
         if (!$ressql)
         {
@@ -1055,10 +1055,10 @@ class DoliDBMssql extends DoliDB
         {
             if ($num)
             {
-                $this->select_db($dolibarr_main_db_name);
-                $sql = "CREATE USER [$dolibarr_main_db_user] FOR LOGIN [$dolibarr_main_db_user]";
+                $this->select_db($DigitalProspects_main_db_name);
+                $sql = "CREATE USER [$DigitalProspects_main_db_user] FOR LOGIN [$DigitalProspects_main_db_user]";
                 $this->query($sql);
-                $sql = "ALTER ROLE [db_owner] ADD MEMBER [$dolibarr_main_db_user]";
+                $sql = "ALTER ROLE [db_owner] ADD MEMBER [$DigitalProspects_main_db_user]";
                 $this->query($sql);
             }
         }

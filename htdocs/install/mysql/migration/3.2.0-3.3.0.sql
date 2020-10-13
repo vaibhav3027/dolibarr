@@ -17,7 +17,7 @@
 
 DROP TABLE llx_product_ca;
 DROP TABLE llx_document;
-DROP TABLE llx_dolibarr_modules;
+DROP TABLE llx_DigitalProspects_modules;
 DROP TABLE llx_product_fournisseur;
 
 ALTER TABLE llx_adherent ADD COLUMN canvas varchar(32);

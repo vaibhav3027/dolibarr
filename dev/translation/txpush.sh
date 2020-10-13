@@ -4,10 +4,10 @@
 #
 # Laurent Destailleur (eldy) - eldy@users.sourceforge.net
 #------------------------------------------------------
-# Usage: txpush.sh (source|xx_XX) [-r dolibarr.file] [-f]
+# Usage: txpush.sh (source|xx_XX) [-r DigitalProspects.file] [-f]
 #------------------------------------------------------
 
-export project='dolibarr'
+export project='DigitalProspects'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd $DIR/../..

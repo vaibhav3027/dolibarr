@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - workflow
+# DigitalProspects language file - Source file is en_US - workflow
 WorkflowSetup=工作流模块设置
 WorkflowDesc=本模块旨在将自动操作的行为修改为应用程序。默认情况下, 工作流处于打开状态 (您可以按所需顺序执行某些动作)。您还可以激活您感兴趣的自动操作。
 ThereIsNoWorkflowToModify=没有工作流程，您可以修改你已激活的模块。

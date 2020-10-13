@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - workflow
+# DigitalProspects language file - Source file is en_US - workflow
 WorkflowSetup=Configurare Modul Flux de Lucru
 WorkflowDesc=Acest modul este proiectat pentru modificarea comportamentului acțiunilor automate în aplicaţie. În mod implicit, fluxul de lucru este deschis (puteţi face ce doriţi în ordinea dorită). Puteți activa acțiunile automate de care sunteti interesat
 ThereIsNoWorkflowToModify=Nu există nicio modificare workflow  diponibila pentru modulele activate.

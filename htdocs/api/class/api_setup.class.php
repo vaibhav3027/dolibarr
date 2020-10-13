@@ -30,9 +30,9 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/ccountry.class.php';
  * API class for dictionaries
  *
  * @access protected
- * @class DolibarrApiAccess {@requires user,external}
+ * @class DigitalProspectsApiAccess {@requires user,external}
  */
-class Setup extends DolibarrApi
+class Setup extends DigitalProspectsApi
 {
     private $translations = null;
 
@@ -71,12 +71,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(400, 'error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -133,12 +133,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(400, 'error when validating parameter sqlfilters '.$sqlfilters);
             }
               $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -173,7 +173,7 @@ class Setup extends DolibarrApi
      *
      * The names of the countries will be translated to the given language if
      * the $lang parameter is provided. The value of $lang must be a language
-     * code supported by Dolibarr, for example 'en_US' or 'fr_FR'.
+     * code supported by DigitalProspects, for example 'en_US' or 'fr_FR'.
      * The returned list is sorted by country ID.
      *
      * @param string    $sortfield  Sort field
@@ -200,12 +200,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $this->db->order($sortfield, $sortorder);
@@ -349,12 +349,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(400, 'error when validating parameter sqlfilters '.$sqlfilters);
             }
                   $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -457,12 +457,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -521,12 +521,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -584,12 +584,12 @@ class Setup extends DolibarrApi
     	// Add sql filters
     	if ($sqlfilters)
     	{
-    		if (!DolibarrApi::_checkFilters($sqlfilters))
+    		if (!DigitalProspectsApi::_checkFilters($sqlfilters))
     		{
     			throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
     		}
     		$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
     	}
 
 
@@ -649,12 +649,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -711,12 +711,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -783,12 +783,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -845,12 +845,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-        	if (!DolibarrApi::_checkFilters($sqlfilters))
+        	if (!DigitalProspectsApi::_checkFilters($sqlfilters))
         	{
         		throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
         	}
         	$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-        	$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+        	$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $this->db->order($sortfield, $sortorder);
@@ -922,12 +922,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -984,12 +984,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(400, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
                 $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -1044,12 +1044,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(400, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
                 $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -1104,12 +1104,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -1171,12 +1171,12 @@ class Setup extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 
@@ -1231,12 +1231,12 @@ class Setup extends DolibarrApi
     	// Add sql filters
     	if ($sqlfilters)
     	{
-    		if (!DolibarrApi::_checkFilters($sqlfilters))
+    		if (!DigitalProspectsApi::_checkFilters($sqlfilters))
     		{
     			throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
     		}
     		$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
     	}
 
 
@@ -1291,12 +1291,12 @@ class Setup extends DolibarrApi
     	// Add sql filters
     	if ($sqlfilters)
     	{
-    		if (!DolibarrApi::_checkFilters($sqlfilters))
+    		if (!DigitalProspectsApi::_checkFilters($sqlfilters))
     		{
     			throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
     		}
     		$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
     	}
 
 
@@ -1353,12 +1353,12 @@ class Setup extends DolibarrApi
     	// Add sql filters
     	if ($sqlfilters)
     	{
-    		if (!DolibarrApi::_checkFilters($sqlfilters))
+    		if (!DigitalProspectsApi::_checkFilters($sqlfilters))
     		{
     			throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
     		}
     		$regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+    		$sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
     	}
 
 
@@ -1421,8 +1421,8 @@ class Setup extends DolibarrApi
     {
     	global $conf;
 
-    	if (!DolibarrApiAccess::$user->admin
-    		&& (empty($conf->global->API_LOGIN_ALLOWED_FOR_ADMIN_CHECK) || DolibarrApiAccess::$user->login != $conf->global->API_LOGIN_ALLOWED_FOR_ADMIN_CHECK)) {
+    	if (!DigitalProspectsApiAccess::$user->admin
+    		&& (empty($conf->global->API_LOGIN_ALLOWED_FOR_ADMIN_CHECK) || DigitalProspectsApiAccess::$user->login != $conf->global->API_LOGIN_ALLOWED_FOR_ADMIN_CHECK)) {
     		throw new RestException(403, 'Error API open to admin users only or to the login user defined with constant API_LOGIN_ALLOWED_FOR_ADMIN_CHECK');
     	}
 
@@ -1439,7 +1439,7 @@ class Setup extends DolibarrApi
     /**
      * Do a test of integrity for files and setup.
      *
-     * @param string	$target			Can be 'local' or 'default' or Url of the signatures file to use for the test. Must be reachable by the tested Dolibarr.
+     * @param string	$target			Can be 'local' or 'default' or Url of the signatures file to use for the test. Must be reachable by the tested DigitalProspects.
      * @return array					Result of file and setup integrity check
      *
      * @url     GET checkintegrity
@@ -1452,8 +1452,8 @@ class Setup extends DolibarrApi
     {
     	global $langs, $conf;
 
-    	if (!DolibarrApiAccess::$user->admin
-    		&& (empty($conf->global->API_LOGIN_ALLOWED_FOR_INTEGRITY_CHECK) || DolibarrApiAccess::$user->login != $conf->global->API_LOGIN_ALLOWED_FOR_INTEGRITY_CHECK))
+    	if (!DigitalProspectsApiAccess::$user->admin
+    		&& (empty($conf->global->API_LOGIN_ALLOWED_FOR_INTEGRITY_CHECK) || DigitalProspectsApiAccess::$user->login != $conf->global->API_LOGIN_ALLOWED_FOR_INTEGRITY_CHECK))
     	{
     		throw new RestException(503, 'Error API open to admin users only or to the login user defined with constant API_LOGIN_ALLOWED_FOR_INTEGRITY_CHECK');
     	}
@@ -1477,7 +1477,7 @@ class Setup extends DolibarrApi
     	if (empty($xmlremote) && !empty($conf->global->MAIN_FILECHECK_URL)) $xmlremote = $conf->global->MAIN_FILECHECK_URL;
     	$param = 'MAIN_FILECHECK_URL_'.DOL_VERSION;
     	if (empty($xmlremote) && !empty($conf->global->$param)) $xmlremote = $conf->global->$param;
-    	if (empty($xmlremote)) $xmlremote = 'https://www.dolibarr.org/files/stable/signatures/filelist-'.DOL_VERSION.'.xml';
+    	if (empty($xmlremote)) $xmlremote = 'https://www.DigitalProspects.org/files/stable/signatures/filelist-'.DOL_VERSION.'.xml';
 
     	if ($target == 'local')
     	{
@@ -1517,7 +1517,7 @@ class Setup extends DolibarrApi
     		$out = '';
 
     		// Forced constants
-    		if (is_object($xml->dolibarr_constants[0]))
+    		if (is_object($xml->DigitalProspects_constants[0]))
     		{
     			$out .= load_fiche_titre($langs->trans("ForcedConstants"));
 
@@ -1531,7 +1531,7 @@ class Setup extends DolibarrApi
     			$out .= '</tr>'."\n";
 
     			$i = 0;
-    			foreach ($xml->dolibarr_constants[0]->constant as $constant)    // $constant is a simpleXMLElement
+    			foreach ($xml->DigitalProspects_constants[0]->constant as $constant)    // $constant is a simpleXMLElement
     			{
     				$constname = $constant['name'];
     				$constvalue = (string) $constant;
@@ -1563,10 +1563,10 @@ class Setup extends DolibarrApi
     		}
 
     		// Scan htdocs
-    		if (is_object($xml->dolibarr_htdocs_dir[0]))
+    		if (is_object($xml->DigitalProspects_htdocs_dir[0]))
     		{
-    			//var_dump($xml->dolibarr_htdocs_dir[0]['includecustom']);exit;
-    			$includecustom = (empty($xml->dolibarr_htdocs_dir[0]['includecustom']) ? 0 : $xml->dolibarr_htdocs_dir[0]['includecustom']);
+    			//var_dump($xml->DigitalProspects_htdocs_dir[0]['includecustom']);exit;
+    			$includecustom = (empty($xml->DigitalProspects_htdocs_dir[0]['includecustom']) ? 0 : $xml->DigitalProspects_htdocs_dir[0]['includecustom']);
 
     			// Defined qualified files (must be same than into generate_filelist_xml.php)
     			$regextoinclude = '\.(php|php3|php4|php5|phtml|phps|phar|inc|css|scss|html|xml|js|json|tpl|jpg|jpeg|png|gif|ico|sql|lang|txt|yml|bak|md|mp3|mp4|wav|mkv|z|gz|zip|rar|tar|less|svg|eot|woff|woff2|ttf|manifest)$';
@@ -1574,7 +1574,7 @@ class Setup extends DolibarrApi
     			$scanfiles = dol_dir_list(DOL_DOCUMENT_ROOT, 'files', 1, $regextoinclude, $regextoexclude);
 
     			// Fill file_list with files in signature, new files, modified files
-    			$ret = getFilesUpdated($file_list, $xml->dolibarr_htdocs_dir[0], '', DOL_DOCUMENT_ROOT, $checksumconcat); // Fill array $file_list
+    			$ret = getFilesUpdated($file_list, $xml->DigitalProspects_htdocs_dir[0], '', DOL_DOCUMENT_ROOT, $checksumconcat); // Fill array $file_list
     			// Complete with list of new files
     			foreach ($scanfiles as $keyfile => $valfile)
     			{
@@ -1730,7 +1730,7 @@ class Setup extends DolibarrApi
     		}
     		else
     		{
-    			throw new RestException(500, 'Error: Failed to found dolibarr_htdocs_dir into XML file '.$xmlfile);
+    			throw new RestException(500, 'Error: Failed to found DigitalProspects_htdocs_dir into XML file '.$xmlfile);
     		}
 
 
@@ -1740,7 +1740,7 @@ class Setup extends DolibarrApi
     		asort($checksumconcat); // Sort list of checksum
     		//var_dump($checksumconcat);
     		$checksumget = md5(join(',', $checksumconcat));
-    		$checksumtoget = trim((string) $xml->dolibarr_htdocs_dir_checksum);
+    		$checksumtoget = trim((string) $xml->DigitalProspects_htdocs_dir_checksum);
 
     		$outexpectedchecksum = ($checksumtoget ? $checksumtoget : $langs->trans("Unknown"));
     		if ($checksumget == $checksumtoget)

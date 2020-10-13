@@ -26,13 +26,13 @@
  *		\ingroup    facture
  *		\brief      Fichier de la classe de description et activation du module Facture
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *  Class to describe module customer invoices
  */
-class modFacture extends DolibarrModules
+class modFacture extends DigitalProspectsModules
 {
 
 	/**
@@ -53,8 +53,8 @@ class modFacture extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Gestion des factures";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'bill';
@@ -377,7 +377,7 @@ class modFacture extends DolibarrModules
 
 	/**
 	 *  Function called when module is enabled.
-	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *  It also creates data directories
 	 *
      *  @param      string	$options    Options when enabling module ('', 'newboxdefonly', 'noboxes')

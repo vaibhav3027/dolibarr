@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Oblast objednávek zákazníků
 SuppliersOrdersArea=Oblasti nákupních objednávek
 OrderCard=Karta objednávky
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Opravdu chcete klonovat tuto objednávku <b> %s </b>?
 DispatchSupplierOrder=Příjem objednávky %s
 FirstApprovalAlreadyDone=První schválení již učiněno
 SecondApprovalAlreadyDone=Druhé schválení již bylo provedeno
-SupplierOrderReceivedInDolibarr=Objednávka %s obdržena %s
-SupplierOrderSubmitedInDolibarr=Objednávka %s byla odeslána
+SupplierOrderReceivedInDigitalProspects=Objednávka %s obdržena %s
+SupplierOrderSubmitedInDigitalProspects=Objednávka %s byla odeslána
 SupplierOrderClassifiedBilled=Objednávka nákupu %s nastavena fakturovaná
 OtherOrders=Ostatní objednávky
 ##### Types de contacts #####

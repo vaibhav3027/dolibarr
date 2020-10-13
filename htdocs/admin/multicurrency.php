@@ -22,7 +22,7 @@
  * 	\brief		Page to setup multicurrency module
  */
 
-// Dolibarr environment
+// DigitalProspects environment
 require '../main.inc.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/admin.lib.php';
 require_once DOL_DOCUMENT_ROOT.'/core/lib/multicurrency.lib.php';
@@ -50,7 +50,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 {
 	$code = $reg[1];
 	$value = GETPOST($code, 'alpha');
-	if (dolibarr_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
         setEventMessages($langs->trans("SetupSaved"), null, 'mesgs');
 	}
@@ -63,7 +63,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 if (preg_match('/del_([a-z0-9_\-]+)/i', $action, $reg))
 {
 	$code = $reg[1];
-	if (dolibarr_del_const($db, $code, 0) > 0)
+	if (DigitalProspects_del_const($db, $code, 0) > 0)
 	{
         setEventMessages($langs->trans("SetupSaved"), null, 'mesgs');
 	}
@@ -142,9 +142,9 @@ elseif ($action == 'setapilayer')
 {
     if (GETPOSTISSET('modify_apilayer'))
     {
-        dolibarr_set_const($db, 'MULTICURRENCY_APP_ID', GETPOST('MULTICURRENCY_APP_ID', 'alpha'));
-        dolibarr_set_const($db, 'MULTICURRENCY_APP_SOURCE', GETPOST('MULTICURRENCY_APP_SOURCE', 'alpha'));
-        //dolibarr_set_const($db, 'MULTICURRENCY_ALTERNATE_SOURCE', GETPOST('MULTICURRENCY_ALTERNATE_SOURCE', 'alpha'));
+        DigitalProspects_set_const($db, 'MULTICURRENCY_APP_ID', GETPOST('MULTICURRENCY_APP_ID', 'alpha'));
+        DigitalProspects_set_const($db, 'MULTICURRENCY_APP_SOURCE', GETPOST('MULTICURRENCY_APP_SOURCE', 'alpha'));
+        //DigitalProspects_set_const($db, 'MULTICURRENCY_ALTERNATE_SOURCE', GETPOST('MULTICURRENCY_ALTERNATE_SOURCE', 'alpha'));
     }
     else
     {
@@ -255,7 +255,7 @@ print '<td class="right">';
 print '<form method="POST" action="'.$_SERVER['PHP_SELF'].'">';
 print '<input type="hidden" name="token" value="'.newToken().'">';
 print '<input type="hidden" name="action" value="set_MULTICURRENCY_MODIFY_RATE_APPLICATION">';
-print $form->selectarray('MULTICURRENCY_MODIFY_RATE_APPLICATION', array('PU_DOLIBARR' => 'PU_DOLIBARR', 'PU_CURRENCY' => 'PU_CURRENCY'), $conf->global->MULTICURRENCY_MODIFY_RATE_APPLICATION);
+print $form->selectarray('MULTICURRENCY_MODIFY_RATE_APPLICATION', array('PU_DigitalProspects' => 'PU_DigitalProspects', 'PU_CURRENCY' => 'PU_CURRENCY'), $conf->global->MULTICURRENCY_MODIFY_RATE_APPLICATION);
 print '<input type="submit" class="button" value="'.$langs->trans("Modify").'">';
 print '</form>';
 print '</td></tr>';

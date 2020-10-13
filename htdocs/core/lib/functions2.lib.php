@@ -24,7 +24,7 @@
 
 /**
  *	\file			htdocs/core/lib/functions2.lib.php
- *	\brief			A set of functions for Dolibarr
+ *	\brief			A set of functions for DigitalProspects
  *					This file contains all rare functions.
  */
 
@@ -591,7 +591,7 @@ function isValidVATID($company)
  */
 function clean_url($url, $http = 1)
 {
-    // Fixed by Matelli (see http://matelli.fr/showcases/patchs-dolibarr/fix-cleaning-url.html)
+    // Fixed by Matelli (see http://matelli.fr/showcases/patchs-DigitalProspects/fix-cleaning-url.html)
     // To include the minus sign in a char class, we must not escape it but put it at the end of the class
     // Also, there's no need of escape a dot sign in a class
     if (preg_match('/^(https?:[\\/]+)?([0-9A-Z.-]+\.[A-Z]{2,4})(:[0-9]+)?/i', $url, $regs))
@@ -1476,7 +1476,7 @@ function weight_convert($weight, &$from_unit, $to_unit)
  *	@param	array	$tab        Array (key=>value) with all parameters to save
  *	@return int         		<0 if KO, >0 if OK
  *
- *	@see		dolibarr_get_const(), dolibarr_set_const(), dolibarr_del_const()
+ *	@see		DigitalProspects_get_const(), DigitalProspects_set_const(), DigitalProspects_del_const()
  */
 function dol_set_user_param($db, $conf, &$user, $tab)
 {
@@ -1586,12 +1586,12 @@ function version_php()
 }
 
 /**
- * 	Return Dolibarr version
+ * 	Return DigitalProspects version
  *
- * 	@return		string			Dolibarr version
- *  @see		versiondolibarrarray()
+ * 	@return		string			DigitalProspects version
+ *  @see		versionDigitalProspectsarray()
  */
-function version_dolibarr()
+function version_DigitalProspects()
 {
     return DOL_VERSION;
 }
@@ -2443,9 +2443,9 @@ function autoOrManual($automaticmanual, $case = 1, $color = 0)
  */
 function convertBackOfficeMediasLinksToPublicLinks($notetoshow)
 {
-    global $dolibarr_main_url_root;
+    global $DigitalProspects_main_url_root;
     // Define $urlwithroot
-    $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+    $urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
     $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
     //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
     $notetoshow = preg_replace('/src="[a-zA-Z0-9_\/\-\.]*(viewimage\.php\?modulepart=medias[^"]*)"/', 'src="'.$urlwithroot.'/\1"', $notetoshow);

@@ -75,7 +75,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/functions.lib.php';
 		
 		<p>Unless the context is clear (as with the “Notifications” example, where it is understood that the “4” is the number of notifications), consider including additional context with a visually hidden piece of additional text.</p>
 		
-		<p><strong>Remember to use aria-label attribute for accessibility in Dolibarr. Don't forget to use aria-hidden on icons included in badges</strong></p>
+		<p><strong>Remember to use aria-label attribute for accessibility in DigitalProspects. Don't forget to use aria-hidden on icons included in badges</strong></p>
 		</div>
 
 		<div class="bd-example">
@@ -236,7 +236,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/functions.lib.php';
 		
 		<p>Unless the context is clear (as with the “Notifications” example, where it is understood that the “4” is the number of notifications), consider including additional context with a visually hidden piece of additional text.</p>
 		
-		<p><strong>Remember to use aria-label attribute for accessibility in Dolibarr. Don't forget to use aria-hidden on icons included in badges</strong></p>
+		<p><strong>Remember to use aria-label attribute for accessibility in DigitalProspects. Don't forget to use aria-hidden on icons included in badges</strong></p>
 </div>		
 		
 		

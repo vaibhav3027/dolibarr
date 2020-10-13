@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=بخش سفارشات مشتری
 SuppliersOrdersArea=بخش سفارشات خرید
 OrderCard=کارت سفارش
@@ -116,8 +116,8 @@ ConfirmCloneOrder=آیا مطمئن هستید می‌خواهید سفارش <b
 DispatchSupplierOrder=دریافت سفارش خرید %s
 FirstApprovalAlreadyDone=تائید اول قبلا انجام شده
 SecondApprovalAlreadyDone=تائید دوم قبلا انجام شده
-SupplierOrderReceivedInDolibarr=سفارش خرید %s دریافت شد %s
-SupplierOrderSubmitedInDolibarr=سفارش خرید %s درخواست شد
+SupplierOrderReceivedInDigitalProspects=سفارش خرید %s دریافت شد %s
+SupplierOrderSubmitedInDigitalProspects=سفارش خرید %s درخواست شد
 SupplierOrderClassifiedBilled=سفارش خرید %s صورت‌حساب شد
 OtherOrders=سفارش‌های دیگر
 ##### Types de contacts #####

@@ -22,7 +22,7 @@
  * \brief   About page of module Zapier.
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 require '../../main.inc.php';
 
 // Libraries

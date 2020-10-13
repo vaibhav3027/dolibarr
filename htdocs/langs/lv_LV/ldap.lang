@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ldap
+# DigitalProspects language file - Source file is en_US - ldap
 YouMustChangePassNextLogon=Lietotāja parole <b>%s</b> domēnā <b>%s</b> ir jāmaina.
 UserMustChangePassNextLogon=Lietotājam ir jāmaina domēna %s  parole
 LDAPInformationsForThisContact=Informācija LDAP datubāzē šim kontaktam
@@ -22,6 +22,6 @@ GroupSynchronized=Grupa sinhronizēta
 MemberSynchronized=Biedrs sinhronizēts
 MemberTypeSynchronized=Dalībnieka veids ir sinhronizēts
 ContactSynchronized=Kontakti sinhronizēti
-ForceSynchronize=Forsēt sinhronizāciju Dolibarr -> LDAP
+ForceSynchronize=Forsēt sinhronizāciju DigitalProspects -> LDAP
 ErrorFailedToReadLDAP=Neizdevās nolasīt LDAP datu bāzi. Pārbaudiet LDAP modulis uzstādīšanas un datu bāzes pieejamību.
 PasswordOfUserInLDAP=Lietotāja LDAP parole

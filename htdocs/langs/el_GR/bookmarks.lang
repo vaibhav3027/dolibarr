@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Προσθέστε αυτή τη σελίδα στους σελιδοδείκτες
 Bookmark=Σελιδοδείκτης
 Bookmarks=Σελιδοδείκτες
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Μετάβαση σε
 CreateBookmark=Δημιουργία σελιδοδείκτη
 SetHereATitleForLink=Ορισμός τίτλου για τον σελιδοδείκτη
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Χρησιμοποιήστε μια εξωτερική διεύθυνση URL ή μια σχετική διεύθυνση URL του Dolibarr
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Χρησιμοποιήστε μια εξωτερική διεύθυνση URL ή μια σχετική διεύθυνση URL του DigitalProspects
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Επιλέξτε εάν η συνδεδεμένη σελίδα πρέπει να ανοίγει σε νέο παράθυρο ή όχι
 BookmarksManagement=Διαχείριση σελιδοδεικτών

@@ -135,7 +135,7 @@ class CMailFile
 	 */
 	public function __construct($subject, $to, $from, $msg, $filename_list = array(), $mimetype_list = array(), $mimefilename_list = array(), $addr_cc = "", $addr_bcc = "", $deliveryreceipt = 0, $msgishtml = 0, $errors_to = '', $css = '', $trackid = '', $moreinheader = '', $sendcontext = 'standard', $replyto = '')
 	{
-		global $conf, $dolibarr_main_data_root;
+		global $conf, $DigitalProspects_main_data_root;
 
 		// Clean values of $mimefilename_list
 		if (is_array($mimefilename_list)) {
@@ -190,10 +190,10 @@ class CMailFile
 		$this->mixed_boundary = "multipart_x.".time().".x_boundary";
 
 		// On defini related_boundary
-		$this->related_boundary = 'mul_'.dol_hash(uniqid("dolibarr2"), 3); // Force md5 hash (does not contains special chars)
+		$this->related_boundary = 'mul_'.dol_hash(uniqid("DigitalProspects2"), 3); // Force md5 hash (does not contains special chars)
 
 		// On defini alternative_boundary
-		$this->alternative_boundary = 'mul_'.dol_hash(uniqid("dolibarr3"), 3); // Force md5 hash (does not contains special chars)
+		$this->alternative_boundary = 'mul_'.dol_hash(uniqid("DigitalProspects3"), 3); // Force md5 hash (does not contains special chars)
 
 		dol_syslog("CMailFile::CMailfile: sendmode=".$this->sendmode." charset=".$conf->file->character_set_client." from=$from, to=$to, addr_cc=$addr_cc, addr_bcc=$addr_bcc, errors_to=$errors_to, trackid=$trackid sendcontext=$sendcontext", LOG_DEBUG);
 		dol_syslog("CMailFile::CMailfile: subject=".$subject.", deliveryreceipt=".$deliveryreceipt.", msgishtml=".$msgishtml, LOG_DEBUG);
@@ -221,10 +221,10 @@ class CMailFile
 			$this->msgishtml = $msgishtml;
 		}
 
-		global $dolibarr_main_url_root;
+		global $DigitalProspects_main_url_root;
 
 		// Define $urlwithroot
-		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 		$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 		//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -240,7 +240,7 @@ class CMailFile
 
 			if (!empty($conf->global->MAIN_MAIL_ADD_INLINE_IMAGES_IF_IN_MEDIAS))
 			{
-				$findimg = $this->findHtmlImages($dolibarr_main_data_root.'/medias');
+				$findimg = $this->findHtmlImages($DigitalProspects_main_data_root.'/medias');
 			}
 
 			// Define if there is at least one file
@@ -403,7 +403,7 @@ class CMailFile
 			$smtps->setDeliveryReceipt($this->deliveryreceipt);
 
 			$host = dol_getprefix('email');
-			$this->msgid = time().'.SMTPs-dolibarr-'.$this->trackid.'@'.$host;
+			$this->msgid = time().'.SMTPs-DigitalProspects-'.$this->trackid.'@'.$host;
 
 			$this->smtps = $smtps;
 		}
@@ -425,8 +425,8 @@ class CMailFile
             //$this->message = new Swift_SignedMessage();
             // Adding a trackid header to a message
             $headers = $this->message->getHeaders();
-            $headers->addTextHeader('X-Dolibarr-TRACKID', $this->trackid.'@'.$host);
-            $this->msgid = time().'.swiftmailer-dolibarr-'.$this->trackid.'@'.$host;
+            $headers->addTextHeader('X-DigitalProspects-TRACKID', $this->trackid.'@'.$host);
+            $this->msgid = time().'.swiftmailer-DigitalProspects-'.$this->trackid.'@'.$host;
             $headerID = $this->msgid;
             $msgid = $headers->get('Message-ID');
             $msgid->setId($headerID);
@@ -961,11 +961,11 @@ class CMailFile
 	public function dump_mail()
 	{
         // phpcs:enable
-		global $conf, $dolibarr_main_data_root;
+		global $conf, $DigitalProspects_main_data_root;
 
-		if (@is_writeable($dolibarr_main_data_root))	// Avoid fatal error on fopen with open_basedir
+		if (@is_writeable($DigitalProspects_main_data_root))	// Avoid fatal error on fopen with open_basedir
 		{
-			$outputfile = $dolibarr_main_data_root."/dolibarr_mail.log";
+			$outputfile = $DigitalProspects_main_data_root."/DigitalProspects_mail.log";
 			$fp = fopen($outputfile, "w");
 
 			if ($this->sendmode == 'mail')
@@ -1086,10 +1086,10 @@ class CMailFile
 		if ($trackid)
 		{
 			// References is kept in response and Message-ID is returned into In-Reply-To:
-			$this->msgid = time().'.phpmail-dolibarr-'.$trackid.'@'.$host;
+			$this->msgid = time().'.phpmail-DigitalProspects-'.$trackid.'@'.$host;
 			$out .= 'Message-ID: <'.$this->msgid.">".$this->eol2; // Uppercase seems replaced by phpmail
 			$out .= 'References: <'.$this->msgid.">".$this->eol2;
-			$out .= 'X-Dolibarr-TRACKID: '.$trackid.'@'.$host.$this->eol2;
+			$out .= 'X-DigitalProspects-TRACKID: '.$trackid.'@'.$host.$this->eol2;
 		}
 		else
 		{
@@ -1098,7 +1098,7 @@ class CMailFile
 		}
 
 		if (!empty($_SERVER['REMOTE_ADDR'])) $out .= "X-RemoteAddr: ".$_SERVER['REMOTE_ADDR'].$this->eol2;
-		$out .= "X-Mailer: Dolibarr version ".DOL_VERSION." (using php mail)".$this->eol2;
+		$out .= "X-Mailer: DigitalProspects version ".DOL_VERSION." (using php mail)".$this->eol2;
 		$out .= "Mime-Version: 1.0".$this->eol2;
 
 		//$out.= "From: ".$this->getValidAddress($this->addr_from,3,1).$this->eol;

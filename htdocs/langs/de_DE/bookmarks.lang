@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Aktuelle Ansicht zu Lesezeichen hinzufügen
 Bookmark=Lesezeichen
 Bookmarks=Lesezeichen
@@ -15,7 +15,7 @@ UrlOrLink=Link
 BehaviourOnClick=Öffnungsverhalten
 CreateBookmark=Lesezeichen erstellen
 SetHereATitleForLink=Erfassen Sie hier einen Namen für das Lesezeichen
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Verwenden Sie einen externen / absoluten Link (z.B.: https://URL) oder Links relativ zum Systempfad (z.B.: /DOLIBARR_ROOT/htdocs/...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Verwenden Sie einen externen / absoluten Link (z.B.: https://URL) oder Links relativ zum Systempfad (z.B.: /DigitalProspects_ROOT/htdocs/...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Wählen Sie aus, ob die verlinkte Seite auf der aktuellen Registerkarte oder auf einer neuen Registerkarte geöffnet werden soll.
 BookmarksManagement=Verwalten von Lesezeichen
 BookmarksMenuShortCut=STRG + Umschalt + m

@@ -12,15 +12,15 @@ fi
 cd $tmpdir
 
 # Other method to download (comment uscan if you use this)
-wget http://www.dolibarr.org/files/stable/standard/dolibarr-3.5.4.tgz
+wget http://www.DigitalProspects.org/files/stable/standard/DigitalProspects-3.5.4.tgz
 
 # Rename file to add +dfsg
 tgzfile=$(echo *.tgz)
-version=$(echo "$tgzfile" | perl -pi -e 's/^dolibarr-//; s/\.tgz$//; s/_/./g; s/\+nmu1//; ')
+version=$(echo "$tgzfile" | perl -pi -e 's/^DigitalProspects-//; s/\.tgz$//; s/_/./g; s/\+nmu1//; ')
 
 cd - >/dev/null
 
-mv $tmpdir/dolibarr-${version}.tgz ../
-echo "File ../dolibarr-${version}.tgz is ready for git-import-orig"
+mv $tmpdir/DigitalProspects-${version}.tgz ../
+echo "File ../DigitalProspects-${version}.tgz is ready for git-import-orig"
 
 rm -rf $tmpdir

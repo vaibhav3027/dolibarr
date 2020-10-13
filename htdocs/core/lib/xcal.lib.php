@@ -66,7 +66,7 @@ function build_calfile($format, $title, $desc, $events_array, $outputfile)
 		fwrite($calfileh, "VERSION:2.0\n");
 
 		fwrite($calfileh, "METHOD:PUBLISH\n");
-		fwrite($calfileh, "PRODID:-//DOLIBARR ".DOL_VERSION."\n");
+		fwrite($calfileh, "PRODID:-//DigitalProspects ".DOL_VERSION."\n");
 		fwrite($calfileh, "CALSCALE:GREGORIAN\n");
 		fwrite($calfileh, "X-WR-CALNAME:".$encoding.format_cal($format, $title)."\n");
 		fwrite($calfileh, "X-WR-CALDESC:".$encoding.format_cal($format, $desc)."\n");
@@ -340,7 +340,7 @@ function build_calfile($format, $title, $desc, $events_array, $outputfile)
 function build_rssfile($format, $title, $desc, $events_array, $outputfile, $filter = '', $url = '', $langcode = '')
 {
 	global $user, $conf, $langs;
-	global $dolibarr_main_url_root;
+	global $DigitalProspects_main_url_root;
 
 	dol_syslog("xcal.lib.php::build_rssfile Build rss file ".$outputfile." to format ".$format);
 
@@ -370,14 +370,14 @@ function build_rssfile($format, $title, $desc, $events_array, $outputfile, $filt
 		/*
         fwrite($fichier, "<description><![CDATA[".$desc.".]]></description>"."\n".
                 // "<language>fr</language>"."\n".
-                "<copyright>Dolibarr</copyright>"."\n".
+                "<copyright>DigitalProspects</copyright>"."\n".
                 "<lastBuildDate>".$date."</lastBuildDate>"."\n".
-                "<generator>Dolibarr</generator>"."\n");
+                "<generator>DigitalProspects</generator>"."\n");
         */
 
 		if (empty($url)) {
 			// Define $urlwithroot
-			$urlwithouturlroot = preg_replace("/".preg_quote(DOL_URL_ROOT, "/")."$/i", "", trim($dolibarr_main_url_root));
+			$urlwithouturlroot = preg_replace("/".preg_quote(DOL_URL_ROOT, "/")."$/i", "", trim($DigitalProspects_main_url_root));
 			$urlwithroot       = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 			//$urlwithroot=DOL_MAIN_URL_ROOT;                       // This is to use same domain name than current
 
@@ -444,7 +444,7 @@ function build_rssfile($format, $title, $desc, $events_array, $outputfile, $filt
 				fwrite($fichier, "]]></description>\n");
 				fwrite($fichier, "<pubDate>".date("r", $startdate)."</pubDate>\n");
 				fwrite($fichier, "<guid isPermaLink=\"true\"><![CDATA[".$uid."]]></guid>\n");
-				fwrite($fichier, "<source><![CDATA[Dolibarr]]></source>\n");
+				fwrite($fichier, "<source><![CDATA[DigitalProspects]]></source>\n");
 				fwrite($fichier, "</item>\n");
 			}
 		}

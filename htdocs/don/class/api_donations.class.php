@@ -24,9 +24,9 @@
  * API class for donations
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class Donations extends DolibarrApi
+class Donations extends DigitalProspectsApi
 {
 
     /**
@@ -63,7 +63,7 @@ class Donations extends DolibarrApi
      */
     public function get($id)
     {
-		if (!DolibarrApiAccess::$user->rights->don->lire) {
+		if (!DigitalProspectsApiAccess::$user->rights->don->lire) {
 			throw new RestException(401);
 		}
 
@@ -72,8 +72,8 @@ class Donations extends DolibarrApi
             throw new RestException(404, 'Donation not found');
         }
 
-		if (!DolibarrApi::_checkAccessToResource('don', $this->don->id)) {
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+		if (!DigitalProspectsApi::_checkAccessToResource('don', $this->don->id)) {
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
 		// Add external contacts ids
@@ -106,25 +106,25 @@ class Donations extends DolibarrApi
         $obj_ret = array();
 
         // case of external user, $thirdparty_ids param is ignored and replaced by user's socid
-        $socids = DolibarrApiAccess::$user->socid ? DolibarrApiAccess::$user->socid : $thirdparty_ids;
+        $socids = DigitalProspectsApiAccess::$user->socid ? DigitalProspectsApiAccess::$user->socid : $thirdparty_ids;
 
         $sql = "SELECT t.rowid";
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids)) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids)) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
         $sql .= " FROM ".MAIN_DB_PREFIX."don as t";
 
         $sql .= ' WHERE t.entity IN ('.getEntity('don').')';
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids)) $sql .= " AND t.fk_soc = sc.fk_soc";
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids)) $sql .= " AND t.fk_soc = sc.fk_soc";
         if ($thirdparty_ids) $sql .= " AND t.fk_soc = ".$thirdparty_ids." ";
 
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $db->order($sortfield, $sortorder);
@@ -176,7 +176,7 @@ class Donations extends DolibarrApi
      */
     public function post($request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->don->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->don->creer) {
             throw new RestException(401, "Insuffisant rights");
         }
         // Check mandatory fields
@@ -193,7 +193,7 @@ class Donations extends DolibarrApi
           $this->don->lines = $lines;
         }*/
 
-        if ($this->don->create(DolibarrApiAccess::$user) < 0) {
+        if ($this->don->create(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(500, "Error creating order", array_merge(array($this->don->error), $this->don->errors));
         }
 
@@ -210,7 +210,7 @@ class Donations extends DolibarrApi
      */
     public function put($id, $request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->don->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->don->creer) {
 			throw new RestException(401);
 		}
 
@@ -219,15 +219,15 @@ class Donations extends DolibarrApi
             throw new RestException(404, 'Donation not found');
         }
 
-		if (!DolibarrApi::_checkAccessToResource('donation', $this->don->id)) {
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+		if (!DigitalProspectsApi::_checkAccessToResource('donation', $this->don->id)) {
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
         foreach ($request_data as $field => $value) {
             if ($field == 'id') continue;
             $this->don->$field = $value;
         }
 
-        if ($this->don->update(DolibarrApiAccess::$user) > 0)
+        if ($this->don->update(DigitalProspectsApiAccess::$user) > 0)
         {
             return $this->get($id);
         }
@@ -245,7 +245,7 @@ class Donations extends DolibarrApi
      */
     public function delete($id)
     {
-        if (!DolibarrApiAccess::$user->rights->don->supprimer) {
+        if (!DigitalProspectsApiAccess::$user->rights->don->supprimer) {
 			throw new RestException(401);
 		}
         $result = $this->don->fetch($id);
@@ -253,11 +253,11 @@ class Donations extends DolibarrApi
             throw new RestException(404, 'Donation not found');
         }
 
-		if (!DolibarrApi::_checkAccessToResource('donation', $this->don->id)) {
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+		if (!DigitalProspectsApi::_checkAccessToResource('donation', $this->don->id)) {
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
-        if (!$this->don->delete(DolibarrApiAccess::$user)) {
+        if (!$this->don->delete(DigitalProspectsApiAccess::$user)) {
             throw new RestException(500, 'Error when delete donation : '.$this->don->error);
         }
 
@@ -293,7 +293,7 @@ class Donations extends DolibarrApi
      */
     public function validate($id, $idwarehouse = 0, $notrigger = 0)
     {
-        if (!DolibarrApiAccess::$user->rights->don->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->don->creer) {
 			throw new RestException(401);
 		}
         $result = $this->don->fetch($id);
@@ -301,11 +301,11 @@ class Donations extends DolibarrApi
             throw new RestException(404, 'Donation not found');
         }
 
-		if (!DolibarrApi::_checkAccessToResource('don', $this->don->id)) {
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+		if (!DigitalProspectsApi::_checkAccessToResource('don', $this->don->id)) {
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
-		$result = $this->don->valid(DolibarrApiAccess::$user, $idwarehouse, $notrigger);
+		$result = $this->don->valid(DigitalProspectsApiAccess::$user, $idwarehouse, $notrigger);
 		if ($result == 0) {
 		    throw new RestException(304, 'Error nothing done. May be object is already validated');
 		}
@@ -317,8 +317,8 @@ class Donations extends DolibarrApi
             throw new RestException(404, 'Order not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('don', $this->don->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('don', $this->don->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $this->don->fetchObjectLinked();

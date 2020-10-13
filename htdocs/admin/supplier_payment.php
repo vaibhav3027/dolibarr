@@ -49,7 +49,7 @@ if ($action == 'updateMask')
 {
     $maskconstsupplierpayment = GETPOST('maskconstsupplierpayment', 'alpha');
     $masksupplierpayment = GETPOST('masksupplierpayment', 'alpha');
-    if ($maskconstsupplierpayment) $res = dolibarr_set_const($db, $maskconstsupplierpayment, $masksupplierpayment, 'chaine', 0, '', $conf->entity);
+    if ($maskconstsupplierpayment) $res = DigitalProspects_set_const($db, $maskconstsupplierpayment, $masksupplierpayment, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -63,7 +63,7 @@ if ($action == 'updateMask')
     }
 }elseif ($action == 'setmod')
 {
-    dolibarr_set_const($db, "SUPPLIER_PAYMENT_ADDON", $value, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "SUPPLIER_PAYMENT_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 // Activate a model
@@ -77,14 +77,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->FACTURE_ADDON_PDF == "$value") dolibarr_del_const($db, 'SUPPLIER_PAYMENT_ADDON_PDF', $conf->entity);
+        if ($conf->global->FACTURE_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'SUPPLIER_PAYMENT_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "SUPPLIER_PAYMENT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "SUPPLIER_PAYMENT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent

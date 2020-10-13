@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Faktura
 Bills=Faktury
 BillsCustomers=faktury zákazníků
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Nastavte datum zahájení
 AutoFillDateTo=Nastavte datum ukončení servisního řádku s dalším datem faktury
 AutoFillDateToShort=Nastavte datum ukončení
 MaxNumberOfGenerationReached=Maximální počet gen. dosáhl
-BILL_DELETEInDolibarr=faktura smazána
-BILL_SUPPLIER_DELETEInDolibarr=Faktura dodavatele byla smazána
+BILL_DELETEInDigitalProspects=faktura smazána
+BILL_SUPPLIER_DELETEInDigitalProspects=Faktura dodavatele byla smazána
 UnitPriceXQtyLessDiscount=Jednotková cena x Množství - Sleva
 CustomersInvoicesArea=Fakturační oblast zákazníka
 SupplierInvoicesArea=Fakturační oblast dodavatele

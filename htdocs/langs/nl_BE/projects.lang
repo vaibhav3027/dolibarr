@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 ProjectsArea=Project Omgeving
 AllAllowedProjects=Alle projecten die ik kan lezen (mijn + openbaar)
 MyProjectsDesc=Deze weergave is beperkt tot projecten waarvoor u een contactpersoon bent
@@ -15,4 +15,4 @@ AddHereTimeSpentForDay=Voeg hier de besteedde tijd voor deze dag / taak toe
 MyProjectsArea=Mijn projectengebied
 CurentlyOpenedTasks=Actueel openstaande taken
 WhichIamLinkedToProject=waaraan ik ben gekoppeld aan het project
-ProjectModifiedInDolibarr=Project %s gewijzigd
+ProjectModifiedInDigitalProspects=Project %s gewijzigd

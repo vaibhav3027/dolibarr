@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Pievienot pašreizējo lapu grāmatzīmēm
 Bookmark=Grāmatzīme
 Bookmarks=Grāmatzīmes
@@ -15,6 +15,6 @@ UrlOrLink=URL
 BehaviourOnClick=Behaviour when a bookmark URL is selected
 CreateBookmark=Izveidot grāmatzīmi
 SetHereATitleForLink=Iestatiet grāmatzīmes nosaukumu
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Izmantojiet ārēju / absolūtu saiti (https: // URL) vai iekšējo / relatīvo saiti (/ DOLIBARR_ROOT / htdocs / ...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Izmantojiet ārēju / absolūtu saiti (https: // URL) vai iekšējo / relatīvo saiti (/ DigitalProspects_ROOT / htdocs / ...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Izvēlieties, vai saistītā lapa jāatver pašreizējā cilnē vai jaunā cilnē
 BookmarksManagement=Grāmatzīmju vadība

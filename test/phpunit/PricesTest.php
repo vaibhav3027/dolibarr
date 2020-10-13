@@ -138,7 +138,7 @@ class PricesTest extends PHPUnit\Framework\TestCase
      * Test function calcul_price_total
      *
      * @return 	boolean
-     * @see		http://wiki.dolibarr.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
+     * @see		http://wiki.DigitalProspects.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
      */
     public function testCalculPriceTotal()
     {
@@ -317,7 +317,7 @@ class PricesTest extends PHPUnit\Framework\TestCase
      * Test function addline and update_price
      *
      * @return 	boolean
-     * @see		http://wiki.dolibarr.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
+     * @see		http://wiki.DigitalProspects.org/index.php/Draft:VAT_calculation_and_rounding#Standard_usage
      */
     public function testUpdatePrice()
     {

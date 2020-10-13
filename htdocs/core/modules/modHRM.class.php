@@ -20,12 +20,12 @@
  * \ingroup HRM
  * \brief   Description and activation file for module HRM
  */
-include_once DOL_DOCUMENT_ROOT."/core/modules/DolibarrModules.class.php";
+include_once DOL_DOCUMENT_ROOT."/core/modules/DigitalProspectsModules.class.php";
 
 /**
  * Class to describe and activate the HRM module
  */
-class modHRM extends DolibarrModules
+class modHRM extends DigitalProspectsModules
 {
 	/**
 	 * Constructor.
@@ -47,7 +47,7 @@ class modHRM extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Management of employees carrier and feelings (department, employment contract)";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
 		$this->version = 'development';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
@@ -71,7 +71,7 @@ class modHRM extends DolibarrModules
 		$this->requiredby = array(/*"modSalaries, modExpenseReport, modHoliday"*/); // List of module ids to disable if this one is disabled
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(3, 9); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(3, 9); // Minimum version of DigitalProspects required by module
 		$this->langfiles = array("hrm");
 
 		// Dictionaries
@@ -125,7 +125,7 @@ class modHRM extends DolibarrModules
 	/**
 	 * Function called when module is enabled.
 	 * The init function add constants, boxes, permissions and menus
-	 * (defined in constructor) into Dolibarr database.
+	 * (defined in constructor) into DigitalProspects database.
 	 * It also creates data directories
 	 *
 	 * @param string $options Enabling module ('', 'noboxes')

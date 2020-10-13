@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Ningunha petición con erro
 ErrorServiceUnavailableTryLater=Servizo non dispoñible actualmente. Ténteo de novo mais tarde.
 ErrorDuplicateField=Valor duplicado nun único campo
 ErrorSomeErrorWereFoundRollbackIsDone=Atopáronse algúns erros. Modificacións desfeitas.
-ErrorConfigParameterNotDefined=O parámetro <b>%s</b> no está definido no   arquivo de configuración Dolibarr <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Imposible atopar ao usuario <b>%s</b> na base de datos Dolibarr.
+ErrorConfigParameterNotDefined=O parámetro <b>%s</b> no está definido no   arquivo de configuración DigitalProspects <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Imposible atopar ao usuario <b>%s</b> na base de datos DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Error, ningún tipo de IVE definido para o país '%s'.
 ErrorNoSocialContributionForSellerCountry=Erro, ningún tipo de taxa social/fiscal definida para o país '%s'.
 ErrorFailedToSaveFile=Erro, o rexistro do ficheiro fallou.
@@ -90,7 +90,7 @@ RecordDeleted=Rexistro eliminado
 RecordGenerated=Registro xerado
 LevelOfFeature=Nivel de funcións
 NotDefined=Non definido
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr está configurado no modo de autenticación <b>%s</b> no ficheiro de configuración <b>conf.php</b>.<br> Iso significa que a base de datos dos contrasinais é externa a Dolibarr, por iso toda modificación deste campo pode non ter efecto.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects está configurado no modo de autenticación <b>%s</b> no ficheiro de configuración <b>conf.php</b>.<br> Iso significa que a base de datos dos contrasinais é externa a DigitalProspects, por iso toda modificación deste campo pode non ter efecto.
 Administrator=Administrador
 Undefined=Non definido
 PasswordForgotten=¿Esqueceu o seu contrasinal?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Tipo de xestor de base de datos
 RequestLastAccessInError=Último acceso á base de datos con erro na solicitude
 ReturnCodeLastAccessInError=Código de retorno de acceso á base de datos con erro para a última petición
 InformationLastAccessInError=Información do último erro de petición de acceso de base de datos
-DolibarrHasDetectedError=Dolibarr detectou un erro técnico
-YouCanSetOptionDolibarrMainProdToZero=Pode ler o arquivo log ou establecer a opción $dolibarr_main_prod a '0' no seu arquivo de configuración para obter mais información.
-InformationToHelpDiagnose=Esta información pode ser útil para propstas de diagnóstico (pode configurar a opción $dolibarr_main_prod to '1' para eliminar as notificacións)
+DigitalProspectsHasDetectedError=DigitalProspects detectou un erro técnico
+YouCanSetOptionDigitalProspectsMainProdToZero=Pode ler o arquivo log ou establecer a opción $DigitalProspects_main_prod a '0' no seu arquivo de configuración para obter mais información.
+InformationToHelpDiagnose=Esta información pode ser útil para propstas de diagnóstico (pode configurar a opción $DigitalProspects_main_prod to '1' para eliminar as notificacións)
 MoreInformation=Mais información
 TechnicalInformation=Información técnica
 TechnicalID=ID Técnica
 LineID=ID de liña
 NotePublic=Nota (pública)
 NotePrivate=Nota (privada)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr está configurado para limitar a precisión dos prezos unitarios a <b>%s</b> decimais.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects está configurado para limitar a precisión dos prezos unitarios a <b>%s</b> decimais.
 DoTest=Probar
 ToFilter=Filtrar
 NoFilter=Sen filtro
@@ -475,8 +475,8 @@ Generate=Xerar
 Duration=Permanencia
 TotalDuration=Permanencia total
 Summary=Resumo
-DolibarrStateBoard=Estatísticas da base de datos
-DolibarrWorkBoard=Items pendentes
+DigitalProspectsStateBoard=Estatísticas da base de datos
+DigitalProspectsWorkBoard=Items pendentes
 NoOpenedElementToProcess=Sen elementos abertos a procesar
 Available=Dispoñible
 NotYetAvailable=Aínda non dispoñible
@@ -703,7 +703,7 @@ MenuECM=Documentos
 MenuAWStats=AWStats
 MenuMembers=Membros
 MenuAgendaGoogle=Axenda Google
-ThisLimitIsDefinedInSetup=Límite Dolibarr (Menú Inicio-configuración-seguridade): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=Límite DigitalProspects (Menú Inicio-configuración-seguridade): %s Kb, PHP limit: %s Kb
 NoFileFound=Non hai documentos gardados neste directorio
 CurrentUserLanguage=Idioma actual
 CurrentTheme=Tema actual
@@ -736,7 +736,7 @@ PrintContentArea=Amosar páxina de impresión da zona central
 MenuManager=Xestor de menú
 WarningYouAreInMaintenanceMode=Atención, está en modo mantemento, só o login <b>%s</b> está autorizado para utilizar a aplicación neste momento.
 CoreErrorTitle=Erro de sistema
-CoreErrorMessage=O sentimos, pero aconteceu un erro. Póñase en contacto co administrador do sistema para comprobar os rexistros ou desactive $dolibarr_main_prod=1 para obter mais información.
+CoreErrorMessage=O sentimos, pero aconteceu un erro. Póñase en contacto co administrador do sistema para comprobar os rexistros ou desactive $DigitalProspects_main_prod=1 para obter mais información.
 CreditCard=Tarxeta de crédito
 ValidatePayment=Validar pago
 CreditOrDebitCard=Tarxeta de crédito ou débito
@@ -875,7 +875,7 @@ Calendar=Calendario
 GroupBy=Agrupado por...
 ViewFlatList=Ver listaxe plana
 RemoveString=Eliminar cadea '%s'
-SomeTranslationAreUncomplete=Algúns dos idiomas ofrecidos poden estar parcialmente traducidos ou poden conter erros. Axuda a corrixir teu idioma rexistrándose en <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">http://transifex.com/projects/p/dolibarr/</a>.
+SomeTranslationAreUncomplete=Algúns dos idiomas ofrecidos poden estar parcialmente traducidos ou poden conter erros. Axuda a corrixir teu idioma rexistrándose en <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">http://transifex.com/projects/p/DigitalProspects/</a>.
 DirectDownloadLink=Ligazón de descarga directa (público/externo)
 DirectDownloadInternalLink=Ligazón de descarga directa (precisa estar rexistrado e precisa permisos)
 Download=Descargar

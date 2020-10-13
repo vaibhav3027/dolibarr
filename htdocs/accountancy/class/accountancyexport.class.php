@@ -517,7 +517,7 @@ class AccountancyExport
 			// $Tab['montant'] = str_pad(abs($data->montant), 12, '0', STR_PAD_LEFT); // TODO manage negative amount
 			$Tab['contrepartie'] = str_repeat(' ', 8);
 
-			// elarifr:  date format must be fixed format : 6 char ddmmyy = %d%m%yand not defined by user / dolibarr setting
+			// elarifr:  date format must be fixed format : 6 char ddmmyy = %d%m%yand not defined by user / DigitalProspects setting
 			if (!empty($data->date_echeance))
 				//$Tab['date_echeance'] = dol_print_date($data->date_echeance, $conf->global->ACCOUNTING_EXPORT_DATE);
 				$Tab['date_echeance'] = dol_print_date($data->date_echeance, '%d%m%y'); // elarifr:  format must be ddmmyy

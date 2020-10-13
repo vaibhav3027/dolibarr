@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Firmenname %s bereits vorhanden. Bitte wählen Sie einen anderen.
 ErrorSetACountryFirst=Wählen Sie zuerst das Land
 SelectThirdParty=Wähle einen Partner
@@ -12,7 +12,7 @@ MenuNewSupplier=neuer Lieferant
 MenuNewPrivateIndividual=Neue Privatperson
 NewCompany=neue Firma  (Interessent, Kunde, Lieferant)
 NewThirdParty=Neuer Partner (Interessent, Kunde, Lieferant)
-CreateDolibarrThirdPartySupplier=neuen Lieferanten erstellen 
+CreateDigitalProspectsThirdPartySupplier=neuen Lieferanten erstellen 
 CreateThirdPartyOnly=Partner erstellen
 CreateThirdPartyAndContact=Neuen Partner und Unteradresse erstellen
 ProspectionArea=Übersicht Geschäftsanbahnung
@@ -347,7 +347,7 @@ CapitalOf=Stammkapital: %s
 EditCompany=Unternehmen bearbeiten
 ThisUserIsNot=Dieser Benutzer ist weder ein Interessent, noch ein Kunde oder Lieferant
 VATIntraCheck=Prüfen
-VATIntraCheckDesc=Die Umsatzsteuer-ID muss das Länderpräfix enthalten. Der Link <b> %s </b> startet eine Anfrage am MwSt-Informationsaustauschsystem (MIAS) der Europäischen Kommission. Hierfür ist ein ein Internetzugang vom Dolibarr-Server erforderlich.
+VATIntraCheckDesc=Die Umsatzsteuer-ID muss das Länderpräfix enthalten. Der Link <b> %s </b> startet eine Anfrage am MwSt-Informationsaustauschsystem (MIAS) der Europäischen Kommission. Hierfür ist ein ein Internetzugang vom DigitalProspects-Server erforderlich.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Überprüfungsergebnis des MwSt-Informationsaustauschsystems (MIAS)
 VATIntraManualCheck=Sie können die Überprüfung auch manuell auf der Internetseite der Europäische Kommission durchführen: <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Interessenten nach Status
 NoParentCompany=keine Muttergesellschaft
 ExportCardToFormat=Karte in Format exportieren
 ContactNotLinkedToCompany=Kontakt keinem Partner zugeordnet
-DolibarrLogin=Dolibarr-Benutzername
-NoDolibarrAccess=Kein Zugang
+DigitalProspectsLogin=DigitalProspects-Benutzername
+NoDigitalProspectsAccess=Kein Zugang
 ExportDataset_company_1=Partner (Firmen/Stiftungen/Natürliche Personen) und ihre Eigenschaften
 ExportDataset_company_2=Kontakte und ihre Eigenschaften
 ImportDataset_company_1=Partner und Eigenschaften

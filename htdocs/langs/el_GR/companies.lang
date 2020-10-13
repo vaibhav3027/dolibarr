@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Το όνομα τις εταιρίας %s υπάρχει ήδη. Επιλέξτε κάποιο άλλο.
 ErrorSetACountryFirst=Πρώτα πρέπει να οριστεί η χώρα
 SelectThirdParty=Επιλέξτε ένα Πελ./Προμ.
@@ -12,7 +12,7 @@ MenuNewSupplier=Νέος προμηθευτής
 MenuNewPrivateIndividual=Νέος Ιδιώτης
 NewCompany=Νέα εταιρία ( προοπτική, πελάτης, κατασκευαστής)
 NewThirdParty=Νέο τρίτο μέρος (προοπτική, πελάτης, πωλητής)
-CreateDolibarrThirdPartySupplier=Δημιουργία τρίτου μέρους (προμηθευτής)
+CreateDigitalProspectsThirdPartySupplier=Δημιουργία τρίτου μέρους (προμηθευτής)
 CreateThirdPartyOnly=Create thirdpary
 CreateThirdPartyAndContact=Create a third party + a child contact
 ProspectionArea=Περιοχή προοπτικής
@@ -347,7 +347,7 @@ CapitalOf=Capital of %s
 EditCompany=Επεξεργασία Εταιρίας
 ThisUserIsNot=Αυτός ο χρήστης δεν είναι προοπτική, πελάτης ή πωλητής
 VATIntraCheck=Έλεγχος
-VATIntraCheckDesc=Το αναγνωριστικό ΦΠΑ πρέπει να περιλαμβάνει το πρόθεμα χώρας. Ο σύνδεσμος <b>%s</b> χρησιμοποιεί την ευρωπαϊκή υπηρεσία ελέγχου ΦΠΑ (VIES), η οποία απαιτεί πρόσβαση στο Διαδίκτυο από το διακομιστή Dolibarr.
+VATIntraCheckDesc=Το αναγνωριστικό ΦΠΑ πρέπει να περιλαμβάνει το πρόθεμα χώρας. Ο σύνδεσμος <b>%s</b> χρησιμοποιεί την ευρωπαϊκή υπηρεσία ελέγχου ΦΠΑ (VIES), η οποία απαιτεί πρόσβαση στο Διαδίκτυο από το διακομιστή DigitalProspects.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Ελέγξτε το ενδοκοινοτικό αναγνωριστικό ΦΠΑ στον δικτυακό τόπο της Ευρωπαϊκής Επιτροπής
 VATIntraManualCheck=Μπορείτε επίσης να ελέγξετε χειροκίνητα στον ιστότοπο της Ευρωπαϊκής Επιτροπής <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Προοπτικές ανά κατάσταση
 NoParentCompany=Τίποτα
 ExportCardToFormat=Export card to format
 ContactNotLinkedToCompany=Ο αντιπρόσωπος δεν αντιστοιχεί σε κάποιο στοιχείο
-DolibarrLogin=Είσοδος Dolibarr
-NoDolibarrAccess=Χωρίς πρόσβαση στο Dolibarr
+DigitalProspectsLogin=Είσοδος DigitalProspects
+NoDigitalProspectsAccess=Χωρίς πρόσβαση στο DigitalProspects
 ExportDataset_company_1=Τρίτα μέρη (εταιρείες / ιδρύματα / φυσικοί) και οι ιδιότητές τους
 ExportDataset_company_2=Οι επαφές και οι ιδιότητές τους
 ImportDataset_company_1=Τρίτα μέρη και τις ιδιότητές τους

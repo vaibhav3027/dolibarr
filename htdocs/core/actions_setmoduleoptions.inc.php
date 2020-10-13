@@ -37,7 +37,7 @@ if ($action == 'update' && is_array($arrayofparameters))
 		// Modify constant only if key was posted (avoid resetting key to the null value)
 		if (GETPOSTISSET($key))
 		{
-			$result = dolibarr_set_const($db, $key, GETPOST($key, 'alpha'), 'chaine', 0, '', $conf->entity);
+			$result = DigitalProspects_set_const($db, $key, GETPOST($key, 'alpha'), 'chaine', 0, '', $conf->entity);
 		    if ($result < 0)
 		    {
 			    $ok = false;
@@ -75,7 +75,7 @@ if ($action == 'setModuleOptions')
                 $value = GETPOST("value".$reg[1], 'alpha');
                 if ($param)
                 {
-                    $res = dolibarr_set_const($db, $param, $value, 'chaine', 0, '', $conf->entity);
+                    $res = DigitalProspects_set_const($db, $param, $value, 'chaine', 0, '', $conf->entity);
                     if (!$res > 0) $error++;
                 }
             }

@@ -2,7 +2,7 @@ mariadb:
     build: mariadb
     environment:
         MYSQL_ROOT_PASSWORD: root
-        MYSQL_DATABASE: dolibarr
+        MYSQL_DATABASE: DigitalProspects
 
 phpmyadmin:
     image: phpmyadmin/phpmyadmin

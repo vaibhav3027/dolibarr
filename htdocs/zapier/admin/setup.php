@@ -22,7 +22,7 @@
  * \brief   Zapier setup page.
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 require '../../main.inc.php';
 
 // Libraries
@@ -40,8 +40,8 @@ $action = GETPOST('action', 'alpha');
 $backtopage = GETPOST('backtopage', 'alpha');
 
 $arrayofparameters = array(
-    'ZAPIERFORDOLIBARR_MYPARAM1'=>array('css'=>'minwidth200', 'enabled'=>1),
-    'ZAPIERFORDOLIBARR_MYPARAM2'=>array('css'=>'minwidth500', 'enabled'=>1)
+    'ZAPIERFORDigitalProspects_MYPARAM1'=>array('css'=>'minwidth200', 'enabled'=>1),
+    'ZAPIERFORDigitalProspects_MYPARAM2'=>array('css'=>'minwidth500', 'enabled'=>1)
 );
 
 

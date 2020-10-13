@@ -55,10 +55,10 @@ class ModeleImports
 	public $extension; // Extension of files imported by driver
 
 	/**
-     * Dolibarr version of driver
+     * DigitalProspects version of driver
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $label_lib; // Label of external lib used by driver
 

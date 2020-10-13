@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Klientų užsakymų sritis
 SuppliersOrdersArea=Purchase orders area
 OrderCard=Užsakyti kortelę
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Are you sure you want to clone this order <b>%s</b>?
 DispatchSupplierOrder=Receiving purchase order %s
 FirstApprovalAlreadyDone=Pirmas patvirtinimas jau atliktas
 SecondApprovalAlreadyDone=Second approval already done
-SupplierOrderReceivedInDolibarr=Purchase Order %s received %s
-SupplierOrderSubmitedInDolibarr=Purchase Order %s submitted
+SupplierOrderReceivedInDigitalProspects=Purchase Order %s received %s
+SupplierOrderSubmitedInDigitalProspects=Purchase Order %s submitted
 SupplierOrderClassifiedBilled=Purchase Order %s set billed
 OtherOrders=Kiti užsakymai
 ##### Types de contacts #####

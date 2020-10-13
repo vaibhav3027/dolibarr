@@ -3,7 +3,7 @@
  * Copyright (C) 2004-2014 Laurent Destailleur  <eldy@users.sourceforge.net>
  * Copyright (C) 2010-2014 Juanjo Menent	    <jmenent@2byte.es>
  * Copyright (C) 2015      Marcos García        <marcosgdf@gmail.com>
- * Copyright (C) 2016      Abbes Bahfir         <contact@dolibarrpar.com>
+ * Copyright (C) 2016      Abbes Bahfir         <contact@DigitalProspectspar.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -150,7 +150,7 @@ if ($result > 0)
     print '<tr><td class="titlefield">'.$langs->trans("Login").'</td>';
     if (!empty($object->ldap_sid) && $object->statut == 0)
     {
-        print '<td class="error">'.$langs->trans("LoginAccountDisableInDolibarr").'</td>';
+        print '<td class="error">'.$langs->trans("LoginAccountDisableInDigitalProspects").'</td>';
     }
     else
     {

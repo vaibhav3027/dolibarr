@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 BillsCustomer=Fatura de cliente
 BillsCustomersUnpaid=Faturas de clientes não pagos
 BillsCustomersUnpaidForCompany=Faturas de clientes não pagas para %s
@@ -395,6 +395,6 @@ ConfirmDeleteRepeatableInvoice=Você tem certeza que deseja excluir o tema de fa
 BillCreated=%s conta(s) criada(s)
 StatusOfGeneratedDocuments=Status da geração de documentos
 DoNotGenerateDoc=Não gere arquivo de documento
-BILL_DELETEInDolibarr=Fatura excluída
-BILL_SUPPLIER_DELETEInDolibarr=Fatura de fornecedor excluída
+BILL_DELETEInDigitalProspects=Fatura excluída
+BILL_SUPPLIER_DELETEInDigitalProspects=Fatura de fornecedor excluída
 UnitPriceXQtyLessDiscount=Preço unitário x Qtd. - Desconto

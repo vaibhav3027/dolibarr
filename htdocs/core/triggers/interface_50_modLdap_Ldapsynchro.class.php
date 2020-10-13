@@ -23,22 +23,22 @@
  *  \brief      Fichier de gestion des triggers LDAP
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for ldap module
  */
-class InterfaceLdapsynchro extends DolibarrTriggers
+class InterfaceLdapsynchro extends DigitalProspectsTriggers
 {
 	public $family = 'ldap';
-	public $description = "Triggers of this module allows to synchronize Dolibarr toward a LDAP database.";
+	public $description = "Triggers of this module allows to synchronize DigitalProspects toward a LDAP database.";
 
 	/**
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
 	 * @var string Image of the trigger
@@ -46,7 +46,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 	public $picto = 'technic';
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * @param string		$action		Event action code
@@ -76,7 +76,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		if ($action == 'USER_CREATE')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -95,7 +95,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USER_MODIFY')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -134,7 +134,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USER_NEW_PASSWORD')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -175,7 +175,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USER_DELETE')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -194,7 +194,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USER_SETINGROUP')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -232,7 +232,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USER_REMOVEFROMGROUP')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -272,7 +272,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USERGROUP_CREATE')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -296,7 +296,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USERGROUP_MODIFY')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();
@@ -333,7 +333,7 @@ class InterfaceLdapsynchro extends DolibarrTriggers
 		elseif ($action == 'USERGROUP_DELETE')
 		{
 			dol_syslog("Trigger '".$this->name."' for action '$action' launched by ".__FILE__.". id=".$object->id);
-			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'dolibarr2ldap')
+			if (!empty($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE === 'DigitalProspects2ldap')
 			{
 				$ldap = new Ldap();
 				$result = $ldap->connect_bind();

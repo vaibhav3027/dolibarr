@@ -21,7 +21,7 @@
 /**
  *  \file		htdocs/core/lib/security.lib.php
  *  \ingroup    core
- *  \brief		Set of function used for dolibarr security (common function included into filefunc.inc.php)
+ *  \brief		Set of function used for DigitalProspects security (common function included into filefunc.inc.php)
  *  			Warning, this file must not depends on other library files, except function.lib.php
  *  			because it is used at low code level.
  */

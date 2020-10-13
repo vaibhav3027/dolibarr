@@ -21,7 +21,7 @@
  */
 
 /**
- *    Class to manage Dolibarr database access for an SQL database
+ *    Class to manage DigitalProspects database access for an SQL database
  */
 interface Database
 {
@@ -396,17 +396,17 @@ interface Database
 	/**
 	 * Create a user and privileges to connect to database (even if database does not exists yet)
 	 *
-	 * @param    string $dolibarr_main_db_host 	Server IP
-	 * @param    string $dolibarr_main_db_user 	Username to create
-	 * @param    string $dolibarr_main_db_pass 	User password to create
-	 * @param    string $dolibarr_main_db_name 	Database name where user must be granted
+	 * @param    string $DigitalProspects_main_db_host 	Server IP
+	 * @param    string $DigitalProspects_main_db_user 	Username to create
+	 * @param    string $DigitalProspects_main_db_pass 	User password to create
+	 * @param    string $DigitalProspects_main_db_name 	Database name where user must be granted
 	 * @return   int                            <0 if KO, >=0 if OK
 	 */
 	public function DDLCreateUser(
-		$dolibarr_main_db_host,
-		$dolibarr_main_db_user,
-		$dolibarr_main_db_pass,
-		$dolibarr_main_db_name
+		$DigitalProspects_main_db_host,
+		$DigitalProspects_main_db_user,
+		$DigitalProspects_main_db_pass,
+		$DigitalProspects_main_db_name
 	);
 	// phpcs:enable
 

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - cron
+# DigitalProspects language file - Source file is en_US - cron
 # About page
 # Right
 Permission23101 = Read Scheduled job
@@ -61,11 +61,11 @@ CronStatusInactiveBtn=Deaktivere
 CronTaskInactive=This job is disabled
 CronId=Id
 CronClassFile=Filename with class
-CronModuleHelp=Navn på Dolibarr modul bibliotek (også arbejde med ekstern Dolibarr modul). <BR> For eksempel for at kalde hentningsmetoden for Dolibarr Product-objektet /htdocs/<u>product</u>/class/product.class.php, er værdien for modulet <i> produkt </i>
-CronClassFileHelp=Den relative sti og filnavn, der skal indlæses (stien er i forhold til webserverens rodmappe). <BR> For eksempel for at kalde hentningsmetoden for Dolibarr Produktobjekt htdocs / product / class / <u> product.class.php </u> er værdien for klassefilenavnet <br> <i> produkt / klasse / product.class.php </i>
-CronObjectHelp=Objektnavnet, der skal indlæses. <BR> For at f.eks. Kalde hentningsmetoden for Dolibarr Product-objektet /htdocs/product/class/product.class.php, er værdien for klassefilenavnet <br> <i> Produkt </ i>
-CronMethodHelp=Objektmetoden til at starte. <BR> For at f.eks. Kalde hentningsmetoden for Dolibarr Product-objektet /htdocs/product/class/product.class.php, er værdien for metoden <i> hent </ i>
-CronArgsHelp=Metodargumenterna. <BR> For eksempel for at kalde hente metode til Dolibarr Produkt objekt /htdocs/product/class/product.class.php, kan værdien for paramters være <i> 0, ProductRef </i>
+CronModuleHelp=Navn på DigitalProspects modul bibliotek (også arbejde med ekstern DigitalProspects modul). <BR> For eksempel for at kalde hentningsmetoden for DigitalProspects Product-objektet /htdocs/<u>product</u>/class/product.class.php, er værdien for modulet <i> produkt </i>
+CronClassFileHelp=Den relative sti og filnavn, der skal indlæses (stien er i forhold til webserverens rodmappe). <BR> For eksempel for at kalde hentningsmetoden for DigitalProspects Produktobjekt htdocs / product / class / <u> product.class.php </u> er værdien for klassefilenavnet <br> <i> produkt / klasse / product.class.php </i>
+CronObjectHelp=Objektnavnet, der skal indlæses. <BR> For at f.eks. Kalde hentningsmetoden for DigitalProspects Product-objektet /htdocs/product/class/product.class.php, er værdien for klassefilenavnet <br> <i> Produkt </ i>
+CronMethodHelp=Objektmetoden til at starte. <BR> For at f.eks. Kalde hentningsmetoden for DigitalProspects Product-objektet /htdocs/product/class/product.class.php, er værdien for metoden <i> hent </ i>
+CronArgsHelp=Metodargumenterna. <BR> For eksempel for at kalde hente metode til DigitalProspects Produkt objekt /htdocs/product/class/product.class.php, kan værdien for paramters være <i> 0, ProductRef </i>
 CronCommandHelp=The system command line to execute.
 CronCreateJob=Create new Scheduled Job
 CronFrom=Fra

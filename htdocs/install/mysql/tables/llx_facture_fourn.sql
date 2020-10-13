@@ -26,7 +26,7 @@ create table llx_facture_fourn
   ref_supplier			varchar(180) NOT NULL,
   entity				integer  DEFAULT 1 NOT NULL,	 -- multi company id
 
-  ref_ext				varchar(255),                  -- reference into an external system (not used by dolibarr)
+  ref_ext				varchar(255),                  -- reference into an external system (not used by DigitalProspects)
 
   type					smallint DEFAULT 0 NOT NULL,
   fk_soc				integer NOT NULL,

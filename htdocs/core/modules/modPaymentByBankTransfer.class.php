@@ -26,13 +26,13 @@
  *	\brief      	File to describe and activate the module PaymentByBankTransfer
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module of payment by Bank transfer
  */
-class modPaymentByBankTransfer extends DolibarrModules
+class modPaymentByBankTransfer extends DigitalProspectsModules
 {
 
 	/**
@@ -53,7 +53,7 @@ class modPaymentByBankTransfer extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Management of payment by bank transfer";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
 		$this->version = 'experimental';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
@@ -128,7 +128,7 @@ class modPaymentByBankTransfer extends DolibarrModules
 
     /**
      *  Function called when module is enabled.
-     *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+     *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
      *  It also creates data directories
      *
      *  @param      string	$options    Options when enabling module ('', 'noboxes')

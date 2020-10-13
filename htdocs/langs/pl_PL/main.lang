@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Nie wykryto żadneog błednego zapytania.
 ErrorServiceUnavailableTryLater=Serwis w tej chwili jest niedostępny. Spróbuj później.
 ErrorDuplicateField=Zduplikuj niepowtarzalną wartość w polu
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Nie można znaleźć <b>użytkownika %s</b> Dolibarra w bazie danych.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Nie można znaleźć <b>użytkownika %s</b> DigitalProspectsa w bazie danych.
 ErrorNoVATRateDefinedForSellerCountry=Błąd, nie określono stawki VAT dla kraju " %s".
 ErrorNoSocialContributionForSellerCountry=Błąd, brak określonej stopy podatkowej dla kraju '%s'.
 ErrorFailedToSaveFile=Błąd, nie udało się zapisać pliku.
@@ -90,7 +90,7 @@ RecordDeleted=Rekord usunięty
 RecordGenerated=Rekord wygenerowany
 LevelOfFeature=możliwości funkcji
 NotDefined=Nie zdefiniowany
-DolibarrInHttpAuthenticationSoPasswordUseless=Tryb uwierzytelniania Dolibarr jest ustawiony na <b>%s</b> w pliku konfiguracyjnym <b>conf.php</b>.<br> Oznacza to, że baza danych haseł jest na zewnątrz Dolibarr, więc zmiana tego pola może nie mieć wpływu.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Tryb uwierzytelniania DigitalProspects jest ustawiony na <b>%s</b> w pliku konfiguracyjnym <b>conf.php</b>.<br> Oznacza to, że baza danych haseł jest na zewnątrz DigitalProspects, więc zmiana tego pola może nie mieć wpływu.
 Administrator=Administrator
 Undefined=Niezdefiniowano
 PasswordForgotten=Zapomniałeś hasła?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Typ managera bazy danych
 RequestLastAccessInError=Ostatni błąd zgłoszeń o dostępie do bazy danych
 ReturnCodeLastAccessInError=Kod zwrotny ostatniego błędu żądania dostępu do bazy danych
 InformationLastAccessInError=Informacje o najnowszym błędzie żądania dostępu do bazy danych
-DolibarrHasDetectedError=Dolibarr wykrył błąd techniczny
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects wykrył błąd techniczny
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=Więcej informacji
 TechnicalInformation=Informację techniczne
 TechnicalID=Techniczne ID
 LineID=Line ID
 NotePublic=Uwaga (publiczna)
 NotePrivate=Uwaga (prywatna)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr ustawił ograniczenia dokładności cen jednostkowych <b>do %s</b> miejsc po przecinku.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects ustawił ograniczenia dokładności cen jednostkowych <b>do %s</b> miejsc po przecinku.
 DoTest=Test
 ToFilter=Filtr
 NoFilter=Brak filtra
@@ -475,8 +475,8 @@ Generate=Wygeneruj
 Duration=Czas trwania
 TotalDuration=Łączny czas trwania
 Summary=Podsumowanie
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Dostępny
 NotYetAvailable=Nie są jeszcze dostępne
@@ -736,7 +736,7 @@ PrintContentArea=Pokaż stronę do wydruku głównej treści
 MenuManager=Menu menager
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Błąd systemu
-CoreErrorMessage=Przepraszamy, napotkano błąd. Skontaktuj się z administratorem w celu sprawdzenia logów lub wyłącz $dolibarr_main_prod=1 aby uzyskać więcej informacji.
+CoreErrorMessage=Przepraszamy, napotkano błąd. Skontaktuj się z administratorem w celu sprawdzenia logów lub wyłącz $DigitalProspects_main_prod=1 aby uzyskać więcej informacji.
 CreditCard=Karta kredytowa
 ValidatePayment=Weryfikacja płatności
 CreditOrDebitCard=Karta debetowa lub kredytowa
@@ -875,7 +875,7 @@ Calendar=Kalendarz
 GroupBy=Grupuj według
 ViewFlatList=Zobacz płaską listę
 RemoveString=Usuń ciąg '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Bezpośredni link do pobierania (publiczny / zewnętrzny)
 DirectDownloadInternalLink=Bezpośredni link do pobrania (musisz się zalogować i potrzebujesz uprawnień)
 Download=Pobierz

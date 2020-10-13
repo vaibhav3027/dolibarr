@@ -53,18 +53,18 @@ if ($action == 'updateall')
 {
     $db->begin();
     $res1 = $res2 = $res3 = $res4 = $res5 = $res6 = 0;
-    $res1 = dolibarr_set_const($db, 'ADHERENT_LOGIN_NOT_REQUIRED', GETPOST('ADHERENT_LOGIN_NOT_REQUIRED', 'alpha') ? 0 : 1, 'chaine', 0, '', $conf->entity);
-    $res2 = dolibarr_set_const($db, 'ADHERENT_MAIL_REQUIRED', GETPOST('ADHERENT_MAIL_REQUIRED', 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res3 = dolibarr_set_const($db, 'ADHERENT_DEFAULT_SENDINFOBYMAIL', GETPOST('ADHERENT_DEFAULT_SENDINFOBYMAIL', 'alpha'), 'chaine', 0, '', $conf->entity);
-    $res4 = dolibarr_set_const($db, 'ADHERENT_BANK_USE', GETPOST('ADHERENT_BANK_USE', 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res1 = DigitalProspects_set_const($db, 'ADHERENT_LOGIN_NOT_REQUIRED', GETPOST('ADHERENT_LOGIN_NOT_REQUIRED', 'alpha') ? 0 : 1, 'chaine', 0, '', $conf->entity);
+    $res2 = DigitalProspects_set_const($db, 'ADHERENT_MAIL_REQUIRED', GETPOST('ADHERENT_MAIL_REQUIRED', 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res3 = DigitalProspects_set_const($db, 'ADHERENT_DEFAULT_SENDINFOBYMAIL', GETPOST('ADHERENT_DEFAULT_SENDINFOBYMAIL', 'alpha'), 'chaine', 0, '', $conf->entity);
+    $res4 = DigitalProspects_set_const($db, 'ADHERENT_BANK_USE', GETPOST('ADHERENT_BANK_USE', 'alpha'), 'chaine', 0, '', $conf->entity);
     // Use vat for invoice creation
     if ($conf->facture->enabled)
     {
-        $res4 = dolibarr_set_const($db, 'ADHERENT_VAT_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_VAT_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
-        $res5 = dolibarr_set_const($db, 'ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
+        $res4 = DigitalProspects_set_const($db, 'ADHERENT_VAT_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_VAT_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
+        $res5 = DigitalProspects_set_const($db, 'ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
         if (!empty($conf->product->enabled) || !empty($conf->service->enabled))
         {
-            $res6 = dolibarr_set_const($db, 'ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
+            $res6 = DigitalProspects_set_const($db, 'ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', GETPOST('ADHERENT_PRODUCT_ID_FOR_SUBSCRIPTIONS', 'alpha'), 'chaine', 0, '', $conf->entity);
         }
     }
     if ($res1 < 0 || $res2 < 0 || $res3 < 0 || $res4 < 0 || $res5 < 0 || $res6 < 0)
@@ -94,7 +94,7 @@ if ($action == 'update' || $action == 'add')
 
 	$consttype = GETPOST('consttype', 'alpha');
 	$constnote = GETPOST('constnote');
-	$res = dolibarr_set_const($db, $constname, $constvalue, $type[$consttype], 0, $constnote, $conf->entity);
+	$res = DigitalProspects_set_const($db, $constname, $constvalue, $type[$consttype], 0, $constnote, $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -111,7 +111,7 @@ if ($action == 'update' || $action == 'add')
 // Action to enable of a submodule of the adherent module
 if ($action == 'set')
 {
-    $result = dolibarr_set_const($db, GETPOST('name', 'alpha'), GETPOST('value'), '', 0, '', $conf->entity);
+    $result = DigitalProspects_set_const($db, GETPOST('name', 'alpha'), GETPOST('value'), '', 0, '', $conf->entity);
     if ($result < 0)
     {
         print $db->error();
@@ -121,7 +121,7 @@ if ($action == 'set')
 // Action to disable a submodule of the adherent module
 if ($action == 'unset')
 {
-    $result = dolibarr_del_const($db, GETPOST('name', 'alpha'), $conf->entity);
+    $result = DigitalProspects_del_const($db, GETPOST('name', 'alpha'), $conf->entity);
     if ($result < 0)
     {
         print $db->error();

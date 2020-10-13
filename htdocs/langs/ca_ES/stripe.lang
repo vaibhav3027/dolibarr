@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Configuració del mòdul Stripe
-StripeDesc=Ofereix als clients una pàgina de pagament en línia de Stripe per als pagaments amb targetes credit / cebit a través de <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Això es pot utilitzar per permetre als vostres clients fer pagaments ad-hoc o pagaments relacionats amb un objecte particular de Dolibarr (factura, comanda ...)
+StripeDesc=Ofereix als clients una pàgina de pagament en línia de Stripe per als pagaments amb targetes credit / cebit a través de <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Això es pot utilitzar per permetre als vostres clients fer pagaments ad-hoc o pagaments relacionats amb un objecte particular de DigitalProspects (factura, comanda ...)
 StripeOrCBDoPayment=Pagar amb targeta de crèdit o Stripe
-FollowingUrlAreAvailableToMakePayments=Les següents URL estan disponibles per a permetre a un client fer un cobrament en objectes de Dolibarr
+FollowingUrlAreAvailableToMakePayments=Les següents URL estan disponibles per a permetre a un client fer un cobrament en objectes de DigitalProspects
 PaymentForm=Formulari de pagament
 WelcomeOnPaymentPage=Benvingut als nostres serveis de pagament en línia
 ThisScreenAllowsYouToPay=Aquesta pantalla li permet fer el seu pagament en línia destinat a %s.

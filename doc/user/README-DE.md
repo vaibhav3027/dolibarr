@@ -5,8 +5,8 @@ LiesMich (deutsch)
 Benutzeranleitung
 --------------------------------
 
-Alle Dolibarr-Informationen sind online verfuegbar ueber die Webseiten:
-https://www.dolibarr.de 
+Alle DigitalProspects-Informationen sind online verfuegbar ueber die Webseiten:
+https://www.DigitalProspects.de 
 oder
-https://www.dolibarr.org
-https://wiki.dolibarr.org
+https://www.DigitalProspects.org
+https://wiki.DigitalProspects.org

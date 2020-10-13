@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Stripe-moduloppsett
-StripeDesc=Tilby kundene en Stripe online betalingsside for betalinger med kredittkort/debetkort via <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Dette kan brukes til å la kundene dine foreta ad hoc-betalinger eller for betalinger knyttet til et bestemt Dolibarr-objekt (faktura, bestilling, ...)
+StripeDesc=Tilby kundene en Stripe online betalingsside for betalinger med kredittkort/debetkort via <a href="http://www.stripe.com" target="_blank"> Stripe </a>. Dette kan brukes til å la kundene dine foreta ad hoc-betalinger eller for betalinger knyttet til et bestemt DigitalProspects-objekt (faktura, bestilling, ...)
 StripeOrCBDoPayment=Betal med kredittkort eller Stripe
-FollowingUrlAreAvailableToMakePayments=Følgende nettadresser er tilgjengelige for kundene til å foreta betalinger for Dolibarr objekter
+FollowingUrlAreAvailableToMakePayments=Følgende nettadresser er tilgjengelige for kundene til å foreta betalinger for DigitalProspects objekter
 PaymentForm=Betalingskjema
 WelcomeOnPaymentPage=Velkommen til vår online betalingstjeneste
 ThisScreenAllowsYouToPay=I detteskjermbildet kan du foreta en online betaling til %s.

@@ -374,7 +374,7 @@ if ($action != 'create') {
 	print '<tr><td>'.$langs->trans("Email").'</td><td><input type="text" name="email" value="'.GETPOST('email', 'alphanohtml').'"></td></tr>';
 	print '<tr><td>'.$langs->trans("Signature").'</td><td>';
 	require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-	$doleditor = new DolEditor('signature', GETPOST('signature'), '', 138, 'dolibarr_notes', 'In', true, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
+	$doleditor = new DolEditor('signature', GETPOST('signature'), '', 138, 'DigitalProspects_notes', 'In', true, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
 	print $doleditor->Create(1);
 	print '</td></tr>';
 	print '<tr><td>'.$langs->trans("User").'</td><td>';

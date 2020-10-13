@@ -972,7 +972,7 @@ if ($action == 'create')
         print '<tr>';
         print '<td class="tdtop">'.$langs->trans('NotePublic').'</td>';
         print '<td>';
-        $doleditor = new DolEditor('note_public', $note_public, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+        $doleditor = new DolEditor('note_public', $note_public, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
         print $doleditor->Create(1);
         //print '<textarea name="note_public" cols="80" rows="'.ROWS_3.'">'.$note_public.'</textarea>';
         print '</td></tr>';
@@ -983,7 +983,7 @@ if ($action == 'create')
         	print '<tr>';
         	print '<td class="tdtop">'.$langs->trans('NotePrivate').'</td>';
         	print '<td>';
-        	$doleditor = new DolEditor('note_private', $note_private, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+        	$doleditor = new DolEditor('note_private', $note_private, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
         	print $doleditor->Create(1);
         	//print '<textarea name="note_private" cols="80" rows="'.ROWS_3.'">'.$note_private.'</textarea>';
         	print '</td></tr>';
@@ -1473,7 +1473,7 @@ elseif ($id > 0 || !empty($ref))
 
 					// Editeur wysiwyg
 					require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-					$doleditor = new DolEditor('np_desc', $objp->description, '', 164, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_DETAILS, ROWS_2, '90%');
+					$doleditor = new DolEditor('np_desc', $objp->description, '', 164, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_DETAILS, ROWS_2, '90%');
 					$doleditor->Create();
 					print '</td>';
 
@@ -1537,7 +1537,7 @@ elseif ($id > 0 || !empty($ref))
                 // editeur wysiwyg
                 if (empty($conf->global->FICHINTER_EMPTY_LINE_DESC)) {
                     require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-                    $doleditor = new DolEditor('np_desc', GETPOST('np_desc', 'restricthtml'), '', 100, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_DETAILS, ROWS_2, '90%');
+                    $doleditor = new DolEditor('np_desc', GETPOST('np_desc', 'restricthtml'), '', 100, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_DETAILS, ROWS_2, '90%');
                     $doleditor->Create();
                 }
                 print '</td>';

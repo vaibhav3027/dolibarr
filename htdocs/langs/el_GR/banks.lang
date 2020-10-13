@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Τράπεζα
 MenuBankCash=Τράπεζες | Μετρητά
 MenuVariousPayment=Διάφορες πληρωμές
@@ -109,7 +109,7 @@ SocialContributionPayment=Σίγουρα θέλετε να μαρκάρετε α
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Εσωτερική μεταφορά
-TransferDesc=Μεταφορά από έναν λογαριασμό σε άλλο, ο Dolibarr θα γράψει δύο εγγραφές (μια χρέωση στο λογαριασμό προέλευσης και μια πίστωση στο λογαριασμό-στόχος). Το ίδιο ποσό (εκτός από το σύμβολο), η ετικέτα και η ημερομηνία θα χρησιμοποιηθούν για αυτήν τη συναλλαγή)
+TransferDesc=Μεταφορά από έναν λογαριασμό σε άλλο, ο DigitalProspects θα γράψει δύο εγγραφές (μια χρέωση στο λογαριασμό προέλευσης και μια πίστωση στο λογαριασμό-στόχος). Το ίδιο ποσό (εκτός από το σύμβολο), η ετικέτα και η ημερομηνία θα χρησιμοποιηθούν για αυτήν τη συναλλαγή)
 TransferFrom=Από
 TransferTo=Προς
 TransferFromToDone=Η μεταφορά από <b>%s</b> στον <b>%s</b> του <b>%s</b> %s έχει καταγραφεί.

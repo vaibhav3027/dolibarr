@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Ninguna petición en error
 ErrorServiceUnavailableTryLater=Servicio no disponible actualmente. Inténtelo de nuevo más tarde.
 ErrorDuplicateField=Duplicado en un campo único
 ErrorSomeErrorWereFoundRollbackIsDone=Se encontraron algunos errores. Modificaciones deshechas.
-ErrorConfigParameterNotDefined=El parámetro <b>%s</b> no está definido en el archivo de configuración Dolibarr <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Imposible encontrar el usuario <b>%s</b> en la base de datos Dolibarr.
+ErrorConfigParameterNotDefined=El parámetro <b>%s</b> no está definido en el archivo de configuración DigitalProspects <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Imposible encontrar el usuario <b>%s</b> en la base de datos DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Error, ningún tipo de IVA definido para el país '%s'.
 ErrorNoSocialContributionForSellerCountry=Error, ningún tipo de tasa social/fiscal definida para el país '%s'.
 ErrorFailedToSaveFile=Error, el registro del archivo falló.
@@ -90,7 +90,7 @@ RecordDeleted=Registro eliminado
 RecordGenerated=Registro generado
 LevelOfFeature=Nivel de funciones
 NotDefined=No definida
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr está configurado en modo de autentificación <b>%s</b> en el archivo de configuración <b>conf.php</b>.<br> Eso significa que la base de datos de las contraseñas es externa a Dolibarr, por eso toda modificación de este campo puede resultar sin efecto alguno.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects está configurado en modo de autentificación <b>%s</b> en el archivo de configuración <b>conf.php</b>.<br> Eso significa que la base de datos de las contraseñas es externa a DigitalProspects, por eso toda modificación de este campo puede resultar sin efecto alguno.
 Administrator=Administrador
 Undefined=No definido
 PasswordForgotten=¿Olvidó su contraseña?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Tipo de gestor de base de datos
 RequestLastAccessInError=Último error en solicitud de acceso de base de datos
 ReturnCodeLastAccessInError=Código de retorno de error para la última petición de acceso a la base de datos
 InformationLastAccessInError=Información del último error de petición de acceso de base de datos
-DolibarrHasDetectedError=Dolibarr ha detectado un error técnico
-YouCanSetOptionDolibarrMainProdToZero=Puede leer el archivo log o establecer la opción $dolibarr_main_prod a '0' en su archivo de configuración para obtener más información.
-InformationToHelpDiagnose=Esta información puede ser útil para el diagnóstico (puede configurar la opción $dolibarr_main_prod to '1' para eliminar estas notificaciones)
+DigitalProspectsHasDetectedError=DigitalProspects ha detectado un error técnico
+YouCanSetOptionDigitalProspectsMainProdToZero=Puede leer el archivo log o establecer la opción $DigitalProspects_main_prod a '0' en su archivo de configuración para obtener más información.
+InformationToHelpDiagnose=Esta información puede ser útil para el diagnóstico (puede configurar la opción $DigitalProspects_main_prod to '1' para eliminar estas notificaciones)
 MoreInformation=Más información
 TechnicalInformation=Información técnica
 TechnicalID=ID Técnica
 LineID=ID de línea
 NotePublic=Nota (pública)
 NotePrivate=Nota (privada)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr está configurado para limitar la precisión de los precios unitarios a <b>%s</b> decimales.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects está configurado para limitar la precisión de los precios unitarios a <b>%s</b> decimales.
 DoTest=Probar
 ToFilter=Filtrar
 NoFilter=Sin filtro
@@ -475,8 +475,8 @@ Generate=Generar
 Duration=Duración
 TotalDuration=Duración total
 Summary=Resumen
-DolibarrStateBoard=Estadísticas de la base de datos
-DolibarrWorkBoard=Tickets abiertos
+DigitalProspectsStateBoard=Estadísticas de la base de datos
+DigitalProspectsWorkBoard=Tickets abiertos
 NoOpenedElementToProcess=Sin elementos abiertos a procesar
 Available=Disponible
 NotYetAvailable=Aún no disponible
@@ -703,7 +703,7 @@ MenuECM=Documentos
 MenuAWStats=AWStats
 MenuMembers=Miembros
 MenuAgendaGoogle=Agenda Google
-ThisLimitIsDefinedInSetup=Límite Dolibarr (Menú inicio-configuración-seguridad): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=Límite DigitalProspects (Menú inicio-configuración-seguridad): %s Kb, PHP limit: %s Kb
 NoFileFound=No hay documentos guardados en este directorio
 CurrentUserLanguage=Idioma actual
 CurrentTheme=Tema actual
@@ -736,7 +736,7 @@ PrintContentArea=Mostrar página de impresión de la zona central
 MenuManager=Gestor de menú
 WarningYouAreInMaintenanceMode=Atención, está en modo mantenimiento, así que solamente el login <b>%s</b> está autorizado para utilizar la aplicación en este momento.
 CoreErrorTitle=Error del sistema
-CoreErrorMessage=Lo sentimos, pero ha ocurrido un error. Póngase en contacto con el administrador del sistema para comprobar los registros o desactive $dolibarr_main_prod=1 para obtener más información.
+CoreErrorMessage=Lo sentimos, pero ha ocurrido un error. Póngase en contacto con el administrador del sistema para comprobar los registros o desactive $DigitalProspects_main_prod=1 para obtener más información.
 CreditCard=Tarjeta de crédito
 ValidatePayment=Validar pago
 CreditOrDebitCard=Tarjeta de crédito o débito
@@ -875,7 +875,7 @@ Calendar=Calendario
 GroupBy=Agrupado por...
 ViewFlatList=Ver lista plana
 RemoveString=Eliminar cadena '%s'
-SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar parcialmente traducidos o pueden contener errores. Si detecta algunos, puede corregir los archivos de idiomas registrándose en <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">http://transifex.com/projects/p/dolibarr/</a>.
+SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar parcialmente traducidos o pueden contener errores. Si detecta algunos, puede corregir los archivos de idiomas registrándose en <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">http://transifex.com/projects/p/DigitalProspects/</a>.
 DirectDownloadLink=Enlace de descarga directa
 DirectDownloadInternalLink=Enlace de descarga directa (necesita estar registrado y necesita permisos)
 Download=Descargar

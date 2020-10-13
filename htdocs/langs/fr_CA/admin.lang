@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - admin
+# DigitalProspects language file - Source file is en_US - admin
 Publisher=Éditeur
 VersionLastInstall=Version d'installation initiale
 VersionLastUpgrade=Version de la dernière mise à jour
@@ -9,7 +9,7 @@ MakeIntegrityAnalysisFrom=Effectuer une analyse d'intégrité des fichiers d'app
 LocalSignature=Signature locale intégrée (moins fiable)
 RemoteSignature=Signature distante distante (plus fiable)
 FilesUpdated=Mettre à jour les fichiers
-FileCheckDolibarr=Vérifier l'intégrité des fichiers d'application
+FileCheckDigitalProspects=Vérifier l'intégrité des fichiers d'application
 XmlNotFound=Xml Integrity Fichier de l'application introuvable
 ConfirmPurgeSessions=Voulez-vous vraiment purger toutes les sessions? Cela déconnectera tous les utilisateurs (sauf vous).
 DBSortingCharset=Encodage base pour tri données
@@ -34,15 +34,15 @@ FeatureAvailableOnlyOnStable=La fonctionnalité est uniquement disponible sur le
 ModulesMarketPlaceDesc=Vous pouvez trouver plus de modules à télécharger sur des sites Web externes sur Internet ...
 ModulesMarketPlaces=Trouver des applications / modules externes
 ModulesDevelopYourModule=Développez votre propre application / modules
-NotCompatible=Ce module ne semble pas compatible avec votre Dolibarr %s (Min %s - Max %s).
-CompatibleAfterUpdate=Ce module nécessite une mise à jour de votre Dolibarr %s (Min %s - Max %s).
+NotCompatible=Ce module ne semble pas compatible avec votre DigitalProspects %s (Min %s - Max %s).
+CompatibleAfterUpdate=Ce module nécessite une mise à jour de votre DigitalProspects %s (Min %s - Max %s).
 SeeInMarkerPlace=Voir dans Market place
 Updated=Mis à jour
 AchatTelechargement=Acheter / Télécharger
-DoliPartnersDesc=List of companies providing custom-developed modules or features.<br>Note: since Dolibarr is an open source application, <i>anyone</i> experienced in PHP programming should be able to develop a module.
+DoliPartnersDesc=List of companies providing custom-developed modules or features.<br>Note: since DigitalProspects is an open source application, <i>anyone</i> experienced in PHP programming should be able to develop a module.
 DevelopYourModuleDesc=Quelques solutions pour développer votre propre module ...
-InstrucToEncodePass=Pour chiffrer le mot de passe de la base dans le fichier de configuration <b>conf.php</b>, remplacer la ligne<br><b>$dolibarr_main_db_pass="...";</b><br>par<br><b>$dolibarr_main_db_pass="crypted:%s";</b>
-InstrucToClearPass=Pour avoir le mot de passe de la base décodé (en clair) dans le fichier de configuration <b>conf.php</b>, remplacer dans ce fichier la ligne<br><b>$dolibarr_main_db_pass="crypted:..."</b><br>par<br><b>$dolibarr_main_db_pass="%s"</b>
+InstrucToEncodePass=Pour chiffrer le mot de passe de la base dans le fichier de configuration <b>conf.php</b>, remplacer la ligne<br><b>$DigitalProspects_main_db_pass="...";</b><br>par<br><b>$DigitalProspects_main_db_pass="crypted:%s";</b>
+InstrucToClearPass=Pour avoir le mot de passe de la base décodé (en clair) dans le fichier de configuration <b>conf.php</b>, remplacer dans ce fichier la ligne<br><b>$DigitalProspects_main_db_pass="crypted:..."</b><br>par<br><b>$DigitalProspects_main_db_pass="%s"</b>
 ProtectAndEncryptPdfFilesDesc=La protection d'un document PDF le permet de lire et d'imprimer avec n'importe quel navigateur PDF. Cependant, l'édition et la copie ne sont plus possibles. Notez que l'utilisation de cette fonctionnalité rend le développement d'un PDF fusionné global ne fonctionnant pas.
 NoticePeriod=Période de préavis
 NewByMonth=Nouveau par mois
@@ -51,13 +51,13 @@ EMailsSetup=Configuration des courriels
 EmailSenderProfiles=Profils d'expéditeurs d'e-mails
 MAIN_MAIL_FORCE_SENDTO=Envoyer tous les emails à (au lieu des destinataires réels, à des fins de test)
 UserEmail=Courrier électronique de l'utilisateur
-SubmitTranslationENUS=Si la traduction de cette langue est incomplète ou vous trouvez des erreurs , vous pouvez corriger cela en modifiant les fichiers dans le répertoire <b> langs/%s </b> et soumettre les fichiers modifiés sur dolibarr.org/forum ou pour les développeurs sur github.com/Dolibarr/dolibarr.
+SubmitTranslationENUS=Si la traduction de cette langue est incomplète ou vous trouvez des erreurs , vous pouvez corriger cela en modifiant les fichiers dans le répertoire <b> langs/%s </b> et soumettre les fichiers modifiés sur DigitalProspects.org/forum ou pour les développeurs sur github.com/DigitalProspects/DigitalProspects.
 ModulesSetup=Modules / Configuration de l'application
 ModuleFamilyHr=Gestion des ressources humaines (GRH)
 ModuleFamilyInterface=Interfaces avec les systèmes externes
 ThisIsAlternativeProcessToFollow=Il s'agit d'une configuration alternative à traiter manuellement:
 NotExistsDirect=Le répertoire racine alternatif n'est pas défini dans un répertoire existant.
-InfDirAlt=Depuis la version 3, il est possible de définir un autre répertoire racine. Cela vous permet de stocker, dans un répertoire dédié, des plug-ins et des modèles personnalisés. <br> Créez simplement un répertoire à la racine de Dolibarr (par exemple: personnalisé).
+InfDirAlt=Depuis la version 3, il est possible de définir un autre répertoire racine. Cela vous permet de stocker, dans un répertoire dédié, des plug-ins et des modèles personnalisés. <br> Créez simplement un répertoire à la racine de DigitalProspects (par exemple: personnalisé).
 LastStableVersion=Dernière version stable
 LastActivationDate=Dernière date d'activation
 LastActivationAuthor=Dernier auteur d'activation
@@ -93,7 +93,7 @@ Module42Desc=Installations de journalisation (fichier, syslog, ...). Ces journau
 Module75Name=Notes de frais et déplacements
 Module2400Name=Evénements / Agenda
 Module2600Name=services API / Web ( serveur SOAP )
-Module2600Desc=Active le serveur de Web Services de Dolibarr
+Module2600Desc=Active le serveur de Web Services de DigitalProspects
 Module2610Name=services API / Web ( serveur REST )
 Module2610Desc=Activer le serveur REST de services API de les services
 Module2660Name=WebServices appel ( client SOAP )
@@ -130,7 +130,7 @@ CurrentNext=Actuel / Suivant
 DefaultMaxSizeList=Longueur maximale des listes
 CompanyObject=Objet de la compagnie
 ShowBugTrackLink=Afficher le lien "Signaler un défaut"
-InfoDolibarr=À propos de Dolibarr
+InfoDigitalProspects=À propos de DigitalProspects
 InfoBrowser=À propos du navigateur
 InfoWebServer=À propos du serveur Web
 InfoPHP=À propos de PHP
@@ -184,9 +184,9 @@ OptionVatMode=TPS/TVH due
 AGENDA_SHOW_LINKED_OBJECT=Afficher l'objet lié dans la vue d'agenda
 ClickToDialUrlDesc=Url appelle quand un clic sur le picto du téléphone est terminé. Dans l'URL, vous pouvez utiliser des tags sur <b> __ PHONETO __ </ b> qui sera remplacé par le numéro de téléphone de la personne à appeler <b> __ PHONEFROM __ </ b> qui sera remplacé par le numéro de téléphone de l'appel Personne (votre) <br> <b> __ LOGIN __ </ b> qui sera remplacé par login clicktodial (défini sur la carte utilisateur) <br> <b> __ PASS __ </ b> qui sera remplacé par le mot de passe clicktodial (défini sur l'utilisateur carte).
 ClickToDialUseTelLink=Utilisez juste un lien "tel: " sur les numéros de téléphone
-EndPointIs=Les clients SOAP doivent envoyer leurs demandes au point d'extrémité Dolibarr disponible à l'URL
+EndPointIs=Les clients SOAP doivent envoyer leurs demandes au point d'extrémité DigitalProspects disponible à l'URL
 ApiSetup=Configuration du module API
-ApiDesc=En activant ce module , Dolibarr devenir un serveur REST pour fournir des services Web divers .
+ApiDesc=En activant ce module , DigitalProspects devenir un serveur REST pour fournir des services Web divers .
 ApiProductionMode=Activer le mode de production (cela active l'utilisation d'un cache pour la gestion des services)
 ApiExporerIs=Vous pouvez explorer et tester les API à l'URL
 OnlyActiveElementsAreExposed=Seuls les éléments de modules activés sont exposés
@@ -201,7 +201,7 @@ DeleteFiscalYear=Supprimer la période comptable
 ConfirmDeleteFiscalYear=Êtes-vous sûr de supprimer cette période comptable?
 ShowFiscalYear=Afficher la période comptable
 SalariesSetup=Configuration du module salariés
-ConfFileMustContainCustom=L'installation ou la construction d'un module externe à partir de l'application doit sauvegarder les fichiers du module dans le répertoire <strong>%s</strong>. Pour que ce répertoire soit traité par Dolibarr, vous devez configurer votre <strong> conf / conf.php </strong> pour ajouter les 2 lignes de directive: <br><strong> $ dolibarr_main_url_root_alt = '/ custom'; </strong><br><strong> $ dolibarr_main_document_root_alt = '%s / custom'; </strong>
+ConfFileMustContainCustom=L'installation ou la construction d'un module externe à partir de l'application doit sauvegarder les fichiers du module dans le répertoire <strong>%s</strong>. Pour que ce répertoire soit traité par DigitalProspects, vous devez configurer votre <strong> conf / conf.php </strong> pour ajouter les 2 lignes de directive: <br><strong> $ DigitalProspects_main_url_root_alt = '/ custom'; </strong><br><strong> $ DigitalProspects_main_document_root_alt = '%s / custom'; </strong>
 HighlightLinesOnMouseHover=Mettez en surbrillance les lignes de table lorsque déplacement de la souris passe au-dessus
 PressF5AfterChangingThis=Appuyez sur CTRL + F5 sur le clavier ou effacez votre cache de navigateur après avoir changé cette valeur pour l'avoir efficace
 NotSupportedByAllThemes=Will fonctionne avec des thèmes de base, peut ne pas être pris en charge par des thèmes externes
@@ -227,7 +227,7 @@ MailToMember=Membres
 ByDefaultInList=Afficher par défaut sur la liste vue
 TitleExampleForMajorRelease=Exemple de message que vous pouvez utiliser pour annoncer cette version majeure ( se sentir libre de l'utiliser sur vos sites web )
 TitleExampleForMaintenanceRelease=Exemple de message que vous pouvez utiliser pour annoncer cette version de maintenance ( se sentir libre de l'utiliser sur vos sites web )
-ExampleOfNewsMessageForMajorRelease=Dolibarr ERP & CRM %s est disponible. La version %s est une version majeure avec beaucoup de nouvelles fonctionnalités pour les utilisateurs et les développeurs. Vous pouvez le télécharger à partir de la zone de téléchargement du https://www.dolibarr.org portal (sous-répertoire Stable versions). Vous pouvez lire <a href="https://github.com/Dolibarr/dolibarr/blob/develop/ChangeLog"> ChangeLog </a> pour obtenir la liste complète des modifications.
+ExampleOfNewsMessageForMajorRelease=DigitalProspects ERP & CRM %s est disponible. La version %s est une version majeure avec beaucoup de nouvelles fonctionnalités pour les utilisateurs et les développeurs. Vous pouvez le télécharger à partir de la zone de téléchargement du https://www.DigitalProspects.org portal (sous-répertoire Stable versions). Vous pouvez lire <a href="https://github.com/DigitalProspects/DigitalProspects/blob/develop/ChangeLog"> ChangeLog </a> pour obtenir la liste complète des modifications.
 ModelModulesProduct=Modèles de documents produits
 SeeSubstitutionVars=Voir la note * pour la liste des variables de substitution possibles
 AddRemoveTabs=Ajouter ou supprimer des onglets

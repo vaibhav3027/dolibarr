@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - users
+# DigitalProspects language file - Source file is en_US - users
 UserCard=Benutzer-Karte
 GroupCard=Gruppe-Karte
 SendNewPasswordLink=Link zum Zurücksetzen des Passworts
@@ -18,8 +18,8 @@ ConfirmPasswordReset=Bestätige das Zurücksetzen des Passwortes.
 LastGroupsCreated=Die %s neuesten Benutzergruppen
 LastUsersCreated=%s neueste Benutzer
 LinkToCompanyContact=Mit Geschäftspartner/Kontakt verknüpfen
-LinkedToDolibarrThirdParty=Mit Geschäftspartner verknüpft
-CreateDolibarrThirdParty=Neuen Geschäftspartner erstellen
+LinkedToDigitalProspectsThirdParty=Mit Geschäftspartner verknüpft
+CreateDigitalProspectsThirdParty=Neuen Geschäftspartner erstellen
 ExportDataset_user_1=Benutzer und Eigenschaften
 CreateInternalUserDesc=Hier kannst du interne Benutzer erzeugen.\nExterne Benutzer erzeugst du in den Kontakten deiner Partner.
 PermissionInheritedFromAGroup=Berechtigung durch eine Gruppenzugehörigkeit gererbt.

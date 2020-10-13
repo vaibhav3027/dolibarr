@@ -23,13 +23,13 @@
  *      \ingroup    workflow
  *      \brief      File to describe and activate module Workflow
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Workflow
  */
-class modWorkflow extends DolibarrModules
+class modWorkflow extends DigitalProspectsModules
 {
 
     /**
@@ -42,7 +42,7 @@ class modWorkflow extends DolibarrModules
         $this->db = $db;
 
         // Id for module (must be unique).
-        // Use here a free id (See in Home -> System information -> Dolibarr for list of used modules id).
+        // Use here a free id (See in Home -> System information -> DigitalProspects for list of used modules id).
         $this->numero = 6000;
         // Key text used to identify module (for permissions, menus, etc...)
         $this->rights_class = 'workflow';
@@ -52,8 +52,8 @@ class modWorkflow extends DolibarrModules
         $this->name = preg_replace('/^mod/i', '', get_class($this));
         // Module description, used if translation string 'ModuleXXXDesc' not found (where XXX is value of numeric property 'numero' of module)
         $this->description = "Workflow management";
-        // Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-        $this->version = 'dolibarr';
+        // Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+        $this->version = 'DigitalProspects';
         // Key used in llx_const table to save module status enabled/disabled (where MYMODULE is value of property name of module in uppercase)
         $this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
         // Name of png file (without png) used for this module.
@@ -73,7 +73,7 @@ class modWorkflow extends DolibarrModules
 		$this->requiredby = array(); // List of module ids to disable if this one is disabled
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-        $this->need_dolibarr_version = array(2, 8); // Minimum version of Dolibarr required by module
+        $this->need_DigitalProspects_version = array(2, 8); // Minimum version of DigitalProspects required by module
         $this->langfiles = array("@workflow");
 
         // Constants
@@ -144,7 +144,7 @@ class modWorkflow extends DolibarrModules
 
     /**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

@@ -44,8 +44,8 @@ if (!$user->admin) accessforbidden();
 
 if ($action == 'setMEMBER_ENABLE_PUBLIC')
 {
-	if (GETPOST('value')) dolibarr_set_const($db, 'MEMBER_ENABLE_PUBLIC', 1, 'chaine', 0, '', $conf->entity);
-	else dolibarr_set_const($db, 'MEMBER_ENABLE_PUBLIC', 0, 'chaine', 0, '', $conf->entity);
+	if (GETPOST('value')) DigitalProspects_set_const($db, 'MEMBER_ENABLE_PUBLIC', 1, 'chaine', 0, '', $conf->entity);
+	else DigitalProspects_set_const($db, 'MEMBER_ENABLE_PUBLIC', 0, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == 'update')
@@ -56,12 +56,12 @@ if ($action == 'update')
 	$payonline = GETPOST('MEMBER_NEWFORM_PAYONLINE');
 	$forcetype = GETPOST('MEMBER_NEWFORM_FORCETYPE');
 
-    $res = dolibarr_set_const($db, "MEMBER_ENABLE_PUBLIC", $public, 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "MEMBER_NEWFORM_AMOUNT", $amount, 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "MEMBER_NEWFORM_EDITAMOUNT", $editamount, 'chaine', 0, '', $conf->entity);
-    $res = dolibarr_set_const($db, "MEMBER_NEWFORM_PAYONLINE", $payonline, 'chaine', 0, '', $conf->entity);
-    if ($forcetype < 0) $res = dolibarr_del_const($db, "MEMBER_NEWFORM_FORCETYPE", $conf->entity);
-    else                $res = dolibarr_set_const($db, "MEMBER_NEWFORM_FORCETYPE", $forcetype, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "MEMBER_ENABLE_PUBLIC", $public, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "MEMBER_NEWFORM_AMOUNT", $amount, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "MEMBER_NEWFORM_EDITAMOUNT", $editamount, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "MEMBER_NEWFORM_PAYONLINE", $payonline, 'chaine', 0, '', $conf->entity);
+    if ($forcetype < 0) $res = DigitalProspects_del_const($db, "MEMBER_NEWFORM_FORCETYPE", $conf->entity);
+    else                $res = DigitalProspects_set_const($db, "MEMBER_NEWFORM_FORCETYPE", $forcetype, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -233,7 +233,7 @@ if (!empty($conf->global->MEMBER_ENABLE_PUBLIC))
 	}
 
 	// Define $urlwithroot
-	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 	$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 	//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

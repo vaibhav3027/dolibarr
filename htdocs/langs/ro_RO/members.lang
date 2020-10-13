@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Membri
 MemberCard=Fişă Membru
 SubscriptionCard=Fişă Cotizaţie
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=Listă Membri publici validaţi
 ErrorThisMemberIsNotPublic=Acest membru nu este public
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Un alt membru <b>(nume:<b>%s</b>, login: <b>%s</b>) este deja  legat la un terţ<b>%s</b> . Eliminaţi acest link mai întâi deoarece deoarece un terţ  nu poate fi legat decât la membru (şi invers).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Din motive de securitate, trebuie să aveţi drepturi de a modifica toţi utilizatorii de a putea  lega un membru către un utilizator altul decât dvs.
-SetLinkToUser=Link către un utilizator Dolibarr
-SetLinkToThirdParty=Link către un terţ Dolibarr
+SetLinkToUser=Link către un utilizator DigitalProspects
+SetLinkToThirdParty=Link către un terţ DigitalProspects
 MembersCards=Carţi de vizită  membri
 MembersList=Lista de membri
 MembersListToValid=Lista  membri schiţă (de validat)
@@ -89,10 +89,10 @@ ConfirmDeleteSubscription=Sigur doriți să ștergeți acest abonament?
 Filehtpasswd=Fişier htpasswd
 ValidateMember=Validaţi un membru
 ConfirmValidateMember=Sigur doriți să validați acest membru?
-FollowingLinksArePublic=Următoarele link-uri sunt pagini deschise care nu sunt protejate de nicio permisiune Dolibarr. Acestea nu sunt pagini formatate, oferite ca exemplu pentru a arăta cum să listați baza de date a membrilor.
+FollowingLinksArePublic=Următoarele link-uri sunt pagini deschise care nu sunt protejate de nicio permisiune DigitalProspects. Acestea nu sunt pagini formatate, oferite ca exemplu pentru a arăta cum să listați baza de date a membrilor.
 PublicMemberList=Lista Membri publici
 BlankSubscriptionForm=Formular de auto-abonare publică
-BlankSubscriptionFormDesc=Dolibarr vă poate oferi un URL / site public pentru a permite vizitatorilor externi să ceară abonarea la fundație. Dacă este activat un modul de plată online, poate fi furnizat automat și un formular de plată.
+BlankSubscriptionFormDesc=DigitalProspects vă poate oferi un URL / site public pentru a permite vizitatorilor externi să ceară abonarea la fundație. Dacă este activat un modul de plată online, poate fi furnizat automat și un formular de plată.
 EnablePublicSubscriptionForm=Activați site-ul public cu formular de auto abonare
 ForceMemberType=Forțați tipul de membru
 ExportDataset_member_1=Membrii şi adeziuni

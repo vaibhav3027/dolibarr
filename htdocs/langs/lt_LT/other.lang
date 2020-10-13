@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Saugos kodas
 NumberingShort=N°
 Tools=Įrankiai
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNA
 PredefinedMailContentContact=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Hello)__\n\n\n__(Sincerely)__\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=You can click on the link below to make your payment if it is not already done.\n\n%s\n\n
-DemoDesc=Dolibarr is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
+DemoDesc=DigitalProspects is a compact ERP/CRM supporting several business modules. A demo showcasing all modules makes no sense as this scenario never occurs (several hundred available). So, several demo profiles are available.
 ChooseYourDemoProfil=Choose the demo profile that best suits your needs...
 ChooseYourDemoProfilMore=...or build your own profile<br>(manual module selection)
 DemoFundation=Valdyti organizacijos narius
@@ -177,10 +177,10 @@ SizeUnitpoint=taškas
 BugTracker=Defekto trekeris
 SendNewPasswordDesc=This form allows you to request a new password. It will be sent to your email address.<br>Change will become effective once you click on the confirmation link in the email.<br>Check your inbox.
 BackToLoginPage=Atgal į prisijungimo puslapį
-AuthenticationDoesNotAllowSendNewPassword=Autentifikavimo režimas yra <b>%s</b>.<br>Šiame režime Dolibarr negali žinoti, nei pakeisti Jūsų slaptažodžio.<br>Susisiekite su sistemos administratoriumi, jei norite pakeisti savo slaptažodį.
+AuthenticationDoesNotAllowSendNewPassword=Autentifikavimo režimas yra <b>%s</b>.<br>Šiame režime DigitalProspects negali žinoti, nei pakeisti Jūsų slaptažodžio.<br>Susisiekite su sistemos administratoriumi, jei norite pakeisti savo slaptažodį.
 EnableGDLibraryDesc=Install or enable GD library on your PHP installation to use this option.
 ProfIdShortDesc=<b>Prof ID%s</b> yra informacija, priklausoma nuo trečiosios šalies dalyvio šalies.<br>Pavyzdžiui, šaliai <b>%s</b>, jo kodas <b>%s</b>.
-DolibarrDemo=Dolibarr ERP/CRM demo
+DigitalProspectsDemo=DigitalProspects ERP/CRM demo
 StatsByNumberOfUnits=Statistics for sum of qty of products/services
 StatsByNumberOfEntities=Statistics in number of referring entities (no. of invoice, or order...)
 NumberOfProposals=Number of proposals
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Expense report %s has been approved.
 EMailTextHolidayValidated=Leave request %s has been validated.
 EMailTextHolidayApproved=Leave request %s has been approved.
 ImportedWithSet=Importavimo duomenų rinkinys
-DolibarrNotification=Automatinis pranešimas
+DigitalProspectsNotification=Automatinis pranešimas
 ResizeDesc=Įveskite naują plotį <b>arba</b> naują aukštį. Santykis bus išlaikomas keičiant dydį ...
 NewLength=Naujas plotis
 NewHeight=Naujas aukštis

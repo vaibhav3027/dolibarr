@@ -48,9 +48,9 @@ class doc_generic_reception_odt extends ModelePdfReception
 	public $phpmin = array(5, 5);
 
     /**
-     * @var string Dolibarr version of the loaded document
+     * @var string DigitalProspects version of the loaded document
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

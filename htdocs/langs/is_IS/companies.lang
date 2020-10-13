@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Company name %s  er þegar til. Veldu annað.
 ErrorSetACountryFirst=Setja í landinu fyrst
 SelectThirdParty=Veldu þriðja aðila
@@ -12,7 +12,7 @@ MenuNewSupplier=New Vendor
 MenuNewPrivateIndividual=New Einstaklingur
 NewCompany=New company (prospect, customer, vendor)
 NewThirdParty=New Third Party (prospect, customer, vendor)
-CreateDolibarrThirdPartySupplier=Create a third party (vendor)
+CreateDigitalProspectsThirdPartySupplier=Create a third party (vendor)
 CreateThirdPartyOnly=Create third party
 CreateThirdPartyAndContact=Create a third party + a child contact
 ProspectionArea=Prospection area
@@ -347,7 +347,7 @@ CapitalOf=Capital af %s
 EditCompany=Breyta fyrirtæki
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Athuga
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=You can also check manually on the European Commission website <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Horfur eftir stöðu
 NoParentCompany=None
 ExportCardToFormat=Útflutningur kort til snið
 ContactNotLinkedToCompany=Hafðu tengist ekki til þriðja aðila
-DolibarrLogin=Dolibarr Innskráning
-NoDolibarrAccess=Nei Dolibarr aðgang
+DigitalProspectsLogin=DigitalProspects Innskráning
+NoDigitalProspectsAccess=Nei DigitalProspects aðgang
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

@@ -250,10 +250,10 @@ class Website extends CommonObject
         }
 
 	    if (! $error) {
-	    	$stringtodolibarrfile = "# Some properties for Dolibarr web site CMS\n";
-	    	$stringtodolibarrfile .= "param=value\n";
-	    	//print $conf->website->dir_output.'/'.$this->ref.'/.dolibarr';exit;
-	    	file_put_contents($conf->website->dir_output.'/'.$this->ref.'/.dolibarr', $stringtodolibarrfile);
+	    	$stringtoDigitalProspectsfile = "# Some properties for DigitalProspects web site CMS\n";
+	    	$stringtoDigitalProspectsfile .= "param=value\n";
+	    	//print $conf->website->dir_output.'/'.$this->ref.'/.DigitalProspects';exit;
+	    	file_put_contents($conf->website->dir_output.'/'.$this->ref.'/.DigitalProspects', $stringtoDigitalProspectsfile);
         }
 
 		// Commit or rollback
@@ -622,7 +622,7 @@ class Website extends CommonObject
 	public function createFromClone($user, $fromid, $newref, $newlang = '')
 	{
         global $conf;
-		global $dolibarr_main_data_root;
+		global $DigitalProspects_main_data_root;
 
 		$now = dol_now();
 		$error = 0;
@@ -646,8 +646,8 @@ class Website extends CommonObject
 		$oldidforhome = $object->fk_default_home;
 		$oldref = $object->ref;
 
-		$pathofwebsiteold = $dolibarr_main_data_root.'/website/'.$oldref;
-		$pathofwebsitenew = $dolibarr_main_data_root.'/website/'.$newref;
+		$pathofwebsiteold = $DigitalProspects_main_data_root.'/website/'.$oldref;
+		$pathofwebsitenew = $DigitalProspects_main_data_root.'/website/'.$newref;
 		dol_delete_dir_recursive($pathofwebsitenew);
 
 		$fileindex = $pathofwebsitenew.'/index.php';
@@ -786,7 +786,7 @@ class Website extends CommonObject
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $maxlen = 24, $morecss = '')
 	{
 		global $langs, $conf, $db;
-        global $dolibarr_main_authentication, $dolibarr_main_demo;
+        global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
         global $menumanager;
 
 

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Jäsenalue
 MemberCard=Jäsen-kortti
 SubscriptionCard=Tilaus-kortti
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=Luettelo validoitujen yleisön jäsenet
 ErrorThisMemberIsNotPublic=Tämä jäsen ei ole julkinen
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Toinen jäsen <b>(nimi: %s, kirjautuminen: %s)</b> on jo liitetty kolmasosaa <b>osapuoli %s.</b> Poista tämä ensimmäiseksi, koska kolmas osapuoli ei voi yhdistää vain jäsen (ja päinvastoin).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Turvallisuussyistä sinun täytyy myöntää oikeudet muokata kaikki käyttäjät pystyvät linkki jäsenen käyttäjä, joka ei ole sinun.
-SetLinkToUser=Linkki on Dolibarr käyttäjä
-SetLinkToThirdParty=Linkki on Dolibarr kolmannen osapuolen
+SetLinkToUser=Linkki on DigitalProspects käyttäjä
+SetLinkToThirdParty=Linkki on DigitalProspects kolmannen osapuolen
 MembersCards=Jäsenet tulostaa kortit
 MembersList=Luettelo jäsenistä
 MembersListToValid=Luettelo luonnoksen jäsenten (jotka on vahvistettu)
@@ -89,10 +89,10 @@ ConfirmDeleteSubscription=Are you sure you want to delete this subscription?
 Filehtpasswd=htpasswd tiedosto
 ValidateMember=Validate jäseneksi
 ConfirmValidateMember=Are you sure you want to validate this member?
-FollowingLinksArePublic=The following links are open pages not protected by any Dolibarr permission. They are not formatted pages, provided as example to show how to list members database.
+FollowingLinksArePublic=The following links are open pages not protected by any DigitalProspects permission. They are not formatted pages, provided as example to show how to list members database.
 PublicMemberList=Julkiset jäsenluetteloa
 BlankSubscriptionForm=Public self-subscription form
-BlankSubscriptionFormDesc=Dolibarr can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
+BlankSubscriptionFormDesc=DigitalProspects can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
 EnablePublicSubscriptionForm=Enable the public website with self-subscription form
 ForceMemberType=Force the member type
 ExportDataset_member_1=Jäsenet ja tilaukset

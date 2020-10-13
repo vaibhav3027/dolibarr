@@ -110,7 +110,7 @@ abstract class ModeleNumRefTicket
 			return $langs->trans("VersionExperimental");
 		}
 
-		if ($this->version == 'dolibarr') {
+		if ($this->version == 'DigitalProspects') {
 			return DOL_VERSION;
 		}
 

@@ -313,7 +313,7 @@ class Notify
 	{
 		global $user, $conf, $langs, $mysoc;
 		global $hookmanager;
-		global $dolibarr_main_url_root;
+		global $DigitalProspects_main_url_root;
 		global $action;
 
 		if (!in_array($notifcode, $this->arrayofnotifsupported)) return 0;
@@ -331,12 +331,12 @@ class Notify
 		$langs->load("other");
 
 		// Define $urlwithroot
-		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+		$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 		$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 		//$urlwithroot=DOL_MAIN_URL_ROOT;						// This is to use same domain name than current
 
 		// Define some vars
-		$application = 'Dolibarr';
+		$application = 'DigitalProspects';
 		if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $application = $conf->global->MAIN_APPLICATION_TITLE;
 		$replyto = $conf->notification->email_from;
 		$object_type = '';
@@ -416,7 +416,7 @@ class Notify
 							$outputlangs->loadLangs(array("main", "other"));
 						}
 
-						$subject = '['.$mysoc->name.'] '.$outputlangs->transnoentitiesnoconv("DolibarrNotification").($projtitle ? ' '.$projtitle : '');
+						$subject = '['.$mysoc->name.'] '.$outputlangs->transnoentitiesnoconv("DigitalProspectsNotification").($projtitle ? ' '.$projtitle : '');
 
 						switch ($notifcode) {
 							case 'BILL_VALIDATE':
@@ -629,7 +629,7 @@ class Notify
 				$link = '';
 				$num++;
 
-				$subject = '['.$mysoc->name.'] '.$langs->transnoentitiesnoconv("DolibarrNotification").($projtitle ? ' '.$projtitle : '');
+				$subject = '['.$mysoc->name.'] '.$langs->transnoentitiesnoconv("DigitalProspectsNotification").($projtitle ? ' '.$projtitle : '');
 
 				switch ($notifcode) {
 					case 'BILL_VALIDATE':

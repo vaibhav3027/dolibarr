@@ -95,7 +95,7 @@ if (empty($id) && !empty($object->id)) $id = $object->id;
 
 $modulepart = 'product';
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $canvas = !empty($object->canvas) ? $object->canvas : GETPOST("canvas");
 $objcanvas = null;
 if (!empty($canvas))

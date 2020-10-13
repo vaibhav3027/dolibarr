@@ -24,7 +24,7 @@
  *	\brief      Home page of zapier top menu
  */
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 require '../main.inc.php';
 require_once DOL_DOCUMENT_ROOT.'/core/class/html.formfile.class.php';
 
@@ -61,9 +61,9 @@ $now = dol_now();
 $form = new Form($db);
 $formfile = new FormFile($db);
 
-llxHeader("", $langs->trans("ZapierForDolibarrArea"));
+llxHeader("", $langs->trans("ZapierForDigitalProspectsArea"));
 
-print load_fiche_titre($langs->trans("ZapierForDolibarrArea"), '', 'zapier.png@zapier');
+print load_fiche_titre($langs->trans("ZapierForDigitalProspectsArea"), '', 'zapier.png@zapier');
 
 print '<div class="fichecenter"><div class="fichethirdleft">';
 

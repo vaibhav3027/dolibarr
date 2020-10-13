@@ -66,8 +66,8 @@ if ($action == "save")
 	foreach ($eventstolog as $key => $arr)
 	{
 		$param = 'MAIN_LOGEVENTS_'.$arr['id'];
-		if (GETPOST($param, 'alphanohtml')) dolibarr_set_const($db, $param, GETPOST($param, 'alphanohtml'), 'chaine', 0, '', $conf->entity);
-		else dolibarr_del_const($db, $param, $conf->entity);
+		if (GETPOST($param, 'alphanohtml')) DigitalProspects_set_const($db, $param, GETPOST($param, 'alphanohtml'), 'chaine', 0, '', $conf->entity);
+		else DigitalProspects_del_const($db, $param, $conf->entity);
 	}
 
 	$db->commit();

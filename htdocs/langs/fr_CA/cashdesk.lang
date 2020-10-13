@@ -1,6 +1,6 @@
-# Dolibarr language file - Source file is en_US - cashdesk
+# DigitalProspects language file - Source file is en_US - cashdesk
 NoVAT=Pas de TVA (TAXE) pour cette vente
 BankToPay=Compte pour le paiement
-DolibarrReceiptPrinter=Imprimante de reçu Dolibarr
+DigitalProspectsReceiptPrinter=Imprimante de reçu DigitalProspects
 NumberOfLinesToShow=Number of lines to show in image box
 DefineTablePlan=Define table plan

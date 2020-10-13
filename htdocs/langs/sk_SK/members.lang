@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=Členská sekcia
 MemberCard=Členské karty
 SubscriptionCard=Vstupná karta
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=Zoznam potvrdených verejné členmi
 ErrorThisMemberIsNotPublic=Tento člen je neverejný
 ErrorMemberIsAlreadyLinkedToThisThirdParty=Ďalší člen (meno: <b>%s,</b> login: <b>%s)</b> je už spojená s tretími stranami <b>%s.</b> Odstráňte tento odkaz ako prvý, pretože tretia strana nemôže byť spájaná len člen (a vice versa).
 ErrorUserPermissionAllowsToLinksToItselfOnly=Z bezpečnostných dôvodov musí byť udelené povolenie na úpravu, aby všetci užívatelia mohli spojiť člena užívateľa, ktorá nie je vaša.
-SetLinkToUser=Odkaz na užívateľovi Dolibarr
-SetLinkToThirdParty=Odkaz na Dolibarr tretej osobe
+SetLinkToUser=Odkaz na užívateľovi DigitalProspects
+SetLinkToThirdParty=Odkaz na DigitalProspects tretej osobe
 MembersCards=Členovia vizitky
 MembersList=Zoznam členov
 MembersListToValid=Zoznam návrhov členov (má byť overený)
@@ -89,10 +89,10 @@ ConfirmDeleteSubscription=Are you sure you want to delete this subscription?
 Filehtpasswd=htpasswd súboru
 ValidateMember=Overenie člena
 ConfirmValidateMember=Are you sure you want to validate this member?
-FollowingLinksArePublic=The following links are open pages not protected by any Dolibarr permission. They are not formatted pages, provided as example to show how to list members database.
+FollowingLinksArePublic=The following links are open pages not protected by any DigitalProspects permission. They are not formatted pages, provided as example to show how to list members database.
 PublicMemberList=Verejný zoznam členov
 BlankSubscriptionForm=Public self-subscription form
-BlankSubscriptionFormDesc=Dolibarr can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
+BlankSubscriptionFormDesc=DigitalProspects can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
 EnablePublicSubscriptionForm=Enable the public website with self-subscription form
 ForceMemberType=Force the member type
 ExportDataset_member_1=Členovia a predplatné

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banka
 MenuBankCash=Bankas | Nauda
 MenuVariousPayment=Dažādi maksājumi
@@ -109,7 +109,7 @@ SocialContributionPayment=Sociālā/fiskālā nodokļa samaksa
 BankTransfer=Kredīta pārvedums
 BankTransfers=Kredīta pārvedumi
 MenuBankInternalTransfer=Iekšējā pārsūtīšana
-TransferDesc=Pārsūtīšana no viena konta uz citu, Dolibarr rakstīs divus ierakstus (debeta avota kontā un kredītu mērķa kontā). Šim darījumam tiks izmantota tāda pati summa (izņemot zīmi), etiķete un datums.
+TransferDesc=Pārsūtīšana no viena konta uz citu, DigitalProspects rakstīs divus ierakstus (debeta avota kontā un kredītu mērķa kontā). Šim darījumam tiks izmantota tāda pati summa (izņemot zīmi), etiķete un datums.
 TransferFrom=No
 TransferTo=Kam
 TransferFromToDone=No <b>%s</b> nodošana <b>%s</b> par <b>%s</b> %s ir ierakstīta.

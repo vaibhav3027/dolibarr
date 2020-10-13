@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Παρέμβαση
 Interventions=Παρεμβάσεις
 InterventionCard=Καρτέλα παρέμβασης
@@ -30,13 +30,13 @@ InterventionClassifyDone=Classify "Done"
 StatusInterInvoiced=Τιμολογείται
 SendInterventionRef=Υποβολή παρέμβασης %s
 SendInterventionByMail=Αποστολή παρέμβασης μέσω ηλεκτρονικού ταχυδρομείου
-InterventionCreatedInDolibarr=Παρέμβαση %s δημιουργήθηκε
-InterventionValidatedInDolibarr=Παρέμβαση %s επικυρώθηκε
-InterventionModifiedInDolibarr=Παρέμβαση %s τροποποιήθηκε
-InterventionClassifiedBilledInDolibarr=Σετ Παρέμβασης %s όπως τιμολογείται
-InterventionClassifiedUnbilledInDolibarr=Σετ Παρέμβαση %s ως μη τιμολογημένο
+InterventionCreatedInDigitalProspects=Παρέμβαση %s δημιουργήθηκε
+InterventionValidatedInDigitalProspects=Παρέμβαση %s επικυρώθηκε
+InterventionModifiedInDigitalProspects=Παρέμβαση %s τροποποιήθηκε
+InterventionClassifiedBilledInDigitalProspects=Σετ Παρέμβασης %s όπως τιμολογείται
+InterventionClassifiedUnbilledInDigitalProspects=Σετ Παρέμβαση %s ως μη τιμολογημένο
 InterventionSentByEMail=Η παρέμβαση %s στάλθηκε με ηλεκτρονικό ταχυδρομείο
-InterventionDeletedInDolibarr=Παρέμβαση %s διαγράφετε
+InterventionDeletedInDigitalProspects=Παρέμβαση %s διαγράφετε
 InterventionsArea=Περιοχή παρεμβάσεων
 DraftFichinter=Πρόχειρες παρεμβάσεις
 LastModifiedInterventions=Latest %s modified interventions

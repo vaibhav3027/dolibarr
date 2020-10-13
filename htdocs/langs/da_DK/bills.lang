@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Faktura
 Bills=Fakturaer
 BillsCustomers=Kundefakturaer
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Indstil startdato
 AutoFillDateTo=Indstil slutdato for servicelinje med næste faktura dato
 AutoFillDateToShort=Indstil slutdato
 MaxNumberOfGenerationReached=Maks antal gener. nået
-BILL_DELETEInDolibarr=Faktura slettet
-BILL_SUPPLIER_DELETEInDolibarr=Leverandørfaktura slettet
+BILL_DELETEInDigitalProspects=Faktura slettet
+BILL_SUPPLIER_DELETEInDigitalProspects=Leverandørfaktura slettet
 UnitPriceXQtyLessDiscount=Enhedspris x Antal - Rabat
 CustomersInvoicesArea=Kunde fakturerings område
 SupplierInvoicesArea=Leverandør fakturerings område 

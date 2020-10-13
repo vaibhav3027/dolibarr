@@ -70,7 +70,7 @@ if ($action == 'setconst' && $user->admin)
     	$consttype = dol_escape_htmltag($setupconst['type']);
     	$constnote = dol_escape_htmltag($setupconst['note']);
 
-    	$result = dolibarr_set_const($db, $constname, $constvalue, $consttype, 0, $constnote, $conf->entity);
+    	$result = DigitalProspects_set_const($db, $constname, $constvalue, $consttype, 0, $constnote, $conf->entity);
         if (!$result > 0) $error++;
     }
 
@@ -91,7 +91,7 @@ if ($action == 'setvalue' && $user->admin)
 {
     $db->begin();
 
-    $result = dolibarr_set_const($db, $varname, $value, 'chaine', 0, '', $conf->entity);
+    $result = DigitalProspects_set_const($db, $varname, $value, 'chaine', 0, '', $conf->entity);
     if (!$result > 0) $error++;
 
     if (!$error)
@@ -113,7 +113,7 @@ if ($action == 'setvalue' && $user->admin)
  */
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -192,7 +192,7 @@ if ($mode == 'setup' && $user->admin)
         // Token
         require_once DOL_DOCUMENT_ROOT.'/includes/OAuth/bootstrap.php';
         require_once DOL_DOCUMENT_ROOT.'/includes/OAuth/bootstrap.php';
-        // Dolibarr storage
+        // DigitalProspects storage
         $storage = new DoliStorage($db, $conf);
         try
         {

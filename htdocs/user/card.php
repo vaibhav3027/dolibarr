@@ -712,11 +712,11 @@ if ($action == 'create' || $action == 'adduserldap')
 	print "<br>";
 
 
-	if (!empty($conf->ldap->enabled) && (isset($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE == 'ldap2dolibarr'))
+	if (!empty($conf->ldap->enabled) && (isset($conf->global->LDAP_SYNCHRO_ACTIVE) && $conf->global->LDAP_SYNCHRO_ACTIVE == 'ldap2DigitalProspects'))
 	{
 		/*
          * Affiche formulaire d'ajout d'un compte depuis LDAP
-         * si on est en synchro LDAP vers Dolibarr
+         * si on est en synchro LDAP vers DigitalProspects
          */
 
 		$ldap = new Ldap();
@@ -872,19 +872,19 @@ if ($action == 'create' || $action == 'adduserldap')
 	print '<tr><td class="fieldrequired">'.$langs->trans("Password").'</td>';
 	print '<td>';
 	$valuetoshow = '';
-	if (preg_match('/ldap/', $dolibarr_main_authentication))
+	if (preg_match('/ldap/', $DigitalProspects_main_authentication))
 	{
 		$valuetoshow .= ($valuetoshow ? ', ' : '').$langs->trans("PasswordOfUserInLDAP");
 	}
-	if (preg_match('/http/', $dolibarr_main_authentication))
+	if (preg_match('/http/', $DigitalProspects_main_authentication))
 	{
 		$valuetoshow .= ($valuetoshow ? ', ' : '').$langs->trans("HTTPBasicPassword");
 	}
-	if (preg_match('/dolibarr/', $dolibarr_main_authentication))
+	if (preg_match('/DigitalProspects/', $DigitalProspects_main_authentication))
 	{
 		if (!empty($ldap_pass))	// For very old system comaptibilty. Now clear password can't be viewed from LDAP read
 		{
-			$valuetoshow .= ($valuetoshow ? ', ' : '').'<input type="hidden" name="password" value="'.$ldap_pass.'">'; // Dolibarr password is preffiled with LDAP known password
+			$valuetoshow .= ($valuetoshow ? ', ' : '').'<input type="hidden" name="password" value="'.$ldap_pass.'">'; // DigitalProspects password is preffiled with LDAP known password
 			$valuetoshow .= preg_replace('/./i', '*', $ldap_pass);
 		}
 		else
@@ -1253,7 +1253,7 @@ if ($action == 'create' || $action == 'adduserldap')
 	print $langs->trans("Note");
 	print '</td><td>';
 	require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-	$doleditor = new DolEditor('note', GETPOSTISSET('note') ?GETPOST('note', 'none') : '', '', 120, 'dolibarr_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
+	$doleditor = new DolEditor('note', GETPOSTISSET('note') ?GETPOST('note', 'none') : '', '', 120, 'DigitalProspects_notes', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_3, '90%');
 	$doleditor->Create();
 	print "</td></tr>\n";
 
@@ -1261,7 +1261,7 @@ if ($action == 'create' || $action == 'adduserldap')
 	print '<tr><td class="tdtop">'.$langs->trans("Signature").'</td>';
 	print '<td>';
 	require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-	$doleditor = new DolEditor('signature', GETPOST('signature'), '', 138, 'dolibarr_notes', 'In', true, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
+	$doleditor = new DolEditor('signature', GETPOST('signature'), '', 138, 'DigitalProspects_notes', 'In', true, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
 	print $doleditor->Create(1);
 	print '</td></tr>';
 
@@ -1501,7 +1501,7 @@ else
 			print '<tr><td class="titlefield">'.$langs->trans("Login").'</td>';
 			if (!empty($object->ldap_sid) && $object->statut == 0)
 			{
-				print '<td class="error">'.$langs->trans("LoginAccountDisableInDolibarr").'</td>';
+				print '<td class="error">'.$langs->trans("LoginAccountDisableInDigitalProspects").'</td>';
 			}
 			else
 			{
@@ -1514,7 +1514,7 @@ else
 
 			print '<td class="wordbreak">';
 			$valuetoshow = '';
-			if (preg_match('/ldap/', $dolibarr_main_authentication))
+			if (preg_match('/ldap/', $DigitalProspects_main_authentication))
 			{
 				if (!empty($object->ldap_sid))
 				{
@@ -1540,11 +1540,11 @@ else
 					$valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').$langs->trans("PasswordOfUserInLDAP");
 				}
 			}
-			if (preg_match('/http/', $dolibarr_main_authentication))
+			if (preg_match('/http/', $DigitalProspects_main_authentication))
 			{
 				$valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').$langs->trans("HTTPBasicPassword");
 			}
-			if (preg_match('/dolibarr/', $dolibarr_main_authentication))
+			if (preg_match('/DigitalProspects/', $DigitalProspects_main_authentication))
 			{
 				if ($object->pass) $valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').preg_replace('/./i', '*', $object->pass);
 				else
@@ -1850,7 +1850,7 @@ else
 			if (!empty($conf->adherent->enabled))
 			{
 				$langs->load("members");
-				print '<tr><td>'.$langs->trans("LinkedToDolibarrMember").'</td>';
+				print '<tr><td>'.$langs->trans("LinkedToDigitalProspectsMember").'</td>';
 				print '<td>';
 				if ($object->fk_member)
 				{
@@ -2168,15 +2168,15 @@ else
 			print '<tr><td>'.$langs->trans("Password").'</td>';
 			print '<td>';
 			$valuetoshow = '';
-			if (preg_match('/ldap/', $dolibarr_main_authentication))
+			if (preg_match('/ldap/', $DigitalProspects_main_authentication))
 			{
 				$valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').$langs->trans("PasswordOfUserInLDAP");
 			}
-			if (preg_match('/http/', $dolibarr_main_authentication))
+			if (preg_match('/http/', $DigitalProspects_main_authentication))
 			{
-				$valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').$form->textwithpicto($text, $langs->trans("DolibarrInHttpAuthenticationSoPasswordUseless", $dolibarr_main_authentication), 1, 'warning');
+				$valuetoshow .= ($valuetoshow ? (' '.$langs->trans("or").' ') : '').$form->textwithpicto($text, $langs->trans("DigitalProspectsInHttpAuthenticationSoPasswordUseless", $DigitalProspects_main_authentication), 1, 'warning');
 			}
-			if (preg_match('/dolibarr/', $dolibarr_main_authentication))
+			if (preg_match('/DigitalProspects/', $DigitalProspects_main_authentication))
 			{
 				if ($caneditpassword)
 				{
@@ -2647,7 +2647,7 @@ else
 			if (!empty($conf->adherent->enabled))
 			{
 				$langs->load("members");
-				print '<tr><td>'.$langs->trans("LinkedToDolibarrMember").'</td>';
+				print '<tr><td>'.$langs->trans("LinkedToDigitalProspectsMember").'</td>';
 				print '<td>';
 				if ($object->fk_member)
 				{
@@ -2704,7 +2704,7 @@ else
 			if ($caneditfield)
 			{
 				require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-				$doleditor = new DolEditor('signature', $object->signature, '', 138, 'dolibarr_notes', 'In', false, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
+				$doleditor = new DolEditor('signature', $object->signature, '', 138, 'DigitalProspects_notes', 'In', false, true, empty($conf->global->FCKEDITOR_ENABLE_USERSIGN) ? 0 : 1, ROWS_4, '90%');
 				print $doleditor->Create(1);
 			}
 			else

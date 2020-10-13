@@ -99,7 +99,7 @@ if (empty($reshook))
     {
         require_once DOL_DOCUMENT_ROOT.'/core/lib/admin.lib.php';
         $keyforlabel = 'PRODUIT_MULTIPRICES_LABEL'.GETPOST('pricelevel');
-        dolibarr_set_const($db, $keyforlabel, GETPOST('labelsellingprice', 'alpha'), 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, $keyforlabel, GETPOST('labelsellingprice', 'alpha'), 'chaine', 0, '', $conf->entity);
         $action = '';
     }
 

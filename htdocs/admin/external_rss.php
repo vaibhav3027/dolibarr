@@ -105,8 +105,8 @@ if ($action == 'add' || GETPOST("modify"))
 	        }
 		}
 
-		$result1 = dolibarr_set_const($db, "EXTERNAL_RSS_TITLE_".GETPOST("norss", 'int'), GETPOST($external_rss_title, 'alpha'), 'chaine', 0, '', $conf->entity);
-		if ($result1) $result2 = dolibarr_set_const($db, "EXTERNAL_RSS_URLRSS_".GETPOST("norss", 'int'), GETPOST($external_rss_urlrss, 'alpha'), 'chaine', 0, '', $conf->entity);
+		$result1 = DigitalProspects_set_const($db, "EXTERNAL_RSS_TITLE_".GETPOST("norss", 'int'), GETPOST($external_rss_title, 'alpha'), 'chaine', 0, '', $conf->entity);
+		if ($result1) $result2 = DigitalProspects_set_const($db, "EXTERNAL_RSS_URLRSS_".GETPOST("norss", 'int'), GETPOST($external_rss_urlrss, 'alpha'), 'chaine', 0, '', $conf->entity);
 
         if ($result1 && $result2)
         {
@@ -170,8 +170,8 @@ if ($_POST["delete"])
         }
 
 
-		$result1 = dolibarr_del_const($db, "EXTERNAL_RSS_TITLE_".GETPOST("norss", 'int'), $conf->entity);
-		if ($result1) $result2 = dolibarr_del_const($db, "EXTERNAL_RSS_URLRSS_".GETPOST("norss", 'int'), $conf->entity);
+		$result1 = DigitalProspects_del_const($db, "EXTERNAL_RSS_TITLE_".GETPOST("norss", 'int'), $conf->entity);
+		if ($result1) $result2 = DigitalProspects_del_const($db, "EXTERNAL_RSS_URLRSS_".GETPOST("norss", 'int'), $conf->entity);
 
         if ($result1 && $result2)
         {
@@ -216,7 +216,7 @@ print '</tr>';
 print '<tr class="pair">';
 print '<td>'.$langs->trans('RSSUrl').'</td>';
 print '<td><input type="text" class="flat minwidth300" name="external_rss_urlrss_'.($lastexternalrss + 1).'" value=""></td>';
-print '<td>http://news.google.com/news?ned=us&topic=h&output=rss<br>http://www.dolibarr.org/rss</td>';
+print '<td>http://news.google.com/news?ned=us&topic=h&output=rss<br>http://www.DigitalProspects.org/rss</td>';
 print '</tr>';
 print '</table>';
 

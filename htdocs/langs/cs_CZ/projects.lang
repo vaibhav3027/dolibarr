@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Číslo projektu
 ProjectRef=Projekt ref.
 ProjectId=Id projektu
@@ -150,12 +150,12 @@ ConfirmCloneProject=Opravdu chcete naklonovat tento projekt?
 ProjectReportDate=Změnit datum úkolu dle data zahájení projektu
 ErrorShiftTaskDate=Nelze přesunout datum úkolu dle nového data zahájení projektu
 ProjectsAndTasksLines=Projekty a úkoly
-ProjectCreatedInDolibarr=Projekt %s vytvořen
-ProjectValidatedInDolibarr=Projekt %s byl ověřen
-ProjectModifiedInDolibarr=Projekt %s modifikované
-TaskCreatedInDolibarr=Úkol %s vytvořen
-TaskModifiedInDolibarr=Úkol %s upraven
-TaskDeletedInDolibarr=Úkol %s smazán
+ProjectCreatedInDigitalProspects=Projekt %s vytvořen
+ProjectValidatedInDigitalProspects=Projekt %s byl ověřen
+ProjectModifiedInDigitalProspects=Projekt %s modifikované
+TaskCreatedInDigitalProspects=Úkol %s vytvořen
+TaskModifiedInDigitalProspects=Úkol %s upraven
+TaskDeletedInDigitalProspects=Úkol %s smazán
 OpportunityStatus=Hlavní status
 OpportunityStatusShort=Hlavní status
 OpportunityProbability=Pravděpodobnost vedení

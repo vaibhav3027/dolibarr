@@ -55,9 +55,9 @@ if ($contact->socid)
 
 // We create VCard
 $v = new vCard();
-$v->setProdId('Dolibarr '.DOL_VERSION);
+$v->setProdId('DigitalProspects '.DOL_VERSION);
 
-$v->setUid('DOLIBARR-CONTACTID-'.$contact->id);
+$v->setUid('DigitalProspects-CONTACTID-'.$contact->id);
 $v->setName($contact->lastname, $contact->firstname, "", $contact->civility, "");
 $v->setFormattedName($contact->getFullName($langs, 1));
 

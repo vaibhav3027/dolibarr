@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 BillsCustomers=Facturas de clientes
 BillsCustomer=Factura del cliente
 BillsSuppliers=Facturas del vendedor / proveedor
@@ -432,4 +432,4 @@ AutoFillDateFrom=Establecer fecha de inicio para la línea de servicio con fecha
 AutoFillDateFromShort=Establecer fecha de inicio
 AutoFillDateToShort=Establecer fecha de finalización
 MaxNumberOfGenerationReached=Número máximo de generación alcanzado
-BILL_DELETEInDolibarr=Se eliminó la factura
+BILL_DELETEInDigitalProspects=Se eliminó la factura

@@ -85,7 +85,7 @@ $tmpDir = $conf->dav->multidir_output[$entity]; // We need root dir, not a dir t
 $authBackend = new \Sabre\DAV\Auth\Backend\BasicCallBack(function ($username, $password) {
 	global $user;
 	global $conf;
-	global $dolibarr_main_authentication, $dolibarr_auto_user;
+	global $DigitalProspects_main_authentication, $DigitalProspects_auto_user;
 
 	if (empty($user->login))
 	{
@@ -104,20 +104,20 @@ $authBackend = new \Sabre\DAV\Auth\Backend\BasicCallBack(function ($username, $p
 	}
 
 	// Authentication mode
-	if (empty($dolibarr_main_authentication)) $dolibarr_main_authentication = 'dolibarr';
+	if (empty($DigitalProspects_main_authentication)) $DigitalProspects_main_authentication = 'DigitalProspects';
 
 	// Authentication mode: forceuser
-	if ($dolibarr_main_authentication == 'forceuser')
+	if ($DigitalProspects_main_authentication == 'forceuser')
 	{
-		if (empty($dolibarr_auto_user)) $dolibarr_auto_user = 'auto';
-		if ($dolibarr_auto_user != $username)
+		if (empty($DigitalProspects_auto_user)) $DigitalProspects_auto_user = 'auto';
+		if ($DigitalProspects_auto_user != $username)
 		{
-			dol_syslog("Warning: your instance is set to use the automatic forced login '".$dolibarr_auto_user."' that is not the requested login. DAV usage is forbidden in this mode.");
+			dol_syslog("Warning: your instance is set to use the automatic forced login '".$DigitalProspects_auto_user."' that is not the requested login. DAV usage is forbidden in this mode.");
 			return false;
 		}
 	}
 
-	$authmode = explode(',', $dolibarr_main_authentication);
+	$authmode = explode(',', $DigitalProspects_main_authentication);
 	$entity = (GETPOST('entity', 'int') ? GETPOST('entity', 'int') : (!empty($conf->entity) ? $conf->entity : 1));
 
 	if (checkLoginPassEntity($username, $password, $entity, $authmode, 'dav') != $username)
@@ -157,12 +157,12 @@ if (!empty($conf->ecm->enabled) && !empty($conf->global->DAV_ALLOW_ECM_DIR))
 
 
 // Principals Backend
-//$principalBackend = new \Sabre\DAVACL\PrincipalBackend\Dolibarr($user,$db);
+//$principalBackend = new \Sabre\DAVACL\PrincipalBackend\DigitalProspects($user,$db);
 // /principals
 //$nodes[] = new \Sabre\DAVACL\PrincipalCollection($principalBackend);
 // CardDav & CalDav Backend
-//$carddavBackend   = new \Sabre\CardDAV\Backend\Dolibarr($user,$db,$langs);
-//$caldavBackend    = new \Sabre\CalDAV\Backend\Dolibarr($user,$db,$langs, $cdavLib);
+//$carddavBackend   = new \Sabre\CardDAV\Backend\DigitalProspects($user,$db,$langs);
+//$caldavBackend    = new \Sabre\CalDAV\Backend\DigitalProspects($user,$db,$langs, $cdavLib);
 // /addressbook
 //$nodes[] = new \Sabre\CardDAV\AddressBookRoot($principalBackend, $carddavBackend);
 // /calendars

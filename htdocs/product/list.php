@@ -112,7 +112,7 @@ $search_array_options = $extrafields->getOptionalsFromPost($object->table_elemen
 
 if (empty($action)) $action = 'list';
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $canvas = GETPOST("canvas");
 $objcanvas = null;
 if (!empty($canvas))

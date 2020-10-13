@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 MenuBankCash=Bank | Bar
 FinancialAccount=Finanzkonto
 BankAccount=Bankkonto
@@ -47,7 +47,7 @@ BankLineConciliated=Transaktion mit Bankbeleg ausgeglichen
 Reconciled=Ausgeglichen
 SupplierInvoicePayment=Lieferantenzahlung
 MenuBankInternalTransfer=Kontoübertrag
-TransferDesc=Das ist ein interner Transfer zwischen zwei Konten. Dolibarr schreibt zwei Transaktionen über den selben Betrag vom Haben zum Sollkonto. Datum und Bezeichner sind auch gleich.
+TransferDesc=Das ist ein interner Transfer zwischen zwei Konten. DigitalProspects schreibt zwei Transaktionen über den selben Betrag vom Haben zum Sollkonto. Datum und Bezeichner sind auch gleich.
 TransferFrom=Von
 TransferTo=An
 ValidateCheckReceipt=Chequebeleg genehmigen?

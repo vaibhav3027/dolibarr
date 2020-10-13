@@ -32,13 +32,13 @@
  * - The name property name must be MyTrigger
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for MyModule module
  */
-class InterfaceMyModuleTriggers extends DolibarrTriggers
+class InterfaceMyModuleTriggers extends DigitalProspectsTriggers
 {
 	/**
 	 * @var DoliDB Database handler
@@ -57,7 +57,7 @@ class InterfaceMyModuleTriggers extends DolibarrTriggers
 		$this->name = preg_replace('/^Interface/i', '', get_class($this));
 		$this->family = "demo";
 		$this->description = "MyModule triggers.";
-		// 'development', 'experimental', 'dolibarr' or version
+		// 'development', 'experimental', 'DigitalProspects' or version
 		$this->version = 'development';
 		$this->picto = 'mymodule@mymodule';
 	}
@@ -84,7 +84,7 @@ class InterfaceMyModuleTriggers extends DolibarrTriggers
 
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file
 	 * is inside directory core/triggers
 	 *
@@ -99,7 +99,7 @@ class InterfaceMyModuleTriggers extends DolibarrTriggers
 	{
 		if (empty($conf->mymodule->enabled)) return 0; // If module is not enabled, we do nothing
 
-		// Put here code you want to execute when a Dolibarr business events occurs.
+		// Put here code you want to execute when a DigitalProspects business events occurs.
 		// Data and type of action are stored into $object and $action
 
 		switch ($action) {

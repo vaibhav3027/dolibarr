@@ -35,7 +35,7 @@ if (substr($sapi_type, 0, 3) == 'cgi') {
     exit;
 }
 
-// Recupere root dolibarr
+// Recupere root DigitalProspects
 //$path=preg_replace('/generate-commande.php/i','',$_SERVER["PHP_SELF"]);
 require __DIR__. '/../../htdocs/master.inc.php';
 include_once DOL_DOCUMENT_ROOT.'/societe/class/societe.class.php';

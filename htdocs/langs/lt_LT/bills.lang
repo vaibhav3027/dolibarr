@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=PVM Sąskaita-faktūra
 Bills=Sąskaitos-faktūros
 BillsCustomers=Klientų sąskaitos faktūros
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Nustatykite pradžios datą
 AutoFillDateTo=Nustatykite paslaugų eilutės pabaigos datą su kita sąskaitos faktūros data
 AutoFillDateToShort=Nustatykite pabaigos datą
 MaxNumberOfGenerationReached=Max number of gen. reached
-BILL_DELETEInDolibarr=Invoice deleted
-BILL_SUPPLIER_DELETEInDolibarr=Supplier invoice deleted
+BILL_DELETEInDigitalProspects=Invoice deleted
+BILL_SUPPLIER_DELETEInDigitalProspects=Supplier invoice deleted
 UnitPriceXQtyLessDiscount=Unit price x Qty - Discount
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

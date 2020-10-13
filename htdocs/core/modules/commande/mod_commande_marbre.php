@@ -30,10 +30,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/commande/modules_commande.php';
 class mod_commande_marbre extends ModeleNumRefCommandes
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'CO';
 

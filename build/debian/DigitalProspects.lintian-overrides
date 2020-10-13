@@ -1,0 +1,10 @@
+# We want a www-data group-writable /var/lib/DigitalProspects/documents/
+DigitalProspects: non-standard-dir-perm var/lib/DigitalProspects/documents/ 2775 != 0755
+# We depend on xdg-utils providing xdg-open and we use that to open an URL
+DigitalProspects: desktop-command-not-in-package usr/share/applications/DigitalProspects.desktop xdg-open
+# We use <IfVersion> to include the correct configuration for each apache version
+DigitalProspects: apache2-deprecated-auth-config Order
+DigitalProspects: apache2-deprecated-auth-config Allow
+# Ignore warning required for a good install process
+DigitalProspects: apache2-reverse-dependency-calls-wrapper-script postinst a2enmod
+DigitalProspects: apache2-reverse-dependency-calls-wrapper-script postinst a2enconf

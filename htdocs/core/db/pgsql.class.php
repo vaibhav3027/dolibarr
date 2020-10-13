@@ -31,7 +31,7 @@
 require_once DOL_DOCUMENT_ROOT.'/core/db/DoliDB.class.php';
 
 /**
- *	Class to drive a Postgresql database for Dolibarr
+ *	Class to drive a Postgresql database for DigitalProspects
  */
 class DoliDBPgsql extends DoliDB
 {
@@ -68,7 +68,7 @@ class DoliDBPgsql extends DoliDB
 
         // Note that having "static" property for "$forcecharset" and "$forcecollate" will make error here in strict mode, so they are not static
 		if (!empty($conf->db->character_set)) $this->forcecharset = $conf->db->character_set;
-		if (!empty($conf->db->dolibarr_main_db_collation))	$this->forcecollate = $conf->db->dolibarr_main_db_collation;
+		if (!empty($conf->db->DigitalProspects_main_db_collation))	$this->forcecollate = $conf->db->DigitalProspects_main_db_collation;
 
 		$this->database_user = $user;
         $this->database_host = $host;
@@ -277,7 +277,7 @@ class DoliDBPgsql extends DoliDB
                 }
 
                 // alter table add primary key (field1, field2 ...) -> We remove the primary key name not accepted by PostGreSQL
-    			// ALTER TABLE llx_dolibarr_modules ADD PRIMARY KEY pk_dolibarr_modules (numero, entity)
+    			// ALTER TABLE llx_DigitalProspects_modules ADD PRIMARY KEY pk_DigitalProspects_modules (numero, entity)
     			if (preg_match('/ALTER\s+TABLE\s*(.*)\s*ADD\s+PRIMARY\s+KEY\s*(.*)\s*\((.*)$/i', $line, $reg))
     			{
     				$line = "-- ".$line." replaced by --\n";
@@ -285,7 +285,7 @@ class DoliDBPgsql extends DoliDB
     			}
 
                 // Translate order to drop primary keys
-                // ALTER TABLE llx_dolibarr_modules DROP PRIMARY KEY pk_xxx
+                // ALTER TABLE llx_DigitalProspects_modules DROP PRIMARY KEY pk_xxx
                 if (preg_match('/ALTER\s+TABLE\s*(.*)\s*DROP\s+PRIMARY\s+KEY\s*([^;]+)$/i', $line, $reg))
                 {
                     $line = "-- ".$line." replaced by --\n";
@@ -293,7 +293,7 @@ class DoliDBPgsql extends DoliDB
                 }
 
 		        // Translate order to drop foreign keys
-                // ALTER TABLE llx_dolibarr_modules DROP FOREIGN KEY fk_xxx
+                // ALTER TABLE llx_DigitalProspects_modules DROP FOREIGN KEY fk_xxx
                 if (preg_match('/ALTER\s+TABLE\s*(.*)\s*DROP\s+FOREIGN\s+KEY\s*(.*)$/i', $line, $reg))
                 {
                     $line = "-- ".$line." replaced by --\n";
@@ -726,7 +726,7 @@ class DoliDBPgsql extends DoliDB
 			return 'DB_ERROR_FAILED_TO_CONNECT';
 		}
 		else {
-			// Constants to convert error code to a generic Dolibarr error code
+			// Constants to convert error code to a generic DigitalProspects error code
 			$errorcode_map = array(
 			1004 => 'DB_ERROR_CANNOT_CREATE',
 			1005 => 'DB_ERROR_CANNOT_CREATE',
@@ -826,10 +826,10 @@ class DoliDBPgsql extends DoliDB
 		global $conf;
 
 		// Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-		$cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+		$cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
 		//Encryption key
-		$cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+		$cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
 		$return = $fieldorvalue;
 		return ($withQuotes ? "'" : "").$this->escape($return).($withQuotes ? "'" : "");
@@ -847,10 +847,10 @@ class DoliDBPgsql extends DoliDB
 		global $conf;
 
 		// Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-		$cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+		$cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
 		//Encryption key
-		$cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+		$cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
 		$return = $value;
 		return $return;
@@ -1069,17 +1069,17 @@ class DoliDBPgsql extends DoliDB
 	/**
 	 * 	Create a user to connect to database
 	 *
-	 *	@param	string	$dolibarr_main_db_host 		Ip server
-	 *	@param	string	$dolibarr_main_db_user 		Name of user to create
-	 *	@param	string	$dolibarr_main_db_pass 		Password of user to create
-	 *	@param	string	$dolibarr_main_db_name		Database name where user must be granted
+	 *	@param	string	$DigitalProspects_main_db_host 		Ip server
+	 *	@param	string	$DigitalProspects_main_db_user 		Name of user to create
+	 *	@param	string	$DigitalProspects_main_db_pass 		Password of user to create
+	 *	@param	string	$DigitalProspects_main_db_name		Database name where user must be granted
 	 *	@return	int									<0 if KO, >=0 if OK
 	 */
-    public function DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name)
+    public function DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name)
 	{
         // phpcs:enable
 		// Note: using ' on user does not works with pgsql
-		$sql = "CREATE USER ".$this->escape($dolibarr_main_db_user)." with password '".$this->escape($dolibarr_main_db_pass)."'";
+		$sql = "CREATE USER ".$this->escape($DigitalProspects_main_db_user)." with password '".$this->escape($DigitalProspects_main_db_pass)."'";
 
 		dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG); // No sql to avoid password in log
 		$resql = $this->query($sql);

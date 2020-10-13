@@ -21,7 +21,7 @@
 
 /**
  *	\file       htdocs/index.php
- *	\brief      Dolibarr home page
+ *	\brief      DigitalProspects home page
  */
 
 define('NOCSRFCHECK', 1); // This is main home and login page. We must be able to go on it from another web site.
@@ -71,7 +71,7 @@ if (GETPOST('addbox'))	// Add box (when submit is done from a form when ajax dis
 if (!is_object($form)) $form = new Form($db);
 
 // Title
-$title = $langs->trans("HomeArea").' - Dolibarr '.DOL_VERSION;
+$title = $langs->trans("HomeArea").' - DigitalProspects '.DOL_VERSION;
 if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = $langs->trans("HomeArea").' - '.$conf->global->MAIN_APPLICATION_TITLE;
 
 llxHeader('', $title);
@@ -104,7 +104,7 @@ if (!empty($conf->global->MAIN_MOTD))
 
 
 /*
- * Dashboard Dolibarr states (statistics)
+ * Dashboard DigitalProspects states (statistics)
  * Hidden for external users
  */
 
@@ -326,7 +326,7 @@ if (empty($user->socid) && empty($conf->global->MAIN_DISABLE_GLOBAL_BOXSTATS))
 
 
 
-// Dolibarr Working Board with weather
+// DigitalProspects Working Board with weather
 
 if (empty($conf->global->MAIN_DISABLE_GLOBAL_WORKBOARD)) {
     $showweather = (empty($conf->global->MAIN_DISABLE_METEO) || $conf->global->MAIN_DISABLE_METEO == 2) ? 1 : 0;
@@ -624,7 +624,7 @@ if (empty($conf->global->MAIN_DISABLE_GLOBAL_WORKBOARD)) {
     $boxwork .= '<div class="box">';
     $boxwork .= '<table summary="'.dol_escape_htmltag($langs->trans("WorkingBoard")).'" class="noborder boxtable boxtablenobottom boxworkingboard" width="100%">'."\n";
     $boxwork .= '<tr class="liste_titre">';
-    $boxwork .= '<th class="liste_titre"><div class="inline-block valignmiddle">'.$langs->trans("DolibarrWorkBoard").'</div>';
+    $boxwork .= '<th class="liste_titre"><div class="inline-block valignmiddle">'.$langs->trans("DigitalProspectsWorkBoard").'</div>';
     if ($showweather) {
         if ($totallate > 0) {
             $text = $langs->transnoentitiesnoconv("WarningYouHaveAtLeastOneTaskLate").' ('.$langs->transnoentitiesnoconv("NActionsLate",
@@ -911,10 +911,10 @@ if (empty($user->socid) && empty($conf->global->MAIN_DISABLE_GLOBAL_BOXSTATS))
     if (!empty($boxstatFromHook) || !empty($boxstatItems)) {
     	$boxstat .= '<!-- Database statistics -->'."\n";
         $boxstat .= '<div class="box">';
-        $boxstat .= '<table summary="'.dol_escape_htmltag($langs->trans("DolibarrStateBoard")).'" class="noborder boxtable boxtablenobottom nohover widgetstats" width="100%">';
+        $boxstat .= '<table summary="'.dol_escape_htmltag($langs->trans("DigitalProspectsStateBoard")).'" class="noborder boxtable boxtablenobottom nohover widgetstats" width="100%">';
         $boxstat .= '<tr class="liste_titre box_titre">';
         $boxstat .= '<td class="liste_titre">';
-        $boxstat .= '<div class="inline-block valignmiddle">'.$langs->trans("DolibarrStateBoard").'</div>';
+        $boxstat .= '<div class="inline-block valignmiddle">'.$langs->trans("DigitalProspectsStateBoard").'</div>';
         $boxstat .= '</td>';
         $boxstat .= '</tr>';
         $boxstat .= '<tr class="nobottom nohover"><td class="tdboxstats nohover flexcontainer">';

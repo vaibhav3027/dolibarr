@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - members
+# DigitalProspects language file - Source file is en_US - members
 MembersArea=メンバーエリア
 MemberCard=メンバーカード
 SubscriptionCard=サブスクリプション·カード
@@ -13,8 +13,8 @@ ListOfValidatedPublicMembers=検証済みのパブリックメンバのリスト
 ErrorThisMemberIsNotPublic=このメンバは、パブリックではありません
 ErrorMemberIsAlreadyLinkedToThisThirdParty=別のメンバー（名前<b>：%s、</b>ログイン<b>：%s）</b>は既にサードパーティ製の<b>%s</b>にリンクされています。第三者が唯一のメンバー（およびその逆）にリンクすることはできませんので、最初にこのリンクを削除します。
 ErrorUserPermissionAllowsToLinksToItselfOnly=セキュリティ上の理由から、あなたはすべてのユーザーが自分のものでないユーザーにメンバをリンクすることができるように編集する権限を付与する必要があります。
-SetLinkToUser=Dolibarrユーザーへのリンク
-SetLinkToThirdParty=Dolibarr第三者へのリンク
+SetLinkToUser=DigitalProspectsユーザーへのリンク
+SetLinkToThirdParty=DigitalProspects第三者へのリンク
 MembersCards=メンバーの名刺
 MembersList=メンバーのリスト
 MembersListToValid=ドラフトのメンバーのリスト（検証する）
@@ -89,10 +89,10 @@ ConfirmDeleteSubscription=Are you sure you want to delete this subscription?
 Filehtpasswd=htpasswdファイル
 ValidateMember=メンバーを検証する
 ConfirmValidateMember=Are you sure you want to validate this member?
-FollowingLinksArePublic=The following links are open pages not protected by any Dolibarr permission. They are not formatted pages, provided as example to show how to list members database.
+FollowingLinksArePublic=The following links are open pages not protected by any DigitalProspects permission. They are not formatted pages, provided as example to show how to list members database.
 PublicMemberList=公共のメンバーリスト
 BlankSubscriptionForm=Public self-subscription form
-BlankSubscriptionFormDesc=Dolibarr can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
+BlankSubscriptionFormDesc=DigitalProspects can provide you a public URL/website to allow external visitors to ask to subscribe to the foundation. If an online payment module is enabled, a payment form may also be automatically provided.
 EnablePublicSubscriptionForm=Enable the public website with self-subscription form
 ForceMemberType=Force the member type
 ExportDataset_member_1=メンバーとサブスクリプション

@@ -22,13 +22,13 @@
 
 /**
  *	\file       htdocs/core/db/mysqli.class.php
- *	\brief      Class file to manage Dolibarr database access for a MySQL database
+ *	\brief      Class file to manage DigitalProspects database access for a MySQL database
  */
 
 require_once DOL_DOCUMENT_ROOT.'/core/db/DoliDB.class.php';
 
 /**
- *	Class to manage Dolibarr database access for a MySQL database using the MySQLi extension
+ *	Class to manage DigitalProspects database access for a MySQL database using the MySQLi extension
  */
 class DoliDBMysqli extends DoliDB
 {
@@ -60,7 +60,7 @@ class DoliDBMysqli extends DoliDB
 
         // Note that having "static" property for "$forcecharset" and "$forcecollate" will make error here in strict mode, so they are not static
         if (!empty($conf->db->character_set)) $this->forcecharset = $conf->db->character_set;
-        if (!empty($conf->db->dolibarr_main_db_collation)) $this->forcecollate = $conf->db->dolibarr_main_db_collation;
+        if (!empty($conf->db->DigitalProspects_main_db_collation)) $this->forcecollate = $conf->db->DigitalProspects_main_db_collation;
 
         $this->database_user = $user;
         $this->database_host = $host;
@@ -110,13 +110,13 @@ class DoliDBMysqli extends DoliDB
                 $this->ok = true;
 
                 // If client is old latin, we force utf8
-                $clientmustbe = empty($conf->db->dolibarr_main_db_character_set) ? 'utf8' : $conf->db->dolibarr_main_db_character_set;
+                $clientmustbe = empty($conf->db->DigitalProspects_main_db_character_set) ? 'utf8' : $conf->db->DigitalProspects_main_db_character_set;
                 if (preg_match('/latin1/', $clientmustbe)) $clientmustbe = 'utf8';
 
 				if ($this->db->character_set_name() != $clientmustbe) {
 					$this->db->set_charset($clientmustbe); // This set charset, but with a bad collation
 
-					$collation = $conf->db->dolibarr_main_db_collation;
+					$collation = $conf->db->DigitalProspects_main_db_collation;
 					if (preg_match('/latin1/', $collation)) $collation = 'utf8_unicode_ci';
 
 					if (!preg_match('/general/', $collation)) $this->db->query("SET collation_connection = ".$collation);
@@ -139,14 +139,14 @@ class DoliDBMysqli extends DoliDB
             if ($this->connected)
             {
             	// If client is old latin, we force utf8
-            	$clientmustbe = empty($conf->db->dolibarr_main_db_character_set) ? 'utf8' : $conf->db->dolibarr_main_db_character_set;
+            	$clientmustbe = empty($conf->db->DigitalProspects_main_db_character_set) ? 'utf8' : $conf->db->DigitalProspects_main_db_character_set;
             	if (preg_match('/latin1/', $clientmustbe)) $clientmustbe = 'utf8';
             	if (preg_match('/utf8mb4/', $clientmustbe)) $clientmustbe = 'utf8';
 
             	if ($this->db->character_set_name() != $clientmustbe) {
             		$this->db->set_charset($clientmustbe); // This set utf8_unicode_ci
 
-            		$collation = $conf->db->dolibarr_main_db_collation;
+            		$collation = $conf->db->DigitalProspects_main_db_collation;
             		if (preg_match('/latin1/', $collation)) $collation = 'utf8_unicode_ci';
             		if (preg_match('/utf8mb4/', $collation)) $collation = 'utf8_unicode_ci';
 
@@ -420,7 +420,7 @@ class DoliDBMysqli extends DoliDB
             // Si il y a eu echec de connexion, $this->db n'est pas valide.
             return 'DB_ERROR_FAILED_TO_CONNECT';
         } else {
-            // Constants to convert a MySql error code to a generic Dolibarr error code
+            // Constants to convert a MySql error code to a generic DigitalProspects error code
             $errorcode_map = array(
             1004 => 'DB_ERROR_CANNOT_CREATE',
             1005 => 'DB_ERROR_CANNOT_CREATE',
@@ -505,10 +505,10 @@ class DoliDBMysqli extends DoliDB
         global $conf;
 
         // Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-        $cryptType = (!empty($conf->db->dolibarr_main_db_encryption) ? $conf->db->dolibarr_main_db_encryption : 0);
+        $cryptType = (!empty($conf->db->DigitalProspects_main_db_encryption) ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
         //Encryption key
-        $cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+        $cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
         $return = ($withQuotes ? "'" : "").$this->escape($fieldorvalue).($withQuotes ? "'" : "");
 
@@ -538,10 +538,10 @@ class DoliDBMysqli extends DoliDB
         global $conf;
 
         // Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-        $cryptType = (!empty($conf->db->dolibarr_main_db_encryption) ? $conf->db->dolibarr_main_db_encryption : 0);
+        $cryptType = (!empty($conf->db->DigitalProspects_main_db_encryption) ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
         //Encryption key
-        $cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+        $cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
         $return = $value;
 
@@ -597,7 +597,7 @@ class DoliDBMysqli extends DoliDB
         if (empty($charset))   $charset = $this->forcecharset;
         if (empty($collation)) $collation = $this->forcecollate;
 
-        // ALTER DATABASE dolibarr_db DEFAULT CHARACTER SET latin DEFAULT COLLATE latin1_swedish_ci
+        // ALTER DATABASE DigitalProspects_db DEFAULT CHARACTER SET latin DEFAULT COLLATE latin1_swedish_ci
 		$sql = "CREATE DATABASE `".$this->escape($database)."`";
 		$sql .= " DEFAULT CHARACTER SET `".$this->escape($charset)."` DEFAULT COLLATE `".$this->escape($collation)."`";
 
@@ -912,16 +912,16 @@ class DoliDBMysqli extends DoliDB
     /**
 	 * 	Create a user and privileges to connect to database (even if database does not exists yet)
 	 *
-	 *	@param	string	$dolibarr_main_db_host 		Ip server or '%'
-	 *	@param	string	$dolibarr_main_db_user 		Nom user a creer
-	 *	@param	string	$dolibarr_main_db_pass 		Mot de passe user a creer
-	 *	@param	string	$dolibarr_main_db_name		Database name where user must be granted
+	 *	@param	string	$DigitalProspects_main_db_host 		Ip server or '%'
+	 *	@param	string	$DigitalProspects_main_db_user 		Nom user a creer
+	 *	@param	string	$DigitalProspects_main_db_pass 		Mot de passe user a creer
+	 *	@param	string	$DigitalProspects_main_db_name		Database name where user must be granted
 	 *	@return	int									<0 if KO, >=0 if OK
      */
-    public function DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name)
+    public function DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name)
     {
         // phpcs:enable
-        $sql = "CREATE USER '".$this->escape($dolibarr_main_db_user)."'";
+        $sql = "CREATE USER '".$this->escape($DigitalProspects_main_db_user)."'";
         dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG); // No sql to avoid password in log
         $resql = $this->query($sql);
         if (!$resql)
@@ -938,15 +938,15 @@ class DoliDBMysqli extends DoliDB
         }
 
         // Redo with localhost forced (sometimes user is created on %)
-        $sql = "CREATE USER '".$this->escape($dolibarr_main_db_user)."'@'localhost'";
+        $sql = "CREATE USER '".$this->escape($DigitalProspects_main_db_user)."'@'localhost'";
         $resql = $this->query($sql);
 
-        $sql = "GRANT ALL PRIVILEGES ON ".$this->escape($dolibarr_main_db_name).".* TO '".$this->escape($dolibarr_main_db_user)."'@'".$this->escape($dolibarr_main_db_host)."' IDENTIFIED BY '".$this->escape($dolibarr_main_db_pass)."'";
+        $sql = "GRANT ALL PRIVILEGES ON ".$this->escape($DigitalProspects_main_db_name).".* TO '".$this->escape($DigitalProspects_main_db_user)."'@'".$this->escape($DigitalProspects_main_db_host)."' IDENTIFIED BY '".$this->escape($DigitalProspects_main_db_pass)."'";
         dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG); // No sql to avoid password in log
         $resql = $this->query($sql);
         if (!$resql)
         {
-            $this->error = "Connected user not allowed to GRANT ALL PRIVILEGES ON ".$this->escape($dolibarr_main_db_name).".* TO '".$this->escape($dolibarr_main_db_user)."'@'".$this->escape($dolibarr_main_db_host)."'  IDENTIFIED BY '*****'";
+            $this->error = "Connected user not allowed to GRANT ALL PRIVILEGES ON ".$this->escape($DigitalProspects_main_db_name).".* TO '".$this->escape($DigitalProspects_main_db_user)."'@'".$this->escape($DigitalProspects_main_db_host)."'  IDENTIFIED BY '*****'";
             return -1;
         }
 

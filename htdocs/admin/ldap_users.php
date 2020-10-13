@@ -51,39 +51,39 @@ if ($action == 'setvalue' && $user->admin)
 	$error = 0;
 	$db->begin();
 
-	if (!dolibarr_set_const($db, 'LDAP_USER_DN', GETPOST("user"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_USER_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FILTER_CONNECTION', GETPOST("filterconnection"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_LOGIN', GETPOST("fieldlogin"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_LOGIN_SAMBA', GETPOST("fieldloginsamba"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_PASSWORD', GETPOST("fieldpassword"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_PASSWORD_CRYPTED', GETPOST("fieldpasswordcrypted"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_NAME', GETPOST("fieldname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_FIRSTNAME', GETPOST("fieldfirstname"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_MAIL', GETPOST("fieldmail"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_PHONE', GETPOST("fieldphone"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_MOBILE', GETPOST("fieldmobile"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_SKYPE', GETPOST("fieldskype"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_FAX', GETPOST("fieldfax"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_COMPANY', GETPOST("fieldcompany"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_ADDRESS', GETPOST("fieldaddress"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_ZIP', GETPOST("fieldzip"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_TOWN', GETPOST("fieldtown"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_COUNTRY', GETPOST("fieldcountry"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_DESCRIPTION', GETPOST("fielddescription"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_SID', GETPOST("fieldsid"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_TITLE', GETPOST("fieldtitle"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_GROUPID', GETPOST("fieldgroupid"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_USERID', GETPOST("fielduserid"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_HOMEDIRECTORY', GETPOST("fieldhomedirectory"), 'chaine', 0, '', $conf->entity)) $error++;
-	if (!dolibarr_set_const($db, 'LDAP_FIELD_HOMEDIRECTORYPREFIX', GETPOST("fieldhomedirectoryprefix"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_USER_DN', GETPOST("user"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_USER_OBJECT_CLASS', GETPOST("objectclass"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FILTER_CONNECTION', GETPOST("filterconnection"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_FULLNAME', GETPOST("fieldfullname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_LOGIN', GETPOST("fieldlogin"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_LOGIN_SAMBA', GETPOST("fieldloginsamba"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_PASSWORD', GETPOST("fieldpassword"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_PASSWORD_CRYPTED', GETPOST("fieldpasswordcrypted"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_NAME', GETPOST("fieldname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_FIRSTNAME', GETPOST("fieldfirstname"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_MAIL', GETPOST("fieldmail"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_PHONE', GETPOST("fieldphone"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_MOBILE', GETPOST("fieldmobile"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_SKYPE', GETPOST("fieldskype"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_FAX', GETPOST("fieldfax"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_COMPANY', GETPOST("fieldcompany"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_ADDRESS', GETPOST("fieldaddress"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_ZIP', GETPOST("fieldzip"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_TOWN', GETPOST("fieldtown"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_COUNTRY', GETPOST("fieldcountry"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_DESCRIPTION', GETPOST("fielddescription"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_SID', GETPOST("fieldsid"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_TITLE', GETPOST("fieldtitle"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_GROUPID', GETPOST("fieldgroupid"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_USERID', GETPOST("fielduserid"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_HOMEDIRECTORY', GETPOST("fieldhomedirectory"), 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_FIELD_HOMEDIRECTORYPREFIX', GETPOST("fieldhomedirectoryprefix"), 'chaine', 0, '', $conf->entity)) $error++;
 
 	// This one must be after the others
 	$valkey = '';
 	$key = GETPOST("key");
 	if ($key) $valkey = $conf->global->$key;
-	if (!dolibarr_set_const($db, 'LDAP_KEY_USERS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
+	if (!DigitalProspects_set_const($db, 'LDAP_KEY_USERS', $valkey, 'chaine', 0, '', $conf->entity)) $error++;
 
 	if (!$error)
 	{
@@ -161,7 +161,7 @@ print '<br>';
 print '<table class="noborder centpercent">';
 
 print '<tr class="liste_titre">';
-print '<td width="25%">'.$langs->trans("LDAPDolibarrMapping").'</td>';
+print '<td width="25%">'.$langs->trans("LDAPDigitalProspectsMapping").'</td>';
 print '<td colspan="2">'.$langs->trans("LDAPLdapMapping").'</td>';
 print '<td class="right">'.$langs->trans("LDAPNamingAttribute").'</td>';
 print "</tr>\n";
@@ -348,7 +348,7 @@ print '</form>';
 /*
  * Test de la connexion
  */
-if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap')
+if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'DigitalProspects2ldap')
 {
 	$butlabel = $langs->trans("LDAPTestSynchroUser");
 	$testlabel = 'testuser';
@@ -358,7 +358,7 @@ if ($conf->global->LDAP_SYNCHRO_ACTIVE == 'dolibarr2ldap')
 
 	show_ldap_test_button($butlabel, $testlabel, $key, $dn, $objectclass);
 }
-elseif ($conf->global->LDAP_SYNCHRO_ACTIVE == 'ldap2dolibarr')
+elseif ($conf->global->LDAP_SYNCHRO_ACTIVE == 'ldap2DigitalProspects')
 {
 	$butlabel = $langs->trans("LDAPTestSearch");
 	$testlabel = 'testsearchuser';

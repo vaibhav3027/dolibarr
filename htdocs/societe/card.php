@@ -84,7 +84,7 @@ if (!($object->id > 0) && $action == 'view')
 	exit;
 }
 
-// Get object canvas (By default, this is not defined, so standard usage of dolibarr)
+// Get object canvas (By default, this is not defined, so standard usage of DigitalProspects)
 $object->getCanvas($socid);
 $canvas = $object->canvas ? $object->canvas : GETPOST("canvas");
 $objcanvas = null;
@@ -2641,7 +2641,7 @@ else
         if (!empty($conf->adherent->enabled))
         {
             $langs->load("members");
-            print '<tr><td>'.$langs->trans("LinkedToDolibarrMember").'</td>';
+            print '<tr><td>'.$langs->trans("LinkedToDigitalProspectsMember").'</td>';
             print '<td>';
             $adh = new Adherent($db);
             $result = $adh->fetch('', '', $object->id);

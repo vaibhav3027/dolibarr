@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=rtl
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=أي طلب في الخطأ
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=قيمة مكررة في حقل فريد
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=فشل في العثور على <b>المستخدم٪ الصورة</b> في قاعدة بيانات Dolibarr.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=فشل في العثور على <b>المستخدم٪ الصورة</b> في قاعدة بيانات DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=خطأ، لا معدلات ضريبة القيمة المضافة المحددة للبلد '٪ ق'.
 ErrorNoSocialContributionForSellerCountry=خطأ، لا الاجتماعي / المالي نوع الضرائب المحددة للبلد '٪ ق'.
 ErrorFailedToSaveFile=خطأ، فشل في حفظ الملف.
@@ -90,7 +90,7 @@ RecordDeleted=سجل محذوف
 RecordGenerated=Record generated
 LevelOfFeature=مستوى ميزات
 NotDefined=غير معرف
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=مدير
 Undefined=غير محدد
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=نوع قاعدة البيانات مدير
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=كشف Dolibarr خطأ فني
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=كشف DigitalProspects خطأ فني
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=المزيد من المعلومات
 TechnicalInformation=المعلومات التقنية
 TechnicalID=ID الفني
 LineID=Line ID
 NotePublic=ملاحظة (الجمهور)
 NotePrivate=ملاحظة (خاص)
-PrecisionUnitIsLimitedToXDecimals=كان Dolibarr الإعداد للحد من دقة أسعار الوحدات إلى <b>العشرية٪ الصورة.</b>
+PrecisionUnitIsLimitedToXDecimals=كان DigitalProspects الإعداد للحد من دقة أسعار الوحدات إلى <b>العشرية٪ الصورة.</b>
 DoTest=اختبار
 ToFilter=فلتر
 NoFilter=No filter
@@ -475,8 +475,8 @@ Generate=توليد
 Duration=المدة الزمنية
 TotalDuration=المدة الإجمالية
 Summary=ملخص
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=متاح
 NotYetAvailable=لم تتوفر بعد
@@ -736,7 +736,7 @@ PrintContentArea=وتظهر الصفحة الرئيسية لطباعة ناحي�
 MenuManager=مدير القائمة
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=نظام خطأ
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=بطاقة الائتمان
 ValidatePayment=تحقق من الدفع
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=التقويم
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

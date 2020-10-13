@@ -484,7 +484,7 @@ abstract class CommonDocGenerator
 			}
 
 			// @GS: Calculate total up and total discount percentage
-			// Note that this added fields correspond to nothing in Dolibarr (Dolibarr manage discount on lines not globally)
+			// Note that this added fields correspond to nothing in DigitalProspects (DigitalProspects manage discount on lines not globally)
 			$resarray['object_total_up'] = $totalUp;
 			$resarray['object_total_up_locale'] = price($resarray['object_total_up'], 0, $outputlangs);
 			if (method_exists($object, 'getTotalDiscount')) {
@@ -744,7 +744,7 @@ abstract class CommonDocGenerator
     /**
      * Define array with couple substitution key => substitution value
      *
-     * @param   Object		$object    		Dolibarr Object
+     * @param   Object		$object    		DigitalProspects Object
      * @param   Translate	$outputlangs    Language object for output
      * @param   boolean		$recursive    	Want to fetch child array or child object
      * @return	array						Array of substitution key->code

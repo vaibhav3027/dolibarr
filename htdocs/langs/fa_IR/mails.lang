@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=ارسال ایمیل
 EMailing=ارسال ایمیل
 EMailings=ارسال ایمیل ها
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=طرف‌های تماس با دسته‌ب�
 MailingModuleDescContactsByFunction=طرف‌های تماس با سمت‌ها
 MailingModuleDescEmailsFromFile=رایانامه‌ها از فایل
 MailingModuleDescEmailsFromUser=ورودی رایانامه کاربر
-MailingModuleDescDolibarrUsers=کاربران دارای رایانامه
+MailingModuleDescDigitalProspectsUsers=کاربران دارای رایانامه
 MailingModuleDescThirdPartiesByCategories=شخص‌سوم‌ها (بر حسب دسته‌بندی)
 SendingFromWebInterfaceIsNotAllowed=ارسال از رابط وب مجاز نیست.
 

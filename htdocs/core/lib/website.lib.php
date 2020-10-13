@@ -119,7 +119,7 @@ function dolWebsiteReplacementOfLinks($website, $content, $removephppart = 0, $c
 {
 	$nbrep = 0;
 
-	dol_syslog('dolWebsiteReplacementOfLinks start (contenttype='.$contenttype." containerid=".$containerid." USEDOLIBARREDITOR=".(defined('USEDOLIBARREDITOR') ? '1' : '')." USEDOLIBARRSERVER=".(defined('USEDOLIBARRSERVER') ? '1' : '').')', LOG_DEBUG);
+	dol_syslog('dolWebsiteReplacementOfLinks start (contenttype='.$contenttype." containerid=".$containerid." USEDigitalProspectsEDITOR=".(defined('USEDigitalProspectsEDITOR') ? '1' : '')." USEDigitalProspectsSERVER=".(defined('USEDigitalProspectsSERVER') ? '1' : '').')', LOG_DEBUG);
 	//if ($contenttype == 'html') { print $content;exit; }
 
 	// Replace php code. Note $content may come from database and does not contains body tags.
@@ -164,26 +164,26 @@ function dolWebsiteReplacementOfLinks($website, $content, $removephppart = 0, $c
 	$content = str_replace('href="/document.php', 'href="!~!~!~/document.php', $content);
 	$content = str_replace('href="'.DOL_URL_ROOT.'/document.php', 'href="!~!~!~'.DOL_URL_ROOT.'/document.php', $content);
 
-	// Replace relative link '/' with dolibarr URL
+	// Replace relative link '/' with DigitalProspects URL
 	$content = preg_replace('/(href=")\/(#[^\"<>]*)?\"/', '\1!~!~!~'.DOL_URL_ROOT.'/website/index.php?website='.$website->ref.'&pageid='.$website->fk_default_home.'\2"', $content, -1, $nbrep);
-	// Replace relative link /xxx.php#aaa or /xxx.php with dolibarr URL (we discard param ?...)
+	// Replace relative link /xxx.php#aaa or /xxx.php with DigitalProspects URL (we discard param ?...)
 	$content = preg_replace('/(href=")\/?([^:\"\!]*)\.php(#[^\"<>]*)?\"/', '\1!~!~!~'.DOL_URL_ROOT.'/website/index.php?website='.$website->ref.'&pageref=\2\3"', $content, -1, $nbrep);
-	// Replace relative link /xxx.php?a=b&c=d#aaa or /xxx.php?a=b&c=d with dolibarr URL
+	// Replace relative link /xxx.php?a=b&c=d#aaa or /xxx.php?a=b&c=d with DigitalProspects URL
 	$content = preg_replace('/(href=")\/?([^:\"\!]*)\.php\?([^#\"<>]*)(#[^\"<>]*)?\"/', '\1!~!~!~'.DOL_URL_ROOT.'/website/index.php?website='.$website->ref.'&pageref=\2&\3\4"', $content, -1, $nbrep);
 
 	// Fix relative link into medias with correct URL after the DOL_URL_ROOT: ../url("medias/
 	$content = preg_replace('/url\((["\']?)\/?medias\//', 'url(\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
 	$content = preg_replace('/data-slide-bg=(["\']?)\/?medias\//', 'data-slide-bg=\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
 
-	// <img src="medias/...image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
-	// <img src="...image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
+	// <img src="medias/...image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
+	// <img src="...image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
 	$content = preg_replace('/(<img[^>]*src=")\/?medias\//', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
-	// <img src="image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
+	// <img src="image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
 	$content = preg_replace('/(<img[^>]*src=")\/?([^:\"\!]+)\"/', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=\2"', $content, -1, $nbrep);
-	// <img src="viewimage.php/modulepart=medias&file=image.png" => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png"
+	// <img src="viewimage.php/modulepart=medias&file=image.png" => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png"
 	$content = preg_replace('/(<img[^>]*src=")(\/?viewimage\.php)/', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php', $content, -1, $nbrep);
 
-	// action="newpage.php" => action="dolibarr/website/index.php?website=...&pageref=newpage
+	// action="newpage.php" => action="DigitalProspects/website/index.php?website=...&pageref=newpage
 	$content = preg_replace('/(action=")\/?([^:\"]*)(\.php\")/', '\1!~!~!~'.DOL_URL_ROOT.'/website/index.php?website='.$website->ref.'&pageref=\2"', $content, -1, $nbrep);
 
 	// Fix relative link /document.php with correct URL after the DOL_URL_ROOT:  ...href="/document.php?modulepart="
@@ -207,7 +207,7 @@ function dolWebsiteReplacementOfLinks($website, $content, $removephppart = 0, $c
 
 /**
  * Render a string of an HTML content and output it.
- * Used to ouput the page when viewed from server (Dolibarr or Apache).
+ * Used to ouput the page when viewed from server (DigitalProspects or Apache).
  *
  * @param   string  $content    	Content string
  * @param	string	$contenttype	Content type
@@ -218,22 +218,22 @@ function dolWebsiteReplacementOfLinks($website, $content, $removephppart = 0, $c
 function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 {
 	global $db, $langs, $conf, $user;
-	global $dolibarr_main_url_root, $dolibarr_main_data_root;
+	global $DigitalProspects_main_url_root, $DigitalProspects_main_data_root;
 	global $website;
 	global $includehtmlcontentopened;
 
 	$nbrep = 0;
 
-	dol_syslog("dolWebsiteOutput start - contenttype=".$contenttype." containerid=".$containerid." USEDOLIBARREDITOR=".(defined('USEDOLIBARREDITOR') ? '1' : '')." USEDOLIBARRSERVER=".(defined('USEDOLIBARRSERVER') ? '1' : '').' includehtmlcontentopened='.$includehtmlcontentopened);
+	dol_syslog("dolWebsiteOutput start - contenttype=".$contenttype." containerid=".$containerid." USEDigitalProspectsEDITOR=".(defined('USEDigitalProspectsEDITOR') ? '1' : '')." USEDigitalProspectsSERVER=".(defined('USEDigitalProspectsSERVER') ? '1' : '').' includehtmlcontentopened='.$includehtmlcontentopened);
 
 	//print $containerid.' '.$content;
 
 	// Define $urlwithroot
-	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+	$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 	$urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 	//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
-	if (defined('USEDOLIBARREDITOR'))		// REPLACEMENT OF LINKS When page called from Dolibarr editor
+	if (defined('USEDigitalProspectsEDITOR'))		// REPLACEMENT OF LINKS When page called from DigitalProspects editor
 	{
 		// We remove the <head> part of content
 		if ($contenttype == 'html')
@@ -243,7 +243,7 @@ function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 			$content = preg_replace('/<\/body(\s[^>]*)*>.*$/ims', '', $content);
 		}
 	}
-	elseif (defined('USEDOLIBARRSERVER'))	// REPLACEMENT OF LINKS When page called from Dolibarr server
+	elseif (defined('USEDigitalProspectsSERVER'))	// REPLACEMENT OF LINKS When page called from DigitalProspects server
 	{
 		$content = str_replace('<link rel="stylesheet" href="/styles.css', '<link rel="stylesheet" href="styles.css', $content);
 
@@ -256,22 +256,22 @@ function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 		$content = str_replace(array('href="document.php', 'href="/document.php'), 'href="!~!~!~/document.php', $content);
 		$content = str_replace('href="'.DOL_URL_ROOT.'/document.php', 'href="!~!~!~'.DOL_URL_ROOT.'/document.php', $content);
 
-		// Replace relative link / with dolibarr URL:  ...href="/"...
+		// Replace relative link / with DigitalProspects URL:  ...href="/"...
 		$content = preg_replace('/(href=")\/\"/', '\1!~!~!~'.DOL_URL_ROOT.'/public/website/index.php?website='.$website->ref.'"', $content, -1, $nbrep);
-		// Replace relative link /xxx.php#aaa or /xxx.php with dolibarr URL:  ...href="....php" (we discard param ?...)
+		// Replace relative link /xxx.php#aaa or /xxx.php with DigitalProspects URL:  ...href="....php" (we discard param ?...)
 		$content = preg_replace('/(href=")\/?([^:\"\!]*)\.php(#[^\"<>]*)?\"/', '\1!~!~!~'.DOL_URL_ROOT.'/public/website/index.php?website='.$website->ref.'&pageref=\2\3"', $content, -1, $nbrep);
-		// Replace relative link /xxx.php?a=b&c=d#aaa or /xxx.php?a=b&c=d with dolibarr URL
+		// Replace relative link /xxx.php?a=b&c=d#aaa or /xxx.php?a=b&c=d with DigitalProspects URL
 		// Warning: we may replace twice if href="..." was inside an include (dolWebsiteOutput called by include and the by final page), that's why
 		// at end we replace the '!~!~!~' only if we are in final parent page.
 		$content = preg_replace('/(href=")\/?([^:\"\!]*)\.php\?([^#\"<>]*)(#[^\"<>]*)?\"/', '\1!~!~!~'.DOL_URL_ROOT.'/public/website/index.php?website='.$website->ref.'&pageref=\2&\3\4"', $content, -1, $nbrep);
-		// Replace relative link without .php like /xxx#aaa or /xxx with dolibarr URL:  ...href="....php"
+		// Replace relative link without .php like /xxx#aaa or /xxx with DigitalProspects URL:  ...href="....php"
 		$content = preg_replace('/(href=")\/?([a-zA-Z0-9\-_#]+)(\"|\?)/', '\1!~!~!~'.DOL_URL_ROOT.'/public/website/index.php?website='.$website->ref.'&pageref=\2\3', $content, -1, $nbrep);
 
-		// Fix relative link /document.php with correct URL after the DOL_URL_ROOT:  href="/document.php?modulepart=" => href="/dolibarr/document.php?modulepart="
+		// Fix relative link /document.php with correct URL after the DOL_URL_ROOT:  href="/document.php?modulepart=" => href="/DigitalProspects/document.php?modulepart="
 		$content = preg_replace('/(href=")(\/?document\.php\?[^\"]*modulepart=[^\"]*)(\")/', '\1!~!~!~'.DOL_URL_ROOT.'\2\3', $content, -1, $nbrep);
 		$content = preg_replace('/(src=")(\/?document\.php\?[^\"]*modulepart=[^\"]*)(\")/', '\1!~!~!~'.DOL_URL_ROOT.'\2\3', $content, -1, $nbrep);
 
-		// Fix relative link /viewimage.php with correct URL after the DOL_URL_ROOT: href="/viewimage.php?modulepart=" => href="/dolibarr/viewimage.php?modulepart="
+		// Fix relative link /viewimage.php with correct URL after the DOL_URL_ROOT: href="/viewimage.php?modulepart=" => href="/DigitalProspects/viewimage.php?modulepart="
 		$content = preg_replace('/(href=")(\/?viewimage\.php\?[^\"]*modulepart=[^\"]*)(\")/', '\1!~!~!~'.DOL_URL_ROOT.'\2\3', $content, -1, $nbrep);
 		$content = preg_replace('/(src=")(\/?viewimage\.php\?[^\"]*modulepart=[^\"]*)(\")/', '\1!~!~!~'.DOL_URL_ROOT.'\2\3', $content, -1, $nbrep);
 		$content = preg_replace('/(url\(")(\/?viewimage\.php\?[^\"]*modulepart=[^\"]*)(\")/', '\1!~!~!~'.DOL_URL_ROOT.'\2\3', $content, -1, $nbrep);
@@ -280,15 +280,15 @@ function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 		$content = preg_replace('/url\((["\']?)\/?medias\//', 'url(\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
 		$content = preg_replace('/data-slide-bg=(["\']?)\/?medias\//', 'data-slide-bg=\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
 
-		// <img src="medias/...image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
-		// <img src="...image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
+		// <img src="medias/...image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
+		// <img src="...image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
 		$content = preg_replace('/(<img[^>]*src=")\/?medias\//', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=', $content, -1, $nbrep);
-		// <img src="image.png... => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png...
+		// <img src="image.png... => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png...
 		$content = preg_replace('/(<img[^>]*src=")\/?([^:\"\!]+)\"/', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php?modulepart=medias&file=\2"', $content, -1, $nbrep);
-		// <img src="viewimage.php/modulepart=medias&file=image.png" => <img src="dolibarr/viewimage.php/modulepart=medias&file=image.png"
+		// <img src="viewimage.php/modulepart=medias&file=image.png" => <img src="DigitalProspects/viewimage.php/modulepart=medias&file=image.png"
 		$content = preg_replace('/(<img[^>]*src=")(\/?viewimage\.php)/', '\1!~!~!~'.DOL_URL_ROOT.'/viewimage.php', $content, -1, $nbrep);
 
-		// action="newpage.php" => action="dolibarr/website/index.php?website=...&pageref=newpage
+		// action="newpage.php" => action="DigitalProspects/website/index.php?website=...&pageref=newpage
 		$content = preg_replace('/(action=")\/?([^:\"]*)(\.php\")/', '\1!~!~!~'.DOL_URL_ROOT.'/public/website/index.php?website='.$website->ref.'&pageref=\2"', $content, -1, $nbrep);
 
 		// Fix relative URL
@@ -310,7 +310,7 @@ function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 
 
 		// Make a change into HTML code to allow to include images from medias directory correct with direct link for virtual server
-		// <img alt="" src="/dolibarr_dev/htdocs/viewimage.php?modulepart=medias&amp;entity=1&amp;file=image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
+		// <img alt="" src="/DigitalProspects_dev/htdocs/viewimage.php?modulepart=medias&amp;entity=1&amp;file=image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
 		// become
 		// <img alt="" src="'.$urlwithroot.'/medias/image/ldestailleur_166x166.jpg" style="height:166px; width:166px" />
 		if (!$symlinktomediaexists)
@@ -384,12 +384,12 @@ function dolWebsiteOutput($content, $contenttype = 'html', $containerid = '')
 function dolWebsiteSaveContent($content)
 {
 	global $db, $langs, $conf, $user;
-	global $dolibarr_main_url_root, $dolibarr_main_data_root;
+	global $DigitalProspects_main_url_root, $DigitalProspects_main_data_root;
 
-	//dol_syslog("dolWebsiteSaveContent start (mode=".(defined('USEDOLIBARRSERVER')?'USEDOLIBARRSERVER':'').')');
+	//dol_syslog("dolWebsiteSaveContent start (mode=".(defined('USEDigitalProspectsSERVER')?'USEDigitalProspectsSERVER':'').')');
 
 	// Define $urlwithroot
-	$urlwithouturlroot=preg_replace('/'.preg_quote(DOL_URL_ROOT,'/').'$/i','',trim($dolibarr_main_url_root));
+	$urlwithouturlroot=preg_replace('/'.preg_quote(DOL_URL_ROOT,'/').'$/i','',trim($DigitalProspects_main_url_root));
 	$urlwithroot=$urlwithouturlroot.DOL_URL_ROOT;		// This is to use external domain name found into config file
 	//$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 
@@ -433,7 +433,7 @@ function redirectToContainer($containerref, $containeraliasalt = '', $containeri
 		}
 	}
 
-	if (defined('USEDOLIBARREDITOR'))
+	if (defined('USEDigitalProspectsEDITOR'))
 	{
 		/*print '<div class="margintoponly marginleftonly">';
 		print "This page contains dynamic code that make a redirect to '".$containerref."' in your current context. Redirect has been canceled as it is not supported in edition mode.";
@@ -443,7 +443,7 @@ function redirectToContainer($containerref, $containeraliasalt = '', $containeri
 		return;
 	}
 
-	if (defined('USEDOLIBARRSERVER'))	// When page called from Dolibarr server
+	if (defined('USEDigitalProspectsSERVER'))	// When page called from DigitalProspects server
 	{
 		// Check new container exists
 		if (!$containeraliasalt)	// If containeraliasalt set, we already did the test
@@ -759,7 +759,7 @@ function getSocialNetworkSharingLinks()
 				  var js, fjs = d.getElementsByTagName(s)[0];
 				  if (d.getElementById(id)) return;
 				  js = d.createElement(s); js.id = id;
-				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&amp;appId=dolibarr.org";
+				  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0&amp;appId=DigitalProspects.org";
 				  fjs.parentNode.insertBefore(js, fjs);
 				}(document, \'script\', \'facebook-jssdk\'));</script>
 				        <fb:like
@@ -892,9 +892,9 @@ function getPagesFromSearchCriterias($type, $algo, $searchstring, $max = 25, $so
 
 	if (!$error && (empty($max) || ($found < $max)) && (preg_match('/sitefiles/', $algo)))
 	{
-		global $dolibarr_main_data_root;
+		global $DigitalProspects_main_data_root;
 
-		$pathofwebsite = $dolibarr_main_data_root.'/website/'.$website->ref;
+		$pathofwebsite = $DigitalProspects_main_data_root.'/website/'.$website->ref;
 		$filehtmlheader = $pathofwebsite.'/htmlheader.html';
 		$filecss = $pathofwebsite.'/styles.css.php';
 		$filejs = $pathofwebsite.'/javascript.js.php';

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ecm
+# DigitalProspects language file - Source file is en_US - ecm
 ECMNbOfDocs=No. of documents in directory
 ECMSection=目录
 ECMSectionManual=手册目录
@@ -15,7 +15,7 @@ ECMNbOfSubDir=数子目录
 ECMNbOfFilesInSubDir=子目录中的文件数量
 ECMCreationUser=创造者
 ECMArea=电子文档管理
-ECMAreaDesc=DMS / ECM（文档管理系统/电子内容管理）区域允许您快速保存，共享和搜索Dolibarr中的所有类型的文档。
+ECMAreaDesc=DMS / ECM（文档管理系统/电子内容管理）区域允许您快速保存，共享和搜索DigitalProspects中的所有类型的文档。
 ECMAreaDesc2=*自动填写目录时自动加入一个元素从卡的文件。 <br> *手动目录可以用来保存未链接到一个特定元素的文件。
 ECMSectionWasRemoved=目录<b>%s</b>已被删除。
 ECMSectionWasCreated=目录<b> %s</b>已创建。

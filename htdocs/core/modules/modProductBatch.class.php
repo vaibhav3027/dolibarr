@@ -25,13 +25,13 @@
  *  \ingroup    productbatch
  *  \brief      Description and activation file for module productbatch
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *  Description and activation class for module productdluo
  */
-class modProductBatch extends DolibarrModules
+class modProductBatch extends DigitalProspectsModules
 {
 	/**
 	 *   Constructor. Define names, constants, directories, boxes, permissions
@@ -52,8 +52,8 @@ class modProductBatch extends DolibarrModules
 		$this->description = "Batch number, eat-by and sell-by date management module";
 
 		$this->rights_class = 'productbatch';
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		// Key used in llx_const table to save module status enabled/disabled (where dluo is value of property name of module in uppercase)
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 
@@ -73,7 +73,7 @@ class modProductBatch extends DolibarrModules
 		$this->requiredby = array(); // List of module ids to disable if this one is disabled
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with
 		$this->phpmin = array(5, 4); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(3, 0); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(3, 0); // Minimum version of DigitalProspects required by module
 		$this->langfiles = array("productbatch");
 
 		// Constants
@@ -108,7 +108,7 @@ class modProductBatch extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')
@@ -123,7 +123,7 @@ class modProductBatch extends DolibarrModules
 		if (!empty($conf->cashdesk->enabled)) {
     		if (empty($conf->global->CASHDESK_NO_DECREASE_STOCK)) {
     		    include_once DOL_DOCUMENT_ROOT.'/core/lib/admin.lib.php';
-    		    $res = dolibarr_set_const($db, "CASHDESK_NO_DECREASE_STOCK", 1, 'chaine', 0, '', $conf->entity);
+    		    $res = DigitalProspects_set_const($db, "CASHDESK_NO_DECREASE_STOCK", 1, 'chaine', 0, '', $conf->entity);
     		}
 		}
 

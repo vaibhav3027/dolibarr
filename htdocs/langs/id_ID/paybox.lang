@@ -1,7 +1,7 @@
-# Dolibarr language file - Source file is en_US - paybox
+# DigitalProspects language file - Source file is en_US - paybox
 PayBoxSetup=Pengaturan modul PayBox
-PayBoxDesc=Modul ini menawarkan halaman untuk memungkinkan pembayaran pada <a href="http://www.paybox.com" target="_blank"> Paybox </a> oleh pelanggan. Ini dapat digunakan untuk pembayaran gratis atau untuk pembayaran pada objek Dolibarr tertentu (faktur, pesanan, ...)
-FollowingUrlAreAvailableToMakePayments=URL berikut tersedia untuk menawarkan halaman kepada pelanggan untuk melakukan pembayaran pada objek Dolibarr
+PayBoxDesc=Modul ini menawarkan halaman untuk memungkinkan pembayaran pada <a href="http://www.paybox.com" target="_blank"> Paybox </a> oleh pelanggan. Ini dapat digunakan untuk pembayaran gratis atau untuk pembayaran pada objek DigitalProspects tertentu (faktur, pesanan, ...)
+FollowingUrlAreAvailableToMakePayments=URL berikut tersedia untuk menawarkan halaman kepada pelanggan untuk melakukan pembayaran pada objek DigitalProspects
 PaymentForm=Formulir pembayaran
 WelcomeOnPaymentPage=Selamat datang di layanan pembayaran online kami
 ThisScreenAllowsYouToPay=Layar ini memungkinkan Anda melakukan pembayaran online ke %s.

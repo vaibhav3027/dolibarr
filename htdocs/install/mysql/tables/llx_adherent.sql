@@ -28,7 +28,7 @@ create table llx_adherent
 (
   rowid            integer AUTO_INCREMENT PRIMARY KEY,
   entity           integer DEFAULT 1 NOT NULL,	-- multi company id
-  ref_ext          varchar(128),                -- reference into an external system (not used by dolibarr)
+  ref_ext          varchar(128),                -- reference into an external system (not used by DigitalProspects)
 
   gender           varchar(10),
   civility         varchar(6),

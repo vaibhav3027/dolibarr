@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Tagihan
 Bills=Tagihan - tagihan
 BillsCustomers=Faktur pelanggan
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Tetapkan tanggal mulai
 AutoFillDateTo=Tetapkan tanggal akhir untuk saluran layanan dengan tanggal faktur berikutnya
 AutoFillDateToShort=Tetapkan tanggal akhir
 MaxNumberOfGenerationReached=Jumlah maksimum gen. tercapai
-BILL_DELETEInDolibarr=Faktur dihapus
-BILL_SUPPLIER_DELETEInDolibarr=Faktur pemasok dihapus
+BILL_DELETEInDigitalProspects=Faktur dihapus
+BILL_SUPPLIER_DELETEInDigitalProspects=Faktur pemasok dihapus
 UnitPriceXQtyLessDiscount=Harga satuan x Jumlah - Diskon
 CustomersInvoicesArea=Area penagihan pelanggan
 SupplierInvoicesArea=Area penagihan pemasok

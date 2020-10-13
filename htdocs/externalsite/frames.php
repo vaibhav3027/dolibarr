@@ -80,7 +80,7 @@ if (!empty($keyforcontent))
 			/*print "
 			<html>
 			<head>
-			<title>Dolibarr frame for external web site</title>
+			<title>DigitalProspects frame for external web site</title>
 			</head>
 
 			<frameset ".(empty($conf->global->MAIN_MENU_INVERT)?"rows":"cols")."=\"".$heightforframes.",*\" border=0 framespacing=0 frameborder=0>
@@ -122,7 +122,7 @@ else
 		print "
 	<html>
 	<head>
-	<title>Dolibarr frame for external web site</title>
+	<title>DigitalProspects frame for external web site</title>
 	</head>
 
 	<frameset ".(empty($conf->global->MAIN_MENU_INVERT) ? "rows" : "cols")."=\"".$heightforframes.",*\" border=0 framespacing=0 frameborder=0>

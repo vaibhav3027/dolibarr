@@ -7,7 +7,7 @@
 # Laurent Destailleur - eldy@users.sourceforge.net
 #------------------------------------------------------
 # Usage: savedemo.sh
-# usage: savedemo.sh mysqldump_dolibarr_x.x.x.sql database port login pass
+# usage: savedemo.sh mysqldump_DigitalProspects_x.x.x.sql database port login pass
 #------------------------------------------------------
 
 
@@ -38,7 +38,7 @@ passwd=$5;
 # ----------------------------- if no params on command line
 if [ "x$passwd" = "x" ]
 then
-	export dumpfile=`ls -v $mydir/mysqldump_dolibarr_*.sql | tail -n 1`
+	export dumpfile=`ls -v $mydir/mysqldump_DigitalProspects_*.sql | tail -n 1`
 	export dumpfile=`basename $dumpfile`
 
 	# ----------------------------- input file
@@ -46,7 +46,7 @@ then
 	DIALOG="$DIALOG --ascii-lines"
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
 	        --inputbox "Output dump file :" 16 55 $dumpfile 2> $fichtemp
 	valret=$?
 	case $valret in
@@ -63,8 +63,8 @@ then
 	DIALOG="$DIALOG --ascii-lines"
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
-	        --inputbox "Mysql database name :" 16 55 dolibarrdemo 2> $fichtemp
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
+	        --inputbox "Mysql database name :" 16 55 DigitalProspectsdemo 2> $fichtemp
 	valret=$?
 	case $valret in
 	  0)
@@ -79,7 +79,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
 	        --inputbox "Mysql port (ex: 3306):" 16 55 3306 2> $fichtemp
 	
 	valret=$?
@@ -97,7 +97,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
 	        --inputbox "Mysql root login (ex: root):" 16 55 root 2> $fichtemp
 	
 	valret=$?
@@ -115,7 +115,7 @@ then
 	DIALOG=${DIALOG=dialog}
 	fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	trap "rm -f $fichtemp" 0 1 2 5 15
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
 	        --inputbox "Password for Mysql root login :" 16 55 2> $fichtemp
 	
 	valret=$?
@@ -133,8 +133,8 @@ then
 	#DIALOG=${DIALOG=dialog}
 	#fichtemp=`tempfile 2>/dev/null` || fichtemp=/tmp/test$$
 	#trap "rm -f $fichtemp" 0 1 2 5 15
-	#$DIALOG --title "Save Dolibarr with demo values" --clear \
-	#        --inputbox "Full path to documents directory (ex: /var/www/dolibarr/documents)- no / at end :" 16 55 2> $fichtemp
+	#$DIALOG --title "Save DigitalProspects with demo values" --clear \
+	#        --inputbox "Full path to documents directory (ex: /var/www/DigitalProspects/documents)- no / at end :" 16 55 2> $fichtemp
 	
 	#valret=$?
 	
@@ -149,7 +149,7 @@ then
 	
 	# ---------------------------- confirmation
 	DIALOG=${DIALOG=dialog}
-	$DIALOG --title "Save Dolibarr with demo values" --clear \
+	$DIALOG --title "Save DigitalProspects with demo values" --clear \
 	        --yesno "Do you confirm ? \n Dump file : '$dumpfile' \n Dump dir : '$mydir' \n Mysql database : '$base' \n Mysql port : '$port' \n Mysql login: '$admin' \n Mysql password : '$passwd'" 15 55
 	
 	case $? in

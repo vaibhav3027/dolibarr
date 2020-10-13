@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=چپ‌به‌راست
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=در خطا درخواستی نیست
 ErrorServiceUnavailableTryLater=در حال حاضر امکان ارائۀ خدمات وجود ندارد. بعدا دوباره تلاش کنید.
 ErrorDuplicateField=مقدار تکراری در بخش منحصربه‌فرد
 ErrorSomeErrorWereFoundRollbackIsDone=چند خطا پیدا شده. تغییرات عقب‌گرد خواهد شد.
-ErrorConfigParameterNotDefined=مؤلفۀ <b>%s</b> در فایل پیکربندی Dolibarr یهمی <b>conf.php</b> تعریف نشده است.
-ErrorCantLoadUserFromDolibarrDatabase=کاربر <b>%s</b> در پایگاه دادۀ Dolibarr پیدا نشد.
+ErrorConfigParameterNotDefined=مؤلفۀ <b>%s</b> در فایل پیکربندی DigitalProspects یهمی <b>conf.php</b> تعریف نشده است.
+ErrorCantLoadUserFromDigitalProspectsDatabase=کاربر <b>%s</b> در پایگاه دادۀ DigitalProspects پیدا نشد.
 ErrorNoVATRateDefinedForSellerCountry=خطا، نرخ م‌ب‌اا برای کشور "%s" پیدا نشد.
 ErrorNoSocialContributionForSellerCountry=خطا، مالیات‌های اجتماعی/سیاست‌های مالی برای کشور "%s" تعریف نشده است.
 ErrorFailedToSaveFile=خطا، امکان ذخیرۀ فایل وجود نداشت.
@@ -90,7 +90,7 @@ RecordDeleted=ردیف، حذف شد
 RecordGenerated=ردیف، تولید شد
 LevelOfFeature=سطح قابلیت‌ها
 NotDefined=تعریف نشده
-DolibarrInHttpAuthenticationSoPasswordUseless=حالت اعتبارسنجی Dolibarr در فایل پیکربندی <b>conf.php</b> به <b>%s</b> تنظیم شده است.<br> این به معنای آن است که پایگاه‌دادۀ گذرواژه نسبت به Dolibarr، خارجی است پس تغییر این بخش اثر نخواهد داشت.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=حالت اعتبارسنجی DigitalProspects در فایل پیکربندی <b>conf.php</b> به <b>%s</b> تنظیم شده است.<br> این به معنای آن است که پایگاه‌دادۀ گذرواژه نسبت به DigitalProspects، خارجی است پس تغییر این بخش اثر نخواهد داشت.
 Administrator=مدیر
 Undefined=تعریف نشده
 PasswordForgotten=گذرواژه فراموش شده
@@ -108,16 +108,16 @@ DatabaseTypeManager=نوع مدیریت پایگاه‌داده
 RequestLastAccessInError=آخرین خطای دسترسی به پایگاه‌داده
 ReturnCodeLastAccessInError=کد آخرین خطای دسترسی به پایگاه‌داده
 InformationLastAccessInError=اطلاعات مربوط به آخرین خطای دسترسی به پایگاه داده
-DolibarrHasDetectedError=Dolibarr با یک خطای فنی مواجه شده است
-YouCanSetOptionDolibarrMainProdToZero=شما می‌توانید فایل گزارش‌کار را مطالعه کرده یا در فایل پیکربندی گزینۀ $dolibarr_main_prod را برای دریافت اطلاعات بیشتر به '0' تغییر دهید
-InformationToHelpDiagnose=این اطلاعات برای اهداف تحلیل و بررسی قابل استفاده خواهد بود ( شما همچنان می‌توانید گزینۀ $dolibarr_main_prod را برای حذف این یادداشت‌ها به '1' تغییر دهید.
+DigitalProspectsHasDetectedError=DigitalProspects با یک خطای فنی مواجه شده است
+YouCanSetOptionDigitalProspectsMainProdToZero=شما می‌توانید فایل گزارش‌کار را مطالعه کرده یا در فایل پیکربندی گزینۀ $DigitalProspects_main_prod را برای دریافت اطلاعات بیشتر به '0' تغییر دهید
+InformationToHelpDiagnose=این اطلاعات برای اهداف تحلیل و بررسی قابل استفاده خواهد بود ( شما همچنان می‌توانید گزینۀ $DigitalProspects_main_prod را برای حذف این یادداشت‌ها به '1' تغییر دهید.
 MoreInformation=اطلاعات بیشتر
 TechnicalInformation=اطلاعات فنی
 TechnicalID=شناسۀ فنی
 LineID=Line ID
 NotePublic=یادداشت (عمومی)
 NotePrivate=یادداشت (خصوصی)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr طوری تنظیم شده است که دقت واحد مبالغ با <b>%s</b> عدد اعشاری باشد.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects طوری تنظیم شده است که دقت واحد مبالغ با <b>%s</b> عدد اعشاری باشد.
 DoTest=آزمایش
 ToFilter=گزینش/صافی
 NoFilter=بدون گزینش/صافی
@@ -475,8 +475,8 @@ Generate=تولید
 Duration=مدت‌زمان
 TotalDuration=مدت‌زمان کل
 Summary=خلاصه
-DolibarrStateBoard=آمار پایگاه داده
-DolibarrWorkBoard=موارد باز
+DigitalProspectsStateBoard=آمار پایگاه داده
+DigitalProspectsWorkBoard=موارد باز
 NoOpenedElementToProcess=No open element to process
 Available=فعال
 NotYetAvailable=فعلا غیرفعال
@@ -703,7 +703,7 @@ MenuECM=اسناد
 MenuAWStats=AWStats
 MenuMembers=اعضاء
 MenuAgendaGoogle=دستورکار گوگل
-ThisLimitIsDefinedInSetup=محدودیت Dolibarr  (فهرست خانه-برپاسازی-امنیت):  %s کیلوبایت، محدودیت PHP برابر با: %s کیلوبایت
+ThisLimitIsDefinedInSetup=محدودیت DigitalProspects  (فهرست خانه-برپاسازی-امنیت):  %s کیلوبایت، محدودیت PHP برابر با: %s کیلوبایت
 NoFileFound=هیچ سندی در این پوشه ذخیره نشده است
 CurrentUserLanguage=زبان کنونی
 CurrentTheme=پوستۀ کنونی
@@ -736,7 +736,7 @@ PrintContentArea=نمایش صفحه برای چاپ‌کردن ناحیۀ مح�
 MenuManager=مدیریت فهرست
 WarningYouAreInMaintenanceMode=هشدار! شما در حالت تعمیرات هستید: تنها، ورودی <b>%s</b> در این حالت به استفاده از برنامه مجاز است
 CoreErrorTitle=خطای سامانه
-CoreErrorMessage=متاسفانه یک خطا اتفاق افتاد. لطفا با مدیر سامانه را برای بررسی گزارش‌کارها و یا غیرفعال کردن  $dolibarr_main_prod=1 برای دریافت اطلاعات بیشتر تماس بگیرید
+CoreErrorMessage=متاسفانه یک خطا اتفاق افتاد. لطفا با مدیر سامانه را برای بررسی گزارش‌کارها و یا غیرفعال کردن  $DigitalProspects_main_prod=1 برای دریافت اطلاعات بیشتر تماس بگیرید
 CreditCard=کارت‌اعتباری
 ValidatePayment=تائید پرداخت
 CreditOrDebitCard=کارت اعتباری یا نقدی
@@ -875,7 +875,7 @@ Calendar=تقویم
 GroupBy=گروه‌بندی توسط...
 ViewFlatList=نمایش فهرست خطی
 RemoveString=حذف عبارت '%s'
-SomeTranslationAreUncomplete=برخی از زبان‌های قابل انتخاب ممکن است تنها به شکل ناقص ترجمه شده باشد یا دارای خطا باشند. لطفا برای تکمیل و تصحیح زبان مورد نظر خود در <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> ثبت نام نمائید و اصلاحات مورد نظر خود را انجام دهید.
+SomeTranslationAreUncomplete=برخی از زبان‌های قابل انتخاب ممکن است تنها به شکل ناقص ترجمه شده باشد یا دارای خطا باشند. لطفا برای تکمیل و تصحیح زبان مورد نظر خود در <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> ثبت نام نمائید و اصلاحات مورد نظر خود را انجام دهید.
 DirectDownloadLink=پیوند دریافت مستقیم (عمومی/خارجی)
 DirectDownloadInternalLink=پیوند دریافت مستقیم (نیازمند ورود و مجوز)
 Download=دریافت

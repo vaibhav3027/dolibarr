@@ -135,41 +135,41 @@ class CoreTest extends PHPUnit\Framework\TestCase
      */
     public function testDetectURLROOT()
     {
-        global $dolibarr_main_prod;
+        global $DigitalProspects_main_prod;
 
-        global $dolibarr_main_url_root;
-        global $dolibarr_main_data_root;
-        global $dolibarr_main_document_root;
-        global $dolibarr_main_data_root_alt;
-        global $dolibarr_main_document_root_alt;
-        global $dolibarr_main_db_host;
-        global $dolibarr_main_db_port;
-        global $dolibarr_main_db_type;
-        global $dolibarr_main_db_prefix;
+        global $DigitalProspects_main_url_root;
+        global $DigitalProspects_main_data_root;
+        global $DigitalProspects_main_document_root;
+        global $DigitalProspects_main_data_root_alt;
+        global $DigitalProspects_main_document_root_alt;
+        global $DigitalProspects_main_db_host;
+        global $DigitalProspects_main_db_port;
+        global $DigitalProspects_main_db_type;
+        global $DigitalProspects_main_db_prefix;
 
         $testtodo=0;
 
         // Case 1:
-        // Test for subdir dolibarrnew (that point to htdocs) in root directory /var/www
-        // URL: http://localhost/dolibarrnew/admin/system/phpinfo.php
+        // Test for subdir DigitalProspectsnew (that point to htdocs) in root directory /var/www
+        // URL: http://localhost/DigitalProspectsnew/admin/system/phpinfo.php
         // To prepare this test:
-        // - Create link from htdocs to /var/www/dolibarrnew
-        // - Put into conf.php $dolibarr_main_document_root='/var/www/dolibarrnew';
+        // - Create link from htdocs to /var/www/DigitalProspectsnew
+        // - Put into conf.php $DigitalProspects_main_document_root='/var/www/DigitalProspectsnew';
         if ($testtodo == 1) {
             $_SERVER["HTTPS"]='';
             $_SERVER["SERVER_NAME"]='localhost';
             $_SERVER["SERVER_PORT"]='80';
             $_SERVER["DOCUMENT_ROOT"]='/var/www';
-            $_SERVER["SCRIPT_NAME"]='/dolibarrnew/admin/system/phpinfo.php';
-            $expectedresult='/dolibarrnew';
+            $_SERVER["SCRIPT_NAME"]='/DigitalProspectsnew/admin/system/phpinfo.php';
+            $expectedresult='/DigitalProspectsnew';
         }
 
         // Case 2:
-        // Test for subdir aaa (that point to dolibarr) in root directory /var/www
+        // Test for subdir aaa (that point to DigitalProspects) in root directory /var/www
         // URL: http://localhost/aaa/htdocs/admin/system/phpinfo.php
         // To prepare this test:
-        // - Create link from dolibarr to /var/www/aaa
-        // - Put into conf.php $dolibarr_main_document_root='/var/www/aaa/htdocs';
+        // - Create link from DigitalProspects to /var/www/aaa
+        // - Put into conf.php $DigitalProspects_main_document_root='/var/www/aaa/htdocs';
         if ($testtodo == 2) {
             $_SERVER["HTTPS"]='';
             $_SERVER["SERVER_NAME"]='localhost';
@@ -180,48 +180,48 @@ class CoreTest extends PHPUnit\Framework\TestCase
         }
 
         // Case 3:
-        // Test for virtual host localhostdolibarrnew that point to htdocs directory with
+        // Test for virtual host localhostDigitalProspectsnew that point to htdocs directory with
         // a direct document root
-        // URL: http://localhostdolibarrnew/admin/system/phpinfo.php
+        // URL: http://localhostDigitalProspectsnew/admin/system/phpinfo.php
         // To prepare this test:
-        // - Create virtual host localhostdolibarrnew that point to /home/ldestailleur/git/dolibarr/htdocs
-        // - Put into conf.php $dolibarr_main_document_root='/home/ldestailleur/git/dolibarr/htdocs';
+        // - Create virtual host localhostDigitalProspectsnew that point to /home/ldestailleur/git/DigitalProspects/htdocs
+        // - Put into conf.php $DigitalProspects_main_document_root='/home/ldestailleur/git/DigitalProspects/htdocs';
         if ($testtodo == 3) {
             $_SERVER["HTTPS"]='';
-            $_SERVER["SERVER_NAME"]='localhostdolibarrnew';
+            $_SERVER["SERVER_NAME"]='localhostDigitalProspectsnew';
             $_SERVER["SERVER_PORT"]='80';
-            $_SERVER["DOCUMENT_ROOT"]='/home/ldestailleur/git/dolibarr/htdocs';
+            $_SERVER["DOCUMENT_ROOT"]='/home/ldestailleur/git/DigitalProspects/htdocs';
             $_SERVER["SCRIPT_NAME"]='/admin/system/phpinfo.php';
             $expectedresult='';
         }
 
         // Case 4:
-        // Test for virtual host localhostdolibarrnew that point to htdocs directory with
+        // Test for virtual host localhostDigitalProspectsnew that point to htdocs directory with
         // a symbolic link
-        // URL: http://localhostdolibarrnew/admin/system/phpinfo.php
+        // URL: http://localhostDigitalProspectsnew/admin/system/phpinfo.php
         if ($testtodo == 4) {
             $_SERVER["HTTPS"]='';
-            $_SERVER["SERVER_NAME"]='localhostdolibarrnew';
+            $_SERVER["SERVER_NAME"]='localhostDigitalProspectsnew';
             $_SERVER["SERVER_PORT"]='80';
-            $_SERVER["DOCUMENT_ROOT"]='/var/www/dolibarr';	// This is a link that point to /home/ldestail/workspace/dolibarr/htdocs
+            $_SERVER["DOCUMENT_ROOT"]='/var/www/DigitalProspects';	// This is a link that point to /home/ldestail/workspace/DigitalProspects/htdocs
             $_SERVER["SCRIPT_NAME"]='/admin/system/phpinfo.php';
             $expectedresult='';
         }
 
         // Case 5:
-        // Test for alias /dolibarralias, Test when using nginx, Test when using lighttpd
-        // URL: http://localhost/dolibarralias/admin/system/phpinfo.php
+        // Test for alias /DigitalProspectsalias, Test when using nginx, Test when using lighttpd
+        // URL: http://localhost/DigitalProspectsalias/admin/system/phpinfo.php
         // To prepare this test:
-        // - Copy content of dolibarr project into /var/www/dolibarr
-        // - Put into conf.php $dolibarr_main_document_root='/var/www/dolibarr/htdocs';
-        // - Put into conf.php $dolibarr_main_url_root='http://localhost/dolibarralias';  (because autodetect will fails in this case)
+        // - Copy content of DigitalProspects project into /var/www/DigitalProspects
+        // - Put into conf.php $DigitalProspects_main_document_root='/var/www/DigitalProspects/htdocs';
+        // - Put into conf.php $DigitalProspects_main_url_root='http://localhost/DigitalProspectsalias';  (because autodetect will fails in this case)
         if ($testtodo == 5) {
             $_SERVER["HTTPS"]='';
             $_SERVER["SERVER_NAME"]='localhost';
             $_SERVER["SERVER_PORT"]='80';
             $_SERVER["DOCUMENT_ROOT"]='/var/www';
-            $_SERVER["SCRIPT_NAME"]='/dolibarralias/admin/system/phpinfo.php';
-            $expectedresult='/dolibarralias';
+            $_SERVER["SCRIPT_NAME"]='/DigitalProspectsalias/admin/system/phpinfo.php';
+            $expectedresult='/DigitalProspectsalias';
         }
 
         // Force to rerun filefunc.inc.php
@@ -245,17 +245,17 @@ class CoreTest extends PHPUnit\Framework\TestCase
      */
     public function testSqlAndScriptInject()
     {
-        global $dolibarr_main_prod;
+        global $DigitalProspects_main_prod;
 
-        global $dolibarr_main_url_root;
-        global $dolibarr_main_data_root;
-        global $dolibarr_main_document_root;
-        global $dolibarr_main_data_root_alt;
-        global $dolibarr_main_document_root_alt;
-        global $dolibarr_main_db_host;
-        global $dolibarr_main_db_port;
-        global $dolibarr_main_db_type;
-        global $dolibarr_main_db_prefix;
+        global $DigitalProspects_main_url_root;
+        global $DigitalProspects_main_data_root;
+        global $DigitalProspects_main_document_root;
+        global $DigitalProspects_main_data_root_alt;
+        global $DigitalProspects_main_document_root_alt;
+        global $DigitalProspects_main_db_host;
+        global $DigitalProspects_main_db_port;
+        global $DigitalProspects_main_db_type;
+        global $DigitalProspects_main_db_prefix;
 
 
         // This is code copied from main.inc.php !!!!!!!!!!!!!!!

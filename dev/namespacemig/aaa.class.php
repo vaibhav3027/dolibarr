@@ -1,6 +1,6 @@
 <?php
 
-namespace Dolibarr;
+namespace DigitalProspects;
 
 global $globalaaa;
 $globalaaa = 'globalaaa';

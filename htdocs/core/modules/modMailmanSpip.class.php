@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module de click to Dial
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Click to Dial
  */
-class modMailmanSpip extends DolibarrModules
+class modMailmanSpip extends DigitalProspectsModules
 {
 
 	/**
@@ -52,8 +52,8 @@ class modMailmanSpip extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Mailman or Spip interface for member module";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or 'dolibarr_deprecated' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or 'DigitalProspects_deprecated' or version
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'technic';

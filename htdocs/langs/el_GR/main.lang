@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Δεν υπάρχει αίτημα στο Σφάλμα
 ErrorServiceUnavailableTryLater=Η υπηρεσία δεν είναι διαθέσιμη προς το παρόν. Δοκιμάστε ξανά αργότερα. 
 ErrorDuplicateField=Διπλόεγγραφή (Διπλή τιμή σε πεδίο με ξεχωριστές τιμές)
 ErrorSomeErrorWereFoundRollbackIsDone=Εντοπίστηκαν ορισμένες σφάλματα. Οι αλλαγές έχουν επανέλθει.
-ErrorConfigParameterNotDefined=Η παράμετρος <b>%s</b> δεν έχει οριστεί στο αρχείο ρυθμίσεων <b>Dolibarr conf.php</b> .
-ErrorCantLoadUserFromDolibarrDatabase=Αποτυχία εύρεσης του χρήστη <b>%s</b> στην βάση δεδομένων του Dolibarr.
+ErrorConfigParameterNotDefined=Η παράμετρος <b>%s</b> δεν έχει οριστεί στο αρχείο ρυθμίσεων <b>DigitalProspects conf.php</b> .
+ErrorCantLoadUserFromDigitalProspectsDatabase=Αποτυχία εύρεσης του χρήστη <b>%s</b> στην βάση δεδομένων του DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Σφάλμα, δεν ορίστηκαν ποσοστά φόρων για την χώρα  '%s'.
 ErrorNoSocialContributionForSellerCountry=Σφάλμα, καμία κοινωνική εισφορά / φόροι ορίζονται για τη χώρα '%s'.
 ErrorFailedToSaveFile=Σφάλμα, αποτυχία αποθήκευσης αρχείου
@@ -90,7 +90,7 @@ RecordDeleted=Η εγγραφή διγραφηκε
 RecordGenerated=Η εγγραφή δημιουργήθηκε
 LevelOfFeature=Επίπεδο δυνατοτήτων
 NotDefined=Αδιευκρίνιστο
-DolibarrInHttpAuthenticationSoPasswordUseless=Η λειτουργία ελέγχου ταυτότητας <b>Dolibarr</b> έχει οριστεί σε <b>%s</b> στο αρχείο ρυθμίσεων <b>conf.php</b> . <br> Αυτό σημαίνει ότι η βάση δεδομένων κωδικών πρόσβασης είναι εκτός του Dolibarr, επομένως η αλλαγή αυτού του πεδίου ενδέχεται να μην έχει αποτέλεσμα.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=Η λειτουργία ελέγχου ταυτότητας <b>DigitalProspects</b> έχει οριστεί σε <b>%s</b> στο αρχείο ρυθμίσεων <b>conf.php</b> . <br> Αυτό σημαίνει ότι η βάση δεδομένων κωδικών πρόσβασης είναι εκτός του DigitalProspects, επομένως η αλλαγή αυτού του πεδίου ενδέχεται να μην έχει αποτέλεσμα.
 Administrator=Διαχειριστής
 Undefined=Ακαθόριστο
 PasswordForgotten=Έχετε ξεχάσει τον κωδικό πρόσβασής σας;
@@ -108,16 +108,16 @@ DatabaseTypeManager=Τύπος διαχειριστή βάσης δεδομέν�
 RequestLastAccessInError=Σφάλμα στην αίτηση πρόσβασης της τελευταία βάσης δεδομένων
 ReturnCodeLastAccessInError=Επιστρεφόμενος κωδικός για το σφάλμα στην αίτηση πρόσβασης της τελευταίας βάση δεδομένων
 InformationLastAccessInError=Πληροφορίες για το σφάλμα στην αίτηση πρόσβασης της τελευταίας βάση δεδομένων
-DolibarrHasDetectedError=Το Dolibarr ανίχνευσε τεχνικό σφάλμα
-YouCanSetOptionDolibarrMainProdToZero=Μπορείτε να διαβάσετε το αρχείο καταγραφής ή να ορίσετε την επιλογή $ dolibarr_main_prod στο &#39;0&#39; στο αρχείο ρυθμίσεων για να λάβετε περισσότερες πληροφορίες.
-InformationToHelpDiagnose=Αυτές οι πληροφορίες μπορούν να είναι χρήσιμες για διαγνωστικούς σκοπούς (μπορείτε να ορίσετε την επιλογή $ dolibarr_main_prod σε &#39;1&#39; για να καταργήσετε αυτές τις ειδοποιήσεις)
+DigitalProspectsHasDetectedError=Το DigitalProspects ανίχνευσε τεχνικό σφάλμα
+YouCanSetOptionDigitalProspectsMainProdToZero=Μπορείτε να διαβάσετε το αρχείο καταγραφής ή να ορίσετε την επιλογή $ DigitalProspects_main_prod στο &#39;0&#39; στο αρχείο ρυθμίσεων για να λάβετε περισσότερες πληροφορίες.
+InformationToHelpDiagnose=Αυτές οι πληροφορίες μπορούν να είναι χρήσιμες για διαγνωστικούς σκοπούς (μπορείτε να ορίσετε την επιλογή $ DigitalProspects_main_prod σε &#39;1&#39; για να καταργήσετε αυτές τις ειδοποιήσεις)
 MoreInformation=Περισσότερς Πληροφορίες
 TechnicalInformation=Τεχνικές πληροφορίες
 TechnicalID=Τεχνική ταυτότητα ID
 LineID=Αναγνωριστικό γραμμής
 NotePublic=Σημειώσεις (δημόσιες)
 NotePrivate=Σημειώσεις (προσωπικές)
-PrecisionUnitIsLimitedToXDecimals=Το Dolibarr ρυθμίστηκε να περιορίζει την ακρίβεια των τιμών σε <b>%s</b> δεκαδικά ψηφία.
+PrecisionUnitIsLimitedToXDecimals=Το DigitalProspects ρυθμίστηκε να περιορίζει την ακρίβεια των τιμών σε <b>%s</b> δεκαδικά ψηφία.
 DoTest=Δοκιμή
 ToFilter=Φίλτρο
 NoFilter=Χωρίς φίλτρο
@@ -475,8 +475,8 @@ Generate=Δημιουργία
 Duration=Διάρκεια
 TotalDuration=Συνολική Διάρκεια
 Summary=Σύνοψη
-DolibarrStateBoard=Στατιστικά στοιχεία βάσης δεδομένων
-DolibarrWorkBoard=Άνοιγμα αντικειμένων
+DigitalProspectsStateBoard=Στατιστικά στοιχεία βάσης δεδομένων
+DigitalProspectsWorkBoard=Άνοιγμα αντικειμένων
 NoOpenedElementToProcess=Δεν υπάρχει ανοιχτό στοιχείο για επεξεργασία
 Available=Σε διάθεση
 NotYetAvailable=Δεν είναι ακόμη σε διάθεση
@@ -703,7 +703,7 @@ MenuECM=Έγγραφα
 MenuAWStats=AWStats
 MenuMembers=Μέλη
 MenuAgendaGoogle=Ημερολόγιο Google
-ThisLimitIsDefinedInSetup=Όριο Dolibarr (Μενού Ρυθμίσεις-Ασφάλεια): %s Kb, Όριο PHP: %s Kb
+ThisLimitIsDefinedInSetup=Όριο DigitalProspects (Μενού Ρυθμίσεις-Ασφάλεια): %s Kb, Όριο PHP: %s Kb
 NoFileFound=Δεν υπάρχουν έγγραφα σε αυτόν τον φάκελο
 CurrentUserLanguage=Τρέχουσα Γλώσσα
 CurrentTheme=Τρέχων Θέμα
@@ -736,7 +736,7 @@ PrintContentArea=Εμγάνιση σελίδας για εκτύπωση
 MenuManager=Menu manager
 WarningYouAreInMaintenanceMode=Προσοχή, βρίσκεστε σε λειτουργία συντήρησης: επιτρέπεται μόνο η σύνδεση <b>%s</b> να χρησιμοποιεί την εφαρμογή σε αυτή τη λειτουργία.
 CoreErrorTitle=Σφάλμα συστήματος
-CoreErrorMessage=Λυπούμαστε, παρουσιάστηκε ένα σφάλμα. Επικοινωνήστε με το διαχειριστή του συστήματος σας για να ελέγξετε τα αρχεία καταγραφής ή να απενεργοποιήστε το $ dolibarr_main_prod = 1 για να πάρετε περισσότερες πληροφορίες.
+CoreErrorMessage=Λυπούμαστε, παρουσιάστηκε ένα σφάλμα. Επικοινωνήστε με το διαχειριστή του συστήματος σας για να ελέγξετε τα αρχεία καταγραφής ή να απενεργοποιήστε το $ DigitalProspects_main_prod = 1 για να πάρετε περισσότερες πληροφορίες.
 CreditCard=Πιστωτική Κάρτα
 ValidatePayment=Επικύρωση πληρωμής
 CreditOrDebitCard=Πιστωτική ή χρεωστική κάρτα
@@ -875,7 +875,7 @@ Calendar=Ημερολόγιο
 GroupBy=Ομαδοποίηση κατά...
 ViewFlatList=Προβολή λίστας
 RemoveString=Αφαιρέστε τη συμβολοσειρά &#39;%s&#39;
-SomeTranslationAreUncomplete=Ορισμένες από τις γλώσσες που προσφέρονται μπορούν να μεταφραστούν μόνο μερικώς ή ενδέχεται να περιέχουν σφάλματα. Βοηθήστε να διορθώσετε τη γλώσσα σας, εγγραφείτε στη <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">διεύθυνση https://transifex.com/projects/p/dolibarr/</a> για να προσθέσετε τις βελτιώσεις σας.
+SomeTranslationAreUncomplete=Ορισμένες από τις γλώσσες που προσφέρονται μπορούν να μεταφραστούν μόνο μερικώς ή ενδέχεται να περιέχουν σφάλματα. Βοηθήστε να διορθώσετε τη γλώσσα σας, εγγραφείτε στη <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">διεύθυνση https://transifex.com/projects/p/DigitalProspects/</a> για να προσθέσετε τις βελτιώσεις σας.
 DirectDownloadLink=Άμεση σύνδεση λήψης (δημόσια / εξωτερική)
 DirectDownloadInternalLink=Άμεση σύνδεση λήψης (πρέπει να καταγράφονται και να χρειάζονται δικαιώματα)
 Download=Κατεβάστε

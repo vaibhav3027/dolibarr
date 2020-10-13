@@ -51,10 +51,10 @@ class doc_generic_contract_odt extends ModelePDFContract
 	public $phpmin = array(5, 5);
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

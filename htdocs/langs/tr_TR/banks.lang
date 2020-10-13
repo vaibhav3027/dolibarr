@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banka
 MenuBankCash=Banka | Kasa
 MenuVariousPayment=Çeşitli ödemeler
@@ -109,7 +109,7 @@ SocialContributionPayment=Sosyal/mali vergi ödemesi
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=İç transfer
-TransferDesc=Bir hesaptan başka bir hesaba transfer sırasında Dolibarr iki kayıt yazacaktır (kaynak hesaba borç ve hedef hesaba kredi). Bu işlem için aynı tutar (işaret hariç), etiket ve tarih kullanılacaktır.
+TransferDesc=Bir hesaptan başka bir hesaba transfer sırasında DigitalProspects iki kayıt yazacaktır (kaynak hesaba borç ve hedef hesaba kredi). Bu işlem için aynı tutar (işaret hariç), etiket ve tarih kullanılacaktır.
 TransferFrom=Kimden
 TransferTo=Kime
 TransferFromToDone=<b>%s</b> den <b>%s</b> nin <b>%s</b> %s ne bir transfer kaydedildi.

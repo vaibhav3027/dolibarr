@@ -1046,7 +1046,7 @@ if ($action == 'create')
 		print $form->textwithpicto($langs->trans('NotePublic'), $htmltext, 1, 'help', '', 0, 2, 'notepublic');
 		print '</td>';
 		print '<td>';
-		$doleditor = new DolEditor('note_public', $note_public, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+		$doleditor = new DolEditor('note_public', $note_public, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 		print $doleditor->Create(1);
 
 		// Private note
@@ -1057,7 +1057,7 @@ if ($action == 'create')
 			print $form->textwithpicto($langs->trans('NotePrivate'), $htmltext, 1, 'help', '', 0, 2, 'noteprivate');
 			print '</td>';
 			print '<td>';
-			$doleditor = new DolEditor('note_private', $note_private, '', 80, 'dolibarr_notes', 'In', 0, false, true, ROWS_3, '90%');
+			$doleditor = new DolEditor('note_private', $note_private, '', 80, 'DigitalProspects_notes', 'In', 0, false, true, ROWS_3, '90%');
 			print $doleditor->Create(1);
 			// print '<textarea name="note_private" wrap="soft" cols="70" rows="'.ROWS_3.'">'.$note_private.'.</textarea>
 			print '</td></tr>';

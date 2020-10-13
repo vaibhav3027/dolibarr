@@ -20,13 +20,13 @@
 // This file initializes more variables to already initialized variables with main.inc.php
 // So include of this file must be always done after include to main.inc.php
 
-$conf_db_type = $dolibarr_main_db_type;
+$conf_db_type = $DigitalProspects_main_db_type;
 
 // Parametres de connexion a la base
-$conf_db_host = $dolibarr_main_db_host;
-$conf_db_user = $dolibarr_main_db_user;
-$conf_db_pass = $dolibarr_main_db_pass;
-$conf_db_base = $dolibarr_main_db_name;
+$conf_db_host = $DigitalProspects_main_db_host;
+$conf_db_user = $DigitalProspects_main_db_user;
+$conf_db_pass = $DigitalProspects_main_db_pass;
+$conf_db_base = $DigitalProspects_main_db_name;
 
 // Identifiant unique correspondant au tiers generique pour la vente
 $conf_fksoc = (!empty($_SESSION["CASHDESK_ID_THIRDPARTY"])) ? $_SESSION["CASHDESK_ID_THIRDPARTY"] : ($conf->global->CASHDESK_ID_THIRDPARTY > 0 ? $conf->global->CASHDESK_ID_THIRDPARTY : 0);

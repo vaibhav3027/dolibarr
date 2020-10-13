@@ -82,11 +82,11 @@ if ($action == 'update')
 
     if (!$error)
     {
-        dolibarr_set_const($db, $mainmaxdecimalsunit, $valmainmaxdecimalsunit, 'chaine', 0, '', $conf->entity);
-        dolibarr_set_const($db, $mainmaxdecimalstot, $valmainmaxdecimalstot, 'chaine', 0, '', $conf->entity);
-        dolibarr_set_const($db, $mainmaxdecimalsshown, $valmainmaxdecimalsshown, 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, $mainmaxdecimalsunit, $valmainmaxdecimalsunit, 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, $mainmaxdecimalstot, $valmainmaxdecimalstot, 'chaine', 0, '', $conf->entity);
+        DigitalProspects_set_const($db, $mainmaxdecimalsshown, $valmainmaxdecimalsshown, 'chaine', 0, '', $conf->entity);
 
-    	dolibarr_set_const($db, $mainroundingruletot, $valmainroundingruletot, 'chaine', 0, '', $conf->entity);
+    	DigitalProspects_set_const($db, $mainroundingruletot, $valmainroundingruletot, 'chaine', 0, '', $conf->entity);
 
         header("Location: ".$_SERVER["PHP_SELF"]."?mainmenu=home&leftmenu=setup".(!empty($currencycode) ? '&currencycode='.$currencycode : ''));
         exit;

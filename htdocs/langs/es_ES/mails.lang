@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 Mailing=E-Mailing
 EMailing=E-Mailing
 EMailings=E-Mailings
@@ -89,7 +89,7 @@ MailingModuleDescContactsByCategory=Contactos por categoría
 MailingModuleDescContactsByFunction=Contactos por posición
 MailingModuleDescEmailsFromFile=E-mails de archivo
 MailingModuleDescEmailsFromUser=E-mails enviados por usuario
-MailingModuleDescDolibarrUsers=Usuarios con e-mails
+MailingModuleDescDigitalProspectsUsers=Usuarios con e-mails
 MailingModuleDescThirdPartiesByCategories=Terceros (por categoría)
 SendingFromWebInterfaceIsNotAllowed=El envío desde la interfaz web no está permitido.
 

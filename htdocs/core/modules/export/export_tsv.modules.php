@@ -43,10 +43,10 @@ class ExportTsv extends ModeleExports
     public $extension;
 
     /**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
     public $label_lib;
 
@@ -75,7 +75,7 @@ class ExportTsv extends ModeleExports
         $this->version = '1.15'; // Driver version
 
         // If driver use an external library, put its name here
-        $this->label_lib = 'Dolibarr';
+        $this->label_lib = 'DigitalProspects';
         $this->version_lib = DOL_VERSION;
     }
 
@@ -299,7 +299,7 @@ class ExportTsv extends ModeleExports
     public function tsv_clean($newvalue, $charset)
     {
         // phpcs:enable
-        // Rule Dolibarr: No HTML
+        // Rule DigitalProspects: No HTML
         $newvalue = dol_string_nohtmltag($newvalue, 1, $charset);
 
         // Rule 1 TSV: No CR, LF in cells

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - other
+# DigitalProspects language file - Source file is en_US - other
 SecurityCode=Защитен код
 NumberingShort=№
 Tools=Инструменти
@@ -101,7 +101,7 @@ PredefinedMailContentThirdparty=__(Здравейте)__,\n\n\n__(Поздрав
 PredefinedMailContentContact=__(Здравейте)__,\n\n\n__(Поздрави)__,\n\n__USER_SIGNATURE__
 PredefinedMailContentUser=__(Здравейте)__,\n\n\n__(Поздрави)__,\n\n__USER_SIGNATURE__
 PredefinedMailContentLink=Може да кликнете върху връзката по-долу, за да направите плащане, в случай, че не сте го извършили.\n\n%s\n\n
-DemoDesc=Dolibarr е компактна ERP / CRM система, която поддържа различни работни модули. Няма смисъл от демонстрация, показваща всички модули, тъй като такъв сценарий никога не се случва (на разположение са стотици модули). Налични са няколко демо профила.
+DemoDesc=DigitalProspects е компактна ERP / CRM система, която поддържа различни работни модули. Няма смисъл от демонстрация, показваща всички модули, тъй като такъв сценарий никога не се случва (на разположение са стотици модули). Налични са няколко демо профила.
 ChooseYourDemoProfil=Изберете демо профила, който най-добре отговаря на вашите нужди...
 ChooseYourDemoProfilMore=...или създайте свой собствен профил<br>(свободен избор на модули)
 DemoFundation=Управление на членове в организация
@@ -180,7 +180,7 @@ BackToLoginPage=Назад към страницата за вход
 AuthenticationDoesNotAllowSendNewPassword=Режимът за удостоверяване е <b>%s</b>.<br> В този режим, системата не може да знае, нито да промени паролата ви.<br> Свържете се с вашият системен администратор, ако искате да промените паролата си.
 EnableGDLibraryDesc=Инсталирайте или активирайте GD библиотеката на вашата PHP инсталация, за да използвате тази опция.
 ProfIdShortDesc=<b>Идент. %s</b> е информация, която зависи от държавата на контрагента.<br>Например, за държавата <b>%s</b>, това е <b>%s</b>.
-DolibarrDemo=Dolibarr ERP / CRM демо
+DigitalProspectsDemo=DigitalProspects ERP / CRM демо
 StatsByNumberOfUnits=Статистика за общото количество продукти / услуги
 StatsByNumberOfEntities=Статистика за броя на свързаните документи (брой фактури, поръчки...)
 NumberOfProposals=Брой търговски предложения
@@ -217,7 +217,7 @@ EMailTextExpenseReportApproved=Разходен отчет %s е одобрен.
 EMailTextHolidayValidated=Молба за отпуск %s е валидирана.
 EMailTextHolidayApproved=Молба за отпуск %s е одобрена.
 ImportedWithSet=Набор от данни за импортиране
-DolibarrNotification=Автоматично известяване
+DigitalProspectsNotification=Автоматично известяване
 ResizeDesc=Въведете нова ширина <b>или</b> нова височина. Съотношението ще се запази по време преоразмеряването...
 NewLength=Нова ширина
 NewHeight=Нова височина

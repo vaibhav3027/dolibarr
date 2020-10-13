@@ -970,7 +970,7 @@ if (count($listofextcals))
                         // Test to avoid infinite loop ($datecurstart must increase)
                         if ($savdatecurstart >= $datecurstart)
                         {
-                            dol_syslog("Found a rule freq ".$icalevent['RRULE']['FREQ']." not managed by dolibarr code. Assume 1 week frequency.", LOG_ERR);
+                            dol_syslog("Found a rule freq ".$icalevent['RRULE']['FREQ']." not managed by DigitalProspects code. Assume 1 week frequency.", LOG_ERR);
                             $datecurstart += 3600 * 24 * 7;
                             $datecurend += 3600 * 24 * 7;
                         }

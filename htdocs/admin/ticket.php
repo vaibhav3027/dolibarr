@@ -53,7 +53,7 @@ if ($action == 'updateMask') {
 	$maskticket = GETPOST('maskticket', 'alpha');
 
 	if ($maskconstticket) {
-		$res = dolibarr_set_const($db, $maskconstticket, $maskticket, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, $maskconstticket, $maskticket, 'chaine', 0, '', $conf->entity);
 	}
 
 	if (!$res > 0) {
@@ -72,15 +72,15 @@ if ($action == 'updateMask') {
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "TICKET_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "TICKET_ADDON", $value, 'chaine', 0, '', $conf->entity);
 } elseif ($action == 'setvar') {
 	include_once DOL_DOCUMENT_ROOT."/core/lib/files.lib.php";
 
 	$notification_email = GETPOST('TICKET_NOTIFICATION_EMAIL_FROM', 'alpha');
 	if (!empty($notification_email)) {
-		$res = dolibarr_set_const($db, 'TICKET_NOTIFICATION_EMAIL_FROM', $notification_email, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_NOTIFICATION_EMAIL_FROM', $notification_email, 'chaine', 0, '', $conf->entity);
 	} else {
-		$res = dolibarr_set_const($db, 'TICKET_NOTIFICATION_EMAIL_FROM', '', 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_NOTIFICATION_EMAIL_FROM', '', 'chaine', 0, '', $conf->entity);
 	}
 	if (!$res > 0) {
 		$error++;
@@ -89,9 +89,9 @@ if ($action == 'updateMask') {
 	// altairis : differentiate notification email FROM and TO
 	$notification_email_to = GETPOST('TICKET_NOTIFICATION_EMAIL_TO', 'alpha');
 	if (!empty($notification_email_to)) {
-		$res = dolibarr_set_const($db, 'TICKET_NOTIFICATION_EMAIL_TO', $notification_email_to, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_NOTIFICATION_EMAIL_TO', $notification_email_to, 'chaine', 0, '', $conf->entity);
 	} else {
-		$res = dolibarr_set_const($db, 'TICKET_NOTIFICATION_EMAIL_TO', '', 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_NOTIFICATION_EMAIL_TO', '', 'chaine', 0, '', $conf->entity);
 	}
 	if (!$res > 0) {
 		$error++;
@@ -99,9 +99,9 @@ if ($action == 'updateMask') {
 
 	$mail_intro = GETPOST('TICKET_MESSAGE_MAIL_INTRO', 'restricthtml');
 	if (!empty($mail_intro)) {
-		$res = dolibarr_set_const($db, 'TICKET_MESSAGE_MAIL_INTRO', $mail_intro, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_MESSAGE_MAIL_INTRO', $mail_intro, 'chaine', 0, '', $conf->entity);
 	} else {
-		$res = dolibarr_set_const($db, 'TICKET_MESSAGE_MAIL_INTRO', $langs->trans('TicketMessageMailIntroText'), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_MESSAGE_MAIL_INTRO', $langs->trans('TicketMessageMailIntroText'), 'chaine', 0, '', $conf->entity);
 	}
 	if (!$res > 0) {
 		$error++;
@@ -109,9 +109,9 @@ if ($action == 'updateMask') {
 
 	$mail_signature = GETPOST('TICKET_MESSAGE_MAIL_SIGNATURE', 'restricthtml');
 	if (!empty($mail_signature)) {
-		$res = dolibarr_set_const($db, 'TICKET_MESSAGE_MAIL_SIGNATURE', $mail_signature, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_MESSAGE_MAIL_SIGNATURE', $mail_signature, 'chaine', 0, '', $conf->entity);
 	} else {
-		$res = dolibarr_set_const($db, 'TICKET_MESSAGE_MAIL_SIGNATURE', $langs->trans('TicketMessageMailSignatureText'), 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_MESSAGE_MAIL_SIGNATURE', $langs->trans('TicketMessageMailSignatureText'), 'chaine', 0, '', $conf->entity);
 	}
 	if (!$res > 0) {
 		$error++;
@@ -120,13 +120,13 @@ if ($action == 'updateMask') {
 
 if ($action == 'setvarother') {
 	$param_must_exists = GETPOST('TICKET_EMAIL_MUST_EXISTS', 'alpha');
-	$res = dolibarr_set_const($db, 'TICKET_EMAIL_MUST_EXISTS', $param_must_exists, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TICKET_EMAIL_MUST_EXISTS', $param_must_exists, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) {
 		$error++;
 	}
 
 	$param_disable_email = GETPOST('TICKET_DISABLE_NOTIFICATION_MAILS', 'alpha');
-	$res = dolibarr_set_const($db, 'TICKET_DISABLE_NOTIFICATION_MAILS', $param_disable_email, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TICKET_DISABLE_NOTIFICATION_MAILS', $param_disable_email, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) {
 		$error++;
 	}
@@ -134,7 +134,7 @@ if ($action == 'setvarother') {
 	if ($conf->global->MAIN_FEATURES_LEVEL >= 2)
 	{
 		$param_show_module_logo = GETPOST('TICKET_SHOW_MODULE_LOGO', 'alpha');
-		$res = dolibarr_set_const($db, 'TICKET_SHOW_MODULE_LOGO', $param_show_module_logo, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_SHOW_MODULE_LOGO', $param_show_module_logo, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) {
 			$error++;
 		}
@@ -143,20 +143,20 @@ if ($action == 'setvarother') {
 	if ($conf->global->MAIN_FEATURES_LEVEL >= 2)
 	{
 		$param_notification_also_main_addressemail = GETPOST('TICKET_NOTIFICATION_ALSO_MAIN_ADDRESS', 'alpha');
-		$res = dolibarr_set_const($db, 'TICKET_NOTIFICATION_ALSO_MAIN_ADDRESS', $param_notification_also_main_addressemail, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, 'TICKET_NOTIFICATION_ALSO_MAIN_ADDRESS', $param_notification_also_main_addressemail, 'chaine', 0, '', $conf->entity);
 		if (!$res > 0) {
 			$error++;
 		}
 	}
 
 	$param_limit_view = GETPOST('TICKET_LIMIT_VIEW_ASSIGNED_ONLY', 'alpha');
-	$res = dolibarr_set_const($db, 'TICKET_LIMIT_VIEW_ASSIGNED_ONLY', $param_limit_view, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TICKET_LIMIT_VIEW_ASSIGNED_ONLY', $param_limit_view, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) {
 		$error++;
 	}
 
 	$param_auto_assign = GETPOST('TICKET_AUTO_ASSIGN_USER_CREATE', 'alpha');
-	$res = dolibarr_set_const($db, 'TICKET_AUTO_ASSIGN_USER_CREATE', $param_auto_assign, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TICKET_AUTO_ASSIGN_USER_CREATE', $param_auto_assign, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) {
 		$error++;
 	}
@@ -390,7 +390,7 @@ $mail_intro = $conf->global->TICKET_MESSAGE_MAIL_INTRO ? $conf->global->TICKET_M
 print '<tr class="oddeven"><td>'.$langs->trans("TicketMessageMailIntroLabelAdmin").' ('.$langs->trans("Responses").')';
 print '</td><td>';
 require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-$doleditor = new DolEditor('TICKET_MESSAGE_MAIL_INTRO', $mail_intro, '100%', 120, 'dolibarr_mailings', '', false, true, $conf->global->FCKEDITOR_ENABLE_MAIL, ROWS_2, 70);
+$doleditor = new DolEditor('TICKET_MESSAGE_MAIL_INTRO', $mail_intro, '100%', 120, 'DigitalProspects_mailings', '', false, true, $conf->global->FCKEDITOR_ENABLE_MAIL, ROWS_2, 70);
 $doleditor->Create();
 print '</td>';
 print '<td class="center">';
@@ -402,7 +402,7 @@ $mail_signature = $conf->global->TICKET_MESSAGE_MAIL_SIGNATURE ? $conf->global->
 print '<tr class="oddeven"><td>'.$langs->trans("TicketMessageMailSignatureLabelAdmin").'</label>';
 print '</td><td>';
 require_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-$doleditor = new DolEditor('TICKET_MESSAGE_MAIL_SIGNATURE', $mail_signature, '100%', 120, 'dolibarr_mailings', '', false, true, $conf->global->FCKEDITOR_ENABLE_MAIL, ROWS_2, 70);
+$doleditor = new DolEditor('TICKET_MESSAGE_MAIL_SIGNATURE', $mail_signature, '100%', 120, 'DigitalProspects_mailings', '', false, true, $conf->global->FCKEDITOR_ENABLE_MAIL, ROWS_2, 70);
 $doleditor->Create();
 print '</td>';
 print '<td class="center">';

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Фактура
 Bills=Фактури
 BillsCustomers=Фактури за продажба
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Задаване на начална дата
 AutoFillDateTo=Посочете крайна дата на услуга в зависимост от датата на следващата фактура
 AutoFillDateToShort=Задаване на крайна дата
 MaxNumberOfGenerationReached=Максималният брой генерирани документи е достигнат
-BILL_DELETEInDolibarr=Фактурата е изтрита
-BILL_SUPPLIER_DELETEInDolibarr=Фактурата за доставка е изтрита
+BILL_DELETEInDigitalProspects=Фактурата е изтрита
+BILL_SUPPLIER_DELETEInDigitalProspects=Фактурата за доставка е изтрита
 UnitPriceXQtyLessDiscount=Единична цена x Количество - Отстъпка
 CustomersInvoicesArea=Секция с фактури за продажба
 SupplierInvoicesArea=Секция с фактури за доставка

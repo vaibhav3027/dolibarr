@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Ref. projekt
 ProjectRef=Projekt ref.
 ProjectId=Projekt ID
@@ -150,12 +150,12 @@ ConfirmCloneProject=Jeste li sigurni da želite klonirati ovaj projekt?
 ProjectReportDate=Promijenite datume zadatka prema novom datumu početka projekta
 ErrorShiftTaskDate=Nemoguće pomaknuti datum zadatka sukladno novom početnom datumu projekta
 ProjectsAndTasksLines=Projekti i zadaci 
-ProjectCreatedInDolibarr=Projekt %s je kreiran
-ProjectValidatedInDolibarr=Projekt je potvrđen %s
-ProjectModifiedInDolibarr=Projekt je izmijenjen %s
-TaskCreatedInDolibarr=Zadatak %s kreiran
-TaskModifiedInDolibarr=Zadatak %s izmjenjen
-TaskDeletedInDolibarr=Zadatak %s obrisan
+ProjectCreatedInDigitalProspects=Projekt %s je kreiran
+ProjectValidatedInDigitalProspects=Projekt je potvrđen %s
+ProjectModifiedInDigitalProspects=Projekt je izmijenjen %s
+TaskCreatedInDigitalProspects=Zadatak %s kreiran
+TaskModifiedInDigitalProspects=Zadatak %s izmjenjen
+TaskDeletedInDigitalProspects=Zadatak %s obrisan
 OpportunityStatus=Glavni status
 OpportunityStatusShort=Glavni status
 OpportunityProbability=Glavna vjerojatnost

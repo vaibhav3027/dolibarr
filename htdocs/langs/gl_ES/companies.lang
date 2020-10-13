@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=O nome da empresa %s xa existe. Escolla outro.
 ErrorSetACountryFirst=Defina en primeiro lugar o país
 SelectThirdParty=Seleccionar un terceiro
@@ -12,7 +12,7 @@ MenuNewSupplier=Novo provedor
 MenuNewPrivateIndividual=Novo particular
 NewCompany=Nova empresa (cliente potencial, cliente, provedor)
 NewThirdParty=Novo terceiro (cliente potencial, cliente, provedor)
-CreateDolibarrThirdPartySupplier=Crear un terceiro (provedor)
+CreateDigitalProspectsThirdPartySupplier=Crear un terceiro (provedor)
 CreateThirdPartyOnly=Crear un terceiro
 CreateThirdPartyAndContact=Crear un terceiro cun contacto asociado
 ProspectionArea=Área de prospección
@@ -347,7 +347,7 @@ CapitalOf=Capital de %s
 EditCompany=Modificar empresa
 ThisUserIsNot=Este usuario non é nin un cliente potencial, nin un cliente, nin un provedor
 VATIntraCheck=Verificar
-VATIntraCheckDesc=El enlace <b>%s</b> permite consultar no servizo europeo de control de números de IVE intracomunitario (VIES). Requírese acceso a internet dende o servidor Dolibarr para o servizo.
+VATIntraCheckDesc=El enlace <b>%s</b> permite consultar no servizo europeo de control de números de IVE intracomunitario (VIES). Requírese acceso a internet dende o servidor DigitalProspects para o servizo.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Verificar o CIF/NIF intracomunitario na web da Comisión Europea
 VATIntraManualCheck=Pode tamén verificar manualmente na web da Comisión Europea <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Clientes potenciais por estado
 NoParentCompany=Ningunha
 ExportCardToFormat=Exportar ficha a formato
 ContactNotLinkedToCompany=Contacto non ligado a un terceiro
-DolibarrLogin=Login no Dolibarr
-NoDolibarrAccess=Sen acceso a Dolibarr
+DigitalProspectsLogin=Login no DigitalProspects
+NoDigitalProspectsAccess=Sen acceso a DigitalProspects
 ExportDataset_company_1=Terceiros (Empresas / fundacións / particulares) e as súas propiedades
 ExportDataset_company_2=Contactos e as súas propiedades
 ImportDataset_company_1=Terceiros e as súas propiedades

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=Intervención
 Interventions=Intervenciones
 InterventionCard=Ficha intervención
@@ -30,13 +30,13 @@ InterventionClassifyDone=Clasificar "Realizado"
 StatusInterInvoiced=Facturado
 SendInterventionRef=Envío de la intervención %s
 SendInterventionByMail=Enviar intervención por e-mail
-InterventionCreatedInDolibarr=Intervención %s creada
-InterventionValidatedInDolibarr=Intervención %s validada
-InterventionModifiedInDolibarr=Intervención %s modificada
-InterventionClassifiedBilledInDolibarr=Intervención %s clasificada como facturada
-InterventionClassifiedUnbilledInDolibarr=Intervención %s clasificada como no facturada
+InterventionCreatedInDigitalProspects=Intervención %s creada
+InterventionValidatedInDigitalProspects=Intervención %s validada
+InterventionModifiedInDigitalProspects=Intervención %s modificada
+InterventionClassifiedBilledInDigitalProspects=Intervención %s clasificada como facturada
+InterventionClassifiedUnbilledInDigitalProspects=Intervención %s clasificada como no facturada
 InterventionSentByEMail=Intervención %s enviada por e-mail
-InterventionDeletedInDolibarr=Intervención %s eliminada
+InterventionDeletedInDigitalProspects=Intervención %s eliminada
 InterventionsArea=Área intervenciones
 DraftFichinter=Intervenciones borrador
 LastModifiedInterventions=Últimas %s intervenciones modificadas

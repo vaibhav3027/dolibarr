@@ -2,12 +2,12 @@
 --------------------------------
 
 
-* Screen captures and icons are Dolibarr contributions
+* Screen captures and icons are DigitalProspects contributions
 
 
-* Most logos were created by Dolibarr developers. You may find sources of them on:
+* Most logos were created by DigitalProspects developers. You may find sources of them on:
 
-https://github.com/Dolibarr/foundation
+https://github.com/DigitalProspects/foundation
 
 
 * Few icons are / were from website led24.de 

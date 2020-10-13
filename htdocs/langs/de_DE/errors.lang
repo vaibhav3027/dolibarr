@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - errors
+# DigitalProspects language file - Source file is en_US - errors
 
 # No errors
 NoErrorCommitIsDone=Kein Fehler, Befehl wurde ausgeführt
@@ -127,8 +127,8 @@ ErrorWebServerUserHasNotPermission=Der Benutzerkonto <b>%s</b> wurde verwendet u
 ErrorNoActivatedBarcode=Kein Barcode aktiviert
 ErrUnzipFails=Fehler beim Entpacken von %s mit ZipArchive
 ErrNoZipEngine=Kein Pack/Entpackprogramm in PHP gefunden für Datei %s
-ErrorFileMustBeADolibarrPackage=Die Datei %s muss ein Dolibarr ZIP-Paket sein
-ErrorModuleFileRequired=Sie müssen eine Dolibarr Modul-Paket-Datei wählen
+ErrorFileMustBeADigitalProspectsPackage=Die Datei %s muss ein DigitalProspects ZIP-Paket sein
+ErrorModuleFileRequired=Sie müssen eine DigitalProspects Modul-Paket-Datei wählen
 ErrorPhpCurlNotInstalled=PHP CURL ist nicht installiert, aber erforderlich für Paypal
 ErrorFailedToAddToMailmanList=Fehler beim Hinzufügen von %s zur Mailman Liste %s oder SPIP basis
 ErrorFailedToRemoveToMailmanList=Fehler beim Löschen von %s von der Mailman Liste %s oder SPIP basis
@@ -139,7 +139,7 @@ ErrorFailedToAddContact=Fehler beim Hinzufügen des Kontakts
 ErrorDateMustBeBeforeToday=Das Datum kann nicht in der Zukunft sein
 ErrorPaymentModeDefinedToWithoutSetup=Eine Zahlungsart wurde auf Typ %s gesetzt, aber das Rechnungsmodul wurde noch nicht konfiguriert dies anzuzeigen.
 ErrorPHPNeedModule=Fehler, Ihr PHP muss das Modul <b>%s</b> installiert haben um diese Option zu benutzen.
-ErrorOpenIDSetupNotComplete=Sie haben im Dolibarr Konfigurationsfile eingestellt, dass die Anmeldung mit OpenID möglich ist, aber die URL zum OpenID Service ist noch nicht in %s definiert.
+ErrorOpenIDSetupNotComplete=Sie haben im DigitalProspects Konfigurationsfile eingestellt, dass die Anmeldung mit OpenID möglich ist, aber die URL zum OpenID Service ist noch nicht in %s definiert.
 ErrorWarehouseMustDiffers=Quell- und Ziel-Lager müssen unterschiedlich sein
 ErrorBadFormat=Falsches Format!
 ErrorMemberNotLinkedToAThirpartyLinkOrCreateFirst=Fehler: Dieses Mitglied ist noch nicht mit einem Partner verbunden. Verknüpfen Sie das Mitglied zuerst mit einem vorhandenen Partner oder legen Sie einen neuen an, bevor Sie ein Abonnement mit Rechnung erstellen.
@@ -202,7 +202,7 @@ ErrorUserNotAssignedToTask=Benutzer muss der Aufgabe zugeteilt sein, um Zeiten e
 ErrorTaskAlreadyAssigned=Aufgabe ist dem Benutzer bereits zugeteilt
 ErrorModuleFileSeemsToHaveAWrongFormat=Das Modul-Paket scheint ein falsches Format zu haben.
 ErrorModuleFileSeemsToHaveAWrongFormat2=Mindestens ein obligatorische Verzeichnis muss für das Packen des Moduls vorhanden sein: <strong>%s</strong> oder <strong>%s</strong>
-ErrorFilenameDosNotMatchDolibarrPackageRules=Der Name des Modul-Pakets (<strong>%s</strong>) entspricht nicht der erwarteten Syntax: <strong>%s</strong>
+ErrorFilenameDosNotMatchDigitalProspectsPackageRules=Der Name des Modul-Pakets (<strong>%s</strong>) entspricht nicht der erwarteten Syntax: <strong>%s</strong>
 ErrorDuplicateTrigger=Fehler, doppelter Triggername %s. Schon geladen durch %s.
 ErrorNoWarehouseDefined=Fehler, keine Warenlager definiert.
 ErrorBadLinkSourceSetButBadValueForRef=Der Link ist ungültig. Die Quelle für die Zahlung ist definiert, aber die Referenz ist ungültig.
@@ -241,7 +241,7 @@ ErrorTooManyDifferentValueForSelectedGroupBy=Es wurden zu viele unterschiedliche
 ErrorReplaceStringEmpty=Fehler: die zu ersetzende Zeichenfolge ist leer
 # Warnings
 WarningParamUploadMaxFileSizeHigherThanPostMaxSize=Ihr PHP Parameter upload_max_filesize (%s) ist größer als Parameter post_max_size (%s). Dies ist eine inkonsistente Einstellung.
-WarningPasswordSetWithNoAccount=Es wurde ein Passwort für dieses Mitglied vergeben, aber kein Benutzer erstellt. Das Passwort wird gespeichert, aber kann nicht für die Anmeldung an Dolibarr verwendet werden. Es kann von einem externen Modul/einer Schnittstelle verwendet werden, aber wenn Sie kein Login oder Passwort für dieses Mitglied definiert müssen, können Sie die Option "Login für jedes Mitglied verwalten" in den Mitgliedseinstellungen deaktivieren. Wenn Sie ein Login aber kein Passwort benötige, lassen Sie dieses Feld leer, um diese Meldung zu deaktivieren. Anmerkung: Die E-Mail-Adresse kann auch zur Anmeldung verwendet werden, wenn das Mitglied mit einem Benutzer verbunden wird.
+WarningPasswordSetWithNoAccount=Es wurde ein Passwort für dieses Mitglied vergeben, aber kein Benutzer erstellt. Das Passwort wird gespeichert, aber kann nicht für die Anmeldung an DigitalProspects verwendet werden. Es kann von einem externen Modul/einer Schnittstelle verwendet werden, aber wenn Sie kein Login oder Passwort für dieses Mitglied definiert müssen, können Sie die Option "Login für jedes Mitglied verwalten" in den Mitgliedseinstellungen deaktivieren. Wenn Sie ein Login aber kein Passwort benötige, lassen Sie dieses Feld leer, um diese Meldung zu deaktivieren. Anmerkung: Die E-Mail-Adresse kann auch zur Anmeldung verwendet werden, wenn das Mitglied mit einem Benutzer verbunden wird.
 WarningMandatorySetupNotComplete=Hier klicken, um obligatorische Einstellungen vorzunehmen
 WarningEnableYourModulesApplications=Hier klicken, um Module/Applikationen freizuschalten
 WarningSafeModeOnCheckExecDir=Achtung: Der PHP-Option <b>safe_mode</b> ist aktiviert, entsprechend müssen Befehle in einem mit <b>safe_mode_exec_dir</b> gekennzeichneten Verzeichnis ausgeführt werden.

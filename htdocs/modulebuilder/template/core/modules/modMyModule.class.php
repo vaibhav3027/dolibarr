@@ -26,12 +26,12 @@
  *  \ingroup    mymodule
  *  \brief      Description and activation file for module MyModule
  */
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 /**
  *  Description and activation class for module MyModule
  */
-class modMyModule extends DolibarrModules
+class modMyModule extends DigitalProspectsModules
 {
 	/**
 	 * Constructor. Define names, constants, directories, boxes, permissions
@@ -44,8 +44,8 @@ class modMyModule extends DolibarrModules
 		$this->db = $db;
 
 		// Id for module (must be unique).
-		// Use here a free id (See in Home -> System information -> Dolibarr for list of used modules id).
-		$this->numero = 500000; // TODO Go on page https://wiki.dolibarr.org/index.php/List_of_modules_id to reserve an id number for your module
+		// Use here a free id (See in Home -> System information -> DigitalProspects for list of used modules id).
+		$this->numero = 500000; // TODO Go on page https://wiki.DigitalProspects.org/index.php/List_of_modules_id to reserve an id number for your module
 		// Key text used to identify module (for permissions, menus, etc...)
 		$this->rights_class = 'mymodule';
 		// Family can be 'base' (core modules),'crm','financial','hr','projects','products','ecm','technic' (transverse modules),'interface' (link with external tools),'other','...'
@@ -63,7 +63,7 @@ class modMyModule extends DolibarrModules
 		$this->descriptionlong = "MyModule description (Long)";
 		$this->editor_name = 'Editor name';
 		$this->editor_url = 'https://www.example.com';
-		// Possible values for version are: 'development', 'experimental', 'dolibarr', 'dolibarr_deprecated' or a version string like 'x.y.z'
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects', 'DigitalProspects_deprecated' or a version string like 'x.y.z'
 		$this->version = '1.0';
 		// Url to the file with your last numberversion of this module
 		//$this->url_last_version = 'http://www.example.com/versionmodule.txt';
@@ -125,7 +125,7 @@ class modMyModule extends DolibarrModules
 		$this->conflictwith = array(); // List of module class names as string this module is in conflict with. Example: array('modModuleToDisable1', ...)
 		$this->langfiles = array("mymodule@mymodule");
 		$this->phpmin = array(5, 5); // Minimum version of PHP required by module
-		$this->need_dolibarr_version = array(11, -3); // Minimum version of Dolibarr required by module
+		$this->need_DigitalProspects_version = array(11, -3); // Minimum version of DigitalProspects required by module
 		$this->warnings_activation = array(); // Warning to show when we activate module. array('always'='text') or array('FR'='textfr','ES'='textes'...)
 		$this->warnings_activation_ext = array(); // Warning to show when we activate an external module. array('always'='text') or array('FR'='textfr','ES'='textes'...)
 		//$this->automatic_activation = array('FR'=>'MyModuleWasAutomaticallyActivatedBecauseOfYourCountryChoice');
@@ -378,7 +378,7 @@ class modMyModule extends DolibarrModules
 
 	/**
 	 *  Function called when module is enabled.
-	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *  The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *  It also creates data directories
 	 *
 	 *  @param      string  $options    Options when enabling module ('', 'noboxes')
@@ -444,7 +444,7 @@ class modMyModule extends DolibarrModules
 
 	/**
 	 *  Function called when module is disabled.
-	 *  Remove from database constants, boxes and permissions from Dolibarr database.
+	 *  Remove from database constants, boxes and permissions from DigitalProspects database.
 	 *  Data directories are not deleted
 	 *
 	 *  @param      string	$options    Options when enabling module ('', 'noboxes')

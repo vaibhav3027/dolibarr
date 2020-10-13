@@ -143,7 +143,7 @@ abstract class ModeleNumRefTask
 
 		if ($this->version == 'development') return $langs->trans("VersionDevelopment");
 		if ($this->version == 'experimental') return $langs->trans("VersionExperimental");
-		if ($this->version == 'dolibarr') return DOL_VERSION;
+		if ($this->version == 'DigitalProspects') return DOL_VERSION;
 		return $langs->trans("NotAvailable");
 	}
 }

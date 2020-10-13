@@ -17,7 +17,7 @@
 
 /**
  *	\file       htdocs/public/notice.php
- *	\brief      Dolibarr page to show a notice.
+ *	\brief      DigitalProspects page to show a notice.
  *              Default notice is a message to say network connection is off.
  *              You can also call this page with URL:
  *                /public/notice.php?lang=xx_XX&transkey=translation_key  (key must be inside file main.lang, error.lang or other.lang)

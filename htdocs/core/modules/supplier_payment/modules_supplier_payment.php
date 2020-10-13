@@ -133,7 +133,7 @@ abstract class ModeleNumRefSupplierPayments
 
 		if ($this->version == 'development') return $langs->trans("VersionDevelopment");
 		elseif ($this->version == 'experimental') return $langs->trans("VersionExperimental");
-		elseif ($this->version == 'dolibarr') return DOL_VERSION;
+		elseif ($this->version == 'DigitalProspects') return DOL_VERSION;
 		elseif ($this->version) return $this->version;
 		return $langs->trans("NotAvailable");
 	}

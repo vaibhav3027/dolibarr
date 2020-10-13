@@ -1,8 +1,8 @@
-# Dolibarr language file - Source file is en_US - stripe
+# DigitalProspects language file - Source file is en_US - stripe
 StripeSetup=Nastavení modulu Stripe
-StripeDesc=Nabídněte zákazníkům Stripe online platební stránku pro platby kreditními / cebitovými kartami prostřednictvím <a href="http://www.stripe.com" target="_blank"> Stripe </a>. To může být použito k tomu, aby umožnilo vašim zákazníkům provádět ad hoc platby nebo platby související s konkrétním předmětem Dolibarr (faktura, objednávka, ...)
+StripeDesc=Nabídněte zákazníkům Stripe online platební stránku pro platby kreditními / cebitovými kartami prostřednictvím <a href="http://www.stripe.com" target="_blank"> Stripe </a>. To může být použito k tomu, aby umožnilo vašim zákazníkům provádět ad hoc platby nebo platby související s konkrétním předmětem DigitalProspects (faktura, objednávka, ...)
 StripeOrCBDoPayment=Platba kreditní kartou nebo Stripe
-FollowingUrlAreAvailableToMakePayments=Přes URL jsou k dispozici nabízené stránky, které zákazníkovi umožní provést platbu na Dolibarr objektech
+FollowingUrlAreAvailableToMakePayments=Přes URL jsou k dispozici nabízené stránky, které zákazníkovi umožní provést platbu na DigitalProspects objektech
 PaymentForm=Formulář platby
 WelcomeOnPaymentPage=Vítejte v naší online platební službě
 ThisScreenAllowsYouToPay=Tato obrazovka vám umožní provést on-line platbu %s.

@@ -91,7 +91,7 @@ $result = restrictedArea($user, 'takepos', 0, '');
 $form = new Form($db);
 
 // Title
-$title = 'TakePOS - Dolibarr '.DOL_VERSION;
+$title = 'TakePOS - DigitalProspects '.DOL_VERSION;
 if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = 'TakePOS - '.$conf->global->MAIN_APPLICATION_TITLE;
 $head = '<meta name="apple-mobile-web-app-title" content="TakePOS"/>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -640,8 +640,8 @@ function OpenDrawer(){
 	});
 }
 
-function DolibarrOpenDrawer() {
-	console.log("DolibarrOpenDrawer call ajax url /takepos/ajax/ajax.php?action=opendrawer&term=<?php print $_SESSION["takeposterminal"] ?>");
+function DigitalProspectsOpenDrawer() {
+	console.log("DigitalProspectsOpenDrawer call ajax url /takepos/ajax/ajax.php?action=opendrawer&term=<?php print $_SESSION["takeposterminal"] ?>");
 	$.ajax({
 		type: "GET",
 		url: "<?php print dol_buildpath('/takepos/ajax/ajax.php', 1).'?action=opendrawer&term='.$_SESSION["takeposterminal"]; ?>",
@@ -890,7 +890,7 @@ if ($conf->global->TAKEPOS_BAR_RESTAURANT)
 			if (filter_var($conf->global->TAKEPOS_PRINT_SERVER, FILTER_VALIDATE_URL) == true) $menus[$r++] = array('title'=>'<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("Receipt").'</div>', 'action'=>'TakeposConnector(placeid);');
 			else $menus[$r++] = array('title'=>'<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("Receipt").'</div>', 'action'=>'TakeposPrinting(placeid);');
 		} elseif ($conf->global->TAKEPOS_PRINT_METHOD == "receiptprinter") {
-			$menus[$r++] = array('title'=>'<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("Receipt").'</div>', 'action'=>'DolibarrTakeposPrinting(placeid);');
+			$menus[$r++] = array('title'=>'<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("Receipt").'</div>', 'action'=>'DigitalProspectsTakeposPrinting(placeid);');
 		} else {
 			$menus[$r++] = array('title'=>'<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("Receipt").'</div>', 'action'=>'Print(placeid);');
 		}
@@ -911,7 +911,7 @@ if ($conf->global->TAKEPOS_PRINT_METHOD == "takeposconnector") {
 if ($conf->global->TAKEPOS_PRINT_METHOD == "receiptprinter") {
     $menus[$r++] = array(
 		'title' => '<span class="fa fa-receipt paddingrightonly"></span><div class="trunc">'.$langs->trans("DOL_OPEN_DRAWER").'</div>',
-		'action' => 'DolibarrOpenDrawer();',
+		'action' => 'DigitalProspectsOpenDrawer();',
 	);
 }
 

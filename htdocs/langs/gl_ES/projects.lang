@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Ref. proxecto
 ProjectRef=Ref. proxecto
 ProjectId=Id proxecto
@@ -150,12 +150,12 @@ ConfirmCloneProject=¿Está certo de querer clonar este proxecto?
 ProjectReportDate=Cambiar data das tarefas segundo a data de inicio do novo proxecto
 ErrorShiftTaskDate=Aconteceu un erro no cambio das datas das tarefas
 ProjectsAndTasksLines=Proxectos e tarefas
-ProjectCreatedInDolibarr=Proxecto %s creado
-ProjectValidatedInDolibarr=Proxecto %s validado
-ProjectModifiedInDolibarr=Proxecto %s modificado
-TaskCreatedInDolibarr=A tarefa %s foi creada
-TaskModifiedInDolibarr=A tarefa %s foi modificada
-TaskDeletedInDolibarr=A tarefa %s foi eliminada
+ProjectCreatedInDigitalProspects=Proxecto %s creado
+ProjectValidatedInDigitalProspects=Proxecto %s validado
+ProjectModifiedInDigitalProspects=Proxecto %s modificado
+TaskCreatedInDigitalProspects=A tarefa %s foi creada
+TaskModifiedInDigitalProspects=A tarefa %s foi modificada
+TaskDeletedInDigitalProspects=A tarefa %s foi eliminada
 OpportunityStatus=Estado de oportunidade
 OpportunityStatusShort=Est. Oport.
 OpportunityProbability=Probabilidade de oportunidade

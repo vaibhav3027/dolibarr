@@ -46,7 +46,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 {
 	$code = $reg[1];
 	$value = (GETPOST($code, 'alpha') ? GETPOST($code, 'alpha') : 1);
-	if (dolibarr_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
+	if (DigitalProspects_set_const($db, $code, $value, 'chaine', 0, '', $conf->entity) > 0)
 	{
 		Header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -57,7 +57,7 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 	}
 } elseif (preg_match('/del_([a-z0-9_\-]+)/i', $action, $reg)) {
 	$code = $reg[1];
-	if (dolibarr_del_const($db, $code, $conf->entity) > 0)
+	if (DigitalProspects_del_const($db, $code, $conf->entity) > 0)
 	{
 		Header("Location: ".$_SERVER["PHP_SELF"]);
 		exit;
@@ -70,8 +70,8 @@ if (preg_match('/set_([a-z0-9_\-]+)/i', $action, $reg))
 
 elseif ($action == 'updateform')
 {
-	$res1 = dolibarr_set_const($db, "MAIN_APPLICATION_TITLE", GETPOST("MAIN_APPLICATION_TITLE", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
-	$res2 = dolibarr_set_const($db, "MAIN_SESSION_TIMEOUT", GETPOST("MAIN_SESSION_TIMEOUT", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
+	$res1 = DigitalProspects_set_const($db, "MAIN_APPLICATION_TITLE", GETPOST("MAIN_APPLICATION_TITLE", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
+	$res2 = DigitalProspects_set_const($db, "MAIN_SESSION_TIMEOUT", GETPOST("MAIN_SESSION_TIMEOUT", 'alphanohtml'), 'chaine', 0, '', $conf->entity);
 	if ($res1 && $res2) setEventMessages($langs->trans("RecordModifiedSuccessfully"), null, 'mesgs');
 }
 

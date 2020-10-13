@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 ProjectRef=Chance
 ProjectsArea=Projektbereiche
 PrivateProject=Projekt Kontakte
@@ -23,7 +23,7 @@ NoTasks=Keine Aufgaben für dieses Projekt
 LinkedToAnotherCompany=Mit Geschäftspartner verknüpft
 ThisWillAlsoRemoveTasks=Diese Aktion löscht ebenfalls alle Aufgaben zum Projekt (<b>%s</b> akutelle Aufgaben) und alle Zeitaufwände.
 CloneTaskFiles=Aufgabe (n) clonen beigetreten Dateien (falls Aufgabe (n) geklont)
-ProjectModifiedInDolibarr=Projekt %s bearbeitet
+ProjectModifiedInDigitalProspects=Projekt %s bearbeitet
 ProjectReferers=Verknüpfte Objekte
 ResourceNotAssignedToTheTask=Nicht der Aufgabe zugewiesen
 TimeSpentForInvoice=Zeitaufwände

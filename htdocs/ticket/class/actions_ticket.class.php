@@ -208,7 +208,7 @@ class ActionsTicket
 			$msg = GETPOST('message_initial', 'alpha') ? GETPOST('message_initial', 'alpha') : $object->message;
 			include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
 			$uselocalbrowser = true;
-			$doleditor = new DolEditor('message_initial', $msg, '100%', 250, 'dolibarr_details', 'In', true, $uselocalbrowser, $conf->global->FCKEDITOR_ENABLE_TICKET, ROWS_4, '95%');
+			$doleditor = new DolEditor('message_initial', $msg, '100%', 250, 'DigitalProspects_details', 'In', true, $uselocalbrowser, $conf->global->FCKEDITOR_ENABLE_TICKET, ROWS_4, '95%');
 			$doleditor->Create();
 		} else {
 			// Deal with format differences (text / HTML)

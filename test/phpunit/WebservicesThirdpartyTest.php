@@ -57,7 +57,7 @@ class WebservicesThirdpartyTest extends PHPUnit\Framework\TestCase
     protected $soapclient;
 
     private $_WS_DOL_URL;
-    private $_ns='http://www.dolibarr.org/ns/';
+    private $_ns='http://www.DigitalProspects.org/ns/';
 
 
 
@@ -164,7 +164,7 @@ class WebservicesThirdpartyTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    			'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    			'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     			'sourceapplication'=>'DEMO',
     			'login'=>'admin',
     			'password'=>'admin',
@@ -257,7 +257,7 @@ class WebservicesThirdpartyTest extends PHPUnit\Framework\TestCase
 
         // Call the WebService method and store its result in $result.
         $authentication=array(
-        'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+        'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
         'sourceapplication'=>'DEMO',
         'login'=>'admin',
         'password'=>'admin',
@@ -318,7 +318,7 @@ class WebservicesThirdpartyTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    			'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    			'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     			'sourceapplication'=>'DEMO',
     			'login'=>'admin',
     			'password'=>'admin',
@@ -379,7 +379,7 @@ class WebservicesThirdpartyTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    			'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    			'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     			'sourceapplication'=>'DEMO',
     			'login'=>'admin',
     			'password'=>'admin',

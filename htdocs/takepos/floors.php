@@ -96,7 +96,7 @@ if ($action == "add")
  */
 
 // Title
-$title = 'TakePOS - Dolibarr '.DOL_VERSION;
+$title = 'TakePOS - DigitalProspects '.DOL_VERSION;
 if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = 'TakePOS - '.$conf->global->MAIN_APPLICATION_TITLE;
 top_htmlhead($head, $title, $disablejs, $disablehead, $arrayofjs, $arrayofcss);
 ?>

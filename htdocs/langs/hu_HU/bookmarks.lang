@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - marque pages
+# DigitalProspects language file - Source file is en_US - marque pages
 AddThisPageToBookmarks=Aktuális oldal hozzáadása a könyvjelzőkhöz
 Bookmark=Könyvjelző
 Bookmarks=Könyvjelzők
@@ -15,7 +15,7 @@ UrlOrLink=URL elérési út
 BehaviourOnClick=Viselkedés könyvjelző URL kiválasztásakor
 CreateBookmark=Könyvjelző lértehozása
 SetHereATitleForLink=Adjon meg egy nevet a könyvjelzőnek
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Használjon külső/abszolút linket (https://URL) vagy belső/relatív linket (/DOLIBARR_ROOT/htdocs/...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Használjon külső/abszolút linket (https://URL) vagy belső/relatív linket (/DigitalProspects_ROOT/htdocs/...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Válassza ki, hogy a hivatkozott oldal az aktuális lapon vagy egy új lapon nyíljon meg
 BookmarksManagement=Könyvjelzők kezelése
 BookmarksMenuShortCut=Ctrl + Shift + m

@@ -25,9 +25,9 @@
  * API class for projects
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class Projects extends DolibarrApi
+class Projects extends DigitalProspectsApi
 {
 
     /**
@@ -66,7 +66,7 @@ class Projects extends DolibarrApi
      */
     public function get($id)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->lire) {
             throw new RestException(401);
         }
 
@@ -75,8 +75,8 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $this->project->fetchObjectLinked();
@@ -106,22 +106,22 @@ class Projects extends DolibarrApi
         $obj_ret = array();
 
         // case of external user, $thirdparty_ids param is ignored and replaced by user's socid
-        $socids = DolibarrApiAccess::$user->socid ? DolibarrApiAccess::$user->socid : $thirdparty_ids;
+        $socids = DigitalProspectsApiAccess::$user->socid ? DigitalProspectsApiAccess::$user->socid : $thirdparty_ids;
 
         // If the internal user must only see his customers, force searching by him
         $search_sale = 0;
-        if (!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) $search_sale = DolibarrApiAccess::$user->id;
+        if (!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) $search_sale = DigitalProspectsApiAccess::$user->id;
 
         $sql = "SELECT t.rowid";
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
         $sql .= " FROM ".MAIN_DB_PREFIX."projet as t";
     	if ($category > 0) {
 			$sql .= ", ".MAIN_DB_PREFIX."categorie_project as c";
     	}
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", ".MAIN_DB_PREFIX."societe_commerciaux as sc"; // We need this table joined to the select in order to filter by sale
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", ".MAIN_DB_PREFIX."societe_commerciaux as sc"; // We need this table joined to the select in order to filter by sale
 
         $sql .= ' WHERE t.entity IN ('.getEntity('project').')';
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= " AND t.fk_soc = sc.fk_soc";
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= " AND t.fk_soc = sc.fk_soc";
         if ($socids) $sql .= " AND t.fk_soc IN (".$socids.")";
         if ($search_sale > 0) $sql .= " AND t.rowid = sc.fk_soc"; // Join for the needed table to filter by sale
         // Insert sale filter
@@ -136,12 +136,12 @@ class Projects extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $db->order($sortfield, $sortorder);
@@ -189,7 +189,7 @@ class Projects extends DolibarrApi
      */
     public function post($request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->creer) {
             throw new RestException(401, "Insuffisant rights");
         }
         // Check mandatory fields
@@ -205,7 +205,7 @@ class Projects extends DolibarrApi
           }
           $this->project->lines = $lines;
         }*/
-        if ($this->project->create(DolibarrApiAccess::$user) < 0) {
+        if ($this->project->create(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(500, "Error creating project", array_merge(array($this->project->error), $this->project->errors));
         }
 
@@ -224,7 +224,7 @@ class Projects extends DolibarrApi
      */
     public function getLines($id, $includetimespent = 0)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->lire) {
             throw new RestException(401);
         }
 
@@ -233,10 +233,10 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
-        $this->project->getLinesArray(DolibarrApiAccess::$user);
+        $this->project->getLinesArray(DigitalProspectsApiAccess::$user);
         $result = array();
         foreach ($this->project->lines as $line)      // $line is a task
         {
@@ -269,7 +269,7 @@ class Projects extends DolibarrApi
     {
         global $db;
 
-        if (!DolibarrApiAccess::$user->rights->projet->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->lire) {
             throw new RestException(401);
         }
 
@@ -278,13 +278,13 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         require_once DOL_DOCUMENT_ROOT.'/projet/class/task.class.php';
         $taskstatic = new Task($this->db);
-        $userp = DolibarrApiAccess::$user;
+        $userp = DigitalProspectsApiAccess::$user;
         if ($userid > 0)
         {
             $userp = new User($this->db);
@@ -312,7 +312,7 @@ class Projects extends DolibarrApi
     /*
     public function postLine($id, $request_data = null)
     {
-        if(! DolibarrApiAccess::$user->rights->projet->creer) {
+        if(! DigitalProspectsApiAccess::$user->rights->projet->creer) {
             throw new RestException(401);
         }
 
@@ -321,8 +321,8 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('project',$this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('project',$this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
         $request_data = (object) $request_data;
         $updateRes = $this->project->addline(
@@ -375,7 +375,7 @@ class Projects extends DolibarrApi
     /*
     public function putLine($id, $lineid, $request_data = null)
     {
-        if(! DolibarrApiAccess::$user->rights->projet->creer) {
+        if(! DigitalProspectsApiAccess::$user->rights->projet->creer) {
             throw new RestException(401);
         }
 
@@ -384,8 +384,8 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('project',$this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('project',$this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
         $request_data = (object) $request_data;
         $updateRes = $this->project->updateline(
@@ -432,7 +432,7 @@ class Projects extends DolibarrApi
      */
     public function put($id, $request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->creer) {
             throw new RestException(401);
         }
 
@@ -441,15 +441,15 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
         foreach ($request_data as $field => $value) {
             if ($field == 'id') continue;
             $this->project->$field = $value;
         }
 
-        if ($this->project->update(DolibarrApiAccess::$user) >= 0)
+        if ($this->project->update(DigitalProspectsApiAccess::$user) >= 0)
         {
             return $this->get($id);
         }
@@ -468,7 +468,7 @@ class Projects extends DolibarrApi
      */
     public function delete($id)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->supprimer) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->supprimer) {
             throw new RestException(401);
         }
         $result = $this->project->fetch($id);
@@ -476,11 +476,11 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
-        if (!$this->project->delete(DolibarrApiAccess::$user)) {
+        if (!$this->project->delete(DigitalProspectsApiAccess::$user)) {
             throw new RestException(500, 'Error when delete project : '.$this->project->error);
         }
 
@@ -512,7 +512,7 @@ class Projects extends DolibarrApi
      */
     public function validate($id, $notrigger = 0)
     {
-        if (!DolibarrApiAccess::$user->rights->projet->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->projet->creer) {
             throw new RestException(401);
         }
         $result = $this->project->fetch($id);
@@ -520,11 +520,11 @@ class Projects extends DolibarrApi
             throw new RestException(404, 'Project not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('project', $this->project->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('project', $this->project->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
-        $result = $this->project->setValid(DolibarrApiAccess::$user, $notrigger);
+        $result = $this->project->setValid(DigitalProspectsApiAccess::$user, $notrigger);
         if ($result == 0) {
             throw new RestException(304, 'Error nothing done. May be object is already validated');
         }

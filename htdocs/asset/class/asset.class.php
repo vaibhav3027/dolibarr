@@ -319,7 +319,7 @@ class Asset extends CommonObject
 	public function getNomUrl($withpicto = 0, $option = '', $notooltip = 0, $morecss = '', $save_lastsearch_value = -1)
 	{
 		global $db, $conf, $langs;
-		global $dolibarr_main_authentication, $dolibarr_main_demo;
+		global $DigitalProspects_main_authentication, $DigitalProspects_main_demo;
 		global $menumanager;
 
 		if (!empty($conf->dol_no_mouse_hover)) $notooltip = 1; // Force disable tooltips

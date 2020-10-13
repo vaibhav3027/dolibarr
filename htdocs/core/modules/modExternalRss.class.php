@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module externalrss
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module externalrss
  */
-class modExternalRss extends DolibarrModules
+class modExternalRss extends DigitalProspectsModules
 {
 
 	/**
@@ -48,9 +48,9 @@ class modExternalRss extends DolibarrModules
 		$this->family = "technic";
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
-		$this->description = "Ajout de files d'informations RSS dans les ecrans Dolibarr";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		$this->description = "Ajout de files d'informations RSS dans les ecrans DigitalProspects";
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'rss';
 
@@ -80,7 +80,7 @@ class modExternalRss extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')
@@ -120,7 +120,7 @@ class modExternalRss extends DolibarrModules
 
     /**
 	 *		Function called when module is disabled.
-	 *      Remove from database constants, boxes and permissions from Dolibarr database.
+	 *      Remove from database constants, boxes and permissions from DigitalProspects database.
 	 *		Data directories are not deleted
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

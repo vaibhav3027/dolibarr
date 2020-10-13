@@ -19,7 +19,7 @@
  */
 
 /**
- * 	\defgroup   api     Module DolibarrApi
+ * 	\defgroup   api     Module DigitalProspectsApi
  *  \brief      API loader
  *				Search files htdocs/<module>/class/api_<module>.class.php
  *  \file       htdocs/api/admin/explorer.php
@@ -43,18 +43,18 @@ $langs->load("admin");
 // Enable and test if module Api is enabled
 if (empty($conf->global->MAIN_MODULE_API))
 {
-    dol_syslog("Call Dolibarr API interfaces with module REST disabled");
+    dol_syslog("Call DigitalProspects API interfaces with module REST disabled");
     print $langs->trans("WarningModuleNotActive", 'Api').'.<br><br>';
     print $langs->trans("ToActivateModule");
     exit;
 }
 
 
-$api = new DolibarrApi($db);
+$api = new DigitalProspectsApi($db);
 
 $api->r->addAPIClass('Luracast\\Restler\\Resources'); //this creates resources.json at API Root
 $api->r->setSupportedFormats('JsonFormat', 'XmlFormat');
-$api->r->addAuthenticationClass('DolibarrApiAccess', '');
+$api->r->addAuthenticationClass('DigitalProspectsApiAccess', '');
 
 $listofapis = array();
 
@@ -169,7 +169,7 @@ $linkback = '<a href="'.DOL_URL_ROOT.'/admin/modules.php?restore_lastsearch_valu
 print load_fiche_titre($langs->trans("ApiSetup"), $linkback, 'title_setup');
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

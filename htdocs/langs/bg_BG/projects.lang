@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=Съгласно проект №
 ProjectRef=Проект №
 ProjectId=Идентификатор на проект
@@ -150,12 +150,12 @@ ConfirmCloneProject=Сигурни ли сте, че ще искате да кл
 ProjectReportDate=Променете датите на задачите, според новата начална дата на проекта
 ErrorShiftTaskDate=Невъзможно е да се смени датата на задача, за да съответства на новата начална дата на проекта
 ProjectsAndTasksLines=Проекти и задачи
-ProjectCreatedInDolibarr=Проект %s е създаден
-ProjectValidatedInDolibarr=Проект %s е валидиран
-ProjectModifiedInDolibarr=Проект %s е променен
-TaskCreatedInDolibarr=Задача %s е създадена
-TaskModifiedInDolibarr=Задача %s е променена
-TaskDeletedInDolibarr=Задача %s е изтрита
+ProjectCreatedInDigitalProspects=Проект %s е създаден
+ProjectValidatedInDigitalProspects=Проект %s е валидиран
+ProjectModifiedInDigitalProspects=Проект %s е променен
+TaskCreatedInDigitalProspects=Задача %s е създадена
+TaskModifiedInDigitalProspects=Задача %s е променена
+TaskDeletedInDigitalProspects=Задача %s е изтрита
 OpportunityStatus=Статус на възможността
 OpportunityStatusShort=Статус на възможността
 OpportunityProbability=Вероятност за възможността

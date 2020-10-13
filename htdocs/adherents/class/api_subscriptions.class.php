@@ -23,9 +23,9 @@ require_once DOL_DOCUMENT_ROOT.'/adherents/class/subscription.class.php';
  * API class for subscriptions
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class Subscriptions extends DolibarrApi
+class Subscriptions extends DigitalProspectsApi
 {
     /**
      * @var array   $FIELDS     Mandatory fields, checked when create and update object
@@ -58,7 +58,7 @@ class Subscriptions extends DolibarrApi
      */
     public function get($id)
     {
-        if (!DolibarrApiAccess::$user->rights->adherent->cotisation->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->adherent->cotisation->lire) {
             throw new RestException(401);
         }
 
@@ -91,7 +91,7 @@ class Subscriptions extends DolibarrApi
 
         $obj_ret = array();
 
-        if (!DolibarrApiAccess::$user->rights->adherent->cotisation->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->adherent->cotisation->lire) {
             throw new RestException(401);
         }
 
@@ -101,12 +101,12 @@ class Subscriptions extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $db->order($sortfield, $sortorder);
@@ -153,7 +153,7 @@ class Subscriptions extends DolibarrApi
      */
     public function post($request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->adherent->cotisation->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->adherent->cotisation->creer) {
             throw new RestException(401);
         }
         // Check mandatory fields
@@ -163,7 +163,7 @@ class Subscriptions extends DolibarrApi
         foreach ($request_data as $field => $value) {
             $subscription->$field = $value;
         }
-        if ($subscription->create(DolibarrApiAccess::$user) < 0) {
+        if ($subscription->create(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(500, 'Error when creating subscription', array_merge(array($subscription->error), $subscription->errors));
         }
         return $subscription->id;
@@ -178,7 +178,7 @@ class Subscriptions extends DolibarrApi
      */
     public function put($id, $request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->adherent->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->adherent->creer) {
             throw new RestException(401);
         }
 
@@ -193,7 +193,7 @@ class Subscriptions extends DolibarrApi
             $subscription->$field = $value;
         }
 
-        if ($subscription->update(DolibarrApiAccess::$user) > 0)
+        if ($subscription->update(DigitalProspectsApiAccess::$user) > 0)
         {
             return $this->get($id);
         }
@@ -212,7 +212,7 @@ class Subscriptions extends DolibarrApi
     public function delete($id)
     {
         // The right to delete a subscription comes with the right to create one.
-        if (!DolibarrApiAccess::$user->rights->adherent->cotisation->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->adherent->cotisation->creer) {
             throw new RestException(401);
         }
         $subscription = new Subscription($this->db);
@@ -221,7 +221,7 @@ class Subscriptions extends DolibarrApi
             throw new RestException(404, 'Subscription not found');
         }
 
-        if (!$subscription->delete(DolibarrApiAccess::$user)) {
+        if (!$subscription->delete(DigitalProspectsApiAccess::$user)) {
             throw new RestException(401, 'error when deleting subscription');
         }
 

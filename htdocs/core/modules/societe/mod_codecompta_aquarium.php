@@ -37,10 +37,10 @@ class mod_codecompta_aquarium extends ModeleAccountancyCode
 	public $name = 'Aquarium';
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefixcustomeraccountancycode;
 

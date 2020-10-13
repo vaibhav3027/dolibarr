@@ -2255,7 +2255,7 @@ function dol_most_recent_file($dir, $regexfilter = '', $excludefilter = array('(
 function dol_check_secure_access_document($modulepart, $original_file, $entity, $fuser = '', $refname = '', $mode = 'read')
 {
 	global $conf, $db, $user;
-	global $dolibarr_main_data_root, $dolibarr_main_document_root_alt;
+	global $DigitalProspects_main_data_root, $DigitalProspects_main_document_root_alt;
 
 	if (!is_object($fuser)) $fuser = $user;
 
@@ -2286,29 +2286,29 @@ function dol_check_secure_access_document($modulepart, $original_file, $entity, 
 	}
 
 	// Wrapping for miscellaneous medias files
-	if ($modulepart == 'medias' && !empty($dolibarr_main_data_root))
+	if ($modulepart == 'medias' && !empty($DigitalProspects_main_data_root))
 	{
 		if (empty($entity) || empty($conf->medias->multidir_output[$entity])) return array('accessallowed'=>0, 'error'=>'Value entity must be provided');
 		$accessallowed = 1;
 		$original_file = $conf->medias->multidir_output[$entity].'/'.$original_file;
 	}
-	// Wrapping for *.log files, like when used with url http://.../document.php?modulepart=logs&file=dolibarr.log
-	elseif ($modulepart == 'logs' && !empty($dolibarr_main_data_root))
+	// Wrapping for *.log files, like when used with url http://.../document.php?modulepart=logs&file=DigitalProspects.log
+	elseif ($modulepart == 'logs' && !empty($DigitalProspects_main_data_root))
 	{
-		$accessallowed = ($user->admin && basename($original_file) == $original_file && preg_match('/^dolibarr.*\.log$/', basename($original_file)));
-		$original_file = $dolibarr_main_data_root.'/'.$original_file;
+		$accessallowed = ($user->admin && basename($original_file) == $original_file && preg_match('/^DigitalProspects.*\.log$/', basename($original_file)));
+		$original_file = $DigitalProspects_main_data_root.'/'.$original_file;
 	}
-	// Wrapping for *.log files, like when used with url http://.../document.php?modulepart=logs&file=dolibarr.log
-	elseif ($modulepart == 'doctemplateswebsite' && !empty($dolibarr_main_data_root))
+	// Wrapping for *.log files, like when used with url http://.../document.php?modulepart=logs&file=DigitalProspects.log
+	elseif ($modulepart == 'doctemplateswebsite' && !empty($DigitalProspects_main_data_root))
 	{
 		$accessallowed = ($fuser->rights->website->write && preg_match('/\.jpg$/i', basename($original_file)));
-		$original_file = $dolibarr_main_data_root.'/doctemplates/websites/'.$original_file;
+		$original_file = $DigitalProspects_main_data_root.'/doctemplates/websites/'.$original_file;
 	}
 	// Wrapping for *.zip files, like when used with url http://.../document.php?modulepart=packages&file=module_myfile.zip
-	elseif ($modulepart == 'packages' && !empty($dolibarr_main_data_root))
+	elseif ($modulepart == 'packages' && !empty($DigitalProspects_main_data_root))
 	{
 		// Dir for custom dirs
-		$tmp = explode(',', $dolibarr_main_document_root_alt);
+		$tmp = explode(',', $DigitalProspects_main_document_root_alt);
 		$dirins = $tmp[0];
 
 		$accessallowed = ($user->admin && preg_match('/^module_.*\.zip$/', basename($original_file)));
@@ -3126,7 +3126,7 @@ function getFilesUpdated(&$file_list, SimpleXMLElement $dir, $path = '', $pathre
 		{
 			$md5_local = md5_file($pathref.'/'.$filename);
 
-			if ($conffile == '/etc/dolibarr/conf.php' && $filename == '/filefunc.inc.php')	// For install with deb or rpm, we ignore test on filefunc.inc.php that was modified by package
+			if ($conffile == '/etc/DigitalProspects/conf.php' && $filename == '/filefunc.inc.php')	// For install with deb or rpm, we ignore test on filefunc.inc.php that was modified by package
 			{
 				$checksumconcat[] = $expectedmd5;
 			}

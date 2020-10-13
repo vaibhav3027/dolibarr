@@ -22,13 +22,13 @@
  *  \brief      Trigger file for blockedlog module
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggered functions for agenda module
  */
-class InterfaceActionsBlockedLog extends DolibarrTriggers
+class InterfaceActionsBlockedLog extends DigitalProspectsTriggers
 {
 	public $family = 'system';
 	public $description = "Triggers of this module add action for BlockedLog module (Module of unalterable logs).";
@@ -37,7 +37,7 @@ class InterfaceActionsBlockedLog extends DolibarrTriggers
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
 	 * @var string Image of the trigger
@@ -45,7 +45,7 @@ class InterfaceActionsBlockedLog extends DolibarrTriggers
 	public $picto = 'technic';
 
 	/**
-	 * Function called on Dolibarr payment or invoice event.
+	 * Function called on DigitalProspects payment or invoice event.
 	 *
 	 * @param string		$action		Event action code
 	 * @param Object		$object     Object

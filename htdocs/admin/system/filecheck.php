@@ -21,7 +21,7 @@
 
 /**
  *  \file       htdocs/admin/system/filecheck.php
- *  \brief      Page to check Dolibarr files integrity
+ *  \brief      Page to check DigitalProspects files integrity
  */
 
 require '../../main.inc.php';
@@ -44,7 +44,7 @@ $error = 0;
 
 llxHeader();
 
-print load_fiche_titre($langs->trans("FileCheckDolibarr"), '', 'title_setup');
+print load_fiche_titre($langs->trans("FileCheckDigitalProspects"), '', 'title_setup');
 
 print '<span class="opacitymedium">'.$langs->trans("FileCheckDesc").'</span><br><br>';
 
@@ -82,7 +82,7 @@ $xmlremote = GETPOST('xmlremote');
 if (empty($xmlremote) && !empty($conf->global->MAIN_FILECHECK_URL)) $xmlremote = $conf->global->MAIN_FILECHECK_URL;
 $param = 'MAIN_FILECHECK_URL_'.DOL_VERSION;
 if (empty($xmlremote) && !empty($conf->global->$param)) $xmlremote = $conf->global->$param;
-if (empty($xmlremote)) $xmlremote = 'https://www.dolibarr.org/files/stable/signatures/filelist-'.DOL_VERSION.'.xml';
+if (empty($xmlremote)) $xmlremote = 'https://www.DigitalProspects.org/files/stable/signatures/filelist-'.DOL_VERSION.'.xml';
 
 
 // Test if remote test is ok
@@ -174,7 +174,7 @@ if (!$error && $xml)
     $out = '';
 
     // Forced constants
-    if (is_object($xml->dolibarr_constants[0]))
+    if (is_object($xml->DigitalProspects_constants[0]))
     {
         $out .= load_fiche_titre($langs->trans("ForcedConstants"));
 
@@ -188,7 +188,7 @@ if (!$error && $xml)
         $out .= '</tr>'."\n";
 
         $i = 0;
-        foreach ($xml->dolibarr_constants[0]->constant as $constant)    // $constant is a simpleXMLElement
+        foreach ($xml->DigitalProspects_constants[0]->constant as $constant)    // $constant is a simpleXMLElement
         {
             $constname = $constant['name'];
             $constvalue = (string) $constant;
@@ -220,10 +220,10 @@ if (!$error && $xml)
     }
 
     // Scan htdocs
-    if (is_object($xml->dolibarr_htdocs_dir[0]))
+    if (is_object($xml->DigitalProspects_htdocs_dir[0]))
     {
-        //var_dump($xml->dolibarr_htdocs_dir[0]['includecustom']);exit;
-        $includecustom = (empty($xml->dolibarr_htdocs_dir[0]['includecustom']) ? 0 : $xml->dolibarr_htdocs_dir[0]['includecustom']);
+        //var_dump($xml->DigitalProspects_htdocs_dir[0]['includecustom']);exit;
+        $includecustom = (empty($xml->DigitalProspects_htdocs_dir[0]['includecustom']) ? 0 : $xml->DigitalProspects_htdocs_dir[0]['includecustom']);
 
         // Defined qualified files (must be same than into generate_filelist_xml.php)
         $regextoinclude = '\.(php|php3|php4|php5|phtml|phps|phar|inc|css|scss|html|xml|js|json|tpl|jpg|jpeg|png|gif|ico|sql|lang|txt|yml|md|mp3|mp4|wav|mkv|z|gz|zip|rar|tar|less|svg|eot|woff|woff2|ttf|manifest)$';
@@ -231,7 +231,7 @@ if (!$error && $xml)
         $scanfiles = dol_dir_list(DOL_DOCUMENT_ROOT, 'files', 1, $regextoinclude, $regextoexclude);
 
         // Fill file_list with files in signature, new files, modified files
-        $ret = getFilesUpdated($file_list, $xml->dolibarr_htdocs_dir[0], '', DOL_DOCUMENT_ROOT, $checksumconcat); // Fill array $file_list
+        $ret = getFilesUpdated($file_list, $xml->DigitalProspects_htdocs_dir[0], '', DOL_DOCUMENT_ROOT, $checksumconcat); // Fill array $file_list
         // Complete with list of new files
         foreach ($scanfiles as $keyfile => $valfile)
         {
@@ -401,24 +401,24 @@ if (!$error && $xml)
     }
     else
     {
-        print 'Error: Failed to found dolibarr_htdocs_dir into XML file '.$xmlfile;
+        print 'Error: Failed to found DigitalProspects_htdocs_dir into XML file '.$xmlfile;
         $error++;
     }
 
 
     // Scan scripts
     /*
-    if (is_object($xml->dolibarr_script_dir[0]))
+    if (is_object($xml->DigitalProspects_script_dir[0]))
     {
         $file_list = array();
-        $ret = getFilesUpdated($file_list, $xml->dolibarr_htdocs_dir[0], '', ???, $checksumconcat);		// Fill array $file_list
+        $ret = getFilesUpdated($file_list, $xml->DigitalProspects_htdocs_dir[0], '', ???, $checksumconcat);		// Fill array $file_list
     }*/
 
 
     asort($checksumconcat); // Sort list of checksum
     //var_dump($checksumconcat);
     $checksumget = md5(join(',', $checksumconcat));
-    $checksumtoget = trim((string) $xml->dolibarr_htdocs_dir_checksum);
+    $checksumtoget = trim((string) $xml->DigitalProspects_htdocs_dir_checksum);
 
     /*var_dump(count($file_list['added']));
     var_dump($checksumget);

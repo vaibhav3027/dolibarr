@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banc
 MenuBankCash=Banc | Efectiu
 MenuVariousPayment=Pagaments varis
@@ -109,7 +109,7 @@ SocialContributionPayment=Pagament d'impostos varis
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Transferència interna
-TransferDesc=Traspassa d'un compte a un altre, Dolibarr generarà dos registres (dèbit en compte origen i crèdit en compte destí). Per aquesta transacció s'utilitzarà el mateix import (excepte el signe), l'etiqueta i la data).
+TransferDesc=Traspassa d'un compte a un altre, DigitalProspects generarà dos registres (dèbit en compte origen i crèdit en compte destí). Per aquesta transacció s'utilitzarà el mateix import (excepte el signe), l'etiqueta i la data).
 TransferFrom=De
 TransferTo=Cap a
 TransferFromToDone=La transferència de <b>%s</b> cap a <b>%s</b> de <b>%s</b> %s s'ha creat.

@@ -23,7 +23,7 @@
  *   \brief			Fichier de la classe de gestion des triggers
  */
 
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
@@ -55,7 +55,7 @@ class Interfaces
 
     // phpcs:disable PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps
     /**
-     *   Function called when a Dolibarr business event occurs
+     *   Function called when a DigitalProspects business event occurs
      *   This function call all qualified triggers.
      *
      *   @param		string		$action     Trigger event code
@@ -333,7 +333,7 @@ class Interfaces
             try {
 	            $objMod = new $modName($db);
 
-	            if (is_subclass_of($objMod, 'DolibarrTriggers'))
+	            if (is_subclass_of($objMod, 'DigitalProspectsTriggers'))
 	            {
 		            // Define disabledbyname and disabledbymodule
 		            $disabledbyname = 0;
@@ -378,7 +378,7 @@ class Interfaces
 		            }
 	            }
 	            else {
-	            	print 'Error: Trigger '.$modName.' does not extends DolibarrTriggers<br>';
+	            	print 'Error: Trigger '.$modName.' does not extends DigitalProspectsTriggers<br>';
 	            }
             }
             catch(Exception $e) {

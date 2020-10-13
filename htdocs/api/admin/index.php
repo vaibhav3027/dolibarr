@@ -42,7 +42,7 @@ if ($action == 'setproductionmode')
 {
 	$status = GETPOST('status', 'alpha');
 
-	if (dolibarr_set_const($db, 'API_PRODUCTION_MODE', $status, 'chaine', 0, '', 0) > 0)
+	if (DigitalProspects_set_const($db, 'API_PRODUCTION_MODE', $status, 'chaine', 0, '', 0) > 0)
 	{
 		$error = 0;
 
@@ -80,7 +80,7 @@ if ($action == 'setproductionmode')
 
 if ($action == 'save')
 {
-	dolibarr_set_const($db, 'API_RESTRICT_ON_IP', GETPOST('API_RESTRICT_ON_IP', 'alpha'));
+	DigitalProspects_set_const($db, 'API_RESTRICT_ON_IP', GETPOST('API_RESTRICT_ON_IP', 'alpha'));
 }
 
 
@@ -146,7 +146,7 @@ print '</form>';
 
 
 // Define $urlwithroot
-$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($dolibarr_main_url_root));
+$urlwithouturlroot = preg_replace('/'.preg_quote(DOL_URL_ROOT, '/').'$/i', '', trim($DigitalProspects_main_url_root));
 $urlwithroot = $urlwithouturlroot.DOL_URL_ROOT; // This is to use external domain name found into config file
 //$urlwithroot=DOL_MAIN_URL_ROOT;					// This is to use same domain name than current
 

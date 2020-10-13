@@ -44,10 +44,10 @@ class ExportCsv extends ModeleExports
 	public $extension;
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $label_lib;
 
@@ -81,7 +81,7 @@ class ExportCsv extends ModeleExports
 		$this->version = '1.32'; // Driver version
 
 		// If driver use an external library, put its name here
-		$this->label_lib = 'Dolibarr';
+		$this->label_lib = 'DigitalProspects';
 		$this->version_lib = DOL_VERSION;
 	}
 
@@ -334,7 +334,7 @@ class ExportCsv extends ModeleExports
 		$addquote = 0;
 
 
-		// Rule Dolibarr: No HTML
+		// Rule DigitalProspects: No HTML
    		//print $charset.' '.$newvalue."\n";
    		//$newvalue=dol_string_nohtmltag($newvalue,0,$charset);
    		$newvalue = dol_htmlcleanlastbr($newvalue);

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - mails
+# DigitalProspects language file - Source file is en_US - mails
 AllEMailings=Todos los eMailings
 MailCard=Tarjeta EMailing
 MailTo=Receptor(es)
@@ -66,7 +66,7 @@ MailingModuleDescContactsByCompanyCategory=Contactos por categoría de terceros
 MailingModuleDescContactsByCategory=Contactos por categorías
 MailingModuleDescEmailsFromFile=E-mails del archivo
 MailingModuleDescEmailsFromUser=Correo electrónico enviado por el usuario
-MailingModuleDescDolibarrUsers=Usuarios con mensajes de correo electrónico
+MailingModuleDescDigitalProspectsUsers=Usuarios con mensajes de correo electrónico
 MailingModuleDescThirdPartiesByCategories=Clientes/Proveedores (por categorías)
 LineInFile=Línea %s en el archivo
 RecipientSelectionModules=Solicitudes definidas para la selección del destinatario

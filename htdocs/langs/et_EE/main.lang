@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Veas puudub päring
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=Unikaalsust nõudval väljal on dubleeritud väärtus
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=Kasutajat <b>%s</b> ei leitud Dolibarri andmebaasist.
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Kasutajat <b>%s</b> ei leitud DigitalProspectsi andmebaasist.
 ErrorNoVATRateDefinedForSellerCountry=Viga: riigi '%s' jaoks ei ole käibemaksumäärasid määratletud.
 ErrorNoSocialContributionForSellerCountry=Error, no social/fiscal taxes type defined for country '%s'.
 ErrorFailedToSaveFile=Viga: faili salvestamine ebaõnnestus.
@@ -90,7 +90,7 @@ RecordDeleted=Kirje kustutatud
 RecordGenerated=Record generated
 LevelOfFeature=Funktsioonide tase
 NotDefined=Määratlemata
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=Administraator
 Undefined=Määratlemata
 PasswordForgotten=Password forgotten?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Andmebaasi tüübi haldus
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr leidis tehnilise vea
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects leidis tehnilise vea
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=Lisainformatsioon
 TechnicalInformation=Tehniline info
 TechnicalID=Technical ID
 LineID=Line ID
 NotePublic=Märkus (avalik)
 NotePrivate=Märkus (privaatne)
-PrecisionUnitIsLimitedToXDecimals=Seadistamise ajal piirati Dolibarr arvestama komakohti <b>%s</b> kümnendkohani.
+PrecisionUnitIsLimitedToXDecimals=Seadistamise ajal piirati DigitalProspects arvestama komakohti <b>%s</b> kümnendkohani.
 DoTest=Test
 ToFilter=Filtreeri
 NoFilter=No filter
@@ -237,7 +237,7 @@ DurationOfLine=Duration of line
 Model=Doc template
 DefaultModel=Default doc template
 Action=Tegevus
-About=Dolibarri kohta
+About=DigitalProspectsi kohta
 Number=Arv
 NumberByMonth=Arv kuus
 AmountByMonth=Kogus kuus
@@ -475,8 +475,8 @@ Generate=Loo
 Duration=Kestus
 TotalDuration=Kogukestus
 Summary=Kokkuvõte
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=Saadaval
 NotYetAvailable=Pole veel saadaval
@@ -703,7 +703,7 @@ MenuECM=Dokumendid
 MenuAWStats=AWStats
 MenuMembers=Liikmed
 MenuAgendaGoogle=Google päevakava
-ThisLimitIsDefinedInSetup=Dolibarr piir (menüü Kodu->Seaded->Turvalisus): %s Kb, PHP piir: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects piir (menüü Kodu->Seaded->Turvalisus): %s Kb, PHP piir: %s Kb
 NoFileFound=Antud kausta pole dokumente salvestatud
 CurrentUserLanguage=Aktiivne keel
 CurrentTheme=Aktiivne teema
@@ -736,7 +736,7 @@ PrintContentArea=Kuva leht lehe sisu printimiseks
 MenuManager=Menüü haldaja
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=Süsteemi viga
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=Krediitkaart
 ValidatePayment=Kinnita makse
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=Kalender
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

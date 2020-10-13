@@ -53,9 +53,9 @@ class doc_generic_bom_odt extends ModelePDFBom
 	public $phpmin = array(5, 5);
 
 	/**
-     * @var string Dolibarr version of the loaded document
+     * @var string DigitalProspects version of the loaded document
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

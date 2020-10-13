@@ -78,7 +78,7 @@ $form = new Form($db);
 
 print load_fiche_titre($langs->trans("Purge"), '', 'title_setup');
 
-print '<span class="opacitymedium">'.$langs->trans("PurgeAreaDesc", $dolibarr_main_data_root).'</span><br>';
+print '<span class="opacitymedium">'.$langs->trans("PurgeAreaDesc", $DigitalProspects_main_data_root).'</span><br>';
 print '<br>';
 
 
@@ -95,7 +95,7 @@ if (!empty($conf->syslog->enabled))
 	print '<input type="radio" name="choice" value="logfile"';
 	print ($choice && $choice == 'logfile') ? ' checked' : '';
 	$filelogparam = $filelog;
-	if ($user->admin && preg_match('/^dolibarr.*\.log$/', basename($filelog)))
+	if ($user->admin && preg_match('/^DigitalProspects.*\.log$/', basename($filelog)))
 	{
 	    $filelogparam = '<a class="wordbreak" href="'.DOL_URL_ROOT.'/document.php?modulepart=logs&file=';
 	    $filelogparam .= basename($filelog);
@@ -111,7 +111,7 @@ print '> '.$langs->trans("PurgeDeleteTemporaryFiles").'<br><br>';
 
 print '<input type="radio" name="choice" value="confirm_allfiles"';
 print ($choice && $choice == 'confirm_allfiles') ? ' checked' : '';
-print '> '.$langs->trans("PurgeDeleteAllFilesInDocumentsDir", $dolibarr_main_data_root).'<br>';
+print '> '.$langs->trans("PurgeDeleteAllFilesInDocumentsDir", $DigitalProspects_main_data_root).'<br>';
 
 print '</td></tr></table>';
 

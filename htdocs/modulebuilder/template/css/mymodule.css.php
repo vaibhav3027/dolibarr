@@ -37,7 +37,7 @@ session_cache_limiter('public');
 // 'public'  = remove cache instruction added by server
 // and if no cache-control added later, a default cache delay (10800) will be added by PHP.
 
-// Load Dolibarr environment
+// Load DigitalProspects environment
 $res = 0;
 // Try main.inc.php into web root known defined into CONTEXT_DOCUMENT_ROOT (not always defined)
 if (!$res && !empty($_SERVER["CONTEXT_DOCUMENT_ROOT"])) $res = @include $_SERVER["CONTEXT_DOCUMENT_ROOT"]."/main.inc.php";
@@ -63,9 +63,9 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/functions2.lib.php';
 
 // Define css type
 header('Content-type: text/css');
-// Important: Following code is to cache this file to avoid page request by browser at each Dolibarr page access.
+// Important: Following code is to cache this file to avoid page request by browser at each DigitalProspects page access.
 // You can use CTRL+F5 to refresh your browser cache.
-if (empty($dolibarr_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
+if (empty($DigitalProspects_nocache)) header('Cache-Control: max-age=10800, public, must-revalidate');
 else header('Cache-Control: no-cache');
 
 ?>

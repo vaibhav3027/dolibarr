@@ -1,6 +1,6 @@
 # How to use it ?
 
-The docker-compose.yml file is used to build and run Dolibarr in the current workspace.
+The docker-compose.yml file is used to build and run DigitalProspects in the current workspace.
 
 Before build/run, define the variable HOST_USER_ID as following:
 
@@ -14,9 +14,9 @@ And then, you can run :
 
         docker-compose up
 
-This will run 3 container Docker : Dolibarr, MariaDB and PhpMyAdmin.
+This will run 3 container Docker : DigitalProspects, MariaDB and PhpMyAdmin.
 
-The URL to go to the Dolibarr is :
+The URL to go to the DigitalProspects is :
 
         http://0.0.0.0
 

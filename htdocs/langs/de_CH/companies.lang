@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorSetACountryFirst=Wähle zuerst das Land
 SelectThirdParty=Wähle einen Geschäftspartner
 ConfirmDeleteCompany=Willst du diesen Geschäftspartner und alle damit verbundenen Informationen wirklich löschen?
@@ -8,7 +8,7 @@ MenuNewCustomer=Erzeuge Kunde
 MenuNewSupplier=Neuer Lieferant
 NewCompany=Erzeuge Partner (Lead / Kunde / Lieferant)
 NewThirdParty=Erzeuge Geschäftspartner (Lead / Kunde / Lieferant)
-CreateDolibarrThirdPartySupplier=Erstelle einen Lieferant
+CreateDigitalProspectsThirdPartySupplier=Erstelle einen Lieferant
 CreateThirdPartyOnly=Geschäftspartner erstellen
 CreateThirdPartyAndContact=Erzeuge Geschäftspartner mit Kontakt
 IdThirdParty=Geschäftspartner ID
@@ -159,7 +159,7 @@ StatusProspect3=Erfolgreich kontaktiert
 ProspectsByStatus=Leads nach Status
 NoParentCompany=Keine Mutterfirma
 ContactNotLinkedToCompany=Kontakt keinem Geschäftspartner zugeordnet
-DolibarrLogin=Dolibarr Benutzername
+DigitalProspectsLogin=DigitalProspects Benutzername
 ExportDataset_company_1=Geschäftspartner und ihre Eigenschaften
 ExportDataset_company_2=Kontakte und deren Eigenschaften
 ImportDataset_company_1=Geschäftspartner und deren Eigenschaften

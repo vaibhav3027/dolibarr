@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=คำขอในไม่มีข้อผิดพล�
 ErrorServiceUnavailableTryLater=Service not available at the moment. Try again later.
 ErrorDuplicateField=ค่าที่ซ้ำกันในสนามที่ไม่ซ้ำกัน
 ErrorSomeErrorWereFoundRollbackIsDone=Some errors were found. Changes have been rolled back.
-ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the Dolibarr config file <b>conf.php</b>.
-ErrorCantLoadUserFromDolibarrDatabase=<b>ไม่พบผู้ใช้% s</b> ในฐานข้อมูล Dolibarr
+ErrorConfigParameterNotDefined=Parameter <b>%s</b> is not defined in the DigitalProspects config file <b>conf.php</b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=<b>ไม่พบผู้ใช้% s</b> ในฐานข้อมูล DigitalProspects
 ErrorNoVATRateDefinedForSellerCountry=ข้อผิดพลาดอัตราภาษีมูลค่าเพิ่มไม่มีกำหนดสำหรับประเทศ '% s'
 ErrorNoSocialContributionForSellerCountry=ข้อผิดพลาดที่ไม่มีทางสังคม / ประเภทภาษีทางการคลังที่กำหนดไว้สำหรับประเทศ '% s'
 ErrorFailedToSaveFile=ข้อผิดพลาดล้มเหลวที่จะบันทึกไฟล์
@@ -90,7 +90,7 @@ RecordDeleted=บันทึกลบ
 RecordGenerated=Record generated
 LevelOfFeature=ระดับของคุณสมบัติ
 NotDefined=ไม่กำหนด
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to Dolibarr, so changing this field may have no effect.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects authentication mode is set to <b>%s</b> in configuration file <b>conf.php</b>.<br>This means that the password database is external to DigitalProspects, so changing this field may have no effect.
 Administrator=ผู้บริหาร
 Undefined=ตะคุ่ม
 PasswordForgotten=ลืมรหัสผ่าน?
@@ -108,16 +108,16 @@ DatabaseTypeManager=ผู้จัดการฐานข้อมูลปร
 RequestLastAccessInError=Latest database access request error
 ReturnCodeLastAccessInError=Return code for latest database access request error
 InformationLastAccessInError=Information for latest database access request error
-DolibarrHasDetectedError=Dolibarr ตรวจพบข้อผิดพลาดทางเทคนิค
-YouCanSetOptionDolibarrMainProdToZero=You can read log file or set option $dolibarr_main_prod to '0' in your config file to get more information.
-InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $dolibarr_main_prod to '1' to remove such notices)
+DigitalProspectsHasDetectedError=DigitalProspects ตรวจพบข้อผิดพลาดทางเทคนิค
+YouCanSetOptionDigitalProspectsMainProdToZero=You can read log file or set option $DigitalProspects_main_prod to '0' in your config file to get more information.
+InformationToHelpDiagnose=This information can be useful for diagnostic purposes (you can set option $DigitalProspects_main_prod to '1' to remove such notices)
 MoreInformation=ข้อมูลเพิ่มเติม
 TechnicalInformation=ข้อมูลด้านเทคนิค
 TechnicalID=Technical ID
 LineID=Line ID
 NotePublic=หมายเหตุ (มหาชน)
 NotePrivate=หมายเหตุ (เอกชน)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr ถูกติดตั้งเพื่อ จำกัด <b>แม่นยำของราคาต่อหน่วย% s</b> ทศนิยม
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects ถูกติดตั้งเพื่อ จำกัด <b>แม่นยำของราคาต่อหน่วย% s</b> ทศนิยม
 DoTest=ทดสอบ
 ToFilter=กรอง
 NoFilter=No filter
@@ -475,8 +475,8 @@ Generate=ผลิต
 Duration=ระยะเวลา
 TotalDuration=ระยะเวลารวม
 Summary=ย่อ
-DolibarrStateBoard=Database Statistics
-DolibarrWorkBoard=Open Items
+DigitalProspectsStateBoard=Database Statistics
+DigitalProspectsWorkBoard=Open Items
 NoOpenedElementToProcess=No open element to process
 Available=มีจำหน่าย
 NotYetAvailable=ยังไม่สามารถใช้ได้
@@ -703,7 +703,7 @@ MenuECM=เอกสาร
 MenuAWStats=AWStats
 MenuMembers=สมาชิก
 MenuAgendaGoogle=วาระการประชุมของ Google
-ThisLimitIsDefinedInSetup=Dolibarr ขีด จำกัด (เมนูที่บ้านการตั้งค่าการรักษาความปลอดภัย):% s Kb, PHP ขีด จำกัด :% s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects ขีด จำกัด (เมนูที่บ้านการตั้งค่าการรักษาความปลอดภัย):% s Kb, PHP ขีด จำกัด :% s Kb
 NoFileFound=ไม่มีเอกสารที่บันทึกไว้ในไดเรกทอรีนี้
 CurrentUserLanguage=ภาษาปัจจุบัน
 CurrentTheme=รูปแบบปัจจุบัน
@@ -736,7 +736,7 @@ PrintContentArea=หน้าแสดงพื้นที่ในการพ
 MenuManager=ผู้จัดการเมนู
 WarningYouAreInMaintenanceMode=Warning, you are in maintenance mode: only login <b>%s</b> is allowed to use the application in this mode.
 CoreErrorTitle=ผิดพลาดของระบบ
-CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $dolibarr_main_prod=1 to get more information.
+CoreErrorMessage=Sorry, an error occurred. Contact your system administrator to check the logs or disable $DigitalProspects_main_prod=1 to get more information.
 CreditCard=เครดิตการ์ด
 ValidatePayment=ตรวจสอบการชำระเงิน
 CreditOrDebitCard=Credit or debit card
@@ -875,7 +875,7 @@ Calendar=ปฏิทิน
 GroupBy=Group by...
 ViewFlatList=View flat list
 RemoveString=Remove string '%s'
-SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/dolibarr/" target="_blank">https://transifex.com/projects/p/dolibarr/</a> to add your improvements.
+SomeTranslationAreUncomplete=Some of the languages offered may be only partially translated or may contain errors. Please help to correct your language by registering at <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank">https://transifex.com/projects/p/DigitalProspects/</a> to add your improvements.
 DirectDownloadLink=Direct download link (public/external)
 DirectDownloadInternalLink=Direct download link (need to be logged and need permissions)
 Download=Download

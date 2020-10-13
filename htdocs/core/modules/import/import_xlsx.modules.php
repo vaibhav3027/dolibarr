@@ -63,10 +63,10 @@ class ImportXlsx extends ModeleImports
 	public $extension; // Extension of files imported by driver
 
 	/**
-     * Dolibarr version of driver
+     * DigitalProspects version of driver
      * @var string
      */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 	public $label_lib; // Label of external lib used by driver
 
@@ -146,7 +146,7 @@ class ImportXlsx extends ModeleImports
         }
 
         $this->workbook = new PHPExcel();
-        $this->workbook->getProperties()->setCreator($user->getFullName($outputlangs).' - Dolibarr '.DOL_VERSION);
+        $this->workbook->getProperties()->setCreator($user->getFullName($outputlangs).' - DigitalProspects '.DOL_VERSION);
         $this->workbook->getProperties()->setTitle($outputlangs->trans("Import").' - '.$file);
         $this->workbook->getProperties()->setSubject($outputlangs->trans("Import").' - '.$file);
         $this->workbook->getProperties()->setDescription($outputlangs->trans("Import").' - '.$file);
@@ -926,7 +926,7 @@ class ImportXlsx extends ModeleImports
 								$resql = $this->db->query($sql);
 								if ($resql)
 								{
-								    $last_insert_id_array[$tablename] = $this->db->last_insert_id($tablename); // store the last inserted auto_increment id for each table, so that child tables can be inserted with the appropriate id. This must be done just after the INSERT request, else we risk losing the id (because another sql query will be issued somewhere in Dolibarr).
+								    $last_insert_id_array[$tablename] = $this->db->last_insert_id($tablename); // store the last inserted auto_increment id for each table, so that child tables can be inserted with the appropriate id. This must be done just after the INSERT request, else we risk losing the id (because another sql query will be issued somewhere in DigitalProspects).
 								    $insertdone = true;
 								}
 								else

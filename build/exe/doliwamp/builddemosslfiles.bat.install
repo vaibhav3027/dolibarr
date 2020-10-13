@@ -1,5 +1,5 @@
 @echo off
-REM Launch Dolibarr demo SSL key generation
+REM Launch DigitalProspects demo SSL key generation
 REM ---------------------------------------
 
 REM Build private key
@@ -20,4 +20,4 @@ REM Certify request
 WAMPROOT\bin\apache\apacheWAMPAPACHEVERSION\bin\openssl ca -config openssl.conf -out myserver.crt -infiles myserver.csr
 
 REM Check everything is OK
-WAMPROOT\bin\apache\apacheWAMPAPACHEVERSION\bin\openssl verify -CAfile ca_demo_dolibarr.crt myserver.crt
+WAMPROOT\bin\apache\apacheWAMPAPACHEVERSION\bin\openssl verify -CAfile ca_demo_DigitalProspects.crt myserver.crt

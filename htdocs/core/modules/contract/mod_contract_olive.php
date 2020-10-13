@@ -53,10 +53,10 @@ class mod_contract_olive extends ModelNumRefContracts
 	public $code_null = 1; // Code facultatif
 
 	/**
-     * Dolibarr version of the loaded document
+     * DigitalProspects version of the loaded document
      * @var string
      */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	/**
 	 * @var int Automatic numbering

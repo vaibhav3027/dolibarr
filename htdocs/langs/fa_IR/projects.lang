@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - projects
+# DigitalProspects language file - Source file is en_US - projects
 RefProject=شماره ارجاع طرح
 ProjectRef=شماره ارجاع طرح
 ProjectId=شناسۀ طرح
@@ -150,12 +150,12 @@ ConfirmCloneProject=آیا مطمئن هستید می‌خواهید این طر
 ProjectReportDate=تغییر تاریخ وظایف بر حسب تاریخ جدید شروع طرح؟
 ErrorShiftTaskDate=جابجائی تاریخ وظیفه بر حسب تاریخ جدید شروع طرح امکان ندارد
 ProjectsAndTasksLines=طرح‌ها و وظایف
-ProjectCreatedInDolibarr=طرح %s ساخته شد
-ProjectValidatedInDolibarr=ظرح %s تائیداعتبار شد
-ProjectModifiedInDolibarr=طرح %s ویرایش شد
-TaskCreatedInDolibarr=وظیفه %s ایجاد شد
-TaskModifiedInDolibarr=وظیفۀ %s ویرایش شد
-TaskDeletedInDolibarr=وظیفۀ %s حذف شد
+ProjectCreatedInDigitalProspects=طرح %s ساخته شد
+ProjectValidatedInDigitalProspects=ظرح %s تائیداعتبار شد
+ProjectModifiedInDigitalProspects=طرح %s ویرایش شد
+TaskCreatedInDigitalProspects=وظیفه %s ایجاد شد
+TaskModifiedInDigitalProspects=وظیفۀ %s ویرایش شد
+TaskDeletedInDigitalProspects=وظیفۀ %s حذف شد
 OpportunityStatus=وضعیت سرنخ
 OpportunityStatusShort=وضعیت سرنخ
 OpportunityProbability=احتمال سرنخ

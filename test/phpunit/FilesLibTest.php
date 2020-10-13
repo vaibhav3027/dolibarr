@@ -218,17 +218,17 @@ class FilesLibTest extends PHPUnit\Framework\TestCase
         $langs=$this->savlangs;
         $db=$this->savdb;
 
-        $url='http://www.dolibarr.org';
+        $url='http://www.DigitalProspects.org';
   		$result=dol_is_url($url);
         print __METHOD__." result=".$result."\n";
         $this->assertTrue($result);
 
-        $url='https://www.dolibarr.org';
+        $url='https://www.DigitalProspects.org';
   		$result=dol_is_url($url);
         print __METHOD__." result=".$result."\n";
         $this->assertTrue($result);
 
-        $url='file://www.dolibarr.org/download/file.zip';
+        $url='file://www.DigitalProspects.org/download/file.zip';
         $result=dol_is_url($url);
         print __METHOD__." result=".$result."\n";
         $this->assertTrue($result);

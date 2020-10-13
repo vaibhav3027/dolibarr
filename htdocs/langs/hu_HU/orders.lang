@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Vevők megrendelései
 SuppliersOrdersArea=Beszerzési megrendelések
 OrderCard=Megrendelőlap
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Biztosan klónozni szeretné ezt a <b>%s</b> megrendelést?
 DispatchSupplierOrder=Beszerzési megrendelés fogadása %s
 FirstApprovalAlreadyDone=Első jóváhagyás már elvégezve
 SecondApprovalAlreadyDone=Másod jóváhagyás már elvégezve
-SupplierOrderReceivedInDolibarr=Beszerzési megrendelés %s kapott %s
-SupplierOrderSubmitedInDolibarr=%s beszerzési megrendelés benyújtva
+SupplierOrderReceivedInDigitalProspects=Beszerzési megrendelés %s kapott %s
+SupplierOrderSubmitedInDigitalProspects=%s beszerzési megrendelés benyújtva
 SupplierOrderClassifiedBilled=Beszerzési megrendelés %s számlázva
 OtherOrders=Egyéb megrendelések
 ##### Types de contacts #####

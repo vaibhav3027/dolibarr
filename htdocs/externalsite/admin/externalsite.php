@@ -52,8 +52,8 @@ if ($action == 'update')
 	$label  = GETPOST('EXTERNALSITE_LABEL', 'alpha');
 	$exturl = GETPOST('EXTERNALSITE_URL', 'none');
 
-	$i += dolibarr_set_const($db, 'EXTERNALSITE_LABEL', trim($label), 'chaine', 0, '', $conf->entity);
-	$i += dolibarr_set_const($db, 'EXTERNALSITE_URL', trim($exturl), 'chaine', 0, '', $conf->entity);
+	$i += DigitalProspects_set_const($db, 'EXTERNALSITE_LABEL', trim($label), 'chaine', 0, '', $conf->entity);
+	$i += DigitalProspects_set_const($db, 'EXTERNALSITE_URL', trim($exturl), 'chaine', 0, '', $conf->entity);
 
 	if ($i >= 2)
 	{

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=البنك
 MenuBankCash=Banks | Cash
 MenuVariousPayment=مدفوعات متنوعة
@@ -109,7 +109,7 @@ SocialContributionPayment=مدفوعات الضرائب الاجتماعية / �
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=حوالة داخلية
-TransferDesc=Transfer from one account to another, Dolibarr will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
+TransferDesc=Transfer from one account to another, DigitalProspects will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
 TransferFrom=من
 TransferTo=إلى
 TransferFromToDone=التحويل من <b>%s</b>إلى <b>%s</b>من <b>%s</b>%s قد تم تسجيلة.

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - ecm
+# DigitalProspects language file - Source file is en_US - ecm
 ECMNbOfDocs=No. of documents in directory
 ECMSection=Director
 ECMSectionManual=Director Manual
@@ -15,7 +15,7 @@ ECMNbOfSubDir=Număr sub-directoare
 ECMNbOfFilesInSubDir=Număr fișiere în sub-directoare
 ECMCreationUser=Creator
 ECMArea=DMS/ECM area
-ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in Dolibarr.
+ECMAreaDesc=The DMS/ECM (Document Management System / Electronic Content Management) area allows you to save, share and search quickly all kind of documents in DigitalProspects.
 ECMAreaDesc2=* Directoarele automate sunt completate în mod automat atunci când se adaugă documentele din fişa acelui element. <br> * Directoarele manuale poate fi folosite pentru a salva documente ce nu sunt legate de un anumit element.
 ECMSectionWasRemoved=Directorul <b>%s</b> a fost ştears.
 ECMSectionWasCreated=Directory <b>%s</b> has been created.

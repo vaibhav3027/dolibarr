@@ -235,10 +235,10 @@ class FormTicket
 		print '<tr><td><label for="message"><span class="fieldrequired">'.$langs->trans("Message").'</span></label></td><td>';
 
 		// If public form, display more information
-		$toolbarname = 'dolibarr_notes';
+		$toolbarname = 'DigitalProspects_notes';
 		if ($this->ispublic)
 		{
-			$toolbarname = 'dolibarr_details';
+			$toolbarname = 'DigitalProspects_details';
 			print '<div class="warning">'.($conf->global->TICKET_PUBLIC_TEXT_HELP_MESSAGE ? $conf->global->TICKET_PUBLIC_TEXT_HELP_MESSAGE : $langs->trans('TicketPublicPleaseBeAccuratelyDescribe')).'</div>';
 		}
 		include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
@@ -979,7 +979,7 @@ class FormTicket
 			include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
 			$uselocalbrowser = true;
 
-			$doleditor = new DolEditor('mail_intro', $mail_intro, '100%', 90, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_2, 70);
+			$doleditor = new DolEditor('mail_intro', $mail_intro, '100%', 90, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_2, 70);
 
 			$doleditor->Create();
 			print '</td><td class="center">';
@@ -1010,8 +1010,8 @@ class FormTicket
 		}
 
 		print '<tr><td class="tdtop"><label for="message"><span class="fieldrequired">'.$langs->trans("Message").'</span></label></td><td>';
-		//$toolbarname = 'dolibarr_details';
-		$toolbarname = 'dolibarr_notes';
+		//$toolbarname = 'DigitalProspects_details';
+		$toolbarname = 'DigitalProspects_notes';
 		include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
 		$doleditor = new DolEditor('message', $defaultmessage, '100%', 200, $toolbarname, '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_5, 70);
 		$doleditor->Create();
@@ -1030,7 +1030,7 @@ class FormTicket
 
 			print '</td><td>';
 			include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-			$doleditor = new DolEditor('mail_signature', $mail_signature, '100%', 150, 'dolibarr_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_2, 70);
+			$doleditor = new DolEditor('mail_signature', $mail_signature, '100%', 150, 'DigitalProspects_details', '', false, true, $conf->global->FCKEDITOR_ENABLE_SOCIETE, ROWS_2, 70);
 			$doleditor->Create();
 			print '</td><td class="center">';
 			print $form->textwithpicto('', $langs->trans("TicketMessageMailSignatureHelp"), 1, 'help');

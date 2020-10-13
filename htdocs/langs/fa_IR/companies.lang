@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=نام شرکت %s از قبل، وجود داشته است. لطفا نام دیگری برگزینید.
 ErrorSetACountryFirst=ابتدا کشور را تعیین کنید
 SelectThirdParty=انتخاب شخص‌سوم
@@ -12,7 +12,7 @@ MenuNewSupplier=فروشندۀ جدید
 MenuNewPrivateIndividual=فرد خصوصی جدید
 NewCompany=شرکت جدید (مشتری‌احتمالی، مشتری، فروشنده)
 NewThirdParty=شخص‌سوم جدید (مشتری‌احتمالی، مشتری، فروشنده)
-CreateDolibarrThirdPartySupplier=ایجاد شخص‌سوم (فروشنده)
+CreateDigitalProspectsThirdPartySupplier=ایجاد شخص‌سوم (فروشنده)
 CreateThirdPartyOnly=ایجاد شخص‌سوم
 CreateThirdPartyAndContact=ایجاد یک شخص‌سوم + یک طرف‌تماس مولود
 ProspectionArea=منطقۀ موردبازرسی
@@ -347,7 +347,7 @@ CapitalOf=سرمایۀ %s
 EditCompany=ویرایش شرکت
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=چک
-VATIntraCheckDesc=شناسۀ م‌.ب.ا.ا. باید با پیش‌وند کشور بیاید. پیوند <b>%s</b> از خدمات European VAT checker service (VIES) استفاده می‌کند که نیاز به اتصال اینترنتی از سرور Dolibarr دارد
+VATIntraCheckDesc=شناسۀ م‌.ب.ا.ا. باید با پیش‌وند کشور بیاید. پیوند <b>%s</b> از خدمات European VAT checker service (VIES) استفاده می‌کند که نیاز به اتصال اینترنتی از سرور DigitalProspects دارد
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=بررسی شناسۀ م.ب.ا.ا. داخل جامعه‌ای روی وبگاه کمیسیون اروپا
 VATIntraManualCheck=همچنین می‌توانید به‌طور دستی روی وبگاه کمیسیون اروپا بررسی کنید <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=وضعیت مشتریان احتمالی
 NoParentCompany=هیچ‌یک
 ExportCardToFormat=صادرکردن کارت به حالت
 ContactNotLinkedToCompany=طرف‌تماس به هیچ شخص‌سومی متصل نیست
-DolibarrLogin=ورود Dolibarr
-NoDolibarrAccess=دسترسی Dolibarr مقدور نیست
+DigitalProspectsLogin=ورود DigitalProspects
+NoDigitalProspectsAccess=دسترسی DigitalProspects مقدور نیست
 ExportDataset_company_1=شخص‌سوم‌ها (شرکت‌ها/سازمان‌ها/مردم فیزیکی) و مشخصات آن‌ها
 ExportDataset_company_2=طرف‌های تماس و مشخصات آن‌ها
 ImportDataset_company_1=شخص‌سوم‌ها و مشخصات آن‌ها

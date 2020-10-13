@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - website
+# DigitalProspects language file - Source file is en_US - website
 Shortname=Kode
 WebsiteSetupDesc=Opprett de nettstedene du ønsker å bruke her. Deretter går du inn i meny Nettsteder for å redigere dem.
 DeleteWebsite=Slett wedside
@@ -46,13 +46,13 @@ ViewWebsiteInProduction=Vis webside ved hjelp av  hjemme-URL
 SetHereVirtualHost=<u>Bruk med Apache/NGinx/...</u><br>Opprett på webserveren din (Apache, Nginx, ...) en dedikert virtuell vert med PHP aktivert og en rotkatalog på <br><strong>%s</strong>
 ExampleToUseInApacheVirtualHostConfig=Eksempel på Apache virtuelt vertsoppsett:
 YouCanAlsoTestWithPHPS= <u> Bruk med PHP-innebygd server </u> <br> I utviklingsmiljø kan du foretrekke å teste nettstedet med PHP-innebygd webserver (PHP 5.5 nødvendig) ved å kjøre <br> <strong> php -S 0.0.0.0:8080 -t %s </strong>
-YouCanAlsoDeployToAnotherWHP=<u>Kjør nettstedet ditt med en annen leverandør av Dolibarr Hosting</u> <br> Hvis du ikke har en webserver som Apache eller NGinx tilgjengelig på internett, kan du eksportere og importere nettstedet til en annen Dolibarr-forekomst levert av en annen Dolibarr-leverandør som gir full integrasjon med nettstedsmodulen. Du kan finne en liste over noen Dolibarr-vertsleverandører på <a href="https://saas.dolibarr.org" target="_blank">https://saas.dolibarr.org</a>
+YouCanAlsoDeployToAnotherWHP=<u>Kjør nettstedet ditt med en annen leverandør av DigitalProspects Hosting</u> <br> Hvis du ikke har en webserver som Apache eller NGinx tilgjengelig på internett, kan du eksportere og importere nettstedet til en annen DigitalProspects-forekomst levert av en annen DigitalProspects-leverandør som gir full integrasjon med nettstedsmodulen. Du kan finne en liste over noen DigitalProspects-vertsleverandører på <a href="https://saas.DigitalProspects.org" target="_blank">https://saas.DigitalProspects.org</a>
 CheckVirtualHostPerms=Sjekk også at virtuell vert har tillatelse <strong>%s</strong> på filer til <br><strong>%s</strong>
 ReadPerm=Les
 WritePerm=Skriv
 TestDeployOnWeb=Test/distribuer på nett
 PreviewSiteServedByWebServer=<u> Forhåndsvis %s i en ny fane. </u><br><br>%s vil bli servet av en ekstern webserver (som Apache, Nginx, IIS). Du må installere og sette opp denne serveren før du peker på katalogen:<br><strong>%s</strong><br>URL servet av ekstern server:<br><strong>%s</strong>
-PreviewSiteServedByDolibarr=<u> Forhåndsvis %s i en ny fanei.</u><br><br>%s blir servet av Dolibarr-serveren, slik at den ikke trenger at en ekstra webserver (som Apache, Nginx, IIS)  installeres.<br>Ulempen er at nettadressen til sidene ikke er brukervennlig og begynner med banen til Dolibarr. <br> URL servet av Dolibarr:<br><strong>%s</strong> <br> <br> For å bruke din egen eksterne webserver for å betjene dette nettstedet, opprett en virtuell vert på webserveren din som peker på katalogen<br><strong>%s</strong><br>, og skriv deretter inn navnet til denne virtuelle serveren og klikk på den andre forhåndsvisningsknappen .
+PreviewSiteServedByDigitalProspects=<u> Forhåndsvis %s i en ny fanei.</u><br><br>%s blir servet av DigitalProspects-serveren, slik at den ikke trenger at en ekstra webserver (som Apache, Nginx, IIS)  installeres.<br>Ulempen er at nettadressen til sidene ikke er brukervennlig og begynner med banen til DigitalProspects. <br> URL servet av DigitalProspects:<br><strong>%s</strong> <br> <br> For å bruke din egen eksterne webserver for å betjene dette nettstedet, opprett en virtuell vert på webserveren din som peker på katalogen<br><strong>%s</strong><br>, og skriv deretter inn navnet til denne virtuelle serveren og klikk på den andre forhåndsvisningsknappen .
 VirtualHostUrlNotDefined=URL til ekstern webserver ikke definert
 NoPageYet=Ingen sider ennå
 YouCanCreatePageOrImportTemplate=Du kan opprette en ny side eller importere en full nettsidemal

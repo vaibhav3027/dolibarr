@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=銀行
 MenuBankCash=銀行|現金
 MenuVariousPayment=雜項付款
@@ -109,7 +109,7 @@ SocialContributionPayment=社會/財務稅負繳款單
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=內部轉帳
-TransferDesc=從一個帳戶轉移到另一個帳戶，Dolibarr將寫入兩個記錄（來源帳戶中的借款方和目標帳戶中的貸款方）。此交易將使用相同的金額（簽名,標籤和日期除外）
+TransferDesc=從一個帳戶轉移到另一個帳戶，DigitalProspects將寫入兩個記錄（來源帳戶中的借款方和目標帳戶中的貸款方）。此交易將使用相同的金額（簽名,標籤和日期除外）
 TransferFrom=從
 TransferTo=至
 TransferFromToDone=從<b>%s</b>到<b>%s</b>的<b>%s</b>%s轉帳已記錄。

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 # Note for Chinese:
 # msungstdlight or cid0ct are for traditional Chinese (traditional does not render with Ubuntu pdf reader)
@@ -59,8 +59,8 @@ ErrorNoRequestInError=Žádný chybný požadavek
 ErrorServiceUnavailableTryLater=Služba momentálně není k dispozici. Zkuste to později znovu.
 ErrorDuplicateField=Duplicitní hodnota v poli
 ErrorSomeErrorWereFoundRollbackIsDone=Byly nalezeny některé chyby. Změny byly vráceny zpět.
-ErrorConfigParameterNotDefined=Parametr <b> %s </b> není definován v konfiguračním souboru Dolibarr <b> conf.php </b>.
-ErrorCantLoadUserFromDolibarrDatabase=Nepodařilo se najít uživatele <b>%s</b> v databázi Dolibarr.
+ErrorConfigParameterNotDefined=Parametr <b> %s </b> není definován v konfiguračním souboru DigitalProspects <b> conf.php </b>.
+ErrorCantLoadUserFromDigitalProspectsDatabase=Nepodařilo se najít uživatele <b>%s</b> v databázi DigitalProspects.
 ErrorNoVATRateDefinedForSellerCountry=Chyba, pro zemi '%s' nejsou definovány žádné sazby DPH.
 ErrorNoSocialContributionForSellerCountry=Chyba, žádný typ sociálních / fiskálních daní není definován pro zemi '%s'.
 ErrorFailedToSaveFile=Chyba, nepodařilo se uložit soubor.
@@ -90,7 +90,7 @@ RecordDeleted=Záznam smazán
 RecordGenerated=Záznam byl vygenerován
 LevelOfFeature=Úroveň vlastností
 NotDefined=Není definováno
-DolibarrInHttpAuthenticationSoPasswordUseless=Dolibarr režim ověřování je nastaven na <b> %s </b> v konfiguračním souboru <b> conf.php </b>. <br> Znamená to, že databáze hesel je externí k Dolibarr, takže změna tohoto pole nemusí mít žádný vliv.
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=DigitalProspects režim ověřování je nastaven na <b> %s </b> v konfiguračním souboru <b> conf.php </b>. <br> Znamená to, že databáze hesel je externí k DigitalProspects, takže změna tohoto pole nemusí mít žádný vliv.
 Administrator=Správce
 Undefined=Nedefinováno
 PasswordForgotten=Zapomněli jste heslo?
@@ -108,16 +108,16 @@ DatabaseTypeManager=Správce typu databáze
 RequestLastAccessInError=Žádost o poslední přístup do databáze v případě chyby
 ReturnCodeLastAccessInError=Návratový kód pro přístup k databázi v případě chyby
 InformationLastAccessInError=Informace pro poslední přístup do databáze v případě chyby
-DolibarrHasDetectedError=Dolibarr zjistil technickou chybu
-YouCanSetOptionDolibarrMainProdToZero=Můžete číst soubor protokolu nebo nastavit volbu $ dolibarr_main_prod na "0" ve vašem souboru konfigurace, abyste získali další informace.
-InformationToHelpDiagnose=Tyto informace mohou být užitečné pro diagnostické účely (můžete nastavit volbu $ dolibarr_main_prod na '1' pro odstranění takových upozornění)
+DigitalProspectsHasDetectedError=DigitalProspects zjistil technickou chybu
+YouCanSetOptionDigitalProspectsMainProdToZero=Můžete číst soubor protokolu nebo nastavit volbu $ DigitalProspects_main_prod na "0" ve vašem souboru konfigurace, abyste získali další informace.
+InformationToHelpDiagnose=Tyto informace mohou být užitečné pro diagnostické účely (můžete nastavit volbu $ DigitalProspects_main_prod na '1' pro odstranění takových upozornění)
 MoreInformation=Více informací
 TechnicalInformation=Technická informace
 TechnicalID=Technické ID
 LineID=ID řádku
 NotePublic=Poznámka (veřejné)
 NotePrivate=Poznámka (soukromé)
-PrecisionUnitIsLimitedToXDecimals=Dolibarr byl nastaven pro limit přesnosti jednotkových cen na <b>%s</b> desetinných míst.
+PrecisionUnitIsLimitedToXDecimals=DigitalProspects byl nastaven pro limit přesnosti jednotkových cen na <b>%s</b> desetinných míst.
 DoTest=Test
 ToFilter=Filtr
 NoFilter=Žádný filtr
@@ -475,8 +475,8 @@ Generate=Generovat
 Duration=Trvání
 TotalDuration=Celková doba trvání
 Summary=Shrnutí
-DolibarrStateBoard=Statistika databází
-DolibarrWorkBoard=Otevřete položky
+DigitalProspectsStateBoard=Statistika databází
+DigitalProspectsWorkBoard=Otevřete položky
 NoOpenedElementToProcess=Žádný otevřený prvek ke zpracování
 Available=Dostupný
 NotYetAvailable=Zatím není k dispozici
@@ -703,7 +703,7 @@ MenuECM=Dokumenty
 MenuAWStats=AW Statistiky
 MenuMembers=Členové
 MenuAgendaGoogle=Google agenda
-ThisLimitIsDefinedInSetup=Dolibarr limit (menu Domů-nastavení-zabezpečení): %s Kb, PHP limit: %s Kb
+ThisLimitIsDefinedInSetup=DigitalProspects limit (menu Domů-nastavení-zabezpečení): %s Kb, PHP limit: %s Kb
 NoFileFound=Žádné dokumenty nejsou uložené v tomto adresáři
 CurrentUserLanguage=Aktuální jazyk
 CurrentTheme=Aktuální téma
@@ -736,7 +736,7 @@ PrintContentArea=Zobrazit stránku pro tisk hlavní obsahové části
 MenuManager=Manager nabídky
 WarningYouAreInMaintenanceMode=Upozorňujeme, že jste v režimu údržby: v tomto režimu je povoleno používat pouze přihlašovací jméno <b> %s </b>.
 CoreErrorTitle=Systémová chyba
-CoreErrorMessage=Je nám líto, došlo k chybě. Obraťte se na správce systému a zkontrolujte protokoly nebo zakázat $ dolibarr_main_prod=1 pro získání více informací.
+CoreErrorMessage=Je nám líto, došlo k chybě. Obraťte se na správce systému a zkontrolujte protokoly nebo zakázat $ DigitalProspects_main_prod=1 pro získání více informací.
 CreditCard=Kreditní karta
 ValidatePayment=Ověření platby
 CreditOrDebitCard=Kreditní nebo debetní karta
@@ -875,7 +875,7 @@ Calendar=Kalendář
 GroupBy=Skupina vytvořená...
 ViewFlatList=Zobrazit seznam plochý
 RemoveString=Odstraňte řetězec ‚%s‘
-SomeTranslationAreUncomplete=Některé nabízené jazyky mohou být pouze částečně přeloženy nebo mohou obsahovat chyby. Český překlad je jen základní a orientační, může být nepřesný a mimo kontext. Pomozte prosím opravit svůj jazyk registrováním na <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ </a> a přidejte své vylepšení.
+SomeTranslationAreUncomplete=Některé nabízené jazyky mohou být pouze částečně přeloženy nebo mohou obsahovat chyby. Český překlad je jen základní a orientační, může být nepřesný a mimo kontext. Pomozte prosím opravit svůj jazyk registrováním na <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ </a> a přidejte své vylepšení.
 DirectDownloadLink=Přímý odkaz ke stažení (veřejné / externí)
 DirectDownloadInternalLink=Přímý odkaz na stažení (musí být zaznamenáván a potřebuje oprávnění)
 Download=Stažení

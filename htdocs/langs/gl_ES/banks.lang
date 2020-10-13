@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=Banco
 MenuBankCash=Bancos | Caixa
 MenuVariousPayment=Pagos varios
@@ -109,7 +109,7 @@ SocialContributionPayment=Pago de imposto social/fiscal
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=Transferencia interna
-TransferDesc=Ao transferir dunha conta a outra, Dolibarr crea dous rexistros contables (un de débito na conta orixe e un de crédito na conta destino). Do mesmo importe (salvo o signo), a etiqueta e a data serán usadas para esta transacción.
+TransferDesc=Ao transferir dunha conta a outra, DigitalProspects crea dous rexistros contables (un de débito na conta orixe e un de crédito na conta destino). Do mesmo importe (salvo o signo), a etiqueta e a data serán usadas para esta transacción.
 TransferFrom=De
 TransferTo=A
 TransferFromToDone=A transferencia de <b>%s</b> hacia <b>%s</b> de <b>%s</b> %s foi rexistrada.

@@ -1,5 +1,5 @@
 ; ----- DoliWamp.iss ---------------------------------------------------------------------
-; Script to build an auto installer for Dolibarr.
+; Script to build an auto installer for DigitalProspects.
 ; Works with InnoSetup 5.4.0 (a)
 ; Idea from WampServer 2 (http://www.wampserver.com)
 ;----------------------------------------------------------------------------------------
@@ -8,7 +8,7 @@
 ; package contains only one user called root with no password.
 ; For this, you can edit the mysql.user table of the source database to keep
 ; only the root user with no password, stop server and catch
-; files user.MY* to put them in the Dolibarr build/exe/doliwamp/mysql directory.
+; files user.MY* to put them in the DigitalProspects build/exe/doliwamp/mysql directory.
 ;
 ;----------------------------------------------------------------------------------------
 
@@ -23,25 +23,25 @@ OutputBaseFilename=__FILENAMEEXEDOLIWAMP__
 ; ----- End of change
 ;OutputManifestFile=build\doliwampbuild.log
 ; Define full path from which all relative path are defined
-; You must modify this to put here your dolibarr root directory
-;SourceDir=Z:\home\ldestailleur\git\dolibarrxxx
+; You must modify this to put here your DigitalProspects root directory
+;SourceDir=Z:\home\ldestailleur\git\DigitalProspectsxxx
 SourceDir=..\..\..
 AppId=doliwamp
 AppPublisher=NLTechno
 AppPublisherURL=https://www.nltechno.com
-AppSupportURL=https://www.dolibarr.org
-AppUpdatesURL=https://www.dolibarr.org
-AppComments=DoliWamp includes Dolibarr, Apache, PHP and Mysql software.
+AppSupportURL=https://www.DigitalProspects.org
+AppUpdatesURL=https://www.DigitalProspects.org
+AppComments=DoliWamp includes DigitalProspects, Apache, PHP and Mysql software.
 AppCopyright=Copyright (C) 2008-2020 Laurent Destailleur (NLTechno), Fabian Rodriguez (Le Goût du Libre)
-DefaultDirName=c:\dolibarr
-DefaultGroupName=Dolibarr
+DefaultDirName=c:\DigitalProspects
+DefaultGroupName=DigitalProspects
 ;LicenseFile=COPYING
 ;Compression=none
 Compression=lzma
 SolidCompression=yes
 WizardImageFile=build\exe\doliwamp\doliwamp.bmp
 WizardSmallImageFile=build\exe\doliwamp\doliwampsmall.bmp
-SetupIconFile=doc\images\dolibarr_favicon.ico
+SetupIconFile=doc\images\DigitalProspects_favicon.ico
 ;To say the installer must be ran as admin
 PrivilegesRequired=admin
 DisableProgramGroupPage=yes
@@ -80,7 +80,7 @@ Name: "desktopicon"; Description: {cm:CreateDesktopIcon}; GroupDescription: {cm:
 [Dirs]
 Name: "{app}\logs"
 Name: "{app}\tmp"
-Name: "{app}\dolibarr_documents"
+Name: "{app}\DigitalProspects_documents"
 Name: "{app}\bin\apache\apache2.4.41\logs"
 
 [Files]
@@ -117,16 +117,16 @@ Source: "C:\wamp64\bin\mariadb\mariadb10.4.10\*.*"; DestDir: "{app}\bin\mariadb\
 ; We must copy them because the tool mysql_install_db.exe to generate them at first install does not return to prompt so make install hang
 ;Source: "build\exe\doliwamp\mysql\*.*"; DestDir: "{app}\bin\mariadb\data\mysql"; Flags: onlyifdoesntexist ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db"
 
-; Dolibarr
-Source: "htdocs\*.*"; DestDir: "{app}\www\dolibarr\htdocs"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,custom\*,custom2\*,documents\*,includes\ckeditor\_source\*,includes\savant\*,includes\phpmailer\*,jquery\plugins\template\*,nltechno*\*,sabre\sabre\*\tests,PHPExcel\Shared\PDF\*,PHPExcel\Shared\PCLZip\*,tcpdf\fonts\dejavu-fonts-ttf-2.33\*,tcpdf\fonts\freefont-20100919\*,tcpdf\fonts\utils\*,*\conf.php,*\conf.php.mysql,*\conf.php.old,*\conf.php.postgres,*\conf.php.sav,*\install.forced.php"
-Source: "dev\*.*"; DestDir: "{app}\www\dolibarr\dev"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,dbmodel\*,fpdf\*,initdata\*,initdemo\*,iso-normes\*,licence\*,phpcheckstyle\*,phpunit\*,samples\*,test\*,uml\*,vagrant\*,xdebug\*"
-Source: "doc\*.*"; DestDir: "{app}\www\dolibarr\doc"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,wiki\*,plaquette\*,dev\*,images\dolibarr_screenshot2.png,images\dolibarr_screenshot3.png,images\dolibarr_screenshot4.png,images\dolibarr_screenshot5.png,images\dolibarr_screenshot6.png,images\dolibarr_screenshot7.png,images\dolibarr_screenshot8.png,images\dolibarr_screenshot9.png,images\dolibarr_screenshot10.png,images\dolibarr_screenshot11.png,images\dolibarr_screenshot12.png"
-Source: "scripts\*.*"; DestDir: "{app}\www\dolibarr\scripts"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,product\materiel.net.php,product\import-product.php"
-Source: "*.*"; DestDir: "{app}\www\dolibarr"; Flags: ignoreversion; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,default.properties,install.lock"
+; DigitalProspects
+Source: "htdocs\*.*"; DestDir: "{app}\www\DigitalProspects\htdocs"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,custom\*,custom2\*,documents\*,includes\ckeditor\_source\*,includes\savant\*,includes\phpmailer\*,jquery\plugins\template\*,nltechno*\*,sabre\sabre\*\tests,PHPExcel\Shared\PDF\*,PHPExcel\Shared\PCLZip\*,tcpdf\fonts\dejavu-fonts-ttf-2.33\*,tcpdf\fonts\freefont-20100919\*,tcpdf\fonts\utils\*,*\conf.php,*\conf.php.mysql,*\conf.php.old,*\conf.php.postgres,*\conf.php.sav,*\install.forced.php"
+Source: "dev\*.*"; DestDir: "{app}\www\DigitalProspects\dev"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,dbmodel\*,fpdf\*,initdata\*,initdemo\*,iso-normes\*,licence\*,phpcheckstyle\*,phpunit\*,samples\*,test\*,uml\*,vagrant\*,xdebug\*"
+Source: "doc\*.*"; DestDir: "{app}\www\DigitalProspects\doc"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,wiki\*,plaquette\*,dev\*,images\DigitalProspects_screenshot2.png,images\DigitalProspects_screenshot3.png,images\DigitalProspects_screenshot4.png,images\DigitalProspects_screenshot5.png,images\DigitalProspects_screenshot6.png,images\DigitalProspects_screenshot7.png,images\DigitalProspects_screenshot8.png,images\DigitalProspects_screenshot9.png,images\DigitalProspects_screenshot10.png,images\DigitalProspects_screenshot11.png,images\DigitalProspects_screenshot12.png"
+Source: "scripts\*.*"; DestDir: "{app}\www\DigitalProspects\scripts"; Flags: ignoreversion recursesubdirs; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,product\materiel.net.php,product\import-product.php"
+Source: "*.*"; DestDir: "{app}\www\DigitalProspects"; Flags: ignoreversion; Excludes: ".gitignore,.project,CVS\*,Thumbs.db,default.properties,install.lock"
 
 ; Config files
 Source: "build\exe\doliwamp\phpmyadmin.conf.install"; DestDir: "{app}\alias"; Flags: ignoreversion;
-Source: "build\exe\doliwamp\dolibarr.conf.install"; DestDir: "{app}\alias"; Flags: ignoreversion;
+Source: "build\exe\doliwamp\DigitalProspects.conf.install"; DestDir: "{app}\alias"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\config.inc.php.install"; DestDir: "{app}\apps\phpmyadmin4.1.14"; Flags: ignoreversion;
 ;Source: "build\exe\doliwamp\httpd.conf.install"; DestDir: "{app}\bin\apache\apache2.4.9\conf"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\httpd.conf.install"; DestDir: "{app}\bin\apache\apache2.4.41\conf"; Flags: ignoreversion;
@@ -135,10 +135,10 @@ Source: "build\exe\doliwamp\my.ini.install"; DestDir: "{app}\bin\mariadb\mariadb
 ;Source: "build\exe\doliwamp\php.ini.install"; DestDir: "{app}\bin\php\php5.5.12"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\php.ini.install"; DestDir: "{app}\bin\php\php7.3.12"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\index.php.install"; DestDir: "{app}\www"; Flags: ignoreversion;
-Source: "build\exe\doliwamp\install.forced.php.install"; DestDir: "{app}\www\dolibarr\htdocs\install"; Flags: ignoreversion;
+Source: "build\exe\doliwamp\install.forced.php.install"; DestDir: "{app}\www\DigitalProspects\htdocs\install"; Flags: ignoreversion;
 Source: "build\exe\doliwamp\openssl.conf"; DestDir: "{app}"; Flags: ignoreversion;
-Source: "build\exe\doliwamp\ca_demo_dolibarr.crt"; DestDir: "{app}"; Flags: ignoreversion;
-Source: "build\exe\doliwamp\ca_demo_dolibarr.key"; DestDir: "{app}"; Flags: ignoreversion;
+Source: "build\exe\doliwamp\ca_demo_DigitalProspects.crt"; DestDir: "{app}"; Flags: ignoreversion;
+Source: "build\exe\doliwamp\ca_demo_DigitalProspects.key"; DestDir: "{app}"; Flags: ignoreversion;
 
 ; Licence
 Source: "COPYRIGHT"; DestDir: "{app}"; Flags: ignoreversion;
@@ -146,18 +146,18 @@ Source: "COPYRIGHT"; DestDir: "{app}"; Flags: ignoreversion;
 
 
 [Icons]
-Name: "{group}\Dolibarr ERP-CRM"; Filename: "{app}\rundoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\dolibarr.ico
-Name: "{group}\Tools\Help center"; Filename: "{app}\rundolihelp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\dolihelp.ico
-Name: "{group}\Tools\Host your ERP-CRM in the Cloud"; Filename: "http://wiki.dolibarr.org/index.php/Cloud_Solutions"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\dolihelp.ico
-Name: "{group}\Tools\Start DoliWamp server"; Filename: "{app}\startdoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\doliwampon.ico
-Name: "{group}\Tools\Stop DoliWamp server"; Filename: "{app}\stopdoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\doliwampoff.ico
-Name: "{group}\Tools\Admin DoliWamp server"; Filename: "{app}\rundoliadmin.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\dolibarr\doc\images\doliadmin.ico
+Name: "{group}\DigitalProspects ERP-CRM"; Filename: "{app}\rundoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\DigitalProspects.ico
+Name: "{group}\Tools\Help center"; Filename: "{app}\rundolihelp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\dolihelp.ico
+Name: "{group}\Tools\Host your ERP-CRM in the Cloud"; Filename: "http://wiki.DigitalProspects.org/index.php/Cloud_Solutions"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\dolihelp.ico
+Name: "{group}\Tools\Start DoliWamp server"; Filename: "{app}\startdoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\doliwampon.ico
+Name: "{group}\Tools\Stop DoliWamp server"; Filename: "{app}\stopdoliwamp.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\doliwampoff.ico
+Name: "{group}\Tools\Admin DoliWamp server"; Filename: "{app}\rundoliadmin.bat"; WorkingDir: "{app}"; IconFilename: {app}\www\DigitalProspects\doc\images\doliadmin.ico
 Name: "{group}\Tools\Uninstall DoliWamp"; Filename: "{app}\unins000.exe"; WorkingDir: "{app}"; IconFilename: {app}\uninstall_services.bat
-Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\Dolibarr"; WorkingDir: "{app}"; Filename: "{app}\rundoliwamp.bat"; Tasks: quicklaunchicon; IconFilename: {app}\www\dolibarr\doc\images\dolibarr.ico
-Name: "{userdesktop}\Dolibarr ERP-CRM"; Filename: "{app}\rundoliwamp.bat"; WorkingDir: "{app}"; Tasks: desktopicon; IconFilename: {app}\www\dolibarr\doc\images\dolibarr.ico
-Name: "{userdesktop}\Dolibarr Help center"; Filename: "{app}\rundolihelp.bat"; WorkingDir: "{app}"; Tasks: desktopicon; IconFilename: {app}\www\dolibarr\doc\images\dolihelp.ico
+Name: "{userappdata}\Microsoft\Internet Explorer\Quick Launch\DigitalProspects"; WorkingDir: "{app}"; Filename: "{app}\rundoliwamp.bat"; Tasks: quicklaunchicon; IconFilename: {app}\www\DigitalProspects\doc\images\DigitalProspects.ico
+Name: "{userdesktop}\DigitalProspects ERP-CRM"; Filename: "{app}\rundoliwamp.bat"; WorkingDir: "{app}"; Tasks: desktopicon; IconFilename: {app}\www\DigitalProspects\doc\images\DigitalProspects.ico
+Name: "{userdesktop}\DigitalProspects Help center"; Filename: "{app}\rundolihelp.bat"; WorkingDir: "{app}"; Tasks: desktopicon; IconFilename: {app}\www\DigitalProspects\doc\images\dolihelp.ico
 ;Start of servers fromstartup menu disabled as services are auto
-;Name: "{userstartup}\DoliWamp server"; Filename: "{app}\startdoliwamp.bat"; WorkingDir: "{app}"; Flags: runminimized; IconFilename: {app}\www\dolibarr\doc\images\dolibarr.ico
+;Name: "{userstartup}\DoliWamp server"; Filename: "{app}\startdoliwamp.bat"; WorkingDir: "{app}"; Flags: runminimized; IconFilename: {app}\www\DigitalProspects\doc\images\DigitalProspects.ico
 
 
 [Registry]
@@ -258,7 +258,7 @@ begin
 
 
   //LoadStringFromFile (srcFile, srcContents);
-  //posvalue=Pos('$dolibarr_main_db_port=', srcFile);
+  //posvalue=Pos('$DigitalProspects_main_db_port=', srcFile);
 
   if RegQueryStringValue(HKEY_LOCAL_MACHINE, 'SOFTWARE\NLTechno\DoliWamp','smtpServer', value) then
   begin
@@ -389,8 +389,8 @@ begin
     // Install of service and stop/start scripts are already rebuild by installer.
 //      FileCopy(exedirold+'/my.ini',exedirnew+'/my.ini', true);
 
-	// We should not need this, also databases may not be called dolibarr
-//      res := RenameFile(ibdata1dirold+'/dolibarr',ibdata1dirnew+'/dolibarr');
+	// We should not need this, also databases may not be called DigitalProspects
+//      res := RenameFile(ibdata1dirold+'/DigitalProspects',ibdata1dirnew+'/DigitalProspects');
 //      if res then
 //      begin
 //          themessage := CustomMessage('OldVersionFoundAndMoveInNew');
@@ -428,7 +428,7 @@ begin
 
 
     // Remove lock file
-    lockfile := pathWithSlashes+'/dolibarr_documents/install.lock';
+    lockfile := pathWithSlashes+'/DigitalProspects_documents/install.lock';
     if FileExists (lockfile) and not DeleteFile(lockfile) then
     begin
       themessage := FmtMessage(CustomMessage('FailedToDeleteLock'),[pathWithSlashes]);
@@ -437,7 +437,7 @@ begin
 
 
 		// Check if parameters already defined in conf.php file
-		srcFile := pathWithSlashes+'/www/dolibarr/htdocs/conf/conf.php';
+		srcFile := pathWithSlashes+'/www/DigitalProspects/htdocs/conf/conf.php';
 		if not FileExists (srcFile) then
 		begin
 		    firstinstall := true;
@@ -657,11 +657,11 @@ begin
 		
 		
 		    //----------------------------------------------
-		    // Create file alias dolibarr (if not exists)
+		    // Create file alias DigitalProspects (if not exists)
 		    //----------------------------------------------
 		
-		    destFile := pathWithSlashes+'/alias/dolibarr.conf';
-		    srcFile := pathWithSlashes+'/alias/dolibarr.conf.install';
+		    destFile := pathWithSlashes+'/alias/DigitalProspects.conf';
+		    srcFile := pathWithSlashes+'/alias/DigitalProspects.conf.install';
 		
 		    if FileExists(srcFile) then
 		    begin
@@ -800,11 +800,11 @@ begin
 		
 		
 		    //----------------------------------------------
-		    // Create file dolibarr parametres predefinis install web (if not exists)
+		    // Create file DigitalProspects parametres predefinis install web (if not exists)
 		    //----------------------------------------------
 		
-		    destFile := pathWithSlashes+'/www/dolibarr/htdocs/install/install.forced.php';
-		    srcFile := pathWithSlashes+'/www/dolibarr/htdocs/install/install.forced.php.install';
+		    destFile := pathWithSlashes+'/www/DigitalProspects/htdocs/install/install.forced.php';
+		    srcFile := pathWithSlashes+'/www/DigitalProspects/htdocs/install/install.forced.php.install';
 		
 		    if not FileExists (destFile) and FileExists (srcFile) then
 		    begin
@@ -1076,7 +1076,7 @@ end;
 
 
 [Run]
-; Launch Dolibarr in browser. This is run after Wizard because of postinstall flag
+; Launch DigitalProspects in browser. This is run after Wizard because of postinstall flag
 Filename: "{app}\rundoliwamp.bat"; Description: {cm:LaunchNow}; Flags: shellexec postinstall skipifsilent runhidden
 
 
@@ -1092,7 +1092,7 @@ Type: filesandordirs; Name: "{app}\lang"
 Type: filesandordirs; Name: "{app}\logs"
 Type: filesandordirs; Name: "{app}\scripts"
 Type: filesandordirs; Name: "{app}\tmp"
-Type: filesandordirs; Name: "{app}\www\dolibarr"
+Type: filesandordirs; Name: "{app}\www\DigitalProspects"
 
 
 [UninstallRun]

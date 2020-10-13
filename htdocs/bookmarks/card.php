@@ -163,7 +163,7 @@ if ($action == 'create')
 	dol_set_focus('#titlebookmark');
 
 	// Url
-	print '<tr><td class="fieldrequired">'.$langs->trans("UrlOrLink").'</td><td><input class="flat quatrevingtpercent" name="url" value="'.dol_escape_htmltag($url).'"></td><td class="hideonsmartphone">'.$langs->trans("UseAnExternalHttpLinkOrRelativeDolibarrLink").'</td></tr>';
+	print '<tr><td class="fieldrequired">'.$langs->trans("UrlOrLink").'</td><td><input class="flat quatrevingtpercent" name="url" value="'.dol_escape_htmltag($url).'"></td><td class="hideonsmartphone">'.$langs->trans("UseAnExternalHttpLinkOrRelativeDigitalProspectsLink").'</td></tr>';
 
 	// Target
 	print '<tr><td>'.$langs->trans("BehaviourOnClick").'</td><td>';

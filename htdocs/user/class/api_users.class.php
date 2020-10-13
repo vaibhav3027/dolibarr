@@ -25,9 +25,9 @@ require_once DOL_DOCUMENT_ROOT.'/user/class/usergroup.class.php';
  * API class for users
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class Users extends DolibarrApi
+class Users extends DigitalProspectsApi
 {
 	/**
 	 *
@@ -73,12 +73,12 @@ class Users extends DolibarrApi
 
 	    $obj_ret = array();
 
-		if (!DolibarrApiAccess::$user->rights->user->user->lire) {
+		if (!DigitalProspectsApiAccess::$user->rights->user->user->lire) {
 	        throw new RestException(401, "You are not allowed to read list of users");
 	    }
 
 	    // case of external user, $societe param is ignored and replaced by user's socid
-	    //$socid = DolibarrApiAccess::$user->socid ? DolibarrApiAccess::$user->socid : $societe;
+	    //$socid = DigitalProspectsApiAccess::$user->socid ? DigitalProspectsApiAccess::$user->socid : $societe;
 
 	    $sql = "SELECT t.rowid";
 	    $sql .= " FROM ".MAIN_DB_PREFIX."user as t";
@@ -97,12 +97,12 @@ class Users extends DolibarrApi
 	    // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 	    $sql .= $db->order($sortfield, $sortorder);
@@ -154,7 +154,7 @@ class Users extends DolibarrApi
 	 */
     public function get($id, $includepermissions = 0)
     {
-		//if (!DolibarrApiAccess::$user->rights->user->user->lire) {
+		//if (!DigitalProspectsApiAccess::$user->rights->user->user->lire) {
 			//throw new RestException(401);
 		//}
 
@@ -164,9 +164,9 @@ class Users extends DolibarrApi
 			throw new RestException(404, 'User not found');
 		}
 
-		if (!DolibarrApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
+		if (!DigitalProspectsApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
 		{
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
 		if ($includepermissions) {
@@ -188,15 +188,15 @@ class Users extends DolibarrApi
      */
     public function getInfo()
     {
-        $apiUser = DolibarrApiAccess::$user;
+        $apiUser = DigitalProspectsApiAccess::$user;
 
         $result = $this->useraccount->fetch($apiUser->id);
         if (!$result) {
             throw new RestException(404, 'User not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('user', $this->useraccount->id, 'user')) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('user', $this->useraccount->id, 'user')) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $usergroup = new UserGroup($this->db);
@@ -219,7 +219,7 @@ class Users extends DolibarrApi
     public function post($request_data = null)
     {
 	    // check user authorization
-	    //if(! DolibarrApiAccess::$user->rights->user->creer) {
+	    //if(! DigitalProspectsApiAccess::$user->rights->user->creer) {
 	    //   throw new RestException(401, "User creation not allowed");
 	    //}
 	    // check mandatory fields
@@ -235,7 +235,7 @@ class Users extends DolibarrApi
 	          $this->useraccount->$field = $value;
 	    }
 
-	    if ($this->useraccount->create(DolibarrApiAccess::$user) < 0) {
+	    if ($this->useraccount->create(DigitalProspectsApiAccess::$user) < 0) {
              throw new RestException(500, 'Error creating', array_merge(array($this->useraccount->error), $this->useraccount->errors));
 	    }
 	    return $this->useraccount->id;
@@ -253,7 +253,7 @@ class Users extends DolibarrApi
 	 */
     public function put($id, $request_data = null)
     {
-		//if (!DolibarrApiAccess::$user->rights->user->user->creer) {
+		//if (!DigitalProspectsApiAccess::$user->rights->user->user->creer) {
 			//throw new RestException(401);
 		//}
 
@@ -263,9 +263,9 @@ class Users extends DolibarrApi
 			throw new RestException(404, 'Account not found');
 		}
 
-		if (!DolibarrApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
+		if (!DigitalProspectsApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
 		{
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
 		foreach ($request_data as $field => $value)
@@ -285,7 +285,7 @@ class Users extends DolibarrApi
 
 		// If there is no error, update() returns the number of affected
 		// rows so if the update is a no op, the return value is zezo.
-		if ($this->useraccount->update(DolibarrApiAccess::$user) >= 0)
+		if ($this->useraccount->update(DigitalProspectsApiAccess::$user) >= 0)
 		{
 			return $this->get($id);
 		}
@@ -311,7 +311,7 @@ class Users extends DolibarrApi
 	{
 		$obj_ret = array();
 
-		if (!DolibarrApiAccess::$user->rights->user->user->lire) {
+		if (!DigitalProspectsApiAccess::$user->rights->user->user->lire) {
 			throw new RestException(403);
 		}
 
@@ -346,7 +346,7 @@ class Users extends DolibarrApi
 
 		global $conf;
 
-		//if (!DolibarrApiAccess::$user->rights->user->user->supprimer) {
+		//if (!DigitalProspectsApiAccess::$user->rights->user->user->supprimer) {
 			//throw new RestException(401);
 		//}
 		$result = $this->useraccount->fetch($id);
@@ -355,12 +355,12 @@ class Users extends DolibarrApi
 			throw new RestException(404, 'User not found');
 		}
 
-		if (!DolibarrApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
+		if (!DigitalProspectsApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
 		{
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
 
-		if (!empty($conf->multicompany->enabled) && !empty($conf->global->MULTICOMPANY_TRANSVERSE_MODE) && !empty(DolibarrApiAccess::$user->admin) && empty(DolibarrApiAccess::$user->entity))
+		if (!empty($conf->multicompany->enabled) && !empty($conf->global->MULTICOMPANY_TRANSVERSE_MODE) && !empty(DigitalProspectsApiAccess::$user->admin) && empty(DigitalProspectsApiAccess::$user->entity))
 		{
 			$entity = (!empty($entity) ? $entity : $conf->entity);
 		}
@@ -368,7 +368,7 @@ class Users extends DolibarrApi
 		{
 			// When using API, action is done on entity of logged user because a user of entity X with permission to create user should not be able to
 			// hack the security by giving himself permissions on another entity.
-			$entity = (DolibarrApiAccess::$user->entity > 0 ? DolibarrApiAccess::$user->entity : $conf->entity);
+			$entity = (DigitalProspectsApiAccess::$user->entity > 0 ? DigitalProspectsApiAccess::$user->entity : $conf->entity);
 		}
 
 		$result = $this->useraccount->SetInGroup($group, $entity);
@@ -401,12 +401,12 @@ class Users extends DolibarrApi
 
 	    $obj_ret = array();
 
-		if (!DolibarrApiAccess::$user->rights->user->group_advance->read) {
+		if (!DigitalProspectsApiAccess::$user->rights->user->group_advance->read) {
 	        throw new RestException(401, "You are not allowed to read list of groups");
 	    }
 
 	    // case of external user, $societe param is ignored and replaced by user's socid
-	    //$socid = DolibarrApiAccess::$user->socid ? DolibarrApiAccess::$user->socid : $societe;
+	    //$socid = DigitalProspectsApiAccess::$user->socid ? DigitalProspectsApiAccess::$user->socid : $societe;
 
 	    $sql = "SELECT t.rowid";
 	    $sql .= " FROM ".MAIN_DB_PREFIX."usergroup as t";
@@ -415,12 +415,12 @@ class Users extends DolibarrApi
 	    // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
 	        $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
 	    $sql .= $db->order($sortfield, $sortorder);
@@ -475,7 +475,7 @@ class Users extends DolibarrApi
     {
 	    global $db, $conf;
 
-		if (!DolibarrApiAccess::$user->rights->user->group_advance->read) {
+		if (!DigitalProspectsApiAccess::$user->rights->user->group_advance->read) {
 	        throw new RestException(401, "You are not allowed to read groups");
 	    }
 
@@ -498,7 +498,7 @@ class Users extends DolibarrApi
 	 */
     public function delete($id)
     {
-		//if (!DolibarrApiAccess::$user->rights->user->user->supprimer) {
+		//if (!DigitalProspectsApiAccess::$user->rights->user->user->supprimer) {
 			//throw new RestException(401);
 		//}
 		$result = $this->useraccount->fetch($id);
@@ -507,12 +507,12 @@ class Users extends DolibarrApi
 			throw new RestException(404, 'User not found');
 		}
 
-		if (!DolibarrApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
+		if (!DigitalProspectsApi::_checkAccessToResource('user', $this->useraccount->id, 'user'))
 		{
-			throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+			throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
 		}
         $this->useraccount->oldcopy = clone $this->useraccount;
-		return $this->useraccount->delete(DolibarrApiAccess::$user);
+		return $this->useraccount->delete(DigitalProspectsApiAccess::$user);
 	}
 
     // phpcs:disable PEAR.NamingConventions.ValidFunctionName.PublicUnderscore
@@ -567,8 +567,8 @@ class Users extends DolibarrApi
 	    unset($object->facebook);
 	    unset($object->linkedin);
 
-	    $canreadsalary = ((!empty($conf->salaries->enabled) && !empty(DolibarrApiAccess::$user->rights->salaries->read))
-	    	|| (!empty($conf->hrm->enabled) && !empty(DolibarrApiAccess::$user->rights->hrm->employee->read)));
+	    $canreadsalary = ((!empty($conf->salaries->enabled) && !empty(DigitalProspectsApiAccess::$user->rights->salaries->read))
+	    	|| (!empty($conf->hrm->enabled) && !empty(DigitalProspectsApiAccess::$user->rights->hrm->employee->read)));
 
 		if (!$canreadsalary)
 		{

@@ -30,10 +30,10 @@ require_once DOL_DOCUMENT_ROOT.'/core/modules/cheque/modules_chequereceipts.php'
 class mod_chequereceipt_mint extends ModeleNumRefChequeReceipts
 {
 	/**
-	 * Dolibarr version of the loaded document
+	 * DigitalProspects version of the loaded document
 	 * @var string
 	 */
-	public $version = 'dolibarr'; // 'development', 'experimental', 'dolibarr'
+	public $version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects'
 
 	public $prefix = 'CHK';
 

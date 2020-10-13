@@ -50,7 +50,7 @@ if ($id > 0)
  * Actions
  */
 
-if ($action == 'dolibarr2ldap')
+if ($action == 'DigitalProspects2ldap')
 {
 	$db->begin();
 
@@ -143,14 +143,14 @@ dol_fiche_end();
 
 print '<div class="tabsAction">';
 
-if (!empty($conf->global->LDAP_CONTACT_ACTIVE) && $conf->global->LDAP_CONTACT_ACTIVE != 'ldap2dolibarr')
+if (!empty($conf->global->LDAP_CONTACT_ACTIVE) && $conf->global->LDAP_CONTACT_ACTIVE != 'ldap2DigitalProspects')
 {
-	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=dolibarr2ldap">'.$langs->trans("ForceSynchronize").'</a>';
+	print '<a class="butAction" href="'.$_SERVER["PHP_SELF"].'?id='.$object->id.'&amp;action=DigitalProspects2ldap">'.$langs->trans("ForceSynchronize").'</a>';
 }
 
 print "</div>\n";
 
-if (!empty($conf->global->LDAP_CONTACT_ACTIVE) && $conf->global->LDAP_CONTACT_ACTIVE != 'ldap2dolibarr') print "<br>\n";
+if (!empty($conf->global->LDAP_CONTACT_ACTIVE) && $conf->global->LDAP_CONTACT_ACTIVE != 'ldap2DigitalProspects') print "<br>\n";
 
 
 

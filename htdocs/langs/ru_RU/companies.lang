@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Название компании %s уже существует. Выберите другое.
 ErrorSetACountryFirst=Сначала установите страну
 SelectThirdParty=Выберите контрагента
@@ -12,7 +12,7 @@ MenuNewSupplier=Новый Продавец
 MenuNewPrivateIndividual=Новое физическое лицо
 NewCompany=Новая компания (перспектива, клиент, поставщик)
 NewThirdParty=Новый контрагент (потенциальный клиент, клиент, поставщик)
-CreateDolibarrThirdPartySupplier=Создать контрагента (поставщика)
+CreateDigitalProspectsThirdPartySupplier=Создать контрагента (поставщика)
 CreateThirdPartyOnly=Создать контрагента
 CreateThirdPartyAndContact=Создать контрагента и связанный контакт
 ProspectionArea=Область потенциальных клиентов
@@ -347,7 +347,7 @@ CapitalOf=Столица %s
 EditCompany=Изменить компанию
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Проверить
-VATIntraCheckDesc=Идентификатор НДС должен включать префикс страны. Ссылка <b>%s</b> использует европейскую службу проверки НДС (VIES), для которой требуется доступ в Интернет с сервера Dolibarr.
+VATIntraCheckDesc=Идентификатор НДС должен включать префикс страны. Ссылка <b>%s</b> использует европейскую службу проверки НДС (VIES), для которой требуется доступ в Интернет с сервера DigitalProspects.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Проверьте идентификатора НДС на веб-сайте Европейской комиссии
 VATIntraManualCheck=Вы также можете проверить его вручную на сайте Европейской Комиссии <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Потенциальные клиенты по статусу
 NoParentCompany=Нет
 ExportCardToFormat=Экспорт карточки в формате
 ContactNotLinkedToCompany=Контакт не связан с каким-либо контрагентом
-DolibarrLogin=Имя пользователя Dolibarr
-NoDolibarrAccess=Нет доступа к Dolibarr
+DigitalProspectsLogin=Имя пользователя DigitalProspects
+NoDigitalProspectsAccess=Нет доступа к DigitalProspects
 ExportDataset_company_1=Контрагенты (компании/фонды/ физические лица) и их свойства
 ExportDataset_company_2=Контакты и их свойства
 ImportDataset_company_1=Контрагенты и их свойства

@@ -20,7 +20,7 @@
 
 /**
  *		\file       htdocs/viewimage.php
- *		\brief      Wrapper to show images into Dolibarr screens.
+ *		\brief      Wrapper to show images into DigitalProspects screens.
  *		\remarks    Call to wrapper is :
  *					DOL_URL_ROOT.'/viewimage.php?modulepart=diroffile&file=relativepathofofile&cache=0
  *					DOL_URL_ROOT.'/viewimage.php?hashp=sharekey
@@ -42,21 +42,21 @@ if (isset($_GET["modulepart"]) && $_GET["modulepart"] == 'mycompany' && preg_mat
 {
 	if (!defined("NOLOGIN"))		define("NOLOGIN", 1);
 	if (!defined("NOCSRFCHECK"))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 }
 // For direct external download link, we don't need to load/check we are into a login session
 if (isset($_GET["hashp"]) && !defined("NOLOGIN"))
 {
 	if (!defined("NOLOGIN"))		define("NOLOGIN", 1);
 	if (!defined("NOCSRFCHECK"))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 }
 // Some value of modulepart can be used to get resources that are public so no login are required.
 if ((isset($_GET["modulepart"]) && $_GET["modulepart"] == 'medias'))
 {
 	if (!defined("NOLOGIN"))		define("NOLOGIN", 1);
 	if (!defined("NOCSRFCHECK"))	define("NOCSRFCHECK", 1); // We accept to go on this page from external web site.
-	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $dolibarr_main_restrict_ip
+	if (!defined("NOIPCHECK"))		define("NOIPCHECK", 1); // Do not check IP defined into conf $DigitalProspects_main_restrict_ip
 }
 
 // For multicompany
@@ -114,14 +114,14 @@ if ($modulepart == 'fckeditor') $modulepart = 'medias'; // For backward compatib
 if (GETPOST("cache", 'alpha'))
 {
     // Important: Following code is to avoid page request by browser and PHP CPU at
-    // each Dolibarr page access.
-    if (empty($dolibarr_nocache))
+    // each DigitalProspects page access.
+    if (empty($DigitalProspects_nocache))
     {
         header('Cache-Control: max-age=3600, public, must-revalidate');
         header('Pragma: cache'); // This is to avoid having Pragma: no-cache
     }
     else header('Cache-Control: no-cache');
-    //print $dolibarr_nocache; exit;
+    //print $DigitalProspects_nocache; exit;
 }
 
 // If we have a hash public (hashp), we guess the original_file.

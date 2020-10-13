@@ -59,7 +59,7 @@ class WebservicesInvoicesTest extends PHPUnit\Framework\TestCase
 
 	private static $socid;
 
-	protected $ns = 'http://www.dolibarr.org/ns/';
+	protected $ns = 'http://www.DigitalProspects.org/ns/';
 
 	/**
 	 * Constructor
@@ -243,7 +243,7 @@ class WebservicesInvoicesTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    	'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    	'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     	'sourceapplication'=>'DEMO',
     	'login'=>'admin',
     	'password'=>'admin',
@@ -301,7 +301,7 @@ class WebservicesInvoicesTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    	'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    	'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     	'sourceapplication'=>'DEMO',
     	'login'=>'admin',
     	'password'=>'admin',
@@ -401,7 +401,7 @@ class WebservicesInvoicesTest extends PHPUnit\Framework\TestCase
 
     	// Call the WebService method and store its result in $result.
     	$authentication=array(
-    	'dolibarrkey'=>$conf->global->WEBSERVICES_KEY,
+    	'DigitalProspectskey'=>$conf->global->WEBSERVICES_KEY,
     	'sourceapplication'=>'DEMO',
     	'login'=>'admin',
     	'password'=>'admin',

@@ -53,9 +53,9 @@ class doc_generic_myobject_odt extends ModelePDFMyObject
 	public $phpmin = array(5, 5);
 
 	/**
-	 * @var string Dolibarr version of the loaded document
+	 * @var string DigitalProspects version of the loaded document
 	 */
-	public $version = 'dolibarr';
+	public $version = 'DigitalProspects';
 
 
 	/**

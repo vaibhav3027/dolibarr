@@ -1,13 +1,13 @@
 README (English)
 --------------------------------
 
-This directory contains ruleset files to use to develop Dolibarr EPR & CRM.
+This directory contains ruleset files to use to develop DigitalProspects EPR & CRM.
 
 To install/upgrade phpcs:
 > sudo pear upgrade PHP_CodeSniffer
 
 To run phpcs:
-> cd dolibarrgitrepo
+> cd DigitalProspectsgitrepo
 > phpcs --standard=dev/setup/codesniffer/ruleset.xml --extensions=php --parallel=8 .
 
 Note with Eclipse: You must setup the PTI plugin of Eclipse into PHPCodeSniffer menu with:

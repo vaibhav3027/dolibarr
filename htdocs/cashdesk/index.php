@@ -24,7 +24,7 @@
  */
 
 // Set and init common variables
-// This include will set: config file variable $dolibarr_xxx, $conf, $langs and $mysoc objects
+// This include will set: config file variable $DigitalProspects_xxx, $conf, $langs and $mysoc objects
 require_once '../main.inc.php';
 require_once DOL_DOCUMENT_ROOT.'/product/class/html.formproduct.class.php';
 

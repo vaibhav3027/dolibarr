@@ -64,7 +64,7 @@ if ($action == 'update') {
 
 	$db->begin();
 
-	$res = dolibarr_set_const($db, 'TAX_MODE', $tax_mode, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TAX_MODE', $tax_mode, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 
 	switch ($tax_mode)
@@ -89,18 +89,18 @@ if ($action == 'update') {
 			break;
 	}
 
-	$res = dolibarr_set_const($db, 'TAX_MODE_SELL_PRODUCT', $valuesellproduct, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TAX_MODE_SELL_PRODUCT', $valuesellproduct, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
-	$res = dolibarr_set_const($db, 'TAX_MODE_BUY_PRODUCT', $valuebuyproduct, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TAX_MODE_BUY_PRODUCT', $valuebuyproduct, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
-	$res = dolibarr_set_const($db, 'TAX_MODE_SELL_SERVICE', $valuesellservice, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TAX_MODE_SELL_SERVICE', $valuesellservice, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
-	$res = dolibarr_set_const($db, 'TAX_MODE_BUY_SERVICE', $valuebuyservice, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, 'TAX_MODE_BUY_SERVICE', $valuebuyservice, 'chaine', 0, '', $conf->entity);
 	if (!$res > 0) $error++;
 
-	dolibarr_set_const($db, "MAIN_INFO_TVAINTRA", GETPOST("tva", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_TVAINTRA", GETPOST("tva", 'alpha'), 'chaine', 0, '', $conf->entity);
 
-	dolibarr_set_const($db, "MAIN_INFO_VAT_RETURN", GETPOST("MAIN_INFO_VAT_RETURN", 'alpha'), 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_INFO_VAT_RETURN", GETPOST("MAIN_INFO_VAT_RETURN", 'alpha'), 'chaine', 0, '', $conf->entity);
 
 	if (!$error) {
 		$db->commit();

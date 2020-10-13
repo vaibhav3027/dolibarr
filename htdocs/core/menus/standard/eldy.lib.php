@@ -44,7 +44,7 @@ require_once DOL_DOCUMENT_ROOT.'/core/class/menubase.class.php';
 function print_eldy_menu($db, $atarget, $type_user, &$tabMenu, &$menu, $noout = 0, $mode = '')
 {
 	global $user, $conf, $langs, $mysoc;
-	global $dolibarr_main_db_name;
+	global $DigitalProspects_main_db_name;
 
 	$mainmenu = (empty($_SESSION["mainmenu"]) ? '' : $_SESSION["mainmenu"]);
 	$leftmenu = (empty($_SESSION["leftmenu"]) ? '' : $_SESSION["leftmenu"]);
@@ -466,7 +466,7 @@ function print_eldy_menu($db, $atarget, $type_user, &$tabMenu, &$menu, $noout = 
 		{
 			$newTabMenu[$i]['url'] = make_substitutions($newTabMenu[$i]['url'], $substitarray);
 
-		    // url = url from host, shorturl = relative path into dolibarr sources
+		    // url = url from host, shorturl = relative path into DigitalProspects sources
 			$url = $shorturl = $newTabMenu[$i]['url'];
 			if (!preg_match("/^(http:\/\/|https:\/\/)/i", $newTabMenu[$i]['url']))	// Do not change url content for external links
 			{
@@ -517,7 +517,7 @@ function print_eldy_menu($db, $atarget, $type_user, &$tabMenu, &$menu, $noout = 
 		}*/
 		else
 		{
-			$urllogo = DOL_URL_ROOT.'/theme/dolibarr_512x512_white.png';
+			$urllogo = DOL_URL_ROOT.'/theme/DigitalProspects_512x512_white.png';
 			$logoContainerAdditionalClass = '';
 		}
 		$title = $langs->trans("GoIntoSetupToChangeLogo");
@@ -662,7 +662,7 @@ function print_end_menu_array()
  */
 function print_left_eldy_menu($db, $menu_array_before, $menu_array_after, &$tabMenu, &$menu, $noout = 0, $forcemainmenu = '', $forceleftmenu = '', $moredata = null)
 {
-	global $user, $conf, $langs, $dolibarr_main_db_name, $mysoc;
+	global $user, $conf, $langs, $DigitalProspects_main_db_name, $mysoc;
 
 	//var_dump($tabMenu);
 
@@ -756,7 +756,7 @@ function print_left_eldy_menu($db, $menu_array_before, $menu_array_after, &$tabM
 			    // Load translation files required by the page
                 $langs->loadLangs(array('admin', 'help'));
 
-				$newmenu->add('/admin/system/dolibarr.php?mainmenu=home&amp;leftmenu=admintools_info', $langs->trans('InfoDolibarr'), 1);
+				$newmenu->add('/admin/system/DigitalProspects.php?mainmenu=home&amp;leftmenu=admintools_info', $langs->trans('InfoDigitalProspects'), 1);
 				if ($usemenuhider || empty($leftmenu) || $leftmenu == 'admintools_info') {
                     $newmenu->add('/admin/system/modules.php?mainmenu=home&amp;leftmenu=admintools_info', $langs->trans('Modules'), 2);
 				    $newmenu->add('/admin/triggers.php?mainmenu=home&amp;leftmenu=admintools_info', $langs->trans('Triggers'), 2);
@@ -769,8 +769,8 @@ function print_left_eldy_menu($db, $menu_array_before, $menu_array_after, &$tabM
 				//if (function_exists('xdebug_is_enabled')) $newmenu->add('/admin/system/xdebug.php', $langs->trans('XDebug'),1);
 				$newmenu->add('/admin/system/database.php?mainmenu=home&amp;leftmenu=admintools', $langs->trans('InfoDatabase'), 1);
 				//$newmenu->add("/admin/system/perf.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("InfoPerf"),1);
-				$newmenu->add("/admin/tools/dolibarr_export.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Backup"), 1);
-				$newmenu->add("/admin/tools/dolibarr_import.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Restore"), 1);
+				$newmenu->add("/admin/tools/DigitalProspects_export.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Backup"), 1);
+				$newmenu->add("/admin/tools/DigitalProspects_import.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Restore"), 1);
 				$newmenu->add("/admin/tools/update.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("MenuUpgrade"), 1);
 				$newmenu->add("/admin/tools/purge.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Purge"), 1);
 				$newmenu->add("/admin/tools/listevents.php?mainmenu=home&amp;leftmenu=admintools", $langs->trans("Audit"), 1);

@@ -1,5 +1,5 @@
 # This script is used by Travis CI to run automatically Continuous test integration
-# from Dolibarr GitHub repository.
+# from DigitalProspects GitHub repository.
 # For syntax, see http://about.travis-ci.org/docs/user/languages/php/
 
 # We use dist: xenial to have php 5.6+ available
@@ -85,7 +85,7 @@ notifications:
     on_failure: never # [always|never|change] default: always
   irc:
     channels:
-    - "chat.freenode.net#dolibarr"
+    - "chat.freenode.net#DigitalProspects"
     on_success: change
     on_failure: always
     use_notice: true
@@ -199,12 +199,12 @@ before_script:
       mysql -u root -e 'CREATE DATABASE IF NOT EXISTS travis;'
       mysql -u root -e 'GRANT ALL PRIVILEGES ON travis.* TO travis@127.0.0.1;'
       mysql -u root -e 'FLUSH PRIVILEGES;'
-      mysql -u root -D travis < dev/initdemo/mysqldump_dolibarr_3.5.0.sql
+      mysql -u root -D travis < dev/initdemo/mysqldump_DigitalProspects_3.5.0.sql
     fi
     if [ "$DB" = 'postgresql' ]; then
       #psql -c 'create database travis;' -U postgres
-      #psql travis < dev/initdemo/mysqldump_dolibarr_3.5.0.sql
-      #pgloader mysql://root:pass@127.0.0.1/dolibarr_src postgresql://dolibarrowner:dolibarrownerpass@127.0.0.1/dolibarr_dest
+      #psql travis < dev/initdemo/mysqldump_DigitalProspects_3.5.0.sql
+      #pgloader mysql://root:pass@127.0.0.1/DigitalProspects_src postgresql://DigitalProspectsowner:DigitalProspectsownerpass@127.0.0.1/DigitalProspects_dest
       echo pgloader mysql://root@127.0.0.1/travis postgresql://postgres@/travis
       pgloader mysql://root@127.0.0.1/travis postgresql://postgres@/travis
       echo 'ALTER SEQUENCE llx_accountingaccount_rowid_seq RENAME TO llx_accounting_account_rowid_seq' | psql -U postgres travis
@@ -214,24 +214,24 @@ before_script:
 
   - |
     export CONF_FILE=htdocs/conf/conf.php
-    echo "Setting up Dolibarr $CONF_FILE"
+    echo "Setting up DigitalProspects $CONF_FILE"
     echo '<?php' > $CONF_FILE
-    echo '$'dolibarr_main_url_root=\'http://127.0.0.1\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_document_root=\'$TRAVIS_BUILD_DIR/htdocs\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_data_root=\'$TRAVIS_BUILD_DIR/documents\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_db_host=\'127.0.0.1\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_db_name=\'travis\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_db_user=\'travis\'';' >> $CONF_FILE
-    echo '$'dolibarr_main_instance_unique_id=\'travis1234567890\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_url_root=\'http://127.0.0.1\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_document_root=\'$TRAVIS_BUILD_DIR/htdocs\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_data_root=\'$TRAVIS_BUILD_DIR/documents\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_db_host=\'127.0.0.1\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_db_name=\'travis\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_db_user=\'travis\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_instance_unique_id=\'travis1234567890\'';' >> $CONF_FILE
     if [ "$DB" = 'mysql' ] || [ "$DB" = 'mariadb' ]; then
-      echo '$'dolibarr_main_db_type=\'mysqli\'';' >> $CONF_FILE
-      echo '$'dolibarr_main_db_port=\'3306\'';' >> $CONF_FILE
+      echo '$'DigitalProspects_main_db_type=\'mysqli\'';' >> $CONF_FILE
+      echo '$'DigitalProspects_main_db_port=\'3306\'';' >> $CONF_FILE
     fi
     if [ "$DB" = 'postgresql' ]; then
-      echo '$'dolibarr_main_db_type=\'pgsql\'';' >> $CONF_FILE
-      echo '$'dolibarr_main_db_port=\'5432\'';' >> $CONF_FILE
+      echo '$'DigitalProspects_main_db_type=\'pgsql\'';' >> $CONF_FILE
+      echo '$'DigitalProspects_main_db_port=\'5432\'';' >> $CONF_FILE
     fi
-    echo '$'dolibarr_main_authentication=\'dolibarr\'';' >> $CONF_FILE
+    echo '$'DigitalProspects_main_authentication=\'DigitalProspects\'';' >> $CONF_FILE
     cat $CONF_FILE
     echo
 
@@ -240,7 +240,7 @@ before_script:
     # and admin/temp subdirectory needed for unit tests
     mkdir -p $TRAVIS_BUILD_DIR/documents/admin/temp
     sudo chmod -R a+rwx $TRAVIS_BUILD_DIR/documents
-    echo "***** First line of dolibarr.log" > $TRAVIS_BUILD_DIR/documents/dolibarr.log
+    echo "***** First line of DigitalProspects.log" > $TRAVIS_BUILD_DIR/documents/DigitalProspects.log
     echo
 
 
@@ -270,7 +270,7 @@ script:
   echo "Checking webserver availability by a wget -O - http://127.0.0.1"
   # Ensure we stop on error with set -e
   set +e
-  # The wget should return a page with line '<meta name="generator" content="Dolibarr installer">
+  # The wget should return a page with line '<meta name="generator" content="DigitalProspects installer">
   wget -O - http://127.0.0.1 > test.html
   head test.html
   sudo cat /var/log/apache2/travis_error_log
@@ -298,7 +298,7 @@ script:
 
 - |
   export INSTALL_FORCED_FILE=htdocs/install/install.forced.php
-  echo "Setting up Dolibarr $INSTALL_FORCED_FILE to test installation"
+  echo "Setting up DigitalProspects $INSTALL_FORCED_FILE to test installation"
   # Ensure we catch errors
   set +e
   echo '<?php ' > $INSTALL_FORCED_FILE
@@ -322,7 +322,7 @@ script:
   #cat $INSTALL_FORCED_FILE
 
 #- |
-#  echo "Installing Dolibarr"
+#  echo "Installing DigitalProspects"
 #  cd htdocs/install
 #  php step1.php $TRAVIS_BUILD_DIR/htdocs > $TRAVIS_BUILD_DIR/install.log
 #  php step2.php set >> $TRAVIS_BUILD_DIR/install.log
@@ -345,11 +345,11 @@ script:
     mysql -e 'CREATE DATABASE IF NOT EXISTS travis;'
     mysql -e 'GRANT ALL PRIVILEGES ON travis.* TO travis@127.0.0.1;'
     mysql -e 'FLUSH PRIVILEGES;'
-    mysql -D travis < dev/initdemo/mysqldump_dolibarr_3.5.0.sql
+    mysql -D travis < dev/initdemo/mysqldump_DigitalProspects_3.5.0.sql
   fi
   if [ "$DB" = 'postgresql' ]; then
-    #pgsql travis < dev/initdemo/mysqldump_dolibarr_3.5.0.sql
-    #pgloader mysql://root:pass@127.0.0.1/base postgresql://dolibarrowner@127.0.0.1/dolibarr
+    #pgsql travis < dev/initdemo/mysqldump_DigitalProspects_3.5.0.sql
+    #pgloader mysql://root:pass@127.0.0.1/base postgresql://DigitalProspectsowner@127.0.0.1/DigitalProspects
     echo pgloader mysql://root@127.0.0.1/travis postgresql:///travis
     pgloader mysql://root@127.0.0.1/travis postgresql:///travis
     echo 'ALTER SEQUENCE llx_accountingaccount_rowid_seq RENAME TO llx_accounting_account_rowid_seq' | psql travis
@@ -361,7 +361,7 @@ script:
   echo
 
 - |
-  echo "Upgrading Dolibarr"
+  echo "Upgrading DigitalProspects"
   # Ensure we catch errors. Set this to +e if you want to go to the end to see log files.
   set +e
   cd htdocs/install
@@ -410,12 +410,12 @@ script:
   cd -
   set +e
   echo
-  #cat /tmp/dolibarr_install.log
+  #cat /tmp/DigitalProspects_install.log
   cat $TRAVIS_BUILD_DIR/enablemodule.log
 
 - |
   echo "Unit testing"
-  # Ensure we catch errors. Set this to +e if you want to go to the end to see dolibarr.log file.
+  # Ensure we catch errors. Set this to +e if you want to go to the end to see DigitalProspects.log file.
   set -e
   phpunit -d memory_limit=-1 -c test/phpunit/phpunittest.xml test/phpunit/AllTests.php
   phpunitresult=$?
@@ -424,10 +424,10 @@ script:
 
 after_script:
 - |
-  echo "After script - Output lines of dolibarr.log"
+  echo "After script - Output lines of DigitalProspects.log"
   ls $TRAVIS_BUILD_DIR/documents
-  #cat $TRAVIS_BUILD_DIR/documents/dolibarr.log
-  sudo tail -n 50 $TRAVIS_BUILD_DIR/documents/dolibarr.log
+  #cat $TRAVIS_BUILD_DIR/documents/DigitalProspects.log
+  sudo tail -n 50 $TRAVIS_BUILD_DIR/documents/DigitalProspects.log
 
 after_success:
 - |
@@ -447,9 +447,9 @@ after_failure:
   echo "Debugging informations for file apache error.log"
   sudo cat /var/log/apache2/travis_error_log
   if [ "$DEBUG" = true ]; then
-    # Dolibarr log file
-    echo "Debugging informations for file dolibarr.log (latest 50 lines)"
-    tail -n 50 $TRAVIS_BUILD_DIR/documents/dolibarr.log
+    # DigitalProspects log file
+    echo "Debugging informations for file DigitalProspects.log (latest 50 lines)"
+    tail -n 50 $TRAVIS_BUILD_DIR/documents/DigitalProspects.log
     # Database log file
     echo "Debugging informations for file mysql error.log"
     sudo tail -n 50 /var/log/mysql/error.log

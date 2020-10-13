@@ -95,7 +95,7 @@ class Canvas
 	{
 		global $conf, $langs;
 
-		// Set properties with value specific to dolibarr core: this->targetmodule, this->card, this->canvas
+		// Set properties with value specific to DigitalProspects core: this->targetmodule, this->card, this->canvas
         $this->targetmodule = $module;
         $this->canvas = $canvas;
         $this->card = $card;
@@ -182,7 +182,7 @@ class Canvas
 
 
 	// This functions should not be used anymore because canvas should contains only templates.
-	// http://wiki.dolibarr.org/index.php/Canvas_development
+	// http://wiki.DigitalProspects.org/index.php/Canvas_development
 
 	/**
 	 * 	Return if a canvas contains an action controller
@@ -203,7 +203,7 @@ class Canvas
 	 * 	@param		string		$action	Action string
 	 * 	@param		int			$id			Object id
 	 * 	@return		mixed					Return return code of doActions of canvas
-	 * 	@see		http://wiki.dolibarr.org/index.php/Canvas_development
+	 * 	@see		http://wiki.DigitalProspects.org/index.php/Canvas_development
 	 */
 	public function doActions(&$action = 'view', $id = 0)
 	{

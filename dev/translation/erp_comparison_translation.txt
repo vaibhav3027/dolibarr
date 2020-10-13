@@ -1,7 +1,7 @@
 comparison of terms
 
 
-Dolibarr             SAP ERP					      Odoo							    
+DigitalProspects             SAP ERP					      Odoo							    
 -------------------------------------------------------------------------
 Thirdparty			     Contact partner	    	Partner/Contact (company)
 Contact/address		   Contact person	  	    Partner/Contact (individual)

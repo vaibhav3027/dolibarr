@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bills
+# DigitalProspects language file - Source file is en_US - bills
 Bill=Τιμολόγιο
 Bills=Τιμολόγια
 BillsCustomers=Τιμολόγια πελατών
@@ -570,8 +570,8 @@ AutoFillDateFromShort=Ορίστε την ημερομηνία έναρξης
 AutoFillDateTo=Ορίστε την ημερομηνία λήξης της γραμμής εξυπηρέτησης με την επόμενη ημερομηνία τιμολόγησης
 AutoFillDateToShort=Ορίστε την ημερομηνία λήξης
 MaxNumberOfGenerationReached=Μέγιστος αριθμός γονιδίων. επιτευχθεί
-BILL_DELETEInDolibarr=Το τιμολόγιο διαγράφηκε
-BILL_SUPPLIER_DELETEInDolibarr=Το τιμολόγιο προμηθευτή διαγράφηκε
+BILL_DELETEInDigitalProspects=Το τιμολόγιο διαγράφηκε
+BILL_SUPPLIER_DELETEInDigitalProspects=Το τιμολόγιο προμηθευτή διαγράφηκε
 UnitPriceXQtyLessDiscount=Unit price x Qty - Discount
 CustomersInvoicesArea=Customer billing area
 SupplierInvoicesArea=Supplier billing area

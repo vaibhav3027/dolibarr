@@ -38,13 +38,13 @@ $action = GETPOST('action', 'alpha');
 
 if ($action == 'activate_hidemenu')
 {
-	dolibarr_set_const($db, "MAIN_MENU_HIDE_UNAUTHORIZED", '1', 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "MAIN_MENU_HIDE_UNAUTHORIZED", '1', 'chaine', 0, '', $conf->entity);
 	header("Location: ".$_SERVER["PHP_SELF"]);
 	exit;
 }
 elseif ($action == 'disable_hidemenu')
 {
-	dolibarr_del_const($db, "MAIN_MENU_HIDE_UNAUTHORIZED", $conf->entity);
+	DigitalProspects_del_const($db, "MAIN_MENU_HIDE_UNAUTHORIZED", $conf->entity);
 	header("Location: ".$_SERVER["PHP_SELF"]);
 	exit;
 }

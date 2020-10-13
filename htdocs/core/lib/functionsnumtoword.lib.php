@@ -18,7 +18,7 @@
  */
 /**
  *  \file			htdocs/core/lib/functionsnumtoword.lib.php
- *	\brief			A set of functions for Dolibarr
+ *	\brief			A set of functions for DigitalProspects
  *					This file contains all frequently used functions.
  */
 
@@ -181,7 +181,7 @@ function dolNumberToWord($numero, $langs, $numorcurrency = 'number')
 		}
 	}
 
-	/*In dolibarr 3.6.2 (my current version) doesn't have $langs->default and
+	/*In DigitalProspects 3.6.2 (my current version) doesn't have $langs->default and
 	in case exist why ask $lang like a parameter?*/
 	if (((is_object($langs) && $langs->default == 'es_MX') || (!is_object($langs) && $langs == 'es_MX')) && $numorcurrency == 'currency')
 	{

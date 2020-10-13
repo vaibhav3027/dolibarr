@@ -57,7 +57,7 @@ if ($action == 'update' || $action == 'add')
 		$constvalue = $_POST["constvalue"][$key];
 		$consttype = $_POST["consttype"][$key];
 		$constnote = $_POST["constnote"][$key];
-		$res = dolibarr_set_const($db, $constname, $constvalue, $type[$consttype], 0, $constnote, $conf->entity);
+		$res = DigitalProspects_set_const($db, $constname, $constvalue, $type[$consttype], 0, $constnote, $conf->entity);
 
 		if (!$res > 0) $error++;
 	}
@@ -75,7 +75,7 @@ if ($action == 'update' || $action == 'add')
 // Action activation d'un sous module du module adherent
 if ($action == 'set')
 {
-    $result = dolibarr_set_const($db, $_GET["name"], $_GET["value"], '', 0, '', $conf->entity);
+    $result = DigitalProspects_set_const($db, $_GET["name"], $_GET["value"], '', 0, '', $conf->entity);
     if ($result < 0)
     {
         dol_print_error($db);
@@ -85,7 +85,7 @@ if ($action == 'set')
 // Action desactivation d'un sous module du module adherent
 if ($action == 'unset')
 {
-    $result = dolibarr_del_const($db, $_GET["name"], $conf->entity);
+    $result = DigitalProspects_del_const($db, $_GET["name"], $conf->entity);
     if ($result < 0)
     {
         dol_print_error($db);

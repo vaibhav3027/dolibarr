@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module Bookmarks
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Bookmark
  */
-class modBookmark extends DolibarrModules
+class modBookmark extends DigitalProspectsModules
 {
 
 	/**
@@ -48,8 +48,8 @@ class modBookmark extends DolibarrModules
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Gestion des Bookmarks";
 
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
-		$this->version = 'dolibarr';
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
+		$this->version = 'DigitalProspects';
 
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'bookmark';

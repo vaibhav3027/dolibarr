@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - main
+# DigitalProspects language file - Source file is en_US - main
 DIRECTION=ltr
 FONTFORPDF=helvetica
 FONTSIZEFORPDF=10
@@ -46,7 +46,7 @@ FilesDeleted=Archivo (s) eliminado exitosamente
 FileWasNotUploaded=Un archivo ha sido seleccionado para adjuntarlo, pero aún no se ha subido. Haga clic en "Adjuntar este archivo".
 NbOfEntries=Numero de entradas
 GoToWikiHelpPage=Lea la ayuda en línea (se necesita acceso a Internet)
-DolibarrInHttpAuthenticationSoPasswordUseless=El modo de autenticación de Dolibarr se establece en <b> %s </b> en el archivo de configuración <b> conf.php </b>. <br> Esto significa que la base de datos de contraseñas es externa a Dolibarr, por lo que cambiar este campo puede no tener efecto. .
+DigitalProspectsInHttpAuthenticationSoPasswordUseless=El modo de autenticación de DigitalProspects se establece en <b> %s </b> en el archivo de configuración <b> conf.php </b>. <br> Esto significa que la base de datos de contraseñas es externa a DigitalProspects, por lo que cambiar este campo puede no tener efecto. .
 PasswordForgotten=¿Contraseña olvidada?
 NoAccount=No cuenta
 SeeAbove=Ver arriba
@@ -55,8 +55,8 @@ AuthenticationMode=Modo de autenticación
 RequestLastAccessInError=Último error de solicitud de acceso a la base de datos
 ReturnCodeLastAccessInError=Código de retorno para el último error de solicitud de acceso a la base de datos
 InformationLastAccessInError=Información para el último error de solicitud de acceso a la base de datos
-YouCanSetOptionDolibarrMainProdToZero=Puede leer el archivo de registro o configurar la opción $ dolibarr_main_prod en '0' en su archivo de configuración para obtener más información.
-InformationToHelpDiagnose=Esta información puede ser útil para fines de diagnóstico (puede configurar la opción $ dolibarr_main_prod en '1' para eliminar dichos avisos)
+YouCanSetOptionDigitalProspectsMainProdToZero=Puede leer el archivo de registro o configurar la opción $ DigitalProspects_main_prod en '0' en su archivo de configuración para obtener más información.
+InformationToHelpDiagnose=Esta información puede ser útil para fines de diagnóstico (puede configurar la opción $ DigitalProspects_main_prod en '1' para eliminar dichos avisos)
 TechnicalID=Identificación técnica
 NotClosed=No se ha cerrado
 Enable=Habilitar
@@ -154,7 +154,7 @@ YouCanSetDefaultValueInModuleSetup=Puede configurar el valor predeterminado util
 Layout=Diseño
 FreeZone=No es un producto / servicio predefinido
 DocumentModelStandardPDF=Plantilla PDF estándar
-CoreErrorMessage=Disculpe, ocurrió un error. Póngase en contacto con el administrador del sistema para consultar los registros o deshabilite $ dolibarr_main_prod = 1 para obtener más información.
+CoreErrorMessage=Disculpe, ocurrió un error. Póngase en contacto con el administrador del sistema para consultar los registros o deshabilite $ DigitalProspects_main_prod = 1 para obtener más información.
 FieldsWithIsForPublic=Los campos con <b> %s </b> se muestran en la lista pública de miembros. Si no quieres esto, desmarca la casilla "público".
 AccordingToGeoIPDatabase=(De acuerdo a la conversión de GeoIP)
 TotalizableDesc=Este campo es totalizable en lista.
@@ -200,7 +200,7 @@ ExportFilteredList=Exportar lista filtrada
 ExportList=Lista de exportación
 Miscellaneous=Diverso
 GroupBy=Agrupar por...
-SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar solo parcialmente traducidos o pueden contener errores. Ayude a corregir su idioma registrándose en <a href="https://transifex.com/projects/p/dolibarr/" target="_blank"> https://transifex.com/projects/p/dolibarr/ < / a> para añadir tus mejoras.
+SomeTranslationAreUncomplete=Algunos de los idiomas ofrecidos pueden estar solo parcialmente traducidos o pueden contener errores. Ayude a corregir su idioma registrándose en <a href="https://transifex.com/projects/p/DigitalProspects/" target="_blank"> https://transifex.com/projects/p/DigitalProspects/ < / a> para añadir tus mejoras.
 DirectDownloadLink=Enlace de descarga directa (público / externo)
 DirectDownloadInternalLink=Enlace de descarga directa (necesita ser registrado y necesita permisos)
 DownloadDocument=Descargar documento

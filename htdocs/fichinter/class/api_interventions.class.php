@@ -24,9 +24,9 @@
  * API class for Interventions
  *
  * @access protected
- * @class  DolibarrApiAccess {@requires user,external}
+ * @class  DigitalProspectsApiAccess {@requires user,external}
  */
-class Interventions extends DolibarrApi
+class Interventions extends DigitalProspectsApi
 {
 
     /**
@@ -74,7 +74,7 @@ class Interventions extends DolibarrApi
      */
     public function get($id)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->lire) {
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->lire) {
             throw new RestException(401);
         }
 
@@ -83,8 +83,8 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $this->fichinter->fetchObjectLinked();
@@ -113,20 +113,20 @@ class Interventions extends DolibarrApi
         $obj_ret = array();
 
         // case of external user, $thirdparty_ids param is ignored and replaced by user's socid
-        $socids = DolibarrApiAccess::$user->socid ? DolibarrApiAccess::$user->socid : $thirdparty_ids;
+        $socids = DigitalProspectsApiAccess::$user->socid ? DigitalProspectsApiAccess::$user->socid : $thirdparty_ids;
 
         // If the internal user must only see his customers, force searching by him
         $search_sale = 0;
-        if (!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) $search_sale = DolibarrApiAccess::$user->id;
+        if (!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) $search_sale = DigitalProspectsApiAccess::$user->id;
 
         $sql = "SELECT t.rowid";
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", sc.fk_soc, sc.fk_user"; // We need these fields in order to filter by sale (including the case where the user can only see his prospects)
         $sql .= " FROM ".MAIN_DB_PREFIX."fichinter as t";
 
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", ".MAIN_DB_PREFIX."societe_commerciaux as sc"; // We need this table joined to the select in order to filter by sale
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= ", ".MAIN_DB_PREFIX."societe_commerciaux as sc"; // We need this table joined to the select in order to filter by sale
 
         $sql .= ' WHERE t.entity IN ('.getEntity('intervention').')';
-        if ((!DolibarrApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= " AND t.fk_soc = sc.fk_soc";
+        if ((!DigitalProspectsApiAccess::$user->rights->societe->client->voir && !$socids) || $search_sale > 0) $sql .= " AND t.fk_soc = sc.fk_soc";
         if ($socids) $sql .= " AND t.fk_soc IN (".$socids.")";
         if ($search_sale > 0) $sql .= " AND t.rowid = sc.fk_soc"; // Join for the needed table to filter by sale
         // Insert sale filter
@@ -136,12 +136,12 @@ class Interventions extends DolibarrApi
         // Add sql filters
         if ($sqlfilters)
         {
-            if (!DolibarrApi::_checkFilters($sqlfilters))
+            if (!DigitalProspectsApi::_checkFilters($sqlfilters))
             {
                 throw new RestException(503, 'Error when validating parameter sqlfilters '.$sqlfilters);
             }
             $regexstring = '\(([^:\'\(\)]+:[^:\'\(\)]+:[^:\(\)]+)\)';
-            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DolibarrApi::_forge_criteria_callback', $sqlfilters).")";
+            $sql .= " AND (".preg_replace_callback('/'.$regexstring.'/', 'DigitalProspectsApi::_forge_criteria_callback', $sqlfilters).")";
         }
 
         $sql .= $db->order($sortfield, $sortorder);
@@ -190,7 +190,7 @@ class Interventions extends DolibarrApi
      */
     public function post($request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->creer) {
             throw new RestException(401, "Insuffisant rights");
         }
         // Check mandatory fields
@@ -199,7 +199,7 @@ class Interventions extends DolibarrApi
             $this->fichinter->$field = $value;
         }
 
-        if ($this->fichinter->create(DolibarrApiAccess::$user) < 0) {
+        if ($this->fichinter->create(DigitalProspectsApiAccess::$user) < 0) {
             throw new RestException(500, "Error creating intervention", array_merge(array($this->fichinter->error), $this->fichinter->errors));
         }
 
@@ -219,7 +219,7 @@ class Interventions extends DolibarrApi
     /* TODO
     public function getLines($id)
     {
-        if(! DolibarrApiAccess::$user->rights->ficheinter->lire) {
+        if(! DigitalProspectsApiAccess::$user->rights->ficheinter->lire) {
             throw new RestException(401);
         }
 
@@ -228,8 +228,8 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if( ! DolibarrApi::_checkAccessToResource('fichinter',$this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if( ! DigitalProspectsApi::_checkAccessToResource('fichinter',$this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
         $this->fichinter->getLinesArray();
         $result = array();
@@ -252,7 +252,7 @@ class Interventions extends DolibarrApi
      */
     public function postLine($id, $request_data = null)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->creer) {
             throw new RestException(401, "Insuffisant rights");
         }
         // Check mandatory fields
@@ -266,12 +266,12 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $updateRes = $this->fichinter->addLine(
-                DolibarrApiAccess::$user,
+                DigitalProspectsApiAccess::$user,
                 $id,
                 $this->fichinter->description,
                 $this->fichinter->date,
@@ -293,7 +293,7 @@ class Interventions extends DolibarrApi
      */
     public function delete($id)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->supprimer) {
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->supprimer) {
             throw new RestException(401);
         }
         $result = $this->fichinter->fetch($id);
@@ -301,11 +301,11 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
-        if (!$this->fichinter->delete(DolibarrApiAccess::$user)) {
+        if (!$this->fichinter->delete(DigitalProspectsApiAccess::$user)) {
             throw new RestException(500, 'Error when delete intervention : '.$this->fichinter->error);
         }
 
@@ -334,7 +334,7 @@ class Interventions extends DolibarrApi
      */
     public function validate($id, $notrigger = 0)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->creer) {
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->creer) {
             throw new RestException(401, "Insuffisant rights");
         }
         $result = $this->fichinter->fetch($id);
@@ -342,11 +342,11 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
-        $result = $this->fichinter->setValid(DolibarrApiAccess::$user, $notrigger);
+        $result = $this->fichinter->setValid(DigitalProspectsApiAccess::$user, $notrigger);
         if ($result == 0) {
             throw new RestException(304, 'Error nothing done. May be object is already validated');
         }
@@ -370,7 +370,7 @@ class Interventions extends DolibarrApi
      */
     public function closeFichinter($id)
     {
-        if (!DolibarrApiAccess::$user->rights->ficheinter->creer)
+        if (!DigitalProspectsApiAccess::$user->rights->ficheinter->creer)
         {
             throw new RestException(401, "Insuffisant rights");
         }
@@ -379,8 +379,8 @@ class Interventions extends DolibarrApi
             throw new RestException(404, 'Intervention not found');
         }
 
-        if (!DolibarrApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
-            throw new RestException(401, 'Access not allowed for login '.DolibarrApiAccess::$user->login);
+        if (!DigitalProspectsApi::_checkAccessToResource('fichinter', $this->fichinter->id)) {
+            throw new RestException(401, 'Access not allowed for login '.DigitalProspectsApiAccess::$user->login);
         }
 
         $result = $this->fichinter->setStatut(3);

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - products
+# DigitalProspects language file - Source file is en_US - products
 ProductRef=Ref. producte
 ProductLabel=Etiqueta producte
 ProductLabelTranslated=Etiqueta de producte traduïda
@@ -289,7 +289,7 @@ ComposedProduct=Productes Fills
 MinSupplierPrice=Preu mínim de compra
 MinCustomerPrice=Preu mínim de venda
 DynamicPriceConfiguration=Configuració de preu dinàmic
-DynamicPriceDesc=Podeu definir fórmules matemàtiques per calcular els preus dels clients o venedors. Aquestes fórmules poden utilitzar tots els operadors matemàtics, algunes constants i variables. Podeu definir aquí les variables que voleu utilitzar. Si la variable necessita una actualització automàtica, podeu definir l'URL extern per permetre que Dolibarr actualitzi el valor automàticament.
+DynamicPriceDesc=Podeu definir fórmules matemàtiques per calcular els preus dels clients o venedors. Aquestes fórmules poden utilitzar tots els operadors matemàtics, algunes constants i variables. Podeu definir aquí les variables que voleu utilitzar. Si la variable necessita una actualització automàtica, podeu definir l'URL extern per permetre que DigitalProspects actualitzi el valor automàticament.
 AddVariable=Afegeix variable
 AddUpdater=Afegeix actualitzador
 GlobalVariables=Variables globals
@@ -364,7 +364,7 @@ NewProductAttribute=Nou atribut
 NewProductAttributeValue=Nou valor de l'atribut
 ErrorCreatingProductAttributeValue=Ha ocorregut un error al crear el valor de l'atribut. Això pot ser perque ja no existeixca un valor amb aquesta referència
 ProductCombinationGeneratorWarning=Si continua, abans de generar noves variants, totes les anteriors seran ELIMINADES. Les ja existents s'actualitzaran amb els nous valors
-TooMuchCombinationsWarning=Generar una gran quantitat de variants pot donar lloc a un ús de CPU alta, ús de memòria i que Dolibarr no siga capaç de crearles. Habilitar l'opció "%s" pot ajudar a reduir l'ús de memòria.
+TooMuchCombinationsWarning=Generar una gran quantitat de variants pot donar lloc a un ús de CPU alta, ús de memòria i que DigitalProspects no siga capaç de crearles. Habilitar l'opció "%s" pot ajudar a reduir l'ús de memòria.
 DoNotRemovePreviousCombinations=No borrar variants prèvies
 UsePercentageVariations=Utilitzar variants percentuals
 PercentageVariation=Variant percentual

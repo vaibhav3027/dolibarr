@@ -565,15 +565,15 @@ class TraceableDB extends DoliDB
 	/**
 	 * Create a user and privileges to connect to database (even if database does not exists yet)
 	 *
-	 * @param    string $dolibarr_main_db_host 	Ip serveur
-	 * @param    string $dolibarr_main_db_user 	Nom user a creer
-	 * @param    string $dolibarr_main_db_pass 	Mot de passe user a creer
-	 * @param    string $dolibarr_main_db_name 	Database name where user must be granted
+	 * @param    string $DigitalProspects_main_db_host 	Ip serveur
+	 * @param    string $DigitalProspects_main_db_user 	Nom user a creer
+	 * @param    string $DigitalProspects_main_db_pass 	Mot de passe user a creer
+	 * @param    string $DigitalProspects_main_db_name 	Database name where user must be granted
 	 * @return   int                            <0 if KO, >=0 if OK
 	 */
-	public function DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name)
+	public function DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name)
 	{
-		return $this->db->DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name);
+		return $this->db->DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name);
 	}
 
 	// phpcs:disable PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps

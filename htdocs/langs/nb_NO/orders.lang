@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - orders
+# DigitalProspects language file - Source file is en_US - orders
 OrdersArea=Område for kundeordre
 SuppliersOrdersArea=Innkjøpsordreområde
 OrderCard=Ordrekort
@@ -116,8 +116,8 @@ ConfirmCloneOrder=Er du sikker på at du vil klone denne ordren <b>%s</b>?
 DispatchSupplierOrder=Motta innkjøpsordre %s
 FirstApprovalAlreadyDone=Første godkjenning allerede utført
 SecondApprovalAlreadyDone=Andre gangs godkjenning allerede utført
-SupplierOrderReceivedInDolibarr=Innkjøpsordre %s mottatt %s
-SupplierOrderSubmitedInDolibarr=Innkjøpsordre %s sendt
+SupplierOrderReceivedInDigitalProspects=Innkjøpsordre %s mottatt %s
+SupplierOrderSubmitedInDigitalProspects=Innkjøpsordre %s sendt
 SupplierOrderClassifiedBilled=Innkjøpsordre %s satt til fakturert
 OtherOrders=Andre ordre
 ##### Types de contacts #####

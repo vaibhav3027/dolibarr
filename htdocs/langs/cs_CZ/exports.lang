@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - exports
+# DigitalProspects language file - Source file is en_US - exports
 ExportsArea=Exporty
 ImportArea=Import
 NewExport=Nový export
@@ -58,7 +58,7 @@ ChooseFormatOfFileToImport=Vyberte formát souboru, který chcete použít jako 
 ChooseFileToImport=Pro nahrání souboru klepněte na ikonku %s pro výběr souboru jako zdrojový soubor importu ...
 SourceFileFormat=Zdrojový soubor
 FieldsInSourceFile=Pole ve zdrojovém souboru
-FieldsInTargetDatabase=Cílové pole v Dolibarr databázi (tučně = povinná)
+FieldsInTargetDatabase=Cílové pole v DigitalProspects databázi (tučně = povinná)
 Field=Pole
 NoFields=Žádné položky
 MoveField=Přesuňte pole na číslo sloupce %s

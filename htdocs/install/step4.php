@@ -22,13 +22,13 @@
 /**
  *	\file       htdocs/install/step4.php
  *	\ingroup	install
- *	\brief      Ask login and password of Dolibarr admin user
+ *	\brief      Ask login and password of DigitalProspects admin user
  */
 
 
 include_once 'inc.php';
-require_once $dolibarr_main_document_root.'/core/class/conf.class.php';
-require_once $dolibarr_main_document_root.'/core/lib/admin.lib.php';
+require_once $DigitalProspects_main_document_root.'/core/class/conf.class.php';
+require_once $DigitalProspects_main_document_root.'/core/lib/admin.lib.php';
 
 global $langs;
 
@@ -40,13 +40,13 @@ $langs->loadLangs(array("admin", "install"));
 // Now we load forced value from install.forced.php file.
 $useforcedwizard = false;
 $forcedfile = "./install.forced.php";
-if ($conffile == "/etc/dolibarr/conf.php") $forcedfile = "/etc/dolibarr/install.forced.php";
+if ($conffile == "/etc/DigitalProspects/conf.php") $forcedfile = "/etc/DigitalProspects/install.forced.php";
 if (@file_exists($forcedfile)) {
 	$useforcedwizard = true;
 	include_once $forcedfile;
 }
 
-dolibarr_install_syslog("- step4: entering step4.php page");
+DigitalProspects_install_syslog("- step4: entering step4.php page");
 
 $error = 0;
 $ok = 0;
@@ -68,7 +68,7 @@ if (!is_writable($conffile))
 }
 
 
-print '<h3><img class="valigntextbottom" src="../theme/common/octicons/build/svg/key.svg" width="20" alt="Database"> '.$langs->trans("DolibarrAdminLogin").'</h3>';
+print '<h3><img class="valigntextbottom" src="../theme/common/octicons/build/svg/key.svg" width="20" alt="Database"> '.$langs->trans("DigitalProspectsAdminLogin").'</h3>';
 
 print $langs->trans("LastStepDesc").'<br><br>';
 
@@ -80,7 +80,7 @@ $db = getDoliDBInstance($conf->db->type, $conf->db->host, $conf->db->user, $conf
 if ($db->ok)
 {
     print '<tr><td><label for="login">'.$langs->trans("Login").' :</label></td><td>';
-	print '<input id="login" name="login" type="text" value="'.(!empty($_GET["login"]) ? GETPOST("login", 'alpha') : (isset($force_install_dolibarrlogin) ? $force_install_dolibarrlogin : '')).'"'.(@$force_install_noedit == 2 && $force_install_dolibarrlogin !== null ? ' disabled' : '').'></td></tr>';
+	print '<input id="login" name="login" type="text" value="'.(!empty($_GET["login"]) ? GETPOST("login", 'alpha') : (isset($force_install_DigitalProspectslogin) ? $force_install_DigitalProspectslogin : '')).'"'.(@$force_install_noedit == 2 && $force_install_DigitalProspectslogin !== null ? ' disabled' : '').'></td></tr>';
     print '<tr><td><label for="pass">'.$langs->trans("Password").' :</label></td><td>';
     print '<input type="password" id="pass" name="pass" autocomplete="new-password"></td></tr>';
     print '<tr><td><label for="pass_verif">'.$langs->trans("PasswordAgain").' :</label></td><td>';
@@ -113,9 +113,9 @@ if ($db->ok)
 
 $ret = 0;
 if ($error && isset($argv[1])) $ret = 1;
-dolibarr_install_syslog("Exit ".$ret);
+DigitalProspects_install_syslog("Exit ".$ret);
 
-dolibarr_install_syslog("- step4: end");
+DigitalProspects_install_syslog("- step4: end");
 
 pFooter($error, $setuplang);
 

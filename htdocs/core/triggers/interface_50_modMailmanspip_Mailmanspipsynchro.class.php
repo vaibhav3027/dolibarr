@@ -21,13 +21,13 @@
  *  \ingroup    core
  *  \brief      File to manage triggers Mailman and Spip
  */
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for MailmanSpip module
  */
-class InterfaceMailmanSpipsynchro extends DolibarrTriggers
+class InterfaceMailmanSpipsynchro extends DigitalProspectsTriggers
 {
 	public $family = 'mailmanspip';
 	public $description = "Triggers of this module allows to synchronize Mailman an Spip.";
@@ -36,7 +36,7 @@ class InterfaceMailmanSpipsynchro extends DolibarrTriggers
 	 * Version of the trigger
 	 * @var string
 	 */
-	public $version = self::VERSION_DOLIBARR;
+	public $version = self::VERSION_DigitalProspects;
 
 	/**
 	 * @var string Image of the trigger
@@ -44,7 +44,7 @@ class InterfaceMailmanSpipsynchro extends DolibarrTriggers
 	public $picto = 'technic';
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers or htdocs/module/code/triggers (and declared)
 	 *
 	 * @param string		$action		Event action code

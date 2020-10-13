@@ -51,14 +51,14 @@ if (GETPOST('action', 'alpha') == 'set')
 
 	if (GETPOST('socid', 'int') < 0) $_POST["socid"] = '';
 
-	$res = dolibarr_set_const($db, "CASHDESK_ID_THIRDPARTY", (GETPOST('socid', 'int') > 0 ? GETPOST('socid', 'int') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CASH", (GETPOST('CASHDESK_ID_BANKACCOUNT_CASH', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CASH', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CHEQUE", (GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_BANKACCOUNT_CB", (GETPOST('CASHDESK_ID_BANKACCOUNT_CB', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CB', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_ID_WAREHOUSE", (GETPOST('CASHDESK_ID_WAREHOUSE', 'alpha') > 0 ? GETPOST('CASHDESK_ID_WAREHOUSE', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_NO_DECREASE_STOCK", GETPOST('CASHDESK_NO_DECREASE_STOCK', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_SERVICES", GETPOST('CASHDESK_SERVICES', 'alpha'), 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "CASHDESK_DOLIBAR_RECEIPT_PRINTER", GETPOST('CASHDESK_DOLIBAR_RECEIPT_PRINTER', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_THIRDPARTY", (GETPOST('socid', 'int') > 0 ? GETPOST('socid', 'int') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CASH", (GETPOST('CASHDESK_ID_BANKACCOUNT_CASH', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CASH', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CHEQUE", (GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CHEQUE', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_BANKACCOUNT_CB", (GETPOST('CASHDESK_ID_BANKACCOUNT_CB', 'alpha') > 0 ? GETPOST('CASHDESK_ID_BANKACCOUNT_CB', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_ID_WAREHOUSE", (GETPOST('CASHDESK_ID_WAREHOUSE', 'alpha') > 0 ? GETPOST('CASHDESK_ID_WAREHOUSE', 'alpha') : ''), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_NO_DECREASE_STOCK", GETPOST('CASHDESK_NO_DECREASE_STOCK', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_SERVICES", GETPOST('CASHDESK_SERVICES', 'alpha'), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "CASHDESK_DOLIBAR_RECEIPT_PRINTER", GETPOST('CASHDESK_DOLIBAR_RECEIPT_PRINTER', 'alpha'), 'chaine', 0, '', $conf->entity);
 
 	dol_syslog("admin/cashdesk: level ".GETPOST('level', 'alpha'));
 
@@ -153,7 +153,7 @@ if (!empty($conf->stock->enabled))
 	else
 	{
 	    if (!$conf->global->CASHDESK_NO_DECREASE_STOCK) {
-	        $res = dolibarr_set_const($db, "CASHDESK_NO_DECREASE_STOCK", 1, 'chaine', 0, '', $conf->entity);
+	        $res = DigitalProspects_set_const($db, "CASHDESK_NO_DECREASE_STOCK", 1, 'chaine', 0, '', $conf->entity);
 	    }
 	    print $langs->trans("Yes").'<br>';
 	    print '<span class="opacitymedium">'.$langs->trans('StockDecreaseForPointOfSaleDisabledbyBatch').'</span>';
@@ -177,11 +177,11 @@ if (!empty($conf->stock->enabled))
 	print '</td></tr>';
 }
 
-// Use Dolibarr Receipt Printer
+// Use DigitalProspects Receipt Printer
 if (!empty($conf->receiptprinter->enabled))
 {
     print '<tr class="oddeven"><td>';
-    print $langs->trans("DolibarrReceiptPrinter").' ('.$langs->trans("FeatureNotYetAvailable").')';
+    print $langs->trans("DigitalProspectsReceiptPrinter").' ('.$langs->trans("FeatureNotYetAvailable").')';
     print '<td colspan="2">';
     print $form->selectyesno("CASHDESK_DOLIBAR_RECEIPT_PRINTER", $conf->global->CASHDESK_DOLIBAR_RECEIPT_PRINTER, 1);
     print "</td></tr>\n";

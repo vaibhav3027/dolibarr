@@ -129,16 +129,16 @@ fputs($fp, '<?xml version="1.0" encoding="UTF-8" ?>'."\n");
 fputs($fp, '<checksum_list version="'.$release.'" date="'.dol_print_date(dol_now(), 'dayhourrfc').'" generator="'.$script_file.'">'."\n");
 
 foreach ($includeconstants as $countrycode => $tmp) {
-    fputs($fp, '<dolibarr_constants country="'.$countrycode.'">'."\n");
+    fputs($fp, '<DigitalProspects_constants country="'.$countrycode.'">'."\n");
     foreach($tmp as $constname => $constvalue) {
         $valueforchecksum=(empty($constvalue)?'0':$constvalue);
         $checksumconcat[]=$valueforchecksum;
         fputs($fp, '    <constant name="'.$constname.'">'.$valueforchecksum.'</constant>'."\n");
     }
-    fputs($fp, '</dolibarr_constants>'."\n");
+    fputs($fp, '</DigitalProspects_constants>'."\n");
 }
 
-fputs($fp, '<dolibarr_htdocs_dir includecustom="'.$includecustom.'">'."\n");
+fputs($fp, '<DigitalProspects_htdocs_dir includecustom="'.$includecustom.'">'."\n");
 
 /*$dir_iterator1 = new RecursiveDirectoryIterator(dirname(__FILE__).'/../htdocs/');
 $iterator1 = new RecursiveIteratorIterator($dir_iterator1);
@@ -168,18 +168,18 @@ foreach ($files as $filetmp) {
     }
 }
 fputs($fp, '  </dir>'."\n");
-fputs($fp, '</dolibarr_htdocs_dir>'."\n");
+fputs($fp, '</DigitalProspects_htdocs_dir>'."\n");
 
 asort($checksumconcat); // Sort list of checksum
 //var_dump($checksumconcat);
-fputs($fp, '<dolibarr_htdocs_dir_checksum>'."\n");
+fputs($fp, '<DigitalProspects_htdocs_dir_checksum>'."\n");
 fputs($fp, md5(join(',', $checksumconcat))."\n");
-fputs($fp, '</dolibarr_htdocs_dir_checksum>'."\n");
+fputs($fp, '</DigitalProspects_htdocs_dir_checksum>'."\n");
 
 
 $checksumconcat=array();
 
-fputs($fp, '<dolibarr_script_dir version="'.$release.'">'."\n");
+fputs($fp, '<DigitalProspects_script_dir version="'.$release.'">'."\n");
 
 // TODO Replace RecursiveDirectoryIterator with dol_dir_list
 /*$dir_iterator2 = new RecursiveDirectoryIterator(dirname(__FILE__).'/../scripts/');
@@ -211,12 +211,12 @@ foreach ($files as $filetmp) {
     }
 }
 fputs($fp, '  </dir>'."\n");
-fputs($fp, '</dolibarr_script_dir>'."\n");
+fputs($fp, '</DigitalProspects_script_dir>'."\n");
 
 asort($checksumconcat); // Sort list of checksum
-fputs($fp, '<dolibarr_script_dir_checksum>'."\n");
+fputs($fp, '<DigitalProspects_script_dir_checksum>'."\n");
 fputs($fp, md5(join(',', $checksumconcat))."\n");
-fputs($fp, '</dolibarr_script_dir_checksum>'."\n");
+fputs($fp, '</DigitalProspects_script_dir_checksum>'."\n");
 
 fputs($fp, '</checksum_list>'."\n");
 fclose($fp);

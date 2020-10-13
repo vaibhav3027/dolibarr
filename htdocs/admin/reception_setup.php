@@ -46,7 +46,7 @@ $type = 'reception';
 if (!empty($conf->reception->enabled) && empty($conf->global->MAIN_SUBMODULE_RECEPTION))
 {
     // This option should always be set to on when module is on.
-    dolibarr_set_const($db, "MAIN_SUBMODULE_RECEPTION", "1", 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "MAIN_SUBMODULE_RECEPTION", "1", 'chaine', 0, '', $conf->entity);
 }
 
 if (empty($conf->global->RECEPTION_ADDON_NUMBER))
@@ -66,7 +66,7 @@ if ($action == 'updateMask')
 	$maskconst = GETPOST('maskconstreception', 'alpha');
 	$maskvalue = GETPOST('maskreception', 'alpha');
 	if (!empty($maskconst))
-		$res = dolibarr_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
+		$res = DigitalProspects_set_const($db, $maskconst, $maskvalue, 'chaine', 0, '', $conf->entity);
 
 	if (isset($res))
 	{
@@ -80,7 +80,7 @@ if ($action == 'updateMask')
 elseif ($action == 'set_param')
 {
 	$freetext = GETPOST('RECEPTION_FREE_TEXT', 'none'); // No alpha here, we want exact string
-	$res = dolibarr_set_const($db, "RECEPTION_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "RECEPTION_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 	if ($res <= 0)
 	{
 		$error++;
@@ -88,7 +88,7 @@ elseif ($action == 'set_param')
 	}
 
 	$draft = GETPOST('RECEPTION_DRAFT_WATERMARK', 'alpha');
-	$res = dolibarr_set_const($db, "RECEPTION_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "RECEPTION_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 	if ($res <= 0)
 	{
 		$error++;
@@ -157,14 +157,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->RECEPTION_ADDON_PDF == "$value") dolibarr_del_const($db, 'RECEPTION_ADDON_PDF', $conf->entity);
+        if ($conf->global->RECEPTION_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'RECEPTION_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "RECEPTION_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "RECEPTION_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -181,7 +181,7 @@ elseif ($action == 'setdoc')
 
 elseif ($action == 'setmodel')
 {
-	dolibarr_set_const($db, "RECEPTION_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "RECEPTION_ADDON_NUMBER", $value, 'chaine', 0, '', $conf->entity);
 }
 
 
@@ -499,7 +499,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor=new DolEditor($variablename, $conf->global->$variablename,'',80,'dolibarr_notes');
+    $doleditor=new DolEditor($variablename, $conf->global->$variablename,'',80,'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print "</td></tr>\n";

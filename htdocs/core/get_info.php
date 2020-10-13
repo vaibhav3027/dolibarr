@@ -48,7 +48,7 @@ $left = ($langs->trans("DIRECTION") == 'rtl' ? 'right' : 'left');
 
 $title = $langs->trans("Info");
 
-// URL http://mydolibarr/core/search_page?dol_use_jmobile=1 can be used for tests
+// URL http://myDigitalProspects/core/search_page?dol_use_jmobile=1 can be used for tests
 $head = '<!-- Quick access -->'."\n";
 $arrayofjs = array();
 $arrayofcss = array();
@@ -153,7 +153,7 @@ if (empty($conf->global->MAIN_PRINT_DISABLELINK) && empty($conf->global->MAIN_OP
 }
 */
 
-// Link to Dolibarr wiki pages
+// Link to DigitalProspects wiki pages
 /*
 if (empty($conf->global->MAIN_HELP_DISABLELINK) && empty($conf->global->MAIN_OPTIMIZEFORTEXTBROWSER))
 {

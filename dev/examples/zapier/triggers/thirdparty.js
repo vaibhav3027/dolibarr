@@ -112,7 +112,7 @@ module.exports = {
     noun: 'Thirdparty',
     display: {
         label: 'New Thirdparty',
-        description: 'Trigger when a new thirdpaty action is done in Dolibarr.'
+        description: 'Trigger when a new thirdpaty action is done in DigitalProspects.'
     },
 
     // `operation` is where the business logic goes.

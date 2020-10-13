@@ -1,12 +1,12 @@
-# Dolibarr language file - Source file is en_US - help
+# DigitalProspects language file - Source file is en_US - help
 CommunitySupport=Форум / Wiki поддръжка
 EMailSupport=Имейл поддръжка
 RemoteControlSupport=Онлайн в реално време / дистанционна поддръжка
 OtherSupport=Друга поддръжка
 ToSeeListOfAvailableRessources=За да осъществите контакт или видите наличните ресурси:
 HelpCenter=Център за помощ
-DolibarrHelpCenter=Център за помощ и поддръжка на Dolibarr
-ToGoBackToDolibarr=В противен случай, <a href="%s">кликнете тук, за да продължите да използвате Dolibarr</a>
+DigitalProspectsHelpCenter=Център за помощ и поддръжка на DigitalProspects
+ToGoBackToDigitalProspects=В противен случай, <a href="%s">кликнете тук, за да продължите да използвате DigitalProspects</a>
 TypeOfSupport=Вид поддръжка
 TypeSupportCommunauty=Общностна (безплатна)
 TypeSupportCommercial=Комерсиална
@@ -17,7 +17,7 @@ TypeHelpOnly=Само помощ
 TypeHelpDev=Помощ + разработка
 TypeHelpDevForm=Помощ + разработка + обучение
 BackToHelpCenter=В противен случай <a href="%s">се върнете в началната страница на центърът за помощ</a>.
-LinkToGoldMember=Може да се обадите на някой от обучаващите, предварително посочени от Dolibarr за вашия език (%s), като кликнете върху тяхната джаджа (статуса и максималната цена са автоматично актуализирани):
+LinkToGoldMember=Може да се обадите на някой от обучаващите, предварително посочени от DigitalProspects за вашия език (%s), като кликнете върху тяхната джаджа (статуса и максималната цена са автоматично актуализирани):
 PossibleLanguages=Поддържани езици
-SubscribeToFoundation=Помогнете на проекта Dolibarr, като се присъедините към фондацията.
-SeeOfficalSupport=За официална поддръжка на Dolibarr на вашия език: <br><b><a href="%s" target="_blank">%s</a></b>
+SubscribeToFoundation=Помогнете на проекта DigitalProspects, като се присъедините към фондацията.
+SeeOfficalSupport=За официална поддръжка на DigitalProspects на вашия език: <br><b><a href="%s" target="_blank">%s</a></b>

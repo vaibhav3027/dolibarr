@@ -106,7 +106,7 @@ if (GETPOST('change_chart', 'alpha'))
     $chartofaccounts = GETPOST('chartofaccounts', 'int');
 
     if (!empty($chartofaccounts)) {
-        if (!dolibarr_set_const($db, 'CHARTOFACCOUNTS', $chartofaccounts, 'chaine', 0, '', $conf->entity)) {
+        if (!DigitalProspects_set_const($db, 'CHARTOFACCOUNTS', $chartofaccounts, 'chaine', 0, '', $conf->entity)) {
             $error++;
         }
     } else {
@@ -120,7 +120,7 @@ if ($action == 'update') {
 	foreach ($list_account_main as $constname) {
 		$constvalue = GETPOST($constname, 'alpha');
 
-		if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+		if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
 			$error++;
 		}
 	}
@@ -133,7 +133,7 @@ if ($action == 'update') {
 
 		$constvalue = GETPOST($constname, 'alpha');
 
-	    if (!dolibarr_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
+	    if (!DigitalProspects_set_const($db, $constname, $constvalue, 'chaine', 0, '', $conf->entity)) {
 	        $error++;
 	    }
 	}

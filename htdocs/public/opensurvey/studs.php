@@ -160,7 +160,7 @@ if (GETPOST("boutonp") || GETPOST("boutonp.x") || GETPOST("boutonp_x"))		// bout
 					if ($email) {
 						include_once DOL_DOCUMENT_ROOT.'/core/class/CMailFile.class.php';
 
-						$application = ($conf->global->MAIN_APPLICATION_TITLE ? $conf->global->MAIN_APPLICATION_TITLE : 'Dolibarr ERP/CRM');
+						$application = ($conf->global->MAIN_APPLICATION_TITLE ? $conf->global->MAIN_APPLICATION_TITLE : 'DigitalProspects ERP/CRM');
 
 						$body = str_replace('\n', '<br>', $langs->transnoentities('EmailSomeoneVoted', $nom, getUrlSondage($numsondage, true)));
 						//var_dump($body);exit;

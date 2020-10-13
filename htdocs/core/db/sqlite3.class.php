@@ -22,13 +22,13 @@
 
 /**
  *	\file       htdocs/core/db/sqlite3.class.php
- *	\brief      Class file to manage Dolibarr database access for a SQLite database
+ *	\brief      Class file to manage DigitalProspects database access for a SQLite database
  */
 
 require_once DOL_DOCUMENT_ROOT.'/core/db/DoliDB.class.php';
 
 /**
- *	Class to manage Dolibarr database access for a SQLite database
+ *	Class to manage DigitalProspects database access for a SQLite database
  */
 class DoliDBSqlite3 extends DoliDB
 {
@@ -63,7 +63,7 @@ class DoliDBSqlite3 extends DoliDB
 
         // Note that having "static" property for "$forcecharset" and "$forcecollate" will make error here in strict mode, so they are not static
         if (!empty($conf->db->character_set)) $this->forcecharset = $conf->db->character_set;
-        if (!empty($conf->db->dolibarr_main_db_collation)) $this->forcecollate = $conf->db->dolibarr_main_db_collation;
+        if (!empty($conf->db->DigitalProspects_main_db_collation)) $this->forcecollate = $conf->db->DigitalProspects_main_db_collation;
 
         $this->database_user = $user;
         $this->database_host = $host;
@@ -231,7 +231,7 @@ class DoliDBSqlite3 extends DoliDB
                 }
 
                 // alter table add primary key (field1, field2 ...) -> We create a unique index instead as dynamic creation of primary key is not supported
-                // ALTER TABLE llx_dolibarr_modules ADD PRIMARY KEY pk_dolibarr_modules (numero, entity);
+                // ALTER TABLE llx_DigitalProspects_modules ADD PRIMARY KEY pk_DigitalProspects_modules (numero, entity);
                 if (preg_match('/ALTER\s+TABLE\s*(.*)\s*ADD\s+PRIMARY\s+KEY\s*(.*)\s*\((.*)$/i', $line, $reg))
                 {
                     $line = "-- ".$line." replaced by --\n";
@@ -239,7 +239,7 @@ class DoliDBSqlite3 extends DoliDB
                 }
 
                 // Translate order to drop foreign keys
-                // ALTER TABLE llx_dolibarr_modules DROP FOREIGN KEY fk_xxx;
+                // ALTER TABLE llx_DigitalProspects_modules DROP FOREIGN KEY fk_xxx;
                 if (preg_match('/ALTER\s+TABLE\s*(.*)\s*DROP\s+FOREIGN\s+KEY\s*(.*)$/i', $line, $reg))
                 {
                     $line = "-- ".$line." replaced by --\n";
@@ -643,7 +643,7 @@ class DoliDBSqlite3 extends DoliDB
             return 'DB_ERROR_FAILED_TO_CONNECT';
         }
         else {
-            // Constants to convert error code to a generic Dolibarr error code
+            // Constants to convert error code to a generic DigitalProspects error code
             /*$errorcode_map = array(
             1004 => 'DB_ERROR_CANNOT_CREATE',
             1005 => 'DB_ERROR_CANNOT_CREATE',
@@ -739,10 +739,10 @@ class DoliDBSqlite3 extends DoliDB
         global $conf;
 
         // Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-        $cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+        $cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
         //Encryption key
-        $cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+        $cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
         $return = ($withQuotes ? "'" : "").$this->escape($fieldorvalue).($withQuotes ? "'" : "");
 
@@ -772,10 +772,10 @@ class DoliDBSqlite3 extends DoliDB
         global $conf;
 
         // Type of encryption (2: AES (recommended), 1: DES , 0: no encryption)
-        $cryptType = ($conf->db->dolibarr_main_db_encryption ? $conf->db->dolibarr_main_db_encryption : 0);
+        $cryptType = ($conf->db->DigitalProspects_main_db_encryption ? $conf->db->DigitalProspects_main_db_encryption : 0);
 
         //Encryption key
-        $cryptKey = (!empty($conf->db->dolibarr_main_db_cryptkey) ? $conf->db->dolibarr_main_db_cryptkey : '');
+        $cryptKey = (!empty($conf->db->DigitalProspects_main_db_cryptkey) ? $conf->db->DigitalProspects_main_db_cryptkey : '');
 
         $return = $value;
 
@@ -826,7 +826,7 @@ class DoliDBSqlite3 extends DoliDB
         if (empty($charset))   $charset = $this->forcecharset;
         if (empty($collation)) $collation = $this->forcecollate;
 
-        // ALTER DATABASE dolibarr_db DEFAULT CHARACTER SET latin DEFAULT COLLATE latin1_swedish_ci
+        // ALTER DATABASE DigitalProspects_db DEFAULT CHARACTER SET latin DEFAULT COLLATE latin1_swedish_ci
         $sql = 'CREATE DATABASE '.$database;
         $sql .= ' DEFAULT CHARACTER SET '.$charset.' DEFAULT COLLATE '.$collation;
 
@@ -1108,18 +1108,18 @@ class DoliDBSqlite3 extends DoliDB
     /**
      * 	Create a user and privileges to connect to database (even if database does not exists yet)
      *
-	 *	@param	string	$dolibarr_main_db_host 		Ip serveur
-	 *	@param	string	$dolibarr_main_db_user 		Nom user a creer
-	 *	@param	string	$dolibarr_main_db_pass 		Mot de passe user a creer
-	 *	@param	string	$dolibarr_main_db_name		Database name where user must be granted
+	 *	@param	string	$DigitalProspects_main_db_host 		Ip serveur
+	 *	@param	string	$DigitalProspects_main_db_user 		Nom user a creer
+	 *	@param	string	$DigitalProspects_main_db_pass 		Mot de passe user a creer
+	 *	@param	string	$DigitalProspects_main_db_name		Database name where user must be granted
 	 *	@return	int									<0 if KO, >=0 if OK
      */
-    public function DDLCreateUser($dolibarr_main_db_host, $dolibarr_main_db_user, $dolibarr_main_db_pass, $dolibarr_main_db_name)
+    public function DDLCreateUser($DigitalProspects_main_db_host, $DigitalProspects_main_db_user, $DigitalProspects_main_db_pass, $DigitalProspects_main_db_name)
     {
         // phpcs:enable
         $sql = "INSERT INTO user ";
         $sql .= "(Host,User,password,Select_priv,Insert_priv,Update_priv,Delete_priv,Create_priv,Drop_priv,Index_Priv,Alter_priv,Lock_tables_priv)";
-        $sql .= " VALUES ('".$this->escape($dolibarr_main_db_host)."','".$this->escape($dolibarr_main_db_user)."',password('".addslashes($dolibarr_main_db_pass)."')";
+        $sql .= " VALUES ('".$this->escape($DigitalProspects_main_db_host)."','".$this->escape($DigitalProspects_main_db_user)."',password('".addslashes($DigitalProspects_main_db_pass)."')";
         $sql .= ",'Y','Y','Y','Y','Y','Y','Y','Y','Y')";
 
         dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG); // No sql to avoid password in log
@@ -1131,7 +1131,7 @@ class DoliDBSqlite3 extends DoliDB
 
         $sql = "INSERT INTO db ";
         $sql .= "(Host,Db,User,Select_priv,Insert_priv,Update_priv,Delete_priv,Create_priv,Drop_priv,Index_Priv,Alter_priv,Lock_tables_priv)";
-        $sql .= " VALUES ('".$this->escape($dolibarr_main_db_host)."','".$this->escape($dolibarr_main_db_name)."','".addslashes($dolibarr_main_db_user)."'";
+        $sql .= " VALUES ('".$this->escape($DigitalProspects_main_db_host)."','".$this->escape($DigitalProspects_main_db_name)."','".addslashes($DigitalProspects_main_db_user)."'";
         $sql .= ",'Y','Y','Y','Y','Y','Y','Y','Y','Y')";
 
         dol_syslog(get_class($this)."::DDLCreateUser", LOG_DEBUG);

@@ -174,10 +174,10 @@ class Conf
 				if ($key)
 				{
 					// Allow constants values to be overridden by environment variables
-					if (isset($_SERVER['DOLIBARR_'.$key])) {
-						$value = $_SERVER['DOLIBARR_'.$key];
-					} elseif (isset($_ENV['DOLIBARR_'.$key])) {
-						$value = $_ENV['DOLIBARR_'.$key];
+					if (isset($_SERVER['DigitalProspects_'.$key])) {
+						$value = $_SERVER['DigitalProspects_'.$key];
+					} elseif (isset($_ENV['DigitalProspects_'.$key])) {
+						$value = $_ENV['DigitalProspects_'.$key];
 					}
 
 					//if (! defined("$key")) define("$key", $value);	// In some cases, the constant might be already forced (Example: SYSLOG_HANDLERS during install)
@@ -538,15 +538,15 @@ class Conf
 		$this->theme = $this->global->MAIN_THEME;
 		$this->css = "/theme/".$this->theme."/style.css.php";
 
-		// conf->email_from = email pour envoi par dolibarr des mails automatiques
+		// conf->email_from = email pour envoi par DigitalProspects des mails automatiques
 		$this->email_from = "robot@example.com";
 		if (!empty($this->global->MAIN_MAIL_EMAIL_FROM)) $this->email_from = $this->global->MAIN_MAIL_EMAIL_FROM;
 
-		// conf->notification->email_from = email pour envoi par Dolibarr des notifications
+		// conf->notification->email_from = email pour envoi par DigitalProspects des notifications
 		$this->notification->email_from = $this->email_from;
 		if (!empty($this->global->NOTIFICATION_EMAIL_FROM)) $this->notification->email_from = $this->global->NOTIFICATION_EMAIL_FROM;
 
-		// conf->mailing->email_from = email pour envoi par Dolibarr des mailings
+		// conf->mailing->email_from = email pour envoi par DigitalProspects des mailings
 		$this->mailing->email_from = $this->email_from;
 		if (!empty($this->global->MAILING_EMAIL_FROM))	$this->mailing->email_from = $this->global->MAILING_EMAIL_FROM;
 		if (!isset($this->global->MAIN_EMAIL_ADD_TRACK_ID)) $this->global->MAIN_EMAIL_ADD_TRACK_ID = 1;

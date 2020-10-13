@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - printing
+# DigitalProspects language file - Source file is en_US - printing
 Module64000Name=直接印刷
 Module64000Desc=啟用直接列印系統
 PrintingSetup=直接列印系統設定

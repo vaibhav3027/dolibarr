@@ -1,4 +1,4 @@
-# CHANGELOG MYMODULE FOR [DOLIBARR ERP CRM](https://www.dolibarr.org)
+# CHANGELOG MYMODULE FOR [DigitalProspects ERP CRM](https://www.DigitalProspects.org)
 
 ## 1.0
 

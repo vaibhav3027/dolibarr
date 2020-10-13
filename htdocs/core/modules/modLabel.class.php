@@ -24,13 +24,13 @@
  *	\brief      Fichier de description et activation du module Label
  */
 
-include_once DOL_DOCUMENT_ROOT.'/core/modules/DolibarrModules.class.php';
+include_once DOL_DOCUMENT_ROOT.'/core/modules/DigitalProspectsModules.class.php';
 
 
 /**
  *	Class to describe and enable module Label
  */
-class modLabel extends DolibarrModules
+class modLabel extends DigitalProspectsModules
 {
 
 	/**
@@ -48,7 +48,7 @@ class modLabel extends DolibarrModules
 		// Module label (no space allowed), used if translation string 'ModuleXXXName' not found (where XXX is value of numeric property 'numero' of module)
 		$this->name = preg_replace('/^mod/i', '', get_class($this));
 		$this->description = "Management of stickers";
-		// Possible values for version are: 'development', 'experimental', 'dolibarr' or version
+		// Possible values for version are: 'development', 'experimental', 'DigitalProspects' or version
 		$this->version = 'development';
 		$this->const_name = 'MAIN_MODULE_'.strtoupper($this->name);
 		$this->picto = 'generic';
@@ -94,7 +94,7 @@ class modLabel extends DolibarrModules
 
 	/**
 	 *		Function called when module is enabled.
-	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into Dolibarr database.
+	 *		The init function add constants, boxes, permissions and menus (defined in constructor) into DigitalProspects database.
 	 *		It also creates data directories
 	 *
      *      @param      string	$options    Options when enabling module ('', 'noboxes')

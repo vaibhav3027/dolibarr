@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - banks
+# DigitalProspects language file - Source file is en_US - banks
 Bank=银行
 MenuBankCash=Banks | Cash
 MenuVariousPayment=杂项付款
@@ -109,7 +109,7 @@ SocialContributionPayment=支付社保/财政税
 BankTransfer=Credit transfer
 BankTransfers=Credit transfers
 MenuBankInternalTransfer=内部转移
-TransferDesc=Transfer from one account to another, Dolibarr will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
+TransferDesc=Transfer from one account to another, DigitalProspects will write two records (a debit in source account and a credit in target account). The same amount (except sign), label and date will be used for this transaction)
 TransferFrom=从
 TransferTo=至
 TransferFromToDone=从<b>%s</b>向<b>%s</b>转帐<b>%s</b>已被记录。

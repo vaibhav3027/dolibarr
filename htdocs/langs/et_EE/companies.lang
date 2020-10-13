@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - companies
+# DigitalProspects language file - Source file is en_US - companies
 ErrorCompanyNameAlreadyExists=Ettevõte nimega %s on juba olemas. Vali mõni muu.
 ErrorSetACountryFirst=Esmalt vali riik
 SelectThirdParty=Vali kolmas isik
@@ -12,7 +12,7 @@ MenuNewSupplier=Uus tarnija
 MenuNewPrivateIndividual=Uus eraisik
 NewCompany=Uus ettevõte (huviline, klient, müüja)
 NewThirdParty=Uus kolmas osapool (huviline, klient, müüja)
-CreateDolibarrThirdPartySupplier=Create a third party (vendor)
+CreateDigitalProspectsThirdPartySupplier=Create a third party (vendor)
 CreateThirdPartyOnly=Uus kolmas isik
 CreateThirdPartyAndContact=Create a third party + a child contact
 ProspectionArea=Huviliste ala
@@ -347,7 +347,7 @@ CapitalOf=%s kapital
 EditCompany=Muuda ettevõtet
 ThisUserIsNot=This user is not a prospect, customer or vendor
 VATIntraCheck=Kontrolli
-VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the Dolibarr server.
+VATIntraCheckDesc=The VAT ID must include the country prefix. The link <b>%s</b> uses the European VAT checker service (VIES) which requires internet access from the DigitalProspects server.
 VATIntraCheckURL=http://ec.europa.eu/taxation_customs/vies/vieshome.do
 VATIntraCheckableOnEUSite=Check the intra-Community VAT ID on the European Commission website
 VATIntraManualCheck=You can also check manually on the European Commission website <a href="%s" target="_blank">%s</a>
@@ -392,8 +392,8 @@ ProspectsByStatus=Huvilised staatuse järgi
 NoParentCompany=Mitte ükski
 ExportCardToFormat=Ekspordi kaart formaati
 ContactNotLinkedToCompany=Kontakt ole seotud ühegi kolmanda isikuga
-DolibarrLogin=Dolibarri kasutaja
-NoDolibarrAccess=Dolibarri ligipääs puudub
+DigitalProspectsLogin=DigitalProspectsi kasutaja
+NoDigitalProspectsAccess=DigitalProspectsi ligipääs puudub
 ExportDataset_company_1=Third-parties (companies/foundations/physical people) and their properties
 ExportDataset_company_2=Contacts and their properties
 ImportDataset_company_1=Third-parties and their properties

@@ -56,7 +56,7 @@ if ($action == 'updateMask')
 	$maskconstproject = GETPOST('maskconstproject', 'alpha');
 	$maskproject = GETPOST('maskproject', 'alpha');
 
-	if ($maskconstproject)  $res = dolibarr_set_const($db, $maskconstproject, $maskproject, 'chaine', 0, '', $conf->entity);
+	if ($maskconstproject)  $res = DigitalProspects_set_const($db, $maskconstproject, $maskproject, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -75,7 +75,7 @@ if ($action == 'updateMaskTask')
 	$maskconstmasktask = GETPOST('maskconsttask', 'alpha');
 	$masktaskt = GETPOST('masktask', 'alpha');
 
-	if ($maskconstmasktask)  $res = dolibarr_set_const($db, $maskconstmasktask, $masktaskt, 'chaine', 0, '', $conf->entity);
+	if ($maskconstmasktask)  $res = DigitalProspects_set_const($db, $maskconstmasktask, $masktaskt, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -195,7 +195,7 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-		if ($conf->global->PROJECT_ADDON_PDF == "$value") dolibarr_del_const($db, 'PROJECT_ADDON_PDF', $conf->entity);
+		if ($conf->global->PROJECT_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'PROJECT_ADDON_PDF', $conf->entity);
 	}
 }
 if ($action == 'deltask')
@@ -203,14 +203,14 @@ if ($action == 'deltask')
 	$ret = delDocumentModel($value, 'project_task');
 	if ($ret > 0)
 	{
-		if ($conf->global->PROJECT_TASK_ADDON_PDF == "$value") dolibarr_del_const($db, 'PROJECT_TASK_ADDON_PDF', $conf->entity);
+		if ($conf->global->PROJECT_TASK_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'PROJECT_TASK_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	dolibarr_set_const($db, "PROJECT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "PROJECT_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity);
 
 	// On active le modele
 	$ret = delDocumentModel($value, $type);
@@ -222,7 +222,7 @@ elseif ($action == 'setdoc')
 
 elseif ($action == 'setdoctask')
 {
-	if (dolibarr_set_const($db, "PROJECT_TASK_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "PROJECT_TASK_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// La constante qui a ete lue en avant du nouveau set
 		// on passe donc par une variable pour avoir un affichage coherent
@@ -242,7 +242,7 @@ elseif ($action == 'setmod')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "PROJECT_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "PROJECT_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'setmodtask')
@@ -250,14 +250,14 @@ elseif ($action == 'setmodtask')
 	// TODO Verifier si module numerotation choisi peut etre active
 	// par appel methode canBeActivated
 
-	dolibarr_set_const($db, "PROJECT_TASK_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "PROJECT_TASK_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 elseif ($action == 'updateoptions')
 {
 	if (GETPOST('PROJECT_USE_SEARCH_TO_SELECT'))
 	{
 		$companysearch = GETPOST('activate_PROJECT_USE_SEARCH_TO_SELECT', 'alpha');
-		if (dolibarr_set_const($db, "PROJECT_USE_SEARCH_TO_SELECT", $companysearch, 'chaine', 0, '', $conf->entity))
+		if (DigitalProspects_set_const($db, "PROJECT_USE_SEARCH_TO_SELECT", $companysearch, 'chaine', 0, '', $conf->entity))
 		{
 			$conf->global->PROJECT_USE_SEARCH_TO_SELECT = $companysearch;
 		}
@@ -265,7 +265,7 @@ elseif ($action == 'updateoptions')
 	if (GETPOST('PROJECT_ALLOW_TO_LINK_FROM_OTHER_COMPANY'))
 	{
 		$projectToSelect = GETPOST('projectToSelect', 'alpha');
-		dolibarr_set_const($db, 'PROJECT_ALLOW_TO_LINK_FROM_OTHER_COMPANY', $projectToSelect, 'chaine', 0, '', $conf->entity); //Allow to disable this configuration if empty value
+		DigitalProspects_set_const($db, 'PROJECT_ALLOW_TO_LINK_FROM_OTHER_COMPANY', $projectToSelect, 'chaine', 0, '', $conf->entity); //Allow to disable this configuration if empty value
 	}
 }
 

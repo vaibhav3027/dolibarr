@@ -22,13 +22,13 @@
  *  \ingroup    core
  *  \brief      File of trigger for ticket module
  */
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for ticket module
  */
-class InterfaceTicketEmail extends DolibarrTriggers
+class InterfaceTicketEmail extends DigitalProspectsTriggers
 {
 	/**
 	 * @var DoliDB Database handler.
@@ -47,7 +47,7 @@ class InterfaceTicketEmail extends DolibarrTriggers
 		$this->name = preg_replace('/^Interface/i', '', get_class($this));
 		$this->family = "ticket";
 		$this->description = "Triggers of the module ticket to send notifications to internal users and to third-parties";
-		$this->version = 'dolibarr'; // 'development', 'experimental', 'dolibarr' or version
+		$this->version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects' or version
 		$this->picto = 'ticket';
 	}
 
@@ -85,7 +85,7 @@ class InterfaceTicketEmail extends DolibarrTriggers
 			return $langs->trans("Development");
 		} elseif ($this->version == 'experimental') {
 			return $langs->trans("Experimental");
-		} elseif ($this->version == 'dolibarr') {
+		} elseif ($this->version == 'DigitalProspects') {
 			return DOL_VERSION;
 		} elseif ($this->version) {
 			return $this->version;
@@ -95,7 +95,7 @@ class InterfaceTicketEmail extends DolibarrTriggers
 	}
 
 	/**
-	 *      Function called when a Dolibarrr business event is done.
+	 *      Function called when a DigitalProspectsr business event is done.
 	 *      All functions "runTrigger" are triggered if file is inside directory htdocs/core/triggers
 	 *
 	 *      @param  string    $action Event action code

@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - interventions
+# DigitalProspects language file - Source file is en_US - interventions
 Intervention=التدخل
 Interventions=المداخلات
 InterventionCard=تدخل البطاقة
@@ -30,13 +30,13 @@ InterventionClassifyDone=Classify "Done"
 StatusInterInvoiced=فواتير
 SendInterventionRef=تقديم التدخل٪ الصورة
 SendInterventionByMail=Send intervention by email
-InterventionCreatedInDolibarr=التدخل٪ الصورة خلقت
-InterventionValidatedInDolibarr=التدخل%s التأكد من صلاحيتها
-InterventionModifiedInDolibarr=التدخل٪ الصورة المعدلة
-InterventionClassifiedBilledInDolibarr=التدخل٪ الصورة كما وصفت مجموعة
-InterventionClassifiedUnbilledInDolibarr=التدخل٪ الصورة مجموعة كما فواتير
+InterventionCreatedInDigitalProspects=التدخل٪ الصورة خلقت
+InterventionValidatedInDigitalProspects=التدخل%s التأكد من صلاحيتها
+InterventionModifiedInDigitalProspects=التدخل٪ الصورة المعدلة
+InterventionClassifiedBilledInDigitalProspects=التدخل٪ الصورة كما وصفت مجموعة
+InterventionClassifiedUnbilledInDigitalProspects=التدخل٪ الصورة مجموعة كما فواتير
 InterventionSentByEMail=Intervention %s sent by email
-InterventionDeletedInDolibarr=التدخل٪ الصورة حذفها
+InterventionDeletedInDigitalProspects=التدخل٪ الصورة حذفها
 InterventionsArea=منطقة التدخلات
 DraftFichinter=مشروع التدخلات
 LastModifiedInterventions=Latest %s modified interventions

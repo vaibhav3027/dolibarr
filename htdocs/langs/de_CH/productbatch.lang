@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - productbatch
+# DigitalProspects language file - Source file is en_US - productbatch
 Batch=Lot / Seriennumer
 atleast1batchfield="Verbrauchen bis:" - oder "Verkaufen bis:" - Datum. Oder Lot / Seriennummer
 EatByDate="Verbrauchen bis:" - Datum

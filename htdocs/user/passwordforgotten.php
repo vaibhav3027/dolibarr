@@ -42,7 +42,7 @@ if (!empty($conf->global->MAIN_SECURITY_DISABLEFORGETPASSLINK))
 }
 
 $action = GETPOST('action', 'alpha');
-$mode = $dolibarr_main_authentication;
+$mode = $DigitalProspects_main_authentication;
 if (!$mode) $mode = 'http';
 
 $username = trim(GETPOST('username', 'alpha'));
@@ -158,7 +158,7 @@ if ($action == 'buildnewpassword' && $username)
 $dol_url_root = DOL_URL_ROOT;
 
 // Title
-$title = 'Dolibarr '.DOL_VERSION;
+$title = 'DigitalProspects '.DOL_VERSION;
 if (!empty($conf->global->MAIN_APPLICATION_TITLE)) $title = $conf->global->MAIN_APPLICATION_TITLE;
 
 // Select templates
@@ -176,7 +176,7 @@ else $focus_element = 'password';
 
 // Send password button enabled ?
 $disabled = 'disabled';
-if (preg_match('/dolibarr/i', $mode)) $disabled = '';
+if (preg_match('/DigitalProspects/i', $mode)) $disabled = '';
 if (!empty($conf->global->MAIN_SECURITY_ENABLE_SENDPASSWORD)) $disabled = ''; // To force button enabled
 
 // Show logo (search in order: small company logo, large company logo, theme logo, common logo)
@@ -192,13 +192,13 @@ elseif (!empty($mysoc->logo_small) && is_readable($conf->mycompany->dir_output.'
 	$urllogo = DOL_URL_ROOT.'/viewimage.php?cache=1&amp;modulepart=mycompany&amp;file='.urlencode('logos/'.$mysoc->logo);
 	$width = 128;
 }
-elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/'.$conf->theme.'/img/dolibarr_logo.svg'))
+elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/'.$conf->theme.'/img/DigitalProspects_logo.svg'))
 {
-	$urllogo = DOL_URL_ROOT.'/theme/'.$conf->theme.'/img/dolibarr_logo.svg';
+	$urllogo = DOL_URL_ROOT.'/theme/'.$conf->theme.'/img/DigitalProspects_logo.svg';
 }
-elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/dolibarr_logo.svg'))
+elseif (is_readable(DOL_DOCUMENT_ROOT.'/theme/DigitalProspects_logo.svg'))
 {
-	$urllogo = DOL_URL_ROOT.'/theme/dolibarr_logo.svg';
+	$urllogo = DOL_URL_ROOT.'/theme/DigitalProspects_logo.svg';
 }
 
 // Security graphical code

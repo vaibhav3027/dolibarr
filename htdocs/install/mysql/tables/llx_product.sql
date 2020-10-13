@@ -27,7 +27,7 @@ create table llx_product
   ref                           varchar(128)  NOT NULL,
   entity                        integer   DEFAULT 1 NOT NULL,       -- Multi company id
 
-  ref_ext                       varchar(128),                       -- reference into an external system (not used by dolibarr)
+  ref_ext                       varchar(128),                       -- reference into an external system (not used by DigitalProspects)
 
   datec                         datetime,
   tms                           timestamp,

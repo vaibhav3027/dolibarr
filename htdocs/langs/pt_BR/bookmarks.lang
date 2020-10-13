@@ -1,4 +1,4 @@
-# Dolibarr language file - Source file is en_US - bookmarks
+# DigitalProspects language file - Source file is en_US - bookmarks
 AddThisPageToBookmarks=Adicione a página atual aos marcadores
 ListOfBookmarks=Lista de marcadores
 OpenANewWindow=Abra uma nova aba
@@ -8,6 +8,6 @@ BookmarkTargetReplaceWindowShort=Guia atual
 BookmarkTitle=Nome do marcador
 BehaviourOnClick=Comportamento quando a URL de marcador é selecionada
 SetHereATitleForLink=Definir um nome para o marcador
-UseAnExternalHttpLinkOrRelativeDolibarrLink=Use um link externo/absoluto (https://URL) ou um link interno/relativo (/DOLIBARR_ROOT/htdocs/...)
+UseAnExternalHttpLinkOrRelativeDigitalProspectsLink=Use um link externo/absoluto (https://URL) ou um link interno/relativo (/DigitalProspects_ROOT/htdocs/...)
 ChooseIfANewWindowMustBeOpenedOnClickOnBookmark=Escolha se a página vinculada deve abrir na guia atual ou em uma nova guia
 BookmarksManagement=Gestor de marcadores

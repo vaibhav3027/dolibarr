@@ -170,7 +170,7 @@ class PaiementFourn extends Paiement
 
 		dol_syslog(get_class($this)."::create", LOG_DEBUG);
 
-		if ($way == 'dolibarr')
+		if ($way == 'DigitalProspects')
 		{
 			$amounts = &$this->amounts;
 			$amounts_to_update = &$this->multicurrency_amounts;
@@ -201,7 +201,7 @@ class PaiementFourn extends Paiement
 		    $ref = $this->getNextNumRef(is_object($thirdparty) ? $thirdparty : '');
 			$now = dol_now();
 
-			if ($way == 'dolibarr')
+			if ($way == 'DigitalProspects')
 			{
 				$total = $totalamount;
 				$mtotal = $totalamount_converted; // Maybe use price2num with MT for the converted value
@@ -764,13 +764,13 @@ class PaiementFourn extends Paiement
 	/**
 	 * 	get the right way of payment
 	 *
-	 * 	@return 	string 	'dolibarr' if standard comportment or paid in dolibarr currency, 'customer' if payment received from multicurrency inputs
+	 * 	@return 	string 	'DigitalProspects' if standard comportment or paid in DigitalProspects currency, 'customer' if payment received from multicurrency inputs
 	 */
 	public function getWay()
 	{
 		global $conf;
 
-		$way = 'dolibarr';
+		$way = 'DigitalProspects';
 		if (!empty($conf->multicurrency->enabled))
 		{
 			foreach ($this->multicurrency_amounts as $value)

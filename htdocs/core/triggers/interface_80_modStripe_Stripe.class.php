@@ -27,13 +27,13 @@
  *              - Le nom de la classe doit etre InterfaceMytrigger
  *              - Le nom de la propriete name doit etre Mytrigger
  */
-require_once DOL_DOCUMENT_ROOT.'/core/triggers/dolibarrtriggers.class.php';
+require_once DOL_DOCUMENT_ROOT.'/core/triggers/DigitalProspectstriggers.class.php';
 
 
 /**
  *  Class of triggers for stripe module
  */
-class InterfaceStripe extends DolibarrTriggers
+class InterfaceStripe extends DigitalProspectsTriggers
 {
     /**
      * @var DoliDB Database handler.
@@ -52,7 +52,7 @@ class InterfaceStripe extends DolibarrTriggers
         $this->name = preg_replace('/^Interface/i', '', get_class($this));
 	    $this->family = 'stripe';
         $this->description = "Triggers of the module Stripe";
-        $this->version = 'dolibarr'; // 'development', 'experimental', 'dolibarr' or version
+        $this->version = 'DigitalProspects'; // 'development', 'experimental', 'DigitalProspects' or version
         $this->picto = 'stripe';
     }
 
@@ -78,7 +78,7 @@ class InterfaceStripe extends DolibarrTriggers
 	}
 
 	/**
-	 * Function called when a Dolibarrr business event is done.
+	 * Function called when a DigitalProspectsr business event is done.
 	 * All functions "runTrigger" are triggered if file
 	 * is inside directory core/triggers
 	 *
@@ -91,7 +91,7 @@ class InterfaceStripe extends DolibarrTriggers
 	 */
 	public function runTrigger($action, $object, User $user, Translate $langs, Conf $conf)
 	{
-		// Put here code you want to execute when a Dolibarr business event occurs.
+		// Put here code you want to execute when a DigitalProspects business event occurs.
 		// Data and type of action are stored into $object and $action
 		global $langs, $db, $conf;
 

@@ -59,7 +59,7 @@ if ($action == 'updateMask')
 	$maskconstorder = GETPOST('maskconstorder', 'alpha');
 	$maskorder = GETPOST('maskorder', 'alpha');
 
-	if ($maskconstorder) $res = dolibarr_set_const($db, $maskconstorder, $maskorder, 'chaine', 0, '', $conf->entity);
+	if ($maskconstorder) $res = DigitalProspects_set_const($db, $maskconstorder, $maskorder, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -129,14 +129,14 @@ elseif ($action == 'del')
 	$ret = delDocumentModel($value, $type);
 	if ($ret > 0)
 	{
-        if ($conf->global->COMMANDE_ADDON_PDF == "$value") dolibarr_del_const($db, 'COMMANDE_ADDON_PDF', $conf->entity);
+        if ($conf->global->COMMANDE_ADDON_PDF == "$value") DigitalProspects_del_const($db, 'COMMANDE_ADDON_PDF', $conf->entity);
 	}
 }
 
 // Set default model
 elseif ($action == 'setdoc')
 {
-	if (dolibarr_set_const($db, "COMMANDE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
+	if (DigitalProspects_set_const($db, "COMMANDE_ADDON_PDF", $value, 'chaine', 0, '', $conf->entity))
 	{
 		// The constant that was read before the new set
 		// We therefore requires a variable to have a coherent view
@@ -156,13 +156,13 @@ elseif ($action == 'setmod')
 	// TODO Check if numbering module chosen can be activated
 	// by calling method canBeActivated
 
-	dolibarr_set_const($db, "COMMANDE_ADDON", $value, 'chaine', 0, '', $conf->entity);
+	DigitalProspects_set_const($db, "COMMANDE_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 elseif ($action == 'set_COMMANDE_DRAFT_WATERMARK')
 {
 	$draft = GETPOST("COMMANDE_DRAFT_WATERMARK");
-	$res = dolibarr_set_const($db, "COMMANDE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "COMMANDE_DRAFT_WATERMARK", trim($draft), 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -180,7 +180,7 @@ elseif ($action == 'set_ORDER_FREE_TEXT')
 {
 	$freetext = GETPOST("ORDER_FREE_TEXT", 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "ORDER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "ORDER_FREE_TEXT", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -196,7 +196,7 @@ elseif ($action == 'set_ORDER_FREE_TEXT')
 elseif ($action == "setshippableiconinlist") {
     // Activate Set Shippable Icon In List
     $setshippableiconinlist = GETPOST('value', 'int');
-    $res = dolibarr_set_const($db, "SHIPPABLE_ORDER_ICON_IN_LIST", $setshippableiconinlist, 'yesno', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "SHIPPABLE_ORDER_ICON_IN_LIST", $setshippableiconinlist, 'yesno', 0, '', $conf->entity);
     if (!$res > 0) $error++;
     if (!$error) {
         setEventMessages($langs->trans("SetupSaved"), null, 'mesgs');
@@ -209,8 +209,8 @@ elseif ($action == 'setribchq')
 	$rib = GETPOST('rib', 'alpha');
 	$chq = GETPOST('chq', 'alpha');
 
-	$res = dolibarr_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
-	$res = dolibarr_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_RIB_NUMBER", $rib, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_CHQ_NUMBER", $chq, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
@@ -227,7 +227,7 @@ elseif ($action == 'setribchq')
 // Activate ask for payment bank
 elseif ($action == 'set_BANK_ASK_PAYMENT_BANK_DURING_ORDER')
 {
-    $res = dolibarr_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_ORDER", $value, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "BANK_ASK_PAYMENT_BANK_DURING_ORDER", $value, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -244,7 +244,7 @@ elseif ($action == 'set_BANK_ASK_PAYMENT_BANK_DURING_ORDER')
 // Activate ask for warehouse
 elseif ($action == 'set_WAREHOUSE_ASK_WAREHOUSE_DURING_ORDER')
 {
-    $res = dolibarr_set_const($db, "WAREHOUSE_ASK_WAREHOUSE_DURING_ORDER", $value, 'chaine', 0, '', $conf->entity);
+    $res = DigitalProspects_set_const($db, "WAREHOUSE_ASK_WAREHOUSE_DURING_ORDER", $value, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -685,7 +685,7 @@ if (empty($conf->global->PDF_ALLOW_HTML_FOR_FREE_TEXT))
 else
 {
     include_once DOL_DOCUMENT_ROOT.'/core/class/doleditor.class.php';
-    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'dolibarr_notes');
+    $doleditor = new DolEditor($variablename, $conf->global->$variablename, '', 80, 'DigitalProspects_notes');
     print $doleditor->Create();
 }
 print '</td><td class="right">';

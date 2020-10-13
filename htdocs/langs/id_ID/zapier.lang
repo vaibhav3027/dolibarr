@@ -17,12 +17,12 @@
 # Generic
 #
 
-# Module label 'ModuleZapierForDolibarrName'
-ModuleZapierForDolibarrName = Zapier untuk Dolibarr
-# Module description 'ModuleZapierForDolibarrDesc'
-ModuleZapierForDolibarrDesc = Zapier untuk modul Dolibarr
+# Module label 'ModuleZapierForDigitalProspectsName'
+ModuleZapierForDigitalProspectsName = Zapier untuk DigitalProspects
+# Module description 'ModuleZapierForDigitalProspectsDesc'
+ModuleZapierForDigitalProspectsDesc = Zapier untuk modul DigitalProspects
 
 #
 # Admin page
 #
-ZapierForDolibarrSetup = Pengaturan Zapier untuk Dolibarr
+ZapierForDigitalProspectsSetup = Pengaturan Zapier untuk DigitalProspects

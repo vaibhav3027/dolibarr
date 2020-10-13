@@ -48,7 +48,7 @@ if ($action == 'updateMask')
 {
     $maskconstpayment = GETPOST('maskconstpayment', 'alpha');
     $maskpayment = GETPOST('maskpayment', 'alpha');
-    if ($maskconstpayment) $res = dolibarr_set_const($db, $maskconstpayment, $maskpayment, 'chaine', 0, '', $conf->entity);
+    if ($maskconstpayment) $res = DigitalProspects_set_const($db, $maskconstpayment, $maskpayment, 'chaine', 0, '', $conf->entity);
 
     if (!$res > 0) $error++;
 
@@ -64,14 +64,14 @@ if ($action == 'updateMask')
 
 if ($action == 'setmod')
 {
-    dolibarr_set_const($db, "PAYMENT_ADDON", $value, 'chaine', 0, '', $conf->entity);
+    DigitalProspects_set_const($db, "PAYMENT_ADDON", $value, 'chaine', 0, '', $conf->entity);
 }
 
 if ($action == 'setparams')
 {
 	$freetext = GETPOST('FACTURE_PAYMENTS_ON_DIFFERENT_THIRDPARTIES_BILLS', 'none'); // No alpha here, we want exact string
 
-	$res = dolibarr_set_const($db, "FACTURE_PAYMENTS_ON_DIFFERENT_THIRDPARTIES_BILLS", $freetext, 'chaine', 0, '', $conf->entity);
+	$res = DigitalProspects_set_const($db, "FACTURE_PAYMENTS_ON_DIFFERENT_THIRDPARTIES_BILLS", $freetext, 'chaine', 0, '', $conf->entity);
 
 	if (!$res > 0) $error++;
 
